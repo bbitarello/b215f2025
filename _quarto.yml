@@ -1,8 +1,13 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "Teach Data Science Course Website"
+  title: "BIOL B215: Biostatistics with R"
+  site-url: https://github.com/bbitarello/b215f2025
+  repo-url: https://github.com/bbitarello/b215f2025
+  repo-branch: main
+  repo-actions: [source]
   sidebar:
     background: primary
     logo: "images/logo.png"
@@ -10,22 +15,27 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/rstudio-conf-2022/teach-ds-course-website
+        href: https://github.com/bbitarello/b215f2025
         text: GitHub
-      - icon: cloud-fill
-        href: https://posit.cloud/spaces/678147/
-        text: RStudio Cloud
     style: docked
     contents:
-      - href: index.qmd
-        text: Home
-      - href: syllabus.qmd
-        text: Syllabus
-      - href: schedule.qmd
-        text: Schedule
-        
+    - href: index.qmd
+      text: Home
+    - href: slides.qmd
+      text: Slides
+    - href: psets.qmd
+      text: Problem Sets
+    - href: syllabus.qmd
+      text: Syllabus
+    - href: final-project.qmd
+      text: Final Project
+    
 format:
   html:
-    theme: cosmo
-   # css: styles.css
+    theme: 
+     - journal
+     - style.css
     toc: true
+
+
+editor: source
