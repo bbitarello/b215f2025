@@ -1,70 +1,31 @@
 project:
-  type: book
-  output-dir: docs
+  type: website
 
-execute:
-  cache: true
-  
-book:
-  title: "BST 260 Introduction to Data Science"
-  subtitle: "2023 Notes"
-  author: "Rafael Irizarry"
-  date: "8/19/2023"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - schedule.qmd
-    - 01-quarto.qmd
-    - 02-unix.qmd
-    - 03-git.qmd
-    - 04-r-basics.qmd
-    - 05-vectorization.qmd
-    - 06-tidyverse.qmd
-    - 07-dates-and-times.qmd
-    - 08-importing-data.qmd
-    - 09-data-table.qmd
-    - pset1.qmd
-    - 10-distributions.qmd
-    - 11-ggplot2.qmd
-    - 12-dataviz-principles.qmd
-    - 13-wrangling.qmd
-    - 14-web-scraping.qmd
-    - 15-locales.qmd
-    - 16-text-mining.qmd
-    - 17-probability.qmd
-    - 18-inference.qmd
-    - 19-models.qmd
-    - pset2.qmd
-    - 20-regression.qmd
-    - 21-multivariate-regression.qmd
-    - 22-linear-models.qmd
-    - 23-association-tests.qmd 
-    - 24-corrleation-not-causation.qmd
-    - 25-matrices-in-R.qmd
-    - 26-linear-algebra.qmd  
-    - 27-dimension-reduction.qmd
-    - 28-gene-expression-case-study.qmd
-    - 29-regularization.qmd
-    - 30-matrix-factorization.qmd
-    - 31-ml-intro.qmd
-    - 32-conditional-expectations.qmd
-    - 33-smoothing.qmd
-    - 34-cross-validation.qmd
-    - 35-caret.qmd
-    - 36-algorithms.qmd 
-  reader-mode: true
-  site-url: http://datasciencelabs.github.io/2023
-  repo-url: https://github.com/datasciencelabs/2023
-  repo-branch: main
-  repo-actions: [source, issue]
+website:
+  title: "Teach Data Science Course Website"
   sidebar:
-    collapse-level: 1
- 
+    background: primary
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/rstudio-conf-2022/teach-ds-course-website
+        text: GitHub
+      - icon: cloud-fill
+        href: https://posit.cloud/spaces/678147/
+        text: RStudio Cloud
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: schedule.qmd
+        text: Schedule
+        
 format:
   html:
-    theme: 
-    - cosmo
-    - r4ds.scss
-
-editor: source
-
+    theme: cosmo
+   # css: styles.css
+    toc: true
