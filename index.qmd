@@ -1,127 +1,73 @@
-# Preface {.unnumbered}
+---
+title: "BIOL B215: Biostatistics with R"
+---
 
-* These are the class notes for BST 260 Introduction to Data Science.
-* Schedule is subject to change.
-* The GitHub repository is <https://github.com/datasciencelabs/2023>
-* These notes are generated with a Quarto Book.
-* Class notes will be updated regularly with material covered during class.
-* New material is added approximately on a weekly basis.
-* Questions for the midterm will be drawn from the exercises sections at the end of each lecture.
-
-# Instructor
-
-* [Rafael A. Irizarry](http://rafalab.github.io)
-* [http://rafalab.github.io](http://rafalab.github.io)
-
-# Text books
-
-* [Introduction to Data Science](https://rafalab.github.io/dsbook-part-1/), Data Wrangling and
- Visualization with R.
-* [Advanced Data Science](https://rafalab.github.io/dsbook-part-2/), Statistics and Prediction Algorithms Through Case Studies.
+## Course Information
 
 
-## Downloading course materials using Git 
+* Instructor: [Bárbara D. Bitarello](bitarellolab.digital.brynamwr.edu)
+* TA: Nicole Cavalieri (ncavalieri@brynmawr.edu)
+* Lecture: Monday \& Wednesday 11:40 AM (Park 264)
+* Lab: Wednesday 1:10 - 4 PM
+* Remember to read the [syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
+* Lecture notes: 
+* Piazza (for Qs): <https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25>
+* Moodle: <https://moodle.brynmawr.edu/course/view.php?id=8224>
+* Rstudio (Posit) Cloud: <https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24>
+* Textbooks: <https://github.com/rafalab/dsbook-part-1>, <https://github.com/rafalab/dsbook-part-2>
+* Remember to read the [syllabus](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
 
-You can download the quarto files used to create the course notes using Git. You can update files using `git pull` but **you will not be able to change the course notes on the main repository**. This means that if you edit the files and then try to update then using `git pull` you will encounter conflicts. For this reason
-recommend that you **make a copy before editing files**. We have edited the `.gitignore` file so that if you add the word `notes` to your filenames, git will not track the files. So we recommend that you before editing you make a copy of the file and  _notes_ to the filename. For example `01-unix.qmd` to `01-unix-notes.qmd`. 
+## Lectures 
 
+Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.
 
-You can download the files using `git clone` like this:
+| Dates   | Topic  |    Slides | Reading |
+|:-------------------|:---------|:----------|:----------|
+| Sep 04 | Productivity Tools| [Intro](slides/00-intro.qmd), [Unix](slides/productivity/01-unix.qmd) | Installing R and RStudio on [Windows](https://teacherscollege.screenstepslive.com/a/1108074-install-r-and-rstudio-for-windows) or [Mac](https://teacherscollege.screenstepslive.com/a/1135059-install-r-and-rstudio-for-mac), [Getting Started](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/getting-started.html), [Unix](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/unix.html)|
+| Sep 09,  Sep 11| Productivity Tools| [RStudio](slides/productivity/02-rstudio.qmd), [Quarto](slides/productivity/03-quarto.qmd), [Git and GitHub](slides/productivity/04-git.qmd) | [RStudio Projects, Quarto](https://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/reproducible-projects.html), [Git](http://rafalab.dfci.harvard.edu/dsbook-part-1/productivity/git.html) |
+| Sep 16, Sep 19 | R | [R basics](slides/R/05-r-basics.qmd), [Vectorization](slides/R/06-vectorization.qmd) |  [R Basics](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/R-basics.html), [Vectorization](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/programming-basics.html#sec-vectorization) |
+| Sep 23 | R | [Tidyverse](slides/R/07-tidyverse.qmd), [ggplot2](slides/R/08-ggplot2.qmd) | [dplyr](http://rafalab.dfci.harvard.edu/dsbook-part-1/R/tidyverse.html), [ggplot2](http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html) |
+| Sep 25 | R | [Tyding data](slides/R/09-tidyr.qmd) | [Reshaping Data](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/reshaping-data.html)
+| Sep 30, Oct 02 | Wrangling  | [Intro](slides/wrangling/10-intro-to-wrangling.qmd), [Data Importing](slides/wrangling/11-importing-files.qmd), [Dates and Times](slides/wrangling/12-dates-and-times.qmd), [Locales](slides/wrangling/13-locales.qmd), [Data APIs](slides/wrangling/14-data-apis.qmd), [Web scraping](slides/wrangling/15-web-scraping.qmd), [Joining tables](slides/wrangling/16-joining-tables.qmd) | [Importing data](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html), [dates and times](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/dates-and-times.html), [Locales](https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/locales.html), [Joining Tables](http://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/joining-tables.html), [Extracting data from the web](https://rafalab.dfci.harvard.edu/dsbook-part-1/wrangling/web-scraping.html)|
+Oct 07, Oct 09 | Data visualization  | [Data Viz Principles](slides/dataviz/17-dataviz-principles.qmd), [Distributions](slides/dataviz/18-distributions.qmd), [Dataviz in practice](slides/dataviz/19-dataviz-in-practice.qmd)| [Distributions](http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html), [Dataviz Principles](http://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/dataviz-principles.html) |
+| Oct 16 | Midterm 1 | | Covers material from Sep 04-Oct 11|
+| Oct 21 | Probability   | [Intro](slides/prob/20-intro-to-prob.qmd), [Foundations for Inference](slides/prob/21-inference-foundations.qmd)| [Monte Carlo](http://rafalab.dfci.harvard.edu/dsbook-part-2/prob/continuous-probability.html#monte-carlo), [Random Variables & CLT](http://rafalab.dfci.harvard.edu/dsbook-part-2/prob/random-variables-sampling-models-clt.html)|
+| Oct 23 | Inference | [Intro](slides/inference/22-intro-inference.qmd), [Parameter and estimates](slides/inference/23-parameters-estimates.qmd), [Confidence Intervals](slides/inference/24-confidence-intervals.qmd) | [Parameters & Estimates](http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/parameters-estimates.html), [Confidence Intervals](http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/confidence-intervals.html) |
+| Oct 28, Oct 30 | Statistical Models | [Models](slides/inference/25-models.qmd), [Bayes](slides/inference/26-bayes.qmd), [Hierarchical Models](slides/inference/27-hierarchical-models.qmd) | [Data-driven Models](http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/models.html),  [Bayesian Statistics](http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/bayes.html), [Hierarchical Models](http://rafalab.dfci.harvard.edu/dsbook-part-2/inference/hierarchical-models.html) |
+| Nov 04, Nov 06 |  Linear models  | [Intro](slides/linear-models/28-intro-to-linear-models.qmd), [Regression](slides/linear-models/29-regression.qmd) |  [Regression](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/regression.html), [Multivariate Regression](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/multivariate-regression.html) |
+| Nov 13, Nov 18 |  Linear models  | [Multivariate regression](slides/linear-models/30-multivariate-regression.qmd), [Treatment effect models](slides/linear-models/31-treatment-effect-models.qmd) |  [Measurement Error Models](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/measurement-error-models.html), [Treatment Effect Models](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/treatment-effect-models.html), [Association Tests](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-tests.html), [Association Not Causation](http://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html) |
+|  Nov 20 | High dimensional data| [Intro to Linear Algebra](slides/highdim/32-linear-algebra-intro.qmd), [Matrices in R](slides/highdim/33-matrices-in-R.qmd) | [Matrices in R](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/matrices-in-R.html), [Applied Linear Algebra](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/linear-algebra.html), |
+| Nov 25 | Midterm 2 | | Midterm 2: cover material from Sep 04-Nov 22|
+| Dec 02 | High dimensional data | [Distance](slides/highdim/34-distance.qmd), [Dimension reduction](slides/highdim/35-dimension-reduction.qmd) |[Dimension Reduction](https://rafalab.dfci.harvard.edu/dsbook-part-2/highdim/dimension-reduction.html) |
+| Dec 04 | Machine Learning | [Intro](slides/ml/36-intro-ml.qmd), [Metrics](slides/ml/37-evaluation-metrics.qmd), [Conditionals](slides/ml/38-conditionals.qmd), [Smoothing](slides/ml/39-smoothing.qmd)|[Notation and terminology](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/notation-and-terminology.html), [Evaluation Metrics](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/evaluation-metrics.html), [conditional probabilities](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/conditionals.html), [smoothing](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/smoothing.html) |
+|  Dec 09, Dec 11 | Machine Learning | [kNN](slides/ml/40-knn.qmd), [Resampling methods](slides/ml/41-resampling-methods.qmd), [caret package](slides/ml/42-caret.qmd), [Algorithms](slides/ml/43-algorithms.qmd), [ML in practice](slides/ml/44-ml-in-practice.qmd)|[Resampling methods](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/resampling-methods.html), [ML algorithms](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/algorithms.html), [ML in practice](https://rafalab.dfci.harvard.edu/dsbook-part-2/ml/ml-in-practice.html) |
+| Dec 16, Dec 18 | Other topics  | [Association is not causation](slides/other-topics/45-association-not-causation.qmd), [Shiny](slides/other-topics/46-shiny.qmd), [Shiny example code](https://github.com/datasciencelabs/2024/tree/main/shiny)| [Association is not causation](https://rafalab.dfci.harvard.edu/dsbook-part-2/linear-models/association-not-causation.html) |
 
-1. Open a terminal and navigate to the directory you want to keep these notes in.
-2. Type `git clone  https://github.com/datasciencelabs/2023.git`
+## Problem sets
 
-or using  RStudio like this:
+| Problem set| Topic | Due Date |  Difficulty |
+|:-------|:--------------|:---------|:----------|
+| [01](psets/pset-01-unix-quarto.qmd)   |  Unix, Quarto|Sep 11   | easy | 
+| [02](psets/pset-02-r-vectorization.qmd) |  R | Sep 19   |easy | 
+| [03](psets/pset-03-tidyverse.qmd)          |  Tidyverse | Sep 27   |medium | 
+| [04](psets/pset-04-wrangling.qmd)          | Wrangling | Oct 4   | medium | 
+| [05](psets/pset-05-dataviz.qmd) |  Covid 19 data visualization | Oct 11   |medium | 
+| [06](psets/pset-06-prob.qmd)          | Probability | Oct 25   | easy | 
+| [07](psets/pset-07-election.qmd)          | Predict the election |Nov 04   |  hard | 
+| [08](psets/pset-08-linear-models.qmd)          | Excess mortality after Hurricane María |Nov 15   |  medium | 
+| [09](psets/pset-09-matrices.qmd)          | Matrices | Nov 22   | easy | 
+| [10](psets/pset-10-ml.qmd)          | Digit reading | Dec 16   | hard | 
+|Final Project| Your choice | Dec 20   | hard  |
 
-1. Got to <https://github.com/datasciencelabs/2023>
-2. Click on the green "Clone or Download" on Github and copy the link.
-3. Open RStudio, and go to File > New Project > Version Control > Git,
-and paste in the link you just copied. Under "Create Project as
-Sub-directory of", browse and select a folder where you want the course
-materials to go.
-4. Press "Create Project". This will create a folder called `2023`
-in the folder you selected in step 3.
-5. Now, you can open this project using the projects tab in the upper
-right of RStudio, or going to File > Open Project and then navigating
-to the 2023 folder and opening the `.Rproj` file.
+## Office hour times
 
-Once you cloned the course repository and want to get updates, you must
-use `git pull` to get updates. You can do this in the terminal or on the RStudio's **Git** pane.
+| Meeting | Time  | Location                 |
+|---------|----------|------------------------|
+| Rafael Irizarry  | Mon  8:45-9:45AM  |   Kresge 203     |
+| Corri Sept | Tue      3:00-4:00PM     | Kresge 201         |
+| Nikhil Vytla   | Wed      2:00-3:00PM     | Kresge 201         |
+| Yuan Wang | Fri    1:00-2:00PM     | [Zoom](https://harvard.zoom.us/j/98901120095?pwd=CrhPTA0Nco2rY6ggzYIfq6kQmP4VZn.1) |
 
-### Associating an existing directory
+## Acknowledgments
 
-**If you already cloned the repository outside of RStudio**, you can associate the directory that was created in that
-step with RStudio. In RStudio, go to File > New Project > Existing Directory, and then navigate / click on the 2023 folder. Then click
-"Create Project". Then you can follow step 5 above to open the project
-when you launch RStudio. 
-
-### Forking the repository
-
-An  alternative **more advanced** way to cloning the directory is creating a  _fork_.
-Forking a repository on GitHub allows you to create a copy of a project under your own GitHub account. This lets you make changes without affecting the original repository. Here's how you can fork a repository on GitHub:
-
-1. **Log In to GitHub**:
-   - Make sure you are logged in to your GitHub account.
-
-2. **Navigate to the Repository**:
-   - Go to the main page of the repository you want to fork: <https://github.com/datasciencelabs/2023>
-
-3. **Click the 'Fork' Button**:
-   - In the top-right corner of the repository's page, you'll find the "Fork" button. Click on it.
-
-4. **Choose an Account**:
-   - If you are a member of any organizations, GitHub will ask you where you'd like to fork the repository. Choose your personal account unless you want to fork it to an organization.
-
-5. **Wait for the Forking Process to Complete**:
-   - GitHub will then create a copy of the repository in your account. You'll see an animation indicating the process, and once it's done, you'll be redirected to the forked repository under your account.
-
-6. **Clone Your Forked Repository**:
-   - To work with the forked repository on your local machine, you can clone it. Navigate to the main page of your forked repo, click on the green "Code" button, copy the URL, and then use the following command in your terminal or command prompt:
-     ```
-     git clone [URL_you_copied]
-     ```
-
-You can continue to update the forked repository by doing the following:
-
-1. **Navigate to Your Local Repository**:
-   - Open a terminal or command prompt.
-   - Navigate to the directory where you have your forked repository.
-
-2. **Add the Original Repository as an Upstream Remote**:
-   - Use the following command to add the original repository as an upstream remote:
-     ```bash
-     git remote add upstream [URL_of_original_repository]
-     ```
-   - For example, if the original repository's URL is `https://github.com/original-owner/original-repo.git`, the command would be:
-     ```bash
-     git remote add upstream https://github.com/original-owner/original-repo.git
-     ```
-
-3. **Fetch Changes from the Upstream**:
-   - Use the following command to fetch changes from the upstream:
-     ```bash
-     git fetch upstream
-     ```
-
-4. **Merge Changes into Your Local Branch**:
-   - First, ensure you are on the branch into which you want to merge the upstream changes, typically the `main` or `master` branch:
-     ```bash
-     git checkout main
-     ```
-   - Then, merge the changes from the upstream's `main` or `master` branch:
-     ```bash
-     git merge upstream/main
-     ```
-
-5. **Push Changes to Your Forked Repository on GitHub (if needed)**:
-   - If you want these changes to reflect in your GitHub fork, push them:
-     ```bash
-     git push origin main
-     ```
-
-Now your fork is synchronized with the original repository. Whenever you want to pull in new changes from the original repository in the future, you just need to repeat steps 3-5.
-
-**To avoid conflicts you sill want to avoid editing the course notes files and instead make copies.**
-
-
-
+We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template.
