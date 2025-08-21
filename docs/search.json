@@ -2,9 +2,12 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "BST 260 Introduction to Data Science",
+    "title": "BIOL B215: Biostatistics with R",
     "section": "",
-    "text": "Preface"
+    "text": "Instructor: Bárbara D. Bitarello\nTA: Nicole Cavalieri (ncavalieri@brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24\nTextbooks: https://github.com/rafalab/dsbook-part-1, https://github.com/rafalab/dsbook-part-2\nRemember to read the syllabus, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#downloading-course-materials-using-git",
@@ -2028,5 +2031,55 @@
     "title": "36  Examples of algorithms",
     "section": "",
     "text": "https://web.stanford.edu/~hastie/Papers/ESLII.pdf↩︎\nhttps://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID1759289_code1486039.pdf?abstractid = 1759289&mirid = 1&type = 2↩︎"
+  },
+  {
+    "objectID": "index.html#course-information",
+    "href": "index.html#course-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello\nTA: Nicole Cavalieri (ncavalieri@brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24\nTextbooks: https://github.com/rafalab/dsbook-part-1, https://github.com/rafalab/dsbook-part-2\nRemember to read the syllabus, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Lectures",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#problem-sets",
+    "href": "index.html#problem-sets",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Problem sets",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#office-hour-times",
+    "href": "index.html#office-hour-times",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Office hour times",
+    "text": "Office hour times\n\n\n\nMeeting\nTime\nLocation",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template.",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]

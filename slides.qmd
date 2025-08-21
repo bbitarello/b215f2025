@@ -1,0 +1,34 @@
+---
+title: "Slides"
+author: ""
+date: ""
+listing:
+  - id: slides
+    contents:
+      - slides/00-intro.qmd
+      - slides/productivity/*.qmd
+      - slides/R/*.qmd
+      - slides/wrangling/*.qmd
+      - slides/dataviz/*.qmd
+      - slides/prob/*.qmd
+      - slides/inference/*.qmd
+      - slides/linear-models/*.qmd
+      - slides/highdim/*.qmd
+      - slides/ml/*.qmd
+      - slides/other-topics/*.qmd
+
+    type: table
+    fields: [keywords, title, date]
+    date-format: "ddd, MMM DD"
+    field-display-names:
+      keywords: "Topic"
+      title: "Title"
+      date: "Date"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+::: {#slides}
+:::
