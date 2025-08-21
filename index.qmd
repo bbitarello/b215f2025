@@ -5,7 +5,7 @@ title: "BIOL B215: Biostatistics with R"
 ## Course Information
 
 
-* Instructor: [Bárbara D. Bitarello](bitarellolab.digital.brynamwr.edu)
+* Instructor: Bárbara D. Bitarello <https://bitarellolab.digital.brynamwr.edu>
 * TA: Nicole Cavalieri (ncavalieri@brynmawr.edu)
 * Lecture: Monday \& Wednesday 11:40 AM (Park 264)
 * Lab: Wednesday 1:10 - 4 PM
@@ -14,7 +14,7 @@ title: "BIOL B215: Biostatistics with R"
 * Piazza (for Qs): <https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25>
 * Moodle: <https://moodle.brynmawr.edu/course/view.php?id=8224>
 * Rstudio (Posit) Cloud: <https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24>
-* Textbooks: <https://github.com/rafalab/dsbook-part-1>, <https://github.com/rafalab/dsbook-part-2>
+* Textbooks:
 * Remember to read the [syllabus](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
 
 ## Lectures 
@@ -37,4 +37,4 @@ Lecture slides, class notes, and problem sets are linked below. New material is 
 
 ## Acknowledgments
 
-We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template.
+We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.

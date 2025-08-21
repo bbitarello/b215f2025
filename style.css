@@ -29,7 +29,7 @@ tr:nth-child(odd) {
 
 th {
     background-color: #586028; /* Green background for header row */
-    color: black; /* White text color for header row */
+    color: #ffffff; /* White text color for header row */
 }
 
 
