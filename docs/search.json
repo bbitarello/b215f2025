@@ -134,7 +134,7 @@
     "href": "index.html",
     "title": "BIOL B215: Biostatistics with R",
     "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.\n\n\n\n\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\nbla\n\n\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n\n\n\n\n\n\n\nMeeting\nTime\nLocation\n\n\n\n\n\n\n\n\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
     "crumbs": [
       "Home"
     ]
@@ -153,8 +153,8 @@
     "objectID": "index.html#lectures",
     "href": "index.html#lectures",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "section": "Lectures",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
     "crumbs": [
       "Home"
     ]
@@ -163,8 +163,8 @@
     "objectID": "index.html#problem-sets",
     "href": "index.html#problem-sets",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Problem set\nTopic\nDue Date\nDifficulty\n\n\n\n\nbla",
+    "section": "Problem sets",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\nbla",
     "crumbs": [
       "Home"
     ]
@@ -173,8 +173,8 @@
     "objectID": "index.html#lab-assignments",
     "href": "index.html#lab-assignments",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Problem set\nTopic\nDue Date\nDifficulty",
+    "section": "Lab Assignments",
+    "text": "Lab Assignments\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
     "crumbs": [
       "Home"
     ]
@@ -183,8 +183,8 @@
     "objectID": "index.html#office-hour-times",
     "href": "index.html#office-hour-times",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Meeting\nTime\nLocation",
+    "section": "Office hour times",
+    "text": "Office hour times\n\n\n\nMeeting\nTime\nLocation",
     "crumbs": [
       "Home"
     ]
@@ -193,8 +193,8 @@
     "objectID": "index.html#acknowledgments",
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "We thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
     "crumbs": [
       "Home"
     ]
