@@ -2,6 +2,8 @@
 title: "BIOL B215: Biostatistics with R"
 ---
 
+# TEST!
+
 ## Course Information
 
 -   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
