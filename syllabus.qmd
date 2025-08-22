@@ -1,71 +1,81 @@
 ---
-title: "Syllabus"
+title: "Course Info"
 ---
 
 ## General Information
 
 - BIOL B 260 Biostatistics with R
-- Kresge 202A and 202B (HSPH)
 - Lecture: Monday \& Wednesday 11:40 AM (Park 264)
-- Lab: Wednesday 1:10 - 4 PM
-- Lecture notes: [https://b215.github.io/2024/](https://b215.github.io/2024/)
+- Lab: Wednesday 1:10 - 4 PM (Park 128)
+- Lecture notes: 
 - Piazza (for Qs): <https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25>
 - Moodle: <https://moodle.brynmawr.edu/course/view.php?id=8224>
+- Rstudio (Posit) Cloud: <https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24>
 
 ## Prerequisites
 
-We assume students have taken or are taking a probability and statistics course and have basic programming skills. 
+No prior experience with programming is required. Ideally the student has taken BIOL B110 or BIOL B111.
 
-Students not matriculated in an HSPH Biostatistics graduate program (HDS SM60, BIO SM80 / SM60 / SM1, and CBQG SM80) will be required to score at least 90% on a basic math and programming diagnostic test to enroll in the course. If you are in a HSPH Biostatistics graduate program and you score less than 90% we will contact you to offer supplementary resource to help you be prepared for the course.
 
-## Textbooks
+## Textbook
 
-- [Introduction to Data Science: Data Wrangling and Visualization with R](http://rafalab.dfci.harvard.edu/dsbook-part-1/)
-- [Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies](http://rafalab.dfci.harvard.edu/dsbook-part-2/)
+- The Analysis of Biological Data (3rd or 2nd edition), by Whitlock \& Schluter.
+- Please make sure you also bring a laptop to labs. You may borrow one from the bio department. Please email if this is your case. 
 
 ## Course Description
 
-This course introduces the following:
+Statistics came from biology. For 15+ years, a solid foundation in statistics and R has been the standard tool for performing statistics in biology, health studies, data science, and many other fields. Because of this, **B215 is neither just a biostatistics course nor simply an R programming course**: it is a biostatistics course where R is directly integrated into the learning process. We will focus mainly on classic statistics (so-called frequentist ) and probability theory, but we will also have an introduction to the increasingly relevant Bayesian statistics approach. 
 
-* UNIX/Linux shell
-* Reproducible document preparation with RStudio, knitr, and markdown
-* Version control with git and GitHub
-* R programming
-* Data wrangling with dplyr and data.table
-* Data visualization with ggplot2
+Throughout the course, **we use motivating case studies and data analysis problem sets and R labs based on similar challenges to those one finds in scientific research**. 
 
-We also demonstrate how the following concepts are applied in data analysis:
+## Topics we (aim to) cover
 
-* Probability theory
-* Statistical inference and modeling
-* High-dimensional data techniques
-* Machine learning
 
-We do not cover the theory and details of these methods as they are covered in other courses.
-
-Throughout the course, **we use motivating case studies and data analysis problem sets based on challenges similar to those you encounter in scientific research**. 
+- Sampling & Experimental Design
+- Descriptive statistics
+- Data visualization
+- Probability Theory
+- Estimation & Hypothesis Testing
+- The Normal Distribution
+- Comparing samples & Correlations
+- Bootstrapping and permutation
+- Bayesian vs Likelihood approaches
+- Bootstrapping & Permutation Tests Likelihood & Bayesian Statistics
 
 
 ## Weekly Course Structure
 
-* Monday lectures: We describe the concerts, methods, and skills needed for problem sets.
-* Wednesday labs: We work together on problem sets.
-* Friday: Problem sets due (see Key Dates and Problem Sets).
+* Monday and Wednesday lectures: Focus on concepts and (manual) problem solving. In-class activities will occur often and count towards your grade.
+* Tuesday labs: R computer lab (bring your laptop) with guided tutorial. Activity is due by the end of the day.
 
-**Please ensure that you read the chapters listed in the syllabus before each Monday.** The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into the nuances of data analysis and coding.
+**Please ensure that you read the chapters listed in the syllabus before each Monday.** The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into nuances, applications, and questions.
 
 **Lectures will not be recorded.**
 
-We will have a Slack workspace for you to ask questions during and after class.
+We have [Piazza](https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25) set up for you to ask questions during and after class. Professor and TA will check this often and it is the preferred method to get our help. Also, see office hours schedule.
 
 ## Grade Distribution
 
 | Component | Weight |
-|-----------|--------|
-| 10 problem sets | 50% |
-| Midterm 1 | 10% |
-| Midterm 2 | 20% |
-| Final project | 20% |
+|:-------------------|:---------|
+| Homework (several) | 12% |
+| Problem sets (3) | 18 % |
+| Lab Assignments (3) | 30% |
+| Midterm 1 | 25% |
+| Final exam | 25% |
+
+Final grades will likely be assigned as follows (if curving is performed, it could increase but not decrease your grade):
+
+| Min % | BMC scale |
+|:-------------------|:---------|
+| 93| 4 |
+| 90 | 3.7|
+| 87| 3.3|
+| 83| 3.0|
+| 80| 2.7|
+| 77| 2.3|
+| 70|2.0|
+
 
 ## Problem Sets 
 

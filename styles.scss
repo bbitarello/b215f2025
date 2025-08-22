@@ -1,3 +1,34 @@
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #586028;
+$weird-green: #898928;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #9DA7BF;
+$darkgray: #616571;
+$lightblue: #55CFD8;
+$blue:  #00A1B7;
+$darkblue: #006475;
+$purple: #9158A2;
+$orange: #ad7237;
+
+
+// Base document colors
+$navbar-bg: $blue; // navbar
+$navbar-fg: $cream; // navbar foreground elements
+$navbar-hl: $lightblue; // highlight color when hovering over navbar links
+$body-bg: $cream; // page background 
+$body-color: $darkgray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $dark-green; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$input-bg: $cream; // background color for html inputs
+$code-color: $purple; // inline code text color
+$code-annotation-higlight-color: $orange; // The color used as a border on highlighted lines
+
 /*-- scss:rules --*/
 /* Table styles */
 
@@ -28,8 +59,8 @@ tr:nth-child(odd) {
 }
 
 th {
-    background-color: #586028; /* Green background for header row */
-    color: #ffffff; /* White text color for header row */
+    background-color: $light-green; /* Green background for header row */
+    color: black; /* White text color for header row */
 }
 
 
@@ -81,7 +112,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .quarto-section-identifier {
-  color: #616571;
+  color: $darkgray;
   font-weight: normal;
 }
 
@@ -100,22 +131,9 @@ pre {
   background-image: linear-gradient(160deg,#f8f8f8 0,#f1f1f1 100%);
 }
 
-/* Printing ------------------------------------------------ */
 
-@media print {
-  :root {
-    font-size: 11pt;
-  }
-  #quarto-sidebar, #TOC, .nav-page {
-    display: none;
-  }
-  .page-columns .content {
-    grid-column-start: page-start;
-  }
-  .fixed-top {
-    position: relative;
-  }
-  .panel-caption, .figure-caption, figcaption {
-    color: #666;
-  }
-}
+// Fonts
+
+$headings-font-family:   "Roboto", "Georgia", sans-serif !default;
+$headings-font-weight:    700 !default;
+$headings-line-height:    1.1 !default;
