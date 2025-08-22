@@ -1,3 +1,35 @@
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #586028;
+$weird-green: #898928;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #9DA7BF;
+$darkgray: #616571;
+$lightblue: #55CFD8;
+$blue:  #00A1B7;
+$darkblue: #006475;
+$purple: #9158A2;
+$orange: #ad7237;
+
+
+// Base document colors
+$navbar-bg: $blue; // navbar
+$navbar-fg: $cream; // navbar foreground elements
+$navbar-hl: $lightblue; // highlight color when hovering over navbar links
+$body-bg: $cream; // page background 
+$body-color: $darkgray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $dark-green; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$input-bg: $cream; // background color for html inputs
+$code-color: $purple; // inline code text color
+$code-annotation-higlight-color: $orange; // The color used as a border on highlighted lines
+
+/*-- scss:rules --*/
 /*-- scss:rules --*/
 /* Table styles */
 
