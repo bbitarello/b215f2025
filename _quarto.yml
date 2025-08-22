@@ -35,9 +35,9 @@ website:
 format:
   html:
     theme: 
-     - journal
+     - cosmo
      - style.css
-    toc: true
+    toc: false
 
 
 editor: visual

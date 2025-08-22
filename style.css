@@ -1,6 +1,7 @@
 /*-- scss:defaults --*/
 
 // Colors
+
 $dark-green: #586028;
 $weird-green: #898928;
 $light-green: #D1D9CE;
@@ -28,8 +29,9 @@ $code-bg: $cream; // inline code background color
 $input-bg: $cream; // background color for html inputs
 $code-color: $purple; // inline code text color
 $code-annotation-higlight-color: $orange; // The color used as a border on highlighted lines
+/*-- scss:defaults --*/
 
-/*-- scss:rules --*/
+
 /*-- scss:rules --*/
 /* Table styles */
 
