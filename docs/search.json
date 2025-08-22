@@ -1,5 +1,15 @@
 [
   {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Course Info",
+    "section": "",
+    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nPiazza (for questions/discussions)\nMoodle\nRstudio (Posit) Cloud - you will receive an invite by email. Use that link.\nLecture notes:",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
     "objectID": "syllabus.html#general-information",
     "href": "syllabus.html#general-information",
     "title": "Course Info",
@@ -187,16 +197,6 @@
     "text": "We thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
     "crumbs": [
       "Home"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Course Info",
-    "section": "",
-    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nPiazza (for questions/discussions)\nMoodle\nRstudio (Posit) Cloud - you will receive an invite by email. Use that link.\nLecture notes:",
-    "crumbs": [
-      "Syllabus"
     ]
   }
 ]
