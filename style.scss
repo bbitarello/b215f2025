@@ -1,13 +1,13 @@
 /*-- scss:defaults --*/
 
 // Colors
+
 $dark-green: #586028;
 $weird-green: #898928;
 $light-green: #D1D9CE;
 $cream: #FDFBF7;
 $gray: #9DA7BF;
-// $darkgray: #616571;
-$darkgray: #545760;
+$darkgray: #616571;
 $lightblue: #55CFD8;
 $blue:  #00A1B7;
 $darkblue: #006475;
@@ -16,22 +16,19 @@ $orange: #ad7237;
 
 
 // Base document colors
-$sidebar-bg: $darkblue; // navbar
-$sidebar-fg: #fff;
-$sidebar-hl: #fff;
+$navbar-bg: $blue; // navbar
 $navbar-fg: $cream; // navbar foreground elements
 $navbar-hl: $lightblue; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $darkgray; // page text 
 $footer-bg: $cream; // footer 
-$link-color: $dark-green; // hyperlinks 
+$link-color: $blue; // hyperlinks 
 
 // Inline code
 $code-bg: $cream; // inline code background color
 $input-bg: $cream; // background color for html inputs
 $code-color: $purple; // inline code text color
 $code-annotation-higlight-color: $orange; // The color used as a border on highlighted lines
-
 /*-- scss:defaults --*/
 
 
@@ -45,10 +42,10 @@ table {
 
 /* Prevent wrapping in the first column of a table */
 
-table th:nth-child(1) {
-  white-space: nowrap;
+table td:nth-child(1),
+table td:nth-child(2) {
+    white-space: nowrap;
 }
-
 
 th, td {
     padding: 10px; /* Adds some padding for better readability */
@@ -56,31 +53,32 @@ th, td {
     text-align: left; /* Aligns text to the left */
 }
 
-
-.table th, table th {
-    background-color: $dark-green; /* Green background for header row */
-    color: #fff; /* White text color for header row */
-    
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for even rows */
 }
 
-nav.sidebar {
-  a {
-    color: #fff;
-    
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-  
-  a.quarto-navigation-tool {
-    &:hover, &:focus {
-      opacity: 1;
-    }
-  }
-  
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
 }
-nav.quarto-secondary-nav {
-  button.quarto-search-button {
-    color: #fff;
-  }
+
+th {
+    background-color: $weird-green; /* Green background for header row */
+    color: black; /* White text color for header row */
+}
+
+
+.quarto-title-meta-heading::before {
+    content: "Due Date";
+}
+
+.quarto-title-meta-heading {
+    visibility: hidden;
+    position: relative;
+}
+
+.quarto-title-meta-heading::before {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
