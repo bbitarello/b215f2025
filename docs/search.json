@@ -1,0 +1,202 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Course Info",
+    "section": "",
+    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#general-information",
+    "href": "syllabus.html#general-information",
+    "title": "Course Info",
+    "section": "",
+    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
+    "title": "Course Info",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNo prior experience with programming is required. Ideally the student has taken BIOL B110 or BIOL B111.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#textbook",
+    "href": "syllabus.html#textbook",
+    "title": "Course Info",
+    "section": "Textbook",
+    "text": "Textbook\n\nThe Analysis of Biological Data (3rd or 2nd edition), by Whitlock & Schluter.\nPlease make sure you also bring a laptop to labs. You may borrow one from the bio department. Please email if this is your case.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "Course Info",
+    "section": "Course Description",
+    "text": "Course Description\nStatistics came from biology. For 15+ years, a solid foundation in statistics and R has been the standard tool for performing statistics in biology, health studies, data science, and many other fields. Because of this, B215 is neither just a biostatistics course nor simply an R programming course: it is a biostatistics course where R is directly integrated into the learning process. We will focus mainly on classic statistics (so-called frequentist ) and probability theory, but we will also have an introduction to the increasingly relevant Bayesian statistics approach.\nThroughout the course, we use motivating case studies and data analysis problem sets and R labs based on similar challenges to those one finds in scientific research.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#topics-we-aim-to-cover",
+    "href": "syllabus.html#topics-we-aim-to-cover",
+    "title": "Course Info",
+    "section": "Topics we (aim to) cover",
+    "text": "Topics we (aim to) cover\n\nSampling & Experimental Design\nDescriptive statistics\nData visualization\nProbability Theory\nEstimation & Hypothesis Testing\nThe Normal Distribution\nComparing samples & Correlations\nBootstrapping and permutation\nBayesian vs Likelihood approaches\nBootstrapping & Permutation Tests Likelihood & Bayesian Statistics",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#weekly-course-structure",
+    "href": "syllabus.html#weekly-course-structure",
+    "title": "Course Info",
+    "section": "Weekly Course Structure",
+    "text": "Weekly Course Structure\n\nMonday and Wednesday lectures: Focus on concepts and (manual) problem solving. In-class activities will occur often and count towards your grade.\nTuesday labs: R computer lab (bring your laptop) with guided tutorial. Activity is due by the end of the day.\n\nPlease ensure that you read the chapters listed in the syllabus before each Monday. The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into nuances, applications, and questions.\nLectures will not be recorded.\nWe have Piazza set up for you to ask questions during and after class. Professor and TA will check this often and it is the preferred method to get our help. Also, see office hours schedule.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grade-distribution",
+    "href": "syllabus.html#grade-distribution",
+    "title": "Course Info",
+    "section": "Grade Distribution",
+    "text": "Grade Distribution\n\n\n\nComponent\nWeight\n\n\n\n\nHomework (several)\n12%\n\n\nProblem sets (3)\n18 %\n\n\nLab Assignments (3)\n30%\n\n\nMidterm 1\n25%\n\n\nFinal exam\n25%\n\n\n\nFinal grades will likely be assigned as follows (if curving is performed, it could increase but not decrease your grade):\n\n\n\nMin %\nBMC scale\n\n\n\n\n93\n4\n\n\n90\n3.7\n\n\n87\n3.3\n\n\n83\n3.0\n\n\n80\n2.7\n\n\n77\n2.3\n\n\n70\n2.0",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#problem-sets",
+    "href": "syllabus.html#problem-sets",
+    "title": "Course Info",
+    "section": "Problem Sets",
+    "text": "Problem Sets\nProblem sets will be due every week or every other week, depending on difficulty. They will be due at 11:59 PM on the day denoted on the Problem Sets page.\nSome problem sets include open ended questions that will be difficult to answer on your own. We will be working on these together during Wednesday labs. We also offer office hours where you can get help with unanswered questions.\nProblem sets must be submitted via GitHub. Students are required to have a GitHub account and create a repository for the course. We will be providing further instructions during the first lab.\n10% of the total points for the problem sets will be deducted for every late day. Students can have a total of 4 late days without penalty during the entire semester. No need to provide a written excuse. Providing an excuse does not give you more days unless an accommodation is requested and approved by the Office of Student Affairs (this includes COVID).\nProblem set submissions need to be completely reproducible Quarto documents. If your Quarto file does not compile it will be considered a late day, and you will be notified and will need to resubmit a Quarto file that does compile. You will be deducted further late days for every day it takes for you to turn in a Quarto file that does knit. You are required to check emails that come through the Canvas system, as this the only way we will communicate problems with your problem sets.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#midterm-policy",
+    "href": "syllabus.html#midterm-policy",
+    "title": "Course Info",
+    "section": "Midterm Policy",
+    "text": "Midterm Policy\nBoth midterms are closed book, no internet, and in-class. You are expected to complete them in 1 hour.\nQuestions will be drawn mostly or entirely from the problem sets.\nPlease make sure you can come to class on the midterm dates provided in the Key Dates table below. If you miss the exam, you will need approval from the Office of Student Affairs to receive a makeup. All make-up exams will be completely different from the in-class ones.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#final-project",
+    "href": "syllabus.html#final-project",
+    "title": "Course Info",
+    "section": "Final Project",
+    "text": "Final Project\nFor your final project we ask that you turn in a 4-6 page report using data to answer a public health related question. You can chose from one of the following:\n\nBased on state-level data, how effective where vaccines against SARS-CoV-2 reported cases and COVID-19 hospitalizations and deaths, and vaccination rates.\nWhat was the excess mortality after Hurricane María in Puerto Rico? Where different age groups affected differently?\n\nOptionally, you can select a question that align with your ongoing research. This way, it can be directly beneficial to your work. This will require prior approval from the instructor by October 25.\nYet another option is to build a interactive webpage with poll-driven predictions for the 2024 US elections. Note this will be more challenging as we will not cover tools for interactive webpages until the last week of class (time permitting).\nNote: You should start working on your project after the first midterm. Do not wait until the last week. Teaching staff will be available during office hours.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#chatgpt-policy",
+    "href": "syllabus.html#chatgpt-policy",
+    "title": "Course Info",
+    "section": "ChatGPT Policy",
+    "text": "ChatGPT Policy\nYou can use ChatGPT however you want. Do remember you won’t be able to use it during the midterms.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#key-dates",
+    "href": "syllabus.html#key-dates",
+    "title": "Course Info",
+    "section": "Key Dates",
+    "text": "Key Dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nSep 10\nPset 1 due\n\n\nSep 13\nPset 2 due\n\n\nOct 14\nNo class: Indigenous Peoples’ Day\n\n\nOct 16\nMidterm 1: covers material from Sep 04-Oct 11\n\n\nOct 23\nStart final project. Obtain approval if you want to do a personal project instead.\n\n\nNov 11\nNo class: Veterans’ Day\n\n\nNov 25\nMidterm 2: cover material from Sep 04-Nov 22\n\n\nNov 27\nNo class: Thanksgiving Recess Begins\n\n\nDec 20\nFinal Project due",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-information",
+    "href": "index.html#course-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Lectures",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#problem-sets",
+    "href": "index.html#problem-sets",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Problem sets",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lab-assignments",
+    "href": "index.html#lab-assignments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Lab Assignments",
+    "text": "Lab Assignments\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#office-hour-times",
+    "href": "index.html#office-hour-times",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Office hour times",
+    "text": "Office hour times\n\n\n\nMeeting\nTime\nLocation",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
+    "crumbs": [
+      "Home"
+    ]
+  }
+]

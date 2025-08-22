@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - syllabus.qmd
 
 website:
   title: "BIOL B215: Biostatistics with R"
@@ -26,10 +29,7 @@ website:
       text: Home
     - href: syllabus.qmd
       text: Syllabus
-    - href: slides.qmd
-      text: Slides
-    - href: psets.qmd
-      text: Problem Sets
+   
    
     
 format:
