@@ -10,7 +10,7 @@ website:
   repo-actions: [source]
   sidebar:
     background: primary
-    logo: "images/logo.png"
+   # logo: "images/logo.png"
     pinned: true
     align: center
     tools:

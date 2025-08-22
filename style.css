@@ -60,7 +60,7 @@ tr:nth-child(odd) {
 }
 
 th {
-    background-color: #4CAF50; /* Green background for header row */
+    background-color: $weird-green; /* Green background for header row */
     color: black; /* White text color for header row */
 }
 
