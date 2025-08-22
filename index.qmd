@@ -4,41 +4,38 @@ title: "BIOL B215: Biostatistics with R"
 
 ## Course Information
 
+-   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
+-   TA: Nicole Cavalieri (ncavalieri \[at\] brynmawr.edu)
+-   Lecture: Monday & Wednesday 11:40 AM (Park 264)
+-   Lab: Wednesday 1:10 - 4 PM
+-   Remember to read the [syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
+-   Lecture notes:
+-   [Piazza (for Qs)](https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25)
+-   [Moodle](https://moodle.brynmawr.edu/course/view.php?id=8224)
+-   [Rstudio (Posit) Cloud](https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24)
+-   Remember to read the [Course Info](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
 
-* Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)
-* TA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)
-* Lecture: Monday \& Wednesday 11:40 AM (Park 264)
-* Lab: Wednesday 1:10 - 4 PM
-* Remember to read the [syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
-* Lecture notes: 
-* [Piazza (for Qs)](https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25)
-* [Moodle](https://moodle.brynmawr.edu/course/view.php?id=8224)
-* [Rstudio (Posit) Cloud](https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24)
-* Remember to read the [Course Info](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
-
-## Lectures 
+## Lectures
 
 Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.
 
-| Dates   | Topic  |    Slides | Reading |
-|:-------------------|:---------|:----------|:----------|
-
+| Dates | Topic | Slides | Reading |
+|:------|:------|:-------|:--------|
 
 ## Problem sets
 
-| Problem set| Topic | Due Date |  Difficulty |
-|:-------|:--------------|:---------|:----------|
+| Problem set | Topic | Due Date | Difficulty |
+|:------------|:------|:---------|:-----------|
 
 ## Lab Assignments
 
-| Problem set| Topic | Due Date |  Difficulty |
-|:-------|:--------------|:---------|:----------|
-
+| Problem set | Topic | Due Date | Difficulty |
+|:------------|:------|:---------|:-----------|
 
 ## Office hour times
 
-| Meeting | Time  | Location                 |
-|---------|----------|------------------------|
+| Meeting | Time | Location |
+|---------|------|----------|
 
 ## Acknowledgments
 
