@@ -4,7 +4,7 @@
     "href": "syllabus.html",
     "title": "Course Info",
     "section": "",
-    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24",
+    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nPiazza (for questions/discussions)\nMoodle\nRstudio (Posit) Cloud - you will receive an invite by email. Use that link.\nLecture notes:",
     "crumbs": [
       "Syllabus"
     ]
@@ -13,8 +13,8 @@
     "objectID": "syllabus.html#general-information",
     "href": "syllabus.html#general-information",
     "title": "Course Info",
-    "section": "",
-    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nLecture notes:\nPiazza (for Qs): https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25\nMoodle: https://moodle.brynmawr.edu/course/view.php?id=8224\nRstudio (Posit) Cloud: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24",
+    "section": "General Information",
+    "text": "General Information\n\nBIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nPiazza (for questions/discussions)\nMoodle\nRstudio (Posit) Cloud - you will receive an invite by email. Use that link.\nLecture notes:",
     "crumbs": [
       "Syllabus"
     ]
@@ -24,7 +24,7 @@
     "href": "syllabus.html#prerequisites",
     "title": "Course Info",
     "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required. Ideally the student has taken BIOL B110 or BIOL B111.",
+    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended. Students who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course. Counts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies. Counts towards college A.B requirements Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
     "crumbs": [
       "Syllabus"
     ]
@@ -74,7 +74,7 @@
     "href": "syllabus.html#grade-distribution",
     "title": "Course Info",
     "section": "Grade Distribution",
-    "text": "Grade Distribution\n\n\n\nComponent\nWeight\n\n\n\n\nHomework (several)\n12%\n\n\nProblem sets (3)\n18 %\n\n\nLab Assignments (3)\n30%\n\n\nMidterm 1\n25%\n\n\nFinal exam\n25%\n\n\n\nFinal grades will likely be assigned as follows (if curving is performed, it could increase but not decrease your grade):\n\n\n\nMin %\nBMC scale\n\n\n\n\n93\n4\n\n\n90\n3.7\n\n\n87\n3.3\n\n\n83\n3.0\n\n\n80\n2.7\n\n\n77\n2.3\n\n\n70\n2.0",
+    "text": "Grade Distribution\n\n\n\nComponent\nWeight\n\n\n\n\nHomework (several)\n12%\n\n\nProblem sets (3)\n18 %\n\n\nLab Assignments (2)\n20%\n\n\nMidterm 1\n18%\n\n\nFinal exam\n18%\n\n\nCoding Interview\n14%\n\n\n\nFinal grades will likely be assigned as follows (if curving is performed, it could increase but not decrease your grade):\n\n\n\nMin %\nBMC scale\n\n\n\n\n93\n4\n\n\n90\n3.7\n\n\n87\n3.3\n\n\n83\n3.0\n\n\n80\n2.7\n\n\n77\n2.3\n\n\n70\n2.0",
     "crumbs": [
       "Syllabus"
     ]
@@ -84,7 +84,7 @@
     "href": "syllabus.html#problem-sets",
     "title": "Course Info",
     "section": "Problem Sets",
-    "text": "Problem Sets\nProblem sets will be due every week or every other week, depending on difficulty. They will be due at 11:59 PM on the day denoted on the Problem Sets page.\nSome problem sets include open ended questions that will be difficult to answer on your own. We will be working on these together during Wednesday labs. We also offer office hours where you can get help with unanswered questions.\nProblem sets must be submitted via GitHub. Students are required to have a GitHub account and create a repository for the course. We will be providing further instructions during the first lab.\n10% of the total points for the problem sets will be deducted for every late day. Students can have a total of 4 late days without penalty during the entire semester. No need to provide a written excuse. Providing an excuse does not give you more days unless an accommodation is requested and approved by the Office of Student Affairs (this includes COVID).\nProblem set submissions need to be completely reproducible Quarto documents. If your Quarto file does not compile it will be considered a late day, and you will be notified and will need to resubmit a Quarto file that does compile. You will be deducted further late days for every day it takes for you to turn in a Quarto file that does knit. You are required to check emails that come through the Canvas system, as this the only way we will communicate problems with your problem sets.",
+    "text": "Problem Sets\nProblem sets will be due every week or every other week, depending on difficulty. They will be due at 11:59 PM on the day denoted on the Problem Sets page.\nSome problem sets include open ended questions that may be challenging. If you need help, go to office hours where you can get help with unanswered questions. You may also post clarifying questions on Piazza under the appropriate topic.\n10% of the total points for the problem sets will be deducted for every late day. Students can have a total of 4 late days without penalty during the entire semester. No need to provide a written excuse. Providing an excuse does not give you more days unless an accommodation is requested and approved by your dean.",
     "crumbs": [
       "Syllabus"
     ]
@@ -94,7 +94,7 @@
     "href": "syllabus.html#midterm-policy",
     "title": "Course Info",
     "section": "Midterm Policy",
-    "text": "Midterm Policy\nBoth midterms are closed book, no internet, and in-class. You are expected to complete them in 1 hour.\nQuestions will be drawn mostly or entirely from the problem sets.\nPlease make sure you can come to class on the midterm dates provided in the Key Dates table below. If you miss the exam, you will need approval from the Office of Student Affairs to receive a makeup. All make-up exams will be completely different from the in-class ones.",
+    "text": "Midterm Policy\nBoth midterms are closed book, no internet. You may use certain calculator (see above) and you will be allowed one sheet of standard paper with hand-written notes (front and back) to assist you. Your thought process must be explained for all answers and your final answer clearly marked. Questions will drawn from or similar to problem sets.\nPlease make sure you can come to class on the midterm dates provided in the Key Dates table below. If you absolutely must miss the exam, you will need approval from your dean and myself before the exam in order to have a makeup. All make-up exams will be completely different from the in-class ones.",
     "crumbs": [
       "Syllabus"
     ]
@@ -164,7 +164,7 @@
     "href": "index.html#problem-sets",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\nbla",
     "crumbs": [
       "Home"
     ]
@@ -197,6 +197,36 @@
     "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#coding-interview",
+    "href": "syllabus.html#coding-interview",
+    "title": "Course Info",
+    "section": "Coding Interview",
+    "text": "Coding Interview\n[Stay tuned]",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#large-language-models-llms-policy",
+    "href": "syllabus.html#large-language-models-llms-policy",
+    "title": "Course Info",
+    "section": "Large Language Models (LLMs) Policy",
+    "text": "Large Language Models (LLMs) Policy\n\nMy philosophy\nLLMs for learning? Research clearly shows that when used in the ways many students do, it hampers the development of critical thinking, which is one of the purposes of a college education. [add refs] Furthermore, I am 100% sure that no one is looking to hire a person who pastes LLM output and presents it as their own work. The main reason I avoid this tool at all costs is its devastating impact on our already out of control climate catastrophe [add refs].\nLLMs and their climate impact.\n\n\nSo can you use ir or not?\nYou should NOT use LLMs to do your work: i.e., it should not write answers for you, write text for you, or produce code for you. That being said, you can use it for learning if you wish, as detailed below.\nFor Lab assignments, you can use it to understand things (e.g, to understand a cryptic error message) just as I am ok with you using web searches in general (Stack Overflow will be way more helpful to you than LLMs, by the way). To this day, I have never had help from an LLM on a coding error that I could not figure out from online posts in forums. If you do use it for a lab assignment, you will be required to include citations for each instance where you used it, including the prompt you used.\nFor problem sets: I prefer you don’t use it for this as there is no reason to do so. The whole point of problem sets is to practice for the exams, and I will grade these benevolently as described below. Do remember you won’t be able to use it during the midterms or during your coding interview.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#benevolent-grading",
+    "href": "syllabus.html#benevolent-grading",
+    "title": "Course Info",
+    "section": "Benevolent grading",
+    "text": "Benevolent grading\nSince problem sets and lab assignments are formative, i.e, their purpose is learning, I will grade them benevolently follow this rubric:\n\n\n\n\n\n\n\nGrade (%)\nDescription\n\n\n\n\n100 %\nGrades \\(&gt; 90%\\) will be rounded up.\n\n\n70-90%\nComplete and various degrees of incorrect answers: 3 + major errors (~70%) to a few minor errors (~ 90%)\n\n\n60%\nComplete but sloppy or excessive amount of major errors.\n\n\n50%\nIncomplete (not everything was answered)\n\n\n0%\nPlagiarism (inclduing innapropriate LLM use)",
+    "crumbs": [
+      "Syllabus"
     ]
   }
 ]

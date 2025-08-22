@@ -26,6 +26,7 @@ Lecture slides, class notes, and problem sets are linked below. New material is 
 
 | Problem set | Topic | Due Date | Difficulty |
 |:------------|:------|:---------|:-----------|
+|bla||||
 
 ## Lab Assignments
 

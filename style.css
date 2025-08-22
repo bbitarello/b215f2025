@@ -22,7 +22,7 @@ $navbar-hl: $lightblue; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $darkgray; // page text 
 $footer-bg: $cream; // footer 
-$link-color: $dark-green; // hyperlinks 
+$link-color: $blue; // hyperlinks 
 
 // Inline code
 $code-bg: $cream; // inline code background color

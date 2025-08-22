@@ -6,7 +6,8 @@ $weird-green: #898928;
 $light-green: #D1D9CE;
 $cream: #FDFBF7;
 $gray: #9DA7BF;
-$darkgray: #616571;
+// $darkgray: #616571;
+$darkgray: #545760;
 $lightblue: #55CFD8;
 $blue:  #00A1B7;
 $darkblue: #006475;
@@ -15,7 +16,9 @@ $orange: #ad7237;
 
 
 // Base document colors
-$navbar-bg: $blue; // navbar
+$sidebar-bg: $darkblue; // navbar
+$sidebar-fg: #fff;
+$sidebar-hl: #fff;
 $navbar-fg: $cream; // navbar foreground elements
 $navbar-hl: $lightblue; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
@@ -29,6 +32,9 @@ $input-bg: $cream; // background color for html inputs
 $code-color: $purple; // inline code text color
 $code-annotation-higlight-color: $orange; // The color used as a border on highlighted lines
 
+/*-- scss:defaults --*/
+
+
 /*-- scss:rules --*/
 /* Table styles */
 
@@ -39,10 +45,10 @@ table {
 
 /* Prevent wrapping in the first column of a table */
 
-table td:nth-child(1),
-table td:nth-child(2) {
-    white-space: nowrap;
+table th:nth-child(1) {
+  white-space: nowrap;
 }
+
 
 th, td {
     padding: 10px; /* Adds some padding for better readability */
@@ -50,90 +56,32 @@ th, td {
     text-align: left; /* Aligns text to the left */
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light grey background for even rows */
+
+.table th, table th {
+    background-color: $dark-green; /* Green background for header row */
+    color: #fff; /* White text color for header row */
+    
 }
 
-tr:nth-child(odd) {
-    background-color: #ffffff; /* White background for odd rows */
+nav.sidebar {
+  a {
+    color: #fff;
+    
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+  
+  a.quarto-navigation-tool {
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+  
 }
-
-th {
-    background-color: $light-green; /* Green background for header row */
-    color: black; /* White text color for header row */
+nav.quarto-secondary-nav {
+  
+  button.quarto-search-button {
+    color: #fff;
+  }
 }
-
-
-.quarto-title-meta-heading::before {
-    content: "Due Date";
-}
-
-.quarto-title-meta-heading {
-    visibility: hidden;
-    position: relative;
-}
-
-.quarto-title-meta-heading::before {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.sidebar-title {
-  color: #006475 ;
-}
-
-div.sidebar-item-container .active {
-  font-weight: bold;
-}
-
-.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active{
-  font-weight: bold;
-}
-
-img.quarto-cover-image {
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-}
-
-/* Headings ------------------------------------------------------ */
-
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-h3 { margin-top: 1.5em; font-size: 1.2rem; }
-h4 { margin-top: 1.5em; font-size: 1.1rem; }
-h5 { margin-top: 1.5em; font-size: 1rem; }
-
-h1, h2, h3, h4, h5 {
-  line-height: 1.3;
-}
-
-.quarto-section-identifier {
-  color: $darkgray;
-  font-weight: normal;
-}
-
-/* Code ------------------------------------------------ */
-
-code {
-  color: #9DA7BF;
-}
-
-code a:any-link {
-  text-decoration: underline;
-  text-decoration-color: #ccc;
-}
-
-pre {
-  background-image: linear-gradient(160deg,#f8f8f8 0,#f1f1f1 100%);
-}
-
-
-// Fonts
-
-$headings-font-family:   "Roboto", "Georgia", sans-serif !default;
-$headings-font-weight:    700 !default;
-$headings-line-height:    1.1 !default;

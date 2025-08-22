@@ -36,8 +36,8 @@ format:
   html:
     theme: 
      - cosmo
-     - style.css
-    toc: false
+     - styles.scss
+    toc: true
 
 
 editor: visual
