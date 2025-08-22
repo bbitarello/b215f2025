@@ -4,7 +4,7 @@ project:
 
 website:
   title: "BIOL B215: Biostatistics with R"
-  site-url: https://github.com/bbitarello/b215f2025
+  site-url: https://bbitarello.github.io/b215f2025
   repo-url: https://github.com/bbitarello/b215f2025
   repo-branch: main
   repo-actions: [source]
@@ -20,7 +20,7 @@ website:
       - icon: cloud-fill
         href: https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24
         text: RStudio Cloud
-    style: docked
+    style: "floating"
     contents:
     - href: index.qmd
       text: Home
