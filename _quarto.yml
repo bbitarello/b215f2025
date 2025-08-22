@@ -25,19 +25,19 @@ website:
     - href: index.qmd
       text: Home
     - href: syllabus.qmd
-      text: Course Info
-    - href: schedule.qmd
-      text: Schedule
+      text: Syllabus
+    - href: slides.qmd
+      text: Slides
     - href: psets.qmd
       text: Problem Sets
+   
     
 format:
   html:
     theme: 
-      - journal
-      - styles.scss
-    toc: false
-    page-layout: full
+     - journal
+     - style.scss
+    toc: true
 
 
 editor: source
