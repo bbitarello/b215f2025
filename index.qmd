@@ -2,7 +2,7 @@
 title: "BIOL B215: Biostatistics with R"
 ---
 
-## Course Information
+# Course Information
 
 -   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
 -   TA: Nicole Cavalieri (ncavalieri \[at\] brynmawr.edu)
@@ -45,7 +45,7 @@ Lecture slides, class notes, and problem sets are linked below. New material is 
 |:-----------------|:-----------------|:------------------|:-----------|
 | Midterm 1        | Week 1-7         | 10/28, during lab | Hard       |
 | Midterm 2        | Weeks 1-14       | Finals week, TBD  | Hard       |
-| Coding Interview | Finals week, TBD |                   | Hard       |
+
 
 ## Office hour times
 
