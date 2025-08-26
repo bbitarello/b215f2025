@@ -1,5 +1,95 @@
 [
   {
+    "objectID": "rlearn.html",
+    "href": "rlearn.html",
+    "title": "Online Resources (free) for Learning R",
+    "section": "",
+    "text": "Books\n\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n\n\n\nVideos\n\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nThis youtube playlist\n\n\n\nTutorials:\n- [R labs (from your textbook)](https://whitlockschluter3e.zoology.ubc.ca/RLabs/index.html)\n- [Quick-R](https://www.statmethods.net/r-tutorial/index.html)\n\n\nGetting help with R\nSTART HERE, with fbriatte.org, where you can learn hwo to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "crumbs": [
+      "R links"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-information",
+    "href": "index.html#course-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Lectures",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#problem-sets",
+    "href": "index.html#problem-sets",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Problem sets",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#lab-assignments",
+    "href": "index.html#lab-assignments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Lab Assignments",
+    "text": "Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#midterms-coding-interview",
+    "href": "index.html#midterms-coding-interview",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Midterms & Coding Interview",
+    "text": "Midterms & Coding Interview\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard\n\n\nCoding Interview\nFinals week, TBD\n\nHard",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#office-hour-times",
+    "href": "index.html#office-hour-times",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Office hour times",
+    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Course Info",
@@ -87,86 +177,6 @@
     "text": "15.3 Students with physical or learning differences\nInfo from the College website:\n\n“BMC is committed to providing equal access to students with a documented disability. Students needing academic accommodations for a disability must first register with Access Services. Students can call 610-526-7516 to make an appointment with the Access Services Director, Deb Alder, or email her at dalder[at]brynmawr.edu to begin this confidential process. Once registered, students should schedule an appointment with the professor as early in the semester as possible to share the verification form and make appropriate arrangements.”\n\nFrom me: Please reach out as early as possible (ideally, even before classes start) so that we can make the necessary accommodations. Note that accommodations are not retroactive and require advance notice to implement.\nNeed help with math? The Bryn Mawr College Q Center supports students who are doing quantitative work in courses across the STEM and Social Science disciplines. The Q Center is a collaborative study space that provides a welcoming location for individual work, study groups, and collaboration with Q Mentors.",
     "crumbs": [
       "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#course-information",
-    "href": "index.html#course-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#lectures",
-    "href": "index.html#lectures",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#problem-sets",
-    "href": "index.html#problem-sets",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#lab-assignments",
-    "href": "index.html#lab-assignments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Lab Assignments",
-    "text": "Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#midterms-coding-interview",
-    "href": "index.html#midterms-coding-interview",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Midterms & Coding Interview",
-    "text": "Midterms & Coding Interview\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard\n\n\nCoding Interview\nFinals week, TBD\n\nHard",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#office-hour-times",
-    "href": "index.html#office-hour-times",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Office hour times",
-    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
-    "crumbs": [
-      "Home"
     ]
   }
 ]
