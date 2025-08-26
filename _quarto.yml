@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - syllabus.qmd
+    - rlearn.qmd
 
 website:
   title: "BIOL B215: Biostatistics with R"

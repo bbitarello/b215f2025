@@ -27,8 +27,8 @@ title: "Online Resources (free) for Learning R"
 
 # Tutorials:
 
-    - [R Labs (from your textbook)]()
-    - [Quick-R]
+    - [R labs (from your textbook)](https://whitlockschluter3e.zoology.ubc.ca/RLabs/index.html)
+    - [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
 
 # Getting help with R
 
