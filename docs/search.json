@@ -10,121 +10,81 @@
     ]
   },
   {
-    "objectID": "syllabus.html#general-information",
-    "href": "syllabus.html#general-information",
-    "title": "Course Info",
-    "section": "",
-    "text": "BIOL B 260 Biostatistics with R\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 128)\nPiazza (for questions/discussions)\nMoodle\nRstudio (Posit) Cloud - you will receive an invite by email. Use that link.\nLecture notes:",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#prerequisites",
-    "href": "syllabus.html#prerequisites",
-    "title": "Course Info",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended. Students who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course. Counts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies. Counts towards college A.B requirements Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#course-description",
-    "href": "syllabus.html#course-description",
-    "title": "Course Info",
-    "section": "Course Description",
-    "text": "Course Description\nStatistics came from biology. For 15+ years, a solid foundation in statistics and R has been the standard tool for performing statistics in biology, health studies, data science, and many other fields. Because of this, B215 is neither just a biostatistics course nor simply an R programming course: it is a biostatistics course where R is directly integrated into the learning process. We will focus mainly on classic statistics (so-called frequentist ) and probability theory, but we will also have an introduction to the increasingly relevant Bayesian statistics approach.\nThroughout the course, we use motivating case studies and data analysis problem sets and R labs based on similar challenges to those one finds in scientific research.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#topics-we-aim-to-cover",
-    "href": "syllabus.html#topics-we-aim-to-cover",
-    "title": "Course Info",
-    "section": "Topics we (aim to) cover",
-    "text": "Topics we (aim to) cover\n\nSampling & Experimental Design\nDescriptive statistics\nData visualization\nProbability Theory\nEstimation & Hypothesis Testing\nThe Normal Distribution\nComparing samples & Correlations\nBootstrapping and permutation\nBayesian vs Likelihood approaches\nBootstrapping & Permutation Tests Likelihood & Bayesian Statistics",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#weekly-course-structure",
-    "href": "syllabus.html#weekly-course-structure",
-    "title": "Course Info",
-    "section": "Weekly Course Structure",
-    "text": "Weekly Course Structure\n\nMonday and Wednesday lectures: Focus on concepts and (manual) problem solving. In-class activities will occur often and count towards your grade.\nTuesday labs: R computer lab (bring your laptop) with guided tutorial. Activity is due by the end of the day.\n\nPlease ensure that you read the chapters listed in the syllabus before each Monday. The lectures are designed with the assumption that you have completed the readings, enabling us to dive deeper into nuances, applications, and questions.\nLectures will not be recorded.\nWe have Piazza set up for you to ask questions during and after class. Professor and TA will check this often and it is the preferred method to get our help. Also, see office hours schedule.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#grade-distribution",
-    "href": "syllabus.html#grade-distribution",
-    "title": "Course Info",
-    "section": "Grade Distribution",
-    "text": "Grade Distribution\n\n\n\nComponent\nWeight\n\n\n\n\nHomework (several)\n12%\n\n\nProblem sets (3)\n18 %\n\n\nLab Assignments (2)\n20%\n\n\nMidterm 1\n18%\n\n\nFinal exam\n18%\n\n\nCoding Interview\n14%\n\n\n\nFinal grades will likely be assigned as follows (if curving is performed, it could increase but not decrease your grade):\n\n\n\nMin %\nBMC scale\n\n\n\n\n93\n4\n\n\n90\n3.7\n\n\n87\n3.3\n\n\n83\n3.0\n\n\n80\n2.7\n\n\n77\n2.3\n\n\n70\n2.0",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#problem-sets",
-    "href": "syllabus.html#problem-sets",
-    "title": "Course Info",
-    "section": "Problem Sets",
-    "text": "Problem Sets\nProblem sets will be due every week or every other week, depending on difficulty. They will be due at 11:59 PM on the day denoted on the Problem Sets page.\nSome problem sets include open ended questions that may be challenging. If you need help, go to office hours where you can get help with unanswered questions. You may also post clarifying questions on Piazza under the appropriate topic.\n10% of the total points for the problem sets will be deducted for every late day. Students can have a total of 4 late days without penalty during the entire semester. No need to provide a written excuse. Providing an excuse does not give you more days unless an accommodation is requested and approved by your dean.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#midterm-policy",
-    "href": "syllabus.html#midterm-policy",
-    "title": "Course Info",
-    "section": "Midterm Policy",
-    "text": "Midterm Policy\nBoth midterms are closed book, no internet. You may use certain calculator (see above) and you will be allowed one sheet of standard paper with hand-written notes (front and back) to assist you. Your thought process must be explained for all answers and your final answer clearly marked. Questions will drawn from or similar to problem sets.\nPlease make sure you can come to class on the midterm dates provided in the Key Dates table below. If you absolutely must miss the exam, you will need approval from your dean and myself before the exam in order to have a makeup. All make-up exams will be completely different from the in-class ones.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
     "objectID": "syllabus.html#coding-interview",
     "href": "syllabus.html#coding-interview",
     "title": "Course Info",
-    "section": "Coding Interview",
-    "text": "Coding Interview\n[Stay tuned]",
+    "section": "11.1 Coding Interview",
+    "text": "11.1 Coding Interview\n[Stay tuned]",
     "crumbs": [
       "Syllabus"
     ]
   },
   {
-    "objectID": "syllabus.html#large-language-models-llms-policy",
-    "href": "syllabus.html#large-language-models-llms-policy",
+    "objectID": "syllabus.html#sec-plagiarism",
+    "href": "syllabus.html#sec-plagiarism",
     "title": "Course Info",
-    "section": "Large Language Models (LLMs) Policy",
-    "text": "Large Language Models (LLMs) Policy\n\nMy philosophy\nLLMs for learning? Research clearly shows that when used in the ways many students do, it hampers the development of critical thinking, which is one of the purposes of a college education. [add refs] Furthermore, I am 100% sure that no one is looking to hire a person who pastes LLM output and presents it as their own work. The main reason I avoid this tool at all costs is its devastating impact on our already out of control climate catastrophe [add refs].\nLLMs and their climate impact.\n\n\nSo can you use ir or not?\nYou should NOT use LLMs to do your work: i.e., it should not write answers for you, write text for you, or produce code for you. That being said, you can use it for learning if you wish, as detailed below.\nFor Lab assignments, you can use it to understand things (e.g, to understand a cryptic error message) just as I am ok with you using web searches in general (Stack Overflow will be way more helpful to you than LLMs, by the way). To this day, I have never had help from an LLM on a coding error that I could not figure out from online posts in forums. If you do use it for a lab assignment, you will be required to include citations for each instance where you used it, including the prompt you used.\nFor problem sets: I prefer you don’t use it for this as there is no reason to do so. The whole point of problem sets is to practice for the exams, and I will grade these benevolently as described below. Do remember you won’t be able to use it during the midterms or during your coding interview.",
+    "section": "13.1 Plagiarism",
+    "text": "13.1 Plagiarism\nThe Bryn Mawr honor code covers this well:\n\nIn reports and other written work, sources of information and of ideas and opinions not the student’s own must be clearly indicated; the source of direct quotations must be acknowledged. Failure to do so constitutes plagiarism. \n\nFrom me: Please refer to the honor code. If you have doubts about whether something constitutes plagiarism, please ask.",
     "crumbs": [
       "Syllabus"
     ]
   },
   {
-    "objectID": "syllabus.html#benevolent-grading",
-    "href": "syllabus.html#benevolent-grading",
+    "objectID": "syllabus.html#sec-LLMs",
+    "href": "syllabus.html#sec-LLMs",
     "title": "Course Info",
-    "section": "Benevolent grading",
-    "text": "Benevolent grading\nSince problem sets and lab assignments are formative, i.e, their purpose is learning, I will grade them benevolently follow this rubric:\n\n\n\n\n\n\n\nGrade (%)\nDescription\n\n\n\n\n100 %\nGrades \\(&gt; 90%\\) will be rounded up.\n\n\n70-90%\nComplete and various degrees of incorrect answers: 3 + major errors (~70%) to a few minor errors (~ 90%)\n\n\n60%\nComplete but sloppy or excessive amount of major errors.\n\n\n50%\nIncomplete (not everything was answered)\n\n\n0%\nPlagiarism (inclduing innapropriate LLM use)",
+    "section": "13.2 LLMs Policy",
+    "text": "13.2 LLMs Policy",
     "crumbs": [
       "Syllabus"
     ]
   },
   {
-    "objectID": "syllabus.html#key-dates",
-    "href": "syllabus.html#key-dates",
+    "objectID": "syllabus.html#my-philosophy",
+    "href": "syllabus.html#my-philosophy",
     "title": "Course Info",
-    "section": "Key Dates",
-    "text": "Key Dates\n\n\n\n\n\n\n\nDate\nEvent\n\n\n\n\nSep 10\nPset 1 due\n\n\nSep 13\nPset 2 due\n\n\nOct 14\nNo class: Indigenous Peoples’ Day\n\n\nOct 16\nMidterm 1: covers material from Sep 04-Oct 11\n\n\nOct 23\nStart final project. Obtain approval if you want to do a personal project instead.\n\n\nNov 11\nNo class: Veterans’ Day\n\n\nNov 25\nMidterm 2: cover material from Sep 04-Nov 22\n\n\nNov 27\nNo class: Thanksgiving Recess Begins\n\n\nDec 20\nFinal Project due",
+    "section": "13.3 My philosophy",
+    "text": "13.3 My philosophy\nLLMs for learning? Research clearly shows that when used in the ways many students do, it hampers the development of critical thinking, which is one of the purposes of a college education. [add refs] Furthermore, I am 100% sure that no one is looking to hire a person who pastes LLM output and presents it as their own work. The main reason I avoid this tool at all costs is its devastating impact on our already out of control climate catastrophe [add refs].\nLLMs and their climate impact.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#so-can-you-use-ir-or-not",
+    "href": "syllabus.html#so-can-you-use-ir-or-not",
+    "title": "Course Info",
+    "section": "13.4 So can you use ir or not?",
+    "text": "13.4 So can you use ir or not?\nAgain, from the Bryn Mawr Honor code:\n\nGenerative AI tools should not be used in the completion of any course assignments, exams, or written work, including laboratory work, unless an instructor for a given course has specifically and explicitly authorized their use for the assignment in question. Presenting AI-generated content as original student work, submitting AI-generated content without citing its source in artificial intelligence tools, and relying on generative AI tools for closed-book quizzes, tests, and exams all constitute violations of the Honor Code.\n\nFrom me: the above excerpt summarizes the policy for this course. Now the specifics:\nFor Lab assignments ONLY you can use it to understand things (e.g, to understand a cryptic error message) just as I am ok with you using web searches in general. I will give specific instructions about this in the assignments but, briefly, for the lab assignments you may search for help on the web, including the LLMs. If you do use LLMs for a lab assignment, you will be required to include citations for each instance where you used it, including the prompt you used. You are also required to cite any other sources of information.\nNote: Stack Overflow and other programming forums online + office hours will be way more helpful to your lasting learning and what you will take from this course than LLMs, by the way. I have never had help from an LLM on a coding error that I could not figure out from online posts in forums.\nFor homework and problem sets: Please don’t use, as there is (ethical) reason to do so. The whole point of these is to learn and/or practice for the exams, and I will grade these benevolently as described below.\nLastly, do remember you won’t be able to use A.I or any other external sources during the midterms or during your coding interview.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#physical-and-mental-well-being",
+    "href": "syllabus.html#physical-and-mental-well-being",
+    "title": "Course Info",
+    "section": "15.1 Physical and Mental well-being",
+    "text": "15.1 Physical and Mental well-being\nCollege is a marathon, not a sprint. Take care of your physical and mental health. You will reap more benefits if you are consistent than cramming an unreasonable amount of work into a short period of time. If you are struggling, do not wait: keep me and your academic dean on the same page so that we can help you achieve your best. Also, do not hesitate to seek out the services available to you such as the Bryn Mawr College counseling services.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#title-ix",
+    "href": "syllabus.html#title-ix",
+    "title": "Course Info",
+    "section": "15.2 Title IX",
+    "text": "15.2 Title IX\nInfo from the College website:\n\nBMC strongly encourages all students to report any incidents of sexual misconduct. Bryn Mawr College is committed to providing an inclusive environment, free from sexual and gender-based discrimination. Title IX prohibits discrimination based on sex in any federally funded educational program or activity, and forms the basis for Bryn Mawr’s policies and resources regarding sex discrimination. The Bryn Mawr College Sexual Misconduct Policy prohibits Title IX sexual harassment, which includes sexual assault, dating violence, domestic violence, and stalking. Bryn Mawr’s Policy is more extensive than Title IX, and also covers other gender-based misconduct. BMC’s Policy is more extensive than Title IX, and also covers other gender-based misconduct.\n\nSee more here.\nFrom me: Please be aware that all Bryn Mawr/Haverford employees (other than those designated as confidential resources such as counselors, clergy, and healthcare providers) must report information about such discrimination and harassment to Bi-Co Tittle IX Coordinator.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#sec-accom",
+    "href": "syllabus.html#sec-accom",
+    "title": "Course Info",
+    "section": "15.3 Students with physical or learning differences",
+    "text": "15.3 Students with physical or learning differences\nInfo from the College website:\n\n“BMC is committed to providing equal access to students with a documented disability. Students needing academic accommodations for a disability must first register with Access Services. Students can call 610-526-7516 to make an appointment with the Access Services Director, Deb Alder, or email her at dalder[at]brynmawr.edu to begin this confidential process. Once registered, students should schedule an appointment with the professor as early in the semester as possible to share the verification form and make appropriate arrangements.”\n\nFrom me: Please reach out as early as possible (ideally, even before classes start) so that we can make the necessary accommodations. Note that accommodations are not retroactive and require advance notice to implement.\nNeed help with math? The Bryn Mawr College Q Center supports students who are doing quantitative work in courses across the STEM and Social Science disciplines. The Q Center is a collaborative study space that provides a welcoming location for individual work, study groups, and collaboration with Q Mentors.",
     "crumbs": [
       "Syllabus"
     ]
@@ -164,7 +124,7 @@
     "href": "index.html#problem-sets",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\nbla",
+    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5",
     "crumbs": [
       "Home"
     ]
@@ -174,7 +134,17 @@
     "href": "index.html#lab-assignments",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Lab Assignments",
-    "text": "Lab Assignments\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty",
+    "text": "Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#midterms-coding-interview",
+    "href": "index.html#midterms-coding-interview",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Midterms & Coding Interview",
+    "text": "Midterms & Coding Interview\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard\n\n\nCoding Interview\nFinals week, TBD\n\nHard",
     "crumbs": [
       "Home"
     ]
@@ -184,7 +154,7 @@
     "href": "index.html#office-hour-times",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Office hour times",
-    "text": "Office hour times\n\n\n\nMeeting\nTime\nLocation",
+    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
     "crumbs": [
       "Home"
     ]
@@ -194,7 +164,7 @@
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.",
+    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
     "crumbs": [
       "Home"
     ]

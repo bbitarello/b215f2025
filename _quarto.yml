@@ -29,6 +29,10 @@ website:
       text: Home
     - href: syllabus.qmd
       text: Syllabus
+    - href: rlearn.qmd
+      text: R links
+    
+      
    
    
     

@@ -1,0 +1,42 @@
+---
+title: "Online Resources (free) for Learning R"
+---
+
+# Books
+
+
+   - ["R for Data Science"](https://r4ds.had.co.nz/), by Hadley Wickham & Garrett Grolemund
+
+  - ["YaRrr! The Pirate’s Guide to R"](https://bookdown.org/ndphillips/YaRrr/), by Nathaniel Phillips
+    
+  - ["An introduction to Biostatistics using R"](https://waveland.com/Glover-Mitchell/r-guide.pdf), by Glover & Mitchell
+
+  - ["Introductory Biostatistics with R"](https://tuos-bio-data-skills.github.io/intro-stats-book/), by Dylan Childs, Bethan  Hindle &  Philip Warren
+    
+  - ["Applied Biostats"](https://ybrandvain.github.io/biostats/), by Yaniv Brandvain.
+
+
+# Videos
+
+  - [Code Like a Pro](https://www.youtube.com/watch?embed=no&v=91LmBj29-Sc&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=7)
+  - [Intro to Rstudio and Rstudio Cloud](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
+  - [Overview of R markdown](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
+  - [Rmarkdown with Rstudio](https://www.youtube.com/watch?embed=no&v=DNS7i2m4sB0&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=9&t=2s&ab_channel=RogerPeng)
+  - [This youtube playlist](https://www.youtube.com/playlist?embed=no&list=PLA3ArwPxU4MxphgeREPfnxznb8llUtTzX)
+
+
+# Tutorials:
+
+    - [R Labs (from your textbook)]()
+    - [Quick-R]
+
+# Getting help with R
+
+**START HERE**, with [fbriatte.org](https://f.briatte.org/r/asking-r-questions), where you can learn hwo to find answers to your burning R questions online. 
+
+ - [Getting help with R](https://www.r-project.org/help.html)
+ - Stack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit [http://stackoverflow.com/questions/tagged/r]([http://stackoverflow.com/questions/tagged/r). 
+ - [Rstudio Community](https://community.rstudio.com/)
+ - Reddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio
+ - Github: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their "issues" page can be very helpful. E.g., [here](https://github.com/rstudio/rmarkdown/issues) is the issues page for the `rmarkdown` package.
+

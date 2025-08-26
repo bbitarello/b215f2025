@@ -2,8 +2,6 @@
 title: "BIOL B215: Biostatistics with R"
 ---
 
-## I am not rendering this
-
 ## Course Information
 
 -   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
@@ -28,18 +26,36 @@ Lecture slides, class notes, and problem sets are linked below. New material is 
 
 | Problem set | Topic | Due Date | Difficulty |
 |:------------|:------|:---------|:-----------|
-|bla||||
+| 1           |       | Week 4   |            |
+| 2           |       |          |            |
+| 3           |       |          |            |
+| 4           |       |          |            |
+| 5           |       |          |            |
 
 ## Lab Assignments
 
-| Problem set | Topic | Due Date | Difficulty |
-|:------------|:------|:---------|:-----------|
+| Lab assignment | Topics | Due Date | Difficulty |
+|:---------------|:-------|:---------|:-----------|
+| 1              |        |          |            |
+| 2              |        |          |            |
+
+## Midterms & Coding Interview
+
+| Assessment       | Topics           | When/Where        | Difficulty |
+|:-----------------|:-----------------|:------------------|:-----------|
+| Midterm 1        | Week 1-7         | 10/28, during lab | Hard       |
+| Midterm 2        | Weeks 1-14       | Finals week, TBD  | Hard       |
+| Coding Interview | Finals week, TBD |                   | Hard       |
 
 ## Office hour times
 
-| Meeting | Time | Location |
-|---------|------|----------|
+| Who                     | When            | Where            |
+|-------------------------|-----------------|------------------|
+| Professor drop-in hours | Tuesday 3-4pm   | Park 211 or zoom |
+| Professor drop-in hours | Wednesday 2-3pm | Park 211 or zoom |
+| Professor drop-in hours | Friday 2-3pm    | Park 211 or zoom |
+| TA                      | TBD by survey   | TBD              |
 
 ## Acknowledgments
 
-We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials.
+We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template. We also thank [Yaniv Brandvain](https://brandvainlab.wordpress.com/) for sharing awesome teaching materials. Thank you also to [fbriatte.org](https://f.briatte.org/r/asking-r-questions) for curating so many useful tips shared with students in [R links](docs/learnr.html).
