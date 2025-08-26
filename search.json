@@ -14,17 +14,7 @@
     "href": "index.html",
     "title": "BIOL B215: Biostatistics with R",
     "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#course-information",
-    "href": "index.html#course-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM\nRemember to read the syllabus, listen to Snoop Dog.\nLecture notes:\nPiazza (for Qs)\nMoodle\nRstudio (Posit) Cloud\nRemember to read the Course Info, listen to SD.\n\n\n\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2\n\n\n\n\n\n\n\n\n\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard\n\n\n\n\n\n\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD\n\n\n\n\n\n\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
     "crumbs": [
       "Home"
     ]
@@ -33,8 +23,8 @@
     "objectID": "index.html#lectures",
     "href": "index.html#lectures",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "section": "",
+    "text": "Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
     "crumbs": [
       "Home"
     ]
@@ -43,8 +33,8 @@
     "objectID": "index.html#problem-sets",
     "href": "index.html#problem-sets",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5",
+    "section": "",
+    "text": "Problem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nWeek 4\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5",
     "crumbs": [
       "Home"
     ]
@@ -53,8 +43,8 @@
     "objectID": "index.html#lab-assignments",
     "href": "index.html#lab-assignments",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Lab Assignments",
-    "text": "Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2",
+    "section": "",
+    "text": "Lab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n\n\n\n\n2",
     "crumbs": [
       "Home"
     ]
@@ -63,8 +53,8 @@
     "objectID": "index.html#midterms-coding-interview",
     "href": "index.html#midterms-coding-interview",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Midterms & Coding Interview",
-    "text": "Midterms & Coding Interview\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard\n\n\nCoding Interview\nFinals week, TBD\n\nHard",
+    "section": "",
+    "text": "Assessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard",
     "crumbs": [
       "Home"
     ]
@@ -73,8 +63,8 @@
     "objectID": "index.html#office-hour-times",
     "href": "index.html#office-hour-times",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Office hour times",
-    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
+    "section": "",
+    "text": "Who\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
     "crumbs": [
       "Home"
     ]
@@ -83,8 +73,8 @@
     "objectID": "index.html#acknowledgments",
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
+    "section": "",
+    "text": "We thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
     "crumbs": [
       "Home"
     ]
