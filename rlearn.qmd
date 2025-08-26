@@ -1,8 +1,8 @@
 ---
-title: "Online Resources (free) for Learning R"
+title: "Learning R"
 ---
 
-# Books
+## Free Online Books
 
 
    - ["R for Data Science"](https://r4ds.had.co.nz/), by Hadley Wickham & Garrett Grolemund
@@ -16,7 +16,7 @@ title: "Online Resources (free) for Learning R"
   - ["Applied Biostats"](https://ybrandvain.github.io/biostats/), by Yaniv Brandvain.
 
 
-# Videos
+## Videos
 
   - [Code Like a Pro](https://www.youtube.com/watch?embed=no&v=91LmBj29-Sc&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=7)
   - [Intro to Rstudio and Rstudio Cloud](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
@@ -25,12 +25,12 @@ title: "Online Resources (free) for Learning R"
   - [This youtube playlist](https://www.youtube.com/playlist?embed=no&list=PLA3ArwPxU4MxphgeREPfnxznb8llUtTzX)
 
 
-# Tutorials:
+## Tutorials
+ 
+ - [From your textbook](https://whitlockschluter3e.zoology.ubc.ca/RLabs/index.html)
+ - [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
 
-    - [R labs (from your textbook)](https://whitlockschluter3e.zoology.ubc.ca/RLabs/index.html)
-    - [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
-
-# Getting help with R
+## Getting help with R
 
 **START HERE**, with [fbriatte.org](https://f.briatte.org/r/asking-r-questions), where you can learn hwo to find answers to your burning R questions online. 
 
