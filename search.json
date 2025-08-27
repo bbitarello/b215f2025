@@ -84,7 +84,7 @@
     "href": "index.html#lectures",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Lectures",
-    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading",
+    "text": "Lectures\nLecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\n9/3\n\n\n\n\n\n9/8\n\n\n\n\n\n9/10\n\n\n\n\n\n9/15\n\n\n\n\n\n9/17\n\n\n\n\n\n9/22\n\n\n\n\n\n9/24\n\n\n\n\n\n9/29\n\n\n\n\n\n10/1\n\n\n\n\n\n10/6\n\n\n\n\n\n10/8\n\n\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n\n10/20\n\n\n\n\n\n10/27\n\n\n\n\n\n11/3\n\n\n\n\n\n11/5\n\n\n\n\n\n11/10\n\n\n\n\n\n11/12\n\n\n\n\n\n11/17\n\n\n\n\n\n11/19\n\n\n\n\n\n11/24\n\n\n\n\n\n11/26\n\n\n\n\n\n12/1\n\n\n\n\n\n12/3\n\n\n\n\n\n12/8\nWrap-up, Review\n\n\n\n\n12/10\nReview, Course Evals",
     "crumbs": [
       "Home"
     ]
@@ -94,7 +94,7 @@
     "href": "index.html#labs",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Labs",
-    "text": "Labs\nLab slides, class notes, and lab assignments are linked below. New material is added approximately on a weekly basis.\n\n\n\nLab\nDates\nTopic\nSlides\nReading\n\n\n\n\n1\n2/9\n\n\n\n\n\n2\n9/9\n\n\n\n\n\n3\n9/16\n\n\n\n\n\n4\n9/23\n\n\n\n\n\n5\n9/30\n\n\n\n\n\n6\n10/7\n\n\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n\n\n7\n10/21\n\n\n\n\n\n-\n10/28\nNo lab (in class Midterm)\n-\n\n\n\n8\n11/4\n\n\n\n\n\n9\n11/10\n\n\n\n\n\n10\n11/18\n\n\n\n\n\n11\n11/25\n\n\n\n\n\n12\n12/2\n\n\n\n\n\n13\n12/9\nReview, Lab assignment questions, Course Evals\n-",
+    "text": "Labs\nLab slides, class notes, and lab assignments are linked below. New material is added approximately on a weekly basis.\n\n\n\nLab\nDates\nTopic\nSlides\nReading\n\n\n\n\n1\n2/9\n\n\n\n\n\n2\n9/9\n\n\n\n\n\n3\n9/16\n\n\n\n\n\n4\n9/23\n\n\n\n\n\n5\n9/30\n\n\n\n\n\n6\n10/7\n\n\n\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n\n7\n10/21\n\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n\n8\n11/4\n\n\n\n\n\n9\n11/10\n\n\n\n\n\n10\n11/18\n\n\n\n\n\n11\n11/25\n\n\n\n\n\n12\n12/2\n\n\n\n\n\n13\n12/9\nWrap-up\n-",
     "crumbs": [
       "Home"
     ]
@@ -134,7 +134,7 @@
     "href": "index.html#office-hour-times",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Office hour times",
-    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours\nTuesday 3-4pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nWednesday 2-3pm\nPark 211 or zoom\n\n\nProfessor drop-in hours\nFriday 2-3pm\nPark 211 or zoom\n\n\nTA\nTBD by survey\nTBD",
+    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours1\nTuesday 3-4pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2-3pm\nZoom\n\n\nTA\nTBD by survey\nTBD. Please answer survey.",
     "crumbs": [
       "Home"
     ]
@@ -150,9 +150,19 @@
     ]
   },
   {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSubject to change depending on TA office hours.↩︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "",
     "text": "Welcome!\nI love teaching this course, and I am an R enthusiast! I know it times this course can be challenging but I promise you the hard work will pay off. Please read this document fully and bring questions about this to class on 09/02 or post on Piazza.",
     "crumbs": [
@@ -162,7 +172,7 @@
   {
     "objectID": "syllabus.html#so-can-you-use-ir-or-not",
     "href": "syllabus.html#so-can-you-use-ir-or-not",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "11.1 So can you use ir or not?",
     "text": "11.1 So can you use ir or not?\nFollowing the BMC honor code:\nFor Lab assignments ONLY you can use it to understand things (e.g, to understand a cryptic error message) just as I am ok with you using web searches in general. I will give specific instructions about this in the assignments but, briefly, for the lab assignments you may search for help on the web, including the LLMs. If you do use LLMs for a lab assignment, you will be required to include citations for each instance where you used it, including the prompt you used. You are also required to cite any other sources of information.\nNote: Stack Overflow and other programming forums online + office hours will be way more helpful to your lasting learning and what you will take from this course than LLMs, by the way. I have never had help from an LLM on a coding error that I could not figure out from online posts in forums.\nFor homework and problem sets: Please don’t use, as there is (ethical) reason to do so. The whole point of these formative assessments is to learn and/or practice for the exams.\nLastly, do remember you won’t be able to use AI or any other external sources beyond one page of your own notes during the midterms.",
     "crumbs": [
@@ -172,7 +182,7 @@
   {
     "objectID": "syllabus.html#physical-and-mental-well-being",
     "href": "syllabus.html#physical-and-mental-well-being",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "13.1 Physical and Mental well-being",
     "text": "13.1 Physical and Mental well-being\nCollege is a marathon, not a sprint. Take care of your physical and mental health. You will reap more benefits if you are consistent than cramming an unreasonable amount of work into a short period of time. If you are struggling, do not wait: keep me and your academic dean on the same page so that we can help you achieve your best. Also, do not hesitate to seek out the services available to you such as the Bryn Mawr College counseling services.",
     "crumbs": [
@@ -182,7 +192,7 @@
   {
     "objectID": "syllabus.html#title-ix",
     "href": "syllabus.html#title-ix",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "13.2 Title IX",
     "text": "13.2 Title IX\nInfo from the College website:\n\nBMC strongly encourages all students to report any incidents of sexual misconduct. Bryn Mawr College is committed to providing an inclusive environment, free from sexual and gender-based discrimination. Title IX prohibits discrimination based on sex in any federally funded educational program or activity, and forms the basis for Bryn Mawr’s policies and resources regarding sex discrimination. The Bryn Mawr College Sexual Misconduct Policy prohibits Title IX sexual harassment, which includes sexual assault, dating violence, domestic violence, and stalking. Bryn Mawr’s Policy is more extensive than Title IX, and also covers other gender-based misconduct. BMC’s Policy is more extensive than Title IX, and also covers other gender-based misconduct.\n\nPlease be aware that all Bryn Mawr/Haverford employees (other than those designated as confidential resources such as counselors, clergy, and healthcare providers) must report information about such discrimination and harassment to the Bi-Co Tittle IX Coordinator.",
     "crumbs": [
@@ -192,7 +202,7 @@
   {
     "objectID": "syllabus.html#sec-accom",
     "href": "syllabus.html#sec-accom",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "13.3 Students with physical or learning differences",
     "text": "13.3 Students with physical or learning differences\nInfo from the College website:\n\nBMC is committed to providing equal access to students with a documented disability. Students needing academic accommodations for a disability must first register with Access Services. Students can call 610-526-7516 to make an appointment with the Access Services Director, Deb Alder, or email her at dalder[at]brynmawr.edu to begin this confidential process. Once registered, students should schedule an appointment with the professor as early in the semester as possible to share the verification form and make appropriate arrangements.\n\nPlease reach out as early as possible (ideally, even before classes start) so that we can make the necessary accommodations. Note that accommodations are not retroactive and require advance notice to implement.\nNeed help with math? The Bryn Mawr College Q Center supports students who are doing quantitative work in courses across the STEM and Social Science disciplines. The Q Center is a collaborative study space that provides a welcoming location for individual work, study groups, and collaboration with Q Mentors.",
     "crumbs": [
@@ -202,7 +212,7 @@
   {
     "objectID": "syllabus.html#fostering-an-inclusive-learning-space",
     "href": "syllabus.html#fostering-an-inclusive-learning-space",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "13.4 Fostering an Inclusive Learning Space",
     "text": "13.4 Fostering an Inclusive Learning Space\nIn an ideal world, it would be possible for scientific practice to be done in a perfectly objective way, free of biases and preconceptions. However, it is not so. Scientists are flawed and human. The history of science is also a history of who got the credit and is dominated by white, male, colonialist, and racist ideas. I will try to highlight less-known historical figures and provide a critical perspective on such matters whenever possible. I see the diversity of backgrounds and identities our students bring as a strength: age, culture, disability, ethnicity, gender, nationality, religion, sexuality, and socioeconomic status. I intend for this course to serve students from diverse backgrounds and perspectives. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally or for other students or student groups. You can do this in person during office hours, by email, or via the mid-semester anonymous survey.",
     "crumbs": [
@@ -212,7 +222,7 @@
   {
     "objectID": "syllabus.html#footnotes",
     "href": "syllabus.html#footnotes",
-    "title": "Course Info",
+    "title": "Syllabus",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nLabs, DataCamp activities, quizzes, in-class activities.↩︎\nUnderstand: Formative vs Summative assessments↩︎\nsee here:↩︎\ne.g., here, and here↩︎",
     "crumbs": [
