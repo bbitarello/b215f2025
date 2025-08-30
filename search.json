@@ -4,7 +4,27 @@
     "href": "rlearn.html",
     "title": "Learning R",
     "section": "",
-    "text": "Updated often.",
+    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
+    "crumbs": [
+      "R links"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#getting-help-with-r",
+    "href": "rlearn.html#getting-help-with-r",
+    "title": "Learning R",
+    "section": "Getting help with R",
+    "text": "Getting help with R\nSTART HERE, with fbriatte.org, where you can learn hwo to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "crumbs": [
+      "R links"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#tutorials-simulations-for-learning",
+    "href": "rlearn.html#tutorials-simulations-for-learning",
+    "title": "Learning R",
+    "section": "Tutorials & Simulations for Learning",
+    "text": "Tutorials & Simulations for Learning\n\nFrom your textbook\nQuick-R",
     "crumbs": [
       "R links"
     ]
@@ -24,139 +44,9 @@
     "href": "rlearn.html#videos",
     "title": "Learning R",
     "section": "Videos",
-    "text": "Videos\n\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nThis youtube playlist",
+    "text": "Videos\n\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
     "crumbs": [
       "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#tutorials",
-    "href": "rlearn.html#tutorials",
-    "title": "Learning R",
-    "section": "Tutorials",
-    "text": "Tutorials\n\nFrom your textbook\nQuick-R",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#getting-help-with-r",
-    "href": "rlearn.html#getting-help-with-r",
-    "title": "Learning R",
-    "section": "Getting help with R",
-    "text": "Getting help with R\nSTART HERE, with fbriatte.org, where you can learn hwo to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRemember to read the Course Info, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#general-information",
-    "href": "index.html#general-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRemember to read the Course Info, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#lectures",
-    "href": "index.html#lectures",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Lectures",
-    "text": "Lectures\nNew material is added approximately on a weekly basis.\n\n\n\nDates\nTopic\nSlides\nReading\n\n\n\n\n9/3\n\n\n\n\n\n9/8\n\n\n\n\n\n9/10\n\n\n\n\n\n9/15\n\n\n\n\n\n9/17\n\n\n\n\n\n9/22\n\n\n\n\n\n9/24\n\n\n\n\n\n9/29\n\n\n\n\n\n10/1\n\n\n\n\n\n10/6\n\n\n\n\n\n10/8\n\n\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n\n10/20\n\n\n\n\n\n10/27\n\n\n\n\n\n11/3\n\n\n\n\n\n11/5\n\n\n\n\n\n11/10\n\n\n\n\n\n11/12\n\n\n\n\n\n11/17\n\n\n\n\n\n11/19\n\n\n\n\n\n11/24\n\n\n\n\n\n11/26\n\n\n\n\n\n12/1\n\n\n\n\n\n12/3\n\n\n\n\n\n12/8\nWrap-up, Review\n\n\n\n\n12/10\nReview, Course Evals",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#labs",
-    "href": "index.html#labs",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Labs",
-    "text": "Labs\nNew material is added approximately on a weekly basis.\n\n\n\nLab\nDates\nTopic\nSlides\nReading\n\n\n\n\n1\n2/9\nCourse Logistics; Rstudio/R introduction\n\n\n\n\n2\n9/9\n\n\n\n\n\n3\n9/16\n\n\n\n\n\n4\n9/23\n\n\n\n\n\n5\n9/30\n\n\n\n\n\n6\n10/7\n\n\n\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n\n7\n10/21\n\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n\n8\n11/4\n\n\n\n\n\n9\n11/10\n\n\n\n\n\n10\n11/18\n\n\n\n\n\n11\n11/25\n\n\n\n\n\n12\n12/2\n\n\n\n\n\n13\n12/9\nWrap-up\n-",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#problem-sets",
-    "href": "index.html#problem-sets",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Problem sets",
-    "text": "Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\n\n\n\n\n1\n\nTh 9/25\nEasy\n\n\n2\n\nFri 10/10\nEasy/Medium\n\n\n3\n\nThu 11/6\nMedium\n\n\n4\n\nT 11/25\nMedium\n\n\n5\n\nT 12/11\nMedium",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#lab-assignments",
-    "href": "index.html#lab-assignments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Lab Assignments",
-    "text": "Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\n\n\n\n\n1\n\n10/24\nHard\n\n\n2\n\n12/04\nHard",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#midterms",
-    "href": "index.html#midterms",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Midterms",
-    "text": "Midterms\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\n\n\nMidterm 2\nWeeks 1-14\nFinals week, TBD\nHard",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#office-hour-times",
-    "href": "index.html#office-hour-times",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Office hour times",
-    "text": "Office hour times\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours1\nTuesday 3-4pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2-3pm\nZoom\n\n\nTA\nTBD by survey\nTBD. Please answer survey.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nWe thank Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. We also thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nSubject to change depending on TA office hours.↩︎",
-    "crumbs": [
-      "Home"
     ]
   },
   {
@@ -224,9 +114,139 @@
     "href": "syllabus.html#footnotes",
     "title": "Syllabus",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nLabs, DataCamp activities, quizzes, in-class activities.↩︎\nUnderstand: Formative vs Summative assessments↩︎\nsee here:↩︎\ne.g., here, and here↩︎",
+    "text": "Footnotes\n\n\nLabs, DataCamp activities, quizzes + participation (in-class activities, watching videos, answering surveys, using piazza).↩︎\nFormative assessments are focused on supporting the learning process throughout the course. Summative assessments typically occur at the end of a learning period and assess student mastery of the material and whether they have met learning objectives. Learn more: https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/↩︎\nsee here:↩︎\ne.g., here, and here↩︎",
     "crumbs": [
       "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#general-information",
+    "href": "index.html#general-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nSlides\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples I\n\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples II\n\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n\n\n2.1 Describing Data I\n\nCh.3\n\n\n2\n9/10\n2.2 Describing Data II\n\nCh.3\n\n\n\n\n3.1. Displaying Data I\n\nCh.2\n\n\n3\n9/15\n3.2. Displaying Data II\n\nCh. 2\n\n\n\n\n4.1 Probability I\n\nCh.5\n\n\n3\n9/17\n4.2 Probability II\n\nCh.5\n\n\n4\n9/22\n4.3 Probability III\n\nCh. 5\n\n\n4\n9/24\n4.4 Probability IV\n\nCh. 5\n\n\n5\n9/29\n5.1 Estimation I\n\nCh.4\n\n\n5\n10/1\n5.2 Estimation II\n\nCh.4\n\n\n6\n10/6\n6.1 Hypothesis Testing I\n\nCh.6\n\n\n6\n10/8\n6.2 Hypothesis Testing II\n\nCh. 6\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n\n7\n10/20\n\n\n\n\n\n7\n10/22\n\n\n\n\n\n8\n10/27\n\n\n\n\n\n8\n10/30\n\n\n\n\n\n9\n11/3\n\n\n\n\n\n9\n11/5\n\n\n\n\n\n10\n11/10\n\n\n\n\n\n10\n11/12\n\n\n\n\n\n11\n11/17\n\n\n\n\n\n11\n11/19\n\n\n\n\n\n12\n11/24\n\n\n\n\n\n12\n11/26\n\n\n\n\n\n13\n12/1\n\n\n\n\n\n13\n12/3\n\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n\n14\n12/10\nReview, Course Evals",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-lec",
+    "href": "schedule.html#sec-lec",
+    "title": "Schedule",
+    "section": "",
+    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nSlides\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples I\n\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples II\n\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n\n\n2.1 Describing Data I\n\nCh.3\n\n\n2\n9/10\n2.2 Describing Data II\n\nCh.3\n\n\n\n\n3.1. Displaying Data I\n\nCh.2\n\n\n3\n9/15\n3.2. Displaying Data II\n\nCh. 2\n\n\n\n\n4.1 Probability I\n\nCh.5\n\n\n3\n9/17\n4.2 Probability II\n\nCh.5\n\n\n4\n9/22\n4.3 Probability III\n\nCh. 5\n\n\n4\n9/24\n4.4 Probability IV\n\nCh. 5\n\n\n5\n9/29\n5.1 Estimation I\n\nCh.4\n\n\n5\n10/1\n5.2 Estimation II\n\nCh.4\n\n\n6\n10/6\n6.1 Hypothesis Testing I\n\nCh.6\n\n\n6\n10/8\n6.2 Hypothesis Testing II\n\nCh. 6\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n\n7\n10/20\n\n\n\n\n\n7\n10/22\n\n\n\n\n\n8\n10/27\n\n\n\n\n\n8\n10/30\n\n\n\n\n\n9\n11/3\n\n\n\n\n\n9\n11/5\n\n\n\n\n\n10\n11/10\n\n\n\n\n\n10\n11/12\n\n\n\n\n\n11\n11/17\n\n\n\n\n\n11\n11/19\n\n\n\n\n\n12\n11/24\n\n\n\n\n\n12\n11/26\n\n\n\n\n\n13\n12/1\n\n\n\n\n\n13\n12/3\n\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n\n14\n12/10\nReview, Course Evals",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-labs",
+    "href": "schedule.html#sec-labs",
+    "title": "Schedule",
+    "section": "2 Labs",
+    "text": "2 Labs\n\n\n\nWeek\nDate\nTopic\nSlides\nPrep\n\n\n\n\n1\n2/9\nCourse Logistics\n\n\n\n\n1\n2/9\nRstudio/R introduction\n\nVideo\n\n\n2\n9/9\n\n\n\n\n\n3\n9/16\n\n\n\n\n\n4\n9/23\n\n\n\n\n\n5\n9/30\n\n\n\n\n\n6\n10/7\n\n\n\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n\n7\n10/21\n\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n\n8\n11/4\n\n\n\n\n\n9\n11/10\n\n\n\n\n\n10\n11/18\n\n\n\n\n\n11\n11/25\n\n\n\n\n\n12\n12/2\n\n\n\n\n\n13\n12/9\nWrap-up\n-",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-PS",
+    "href": "schedule.html#sec-PS",
+    "title": "Schedule",
+    "section": "3 Problem sets",
+    "text": "3 Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\nType\n\n\n\n\n1\n\nFri 10/3\nEasy/Medium\nFormative\n\n\n2\n\nWed 10/22\nMedium/Hard\nFormative\n\n\n3\n\nFri 11/7\nMedium/Hard\nFormative\n\n\n4\n\nT 11/25\nMedium/Hard\nFormative\n\n\n5\n\nW 12/10\nMedium/Hard\nFormative",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-LA",
+    "href": "schedule.html#sec-LA",
+    "title": "Schedule",
+    "section": "4 Lab Assignments",
+    "text": "4 Lab Assignments\n\n\n\nLab assignment\nTopics\nDue Date\nDifficulty\nType\n\n\n\n\n1\nTBD\nFri 10/31\nHard\nSummative\n\n\n2\nTBD\nFri 12/05\nHard\nSummative",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-exams",
+    "href": "schedule.html#sec-exams",
+    "title": "Schedule",
+    "section": "5 Midterms",
+    "text": "5 Midterms\n\n\n\n\n\n\n\n\n\n\nAssessment\nTopics\nWhen/Where\nDifficulty\nType\n\n\n\n\nMidterm 1\nWeek 1-7\n10/28, during lab\nHard\nSummative\n\n\nMidterm 2\nWeeks 1-14\nFinals week, scheduled (TBD)\nHard\nSummative",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#sec-oh",
+    "href": "schedule.html#sec-oh",
+    "title": "Schedule",
+    "section": "6 Office Hours",
+    "text": "6 Office Hours\n\n\n\nWho\nWhen\nWhere\n\n\n\n\nProfessor drop-in hours1\nTuesday 3-4pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2-3pm\nZoom\n\n\nTA\nTBD by survey\nTBD. Please answer survey.",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#footnotes",
+    "href": "schedule.html#footnotes",
+    "title": "Schedule",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSubject to change depending on TA office hours.↩︎",
+    "crumbs": [
+      "Schedule"
     ]
   }
 ]

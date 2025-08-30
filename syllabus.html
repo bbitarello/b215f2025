@@ -151,6 +151,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./rlearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R links</span></a>
   </div>
@@ -166,7 +172,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description"><span class="header-section-number">1</span> Course Description</a></li>
-  <li><a href="#sec-materials" id="toc-sec-materials" class="nav-link" data-scroll-target="#sec-materials"><span class="header-section-number">2</span> Textbook &amp; Other Materials</a></li>
+  <li><a href="#sec-textbook" id="toc-sec-textbook" class="nav-link" data-scroll-target="#sec-textbook"><span class="header-section-number">2</span> Textbook</a></li>
   <li><a href="#weekly-course-structure" id="toc-weekly-course-structure" class="nav-link" data-scroll-target="#weekly-course-structure"><span class="header-section-number">3</span> Weekly Course Structure</a></li>
   <li><a href="#grade-distribution" id="toc-grade-distribution" class="nav-link" data-scroll-target="#grade-distribution"><span class="header-section-number">4</span> Grade Distribution</a></li>
   <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link" data-scroll-target="#problem-sets"><span class="header-section-number">5</span> Problem Sets</a></li>
@@ -217,9 +223,8 @@ window.Quarto = {
 <p>I love teaching this course, and I am an R enthusiast! I know it times this course can be challenging but I promise you the hard work will pay off. Please read this document fully and bring questions about this to class on 09/02 or post on Piazza.</p>
 <section id="course-description" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Course Description</h1>
-<p>A solid foundation in statistics and R is the standard tool for performing statistics in biology, health studies, data science, and many other fields. Because of this, <strong>B215 is neither just a biostatistics course nor simply an R programming course</strong>: it is a biostatistics course where R is directly integrated into the learning process. We will focus mainly on classic statistics (so-called “frequentist”) and probability theory, but we will also have an introduction to the increasingly relevant Bayesian statistics approach.</p>
-<p>Throughout the course, we use motivating case studies and data analysis problem sets and R labs based on similar challenges to those one finds in scientific research.</p>
-<p>Topics we (aim to) cover in the lecture portion of the class:</p>
+<p>A solid foundation in statistics and R is the standard tool for performing statistics in biology, health studies, data science, and many other fields. Because of this, <strong>B215 is neither just a biostatistics course nor simply an R programming course</strong>: it is a biostatistics course where R is directly integrated into the learning process. Throughout the course, we use motivating case studies and data analysis problem sets and R labs based on similar challenges to those one finds in scientific research.</p>
+<p><strong>Lectures</strong>: Focus on statistical concepts and problem solving. We will focus mainly on classic statistics (so-called “frequentist”) and probability theory, but we will also have an introduction to the increasingly relevant Bayesian statistics approach. Topics we will (aim to) cover:</p>
 <ul>
 <li>Sampling &amp; Experimental Design</li>
 <li>Descriptive statistics</li>
@@ -228,11 +233,10 @@ window.Quarto = {
 <li>Estimation &amp; Hypothesis Testing</li>
 <li>The Normal Distribution</li>
 <li>Comparing samples &amp; Correlations</li>
-<li>Bootstrapping and permutation</li>
-<li>Bayesian <em>vs.</em> Likelihood approaches</li>
-<li>Bootstrapping &amp; Permutation Tests Likelihood &amp; Bayesian Statistics</li>
+<li>Bootstrapping &amp; Permutation Tests</li>
+<li>Maybe: Frequentist <em>vs.</em> Bayesian <em>vs.</em> Likelihood approaches</li>
 </ul>
-<p>In labs, you will learn:</p>
+<p><strong>Labs</strong>: focus on developing R programming skills through mini lectures and lots of pratice. For labs <strong>you will need a laptop with a browser</strong>. Tablets, in my experience, will not work. You can borrow a laptop from the bio department by emailing our admin Andrew (agalleghe[at]brynmawr.edu). Lab topics:</p>
 <ul>
 <li>the fundamentals of any programming language, which will be relevant for any future programming languages you decide to learn</li>
 <li>how to run built-in functions in R to run summary statistics, make plots, and perform data analyses in general</li>
@@ -240,14 +244,11 @@ window.Quarto = {
 <li>how to write your own functions for custom analyses</li>
 <li>how to troubleshoot/debug your code, arguably the most important skill a programmer must develop</li>
 </ul>
+<p>Usually we will have a quick lecture, a guided tutorial, and occasionally a challenge.</p>
 </section>
-<section id="sec-materials" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Textbook &amp; Other Materials</h1>
-<ul>
-<li><em>The Analysis of Biological Data</em> (3rd or 2nd edition), by Whitlock &amp; Schluter. This is a great book with a ton of exercises. The e-book version is cheaper if you rent it. Collier Library will have one copy on reserve for enrolled students. I may occasionally assign other readings from free sources listed under <a href="docs/rlearn.html">R links</a>.</li>
-<li>For labs you will need a laptop with a browser. Tablets in my experience will not work. If you need, you can borrow a laptop from the bio department. Email our admin Andrew (agalleghe[at]brynmawr.edu).</li>
-<li>For exams you may use a calculator to save you time. A scientific calculator with roots, exponents,etc, is fine, but graphic/function calculators will NOT be accepted. Please plan accordingly. A scientific calculator is ~ $12 and you might also be able to borrow one from a buddy on Midterm days.</li>
-</ul>
+<section id="sec-textbook" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Textbook</h1>
+<p><em>The Analysis of Biological Data</em> (3rd or 2nd edition), by Whitlock &amp; Schluter. This is a great book with a ton of exercises and online resources (see <a href="docs/rlearn.qmd">R links</a>). The e-book version is cheaper if you rent it. Collier Library will have one copy on reserve for enrolled students. I may occasionally assign other readings from free sources listed under <a href="rlearn.html">R links</a>.</p>
 </section>
 <section id="weekly-course-structure" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Weekly Course Structure</h1>
@@ -257,7 +258,7 @@ window.Quarto = {
 <li><p>Typically problem sets and lab assignments are due on Fridays, but always check case by case.</p></li>
 <li><p>Quizzes are typically due weekly on Sundays though you may retake them later.</p></li>
 </ul>
-<p><strong>Lectures will not be recorded. Following PA regulations, you are also not allowed to record lectures without explicit permission.</strong></p>
+<p><strong>Lectures will not be recorded. You are also not allowed to record lectures without explicit permission.</strong></p>
 <p>We have <a href="https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25">Piazza</a> set up for you to ask questions outside of class. Professor and TA will check this often and it is the preferred method to get our help. You may post your questions anonymously on Piazza, so no excuse for not using it! Also, see office hours schedule.</p>
 </section>
 <section id="grade-distribution" class="level1" data-number="4">
@@ -272,7 +273,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Low-stakes assignments <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td style="text-align: left;">Low-stakes <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
 <td style="text-align: left;">8%</td>
 <td style="text-align: left;">Formative</td>
 </tr>
@@ -282,27 +283,32 @@ window.Quarto = {
 <td style="text-align: left;">Formative</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Lab assignments</td>
+<td style="text-align: left;">Lab assignment 1</td>
 <td style="text-align: left;"><span class="math inline">\(2\times 5\)</span>%<span class="math inline">\(=15\)</span>%</td>
 <td style="text-align: left;">Formative</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Midterm 1</td>
-<td style="text-align: left;">25%</td>
-<td style="text-align: left;">Summative</td>
+<td style="text-align: left;">Lab assignment 2</td>
+<td style="text-align: left;"><span class="math inline">\(7.5\)</span>%</td>
+<td style="text-align: left;">summative</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">Midterm 1</td>
+<td style="text-align: left;">31%</td>
+<td style="text-align: left;">Summative</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Midterm 2</td>
-<td style="text-align: left;">35%</td>
+<td style="text-align: left;">31%</td>
 <td style="text-align: left;">Summative</td>
 </tr>
 </tbody>
 </table>
-<p>Formative <em>vs.</em> Summative Assessments <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>(https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/] Formative assessments are focused on supporting the learning process throughout the course. Summative assessments typically occur at the end of a learning period and assess student mastery of the material and whether they have met learning objectives.</p>
+<p>Formative <em>vs.</em> Summative Assessments<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 </section>
 <section id="problem-sets" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Problem Sets</h1>
-<p>Problem sets (5 in total) will be due roughly every two weeks (depending on difficulty) starting on week 4. They will be due at 11:59 PM on the day denoted on the Problem Sets page.</p>
+<p>Problem sets (5 in total) will be due roughly every two weeks (depending on difficulty) starting on week 4. They will be due at 11:59 PM on the day denoted on the <a href="./schedule.html">Problem Sets</a> page.</p>
 </section>
 <section id="lab-assignments" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Lab Assignments</h1>
@@ -394,7 +400,8 @@ window.Quarto = {
 </section>
 <section id="midterms" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Midterms</h1>
-<p><strong>Both midterms are closed book, no internet.</strong> You may use certain calculator (see above) and you will be allowed one sheet of standard paper with hand-written notes (front and back) to assist you. Your thought process must be explained for all answers and your final answer clearly marked. Questions will drawn from or similar to problem sets. The second midterm will be scheduled during finals week.</p>
+<p><strong>Both midterms are closed book, no internet.</strong> You will be allowed one sheet of standard paper with hand-written notes (front and back) to assist you. Your thought process must be explained for all answers and your final answer clearly marked. Questions will drawn from or similar to problem sets. The second midterm will be scheduled during finals week.</p>
+<p><strong>Calculator for midterms.</strong> You may use a calculator to save you time. A scientific calculator with roots, exponents,etc, is fine, but graphic/function calculators will NOT be accepted. Please plan accordingly. A scientific calculator is ~ $12 and you might also be able to borrow one from a buddy on Midterm days.</p>
 <p>Please make sure you can come to class on the midterm dates provided in the <strong>Key Dates</strong> table below. If you absolutely must miss the exam, you will need approval from your dean and myself before the exam in order to have a makeup. All make-up exams will be completely different from the in-class ones.</p>
 </section>
 <section id="make-up-policy" class="level1" data-number="10">
@@ -545,7 +552,7 @@ window.Quarto = {
 <li><p><strong>What if I have a conflict with the schedule due to religious holidays?</strong></p>
 <p>Check the schedule and if you foresee conflicts in the schedule due to religious observance, reach out as soon as possible so we can negotiate extensions.</p></li>
 <li><p><strong>What if I cannot afford the course materials?</strong></p>
-<p>If you have concerns about being able to afford course materials, please contact me. Also, see <a href="#sec-materials" class="quarto-xref">Section&nbsp;2</a>.</p></li>
+<p>If you have concerns about being able to afford course materials, please contact me. Also, see <strong>?@sec-materials</strong>.</p></li>
 </ol>
 
 
@@ -555,8 +562,8 @@ window.Quarto = {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Labs, DataCamp activities, quizzes, in-class activities.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Understand: Formative vs Summative assessments<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Labs, DataCamp activities, quizzes + participation (in-class activities, watching videos, answering surveys, using piazza).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Formative assessments are focused on supporting the learning process throughout the course. Summative assessments typically occur at the end of a learning period and assess student mastery of the material and whether they have met learning objectives. Learn more: <a href="https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/">https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>see here:<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>e.g., here, and here<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
