@@ -232,7 +232,7 @@
     "href": "rlearn.html#r-help",
     "title": "Learning R",
     "section": "1 Getting help with R",
-    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn hwo to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
     "crumbs": [
       "R links"
     ]
