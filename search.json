@@ -1,31 +1,183 @@
 [
   {
-    "objectID": "llms.html",
-    "href": "llms.html",
-    "title": "LLMs/GenAI",
+    "objectID": "rlearn.html",
+    "href": "rlearn.html",
+    "title": "Learning R",
     "section": "",
-    "text": "Most college students in the U.S. right now use chatGPT/AI regularly. An argument can be made that students need to be trained on proper use of AI. It is almost certain that in your professional life you will use this to some extent (or be pressured to do so for the sake of “efficiency”).\nOk, great, now counter points. I am 100% sure that no one is looking to hire a person who pastes LLM output and presents it as their own work. Anyone can do that. Students will learn this anyway as they are using it for many things, often. One of the key purposes of a college education is to develop critical thinking, which AI it not only not helpful for but actually detrimental. Research clearly shows that higher confidence in LLMs/GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. 1 2 3"
+    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
+    "crumbs": [
+      "R resources"
+    ]
   },
   {
-    "objectID": "llms.html#impacts-on-critical-thinking",
-    "href": "llms.html#impacts-on-critical-thinking",
-    "title": "LLMs/GenAI",
+    "objectID": "rlearn.html#r-help",
+    "href": "rlearn.html#r-help",
+    "title": "Learning R",
+    "section": "1 Getting help with R",
+    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#free-online-books",
+    "href": "rlearn.html#free-online-books",
+    "title": "Learning R",
+    "section": "2 Free Online Books",
+    "text": "2 Free Online Books\n\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#r-vids",
+    "href": "rlearn.html#r-vids",
+    "title": "Learning R",
+    "section": "3 Videos",
+    "text": "3 Videos\n\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#tutorials-simulations",
+    "href": "rlearn.html#tutorials-simulations",
+    "title": "Learning R",
+    "section": "4 Tutorials & Simulations",
+    "text": "4 Tutorials & Simulations\n\nFrom your textbook\nQuick-R",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "Most college students in the U.S. right now use chatGPT/AI regularly. An argument can be made that students need to be trained on proper use of AI. It is almost certain that in your professional life you will use this to some extent (or be pressured to do so for the sake of “efficiency”).\nOk, great, now counter points. I am 100% sure that no one is looking to hire a person who pastes LLM output and presents it as their own work. Anyone can do that. Students will learn this anyway as they are using it for many things, often. One of the key purposes of a college education is to develop critical thinking, which AI it not only not helpful for but actually detrimental. Research clearly shows that higher confidence in LLMs/GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. 1 2 3"
+    "text": "Welcome!\nI love teaching this course, and I am an R enthusiast! At times this course will be challenging, but I promise you the hard work will pay off. Please read this document fully. You may post questions on Piazza or bring them to our first class on 9/2.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
-    "objectID": "llms.html#carbon-footprint",
-    "href": "llms.html#carbon-footprint",
-    "title": "LLMs/GenAI",
-    "section": "Carbon footprint",
-    "text": "Carbon footprint\nOn a more personal level, I personally have not embraced these tools because of their devastating impact on our already out of control climate catastrophe. I don’t think the convenience of a quick summary is worth the energy and clean water4 demands that LLM data centers impose."
+    "objectID": "syllabus.html#rationale-for-the-llmgenai-policy-adopted-here",
+    "href": "syllabus.html#rationale-for-the-llmgenai-policy-adopted-here",
+    "title": "Syllabus",
+    "section": "10.1 Rationale for the LLM/GenAI policy adopted here",
+    "text": "10.1 Rationale for the LLM/GenAI policy adopted here\nWhile there are many worthy uses of AI (e.g., predicting protein structures based on aminoacid sequences, which has been underway for over a decade), the widespread use of LLMs/GenAI for the most mundane tasks and internet searches has an enormous ecological impact.\nClimate Change\nData centers already consume about 2% of the global electricity output (as of December 20242, likely much more now). These data centers emit enormous amounts of CO2, are mostly powered by non-renewable energy sources – or example, projected growth demands on energy grids to keep up with data center development plans are already delaying the retirement of coal power plants in the U.S 3 – and consume an enormous amount of clean freshwater4. The convenience of a quick AI-generated summary costs energy and clean water that seems unjustifiable5.\nImpacts on critical thinking\nMost college students in the U.S. right now use chatGPT/AI regularly. An argument can be made that students need to be trained on proper use of AI. It is almost certain that in your professional life you will use this to some extent (or be pressured to do so for the sake of “efficiency”).\nCounterpoints: While constructing effective prompts for AI is indeed a skill to be learned, what is far more difficult is to judge what AI tells you, and that requires knowledge and critical thinking. One of the key purposes of a college education is to develop such critical thinking skills. Research clearly shows that higher confidence in LLMs/GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking. 6 7 8 Additionally: Another purpose of college education is to prepare you for a well-rounded and successful career, and no one is looking to hire a person who pastes LLM/GenAI output and presents it as their own work.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
-    "objectID": "llms.html#footnotes",
-    "href": "llms.html#footnotes",
-    "title": "LLMs/GenAI",
+    "objectID": "syllabus.html#physical-and-mental-well-being",
+    "href": "syllabus.html#physical-and-mental-well-being",
+    "title": "Syllabus",
+    "section": "11.1 Physical and Mental well-being",
+    "text": "11.1 Physical and Mental well-being\nCollege is a marathon, not a sprint. You will reap more benefits if you are consistent than cramming an unreasonable amount of work into a short period of time. If you are struggling, do not wait: keep me and your academic dean on the same page so that we can help you achieve your best. Also, do not hesitate to seek out the services available to you such as the Bryn Mawr College counseling services.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#title-ix",
+    "href": "syllabus.html#title-ix",
+    "title": "Syllabus",
+    "section": "11.2 Title IX",
+    "text": "11.2 Title IX\nInfo from the College website:\n\nBMC strongly encourages all students to report any incidents of sexual misconduct. Bryn Mawr College is committed to providing an inclusive environment, free from sexual and gender-based discrimination. Title IX prohibits discrimination based on sex in any federally funded educational program or activity, and forms the basis for Bryn Mawr’s policies and resources regarding sex discrimination. The Bryn Mawr College Sexual Misconduct Policy prohibits Title IX sexual harassment, which includes sexual assault, dating violence, domestic violence, and stalking. Bryn Mawr’s Policy is more extensive than Title IX, and also covers other gender-based misconduct. BMC’s Policy is more extensive than Title IX, and also covers other gender-based misconduct.\n\nPlease be aware that all Bryn Mawr/Haverford employees (other than those designated as confidential resources such as counselors, clergy, and healthcare providers) must report information about such discrimination and harassment to the Bi-Co Tittle IX Coordinator.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#sec-accom",
+    "href": "syllabus.html#sec-accom",
+    "title": "Syllabus",
+    "section": "11.3 Students with physical or learning differences",
+    "text": "11.3 Students with physical or learning differences\nInfo from the College website:\n\nBMC is committed to providing equal access to students with a documented disability. Students needing academic accommodations for a disability must first register with Access Services. Students can call 610-526-7516 to make an appointment with the Access Services Director, Deb Alder, or email her at dalder[at]brynmawr.edu to begin this confidential process. Once registered, students should schedule an appointment with the professor as early in the semester as possible to share the verification form and make appropriate arrangements.\n\nPlease reach out as early as possible (ideally, even before classes start) so that we can make the necessary accommodations. Note that accommodations are not retroactive and require advance notice to implement.\nNeed help with math? The Bryn Mawr College Q Center supports students who are doing quantitative work in courses across the STEM and Social Science disciplines. The Q Center is a collaborative study space that provides a welcoming location for individual work, study groups, and collaboration with Q Mentors.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#fostering-an-inclusive-learning-space",
+    "href": "syllabus.html#fostering-an-inclusive-learning-space",
+    "title": "Syllabus",
+    "section": "11.4 Fostering an Inclusive Learning Space",
+    "text": "11.4 Fostering an Inclusive Learning Space\nIn an ideal world, it would be possible for scientific practice to be done in a perfectly objective way, free of biases and preconceptions. However, it is not so. Scientists are flawed and human. The history of science is also a history of who got the credit and is dominated by white, male, colonialist, and racist ideas. I will try to highlight less-known historical figures and provide a critical perspective on such matters whenever possible. I see the diversity of backgrounds and identities our students bring as a strength: age, culture, disability, ethnicity, gender, nationality, religion, sexuality, and socioeconomic status. I intend for this course to serve students from diverse backgrounds and perspectives. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally or for other students or student groups. You can do this in person during office hours, by email, or via the mid-semester anonymous survey.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#footnotes",
+    "href": "syllabus.html#footnotes",
+    "title": "Syllabus",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nLee, HP et al. (2025). The impact of generative AI on critical thinking: Self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers. In Proceedings of the 2025 CHI conference on human factors in computing systems. https://doi.org/10.1145/3706598.371377↩︎\nKosmyna, N, et al. (2025) Your brain on chatgpt: Accumulation of cognitive debt when using an ai assistant for essay writing task.” arXiv preprint arXiv:2506.08872. https://arxiv.org/abs/2506.08872↩︎\nGeorgiou, G. P. (2025). ChatGPT produces more” lazy” thinkers: Evidence of cognitive engagement decline. arXiv preprint arXiv:2507.00181. https://arxiv.org/abs/2507.00181↩︎\nGarcia, M. (2024). AI Uses How Much Water? Navigating Regulation Of AI Data Centers’ Water Footprint Post-Watershed Loper Bright Decision. Navigating Regulation Of AI Data Centers’ Water Footprint Post-Watershed Loper Bright Decision. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5064473↩︎"
+    "text": "Footnotes\n\n\nFormative vs. Summative Assessments: Formative assessments are focused on supporting the learning process throughout the course. Summative assessments typically occur at the end of a learning period and assess student mastery of the material and whether they have met learning objectives. Learn more: https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/↩︎\nLuccioni, S. (2024, December 18). Generative AI and climate change are on a collision course. Wired. https://www.wired.com/story/true-cost-generative-ai-data-centers-energy/↩︎\nGarcia, M. (2024). AI Uses How Much Water? Navigating Regulation Of AI Data Centers’ Water Footprint Post-Watershed Loper Bright Decision. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5064473↩︎\nKirkpatrick, K. (2023). The carbon footprint of artificial intelligence. Communications of the ACM, 66(8), 17-19. DOI: 10.1145/3603746↩︎\nLuccioni, S., Jernite, Y., & Strubell, E. (2024, June). Power hungry processing: Watts driving the cost of AI deployment?. In Proceedings of the 2024 ACM conference on fairness, accountability, and transparency (pp. 85-99). 10.1145/3630106.36585↩︎\nLee, HP et al. (2025). The impact of generative AI on critical thinking: Self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers. In Proceedings of the 2025 CHI conference on human factors in computing systems. https://doi.org/10.1145/3706598.371377↩︎\nKosmyna, N, et al. (2025) Your brain on chatgpt: Accumulation of cognitive debt when using an ai assistant for essay writing task.” arXiv preprint arXiv:2506.08872. https://arxiv.org/abs/2506.08872↩︎\nGeorgiou, GP. (2025). ChatGPT produces more” lazy” thinkers: Evidence of cognitive engagement decline. arXiv preprint arXiv:2507.00181. https://arxiv.org/abs/2507.00181↩︎",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#general-information",
+    "href": "index.html#general-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-help",
+    "href": "index.html#getting-help",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Getting help",
+    "text": "Getting help\nThe preferred methods to get help in this course are office hours for content questions (see the Schedule) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "schedule.html",
@@ -105,166 +257,6 @@
     "text": "Footnotes\n\n\nSubject to change depending on TA office hours.↩︎",
     "crumbs": [
       "Schedule"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#general-information",
-    "href": "index.html#general-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM (Park 264)\nLab: Wednesday 1:10 - 4 PM (park 128)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R links.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Welcome!\nI love teaching this course, and I am an R enthusiast! I know it times this course can be challenging but I promise you the hard work will pay off. Please read this document fully and bring questions about this to class on 09/02 or post on Piazza.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#physical-and-mental-well-being",
-    "href": "syllabus.html#physical-and-mental-well-being",
-    "title": "Syllabus",
-    "section": "11.1 Physical and Mental well-being",
-    "text": "11.1 Physical and Mental well-being\nCollege is a marathon, not a sprint. You will reap more benefits if you are consistent than cramming an unreasonable amount of work into a short period of time. If you are struggling, do not wait: keep me and your academic dean on the same page so that we can help you achieve your best. Also, do not hesitate to seek out the services available to you such as the Bryn Mawr College counseling services.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#title-ix",
-    "href": "syllabus.html#title-ix",
-    "title": "Syllabus",
-    "section": "11.2 Title IX",
-    "text": "11.2 Title IX\nInfo from the College website:\n\nBMC strongly encourages all students to report any incidents of sexual misconduct. Bryn Mawr College is committed to providing an inclusive environment, free from sexual and gender-based discrimination. Title IX prohibits discrimination based on sex in any federally funded educational program or activity, and forms the basis for Bryn Mawr’s policies and resources regarding sex discrimination. The Bryn Mawr College Sexual Misconduct Policy prohibits Title IX sexual harassment, which includes sexual assault, dating violence, domestic violence, and stalking. Bryn Mawr’s Policy is more extensive than Title IX, and also covers other gender-based misconduct. BMC’s Policy is more extensive than Title IX, and also covers other gender-based misconduct.\n\nPlease be aware that all Bryn Mawr/Haverford employees (other than those designated as confidential resources such as counselors, clergy, and healthcare providers) must report information about such discrimination and harassment to the Bi-Co Tittle IX Coordinator.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#sec-accom",
-    "href": "syllabus.html#sec-accom",
-    "title": "Syllabus",
-    "section": "11.3 Students with physical or learning differences",
-    "text": "11.3 Students with physical or learning differences\nInfo from the College website:\n\nBMC is committed to providing equal access to students with a documented disability. Students needing academic accommodations for a disability must first register with Access Services. Students can call 610-526-7516 to make an appointment with the Access Services Director, Deb Alder, or email her at dalder[at]brynmawr.edu to begin this confidential process. Once registered, students should schedule an appointment with the professor as early in the semester as possible to share the verification form and make appropriate arrangements.\n\nPlease reach out as early as possible (ideally, even before classes start) so that we can make the necessary accommodations. Note that accommodations are not retroactive and require advance notice to implement.\nNeed help with math? The Bryn Mawr College Q Center supports students who are doing quantitative work in courses across the STEM and Social Science disciplines. The Q Center is a collaborative study space that provides a welcoming location for individual work, study groups, and collaboration with Q Mentors.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#fostering-an-inclusive-learning-space",
-    "href": "syllabus.html#fostering-an-inclusive-learning-space",
-    "title": "Syllabus",
-    "section": "11.4 Fostering an Inclusive Learning Space",
-    "text": "11.4 Fostering an Inclusive Learning Space\nIn an ideal world, it would be possible for scientific practice to be done in a perfectly objective way, free of biases and preconceptions. However, it is not so. Scientists are flawed and human. The history of science is also a history of who got the credit and is dominated by white, male, colonialist, and racist ideas. I will try to highlight less-known historical figures and provide a critical perspective on such matters whenever possible. I see the diversity of backgrounds and identities our students bring as a strength: age, culture, disability, ethnicity, gender, nationality, religion, sexuality, and socioeconomic status. I intend for this course to serve students from diverse backgrounds and perspectives. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally or for other students or student groups. You can do this in person during office hours, by email, or via the mid-semester anonymous survey.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "syllabus.html#footnotes",
-    "href": "syllabus.html#footnotes",
-    "title": "Syllabus",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWeekly labs, DataCamp activities, Moodle quizzes↩︎\nFormative vs. Summative Assessments: : Formative assessments are focused on supporting the learning process throughout the course. Summative assessments typically occur at the end of a learning period and assess student mastery of the material and whether they have met learning objectives. Learn more: https://teachers.institute/assessment-for-learning/formative-vs-summative-evaluation-differences/↩︎\nif curving is performed, it could increase but not decrease your grade↩︎",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "rlearn.html",
-    "href": "rlearn.html",
-    "title": "Learning R",
-    "section": "",
-    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-help",
-    "href": "rlearn.html#r-help",
-    "title": "Learning R",
-    "section": "1 Getting help with R",
-    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#free-online-books",
-    "href": "rlearn.html#free-online-books",
-    "title": "Learning R",
-    "section": "2 Free Online Books",
-    "text": "2 Free Online Books\n\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-vids",
-    "href": "rlearn.html#r-vids",
-    "title": "Learning R",
-    "section": "3 Videos",
-    "text": "3 Videos\n\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
-    "crumbs": [
-      "R links"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#tutorials-simulations",
-    "href": "rlearn.html#tutorials-simulations",
-    "title": "Learning R",
-    "section": "4 Tutorials & Simulations",
-    "text": "4 Tutorials & Simulations\n\nFrom your textbook\nQuick-R",
-    "crumbs": [
-      "R links"
     ]
   }
 ]
