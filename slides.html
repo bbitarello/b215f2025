@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="">
 
-<title>Schedule – BIOL B215: Biostatistics with R</title>
+<title>Slides – BIOL B215: Biostatistics with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -66,7 +69,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-slides .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-keywords','listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-filename-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-filename","listing-file-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-slides'] = new List('listing-slides', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,7 +140,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Schedule</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      BIOL B215: Biostatistics with R
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link active">
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -137,26 +200,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#sec-lec" id="toc-sec-lec" class="nav-link active" data-scroll-target="#sec-lec"><span class="header-section-number">1</span> Lectures</a></li>
-  <li><a href="#sec-labs" id="toc-sec-labs" class="nav-link" data-scroll-target="#sec-labs"><span class="header-section-number">2</span> Labs</a></li>
-  <li><a href="#sec-PS" id="toc-sec-PS" class="nav-link" data-scroll-target="#sec-PS"><span class="header-section-number">3</span> Problem sets</a></li>
-  <li><a href="#sec-LA" id="toc-sec-LA" class="nav-link" data-scroll-target="#sec-LA"><span class="header-section-number">4</span> Coding Assignments</a></li>
-  <li><a href="#sec-exams" id="toc-sec-exams" class="nav-link" data-scroll-target="#sec-exams"><span class="header-section-number">5</span> Midterms</a></li>
-  <li><a href="#sec-oh" id="toc-sec-oh" class="nav-link" data-scroll-target="#sec-oh"><span class="header-section-number">6</span> Office Hours</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/schedule.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schedule</h1>
+<h1 class="title">Slides</h1>
 </div>
 
 
@@ -173,538 +225,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-lec" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-lec"><span class="header-section-number">1</span> Lectures</h2>
-<p>Please check often. Subject to change. New material is added approximately on a weekly basis.</p>
-<p>Chapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
+<div id="listing-slides" class="quarto-listing quarto-listing-container-table">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th style="text-align: left;">Week</th>
-<th style="text-align: left;">Dates</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Slides</th>
-<th style="text-align: left;">Recommended Readings</th>
+<tr>
+
+<th>
+Topic
+</th>
+
+<th>
+Title
+</th>
+
+<th>
+Date
+</th>
+
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">9/3</td>
-<td style="text-align: left;">1.1 Statistics &amp; Samples I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch. 1</td>
+<tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1755887569939" data-listing-filename-sort="00-intro.qmd">
+<td>
+<span class="listing-keywords">&nbsp;</span>
+</td>
+<td>
+<a href="./slides/00-intro.qmd" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+
 </tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">9/8</td>
-<td style="text-align: left;">1.2 Statistics &amp; Samples II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.1, Interleaf 1: Correlation does not require causation</td>
+
+<tr data-index="1" data-listing-file-modified-sort="1756778626804" data-listing-filename-sort="Logistics.qmd">
+<td>
+<span class="listing-keywords">&nbsp;</span>
+</td>
+<td>
+<a href="./slides/Logistics/Logistics.qmd" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+
 </tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">2.1 Describing Data I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">9/10</td>
-<td style="text-align: left;">2.2 Describing Data II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">3.1. Displaying Data I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">9/15</td>
-<td style="text-align: left;">3.2. Displaying Data II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">4.1 Probability I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">9/17</td>
-<td style="text-align: left;">4.2 Probability II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">9/22</td>
-<td style="text-align: left;">4.3 Probability III</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch. 5</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">9/24</td>
-<td style="text-align: left;">4.4 Probability IV</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch. 5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">9/29</td>
-<td style="text-align: left;">5.1 Estimation I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">10/1</td>
-<td style="text-align: left;">5.2 Estimation II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">10/6</td>
-<td style="text-align: left;">6.1 Hypothesis Testing I</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">10/8</td>
-<td style="text-align: left;">6.2 Hypothesis Testing II</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Ch. 6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;">10/13</td>
-<td style="text-align: left;">No classes (Fall Break!)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">10/20</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">10/22</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">10/27</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">10/30</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">11/3</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">11/5</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11/10</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11/12</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11/17</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11/19</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">11/24</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">11/26</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">12/1</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">12/3</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">12/8</td>
-<td style="text-align: left;">Wrap-up, Review</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">12/10</td>
-<td style="text-align: left;">Review, Course Evals</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
+
 </tbody>
 </table>
-</section>
-<section id="sec-labs" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-labs"><span class="header-section-number">2</span> Labs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Week</th>
-<th style="text-align: left;">Date</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Slides</th>
-<th style="text-align: left;">Prep</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">2/9</td>
-<td style="text-align: left;">Course Logistics</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">2/9</td>
-<td style="text-align: left;">Rstudio/R introduction</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Video</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">9/9</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">9/16</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">9/23</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">9/30</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">10/7</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;">10/14</td>
-<td style="text-align: left;">No lab (fall break!)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">10/21</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;">10/28</td>
-<td style="text-align: left;">No lab (in class Midterm)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">11/4</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">11/10</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11/18</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11/25</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">12/2</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">12/9</td>
-<td style="text-align: left;">Wrap-up</td>
-<td style="text-align: left;">-</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-PS" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-PS"><span class="header-section-number">3</span> Problem sets</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Problem set</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Due Date</th>
-<th style="text-align: left;">Difficulty</th>
-<th style="text-align: left;">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Fri 10/3</td>
-<td style="text-align: left;">Easy/Medium</td>
-<td style="text-align: left;">Formative</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Wed 10/22</td>
-<td style="text-align: left;">Medium/Hard</td>
-<td style="text-align: left;">Formative</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Fri 11/7</td>
-<td style="text-align: left;">Medium/Hard</td>
-<td style="text-align: left;">Formative</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">T 11/25</td>
-<td style="text-align: left;">Medium/Hard</td>
-<td style="text-align: left;">Formative</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">W 12/10</td>
-<td style="text-align: left;">Medium/Hard</td>
-<td style="text-align: left;">Formative</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-LA" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-LA"><span class="header-section-number">4</span> Coding Assignments</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Coding Assignment</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Due Date</th>
-<th style="text-align: left;">Difficulty</th>
-<th style="text-align: left;">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">TBD</td>
-<td style="text-align: left;">Fri 10/31</td>
-<td style="text-align: left;">Hard</td>
-<td style="text-align: left;">Summative</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">TBD</td>
-<td style="text-align: left;">Fri 12/05</td>
-<td style="text-align: left;">Hard</td>
-<td style="text-align: left;">Summative</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-exams" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-exams"><span class="header-section-number">5</span> Midterms</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 38%">
-<col style="width: 15%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Assessment</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">When/Where</th>
-<th style="text-align: left;">Difficulty</th>
-<th style="text-align: left;">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Midterm 1</td>
-<td style="text-align: left;">Week 1-7</td>
-<td style="text-align: left;">10/28, during lab</td>
-<td style="text-align: left;">Hard</td>
-<td style="text-align: left;">Summative</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Midterm 2</td>
-<td style="text-align: left;">Weeks 1-14</td>
-<td style="text-align: left;">Finals week, scheduled (TBD)</td>
-<td style="text-align: left;">Hard</td>
-<td style="text-align: left;">Summative</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sec-oh" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-oh"><span class="header-section-number">6</span> Office Hours</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Who</th>
-<th>When</th>
-<th>Where</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Professor drop-in hours<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
-<td>Tuesday 3-4pm</td>
-<td>Park 211</td>
-</tr>
-<tr class="even">
-<td>Professor drop-in hours</td>
-<td>Wednesday 2-3:30pm</td>
-<td>Park 211</td>
-</tr>
-<tr class="odd">
-<td>Professor drop-in hours</td>
-<td>Thursday 2-3pm</td>
-<td>Zoom</td>
-</tr>
-<tr class="even">
-<td>TA</td>
-<td>TBD by survey</td>
-<td>TBD. Please answer <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx4dTtQUbyItAP2aqLE0y5coJff1Jim6AQoneV2WtjlDvJnA/viewform">survey</a>.</td>
-</tr>
-</tbody>
-</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
-</section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Subject to change depending on TA office hours.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1109,4 +685,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/schedule.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
