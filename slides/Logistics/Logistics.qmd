@@ -16,6 +16,8 @@ code-link: true
 execute:
   echo: true
   freeze: auto
+  
+output-dir: docs
 ---
 
 
