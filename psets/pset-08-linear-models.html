@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-02">
-<meta name="keywords" content="logistics">
-<title>0. Logistics – BIOL B215: Biostatistics with R</title>
+
+<meta name="dcterms.date" content="2024-11-15">
+
+<title>Problem set 8 – BIOL B215: Biostatistics with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-180ebac6ac70f5dbf58f2bf238b2e8c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-54f0065fef14266c202334da9f6db56b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -63,7 +101,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -89,11 +132,15 @@ window.Quarto = {
   typesetMath
 };
 </script>
+
 </head>
-<body class="nav-sidebar floating slimcontent quarto-light">
+
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -106,11 +153,15 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">BIOL B215: Biostatistics with R</a> 
+      <a href="../">BIOL B215: Biostatistics with R</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/bbitarello/b215f2025" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
     <a href="https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24" title="RStudio Cloud" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
@@ -124,79 +175,61 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rlearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../rlearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R resources</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
-   
-  <ul>
-<li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
-  <li><a href="#introductions" id="toc-introductions" class="nav-link" data-scroll-target="#introductions">Introductions</a></li>
-  <li><a href="#hello" id="toc-hello" class="nav-link" data-scroll-target="#hello">Hello!</a></li>
-  <li><a href="#our-ta" id="toc-our-ta" class="nav-link" data-scroll-target="#our-ta">Our TA</a></li>
-  <li><a href="#pre-reqs" id="toc-pre-reqs" class="nav-link" data-scroll-target="#pre-reqs">Pre-Reqs</a></li>
-  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#tech-things-to-do" id="toc-tech-things-to-do" class="nav-link" data-scroll-target="#tech-things-to-do">Tech things to do</a></li>
-  <li><a href="#other-things-to-do" id="toc-other-things-to-do" class="nav-link" data-scroll-target="#other-things-to-do">Other things to do</a></li>
-  <li><a href="#course-pages" id="toc-course-pages" class="nav-link" data-scroll-target="#course-pages">Course Pages</a></li>
-  <li><a href="#course-pages-1" id="toc-course-pages-1" class="nav-link" data-scroll-target="#course-pages-1">Course Pages</a></li>
-  <li><a href="#course-structure" id="toc-course-structure" class="nav-link" data-scroll-target="#course-structure">Course Structure</a></li>
-  <li><a href="#formative-vs-summative-assessments" id="toc-formative-vs-summative-assessments" class="nav-link" data-scroll-target="#formative-vs-summative-assessments">Formative vs Summative Assessments</a></li>
-  <li><a href="#datacamp" id="toc-datacamp" class="nav-link" data-scroll-target="#datacamp">DataCamp</a></li>
-  <li><a href="#attendance-and-late-work" id="toc-attendance-and-late-work" class="nav-link" data-scroll-target="#attendance-and-late-work">Attendance and Late Work</a></li>
-  <li><a href="#ai-policy" id="toc-ai-policy" class="nav-link" data-scroll-target="#ai-policy">AI policy</a></li>
-  <li><a href="#faqs-answered-in-the-syllabus" id="toc-faqs-answered-in-the-syllabus" class="nav-link" data-scroll-target="#faqs-answered-in-the-syllabus">FAQs answered in the syllabus</a></li>
-  <li><a href="#how-to-succeed" id="toc-how-to-succeed" class="nav-link" data-scroll-target="#how-to-succeed">How to succeed</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/Logistics/Logistics.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Logistics.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">0. Logistics</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem set 8</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Bárbara D. Bitarello </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 2, 2025</p>
+      <p class="date">November 15, 2024</p>
     </div>
   </div>
   
@@ -204,191 +237,133 @@ window.Quarto = {
   </div>
   
 
-<div>
-  <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>logistics</p>
-  </div>
-</div>
 
-</header><section id="outline" class="level1"><h1>Outline</h1>
-<ul>
-<li>Introductions</li>
-<li>Course Logistics</li>
-<li>To-Dos for this week</li>
-</ul>
-<div class="notes">
-<p>Speaker notes go here.</p>
-</div>
-<p><br><br></p>
-</section><section id="introductions" class="level1"><h1>Introductions</h1>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.2     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
-
-Attaching package: 'scales'
+</header>
 
 
-The following object is masked from 'package:purrr':
-
-    discard
-
-
-The following object is masked from 'package:readr':
-
-    col_factor
-
-
-
-Attaching package: 'kableExtra'
-
-
-The following object is masked from 'package:dplyr':
-
-    group_rows
-
-
-Loading required package: colorspace</code></pre>
-</div>
-</div>
-</section><section id="hello" class="level1"><h1>Hello!</h1>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/map.png" class="img-fluid"></p>
-</div><div class="column" style="width:70%;">
-<ul>
-<li>Bárbara D. Bitarello (she/her/hers)</li>
-<li>PhD in human evolutionary genetics</li>
-<li>Professor @ BMC since July 2021</li>
-<li>Computational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc</li>
-<li>Interested in all things related to evolution</li>
-</ul>
-</div>
-</div>
-</section><section id="our-ta" class="level1"><h1>Our TA</h1>
-<ul>
-<li><p>Nicole Cavalieri</p></li>
-<li><p>English Major/ Data Science Minor</p></li>
-<li>
-<p>R rockstar!</p>
-<p><img src="images/IMG_3542-02.jpeg" class="img-fluid"></p>
-</li>
-</ul></section><section id="pre-reqs" class="level1"><h1>Pre-Reqs</h1>
-<ul>
-<li>No prior experience with programming is required!</li>
-<li>BIOL B110 or B111 highly recommended (though not required). <strong>Why?</strong> Examples are heavily focused on biology, though the concepts and skills learned will be transferable</li>
-<li>Students who have taken PSYC B205/H200 or SOCL B265 are <u>not</u> eligible to take this course.</li>
-<li>High school algebra - if you’re not sure, I recommend checking <a href="https://www.khanacademy.org/math/algebra-basics">Khan Academy - Algebra Basics</a> for a recap</li>
-</ul></section><section id="logistics" class="level1"><h1>Logistics</h1>
-<p>Everything I am about to say is in the syllabus!</p>
-<ul>
-<li>Materials</li>
-<li>Things to do/install</li>
-<li>Course structure</li>
-<li>Policies</li>
-<li>How to succeed</li>
-</ul></section><section id="materials" class="level1"><h1>Materials</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Textbook: Whitlock and Schluter <em>The Analysis of Biological Data</em>, 3rd edition (2nd: ok, but check pages)</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/textbook.png" class="img-fluid figure-img" width="271"></p>
-<figcaption>Cover of 3rd edition</figcaption></figure>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Laptop with browser for labs</li>
-<li>Scientific calculator (not graphing calculator) <span class="math inline">\(\sim\$12\)</span>
-</li>
-<li><a href="https://www.architecturelab.net/whats-the-difference-between-scientific-and-graphing-calculator/">Scientific vs Graphing Calculator</a></li>
-</ul>
-</div>
-</div>
-</section><section id="tech-things-to-do" class="level1"><h1>Tech things to do</h1>
-<ul>
-<li>Have a laptop for labs and calculator for exams</li>
-<li>Join Piazza</li>
-<li>Make accounts in DataCamp and Posit Cloud using BMC/HC email</li>
-<li>Then accept invite sent by email (check spam)</li>
-</ul></section><section id="other-things-to-do" class="level1"><h1>Other things to do</h1>
-<ul>
-<li>Read course info document and schedule (posted on Moodle)</li>
-<li>Answer pre-course survey</li>
-<li>Check course schedule and reach out asap if there are issues</li>
-<li>Check midterm dates and plan accordingly</li>
-</ul></section><section id="course-pages" class="level1"><h1>Course Pages</h1>
-<ul>
-<li>Course website: <a href="https://bbitarello.github.io/b215f2025/" class="uri">https://bbitarello.github.io/b215f2025/</a> has syllabus, schedule, etc.</li>
-<li>All assignments must be uploaded on Moodle (except DataCamp)</li>
-<li>Keys, slides, study guides will also be posted on Moodle</li>
-<li>Course website: <a href="https://bbitarello.github.io/b215f2025/" class="uri">https://bbitarello.github.io/b215f2025/</a>
-</li>
-</ul></section><section id="course-pages-1" class="level1 page-columns page-full"><h1>Course Pages</h1>
-<ul>
-<li>Piazza is the preferred method for any questions that may benefit classmates, both logistical and content-related</li>
-<li>Piazza allows you to post anonymously (note: I will still know your identity)</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Datacamp and Posit Cloud will also be used weekly so join asap!</p>
-</div></div></section><section id="course-structure" class="level1"><h1>Course Structure</h1>
-<p><img src="images/figs.003.png" class="img-fluid"></p>
-<div class="notes">
-<p>Lectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day.</p>
-</div>
-</section><section id="formative-vs-summative-assessments" class="level1"><h1>Formative vs Summative Assessments</h1>
-<ul>
-<li>Formative assessments happen often and are focused on learning</li>
-<li>DC and R labs are gladed for completion/effort</li>
-<li>Quizzes may be taken multiple times (final grade is average)</li>
-<li>PS graded benevolently</li>
-</ul>
-<p><img src="images/figs.005.png" class="img-fluid"></p>
-</section><section id="datacamp" class="level1"><h1>DataCamp</h1>
-<ul>
-<li>Assigned weekly to practice lab skills</li>
-<li>DC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly</li>
-</ul></section><section id="attendance-and-late-work" class="level1"><h1>Attendance and Late Work</h1>
-<ul>
-<li>Please communicate need to miss class by email.</li>
-<li>Grace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment</li>
-<li>Late work otherwise penalyzed -10% per day</li>
-</ul></section><section id="ai-policy" class="level1"><h1>AI policy</h1>
-<p>We are following the BMC Honor Code. Please see syllabus.</p>
-<p>Questions about this: now or later on Piazza.</p>
-<div class="notes">
-<p>who has read the syllabus? if not, read now the part on this</p>
-</div>
-</section><section id="faqs-answered-in-the-syllabus" class="level1"><h1>FAQs answered in the syllabus</h1>
-<p>Please visit the FAQ section of the syllabus. A few examples…</p>
 <ol type="1">
-<li>What if I have to miss class?</li>
-<li>What if I cannot turn in an assignment in time?</li>
-<li>What if I am requesting an extension because of sickness?</li>
-<li>What if I have accommodations?</li>
-</ol></section><section id="how-to-succeed" class="level1"><h1>How to succeed</h1>
+<li>Load the <strong>HistData</strong> package. Create a <code>galton_height</code> data with the father’s height and one randomly selected daughter from each family. Exclude families with no female children. Set the seed at 2007 and use the function <code>sample_n</code> to select the random child. You should end up with a <code>heights</code> dataset with two columns: <code>father</code> and <code>daughter</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(HistData)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(GaltonFamilies)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2007</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">&lt;-</span> GaltonFamilies <span class="sc">|&gt;</span> <span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Estimate the intercept and slope of the regression line for predicting daughter height <span class="math inline">\(Y\)</span> using father height <span class="math inline">\(X\)</span>. Use the following regression line formula:</li>
+</ol>
+<p><span class="math display">\[
+\frac{\hat{Y} - \mu_Y}{\sigma_Y} = \rho \frac{x - \mu_x}{\sigma_x}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Make a plot to confirm the regression line goes through the data.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>heights <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(father, daughter)) <span class="sc">+</span> <span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Recompute the slope and intercept coefficients, this time using <code>lm</code> and confirm you get the same answer as with the formula used in problem 2.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>Note that the interpretation of the intercept is: the height prediction for the daughter whose father is 0 inches tall. This is not a very useful interpretation. Re-run the regression but instead of father height use inches above average for each father: instead of using the <span class="math inline">\(x_i\)</span>s use <span class="math inline">\(x_i - \bar{x}\)</span>. What is the interpretation of the intercept now? Does the slope estimate change?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>When using the centered father heights as a predictor, is the intercept the same as the average daughter height? Check if this is the case with the values you computed and then show that mathematically this has to be the case.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For the next exercises install the <strong>excessmort</strong> package. For the latest version use</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"rafalab/excessmort"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>Define an object <code>counts</code> by wrangling <code>puerto_rico_counts</code> to 1) include data only from 2002-2017 and counts for people 60 or over. We will focus in this older subset throughout the rest of the problem set.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(excessmort) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li>Use R to determine what day of the week María made landfall in PR (September 20, 2017).</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="10" type="1">
+<li>Redefine the date column to be the start of the week that date is part of: in other words, round the date down to the nearest week. Use the day of the week María made landfall as the first day. So, for example, 2017-09-20, 2017-09-21, 2017-09-22 should all be rounded down to 2017-09-20, while 2017-09-19 should be rounded down to 2017-09-13. Save the resulting table in <code>weekly_counts</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="11" type="1">
+<li>Now collapse the <code>weekly_count</code> data frame to store only one mortality value for each week, for each <code>sex</code> and <code>agegroup</code>. To this by by redefining <code>outcome</code> to have the total deaths that week for each <code>sex</code> and <code>agegroup</code>. Remove weeks that have less the 7 days of data. Finally, add a column with the MMWR week. Name the resulting data frame <code>weekly_counts</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="12" type="1">
+<li>Comparing mortality totals is often unfair because the two groups begin compared have different population sizes. It is particularly important we consider rates rather than totals in this dataset because the demographics in Puerto Rico changed dramatically in the last 20 years. To see this use <code>puerto_rico_counts</code> to plot the population sizes by age group and gender. Provide a two sentence description of what you see.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>puerto_rico_counts <span class="sc">|&gt;</span> <span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="13" type="1">
+<li>Make a boxplot for each MMWR week’s mortality rate based on the 2002-2016 data. Each week has 15 data points, one for each year. Then add the 2017 data as red points.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">###your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="14" type="1">
+<li>Note twp things: 1) there is a strong week effect and 2) 2017 is lower than expected. Plot the yearly rates (per 1,000) for 2002-2016:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>weekly_counts <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">year</span>(date) <span class="sc">&lt;</span> <span class="dv">2017</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a> <span class="do">## your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="15" type="1">
+<li>The plot made in 14 explains why 2017 is below what is expected: there appears to be a general decrease in mortality with time. A possible explanation is that medical care is improving and people are living more healthy lives.</li>
+</ol>
+<p>Fit a linear model to the weekly data for the 65 and older to the 2002-2016 data that accounts for:</p>
 <ul>
-<li>Attendance</li>
-<li>Pre-class prep</li>
-<li>Complete all activities — be consistent and diligent</li>
-<li>Check Piazza regularly, attend office hours at least 2x</li>
-<li>Don’t leave everything for last minute — that will not work well</li>
-<li>Communicate proactively</li>
-</ul></section><section id="questions" class="level1"><h1>Questions?</h1>
+<li>A changing population.</li>
+<li>The trend observed in 12.</li>
+<li>The week effect.</li>
+<li>Age effect.</li>
+<li>A sex effect.</li>
+</ul>
+<p>Use rate as the outcome in the model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="16" type="1">
+<li>Now obtain expected counts for the entire dataset, including 2017. Compute the difference between the observed count and expected count and plot the total excess death for each week. Construct a confidence interval for the excess mortality estimate for each week. Hint: use the <code>predict</code> function.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="17" type="1">
+<li>Finally, plot the observed rates and predicted rates from the model for each <code>agegroup</code> and <code>sex</code>. Comment on how well the model fits and what you might do differently.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">##your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -460,7 +435,7 @@ Loading required package: colorspace</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025");
+        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -791,4 +766,5 @@ Loading required package: colorspace</code></pre>
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/Logistics/Logistics.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/psets/pset-08-linear-models.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
