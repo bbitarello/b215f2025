@@ -6,19 +6,19 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a75ea84b2aefd0354fe7c93493611467.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
-<meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-02">
-<meta name="keywords" content="Logistics">
-<title>BIOL B215: Biostatistics with R – 0. Logistics</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a75ea84b2aefd0354fe7c93493611467.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.33">
+
+  <meta name="author" content="Bárbara D. Bitarello">
+  <meta name="dcterms.date" content="2025-09-03">
+  <meta name="keywords" content="Statistics &amp; Samples">
+  <title>BIOL B215: Biostatistics with R – 1.1. Statistics &amp; Samples</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,12 +31,12 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-24f61e41010b359cbef0f1ff31b65c64.css">
-<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-24f61e41010b359cbef0f1ff31b65c64.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -47,7 +47,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -129,7 +128,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">0. Logistics</h1>
+<section id="title-slide" class="quarto-title-block">
+  <h1 class="title">1.1. Statistics &amp; Samples</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,160 +139,248 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-02</p>
-</section><section id="outline" class="title-slide slide level1"><h1>Outline</h1>
+  <p class="date">2025-09-03</p>
+</section>
+<section id="overview" class="title-slide slide level1">
+<h1>Overview</h1>
 <ul>
-<li>Introductions</li>
-<li>Course Logistics</li>
-<li>To-Dos for this week</li>
-</ul></section><section id="introductions" class="title-slide slide level1"><h1>Introductions</h1>
-
-</section><section id="hello" class="title-slide slide level1"><h1>Hello!</h1>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/map.png"></p>
-</div><div class="column" style="width:70%;">
-<ul>
-<li>Bárbara D. Bitarello (she/her/hers)</li>
-<li>PhD in human evolutionary genetics</li>
-<li>Professor @ BMC since July 2021</li>
-<li>Computational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc</li>
-<li>Interested in all things related to evolution</li>
-</ul>
-</div></div>
-</section><section id="our-ta" class="title-slide slide level1"><h1>Our TA</h1>
-<ul>
-<li><p>Nicole Cavalieri</p></li>
-<li><p>English Major/ Data Science Minor</p></li>
-<li><p>R rockstar!</p></li>
-</ul></section><section id="pre-reqs" class="title-slide slide level1"><h1>Pre-Reqs</h1>
-<ul>
-<li>No prior experience with programming is required!</li>
-<li>BIOL B110 or B111 highly recommended (though not required). <strong>Why?</strong> Examples are heavily focused on biology, though the concepts and skills learned will be transferable</li>
-<li>Students who have taken PSYC B205/H200 or SOCL B265 are <u>not</u> eligible to take this course.</li>
-<li>High school algebra - if you’re not sure, I recommend checking <a href="https://www.khanacademy.org/math/algebra-basics">Khan Academy - Algebra Basics</a> for a recap</li>
-</ul></section><section id="logistics" class="title-slide slide level1"><h1>Logistics</h1>
-<p>Everything I am about to say is in the syllabus!</p>
-<ul>
-<li>Materials</li>
-<li>Things to do/install</li>
-<li>Course structure</li>
-<li>Policies</li>
-<li>How to succeed</li>
-</ul></section><section id="materials" class="title-slide slide level1"><h1>Materials</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Textbook: Whitlock and Schluter <em>The Analysis of Biological Data</em>, 3rd edition (2nd: ok, but check pages)</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/textbook.png"></p>
-<figcaption>Cover of 3rd edition</figcaption></figure>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Laptop with browser for labs</li>
-<li>Scientific calculator (not graphing calculator) <span class="math inline">\(\sim\$12\)</span>
-</li>
-<li><a href="https://www.architecturelab.net/whats-the-difference-between-scientific-and-graphing-calculator/">Scientific vs Graphing Calculator</a></li>
-</ul>
-</div></div>
-</section><section id="tech-things-to-do" class="title-slide slide level1"><h1>Tech things to do</h1>
-<ul>
-<li>Have a laptop for labs and calculator for exams</li>
-<li>Join Piazza</li>
-<li>Make accounts in DataCamp and Posit Cloud using BMC/HC email</li>
-<li>Then accept invite sent by email (check spam)</li>
-</ul></section><section id="other-things-to-do" class="title-slide slide level1"><h1>Other things to do</h1>
-<ul>
-<li>Read course info document and schedule (posted on Moodle)</li>
-<li>Answer pre-course survey</li>
-<li>Check course schedule and reach out asap if there are issues</li>
-<li>Check midterm dates and plan accordingly</li>
-</ul></section><section id="course-pages" class="title-slide slide level1"><h1>Course Pages</h1>
-<ul>
-<li>Course website: <a href="https://bbitarello.github.io/b215f2025/" class="uri">https://bbitarello.github.io/b215f2025/</a> has syllabus, schedule, etc.</li>
-<li>All assignments must be uploaded on Moodle (except DataCamp)</li>
-<li>Keys, slides, study guides will also be posted on Moodle</li>
-</ul></section><section id="course-pages-1" class="title-slide slide level1"><h1>Course Pages</h1>
-<ul>
-<li>Piazza is the preferred method for any questions that may benefit classmates, both logistical and content-related</li>
-<li>Piazza allows you to post anonymously (note: I will still know your identity)</li>
+<li class="fragment"><strong>Goals of statistics</strong></li>
+<li class="fragment"><strong>Populations and Samples</strong></li>
+<li class="fragment"><strong>Statistics and parameters</strong></li>
+<li class="fragment">Estimate errors due to sampling</li>
+<li class="fragment">Types of experiments</li>
+<li class="fragment">Types of variables</li>
 </ul>
 
 <aside><div>
-<p>Datacamp and Posit Cloud will also be used weekly so join asap!</p>
-</div></aside></section><section id="course-structure" class="title-slide slide level1"><h1>Course Structure</h1>
+<p>we will continue on this topic next time</p>
+</div></aside></section>
 
-<img data-src="images/figs.003.png" class="r-stretch"><aside class="notes"><p>Lectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="formative-vs-summative-assessments" class="title-slide slide level1"><h1>Formative vs Summative Assessments</h1>
+<section id="learning-goals" class="title-slide slide level1">
+<h1>Learning Goals</h1>
 <ul>
-<li>Formative assessments happen often and are focused on learning</li>
-<li>DC and R labs are gladed for completion/effort</li>
-<li>Quizzes may be taken multiple times (final grade is average)</li>
-<li>PS graded benevolently</li>
+<li class="fragment">Understand the major goal of statistics.</li>
+<li class="fragment">Distinguish between a sample and a population.</li>
+<li class="fragment">Distinguish between an estimate and a parameter.</li>
+<li class="fragment">Identify why estimates from samples may deviate from parameters of populations.</li>
+<li class="fragment">Identify the properties of a good sample.</li>
+<li class="fragment">Describe the differences between observational and experimental studies</li>
 </ul>
-
-<img data-src="images/figs.005.png" class="r-stretch"></section><section id="datacamp" class="title-slide slide level1"><h1>DataCamp</h1>
-<ul>
-<li>Assigned weekly to practice lab skills</li>
-<li>DC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly</li>
-</ul></section><section id="attendance-and-late-work" class="title-slide slide level1"><h1>Attendance and Late Work</h1>
-<ul>
-<li>Please communicate need to miss class by email.</li>
-<li>Grace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment</li>
-<li>Late work otherwise penalyzed -10% per day</li>
-</ul></section><section id="ai-policy" class="title-slide slide level1"><h1>AI policy</h1>
-<p>We are following the BMC Honor Code. Please see syllabus.</p>
-<p>Questions about this: now or later on Piazza.</p>
-<aside class="notes"><p>who has read the syllabus? if not, read now the part on this</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="faqs-answered-in-the-syllabus" class="title-slide slide level1 scrollable"><h1>FAQs answered in the syllabus</h1>
-<p>Please visit the FAQ section of the syllabus. A few examples…</p>
-<ol type="1">
-<li>What if I have to miss class?</li>
-<li>What if I cannot turn in an assignment in time?</li>
-<li>What if I am requesting an extension because of sickness?</li>
-<li>What if I have accommodations?</li>
-</ol></section><section id="how-to-succeed" class="title-slide slide level1"><h1>How to succeed</h1>
-<ul>
-<li>Attendance</li>
-<li>Pre-class prep</li>
-<li>Complete all activities — be consistent and diligent</li>
-<li>Check Piazza regularly, attend office hours at least 2x</li>
-<li>Don’t leave everything for last minute — that will not work well</li>
-<li>Communicate proactively</li>
-</ul></section><section id="questions" class="title-slide slide level1"><h1>Questions?</h1>
-
-
 </section>
-</div>
+
+<section id="what-is-statistics" class="title-slide slide level1">
+<h1>What is statistics?</h1>
+
+<img data-src="images/tweetStats.png" alt="Tweet by user @kareem_carr: “In my opinion, the core of statistics is critical thinking with numbers. Some disciplines teach you how to think with numbers and others teach you critical thinking but statistics if where you learn to put the two together and this skill is essential for life in the 21st century.” (January 12, 2021)" class="r-stretch quarto-figure-center"><p class="caption">Tweet from someone I don’t know, but very on point, so thank you!</p></section>
+
+<section id="what-is-statistics-1" class="title-slide slide level1">
+<h1>What is statistics?</h1>
+
+<img data-src="images/statsvenn.png" alt="venn diagram shows statistics as the intersection of critical thinking and thinking with numbers" class="r-stretch"></section>
+
+<section id="what-is-biostatistics" class="title-slide slide level1">
+<h1>What is BIOstatistics?</h1>
+
+<img data-src="images/statsvenn2.png" alt="venn diagram shows biostatistics as the intersection of critical thinking, biological data, and thinking with numbers" class="r-stretch"></section>
+
+<section id="why-should-you-care-about-statistics" class="title-slide slide level1">
+<h1>Why should <em>you</em> care about statistics?</h1>
+<ul>
+<li class="fragment">Biology (ecology, genetics, immunology, microbiology, …)</li>
+<li class="fragment">Biomedical sciences</li>
+<li class="fragment">Public health</li>
+<li class="fragment">Data science</li>
+<li class="fragment">Economy, Psychology, Social Science</li>
+</ul>
+</section>
+
+<section id="why-should-anyone-care-about-statistics" class="title-slide slide level1">
+<h1>Why should <em>anyone</em> care about statistics?</h1>
+<ul>
+<li class="fragment">Good science!</li>
+<li class="fragment">Critical evaluation of “scientific evidence”</li>
+<li class="fragment">Statistics and probability are not intuitive</li>
+<li class="fragment">We tend to jump to conclusions and we are very often wrong</li>
+<li class="fragment">Transferable skills: thinking quantitatively, programming, understanding rationale behind statistical tests</li>
+</ul>
+</section>
+
+<section id="challenge-data-deluge" class="title-slide slide level1">
+<h1>Challenge: data deluge</h1>
+
+<img data-src="images/datadeluge.png" alt="Cover of the magazine “The economist”. The heading reads: “The data deluge - And how to handle it: A 14-page special report”. Under the heading is a drawing of a person holding an umbrella in a rainstorm, but the rain is all 1s and 0s. The umbrella top is open but upside-down, collecting water which the person is using to water a plant from the handle of the umbrella." class="r-stretch quarto-figure-center"><p class="caption">Cover from “The Economist” (Feb 27-March 10, 2010)</p></section>
+
+<section id="challenge-understanding" class="title-slide slide level1">
+<h1>Challenge: understanding</h1>
+
+<img data-src="images/pvaluexkcd.png" alt="Comic from xfcd.com: lists p-values ranging from 0.001 to >=0.1 on the left, and on the right offers and interpretation." width="791" class="r-stretch quarto-figure-center"><p class="caption">From: https://xkcd.com/1478/</p></section>
+
+<section id="goal-learn-about-the-world" class="title-slide slide level1">
+<h1>Goal: learn about the world</h1>
+
+<img data-src="images/whatdowewant.png" alt="Meme from meme generator reads: Question: ”What do we want?”, Response: “Learn about the world!!!”, question: “Can we look at the entire world?”, Response: “No!!!”." width="501" class="r-stretch quarto-figure-center"><p class="caption">From: imgflip.com/memegenerator</p></section>
+
+<section id="in-practice-then" class="title-slide slide level1">
+<h1>In practice, then…</h1>
+<ul>
+<li class="fragment"><p>Challenge: We can’t look at the whole world.</p></li>
+<li class="fragment"><p>Solution: Take a sample and generalize outward.</p></li>
+</ul>
+</section>
+
+<section id="great-but" class="title-slide slide level1">
+<h1>Great but…</h1>
+<ul>
+<li class="fragment"><p>New Challenge: Samples deviate from the populations by<br>
+luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<strong>sampling bias</strong>)</p></li>
+<li class="fragment"><p>Solution:</p>
+<ul>
+<li class="fragment"><p>Estimate the values of important parameters</p></li>
+<li class="fragment"><p>Have measures of uncertainty for estimates</p></li>
+<li class="fragment"><p>Test hypotheses about those parameters</p></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="statistics-is-really-about-measuring-uncertainty" class="title-slide slide level1">
+<h1>Statistics is really about measuring uncertainty</h1>
+<ul>
+<li class="fragment">Statistics are a <u>quantitative technology for empirical science</u>.</li>
+<li class="fragment">A logic and methodology for the measurement of <strong>uncertainty</strong> and for an examination of that uncertainty.</li>
+<li class="fragment">The key word here is <strong>uncertainty</strong>. Statistics becomes necessary when observations are <strong>variable</strong>.</li>
+</ul>
+</section>
+
+<section id="what-about-biostats" class="title-slide slide level1">
+<h1>What about biostats?</h1>
+<ul>
+<li class="fragment">What is the motivating biological question?</li>
+<li class="fragment">What experiments can be done and/or data can be collected to address this question?</li>
+<li class="fragment">Do results support an interesting conclusion?</li>
+<li class="fragment">What are the shortcomings/limitations of statistical models and causal frameworks in the analysis?</li>
+<li class="fragment">How do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?</li>
+</ul>
+</section>
+
+<section id="the-central-obsession-of-statistics" class="title-slide slide level1">
+<h1>The Central Obsession of Statistics</h1>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">Question: How do we make inferences about the WORLD from our finite observations?</li>
+</ul>
+</div><div class="column">
+<ul>
+<li class="fragment">Answer: Make models to account for the process of sampling and the associated hazards.</li>
+</ul>
+</div></div>
+</section>
+
+<section id="two-important-distinctions" class="title-slide slide level1">
+<h1>Two important distinctions</h1>
+<ul>
+<li class="fragment">Populations vs.&nbsp;samples</li>
+<li class="fragment">Parameters vs.&nbsp;estimates</li>
+</ul>
+</section>
+
+<section id="definition-of-population" class="title-slide slide level1">
+<h1>Definition of population</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<blockquote>
+<p>In Biology: &gt; A collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.</p>
+</blockquote>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p>In Statistics: the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc</p>
+</blockquote>
+</div></div>
+</section>
+
+<section id="statistics-parameters" class="title-slide slide level1">
+<h1>Statistics &amp; parameters</h1>
+<p>A parameter is some property of the world, i.e., the “truth”</p>
+<p><img data-src="images/xfiles.png"></p>
+
+<aside><div>
+<p>Seriously, though, &lt;3 X-files!</p>
+</div></aside></section>
+
+<section id="a-population-of-starfish" class="title-slide slide level1">
+<h1>A population of starfish</h1>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">Parameters describe populations</li>
+<li class="fragment">E.g. proportion of pink starfish among all starfish of a given species in a certain location</li>
+</ul>
+</div><div class="column">
+<p><img data-src="images/starfish.png"></p>
+</div></div>
+</section>
+
+<section id="a-sample-of-starfish" class="title-slide slide level1">
+<h1>A sample of starfish</h1>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment">Estimates (statistics) approximate parameters as inferred from samples</li>
+<li class="fragment">We estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation.</li>
+</ul>
+</div><div class="column">
+<p><img data-src="images/starfish2.png"></p>
+</div></div>
+</section>
+
+<section id="in-summary" class="title-slide slide level1">
+<h1>In summary</h1>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Parameters and populations</strong></p>
+<ul>
+<li class="fragment">Parameters describe Populations</li>
+<li class="fragment">Because we can’t sample an entire population, we usually don’t know parameters.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><strong>Estimates and samples</strong></p>
+<ul>
+<li class="fragment">But we can get a good sense of the parameters from estimates we make from samples.</li>
+<li class="fragment">stimates approximate parameters as inferred from Samples</li>
+</ul>
+</div></div>
+</section>
+
+<section id="thats-all-for-today" class="title-slide slide level1">
+<h1>That’s all for today</h1>
+
+
+
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -483,42 +571,8 @@ Bárbara D. Bitarello
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -685,6 +739,6 @@ Bárbara D. Bitarello
         }
       });
       </script>
-
+    
 
 </body></html>

@@ -124,7 +124,7 @@
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
     "crumbs": [
       "Home"
     ]
@@ -194,7 +194,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nlogistics\n\n\n0. Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0. Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
