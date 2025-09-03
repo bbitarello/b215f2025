@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/slides.html</loc>
-    <lastmod>2025-09-02T02:05:25.336Z</lastmod>
-  </url>
-  <url>
     <loc>https://bbitarello.github.io/b215f2025/schedule.html</loc>
     <lastmod>2025-09-02T01:46:12.066Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/Logistics.html</loc>
+    <lastmod>2025-09-03T00:38:57.271Z</lastmod>
   </url>
   <url>
     <loc>https://bbitarello.github.io/b215f2025/index.html</loc>
     <lastmod>2025-09-02T01:45:27.111Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/syllabus.html</loc>
-    <lastmod>2025-08-31T21:00:20.677Z</lastmod>
-  </url>
-  <url>
     <loc>https://bbitarello.github.io/b215f2025/rlearn.html</loc>
     <lastmod>2025-09-01T00:50:10.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides.html</loc>
+    <lastmod>2025-09-03T00:33:24.202Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/1.1.Statistics_&amp;_Samples.html</loc>
+    <lastmod>2025-09-03T00:45:47.068Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/syllabus.html</loc>
+    <lastmod>2025-09-02T23:47:17.569Z</lastmod>
   </url>
 </urlset>

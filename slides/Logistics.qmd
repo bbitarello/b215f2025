@@ -1,0 +1,206 @@
+---
+title: "0. Logistics"
+author: "Bárbara D. Bitarello"
+date: "09-02-2025"
+keywords: "logistics"
+format:
+  revealjs: 
+    scrollable: true
+    center-title-slide: false
+    theme: custom.scss
+    slide-number: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+code-link: true
+execute:
+  echo: true
+
+---
+
+
+# Outline
+
+-   Introductions
+-   Course Logistics
+-   To-Dos for this week
+
+::: notes
+Speaker notes go here.
+:::
+
+<br><br>
+
+# Introductions
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(scales)
+library(knitr)
+library(kableExtra)
+library(colorblindr)
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+
+
+source("bb_theme.R")
+theme_set(theme_gray(base_size = 18))
+```
+
+# Hello!
+
+::::: columns
+::: {.column width="30%"}
+![](images/map.png)
+:::
+
+::: {.column width="70%"}
+-   Bárbara D. Bitarello (she/her/hers)
+-   PhD in human evolutionary genetics
+-   Professor \@ BMC since July 2021
+-   Computational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc
+-   Interested in all things related to evolution
+:::
+:::::
+
+# Our TA
+
+-   Nicole Cavalieri
+
+-   English Major/ Data Science Minor
+
+-   R rockstar!
+
+    ![](images/IMG_3542-02.jpeg)
+
+# Pre-Reqs
+
+-    No prior experience with programming is required!
+-    BIOL B110 or B111 highly recommended (though not required). **Why?** Examples are heavily focused on biology, though the concepts and skills learned will be transferable
+-   Students who have taken PSYC B205/H200 or SOCL B265 are [not]{.underline} eligible to take this course.
+-  High school algebra - if you’re not sure, I recommend checking [Khan Academy - Algebra Basics](https://www.khanacademy.org/math/algebra-basics) for a recap
+
+
+# Logistics
+
+Everything I am about to say is in the syllabus!
+
+-   Materials
+-   Things to do/install
+-   Course structure
+-   Policies
+-   How to succeed
+
+# Materials
+
+::::: columns
+::: {.column width="50%"}
+-   Textbook: Whitlock and Schluter *The Analysis of Biological Data*, 3rd edition (2nd: ok, but check pages)
+
+![Cover of 3rd edition](images/textbook.png){width="271"}
+:::
+
+::: {.column width="50%"}
+-   Laptop with browser for labs
+-   Scientific calculator (not graphing calculator) $\sim\$12$
+-   [Scientific vs Graphing Calculator](https://www.architecturelab.net/whats-the-difference-between-scientific-and-graphing-calculator/)
+:::
+:::::
+
+# Tech things to do
+
+-   Have a laptop for labs and calculator for exams
+-   Join Piazza
+-   Make accounts in DataCamp and Posit Cloud using BMC/HC email
+-   Then accept invite sent by email (check spam)
+
+# Other things to do
+
+-   Read course info document and schedule (posted on Moodle)
+-   Answer pre-course survey
+-   Check course schedule and reach out asap if there are issues
+-   Check midterm dates and plan accordingly
+
+# Course Pages
+
+-   Course website: <https://bbitarello.github.io/b215f2025/> has syllabus, schedule, etc.
+-   All assignments must be uploaded on Moodle (except DataCamp)
+-   Keys, slides, study guides will also be posted on Moodle
+
+
+# Course Pages
+
+-   Piazza is the preferred method for any questions that may benefit classmates, both logistical and content-related
+-   Piazza allows you to post anonymously (note: I will still know your identity)
+
+::: aside
+Datacamp and Posit Cloud will also be used weekly so join asap!
+:::
+
+# Course Structure
+
+![](images/figs.003.png)
+
+::: notes
+Lectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day.
+:::
+
+# Formative vs Summative Assessments
+
+-   Formative assessments happen often and are focused on learning
+-   DC and R labs are gladed for completion/effort
+-   Quizzes may be taken multiple times (final grade is average)
+-   PS graded benevolently
+
+![](images/figs.005.png)
+
+# DataCamp
+
+-   Assigned weekly to practice lab skills
+-   DC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly
+
+# Attendance and Late Work
+
+-   Please communicate need to miss class by email.
+-   Grace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment
+-   Late work otherwise penalyzed -10% per day
+
+# AI policy
+
+We are following the BMC Honor Code. Please see syllabus.
+
+Questions about this: now or later on Piazza.
+
+
+::: notes
+who has read the syllabus? if not, read now the part on this
+:::
+
+# FAQs answered in the syllabus
+
+Please visit the FAQ section of the syllabus. A few examples...
+
+
+1.  What if I have to miss class?
+2.  What if I cannot turn in an assignment in time?
+3.  What if I am requesting an extension because of sickness?
+4.  What if I have accommodations?
+
+
+# How to succeed
+                                                                                                                       
+-   Attendance
+-   Pre-class prep
+-   Complete all activities — be consistent and diligent
+-   Check Piazza regularly, attend office hours at least 2x
+-   Don’t leave everything for last minute — that will not work well
+-   Communicate proactively
+
+# Questions?
+
+```{r, eval = F, echo = F}
+ggplot(cars, aes(x = speed, y = dist)) + 
+  geom_point() + 
+  bb_theme()
+```

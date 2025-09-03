@@ -1,6 +1,8 @@
 [
   {
     "listing": "/slides.html",
-    "items": []
+    "items": [
+      "/slides/Logistics.html"
+    ]
   }
 ]
