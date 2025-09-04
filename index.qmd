@@ -2,60 +2,38 @@
 title: "BIOL B215: Biostatistics with R"
 ---
 
-# Course Information
+## General Information
 
 -   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
 -   TA: Nicole Cavalieri (ncavalieri \[at\] brynmawr.edu)
 -   Lecture: Monday & Wednesday 11:40 AM (Park 264)
--   Lab: Wednesday 1:10 - 4 PM
--   Remember to read the [syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
--   Lecture notes:
+-   Lab: Wednesday 1:10 - 4 PM (park 128)
+-   Read the [Syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
 -   [Piazza (for Qs)](https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25)
--   [Moodle](https://moodle.brynmawr.edu/course/view.php?id=8224)
 -   [Rstudio (Posit) Cloud](https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24)
--   Remember to read the [Course Info](syllabus.qmd), [listen to SD](https://www.youtube.com/embed/aL_fP5axQV4).
+-   [Moodle](https://moodle.brynmawr.edu/course/section.php?id=85427)
+-   [Schedule, Lecture Notes, Slides, etc](schedule.qmd)
 
-## Lectures
+## Prerequisites
 
-Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.
+No prior experience with programming is required.
 
-| Dates | Topic | Slides | Reading |
-|:------|:------|:-------|:--------|
+Suggested Preparation: BIOL B110 or B111 is highly recommended.
 
-## Problem sets
+Students who have taken PSYC B205/H200 or SOCL B265 are [not]{.underline} eligible to take this course.
 
-| Problem set | Topic | Due Date | Difficulty |
-|:------------|:------|:---------|:-----------|
-| 1           |       | Week 4   |            |
-| 2           |       |          |            |
-| 3           |       |          |            |
-| 4           |       |          |            |
-| 5           |       |          |            |
+Counts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.
 
-## Lab Assignments
+Counts towards college [A.B requirements](https://www.brynmawr.edu/inside/academic-information/registrar/registration/degree-requirements): Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).
 
-| Lab assignment | Topics | Due Date | Difficulty |
-|:---------------|:-------|:---------|:-----------|
-| 1              |        |          |            |
-| 2              |        |          |            |
+## Getting help
 
-## Midterms & Coding Interview
-
-| Assessment       | Topics           | When/Where        | Difficulty |
-|:-----------------|:-----------------|:------------------|:-----------|
-| Midterm 1        | Week 1-7         | 10/28, during lab | Hard       |
-| Midterm 2        | Weeks 1-14       | Finals week, TBD  | Hard       |
-
-
-## Office hour times
-
-| Who                     | When            | Where            |
-|-------------------------|-----------------|------------------|
-| Professor drop-in hours | Tuesday 3-4pm   | Park 211 or zoom |
-| Professor drop-in hours | Wednesday 2-3pm | Park 211 or zoom |
-| Professor drop-in hours | Friday 2-3pm    | Park 211 or zoom |
-| TA                      | TBD by survey   | TBD              |
+The preferred methods to get help in this course are office hours for content questions (see the [Schedule](schedule.qmd)) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.
 
 ## Acknowledgments
 
-We thank [Maria Tackett](https://github.com/matackett) and [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel) for sharing their [web page template](https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main) which we used in creating this website, and [Rafael Irizarry](https://github.com/rafalab) sharing this template. We also thank [Yaniv Brandvain](https://brandvainlab.wordpress.com/) for sharing awesome teaching materials. Thank you also to [fbriatte.org](https://f.briatte.org/r/asking-r-questions) for curating so many useful tips shared with students in [R links](docs/learnr.html).
+First of all, I want to thank BMC'26 student Nicole Cavalieri[^1] for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College's digital scholarship grant for funding Nicole's work.
+
+[^1]: Digital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri '26 develop resources on coding for biology. <https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing>
+
+Thank you to the following people and orgs for sharing their website templates: [Maria Tackett](https://github.com/matackett),  [datasciencelabs](https://github.com/datasciencelabs),  [Mine Çetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel), [Rstudio] (https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), and [Rafael Irizarry](https://github.com/rafalab). I also want to thank [Yaniv Brandvain](https://brandvainlab.wordpress.com/) and Michael Whitlock for sharing awesome teaching materials,  from which I have heavily borrowed. Thank you also to [fbriatte.org](https://f.briatte.org/r/asking-r-questions) for curating so many useful tips shared with students in [R resources](rlearn.html).

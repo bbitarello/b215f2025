@@ -1,0 +1,90 @@
+/*-- scss:defaults --*/
+
+// colors
+
+$darkgreen1: #586028;
+$weirdgreen1: #898928;
+$lightgreen1: #d1d9ce;
+$cream1: #fdfbf7;
+$gray1: #9da7bf;
+$darkgray1: #545760;
+$lightblue1: #55cfd8;
+$blue1: #00a1b7;
+$darkblue1: #006475;
+$purple1: #9158a2;
+$orange1: #ad7237;
+
+
+// fonts
+$presentation-heading-color: #006475;
+$presentation-title-slide-text-align: 'left';
+$presentation-subtitle-slide-text-align: 'left';
+$font-family-sans-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif !default;
+
+
+$body-bg: $cream1 !default;
+$link-color: #586028 !default;
+$selection-bg: $lightblue1 !default;
+
+// headings
+$presentation-heading-font: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif !default;
+$presentation-heading-color: $darkblue1 !default;
+
+/*-- scss:rules --*/
+
+.reveal a {
+    line-height: 1.3em;
+}
+
+.reveal .custom-title {
+    position: left;
+    color: #006475;
+    font-size: 3em;
+    text-align: right;
+    right: 20px;
+    top: -200px;
+}
+
+.reveal .custom-author {
+    color: #545760;
+    position: absolute;
+    font-size: 1.4em;
+    text-align: right;
+    right: 20px;
+    top: 300px;
+}
+
+.reveal .custom-url a {
+    position: absolute;
+    color: #00a1b7;
+    font-size: 1.5em;
+    text-align: right;
+    right: 20px;
+    top: 570px;
+}
+
+.small {
+    font-size: 0.75em;
+}
+
+.reveal .slide .in-out {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 1em;
+    background: #e8e8e8;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+        monospace;
+    font-size: 0.6em;
+}
+
+.reveal .slide .goal {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 1em;
+    background: #00a1b7;
+    color: #fdfbf7;
+}

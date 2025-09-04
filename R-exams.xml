@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/R-exams/Exercise 1</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q1 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a sample to quantify the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Close, but wrong. We estimate rather than quantify.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to quantify the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+We use data for a sample to estimate the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to estimate the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q1 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to estimate the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+We use data for a sample to estimate the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a sample to quantify the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Close, but wrong. We estimate rather than quantify.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to quantify the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q1 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz1 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a sample to quantify the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Close, but wrong. We estimate rather than quantify.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+We use data for a sample to estimate the parameters for the population.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to quantify the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+We use data for a population to estimate the parameters for the sample.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. We use a sample to estimate parameters for the population.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/R-exams/Exercise 2</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R1 Q2 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz2 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is NOT correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called an estimate.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R2 Q2 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz2 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is NOT correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called an estimate.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R3 Q2 : _Library_CloudStorage_OneDrive-brynmawr.edu_Teaching_B215_B215_F25_Ch1Quiz2 </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[
+<style type="text/css" rel="stylesheet">
+/* tables with alternating shading */
+.table_shade {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+.table_shade th {
+    border:1px solid #FFFFFF;
+    background: #D5D5D5;
+}
+.table_shade td {
+    border:1px solid #FFFFFF;
+}
+.table_shade .odd {
+    background: #EEEEEE;
+}
+.table_shade .even {
+    background: #FBFBFB;
+}
+</style>
+<p>
+<p>Which of the following is NOT correct?</p>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>false</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+Correct!
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a population is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called a statistic.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+<answer fraction="-33.33333" format="html">
+<text><![CDATA[<p>
+A value calculated using all the data from a sample is called an estimate.
+</p>]]></text>
+<feedback format="html">
+<text><![CDATA[<p>
+False. A value calculated using all the data from a population is called a parameter.
+</p>]]></text>
+</feedback>
+</answer>
+</question>
+
+</quiz>

@@ -1,42 +1,49 @@
 ---
 title: "Learning R"
+number-sections: true
 ---
+
+Updated often. If you're an enrolled students and would like to contribute content here, please open a thread on Piazza under "Misc" and say you'd like to share a useful link.
+
+## Getting help with R {#r-help}
+
+**START HERE**, with [fbriatte.org](https://f.briatte.org/r/asking-r-questions), where you can learn how to find answers to your burning R questions online.
+
+-   [Getting help with R](https://www.r-project.org/help.html)
+-   Stack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit [http://stackoverflow.com/questions/tagged/r](%5Bhttp://stackoverflow.com/questions/tagged/r).
+-   [Rstudio Community](https://community.rstudio.com/)
+-   Reddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio
+-   Github: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their "issues" page can be very helpful. E.g., [here](https://github.com/rstudio/rmarkdown/issues) is the issues page for the `rmarkdown` package.
 
 ## Free Online Books
 
+-   ["R Markdown Cookbook"](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
-   - ["R for Data Science"](https://r4ds.had.co.nz/), by Hadley Wickham & Garrett Grolemund
+-   ["Introduction to Data Science: Data Wrangling and Visualization with R"](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/intro-to-R.html), by Refael Irizarry
 
-  - ["YaRrr! The Pirate’s Guide to R"](https://bookdown.org/ndphillips/YaRrr/), by Nathaniel Phillips
-    
-  - ["An introduction to Biostatistics using R"](https://waveland.com/Glover-Mitchell/r-guide.pdf), by Glover & Mitchell
+-   ["Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies"](https://rafalab.dfci.harvard.edu/dsbook-part-2/), by Refael Irizarry
 
-  - ["Introductory Biostatistics with R"](https://tuos-bio-data-skills.github.io/intro-stats-book/), by Dylan Childs, Bethan  Hindle &  Philip Warren
-    
-  - ["Applied Biostats"](https://ybrandvain.github.io/biostats/), by Yaniv Brandvain.
+-   ["R for Data Science"](https://r4ds.had.co.nz/), by Hadley Wickham & Garrett Grolemund
 
+-   ["YaRrr! The Pirate’s Guide to R"](https://bookdown.org/ndphillips/YaRrr/), by Nathaniel Phillips
 
-## Videos
+-   ["An introduction to Biostatistics using R"](https://waveland.com/Glover-Mitchell/r-guide.pdf), by Glover & Mitchell
 
-  - [Code Like a Pro](https://www.youtube.com/watch?embed=no&v=91LmBj29-Sc&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=7)
-  - [Intro to Rstudio and Rstudio Cloud](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
-  - [Overview of R markdown](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
-  - [Rmarkdown with Rstudio](https://www.youtube.com/watch?embed=no&v=DNS7i2m4sB0&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=9&t=2s&ab_channel=RogerPeng)
-  - [This youtube playlist](https://www.youtube.com/playlist?embed=no&list=PLA3ArwPxU4MxphgeREPfnxznb8llUtTzX)
+-   ["Introductory Biostatistics with R"](https://tuos-bio-data-skills.github.io/intro-stats-book/), by Dylan Childs, Bethan Hindle & Philip Warren
 
+-   ["Applied Biostats"](https://ybrandvain.github.io/biostats/), by Yaniv Brandvain.
 
-## Tutorials
- 
- - [From your textbook](https://whitlockschluter3e.zoology.ubc.ca/RLabs/index.html)
- - [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
+## Videos {#r-vids}
 
-## Getting help with R
+-   [Code Like a Pro](https://www.youtube.com/watch?embed=no&v=91LmBj29-Sc&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=7)
+-   [Intro to Rstudio and Rstudio Cloud](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
+-   [Overview of R markdown](https://www.youtube.com/watch?embed=no&v=mcTB7h9lpCg&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=8&ab_channel=JoshuaFrench)
+-   [Rmarkdown with Rstudio](https://www.youtube.com/watch?embed=no&v=DNS7i2m4sB0&list=PLA3ArwPxU4My_bKb7bJrb78aq5Gx1rTfs&index=9&t=2s&ab_channel=RogerPeng)
+-   [This youtube playlist](https://www.youtube.com/playlist?embed=no&list=PLA3ArwPxU4MxphgeREPfnxznb8llUtTzX) - I curated this and it contains both R info and biostatistics in general.
 
-**START HERE**, with [fbriatte.org](https://f.briatte.org/r/asking-r-questions), where you can learn hwo to find answers to your burning R questions online. 
+## Tutorials & Simulations
 
- - [Getting help with R](https://www.r-project.org/help.html)
- - Stack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit [http://stackoverflow.com/questions/tagged/r]([http://stackoverflow.com/questions/tagged/r). 
- - [Rstudio Community](https://community.rstudio.com/)
- - Reddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio
- - Github: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their "issues" page can be very helpful. E.g., [here](https://github.com/rstudio/rmarkdown/issues) is the issues page for the `rmarkdown` package.
-
+-   [From your textbook](https://whitlockschluter3e.zoology.ubc.ca/)
+-   [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
+-   [Rstudio Education](https://education.rstudio.com/learn/beginner/)
+-   [Posit Cloud Recipes](https://posit.cloud/learn/recipes)

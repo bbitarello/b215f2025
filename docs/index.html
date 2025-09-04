@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-180ebac6ac70f5dbf58f2bf238b2e8c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-54f0065fef14266c202334da9f6db56b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BIOL B215: Biostatistics with R</a> 
@@ -122,8 +122,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./rlearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R links</span></a>
+ <span class="menu-text">R resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
   </div>
 </li>
     </ul>
@@ -136,15 +148,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a>
-  <ul class="collapse">
-  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures">Lectures</a></li>
-  <li><a href="#problem-sets" id="toc-problem-sets" class="nav-link" data-scroll-target="#problem-sets">Problem sets</a></li>
-  <li><a href="#lab-assignments" id="toc-lab-assignments" class="nav-link" data-scroll-target="#lab-assignments">Lab Assignments</a></li>
-  <li><a href="#midterms-coding-interview" id="toc-midterms-coding-interview" class="nav-link" data-scroll-target="#midterms-coding-interview">Midterms &amp; Coding Interview</a></li>
-  <li><a href="#office-hour-times" id="toc-office-hour-times" class="nav-link" data-scroll-target="#office-hour-times">Office hour times</a></li>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information">General Information</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting help</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -170,178 +177,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="course-information" class="level1">
-<h1>Course Information</h1>
+<section id="general-information" class="level2">
+<h2 class="anchored" data-anchor-id="general-information">General Information</h2>
 <ul>
 <li>Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)</li>
 <li>TA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)</li>
 <li>Lecture: Monday &amp; Wednesday 11:40 AM (Park 264)</li>
-<li>Lab: Wednesday 1:10 - 4 PM</li>
-<li>Remember to read the <a href="./syllabus.html">syllabus</a>, <a href="https://www.youtube.com/embed/aL_fP5axQV4">listen to Snoop Dog</a>.</li>
-<li>Lecture notes:</li>
+<li>Lab: Wednesday 1:10 - 4 PM (park 128)</li>
+<li>Read the <a href="./syllabus.html">Syllabus</a>, <a href="https://www.youtube.com/embed/aL_fP5axQV4">listen to Snoop Dog</a>.</li>
 <li><a href="https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25">Piazza (for Qs)</a></li>
-<li><a href="https://moodle.brynmawr.edu/course/view.php?id=8224">Moodle</a></li>
 <li><a href="https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24">Rstudio (Posit) Cloud</a></li>
-<li>Remember to read the <a href="./syllabus.html">Course Info</a>, <a href="https://www.youtube.com/embed/aL_fP5axQV4">listen to SD</a>.</li>
+<li><a href="https://moodle.brynmawr.edu/course/section.php?id=85427">Moodle</a></li>
+<li><a href="./schedule.html">Schedule, Lecture Notes, Slides, etc</a></li>
 </ul>
-<section id="lectures" class="level2">
-<h2 class="anchored" data-anchor-id="lectures">Lectures</h2>
-<p>Lecture slides, class notes, and problem sets are linked below. New material is added approximately on a weekly basis.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Dates</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Slides</th>
-<th style="text-align: left;">Reading</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 </section>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem sets</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Problem set</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Due Date</th>
-<th style="text-align: left;">Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Week 4</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>No prior experience with programming is required.</p>
+<p>Suggested Preparation: BIOL B110 or B111 is highly recommended.</p>
+<p>Students who have taken PSYC B205/H200 or SOCL B265 are <u>not</u> eligible to take this course.</p>
+<p>Counts Toward: Biochemistry &amp; Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.</p>
+<p>Counts towards college <a href="https://www.brynmawr.edu/inside/academic-information/registrar/registration/degree-requirements">A.B requirements</a>: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).</p>
 </section>
-<section id="lab-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="lab-assignments">Lab Assignments</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Lab assignment</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Due Date</th>
-<th style="text-align: left;">Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="midterms-coding-interview" class="level2">
-<h2 class="anchored" data-anchor-id="midterms-coding-interview">Midterms &amp; Coding Interview</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Assessment</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">When/Where</th>
-<th style="text-align: left;">Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Midterm 1</td>
-<td style="text-align: left;">Week 1-7</td>
-<td style="text-align: left;">10/28, during lab</td>
-<td style="text-align: left;">Hard</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Midterm 2</td>
-<td style="text-align: left;">Weeks 1-14</td>
-<td style="text-align: left;">Finals week, TBD</td>
-<td style="text-align: left;">Hard</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="office-hour-times" class="level2">
-<h2 class="anchored" data-anchor-id="office-hour-times">Office hour times</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Who</th>
-<th>When</th>
-<th>Where</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Professor drop-in hours</td>
-<td>Tuesday 3-4pm</td>
-<td>Park 211 or zoom</td>
-</tr>
-<tr class="even">
-<td>Professor drop-in hours</td>
-<td>Wednesday 2-3pm</td>
-<td>Park 211 or zoom</td>
-</tr>
-<tr class="odd">
-<td>Professor drop-in hours</td>
-<td>Friday 2-3pm</td>
-<td>Park 211 or zoom</td>
-</tr>
-<tr class="even">
-<td>TA</td>
-<td>TBD by survey</td>
-<td>TBD</td>
-</tr>
-</tbody>
-</table>
+<section id="getting-help" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help">Getting help</h2>
+<p>The preferred methods to get help in this course are office hours for content questions (see the <a href="./schedule.html">Schedule</a>) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.</p>
 </section>
 <section id="acknowledgments" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
-<p>We thank <a href="https://github.com/matackett">Maria Tackett</a> and <a href="https://github.com/mine-cetinkaya-rundel">Mine Çetinkaya-Rundel</a> for sharing their <a href="https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main">web page template</a> which we used in creating this website, and <a href="https://github.com/rafalab">Rafael Irizarry</a> sharing this template. We also thank <a href="https://brandvainlab.wordpress.com/">Yaniv Brandvain</a> for sharing awesome teaching materials. Thank you also to <a href="https://f.briatte.org/r/asking-r-questions">fbriatte.org</a> for curating so many useful tips shared with students in <a href="docs/learnr.html">R links</a>.</p>
+<p>First of all, I want to thank BMC’26 student Nicole Cavalieri<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.</p>
+<p>Thank you to the following people and orgs for sharing their website templates: <a href="https://github.com/matackett">Maria Tackett</a>, <a href="https://github.com/datasciencelabs">datasciencelabs</a>, <a href="https://github.com/mine-cetinkaya-rundel">Mine Çetinkaya-Rundel</a>, [Rstudio] (https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), and <a href="https://github.com/rafalab">Rafael Irizarry</a>. I also want to thank <a href="https://brandvainlab.wordpress.com/">Yaniv Brandvain</a> and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to <a href="https://f.briatte.org/r/asking-r-questions">fbriatte.org</a> for curating so many useful tips shared with students in <a href="rlearn.html">R resources</a>.</p>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Digital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello &amp; Nicole Cavalieri ’26 develop resources on coding for biology. <a href="https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing" class="uri">https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -414,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025");
+        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
