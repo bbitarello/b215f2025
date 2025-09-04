@@ -80,6 +80,216 @@
     ]
   },
   {
+    "objectID": "slides/Statistics_and_Samples.html#overview",
+    "href": "slides/Statistics_and_Samples.html#overview",
+    "title": "1.1.Statistics and Samples",
+    "section": "Overview",
+    "text": "Overview\n\nGoals of statistics\nPopulations and Samples\nStatistics and parameters\nEstimate errors due to sampling\nTypes of experiments\nTypes of variables\n\n\n\nwe will continue on this topic next time"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#learning-goals",
+    "href": "slides/Statistics_and_Samples.html#learning-goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nUnderstand the major goal of statistics\nDistinguish between a sample and a population\nDistinguish between an estimate and a parameter\nIdentify why estimates from samples may deviate from parameters of populations\nIdentify the properties of a good sample\nBe able to detect the differences between observational and experimental studies\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nTweet from someone I don’t know, but very on point, so thank you!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is BIOstatistics?",
+    "text": "What is BIOstatistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should you care about statistics?",
+    "text": "Why should you care about statistics?\n\nBiology (ecology, genetics, immunology, microbiology, …)\nBiomedical sciences\nPublic health\nData science\nEconomy, Psychology, Social Science"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should anyone care about statistics?",
+    "text": "Why should anyone care about statistics?\n\n\n\nGood science!\nCritical evaluation of “scientific evidence”\nStatistics and probability are not intuitive\nWe tend to jump to conclusions and we are very often wrong\nTransferable skills\n\n\n\n\nThis is my adorable dog, Cashew"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "href": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: data deluge",
+    "text": "Challenge: data deluge\n\nCover from “The Economist” (Feb 27-March 10, 2010)"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "href": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: understanding",
+    "text": "Challenge: understanding\n\nFrom: https://xkcd.com/1478/"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#goals",
+    "href": "slides/Statistics_and_Samples.html#goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Goals",
+    "text": "Goals\n\nGoal: learn about the world\n\n\nFrom: imgflip.com/memegenerator"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-practice-then",
+    "href": "slides/Statistics_and_Samples.html#in-practice-then",
+    "title": "1.1.Statistics and Samples",
+    "section": "In practice, then…",
+    "text": "In practice, then…\n\nChallenge: We can’t look at the whole world.\nSolution: Take a sample and generalize outward."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#great-but",
+    "href": "slides/Statistics_and_Samples.html#great-but",
+    "title": "1.1.Statistics and Samples",
+    "section": "Great but…",
+    "text": "Great but…\n\nNew Challenge: Samples deviate from the populations by\\ luck/chance (sampling error) or unrepresentative sampling (sampling bias)\n\nSolution:\n\nEstimate the values of important parameters\nHave measures of uncertainty for estimates\nTest hypotheses about those parameters"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#lets-try-again",
+    "href": "slides/Statistics_and_Samples.html#lets-try-again",
+    "title": "1.1.Statistics and Samples",
+    "section": "Let’s try again",
+    "text": "Let’s try again\n\nStatistics are a quantitative technology for empirical science.\nA logic and methodology for the measurement of uncertainty and for an examination of that uncertainty.\nThe key word here is uncertainty. Statistics becomes necessary when observations are variable."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "href": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "title": "1.1.Statistics and Samples",
+    "section": "What about biostats?",
+    "text": "What about biostats?\n\nWhat is the motivating biological question?\nWhat experiments can be done and/or data can be collected to address this question?\nDo results support an interesting conclusion?\nWhat are the shortcomings/limitations of statistical models and causal frameworks in the analysis?\nHow do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "href": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "title": "1.1.Statistics and Samples",
+    "section": "The Central Obsession",
+    "text": "The Central Obsession\n\n\n\nQuestion: How do we make inferences about the WORLD from our finite observations?\n\n\n\nAnswer: Make models to account for the process of sampling and the associated hazards."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#important-distinctions",
+    "href": "slides/Statistics_and_Samples.html#important-distinctions",
+    "title": "1.1.Statistics and Samples",
+    "section": "Important distinctions",
+    "text": "Important distinctions\n\nPopulations vs. samples\nParameters vs. estimates"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#populations",
+    "href": "slides/Statistics_and_Samples.html#populations",
+    "title": "1.1.Statistics and Samples",
+    "section": "Populations",
+    "text": "Populations\n\n\n\nIn Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.\n\n\n\nIn Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "href": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "title": "1.1.Statistics and Samples",
+    "section": "Statistics & parameters",
+    "text": "Statistics & parameters\nA parameter is some property of the world, i.e., the “truth”\n\n\n\n\n\n\nSeriously, though, \\&lt;3 X-files!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A population of starfish",
+    "text": "A population of starfish\n\n\n\nParameters describe populations\nE.g. proportion of pink starfish among all starfish of a given species in a certain location"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A sample of starfish",
+    "text": "A sample of starfish\n\n\n\nEstimates (statistics) approximate parameters as inferred from samples\nWe estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-summary",
+    "href": "slides/Statistics_and_Samples.html#in-summary",
+    "title": "1.1.Statistics and Samples",
+    "section": "In summary",
+    "text": "In summary\n\n\nParameters and populations\n\nParameters describe Populations\nBecause we can’t sample an entire population, we usually don’t know parameters.\n\n\nEstimates and samples\n\nBut we can get a good sense of the parameters from estimates we make from samples.\nEstimates approximate parameters as inferred from Samples"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "href": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling: What could go wrong?",
+    "text": "Sampling: What could go wrong?\nMeet sampling error and sampling bias"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\n\n\n\nIf you collected these against a dark background without careful procedures… \n\n\n\n\nThis sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\nSystematic difference between parameters & estimates.\n\n\nCase study: Polls in the 1936 US Election."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-1936-election",
+    "href": "slides/Statistics_and_Samples.html#the-1936-election",
+    "title": "1.1.Statistics and Samples",
+    "section": "The 1936 Election",
+    "text": "The 1936 Election\n\n\n\n\n\nRepublican Alf Landon\n\n\n\n\nDemocrat Franklin Roosevelt"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n\nFigure made in R with code borrowed from Y. Brandvain"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "href": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "title": "1.1.Statistics and Samples",
+    "section": "Election: Roosevelt won in a landslide",
+    "text": "Election: Roosevelt won in a landslide\n\nThis plot was made in R"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling Bias in the 1936 Polls",
+    "text": "Sampling Bias in the 1936 Polls\n\nQuestionnaire was more likely to reach rich people (who could afford phones & attend book clubs) than those with fewer means.\nVoting and party preference are correlated with wealth.\nPoorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "href": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "title": "1.1.Statistics and Samples",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
+  },
+  {
     "objectID": "psets.html",
     "href": "psets.html",
     "title": "Problem Sets",
@@ -91,7 +301,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0. Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1. Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -296,7 +506,7 @@
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you Maria Tackett and Mine Çetinkaya-Rundel for sharing their web page template which we used in creating this website, and Rafael Irizarry sharing this template. I also want to thank Yaniv Brandvain for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, [Rstudio] (https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
     "crumbs": [
       "Home"
     ]
@@ -310,6 +520,146 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "slides/Logistics.html#overview",
+    "href": "slides/Logistics.html#overview",
+    "title": "0.Logistics",
+    "section": "Overview",
+    "text": "Overview\n\nIntroductions\nCourse Logistics\nTo-Dos for this week"
+  },
+  {
+    "objectID": "slides/Logistics.html#hello",
+    "href": "slides/Logistics.html#hello",
+    "title": "0.Logistics",
+    "section": "Hello!",
+    "text": "Hello!\n\n\n\n\n\nBárbara D. Bitarello (she/her/hers)\nPhD in human evolutionary genetics\nProfessor \\@ BMC since July 2021\nComputational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc\nInterested in all things related to evolution"
+  },
+  {
+    "objectID": "slides/Logistics.html#our-ta",
+    "href": "slides/Logistics.html#our-ta",
+    "title": "0.Logistics",
+    "section": "Our TA",
+    "text": "Our TA\n\nNicole Cavalieri\nEnglish Major/ Data Science Minor\nR rockstar!"
+  },
+  {
+    "objectID": "slides/Logistics.html#pre-reqs",
+    "href": "slides/Logistics.html#pre-reqs",
+    "title": "0.Logistics",
+    "section": "Pre-Reqs",
+    "text": "Pre-Reqs\n\nNo prior experience with programming is required!\nBIOL B110 or B111 highly recommended (though not required). Why? Examples are heavily focused on biology, though the concepts and skills learned will be transferable\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nHigh school algebra - if you’re not sure, I recommend checking Khan Academy - Algebra Basics for a recap"
+  },
+  {
+    "objectID": "slides/Logistics.html#logistics",
+    "href": "slides/Logistics.html#logistics",
+    "title": "0.Logistics",
+    "section": "Logistics",
+    "text": "Logistics\nEverything I am about to say is in the syllabus!\n\nMaterials\nThings to do/install\nCourse structure\nPolicies\nHow to succeed"
+  },
+  {
+    "objectID": "slides/Logistics.html#materials",
+    "href": "slides/Logistics.html#materials",
+    "title": "0.Logistics",
+    "section": "Materials",
+    "text": "Materials\n\n\n\nTextbook: Whitlock and Schluter The Analysis of Biological Data, 3rd edition (2nd: ok, but check pages)\n\n\n\n\nLaptop with browser for labs\nScientific calculator (not graphing calculator) \\(\\sim\\$12\\)\n\nScientific vs Graphing Calculator"
+  },
+  {
+    "objectID": "slides/Logistics.html#tech-things-to-do",
+    "href": "slides/Logistics.html#tech-things-to-do",
+    "title": "0.Logistics",
+    "section": "Tech things to do",
+    "text": "Tech things to do\n\nHave a laptop for labs and calculator for exams\nJoin Piazza\nMake accounts in DataCamp and Posit Cloud using BMC/HC email\nThen accept invite sent by email (check spam)"
+  },
+  {
+    "objectID": "slides/Logistics.html#other-things-to-do",
+    "href": "slides/Logistics.html#other-things-to-do",
+    "title": "0.Logistics",
+    "section": "Other things to do",
+    "text": "Other things to do\n\nRead course info document and schedule (posted on Moodle)\nAnswer pre-course survey\nCheck course schedule and reach out asap if there are issues\nCheck midterm dates and plan accordingly"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-pages",
+    "href": "slides/Logistics.html#course-pages",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nCourse website: https://bbitarello.github.io/b215f2025/ has syllabus, schedule, etc.\nAll assignments must be uploaded on Moodle (except DataCamp)\nKeys, slides, study guides will also be posted on Moodle"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-pages-1",
+    "href": "slides/Logistics.html#course-pages-1",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nPiazza is the preferred method for any questions that may benefit classmates, both logistical and content-related\nPiazza allows you to post anonymously (note: I will still know your identity)\n\n\n\nDatacamp and Posit Cloud will also be used weekly so join asap!"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-structure",
+    "href": "slides/Logistics.html#course-structure",
+    "title": "0.Logistics",
+    "section": "Course Structure",
+    "text": "Course Structure\n\nLectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day."
+  },
+  {
+    "objectID": "slides/Logistics.html#formative-vs-summative-assessments",
+    "href": "slides/Logistics.html#formative-vs-summative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative vs Summative Assessments",
+    "text": "Formative vs Summative Assessments"
+  },
+  {
+    "objectID": "slides/Logistics.html#formative-assessments",
+    "href": "slides/Logistics.html#formative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative Assessments",
+    "text": "Formative Assessments\n\n\n\nFormative assessments happen often and are focused on learning\nDC and R labs are gladed for completion/effort\nQuizzes may be taken multiple times (final grade is average)\nPS graded benevolently\nAllows instructor to adjust pace and support"
+  },
+  {
+    "objectID": "slides/Logistics.html#summative-assessments",
+    "href": "slides/Logistics.html#summative-assessments",
+    "title": "0.Logistics",
+    "section": "Summative Assessments",
+    "text": "Summative Assessments\n\n\n\nEvaluate students’ individual progress: have they met the learning goals? Have they mastered the material?\nTypically occur at the end of a learning period\nThe first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative"
+  },
+  {
+    "objectID": "slides/Logistics.html#datacamp",
+    "href": "slides/Logistics.html#datacamp",
+    "title": "0.Logistics",
+    "section": "DataCamp",
+    "text": "DataCamp\n\nAssigned weekly to practice lab skills\nDC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly"
+  },
+  {
+    "objectID": "slides/Logistics.html#attendance-and-late-work",
+    "href": "slides/Logistics.html#attendance-and-late-work",
+    "title": "0.Logistics",
+    "section": "Attendance and Late Work",
+    "text": "Attendance and Late Work\n\nPlease communicate need to miss class by email.\nGrace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment\nLate work otherwise penalyzed -10% per day"
+  },
+  {
+    "objectID": "slides/Logistics.html#ai-policy",
+    "href": "slides/Logistics.html#ai-policy",
+    "title": "0.Logistics",
+    "section": "AI policy",
+    "text": "AI policy\nWe are following the BMC Honor Code. Please see syllabus.\nQuestions about this: now or later on Piazza.\nwho has read the syllabus? if not, read now the part on this"
+  },
+  {
+    "objectID": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "href": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "title": "0.Logistics",
+    "section": "FAQs answered in the syllabus",
+    "text": "FAQs answered in the syllabus\nPlease visit the FAQ section of the syllabus. A few examples…\n\nWhat if I have to miss class?\nWhat if I cannot turn in an assignment in time?\nWhat if I am requesting an extension because of sickness?\nWhat if I have accommodations?"
+  },
+  {
+    "objectID": "slides/Logistics.html#how-to-succeed",
+    "href": "slides/Logistics.html#how-to-succeed",
+    "title": "0.Logistics",
+    "section": "How to succeed",
+    "text": "How to succeed\n\nAttendance\nPre-class prep\nComplete all activities — be consistent and diligent\nCheck Piazza regularly, attend office hours at least 2x\nDon’t leave everything for last minute — that will not work well\nCommunicate proactively"
+  },
+  {
+    "objectID": "slides/Logistics.html#questions",
+    "href": "slides/Logistics.html#questions",
+    "title": "0.Logistics",
+    "section": "Questions?",
+    "text": "Questions?"
   },
   {
     "objectID": "syllabus.html",

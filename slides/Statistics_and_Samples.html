@@ -12,7 +12,7 @@
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-03">
 <meta name="keywords" content="Statistics &amp; Samples">
-<title>BIOL B215: Biostatistics with R – 1.1. Statistics and Samples</title>
+<title>BIOL B215: Biostatistics with R – 1.1.Statistics and Samples</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dac9c2b995bd14d4b476aa3a71033271.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7178e1b92740976be2d9cda78044475a.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,7 +131,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">1.1. Statistics and Samples</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">1.1.Statistics and Samples</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -142,7 +142,7 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-09-03</p>
-</section><section id="overview" class="title-slide slide level1"><h1>Overview</h1>
+</section><section id="overview" class="slide level2"><h2>Overview</h2>
 <ul>
 <li class="fragment"><strong>Goals of statistics</strong></li>
 <li class="fragment"><strong>Populations and Samples</strong></li>
@@ -154,7 +154,7 @@ Bárbara D. Bitarello
 
 <aside><div>
 <p>we will continue on this topic next time</p>
-</div></aside></section><section id="learning-goals" class="title-slide slide level1"><h1>Learning Goals</h1>
+</div></aside></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
 <ul>
 <li class="fragment">Understand the major goal of statistics</li>
 <li class="fragment">Distinguish between a sample and a population</li>
@@ -174,22 +174,22 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="what-is-statistics" class="title-slide slide level1"><h1>What is statistics?</h1>
+      }</style></aside></section><section id="what-is-statistics" class="slide level2"><h2>What is statistics?</h2>
 
-<img data-src="images/tweetStats.png" alt="Tweet by user @kareem_carr: “In my opinion, the core of statistics is critical thinking with numbers. Some disciplines teach you how to think with numbers and others teach you critical thinking but statistics if where you learn to put the two together and this skill is essential for life in the 21st century.” (January 12, 2021)" class="r-stretch quarto-figure-center"><p class="caption">Tweet from someone I don’t know, but very on point, so thank you!</p></section><section id="what-is-statistics-1" class="title-slide slide level1"><h1>What is statistics?</h1>
+<img data-src="images/tweetStats.png" alt="Tweet by user @kareem_carr: “In my opinion, the core of statistics is critical thinking with numbers. Some disciplines teach you how to think with numbers and others teach you critical thinking but statistics if where you learn to put the two together and this skill is essential for life in the 21st century.” (January 12, 2021)" class="r-stretch quarto-figure-center"><p class="caption">Tweet from someone I don’t know, but very on point, so thank you!</p></section><section id="what-is-statistics-1" class="slide level2"><h2>What is statistics?</h2>
 
-<img data-src="images/statsvenn.png" class="quarto-figure quarto-figure-center r-stretch" alt="venn diagram shows statistics as the intersection of critical thinking and thinking with numbers"></section><section id="what-is-biostatistics" class="title-slide slide level1"><h1>What is BIOstatistics?</h1>
+<img data-src="images/statsvenn.png" class="quarto-figure quarto-figure-center r-stretch" alt="venn diagram shows statistics as the intersection of critical thinking and thinking with numbers" width="414"></section><section id="what-is-biostatistics" class="slide level2"><h2>What is BIOstatistics?</h2>
 
-<img data-src="images/statsvenn2.png" class="quarto-figure quarto-figure-center r-stretch" alt="venn diagram shows biostatistics as the intersection of critical thinking, biological data, and thinking with numbers"></section><section id="why-should-you-care-about-statistics" class="title-slide slide level1"><h1>Why should <em>you</em> care about statistics?</h1>
+<img data-src="images/statsvenn2.png" class="quarto-figure quarto-figure-center r-stretch" alt="venn diagram shows biostatistics as the intersection of critical thinking, biological data, and thinking with numbers" width="496"></section><section id="why-should-you-care-about-statistics" class="slide level2"><h2>Why should <em>you</em> care about statistics?</h2>
 <ul>
 <li class="fragment">Biology (ecology, genetics, immunology, microbiology, …)</li>
 <li class="fragment">Biomedical sciences</li>
 <li class="fragment">Public health</li>
 <li class="fragment">Data science</li>
 <li class="fragment">Economy, Psychology, Social Science</li>
-</ul></section><section id="why-should-anyone-care-about-statistics" class="title-slide slide level1"><h1>Why should <em>anyone</em> care about statistics?</h1>
+</ul></section><section id="why-should-anyone-care-about-statistics" class="slide level2"><h2>Why should <em>anyone</em> care about statistics?</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:&quot;50%&quot;;">
 <ul>
 <li class="fragment">Good science!</li>
 <li class="fragment">Critical evaluation of “scientific evidence”</li>
@@ -199,27 +199,26 @@ Bárbara D. Bitarello
 </ul>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/cashew.jpeg" width="217"></p>
+<figure><p><img data-src="images/cashew.jpeg" width="339"></p>
 <figcaption>This is my adorable dog, Cashew</figcaption></figure>
 </div>
 </div></div>
-</section><section id="challenge-data-deluge" class="title-slide slide level1"><h1>Challenge: data deluge</h1>
+</section><section id="challenge-data-deluge" class="slide level2"><h2>Challenge: data deluge</h2>
 
-<img data-src="images/datadeluge.png" alt="Cover of the magazine “The economist”. The heading reads: “The data deluge - And how to handle it: A 14-page special report”. Under the heading is a drawing of a person holding an umbrella in a rainstorm, but the rain is all 1s and 0s. The umbrella top is open but upside-down, collecting water which the person is using to water a plant from the handle of the umbrella." class="r-stretch quarto-figure-center"><p class="caption">Cover from “The Economist” (Feb 27-March 10, 2010)</p></section><section id="challenge-understanding" class="title-slide slide level1"><h1>Challenge: understanding</h1>
+<img data-src="images/datadeluge.png" alt="Cover of the magazine “The economist”. The heading reads: “The data deluge - And how to handle it: A 14-page special report”. Under the heading is a drawing of a person holding an umbrella in a rainstorm, but the rain is all 1s and 0s. The umbrella top is open but upside-down, collecting water which the person is using to water a plant from the handle of the umbrella." width="460" class="r-stretch quarto-figure-center"><p class="caption">Cover from “The Economist” (Feb 27-March 10, 2010)</p></section><section id="challenge-understanding" class="slide level2"><h2>Challenge: understanding</h2>
 
-<img data-src="images/pvaluexkcd.png" alt="Comic from xfcd.com: lists p-values ranging from 0.001 to >=0.1 on the left, and on the right offers and interpretation." width="791" class="r-stretch quarto-figure-center"><p class="caption">From: https://xkcd.com/1478/</p></section><section id="goals" class="title-slide slide level1"><h1>Goals</h1>
+<img data-src="images/pvaluexkcd.png" alt="Comic from xfcd.com: lists p-values ranging from 0.001 to >=0.1 on the left, and on the right offers and interpretation." width="467" class="r-stretch quarto-figure-center"><p class="caption">From: https://xkcd.com/1478/</p></section><section id="goals" class="slide level2"><h2>Goals</h2>
 <div class="goal">
 <p>Goal: learn about the world</p>
 </div>
 
-<img data-src="images/whatdowewant.png" alt="Meme from meme generator reads: Question: ”What do we want?”, Response: “Learn about the world!!!”, question: “Can we look at the entire world?”, Response: “No!!!”." width="501" class="r-stretch quarto-figure-center"><p class="caption">From: imgflip.com/memegenerator</p></section><section id="in-practice-then" class="title-slide slide level1"><h1>In practice, then…</h1>
+<img data-src="images/whatdowewant.png" alt="Meme from meme generator reads: Question: ”What do we want?”, Response: “Learn about the world!!!”, question: “Can we look at the entire world?”, Response: “No!!!”." width="272" class="r-stretch quarto-figure-center"><p class="caption">From: imgflip.com/memegenerator</p></section><section id="in-practice-then" class="slide level2"><h2>In practice, then…</h2>
 <ul>
 <li class="fragment"><p>Challenge: We can’t look at the whole world.</p></li>
 <li class="fragment"><p>Solution: Take a sample and generalize outward.</p></li>
-</ul></section><section id="great-but" class="title-slide slide level1"><h1>Great but…</h1>
+</ul></section><section id="great-but" class="slide level2"><h2>Great but…</h2>
 <ul>
-<li class="fragment"><p>New Challenge: Samples deviate from the populations by<br>
-luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<strong>sampling bias</strong>)</p></li>
+<li class="fragment"><p>New Challenge: Samples deviate from the populations by\ luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<strong>sampling bias</strong>)</p></li>
 <li class="fragment">
 <p>Solution:</p>
 <ul>
@@ -228,19 +227,19 @@ luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<str
 <li class="fragment"><p>Test hypotheses about those parameters</p></li>
 </ul>
 </li>
-</ul></section><section id="lets-try-again" class="title-slide slide level1"><h1>Let’s try again</h1>
+</ul></section><section id="lets-try-again" class="slide level2"><h2>Let’s try again</h2>
 <ul>
 <li class="fragment">Statistics are a <u>quantitative technology for empirical science</u>.</li>
 <li class="fragment">A logic and methodology for the measurement of <strong>uncertainty</strong> and for an examination of that uncertainty.</li>
 <li class="fragment">The key word here is <strong>uncertainty</strong>. Statistics becomes necessary when observations are <strong>variable</strong>.</li>
-</ul></section><section id="what-about-biostats" class="title-slide slide level1"><h1>What about biostats?</h1>
+</ul></section><section id="what-about-biostats" class="slide level2"><h2>What about biostats?</h2>
 <ul>
 <li class="fragment">What is the motivating biological question?</li>
 <li class="fragment">What experiments can be done and/or data can be collected to address this question?</li>
 <li class="fragment">Do results support an interesting conclusion?</li>
 <li class="fragment">What are the shortcomings/limitations of statistical models and causal frameworks in the analysis?</li>
 <li class="fragment">How do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?</li>
-</ul></section><section id="the-central-obsession" class="title-slide slide level1"><h1>The Central Obsession</h1>
+</ul></section><section id="the-central-obsession" class="slide level2"><h2>The Central Obsession</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -251,28 +250,31 @@ luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<str
 <li class="fragment">Answer: Make models to account for the process of sampling and the associated hazards.</li>
 </ul>
 </div></div>
-</section><section id="important-distinctions" class="title-slide slide level1"><h1>Important distinctions</h1>
+</section><section id="important-distinctions" class="slide level2"><h2>Important distinctions</h2>
 <ul>
 <li class="fragment">Populations vs.&nbsp;samples</li>
 <li class="fragment">Parameters vs.&nbsp;estimates</li>
-</ul></section><section id="populations" class="title-slide slide level1"><h1>Populations</h1>
+</ul></section><section id="populations" class="slide level2"><h2>Populations</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:&quot;50%&quot;;">
 <blockquote>
 <p>In Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.</p>
 </blockquote>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:&quot;50%&quot;;">
 <blockquote>
 <p>In Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc</p>
 </blockquote>
 </div></div>
-</section><section id="statistics-parameters" class="title-slide slide level1"><h1>Statistics &amp; parameters</h1>
+</section><section id="statistics-parameters" class="slide level2"><h2>Statistics &amp; parameters</h2>
 <p>A parameter is some property of the world, i.e., the “truth”</p>
-<p><img data-src="images/xfiles.png" width="497"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/xfiles.png" class="quarto-figure quarto-figure-center" width="605"></p>
+</figure>
+</div>
 
 <aside><div>
-<p>Seriously, though, &lt;3 X-files!</p>
-</div></aside></section><section id="a-population-of-starfish" class="title-slide slide level1"><h1>A population of starfish</h1>
+<p>Seriously, though, \&lt;3 X-files!</p>
+</div></aside></section><section id="a-population-of-starfish" class="slide level2"><h2>A population of starfish</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -280,9 +282,9 @@ luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<str
 <li class="fragment">E.g. proportion of pink starfish among all starfish of a given species in a certain location</li>
 </ul>
 </div><div class="column">
-<p><img data-src="images/starfish.png"></p>
+<p><img data-src="images/starfish.png" width="526"></p>
 </div></div>
-</section><section id="a-sample-of-starfish" class="title-slide slide level1"><h1>A sample of starfish</h1>
+</section><section id="a-sample-of-starfish" class="slide level2"><h2>A sample of starfish</h2>
 <div class="columns">
 <div class="column">
 <ul>
@@ -290,78 +292,78 @@ luck/chance (<strong>sampling error</strong>) or unrepresentative sampling (<str
 <li class="fragment">We estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation.</li>
 </ul>
 </div><div class="column">
-<p><img data-src="images/starfish2.png"></p>
+<p><img data-src="images/starfish2.png" width="449"></p>
 </div></div>
-</section><section id="in-summary" class="title-slide slide level1"><h1>In summary</h1>
+</section><section id="in-summary" class="slide level2"><h2>In summary</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:&quot;45%&quot;;">
 <p><strong>Parameters and populations</strong></p>
 <ul>
 <li class="fragment">Parameters describe Populations</li>
 <li class="fragment">Because we can’t sample an entire population, we usually don’t know parameters.</li>
 </ul>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:&quot;45%&quot;;">
 <p><strong>Estimates and samples</strong></p>
 <ul>
 <li class="fragment">But we can get a good sense of the parameters from estimates we make from samples.</li>
 <li class="fragment">Estimates approximate parameters as inferred from Samples</li>
 </ul>
 </div></div>
-</section><section id="sampling-what-could-go-wrong" class="title-slide slide level1"><h1>Sampling: What could go wrong?</h1>
+</section><section id="sampling-what-could-go-wrong" class="slide level2"><h2>Sampling: What could go wrong?</h2>
 <p>Meet <strong>sampling error</strong> and <strong>sampling bias</strong></p>
-</section><section id="sampling-bias" class="title-slide slide level1"><h1>Sampling bias</h1>
+</section><section id="sampling-bias" class="slide level2"><h2>Sampling bias</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:&quot;45%&quot;;">
 <ul>
-<li class="fragment">If you collected these against a dark background without careful procedures… <img data-src="images/starfish3.png">
+<li class="fragment">If you collected these against a dark background without careful procedures… <img data-src="images/starfish3.png" width="501">
 </li>
 </ul>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:&quot;45%&quot;;">
 <ul>
-<li class="fragment">This sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population. <img data-src="images/starfish4.png">
+<li class="fragment">This sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population. <img data-src="images/starfish4.png" width="445">
 </li>
 </ul>
 </div></div>
-</section><section id="sampling-bias-1" class="title-slide slide level1"><h1>Sampling bias</h1>
+</section><section id="sampling-bias-1" class="slide level2"><h2>Sampling bias</h2>
 <p>Systematic difference between parameters &amp; estimates.</p>
 
 <aside><div>
 <p>Case study: Polls in the 1936 US Election.</p>
-</div></aside></section><section id="the-1936-election" class="title-slide slide level1"><h1>The 1936 Election</h1>
+</div></aside></section><section id="the-1936-election" class="slide level2"><h2>The 1936 Election</h2>
 <div class="r-fit-text">
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:&quot;50%&quot;;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Alf_Landon_closeupcrop.jpg" width="137"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Alf_Landon_closeupcrop.jpg" width="244"></p>
 <figcaption>Republican Alf Landon</figcaption></figure>
 </div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:&quot;50%&quot;;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/37/FDR_and_Fala_at_table.jpg" width="138"></p>
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/37/FDR_and_Fala_at_table.jpg" width="206"></p>
 <figcaption>Democrat Franklin Roosevelt</figcaption></figure>
 </div>
 </div></div>
 </div>
-</section><section id="literary-digest-poll" class="title-slide slide level1"><h1>1936 Literary Digest poll</h1>
+</section><section id="literary-digest-poll" class="slide level2"><h2>1936 Literary Digest poll</h2>
 <p>2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists.</p>
-</section><section id="literary-digest-poll-1" class="title-slide slide level1"><h1>1936 Literary Digest poll</h1>
+</section><section id="literary-digest-poll-1" class="slide level2"><h2>1936 Literary Digest poll</h2>
 
-<img data-src="Statistics_and_Samples_files/figure-revealjs/1936-election-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Figure made in R with code borrowed from Y. Brandvain</p></section><section id="election-roosevelt-won-in-a-landslide" class="title-slide slide level1"><h1>Election: Roosevelt won in a landslide</h1>
+<img data-src="Statistics_and_Samples_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Figure made in R with code borrowed from Y. Brandvain</p></section><section id="election-roosevelt-won-in-a-landslide" class="slide level2"><h2>Election: Roosevelt won in a landslide</h2>
 
-<img data-src="images/clipboard-2748303540.png" class="r-stretch quarto-figure-center"><p class="caption">This plot was made in R</p></section><section id="sampling-bias-in-the-1936-polls" class="title-slide slide level1"><h1>Sampling Bias in the 1936 Polls</h1>
+<img data-src="images/clipboard-2748303540.png" class="r-stretch quarto-figure-center"><p class="caption">This plot was made in R</p></section><section id="sampling-bias-in-the-1936-polls" class="slide level2"><h2>Sampling Bias in the 1936 Polls</h2>
 <ul>
 <li class="fragment">Questionnaire was more likely to reach rich people (who could afford phones &amp; attend book clubs) than those with fewer means.</li>
 <li class="fragment">Voting and party preference are correlated with wealth.</li>
 <li class="fragment">Poorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory.</li>
-</ul></section><section id="thats-all-for-today" class="title-slide slide level1"><h1>That’s all for today</h1>
+</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>B215: Biostatistics with R</p>
+<p>B21: Biostatistics with R</p>
 </div>
 </div></div>
 
