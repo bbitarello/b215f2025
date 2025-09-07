@@ -1,7 +1,7 @@
 ---
 title: "0.Logistics"
 author: "Bárbara D. Bitarello"
-date: "09-03-2025"
+date: "09-02-2025"
 keywords: "Logistics"
 format:
   revealjs:
@@ -19,7 +19,7 @@ format:
 code-link: true
 execute:
   echo: true
-  freeze: true
+  freeze: auto
 knitr: 
   opts_chunk:
     tidy: true

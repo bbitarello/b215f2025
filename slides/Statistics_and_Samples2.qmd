@@ -1,0 +1,240 @@
+---
+title: "1.2.Statistics and Samples"
+author: "Bárbara D. Bitarello"
+date: "09-08-2025"
+keywords: "Statistics & Samples"
+format:
+  revealjs:
+    smaller: true
+    scrollable: true
+    incremental: true
+    slide-number: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    footer: "B21: Biostatistics with R"
+    center-title-slide: false
+    theme: [serif, custom.scss]
+    chalkboard: true
+    callout-appearance: simple
+code-link: true
+execute:
+  echo: true
+  freeze: true
+knitr: 
+  opts_chunk:
+    tidy: true
+    tidy-opts: { "value": "list(width.cutoff = I(110))", "tag": "!expr" }
+---
+
+## Quick recap
+
+Last lecture we discussed:
+
+-   Population vs. sample
+-   Parameter vs. estimate
+-   The two types of errors associated with sampling: sampling error and sampling bias
+
+::: notes
+Ask for volunteers to remind these concepts
+:::
+
+## Today
+
+-   ~~Goals of statistics~~
+-   ~~Populations and Samples~~
+-   ~~Statistics and parameters~~
+-   **Estimate errors due to sampling**
+-   **Types of experiments**
+-   **Types of variables**
+
+## Learning Goals
+
+-   ~~Understand the major goal of statistics~~
+-   ~~Distinguish between a sample and a population~~
+-   ~~Distinguish between an estimate and a parameter~~
+-   Identify why estimates from samples may deviate from parameters of populations
+-   Identify the properties of a good sample
+-   Be able to detect the differences between observational and experimental studies
+
+::: notes
+These learning goals are for the entire topic/unit. They will also be available in the study guide.
+:::
+
+## Volunteer bias
+
+::: goal
+Volunteers for a study are likely to be different, on average, from the population.
+:::
+
+For example:
+
+-   Volunteers for sex studies are more likely to be open about sex.
+-   In surveys about sexual activity, gender biases answers in opposite directions.
+-   Volunteers for medical studies may be sicker than the general population.
+-   Animals that are caught may be slower or more docile than those that are not.
+-   The case we saw about the 1936 U.S. elections.
+
+::: notes
+Ask for volunteers to name some. The US elections example also involves sample of convenience.
+:::
+
+## Sample of convenience
+
+::: goal
+A sample of convenience is a collection of individuals that happen to be available at the time.
+:::
+
+Other definitions[^1]:
+
+[^1]: Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000
+
+> A convenience sample is the one that is drawn from a source that is conveniently accessible to the researcher.
+
+> A purposive sample is the one whose characteristics are defined for a purpose that is relevant to the study.
+
+## Sample of convenience
+
+Problems:
+
+::: nonincremental
+-   "In research, we therefore implicitly seek to generalize the findings from our sample to the entire population, present and future."[^2]
+:::
+
+[^2]: Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000
+
+::: incremental
+-   low generalizability. What is true for your sample might not reflect what is true for the population.
+-   in practice, you can only generalize findings to the subpopulation from which the sample was taken from.
+-   sometimes, a sample of convenience is the best option researchers have (e.g. studies that extract data from national healthcare or insurance databases)
+-   It is rarely possible to draw a truly random sample from the population
+:::
+
+. . .
+
+This does not invalidate the studies in question. They can have high "internal validity". The issue is with generalizing, i.e, its external validity.
+
+. . .
+
+::: notes
+However, this is possible only if our sample is representative of the population; a sample is likely to be representative of the population only if it is randomly drawn from the population.
+:::
+
+## What about sampling error?
+
+::: goal
+Sampling error: Chance deviations between estimates and the truth.
+:::
+
+. . .
+
+Even when you did NOTHING wrong.
+
+. . .
+
+. . .
+
+::: goal
+Sampling error is the difference between the estimate and its true parameter value — and it can be quantified!
+:::
+
+## Sampling error
+
+-   Even if you sample perfectly, by the book, your estimates will differ from the true parameter.
+
+-   Unlike bias, it is not systematic. Rather, it is governed by chance and does not occur in a systematic direction
+
+E.g: average horn size in rhinoceros taken from two same-sized samples from the same population (unbiased samples) might (very likely) will give estimates that differ to some extent from each other but without a clear “direction”
+
+## Example of sampling error
+
+to do: use R code
+
+## Sampling error declines with sample size
+
+to do: use R code
+
+## Estimates are random variables
+
+-   Because an estimate is a random variable, the value of an estimate is influenced by chance.
+
+-   Therefore estimates will differ among random samples from the same population.
+
+![](images/clipboard-1924864965.png)
+
+::: notes
+we're assuming here that we don't have the bias issue discussed for this example previously.
+:::
+
+## How bias and sampling error affect estimates
+
+::::::: columns
+:::: {.column width="50%"}
+::: r-stack
+**Sampling Bias**
+:::
+
+-   Systematic difference between estimates & parameters.
+-   Driven by bias in the sampling process (i.e., sample not random in relation to the population of interest), regarless of sample size.
+::::
+
+:::: {.column width="50%\""}
+::: r-stack
+**Sampling Error**
+:::
+
+-   Undirected deviation of estimates away from parameters.
+-   Driven by chance.
+-   Decreases with sample size.
+::::
+:::::::
+
+## Goals of estimation
+
+::: goal
+Accuracy (on average gets the correct answer)
+:::
+
+::: goal
+Precision (gives a similar answer repeatedly)
+:::
+
+![Image: Wikipedia Commons (public domain). Representation of high accuracy and low precision.](images/clipboard-1978701112.png){fig-alt="Left: low accuracy due to low precision. Shot grouping shows four hits around the central circle, somewhat equi-distant from each other. right: low accuracy even with high precision. Shot grouping with four shots near each other to the left-bottom of the center of the central target."}
+
+## Sampling error vs bias: Practical example
+
+use R code
+
+![](images/clipboard-3433743313.png)
+
+## Sampling error vs bias: Practical example
+
+Top row: High precision with high (left) and low (right) accuracy 
+
+Bottom row: Low precision with high (left) and low accuracy 
+
+Properties of a good sample
+
+-   A good sample is made up of a **random and independent** selection of a sufficiently large number of individuals.
+
+-   In a random sample, each member of a population has an equal and independent chance of being selected
+
+-   Equality: probability of being selected reflects its representation in the population
+
+-   Independence: no influence of sampling one individual on other individuals that get sampled.
+
+## Random samples
+
+::: Goal
+Taking random samples is hard and requires effort
+:::
+
+Why are they important? Reduce sampling bias
+
+How to get a random sample (ideal):
+
+![](images/clipboard-4130122363.png){fig-align="center" width="608"} Carefully characterize a population and use computer code to select participants randomly.
+
+## That's all for today
+
+![From: makeameme.org](images/forrestgump.png){fig-alt="Forrest says \"And that's all I wanted to say about that\"" width="347"}

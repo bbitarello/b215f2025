@@ -9,60 +9,60 @@ Please check often. Subject to change. New material is added approximately on a 
 
 Chapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.
 
-| Week | Dates | Topic | Slides | Recommended Readings |
-|:---|:---|:---|:---|:---|
-| 1 | 9/3 | 1.1 Statistics & Samples I |  | Ch. 1 |
-| 2 | 9/8 | 1.2 Statistics & Samples II |  | Ch.1, Interleaf 1: Correlation does not require causation |
-|  |  | 2.1 Describing Data I |  | Ch.3 |
-| 2 | 9/10 | 2.2 Describing Data II |  | Ch.3 |
-|  |  | 3.1. Displaying Data I |  | Ch.2 |
-| 3 | 9/15 | 3.2. Displaying Data II |  | Ch.2 |
-|  |  | 4.1 Probability I |  | Ch.5 |
-| 3 | 9/17 | 4.2 Probability II |  | Ch.5 |
-| 4 | 9/22 | 4.3 Probability III |  | Ch. 5 |
-| 4 | 9/24 | 4.4 Probability IV |  | Ch. 5 |
-| 5 | 9/29 | 5.1 Estimation I |  | Ch.4 |
-| 5 | 10/1 | 5.2 Estimation II |  | Ch.4 |
-| 6 | 10/6 | 6.1 Hypothesis Testing I |  | Ch.6 |
-| 6 | 10/8 | 6.2 Hypothesis Testing II |  | Ch. 6 |
-|  | 10/13 | No classes (Fall Break!) |  |  |
-| 7 | 10/20 |  |  |  |
-| 7 | 10/22 |  |  |  |
-| 8 | 10/27 |  |  |  |
-| 8 | 10/30 |  |  |  |
-| 9 | 11/3 |  |  |  |
-| 9 | 11/5 |  |  |  |
-| 10 | 11/10 |  |  |  |
-| 10 | 11/12 |  |  |  |
-| 11 | 11/17 |  |  |  |
-| 11 | 11/19 |  |  |  |
-| 12 | 11/24 |  |  |  |
-| 12 | 11/26 |  |  |  |
-| 13 | 12/1 |  |  |  |
-| 13 | 12/3 |  |  |  |
-| 14 | 12/8 | Wrap-up, Review |  |  |
-| 14 | 12/10 | Review, Course Evals |  |  |
+| Week | Dates | Topic | Recommended Readings |
+|:--------------|:--------------|:--------------|:--------------|
+| 1 | 9/3 | 1.1 Statistics & Samples I | Ch. 1 |
+| 2 | 9/8 | 1.2 Statistics & Samples II | Ch.1, Interleaf 1: Correlation does not require causation |
+|  |  | 2.1 Describing Data I | Ch.3 |
+| 2 | 9/10 | 2.2 Describing Data II | Ch.3 |
+|  |  | 3.1. Displaying Data I | Ch.2 |
+| 3 | 9/15 | 3.2. Displaying Data II | Ch.2 |
+|  |  | 4.1 Probability I | Ch.5 |
+| 3 | 9/17 | 4.2 Probability II | Ch.5 |
+| 4 | 9/22 | 4.3 Probability III | Ch. 5 |
+| 4 | 9/24 | 4.4 Probability IV | Ch. 5 |
+| 5 | 9/29 | 5.1 Estimation I | Ch.4 |
+| 5 | 10/1 | 5.2 Estimation II | Ch.4 |
+| 6 | 10/6 | 6.1 Hypothesis Testing I | Ch.6 |
+| 6 | 10/8 | 6.2 Hypothesis Testing II | Ch. 6 |
+|  | 10/13 | No classes (Fall Break!) |  |
+| 7 | 10/20 |  |  |
+| 7 | 10/22 |  |  |
+| 8 | 10/27 |  |  |
+| 8 | 10/30 |  |  |
+| 9 | 11/3 |  |  |
+| 9 | 11/5 |  |  |
+| 10 | 11/10 |  |  |
+| 10 | 11/12 |  |  |
+| 11 | 11/17 |  |  |
+| 11 | 11/19 |  |  |
+| 12 | 11/24 |  |  |
+| 12 | 11/26 |  |  |
+| 13 | 12/1 |  |  |
+| 13 | 12/3 |  |  |
+| 14 | 12/8 | Wrap-up, Review |  |
+| 14 | 12/10 | Review, Course Evals |  |
 
 ## Labs {#sec-labs}
 
-| Week | Date  | Topic                     | Slides | Prep  |
-|:-----|:------|:--------------------------|:-------|:------|
-| 1    | 2/9   | Course Logistics          |        |       |
-| 1    | 2/9   | Rstudio/R introduction    |        | Video |
-| 2    | 9/9   |                           |        |       |
-| 3    | 9/16  |                           |        |       |
-| 4    | 9/23  |                           |        |       |
-| 5    | 9/30  |                           |        |       |
-| 6    | 10/7  |                           |        |       |
-|      | 10/14 | No lab (fall break!)      |        |       |
-| 7    | 10/21 |                           |        |       |
-|      | 10/28 | No lab (in class Midterm) |        |       |
-| 8    | 11/4  |                           |        |       |
-| 9    | 11/10 |                           |        |       |
-| 10   | 11/18 |                           |        |       |
-| 11   | 11/25 |                           |        |       |
-| 12   | 12/2  |                           |        |       |
-| 13   | 12/9  | Wrap-up                   | \-     |       |
+| Week | Date  | Topic                     | Prep  |
+|:-----|:------|:--------------------------|:------|
+| 1    | 2/9   | Course Logistics          |       |
+| 1    | 2/9   | Rstudio/R introduction    | Video |
+| 2    | 9/9   |                           |       |
+| 3    | 9/16  |                           |       |
+| 4    | 9/23  |                           |       |
+| 5    | 9/30  |                           |       |
+| 6    | 10/7  |                           |       |
+|      | 10/14 | No lab (fall break!)      |       |
+| 7    | 10/21 |                           |       |
+|      | 10/28 | No lab (in class Midterm) |       |
+| 8    | 11/4  |                           |       |
+| 9    | 11/10 |                           |       |
+| 10   | 11/18 |                           |       |
+| 11   | 11/25 |                           |       |
+| 12   | 12/2  |                           |       |
+| 13   | 12/9  | Wrap-up                   |       |
 
 ## Problem sets {#sec-PS}
 
@@ -84,22 +84,25 @@ Chapters refer to the assigned textbook (3rd edition). Corresponding chapters ex
 ## Midterms {#sec-exams}
 
 | Assessment | Topics     | When/Where                   | Difficulty | Type      |
-|:-----------|:-----------|:-----------------------------|:-----------|:----------|
+|:------------|:------------|:---------------------|:------------|:------------|
 | Midterm 1  | Week 1-7   | 10/28, during lab            | Hard       | Summative |
 | Midterm 2  | Weeks 1-14 | Finals week, scheduled (TBD) | Hard       | Summative |
 
 ## Office Hours {#sec-oh}
 
-Please attend OH *_**at least 2x**_* during the semester (the more the merrier).^[Professor drop-in hours subject to change depending on TA office hours]
+Please attend OH ***at least 2x*** during the semester (the more the merrier).[^1]
 
+[^1]: Professor drop-in hours subject to change depending on TA office hours
 
-| Who | When^[Note: no drop-in hours on 09/08; 10/13 and 10/15 (Fall break)]; 12/01 | Where |
-|:----|:----|:----|
-|Professor drop-in hours| Monday 2-3:30pm  | Park 211 |
+| Who | When[^2] | Where |
+|:-----------------------|:-----------------------|:-----------------------|
+| Professor drop-in hours | Monday 2-3:30pm | Park 211 |
 | Professor drop-in hours | Wednesday 2-3:30pm | Park 211 |
-| Professor drop-in hours | Thursday 2-3:30pm | Zoom^[Please email if planning to attend. If I am also available in person, I will send an announcement.] |
+| Professor drop-in hours | Thursday 2-3:30pm | Zoom[^3] |
 | TA | TBD by survey | TBD. Please answer [survey](https://docs.google.com/forms/d/e/1FAIpQLSfx4dTtQUbyItAP2aqLE0y5coJff1Jim6AQoneV2WtjlDvJnA/viewform). |
 
+[^2]: Note: no drop-in hours on 09/08; 10/13 and 10/15 (Fall break); 12/01
+
+[^3]: Please email if planning to attend. If I am also available in person, I will send an announcement.
 
 *If* you can't attend any of the times above you can schedule an appointment with me using my [calendly link.](https://moodle.brynmawr.edu/mod/page/view.php?id=403047&forceview=1)
-

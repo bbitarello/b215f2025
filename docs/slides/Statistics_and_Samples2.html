@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-02">
-<meta name="keywords" content="Logistics">
-<title>BIOL B215: Biostatistics with R – 0.Logistics</title>
+<meta name="dcterms.date" content="2025-09-08">
+<meta name="keywords" content="Statistics &amp; Samples">
+<title>BIOL B215: Biostatistics with R – 1.2.Statistics and Samples</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,7 +131,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">0.Logistics</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">1.2.Statistics and Samples</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -141,87 +141,104 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-02</p>
-</section><section id="overview" class="slide level2"><h2>Overview</h2>
+  <p class="date">2025-09-08</p>
+</section><section id="quick-recap" class="slide level2"><h2>Quick recap</h2>
+<p>Last lecture we discussed:</p>
 <ul>
-<li class="fragment">Introductions</li>
-<li class="fragment">Course Logistics</li>
-<li class="fragment">To-Dos for this week</li>
-</ul></section><section id="hello" class="slide level2"><h2>Hello!</h2>
-<div class="columns">
-<div class="column" style="width:&quot;30%&quot;;">
-<p><img data-src="images/map.png"></p>
-</div><div class="column" style="width:&quot;70%&quot;;">
-<ul>
-<li class="fragment">Bárbara D. Bitarello (she/her/hers)</li>
-<li class="fragment">PhD in human evolutionary genetics</li>
-<li class="fragment">Professor \@ BMC since July 2021</li>
-<li class="fragment">Computational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc</li>
-<li class="fragment">Interested in all things related to evolution</li>
+<li class="fragment">Population vs.&nbsp;sample</li>
+<li class="fragment">Parameter vs.&nbsp;estimate</li>
+<li class="fragment">The two types of errors associated with sampling: sampling error and sampling bias</li>
 </ul>
-</div></div>
-</section><section id="our-ta" class="slide level2"><h2>Our TA</h2>
+<aside class="notes"><p>Ask for volunteers to remind these concepts</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
 <ul>
-<li class="fragment"><p>Nicole Cavalieri</p></li>
-<li class="fragment"><p>English Major/ Data Science Minor</p></li>
-<li class="fragment"><p>R rockstar!</p></li>
-</ul></section><section id="pre-reqs" class="slide level2"><h2>Pre-Reqs</h2>
+<li class="fragment"><del>Goals of statistics</del></li>
+<li class="fragment"><del>Populations and Samples</del></li>
+<li class="fragment"><del>Statistics and parameters</del></li>
+<li class="fragment"><strong>Estimate errors due to sampling</strong></li>
+<li class="fragment"><strong>Types of experiments</strong></li>
+<li class="fragment"><strong>Types of variables</strong></li>
+</ul></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
 <ul>
-<li class="fragment">No prior experience with programming is required!</li>
-<li class="fragment">BIOL B110 or B111 highly recommended (though not required). <strong>Why?</strong> Examples are heavily focused on biology, though the concepts and skills learned will be transferable</li>
-<li class="fragment">Students who have taken PSYC B205/H200 or SOCL B265 are <u>not</u> eligible to take this course.</li>
-<li class="fragment">High school algebra - if you’re not sure, I recommend checking <a href="https://www.khanacademy.org/math/algebra-basics">Khan Academy - Algebra Basics</a> for a recap</li>
-</ul></section><section id="logistics" class="slide level2"><h2>Logistics</h2>
-<p>Everything I am about to say is in the syllabus!</p>
-<ul>
-<li class="fragment">Materials</li>
-<li class="fragment">Things to do/install</li>
-<li class="fragment">Course structure</li>
-<li class="fragment">Policies</li>
-<li class="fragment">How to succeed</li>
-</ul></section><section id="materials" class="slide level2"><h2>Materials</h2>
-<div class="columns">
-<div class="column" style="width:&quot;50%&quot;;">
-<ul>
-<li class="fragment">Textbook: Whitlock and Schluter <em>The Analysis of Biological Data</em>, 3rd edition (2nd: ok, but check pages)</li>
+<li class="fragment"><del>Understand the major goal of statistics</del></li>
+<li class="fragment"><del>Distinguish between a sample and a population</del></li>
+<li class="fragment"><del>Distinguish between an estimate and a parameter</del></li>
+<li class="fragment">Identify why estimates from samples may deviate from parameters of populations</li>
+<li class="fragment">Identify the properties of a good sample</li>
+<li class="fragment">Be able to detect the differences between observational and experimental studies</li>
 </ul>
-<p><img data-src="images/textbook.png" alt="Cover of the 3rd edition of the textbook"></p>
-</div><div class="column" style="width:50%;">
+<aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="volunteer-bias" class="slide level2"><h2>Volunteer bias</h2>
+<div class="goal">
+<p>Volunteers for a study are likely to be different, on average, from the population.</p>
+</div>
+<p>For example:</p>
 <ul>
-<li class="fragment">Laptop with browser for labs</li>
-<li class="fragment">Scientific calculator (not graphing calculator) <span class="math inline">\(\sim\$12\)</span>
+<li class="fragment">Volunteers for sex studies are more likely to be open about sex.</li>
+<li class="fragment">In surveys about sexual activity, gender biases answers in opposite directions.</li>
+<li class="fragment">Volunteers for medical studies may be sicker than the general population.</li>
+<li class="fragment">Animals that are caught may be slower or more docile than those that are not.</li>
+<li class="fragment">The case we saw about the 1936 U.S. elections.</li>
+</ul>
+<aside class="notes"><p>Ask for volunteers to name some. The US elections example also involves sample of convenience.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="sample-of-convenience" class="slide level2 scrollable"><h2>Sample of convenience</h2>
+<div class="goal">
+<p>A sample of convenience is a collection of individuals that happen to be available at the time.</p>
+</div>
+<p>Other definitions<sup>1</sup>:</p>
+<blockquote>
+<p>A convenience sample is the one that is drawn from a source that is conveniently accessible to the researcher.</p>
+</blockquote>
+<blockquote>
+<p>A purposive sample is the one whose characteristics are defined for a purpose that is relevant to the study.</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000</p></li></ol></aside></section><section id="sample-of-convenience-1" class="slide level2 scrollable"><h2>Sample of convenience</h2>
+<p>Problems:</p>
+<ul>
+<li>“In research, we therefore implicitly seek to generalize the findings from our sample to the entire population, present and future.”<sup>1</sup>
 </li>
-<li class="fragment"><a href="https://www.architecturelab.net/whats-the-difference-between-scientific-and-graphing-calculator/">Scientific vs Graphing Calculator</a></li>
 </ul>
-</div></div>
-</section><section id="tech-things-to-do" class="slide level2"><h2>Tech things to do</h2>
 <ul>
-<li class="fragment">Have a laptop for labs and calculator for exams</li>
-<li class="fragment">Join Piazza</li>
-<li class="fragment">Make accounts in DataCamp and Posit Cloud using BMC/HC email</li>
-<li class="fragment">Then accept invite sent by email (check spam)</li>
-</ul></section><section id="other-things-to-do" class="slide level2"><h2>Other things to do</h2>
-<ul>
-<li class="fragment">Read course info document and schedule (posted on Moodle)</li>
-<li class="fragment">Answer pre-course survey</li>
-<li class="fragment">Check course schedule and reach out asap if there are issues</li>
-<li class="fragment">Check midterm dates and plan accordingly</li>
-</ul></section><section id="course-pages" class="slide level2"><h2>Course Pages</h2>
-<ul>
-<li class="fragment">Course website: <a href="https://bbitarello.github.io/b215f2025/" class="uri">https://bbitarello.github.io/b215f2025/</a> has syllabus, schedule, etc.</li>
-<li class="fragment">All assignments must be uploaded on Moodle (except DataCamp)</li>
-<li class="fragment">Keys, slides, study guides will also be posted on Moodle</li>
-</ul></section><section id="course-pages-1" class="slide level2"><h2>Course Pages</h2>
-<ul>
-<li class="fragment">Piazza is the preferred method for any questions that may benefit classmates, both logistical and content-related</li>
-<li class="fragment">Piazza allows you to post anonymously (note: I will still know your identity)</li>
+<li class="fragment">low generalizability. What is true for your sample might not reflect what is true for the population.</li>
+<li class="fragment">in practice, you can only generalize findings to the subpopulation from which the sample was taken from.</li>
+<li class="fragment">sometimes, a sample of convenience is the best option researchers have (e.g.&nbsp;studies that extract data from national healthcare or insurance databases)</li>
+<li class="fragment">It is rarely possible to draw a truly random sample from the population</li>
 </ul>
-
-<aside><div>
-<p>Datacamp and Posit Cloud will also be used weekly so join asap!</p>
-</div></aside></section><section id="course-structure" class="slide level2"><h2>Course Structure</h2>
-
-<img data-src="images/figs.003.png" class="r-stretch"><aside class="notes"><p>Lectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day.</p>
+<div class="fragment">
+<p>This does not invalidate the studies in question. They can have high “internal validity”. The issue is with generalizing, i.e, its external validity.</p>
+</div>
+<div class="fragment">
+<aside class="notes"><p>However, this is possible only if our sample is representative of the population; a sample is likely to be representative of the population only if it is randomly drawn from the population.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -232,44 +249,37 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="formative-vs-summative-assessments" class="slide level2"><h2>Formative vs Summative Assessments</h2>
-</section><section id="formative-assessments" class="slide level2"><h2>Formative Assessments</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+      }</style></aside>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000</p></li></ol></aside></section><section id="what-about-sampling-error" class="slide level2"><h2>What about sampling error?</h2>
+<div class="goal">
+<p>Sampling error: Chance deviations between estimates and the truth.</p>
+</div>
+<div class="fragment">
+<p>Even when you did NOTHING wrong.</p>
+</div>
+<div class="fragment">
+<div class="goal">
+<p>Sampling error is the difference between the estimate and its true parameter value — and it can be quantified!</p>
+</div>
+</div>
+</section><section id="sampling-error" class="slide level2"><h2>Sampling error</h2>
 <ul>
-<li class="fragment">Formative assessments happen often and are focused on learning</li>
-<li class="fragment">DC and R labs are gladed for completion/effort</li>
-<li class="fragment">Quizzes may be taken multiple times (final grade is average)</li>
-<li class="fragment">PS graded benevolently</li>
-<li class="fragment">Allows instructor to adjust pace and support</li>
+<li class="fragment"><p>Even if you sample perfectly, by the book, your estimates will differ from the true parameter.</p></li>
+<li class="fragment"><p>Unlike bias, it is not systematic. Rather, it is governed by chance and does not occur in a systematic direction</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/figs.005.png" alt="Low-stakes: easy points for practicing. Includes: DataCamp (weekly), R labs, small group problem solving in class, Moodle quiz, 5 problem sets"></p>
-</div></div>
-</section><section id="summative-assessments" class="slide level2"><h2>Summative Assessments</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<p>E.g: average horn size in rhinoceros taken from two same-sized samples from the same population (unbiased samples) might (very likely) will give estimates that differ to some extent from each other but without a clear “direction”</p>
+</section><section id="example-of-sampling-error" class="slide level2"><h2>Example of sampling error</h2>
+<p>to do: use R code</p>
+</section><section id="sampling-error-declines-with-sample-size" class="slide level2"><h2>Sampling error declines with sample size</h2>
+<p>to do: use R code</p>
+</section><section id="estimates-are-random-variables" class="slide level2"><h2>Estimates are random variables</h2>
 <ul>
-<li class="fragment">Evaluate students’ individual progress: have they met the learning goals? Have they mastered the material?</li>
-<li class="fragment">Typically occur at the end of a learning period</li>
-<li class="fragment">The first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative</li>
+<li class="fragment"><p>Because an estimate is a random variable, the value of an estimate is influenced by chance.</p></li>
+<li class="fragment"><p>Therefore estimates will differ among random samples from the same population.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/figs.006.png" alt="Coding assignments (independent data exploration, opportunity to showcase and intrgrate the lab and lectures) and 2 closed book in class midterms (one page of notes and calculator are allowed)" width="470"></p>
-</div></div>
-</section><section id="datacamp" class="slide level2"><h2>DataCamp</h2>
-<ul>
-<li class="fragment">Assigned weekly to practice lab skills</li>
-<li class="fragment">DC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly</li>
-</ul></section><section id="attendance-and-late-work" class="slide level2"><h2>Attendance and Late Work</h2>
-<ul>
-<li class="fragment">Please communicate need to miss class by email.</li>
-<li class="fragment">Grace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment</li>
-<li class="fragment">Late work otherwise penalyzed -10% per day</li>
-</ul></section><section id="ai-policy" class="slide level2"><h2>AI policy</h2>
-<p>We are following the BMC Honor Code. Please see syllabus.</p>
-<p>Questions about this: now or later on Piazza.</p>
-<aside class="notes"><p>who has read the syllabus? if not, read now the part on this</p>
+
+<img data-src="images/clipboard-1924864965.png" class="r-stretch"><aside class="notes"><p>we’re assuming here that we don’t have the bias issue discussed for this example previously.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -280,25 +290,58 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="faqs-answered-in-the-syllabus" class="slide level2 scrollable"><h2>FAQs answered in the syllabus</h2>
-<p>Please visit the FAQ section of the syllabus. A few examples…</p>
-<ol type="1">
-<li class="fragment">What if I have to miss class?</li>
-<li class="fragment">What if I cannot turn in an assignment in time?</li>
-<li class="fragment">What if I am requesting an extension because of sickness?</li>
-<li class="fragment">What if I have accommodations?</li>
-</ol></section><section id="how-to-succeed" class="slide level2"><h2>How to succeed</h2>
+      }</style></aside></section><section id="how-bias-and-sampling-error-affect-estimates" class="slide level2"><h2>How bias and sampling error affect estimates</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="r-stack">
+<p><strong>Sampling Bias</strong></p>
+</div>
 <ul>
-<li class="fragment">Attendance</li>
-<li class="fragment">Pre-class prep</li>
-<li class="fragment">Complete all activities — be consistent and diligent</li>
-<li class="fragment">Check Piazza regularly, attend office hours at least 2x</li>
-<li class="fragment">Don’t leave everything for last minute — that will not work well</li>
-<li class="fragment">Communicate proactively</li>
-</ul></section><section id="questions" class="slide level2"><h2>Questions?</h2>
+<li class="fragment">Systematic difference between estimates &amp; parameters.</li>
+<li class="fragment">Driven by bias in the sampling process (i.e., sample not random in relation to the population of interest), regarless of sample size.</li>
+</ul>
+</div><div class="column" style="width:50%&quot;;">
+<div class="r-stack">
+<p><strong>Sampling Error</strong></p>
+</div>
+<ul>
+<li class="fragment">Undirected deviation of estimates away from parameters.</li>
+<li class="fragment">Driven by chance.</li>
+<li class="fragment">Decreases with sample size.</li>
+</ul>
+</div></div>
+</section><section id="goals-of-estimation" class="slide level2"><h2>Goals of estimation</h2>
+<div class="goal">
+<p>Accuracy (on average gets the correct answer)</p>
+</div>
+<div class="goal">
+<p>Precision (gives a similar answer repeatedly)</p>
+</div>
+
+<img data-src="images/clipboard-1978701112.png" alt="Left: low accuracy due to low precision. Shot grouping shows four hits around the central circle, somewhat equi-distant from each other. right: low accuracy even with high precision. Shot grouping with four shots near each other to the left-bottom of the center of the central target." class="r-stretch quarto-figure-center"><p class="caption">Image: Wikipedia Commons (public domain). Representation of high accuracy and low precision.</p></section><section id="sampling-error-vs-bias-practical-example" class="slide level2"><h2>Sampling error vs bias: Practical example</h2>
+<p>use R code</p>
+
+<img data-src="images/clipboard-3433743313.png" class="r-stretch"></section><section id="sampling-error-vs-bias-practical-example-1" class="slide level2"><h2>Sampling error vs bias: Practical example</h2>
+<p>Top row: High precision with high (left) and low (right) accuracy&nbsp;</p>
+<p>Bottom row: Low precision with high (left) and low accuracy&nbsp;</p>
+<p>Properties of a good sample</p>
+<ul>
+<li class="fragment"><p>A good sample is made up of a <strong>random and independent</strong> selection of a sufficiently large number of individuals.</p></li>
+<li class="fragment"><p>In a random sample, each member of a population has an equal and independent chance of being selected</p></li>
+<li class="fragment"><p>Equality: probability of being selected reflects its representation in the population</p></li>
+<li class="fragment"><p>Independence: no influence of sampling one individual on other individuals that get sampled.</p></li>
+</ul></section><section id="random-samples" class="slide level2"><h2>Random samples</h2>
+<div class="Goal">
+<p>Taking random samples is hard and requires effort</p>
+</div>
+<p>Why are they important? Reduce sampling bias</p>
+<p>How to get a random sample (ideal):</p>
+<p><img data-src="images/clipboard-4130122363.png" class="quarto-figure quarto-figure-center" width="608"> Carefully characterize a population and use computer code to select participants randomly.</p>
+</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
-</section>
+
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
