@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-10">
 <meta name="keywords" content="Statistics &amp; Samples">
-<title>BIOL B215: Biostatistics with R – 1.2.Statistics and Samples</title>
+<title>BIOL B215: Biostatistics with R – 1.3.Statistics and Samples</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -197,7 +197,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">1.2.Statistics and Samples</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">1.3.Statistics and Samples</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -207,13 +207,12 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-08</p>
+  <p class="date">2025-09-10</p>
 </section><section id="quick-recap" class="slide level2"><h2>Quick recap</h2>
 <p>Last lecture we discussed:</p>
 <ul>
-<li class="fragment">Population vs.&nbsp;sample</li>
-<li class="fragment">Parameter vs.&nbsp;estimate</li>
 <li class="fragment">The two types of errors associated with sampling: sampling error and sampling bias</li>
+<li class="fragment">Proporties of a good sample</li>
 </ul>
 <aside class="notes"><p>Ask for volunteers to remind these concepts</p>
 <style type="text/css">
@@ -231,17 +230,16 @@ Bárbara D. Bitarello
 <li><del>Goals of statistics</del></li>
 <li><del>Populations and Samples</del></li>
 <li><del>Statistics and parameters</del></li>
-<li><strong>Estimate errors due to sampling</strong></li>
+<li><del>Estimate errors due to sampling</del></li>
 <li><strong>Types of experiments</strong></li>
 <li><strong>Types of variables</strong></li>
-<li><strong>Types of studies</strong></li>
 </ul></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
 <ul>
 <li><del>Understand the major goal of statistics</del></li>
 <li><del>Distinguish between a sample and a population</del></li>
 <li><del>Distinguish between an estimate and a parameter</del></li>
-<li><strong>Identify why estimates from samples may deviate from parameters of populations</strong></li>
-<li><strong>Identify the properties of a good sample</strong></li>
+<li><del>Identify why estimates from samples may deviate from parameters of populations</del></li>
+<li><del>Identify the properties of a good sample</del></li>
 <li><strong>Be able to detect the differences between observational and experimental studies</strong></li>
 </ul>
 <aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
@@ -255,181 +253,7 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="volunteer-bias" class="slide level2"><h2>Volunteer bias</h2>
-<div class="goal">
-<p>Volunteers for a study are likely to be different, on average, from the population. Also known as “self-selection” bias.</p>
-</div>
-<p>For example:</p>
-<ul>
-<li class="fragment">Volunteers for sex studies are more likely to be open about sex.</li>
-<li class="fragment">In surveys about sexual activity, gender biases answers in opposite directions.</li>
-<li class="fragment">Volunteers for medical studies may be sicker than the general population.</li>
-<li class="fragment">Animals that are caught may be slower or more docile than those that are not.</li>
-<li class="fragment">The case we saw about the 1936 U.S. elections.</li>
-</ul>
-<aside class="notes"><p>Ask for volunteers to name some. The US elections example also involves sample of convenience.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="selection-bias" class="slide level2"><h2>Selection bias</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/2618/"><img data-src="https://imgs.xkcd.com/comics/selection_bias.png" class="quarto-figure quarto-figure-center" alt="[Blondie is standing on a podium behind a lectern with a microphone. She is standing under a hanging sign with large text. In front of the podium is an audience of five seated persons all with their hands raised above their heads. The audience includes two guys that look like Cueball, Hairbun, and two other persons with dark and blonde hair.]     Sign: Statistics Conference 2022     Blondie: Raise your hand if you’re familiar with selection bias.      Blondie: As you can see, it’s a term most people know..." width="425"></a></p>
-</figure>
-</div>
-<figcaption>From: https://xkcd.com/2618/. We carefully sampled the general population and found that most people are familiar with acquiescence bias.</figcaption></figure>
-</div>
-</section><section id="sample-of-convenience" class="slide level2 scrollable"><h2>Sample of convenience</h2>
-<div class="goal">
-<p>A sample of convenience is a collection of individuals that happen to be available at the time.</p>
-</div>
-<p>Other definitions<sup>1</sup>:</p>
-<blockquote>
-<p>A convenience sample is the one that is drawn from a source that is conveniently accessible to the researcher.</p>
-</blockquote>
-<blockquote>
-<p>A purposive sample is the one whose characteristics are defined for a purpose that is relevant to the study.</p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. DOI: 10.1177/0253717620977000</p></li></ol></aside></section><section id="sample-of-convenience-1" class="slide level2 scrollable"><h2>Sample of convenience</h2>
-<p>Problems:</p>
-<ul>
-<li>“In research, we therefore implicitly seek to generalize the findings from our sample to the entire population, present and future.”<sup>1</sup>
-</li>
-</ul>
-<ul>
-<li class="fragment">low generalizability. What is true for your sample might not reflect what is true for the population.</li>
-<li class="fragment">in practice, you can only generalize findings to the subpopulation from which the sample was taken from.</li>
-<li class="fragment">sometimes, a sample of convenience is the best option researchers have (e.g.&nbsp;studies that extract data from national healthcare or insurance databases)</li>
-<li class="fragment">It is rarely possible to draw a truly random sample from the population</li>
-</ul>
-<div class="fragment">
-<p>This does not invalidate the studies in question. They can have high “internal validity”. The issue is with generalizing, i.e, its external validity.</p>
-</div>
-<div class="fragment">
-<aside class="notes"><p>However, this is possible only if our sample is representative of the population; a sample is likely to be representative of the population only if it is randomly drawn from the population.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Andrade C (2021). Indian J Psychol Med, 43(1):86-88. DOI: 10.1177/0253717620977000</p></li></ol></aside></section><section id="what-about-sampling-error" class="slide level2"><h2>What about sampling error?</h2>
-<div class="goal">
-<p>Sampling error: Chance deviations between estimates and the truth.</p>
-</div>
-<div class="fragment">
-<p>Even when you did NOTHING wrong.</p>
-</div>
-<div class="fragment">
-<div class="goal">
-<p>Sampling error is the difference between the estimate and its true parameter value — and it can be quantified!</p>
-</div>
-</div>
-</section><section id="example-of-sampling-error" class="slide level2"><h2>Example of sampling error</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="Statistics_and_Samples2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-
-<aside><div>
-<p>The iris data set gives the measurements (in cm) of the variables sepal length and width and petal length and width for 50 flowers from each of 3 species of iris. The species are <em>Iris setosa</em>, <em>Iris versicolor</em>, and <em>Iris virginica</em>.</p>
-</div></aside></section><section id="sampling-error-declines-with-sample-size" class="slide level2"><h2>Sampling error declines with sample size</h2>
-
-<img data-src="Statistics_and_Samples2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="estimates-are-random-variables" class="slide level2"><h2>Estimates are random variables</h2>
-<ul>
-<li class="fragment"><p>Because an estimate is a random variable, the value of an estimate is influenced by chance.</p></li>
-<li class="fragment"><p>Therefore estimates will differ among random samples from the same population.</p></li>
-</ul>
-
-<img data-src="images/clipboard-1924864965.png" class="r-stretch"><aside class="notes"><p>we’re assuming here that we don’t have the bias issue discussed for this example previously.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="how-bias-and-sampling-error-affect-estimates" class="slide level2"><h2>How bias and sampling error affect estimates</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="r-stack">
-<p><strong>Sampling Bias</strong></p>
-</div>
-<ul>
-<li class="fragment">Systematic difference between estimates &amp; parameters.</li>
-<li class="fragment">Driven by bias in the sampling process (i.e., sample not random in relation to the population of interest), regarless of sample size.</li>
-</ul>
-</div><div class="column" style="width:50%&quot;;">
-<div class="r-stack">
-<p><strong>Sampling Error</strong></p>
-</div>
-<ul>
-<li class="fragment">Undirected deviation of estimates away from parameters.</li>
-<li class="fragment">Driven by chance.</li>
-<li class="fragment">Decreases with sample size.</li>
-</ul>
-</div></div>
-</section><section id="goals-of-estimation" class="slide level2"><h2>Goals of estimation</h2>
-<div class="goal">
-<p>Accuracy (on average gets the correct answer)</p>
-</div>
-<div class="goal">
-<p>Precision (gives a similar answer repeatedly)</p>
-</div>
-
-<img data-src="images/clipboard-1978701112.png" alt="Left: low accuracy due to low precision. Shot grouping shows four hits around the central circle, somewhat equi-distant from each other. right: low accuracy even with high precision. Shot grouping with four shots near each other to the left-bottom of the center of the central target." class="r-stretch quarto-figure-center"><p class="caption">Image: Wikipedia Commons (public domain).</p></section><section id="sampling-error-vs.-bias" class="slide level2"><h2>Sampling error vs.&nbsp;bias</h2>
-<p>In this figure, the “X” is the population parameter. The circles are different estimates calculated from different samples taken from that population.</p>
-
-<img data-src="Statistics_and_Samples2_files/figure-revealjs/biaserror-1.png" alt="top left: all estimates are near each other and enar the bulls eye, so they are unbiased and precise; top right: all samples near each other but far from the bulls eye, so they are precise but also biased; bottom left, estimates are scattered 'randomly' around bulls eye, so they are unbiased but also imprecise; bottom right, samples are scattered around acenter that is not the bulls eye, so they are imprecise and biased." width="768" class="r-stretch quarto-figure-center"><p class="caption">Figure made in R with code borrowed from Y. Brandvain</p></section><section id="properties-of-a-good-sample" class="slide level2"><h2>Properties of a good sample</h2>
-<div class="goal">
-<p>Independent selection of individuals</p>
-</div>
-<ul>
-<li class="fragment">no influence of sampling one individual on other individuals that get sampled.</li>
-</ul>
-<div class="goal">
-<p>Random selection of individuals</p>
-</div>
-<ul>
-<li class="fragment">each member of a population has an equal and independent chance of being selected</li>
-<li class="fragment">equality: probability of being selected reflects its representation in the population</li>
-</ul>
-<div class="goal">
-<p>Sufficiently large</p>
-</div>
-<ul>
-<li class="fragment">What is the point of each of these principles in terms of sampling error and bias and accuracy and precision?</li>
-</ul></section><section id="random-samples" class="slide level2"><h2>Random samples</h2>
-<div class="goal">
-<p>Taking random samples is hard and requires effort</p>
-</div>
-<ul>
-<li>Why are they important? Reduce sampling bias</li>
-<li>How to get a random sample (ideal):</li>
-<li>Carefully characterize a population and use computer code to select participants randomly.</li>
-</ul>
-
-<img data-src="images/clipboard-4130122363.png" class="quarto-figure quarto-figure-center r-stretch" width="608"></section><section id="how-do-we-choose-random-numbers-its-actually-really-hard" class="slide level2"><h2>How do we choose random numbers? It’s actually really hard!</h2>
+      }</style></aside></section><section id="how-do-we-choose-random-numbers-its-actually-really-hard" class="slide level2"><h2>How do we choose random numbers? It’s actually really hard!</h2>
 <ul>
 <li class="fragment">Here is random number generator, where the randomness comes from atmospheric noise <a href="https://www.random.org/integers/" class="uri">https://www.random.org/integers/</a>
 </li>
@@ -450,12 +274,12 @@ Bárbara D. Bitarello
 <span id="cb1-4"><a></a><span class="co"># 2. Take 3 random numbers from this set</span></span>
 <span id="cb1-5"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  6  3 10</code></pre>
+<pre><code>[1] 7 1 5</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># now, to convince yourself, do it again</span></span>
 <span id="cb3-2"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 8 3 4</code></pre>
+<pre><code>[1]  9  3 10</code></pre>
 </div>
 </div>
 </section><section id="random-sampling-in-r-1" class="slide level2"><h2>Random sampling in R</h2>
@@ -562,7 +386,7 @@ Bárbara D. Bitarello
 <p>Image from: <a href="https://upload.wikimedia.org/wikipedia/commons/9/91/Titanic_struck_iceberg.jpg">Wikipedia Commons</a>.</p>
 </div></aside></section><section id="case-study-surviving-the-titanic-1" class="slide level2"><h2>Case Study: surviving the Titanic</h2>
 
-<img data-src="Statistics_and_Samples2_files/figure-revealjs/titanic-1.png" alt="Left, proportion of males and females among adults in the titanic who survived.  Right, same thing but for children." width="960" class="r-stretch quarto-figure-center"><p class="caption">This is a mosaic plot. We will learn about it in our next topic. Code based on snippets from Y. Brandvain.</p><p>For next class, think about:</p>
+<img data-src="Statistics_and_Samples3_files/figure-revealjs/titanic-1.png" alt="Left, proportion of males and females among adults in the titanic who survived.  Right, same thing but for children." width="960" class="r-stretch quarto-figure-center"><p class="caption">This is a mosaic plot. We will learn about it in our next topic. Code based on snippets from Y. Brandvain.</p><p>For next class, think about:</p>
 <ul>
 <li>Variables? Types? Explanatory &amp; response variables?</li>
 <li>Describe the population this result came from…</li>
@@ -619,10 +443,10 @@ Bárbara D. Bitarello
 <li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the placebo effect.</p></li>
 <li class="fragment"><p>Appropriate controls are critical to a good experiment.</p></li>
 </ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<p><img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347"> title: “Untitled” format: revealjs —</p>
 
 
-
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
