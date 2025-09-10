@@ -97,7 +97,7 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c66bc07278289c14ada48a2f6ef6ea16.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d5c0e57bac3d02429cb375849bdcca4b.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -212,7 +212,7 @@ Bárbara D. Bitarello
 <p>Last lecture we discussed:</p>
 <ul>
 <li class="fragment">The two types of errors associated with sampling: sampling error and sampling bias</li>
-<li class="fragment">Proporties of a good sample</li>
+<li class="fragment">Properties of a good sample</li>
 </ul>
 <aside class="notes"><p>Ask for volunteers to remind these concepts</p>
 <style type="text/css">
@@ -227,20 +227,9 @@ Bárbara D. Bitarello
           display:block!important;
       }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
 <ul>
-<li><del>Goals of statistics</del></li>
-<li><del>Populations and Samples</del></li>
-<li><del>Statistics and parameters</del></li>
-<li><del>Estimate errors due to sampling</del></li>
-<li><strong>Types of experiments</strong></li>
-<li><strong>Types of variables</strong></li>
-</ul></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
-<ul>
-<li><del>Understand the major goal of statistics</del></li>
-<li><del>Distinguish between a sample and a population</del></li>
-<li><del>Distinguish between an estimate and a parameter</del></li>
-<li><del>Identify why estimates from samples may deviate from parameters of populations</del></li>
-<li><del>Identify the properties of a good sample</del></li>
-<li><strong>Be able to detect the differences between observational and experimental studies</strong></li>
+<li>Types of variables</li>
+<li>Types of experiments</li>
+<li>Correlation <em>vs.</em> Causation</li>
 </ul>
 <aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
 <style type="text/css">
@@ -274,12 +263,12 @@ Bárbara D. Bitarello
 <span id="cb1-4"><a></a><span class="co"># 2. Take 3 random numbers from this set</span></span>
 <span id="cb1-5"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7 1 5</code></pre>
+<pre><code>[1]  4 10  6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># now, to convince yourself, do it again</span></span>
 <span id="cb3-2"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  9  3 10</code></pre>
+<pre><code>[1] 6 3 1</code></pre>
 </div>
 </div>
 </section><section id="random-sampling-in-r-1" class="slide level2"><h2>Random sampling in R</h2>
@@ -306,7 +295,7 @@ Bárbara D. Bitarello
 <pre><code>[1] 2 3 6</code></pre>
 </div>
 </div>
-</section><section id="types-of-variables" class="slide level2 center" data-background="#006475"><h2>Types of Variables</h2>
+</section><section id="types-of-variables" class="slide level2 center" data-background="#898928"><h2>Types of Variables</h2>
 </section><section id="variables-and-data" class="slide level2"><h2>Variables and “Data”</h2>
 <blockquote>
 <p>A <strong>variable</strong> is a characteristic measured on individuals drawn from a population under study.</p>
@@ -369,7 +358,7 @@ Bárbara D. Bitarello
 <p>Examples:</p>
 <ul>
 <li class="fragment">Genotype (e.g., AA, AG, GG)</li>
-<li class="fragment">Drug treatment (e.g.&nbsp;aspirin vs.ibuprofen)</li>
+<li class="fragment">Drug treatment (e.g.&nbsp;aspirin <em>vs.</em>ibuprofen)</li>
 <li class="fragment">Province of origin</li>
 <li class="fragment">Survival status (i.e., live or die)</li>
 <li class="fragment">Skin/fur/coat/feather color (e.g., black, yellow, red, etc.)</li>
@@ -385,28 +374,57 @@ Bárbara D. Bitarello
 <aside><div>
 <p>Image from: <a href="https://upload.wikimedia.org/wikipedia/commons/9/91/Titanic_struck_iceberg.jpg">Wikipedia Commons</a>.</p>
 </div></aside></section><section id="case-study-surviving-the-titanic-1" class="slide level2"><h2>Case Study: surviving the Titanic</h2>
+<div class="goal">
+<p>Consider the fate of the approximatley 2,200 passengers of the titanic, including children and adults of both sexes.</p>
+</div>
 
-<img data-src="Statistics_and_Samples3_files/figure-revealjs/titanic-1.png" alt="Left, proportion of males and females among adults in the titanic who survived.  Right, same thing but for children." width="960" class="r-stretch quarto-figure-center"><p class="caption">This is a mosaic plot. We will learn about it in our next topic. Code based on snippets from Y. Brandvain.</p><p>For next class, think about:</p>
-<ul>
-<li>Variables? Types? Explanatory &amp; response variables?</li>
-<li>Describe the population this result came from…</li>
-<li>How far would you generalize from this to “Women &amp; Children 1st?”</li>
-<li>Experimental or observational study?</li>
-</ul></section><section id="experimental-vs.-observational-studies" class="slide level2 center" data-background="#006475"><h2>Experimental vs.&nbsp;Observational Studies</h2>
+<img data-src="Statistics_and_Samples3_files/figure-revealjs/titanic-1.png" alt="Left, proportion of males and females among adults in the titanic who survived.  Right, same thing but for children." width="960" class="r-stretch quarto-figure-center"><p class="caption">This is a mosaic plot. We will learn about it in our next topic. Code based on snippets from Y. Brandvain.</p></section><section id="discuss" class="slide level2 scrollable"><h2>Discuss</h2>
+
+<img data-src="Statistics_and_Samples3_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ol type="1">
+<li class="fragment"><p>Variables? Types? Explanatory &amp; response variables?</p></li>
+<li class="fragment"><p>Describe the population this result came from…</p></li>
+<li class="fragment"><p>How far would you generalize from this to “Women &amp; Children 1st?”</p></li>
+<li class="fragment"><p>Experimental or observational study?</p></li>
+</ol></section><section id="experimental-vs.-observational-studies" class="slide level2"><h2>Experimental <em>vs.</em> Observational Studies</h2>
 <div class="goal">
 <p>In Experimental Studies, researchers assign treatments to individuals.</p>
 </div>
+<ul>
+<li class="fragment">Big advantage: possibility to conduct randomization (random assignment of treatments to units)</li>
+<li class="fragment">Why is this important?</li>
+</ul>
 <div class="goal">
 <p>In Observational Studies, researchers do not assign treatments to individuals.</p>
 </div>
+<ul>
+<li class="fragment">But often this is the only source of data available</li>
+</ul></section><section id="correlation-does-not-imply-causation" class="slide level2"><h2>Correlation DOES NOT imply causation</h2>
+<p>But it can, of course, suggest it</p>
 <div class="goal">
 <p>Because researchers do not assign treatments in observational studies, observations cannot prove causation or disentangle cause and effect.</p>
 </div>
-</section><section id="confounding-variables" class="slide level2 center" data-background="#006475"><h2>Confounding Variables</h2>
+
+<img data-src="https://imgs.xkcd.com/comics/correlation.png" alt="[    [Cueball is talking to Megan.]     Cueball: I used to think correlation implied causation. [Cueball lift his hand while continuing to talk to Megan.] Cueball: Then I took a statistics class. Now I don't. [Back to the same situation as the first frame.] Megan: Sounds like the class helped. Cueball: Well, maybe.]" class="r-stretch quarto-figure-center"><p class="caption">From: https://www.xkcd.com/552/. Correlation doesn’t imply causation, but it does waggle its eyebrows suggestively and gesture furtively while mouthing ‘look over there’.</p></section><section id="case-study" class="slide level2" data-background="#006475"><h2>Case Study</h2>
 <div class="goal">
-<p>Variables that are not considered in an experimental study and which potentially drive an association.</p>
+<p>The distance between jupiter and the sun correlates with the number of secretaries in-alaska</p>
 </div>
-</section><section id="confounding-variables-1" class="slide level2"><h2>Confounding variables</h2>
+
+<img data-src="images/clipboard-3123712222.png" class="r-stretch quarto-figure-center"><p class="caption">From: https://tylervigen.com/spurious/correlation/2733_the-distance-between-jupiter-and-the-sun_correlates-with_the-number-of-secretaries-in-alaska</p></section><section id="section" class="slide level2"><h2></h2>
+<blockquote>
+<p>As the distance between Jupiter and the Sun increases, the gravitational pull on Earth fluctuates, leading to a rise in cosmic productivity waves. These waves, when they reach Alaska, have been found to have a magnetic effect on the influx of secretarial energy, prompting more individuals to pursue careers in Alaska as professional secretaries. It’s like a celestial calling for secretarial excellence in the land of the midnight sun.</p>
+</blockquote>
+
+<aside><div>
+<p><strong>What is this?</strong> “Random correlations dredged up from silly data, turned into linear line charts. Now with AI-generated explanations of the causal connection and silly images to accompany the charts!” <a href="https://tylervigen.com/" class="uri">https://tylervigen.com/</a></p>
+</div></aside></section><section id="section-1" class="slide level2 center"><h2></h2>
+<blockquote>
+<p>In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, <strong>“confounding factor”</strong>, or “lurking variable”). <a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wikipedia Commons</a></p>
+</blockquote>
+<div class="goal">
+<p>Confounding Variables: variables that are not considered in an experimental study and which potentially drive an association.</p>
+</div>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Comparison_confounder_mediator.svg/2880px-Comparison_confounder_mediator.svg.png" alt="[From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)]" class="r-stretch quarto-figure-center"><p class="caption">From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)</p></section><section id="confounding-variables" class="slide level2"><h2>Confounding Variables?</h2>
 <div class="goal">
 <p>Example 1. Consider, a study showing (positive association) that people who ate more steaks can do more push-ups.</p>
 </div>
@@ -419,7 +437,7 @@ Bárbara D. Bitarello
 <ul>
 <li class="fragment">Observational or experimental?</li>
 <li class="fragment">Is this enough to show causation?</li>
-</ul></section><section id="confounding-variables-2" class="slide level2"><h2>Confounding variables</h2>
+</ul></section><section id="confounding-variables-1" class="slide level2"><h2>Confounding Variables?</h2>
 <div class="goal">
 <p>Example 2. Consider a study showing that plants with fewer pests had greater biomass.</p>
 </div>
@@ -436,17 +454,17 @@ Bárbara D. Bitarello
 <div class="r-fit-text">
 <p>Simply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested</p>
 </div>
-</section><section id="but-experiments-can-reveal-causation" class="slide level2 center" data-background="#586028"><h2>But experiments can reveal causation</h2>
+</section><section id="but-experiments-can-reveal-causation" class="slide level2 scrollable"><h2>But experiments can reveal causation</h2>
 <ul>
-<li class="fragment"><p>Because researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds (except those that arise by chance) and allows us to separate cause and effect!!!</p></li>
+<li class="fragment"><p>Because researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds<sup>1</sup> and allows us to separate cause and effect !!!</p></li>
 <li class="fragment"><p>But be careful, experimental artifacts can introduce bias.</p></li>
-<li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the placebo effect.</p></li>
+<li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the <strong>placebo effect</strong>.</p></li>
 <li class="fragment"><p>Appropriate controls are critical to a good experiment.</p></li>
-</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
-<p><img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347"> title: “Untitled” format: revealjs —</p>
+</ul><aside><ol class="aside-footnotes"><li id="fn1"><p>Except those that arise by chance!</p></li></ol></aside></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
-</section>
+
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

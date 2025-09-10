@@ -12,7 +12,7 @@
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-10">
 <meta name="keywords" content="Displaying &amp; Describing Data">
-<title>BIOL B215: Biostatistics with R – 2.1.Displaying &amp; Describind Data</title>
+<title>BIOL B215: Biostatistics with R – 2.1.Displaying &amp; Describing Data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c66bc07278289c14ada48a2f6ef6ea16.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d5c0e57bac3d02429cb375849bdcca4b.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,7 +131,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">2.1.Displaying &amp; Describind Data</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">2.1.Displaying &amp; Describing Data</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -142,10 +142,17 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-09-10</p>
-</section><section id="quick-recap" class="slide level2"><h2>Quick recap</h2>
-<p>Last lecture we discussed:</p>
-</section><section id="today" class="slide level2"><h2>Today</h2>
 </section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+<ul>
+<li class="fragment">Differentiate between estimates of location and estimates of width.</li>
+<li class="fragment">Recognize that variability is not simply noise, but is a key parameter that can be estimated.</li>
+<li class="fragment">Become familiar with the most common descriptive statistics.</li>
+<li class="fragment">Know when the mean or median is a more appropriate summary of location.</li>
+<li class="fragment">Distinguish between explanatory and exploratory figures.</li>
+<li class="fragment">Identify what makes a good graph.</li>
+<li class="fragment">Understand how data types drive figure design.</li>
+<li class="fragment">Understand how to make effective tables.</li>
+</ul></section><section id="center" class="slide level2"><h2>{center}</h2>
 <aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -157,7 +164,33 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+      }</style></aside></section><section id="three-common-descriptions-of-data" class="slide level2"><h2>Three Common Descriptions of Data</h2>
+<ul>
+<li class="fragment"><p>Location (central tendency)</p></li>
+<li class="fragment"><p>Width (spread)</p></li>
+<li class="fragment"><p>Association (correlation)</p></li>
+</ul></section><section id="measures-of-location-central-tendency-mean-median-mode" class="slide level2 center" data-background="#006475"><h2>Measures of location (central tendency): Mean, Median, Mode</h2>
+</section><section id="the-word-average-is-imprecise" class="slide level2"><h2>The word “average” is imprecise</h2>
+<p>“Average” is often used synonymously with mean.</p>
+<ul>
+<li class="fragment"><p>But: medians and even modes are sometimes called an “average”.</p></li>
+<li class="fragment"><p>When you see the word, “average”, pay attention to which measure of location it describes.</p></li>
+<li class="fragment"><p>In this course, you should use statistical terms precisely, I.e., to indicate the same consistently. So if you want to say mean, say mean, etc.</p></li>
+</ul></section><section id="mean" class="slide level2"><h2>Mean</h2>
+<div class="goal">
+<p>The sum of values divided by the sample size.</p>
+</div>
+<p><span class="math display">\[\bar{Y}=\frac{\sum_{i=1}^{n}Y_{i}}{n}\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(\bar{Y}\)</span> is the mean value of variable <span class="math inline">\(Y\)</span>.</li>
+<li>
+<span class="math inline">\(\sum\)</span> signified “sum”.</li>
+<li>
+<span class="math inline">\(n\)</span> is the number of individuals in the samples (sample size)</li>
+<li>
+<span class="math inline">\(Y_{i}\)</span> is the observed value for the <span class="math inline">\(i\)</span>-th individual.</li>
+</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 
