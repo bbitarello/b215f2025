@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-10">
+<meta name="dcterms.date" content="2025-09-15">
 <meta name="keywords" content="Statistics &amp; Samples">
-<title>BIOL B215: Biostatistics with R – 1.3.Statistics and Samples</title>
+<title>BIOL B215: Biostatistics with R – 1.4.Statistics and Samples</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,72 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #cbccc6; background-color: #1f2430; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #cbccc6; } /* Normal */
-    code span.al { color: #ff3333; background-color: #332430; font-weight: bold; } /* Alert */
-    code span.an { color: #ffe6b3; } /* Annotation */
-    code span.at { color: #73d0ff; } /* Attribute */
-    code span.bn { color: #ffcc66; } /* BaseN */
-    code span.bu { color: #95e6cb; } /* BuiltIn */
-    code span.cf { color: #ffa759; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #95e6cb; } /* Char */
-    code span.cn { color: #d4bfff; } /* Constant */
-    code span.co { color: #5c6773; font-style: italic; } /* Comment */
-    code span.cv { color: #d4bfff; } /* CommentVar */
-    code span.do { color: #5c6773; } /* Documentation */
-    code span.dt { color: #ffa759; } /* DataType */
-    code span.dv { color: #ffcc66; } /* DecVal */
-    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
-    code span.ex { color: #73d0ff; font-weight: bold; } /* Extension */
-    code span.fl { color: #ffcc66; } /* Float */
-    code span.fu { color: #ffd580; } /* Function */
-    code span.im { color: #bae67e; } /* Import */
-    code span.in { color: #ffcc66; } /* Information */
-    code span.kw { color: #ffa759; font-weight: bold; } /* Keyword */
-    code span.op { color: #f29e74; } /* Operator */
-    code span.ot { color: #5ccfe6; } /* Other */
-    code span.pp { color: #f28779; } /* Preprocessor */
-    code span.re { color: #73d0ff; background-color: #2a4254; } /* RegionMarker */
-    code span.sc { color: #95e6cb; } /* SpecialChar */
-    code span.ss { color: #95e6cb; } /* SpecialString */
-    code span.st { color: #bae67e; } /* String */
-    code span.va { color: #5ccfe6; } /* Variable */
-    code span.vs { color: #bae67e; } /* VerbatimString */
-    code span.wa { color: #f28779; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d5c0e57bac3d02429cb375849bdcca4b.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -197,7 +131,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">1.3.Statistics and Samples</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">1.4.Statistics and Samples</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -207,216 +141,56 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-10</p>
-</section><section id="quick-recap" class="slide level2"><h2>Quick recap</h2>
-<p>Last lecture we discussed:</p>
+  <p class="date">2025-09-15</p>
+</section><section id="wrapping-it-up" class="slide level2"><h2>Wrapping it up</h2>
 <ul>
-<li class="fragment">The two types of errors associated with sampling: sampling error and sampling bias</li>
-<li class="fragment">Properties of a good sample</li>
-</ul>
-<aside class="notes"><p>Ask for volunteers to remind these concepts</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
-<ul>
-<li>Types of variables</li>
-<li>Types of studies</li>
+<li>Types of experiments</li>
 <li>Correlation <em>vs.</em> Causation</li>
-</ul>
-<aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="how-do-we-choose-random-numbers-its-actually-really-hard" class="slide level2"><h2>How do we choose random numbers? It’s actually really hard!</h2>
-<ul>
-<li class="fragment">Here is random number generator, where the randomness comes from atmospheric noise <a href="https://www.random.org/integers/" class="uri">https://www.random.org/integers/</a>
-</li>
-<li class="fragment">In practice, for most statistical purposes, pseudo-random numbes are good enough and what we usually get with “random sampling functions” in R.</li>
-</ul>
-
-<aside><div>
-<p>One notable example of when this may not be good enough is cryptography, but that’s outside of our scope. If you’re curious, you can learn more <a href="https://dev.to/artis3n/random-vs-pseudorandom">here</a>.</p>
-</div></aside></section><section id="random-sampling-in-r" class="slide level2"><h2>Random sampling in R</h2>
-<ul>
-<li>Actually pseudo-random</li>
-<li>If you run the code below, it is very unlikely you will get the same numbers I did</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Sample 3 random numbers between 1 and 10 1. Define the numbers from which you</span></span>
-<span id="cb1-2"><a></a><span class="co"># will sample</span></span>
-<span id="cb1-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
-<span id="cb1-4"><a></a><span class="co"># 2. Take 3 random numbers from this set</span></span>
-<span id="cb1-5"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  2  1 10</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># now, to convince yourself, do it again</span></span>
-<span id="cb3-2"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  8  7 10</code></pre>
-</div>
-</div>
-</section><section id="random-sampling-in-r-1" class="slide level2"><h2>Random sampling in R</h2>
-<ul>
-<li>But you can actually make this reproducible!</li>
-<li>How? Setting a <strong>seed</strong>!</li>
-<li>If you run the code below with the same seed you should get the same numbers I did</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Sample 3 random numbers between 1 and 10 1. Define the numbers from which you</span></span>
-<span id="cb5-2"><a></a><span class="co"># will sample</span></span>
-<span id="cb5-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
-<span id="cb5-4"><a></a><span class="co"># 2. Set seed</span></span>
-<span id="cb5-5"><a></a><span class="fu">set.seed</span>(<span class="dv">1985</span>)  <span class="co">#the seed can be any number.</span></span>
-<span id="cb5-6"><a></a><span class="co"># 3. Take 3 random numbers from this set</span></span>
-<span id="cb5-7"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2 3 6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># now, to convince yourself, do it again</span></span>
-<span id="cb7-2"><a></a><span class="fu">set.seed</span>(<span class="dv">1985</span>)</span>
-<span id="cb7-3"><a></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2 3 6</code></pre>
-</div>
-</div>
-</section><section id="types-of-variables" class="slide level2 center" data-background="#898928"><h2>Types of Variables</h2>
-</section><section id="variables-and-data" class="slide level2"><h2>Variables and “Data”</h2>
+</ul></section><section id="section" class="slide level2 center"><h2></h2>
 <blockquote>
-<p>A <strong>variable</strong> is a characteristic measured on individuals drawn from a population under study.</p>
+<p>In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, <strong>“confounding factor”</strong>, or “lurking variable”). <a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wikipedia Commons</a></p>
 </blockquote>
-<blockquote>
-<p><strong>Data</strong> are measurements of one or more variables made on a collection of individuals. (i.e., your sample)</p>
-</blockquote>
-
-<img data-src="https://imgs.xkcd.com/comics/data.png" alt="[Cueball reading off a smart phone to someone off-screen.]     Cueball: According to this polling data, after Kirk and Picard, the most popular Star Trek character are Data.     Off-screen voice: Augh!     [Caption below the frame:]     Annoy grammar pedants on all sides by making &quot;data&quot; singular except when referring to the android." width="638" class="r-stretch quarto-figure-center"><p class="caption">From: https://xkcd.com/1429. If you want to have more fun at the expense of language pedants, try developing an hypercorrection habit.</p></section><section id="types-of-variablesdata" class="slide level2"><h2>Types of variables/data</h2>
 <div class="goal">
-<p>Numeric (also known as quantitative)</p>
+<p>Confounding Variables: variables that are not considered in an experimental study and which potentially drive an association.</p>
+</div>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Comparison_confounder_mediator.svg/2880px-Comparison_confounder_mediator.svg.png" alt="[From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)]" class="r-stretch quarto-figure-center"><p class="caption">From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)</p></section><section id="confounding-variables" class="slide level2"><h2>Confounding Variables?</h2>
+<div class="goal">
+<p>Example 1. Consider, a study showing (positive association) that people who ate more steaks can do more push-ups.</p>
 </div>
 <ul>
-<li class="fragment">
-<strong>Discrete:</strong> can be <em>counted</em>
-</li>
-<li class="fragment">
-<strong>Continuous:</strong> can be <em>measured</em>
-</li>
+<li class="fragment">Eating steaks could give people more muscle tone/strength OR</li>
+<li class="fragment">A certain type of person may enjoy both eating steaks and building muscle OR</li>
+<li class="fragment">Something else</li>
 </ul>
+<p>Questions:</p>
+<ul>
+<li class="fragment">Observational or experimental?</li>
+<li class="fragment">Is this enough to show causation?</li>
+</ul></section><section id="confounding-variables-1" class="slide level2"><h2>Confounding Variables?</h2>
 <div class="goal">
-<p>Categorical (also known as class or nominal variables)</p>
+<p>Example 2. Consider a study showing that plants with fewer pests had greater biomass.</p>
 </div>
 <ul>
-<li class="fragment">
-<strong>Ordinal:</strong> can be <em>ranked</em>
-</li>
-<li class="fragment">
-<strong>Nominal:</strong> cannot be ranked</li>
+<li class="fragment">Pests could decrease plant vigor. OR</li>
+<li class="fragment">Vigorous plants could fight off pests. OR</li>
+<li class="fragment">Something else</li>
 </ul>
-
-<aside><div>
-<p>Why do we care about these types? We will focus a lot on this in our next topic about how to display and describe data. Knowing what kind of variable we have drives our models of data analysis, and is therefore critical to the enterprise of statistics.</p>
-</div></aside></section><section id="numeric-datavariables" class="slide level2"><h2>Numeric Data/Variables</h2>
-<div class="goal">
-<p>Discrete: can only take some values within acceptable interval</p>
-</div>
-<p>Examples:</p>
+<p>Questions:</p>
 <ul>
-<li class="fragment">Number of limbs</li>
-<li class="fragment">Number of offspring</li>
-<li class="fragment">Number of petals</li>
-<li class="fragment">Number of teeth</li>
-<li class="fragment">Natural numbers: <span class="math inline">\(\{0,1,2,3,4,5,6,7,...,\infty\}\)</span>
-</li>
-</ul></section><section id="numeric-datavariables-1" class="slide level2"><h2>Numeric Data/Variables</h2>
-<div class="goal">
-<p>Continuous: Can take any value within acceptable interval</p>
+<li class="fragment">Observational or experimental?</li>
+<li class="fragment">Is this enough to show causation?</li>
+</ul></section><section id="observational-studies-cannot-separate-cause-and-effect" class="slide level2 center" data-background="#006475"><h2>Observational studies cannot separate cause and effect</h2>
+<div class="r-fit-text">
+<p>Simply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested</p>
 </div>
-<p>Examples:</p>
+</section><section id="but-experiments-can-reveal-causation" class="slide level2 scrollable"><h2>But experiments can reveal causation</h2>
 <ul>
-<li class="fragment">Arm length (cm, inches)</li>
-<li class="fragment">Height (cm, inches)</li>
-<li class="fragment">Weight (kg, lbs)</li>
-<li class="fragment">Age and longevity (in years, months, etc.)</li>
-<li class="fragment">Tail length (cm, inches)</li>
-<li class="fragment">Dose (e.g., in micrograms/gram)</li>
-<li class="fragment">Skin color (measured using a reflectometer, measure in wavelengths)</li>
-</ul></section><section id="categorical-variables" class="slide level2"><h2>Categorical variables</h2>
-<p>Examples:</p>
-<ul>
-<li class="fragment">Genotype (e.g., AA, AG, GG)</li>
-<li class="fragment">Drug treatment (e.g.&nbsp;aspirin <em>vs.</em>ibuprofen)</li>
-<li class="fragment">Province of origin</li>
-<li class="fragment">Survival status (i.e., live or die)</li>
-<li class="fragment">Skin/fur/coat/feather color (e.g., black, yellow, red, etc.)</li>
-</ul></section><section id="relationships-between-variables" class="slide level2 center" data-background="#006475"><h2>Relationships between variables</h2>
-<p>We predict the values of response variables from explanatory variables.</p>
-<p>Outdated nomenclature: dependent and independent variables</p>
-</section><section id="case-study-surviving-the-titanic" class="slide level2"><h2>Case Study: surviving the Titanic</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-1607041779.png"></p>
-<figcaption>Confession: I watched this EIGHT times in the movie theater!</figcaption></figure>
-</div>
-
-<aside><div>
-<p>Image from: <a href="https://upload.wikimedia.org/wikipedia/commons/9/91/Titanic_struck_iceberg.jpg">Wikipedia Commons</a>.</p>
-</div></aside></section><section id="case-study-surviving-the-titanic-1" class="slide level2"><h2>Case Study: surviving the Titanic</h2>
-<div class="goal">
-<p>Consider the fate of the approximatley 2,200 passengers of the titanic, including children and adults of both sexes.</p>
-</div>
-
-<img data-src="Statistics_and_Samples3_files/figure-revealjs/titanic-1.png" alt="Left, proportion of males and females among adults in the titanic who survived.  Right, same thing but for children." width="960" class="r-stretch quarto-figure-center"><p class="caption">This is a mosaic plot. We will learn about it in our next topic. Code based on snippets from Y. Brandvain.</p></section><section id="discuss" class="slide level2 scrollable"><h2>Discuss</h2>
-
-<img data-src="Statistics_and_Samples3_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ol type="1">
-<li class="fragment"><p>Variables? Types? Explanatory &amp; response variables?</p></li>
-<li class="fragment"><p>Describe the population this result came from…</p></li>
-<li class="fragment"><p>How far would you generalize from this to “Women &amp; Children 1st?”</p></li>
-<li class="fragment"><p>Experimental or observational study?</p></li>
-</ol></section><section id="experimental-vs.-observational-studies" class="slide level2"><h2>Experimental <em>vs.</em> Observational Studies</h2>
-<div class="goal">
-<p>In Experimental Studies, researchers assign treatments to individuals.</p>
-</div>
-<ul>
-<li class="fragment">Big advantage: possibility to conduct randomization (random assignment of treatments to units)</li>
-<li class="fragment">Why is this important?</li>
-</ul>
-<div class="goal">
-<p>In Observational Studies, researchers do not assign treatments to individuals.</p>
-</div>
-<ul>
-<li class="fragment">But often this is the only source of data available</li>
-</ul></section><section id="correlation-does-not-imply-causation" class="slide level2"><h2>Correlation DOES NOT imply causation</h2>
-<p>But it can, of course, suggest it</p>
-<div class="goal">
-<p>Because researchers do not assign treatments in observational studies, observations cannot prove causation or disentangle cause and effect.</p>
-</div>
-
-<img data-src="https://imgs.xkcd.com/comics/correlation.png" alt="[    [Cueball is talking to Megan.]     Cueball: I used to think correlation implied causation. [Cueball lift his hand while continuing to talk to Megan.] Cueball: Then I took a statistics class. Now I don't. [Back to the same situation as the first frame.] Megan: Sounds like the class helped. Cueball: Well, maybe.]" class="r-stretch quarto-figure-center"><p class="caption">From: https://www.xkcd.com/552/. Correlation doesn’t imply causation, but it does waggle its eyebrows suggestively and gesture furtively while mouthing ‘look over there’.</p></section><section id="case-study" class="slide level2" data-background="#006475"><h2>Case Study</h2>
-<div class="goal">
-<p>The distance between jupiter and the sun correlates with the number of secretaries in-alaska</p>
-</div>
-
-<img data-src="images/clipboard-3123712222.png" class="r-stretch quarto-figure-center"><p class="caption">From: https://tylervigen.com/spurious/correlation/2733_the-distance-between-jupiter-and-the-sun_correlates-with_the-number-of-secretaries-in-alaska</p></section><section id="section" class="slide level2"><h2></h2>
-<blockquote>
-<p>As the distance between Jupiter and the Sun increases, the gravitational pull on Earth fluctuates, leading to a rise in cosmic productivity waves. These waves, when they reach Alaska, have been found to have a magnetic effect on the influx of secretarial energy, prompting more individuals to pursue careers in Alaska as professional secretaries. It’s like a celestial calling for secretarial excellence in the land of the midnight sun.</p>
-</blockquote>
-
-<aside><div>
-<p><strong>What is this?</strong> “Random correlations dredged up from silly data, turned into linear line charts. Now with AI-generated explanations of the causal connection and silly images to accompany the charts!” <a href="https://tylervigen.com/" class="uri">https://tylervigen.com/</a></p>
-</div></aside></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<li class="fragment"><p>Because researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds<sup>1</sup> and allows us to separate cause and effect !!!</p></li>
+<li class="fragment"><p>But be careful, experimental artifacts can introduce bias.</p></li>
+<li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the <strong>placebo effect</strong>.</p></li>
+<li class="fragment"><p>Appropriate controls are critical to a good experiment.</p></li>
+</ul><aside><ol class="aside-footnotes"><li id="fn1"><p>Except those that arise by chance!</p></li></ol></aside></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 
