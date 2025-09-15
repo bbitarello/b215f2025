@@ -616,7 +616,7 @@
     "href": "slides/Statistics_and_Samples4.html#section",
     "title": "1.4.Statistics and Samples",
     "section": "",
-    "text": "In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, “confounding factor”, or “lurking variable”). Wikipedia Commons\n\n\nConfounding Variables: variables that are not considered in an experimental study and which potentially drive an association."
+    "text": "In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, “confounding factor”, or “lurking variable”). Wikipedia Commons\n\n\nConfounding Variables: unmeasured variable that changes in tandem with one or more of the measured variables, giving a false appearance of a causal association between the measured variables."
   },
   {
     "objectID": "slides/Statistics_and_Samples4.html#example",
