@@ -504,7 +504,7 @@
     "href": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table-1",
     "title": "2.1.Displaying & Describing Data",
     "section": "Practice: Mean from a frequency table",
-    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\n\n\n\nconvictions &lt;- c(0, 1, 2, 3, 4,\n    5, 6, 7, 8, 9, 10, 11, 12,\n    13, 14)\nfreqs &lt;- c(265, 49, 21, 19, 10,\n    10, 2, 2, 4, 2, 1, 4, 3, 1,\n    2)\nn_total &lt;- sum(freqs)  # 395\n\n. . .\n\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) across all values and diving by \\(n_{total}\\).\n\n\n# multiply two vectors of\n# same length\n\nFinalMean &lt;- sum(convictions *\n    freqs)/n_total\nFinalMean\n\n[1] 1.126582\n\n\n\n\n\n\n\n\nA frequency table\n\nconvictions\nfrequency\nConvictionxFreq\n\n\n\n0\n265\n0\n\n\n1\n49\n49\n\n\n2\n21\n42\n\n\n3\n19\n57\n\n\n4\n10\n40\n\n\n5\n10\n50\n\n\n6\n2\n12\n\n\n7\n2\n14\n\n\n8\n4\n32\n\n\n9\n2\n18\n\n\n10\n1\n10\n\n\n11\n4\n44\n\n\n12\n3\n36\n\n\n13\n1\n13\n\n\n14\n2\n28"
+    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\n\n\n\nCodeconvictions &lt;- c(0, 1, 2, 3, 4,\n    5, 6, 7, 8, 9, 10, 11, 12,\n    13, 14)\nfreqs &lt;- c(265, 49, 21, 19, 10,\n    10, 2, 2, 4, 2, 1, 4, 3, 1,\n    2)\nn_total &lt;- sum(freqs)  # 395\n\n\n\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) across all values and diving by \\(n_{total}\\).\n\n\nCode# multiply two vectors of\n# same length\n\nFinalMean &lt;- sum(convictions *\n    freqs)/n_total\nFinalMean\n\n[1] 1.126582\n\n\n\n\n\n\n\n\nA frequency table\n\nconvictions\nfrequency\nConvictionxFreq\n\n\n\n0\n265\n0\n\n\n1\n49\n49\n\n\n2\n21\n42\n\n\n3\n19\n57\n\n\n4\n10\n40\n\n\n5\n10\n50\n\n\n6\n2\n12\n\n\n7\n2\n14\n\n\n8\n4\n32\n\n\n9\n2\n18\n\n\n10\n1\n10\n\n\n11\n4\n44\n\n\n12\n3\n36\n\n\n13\n1\n13\n\n\n14\n2\n28"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData.html#median",
@@ -518,7 +518,7 @@
     "href": "slides/DisplayingAndDescribingData.html#mean-and-median-in-r",
     "title": "2.1.Displaying & Describing Data",
     "section": "Mean and Median in R",
-    "text": "Mean and Median in R\n\n# a vector with the numbers\nmynumbers &lt;- c(1, 15, 9, 16, 6, 17, 10, 5, 12, 14, 13)\n# mean 'manually'\nmysum &lt;- sum(mynumbers)  #sum all numbers\nl &lt;- length(mynumbers)  #number of elements in vector\nmymean &lt;- mysum/l\nmymean\n\n[1] 10.72727\n\n# note that you can use a built-in function for this:\nmymean2 &lt;- mean(mynumbers)\nmymean2\n\n[1] 10.72727\n\n# median with built-in function\nmymedian &lt;- median(mynumbers)\nmymedian\n\n[1] 12\n\n# median 'manually'\nmynumbers2 &lt;- sort(mynumbers)\nmynumbers2\n\n [1]  1  5  6  9 10 12 13 14 15 16 17\n\n# since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6\nmynumbers2[6]\n\n[1] 12"
+    "text": "Mean and Median in R\n\nCode# a vector with the numbers\nmynumbers &lt;- c(1, 15, 9, 16, 6, 17, 10, 5, 12, 14, 13)\n# mean 'manually'\nmysum &lt;- sum(mynumbers)  #sum all numbers\nl &lt;- length(mynumbers)  #number of elements in vector\nmymean &lt;- mysum/l\nmymean\n\n[1] 10.72727\n\nCode# note that you can use a built-in function for this:\nmymean2 &lt;- mean(mynumbers)\nmymean2\n\n[1] 10.72727\n\nCode# median with built-in function\nmymedian &lt;- median(mynumbers)\nmymedian\n\n[1] 12\n\nCode# median 'manually'\nmynumbers2 &lt;- sort(mynumbers)\nmynumbers2\n\n [1]  1  5  6  9 10 12 13 14 15 16 17\n\nCode# since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6\nmynumbers2[6]\n\n[1] 12"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData.html#practice-median-with-even-sample-size",
@@ -546,7 +546,7 @@
     "href": "slides/DisplayingAndDescribingData.html#histograms-reveal-measures-of-center-1",
     "title": "2.1.Displaying & Describing Data",
     "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
+    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData.html#mean-x-median",
