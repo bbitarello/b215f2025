@@ -6,12 +6,12 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a75ea84b2aefd0354fe7c93493611467.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-03325b20210ee815536666ba4a3739ba.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.33">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-10">
-<meta name="keywords" content="Displaying &amp; Describing Data">
+<meta name="dcterms.date" content="2025-09-15">
+<meta name="keywords" content="Central tendency and spread">
 <title>BIOL B215: Biostatistics with R – 2.1.Displaying &amp; Describing Data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,8 +30,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d5c0e57bac3d02429cb375849bdcca4b.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-69fb57dd407f173f8a223567542f2e2f.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,6 +198,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block"><h1 class="title">2.1.Displaying &amp; Describing Data</h1>
+  <p class="subtitle">Measures of central tendency and spread</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -141,18 +208,38 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-10</p>
-</section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+  <p class="date">2025-09-15</p>
+</section><section id="outline" class="slide level2"><h2>Outline</h2>
 <ul>
-<li class="fragment">Differentiate between estimates of location and estimates of width.</li>
-<li class="fragment">Recognize that variability is not simply noise, but is a key parameter that can be estimated.</li>
-<li class="fragment">Become familiar with the most common descriptive statistics.</li>
-<li class="fragment">Know when the mean or median is a more appropriate summary of location.</li>
-<li class="fragment">Distinguish between explanatory and exploratory figures.</li>
-<li class="fragment">Identify what makes a good graph.</li>
-<li class="fragment">Understand how data types drive figure design.</li>
-<li class="fragment">Understand how to make effective tables.</li>
-</ul></section><section id="center" class="slide level2"><h2>{center}</h2>
+<li>Estimates of location</li>
+<li>Estimates of width</li>
+<li>Explanatory and exploratory figures</li>
+<li>Best practices in figure design</li>
+<li>How data types drive figure design</li>
+<li>How to make effective tables</li>
+</ul>
+<aside class="notes"><p>today: location and width; next class plots</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+<ul>
+<li><strong>Differentiate between estimates of location and estimates of width.</strong></li>
+<li><strong>Recognize that variability is not simply noise, but is a key parameter that can be estimated.</strong></li>
+<li><strong>Become familiar with the most common descriptive statistics.</strong></li>
+<li><strong>Know when the mean or median is a more appropriate summary of location.</strong></li>
+<li>Distinguish between explanatory and exploratory figures.</li>
+<li>Identify what makes a good graph.</li>
+<li>Understand how data types drive figure design.</li>
+<li>Understand how to make effective tables.</li>
+</ul>
 <aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -164,33 +251,1364 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="three-common-descriptions-of-data" class="slide level2"><h2>Three Common Descriptions of Data</h2>
+      }</style></aside></section><section id="frequency-vs.-probability-distribution" class="slide level2"><h2>Frequency vs.&nbsp;Probability Distribution</h2>
+<div class="columns">
+<div class="column">
+<p><em>Frequency Distribution</em> <img data-src="images/clipboard-1329036191.png" width="363"></p>
 <ul>
-<li class="fragment"><p>Location (central tendency)</p></li>
-<li class="fragment"><p>Width (spread)</p></li>
-<li class="fragment"><p>Association (correlation)</p></li>
-</ul></section><section id="measures-of-location-central-tendency-mean-median-mode" class="slide level2 center" data-background="#006475"><h2>Measures of location (central tendency): Mean, Median, Mode</h2>
-</section><section id="the-word-average-is-imprecise" class="slide level2"><h2>The word “average” is imprecise</h2>
+<li>sample</li>
+<li>a snapshot of actual counts of outcomes in a given sample</li>
+</ul>
+</div><div class="column">
+<p><em>Probably Distribution</em> <img data-src="images/clipboard-1407270746.png" width="343"></p>
+<ul>
+<li>population</li>
+<li>usually not known so based on probability rules: it represents the theoretical probability of all possible outcomes of a random variable</li>
+</ul>
+</div></div>
+</section><section id="descriptive-statistics" class="slide level2"><h2>Descriptive Statistics</h2>
+<div class="r-fit-text">
+<p>Or <strong>summary statistics</strong>: quantities that capture important features of frequency distributions</p>
+</div>
+</section><section id="three-common-descriptions-of-data" class="slide level2"><h2>Three Common Descriptions of Data</h2>
+<ul>
+<li><p>Location (<strong>central tendency</strong>)</p></li>
+<li><p>Width (<strong>spread</strong>)</p></li>
+<li><p>Association (<strong>correlation</strong>)</p></li>
+</ul></section><section id="measures-of-location-central-tendency" class="slide level2 center" data-background="#006475"><h2>Measures of location (central tendency)</h2>
+</section><section id="measures-of-location" class="slide level2 center"><h2>Measures of location</h2>
+<div class="r-fit-text">
+<ul>
+<li class="fragment"><p><strong>Mean:</strong> The weight of your data. The average value.</p></li>
+<li class="fragment"><p><strong>Median:</strong> A “typical individual”. If I take an individual at random, this is the value we expect them to be closest to.</p></li>
+<li class="fragment"><p><strong>Mode:</strong> The typical individual <strong>most common</strong> value for an individual. The most likely answer for an individual selected at random.</p></li>
+</ul>
+</div>
+</section><section id="the-average-problem" class="slide level2"><h2>The <del>average</del> problem</h2>
+<div class="goal">
 <p>“Average” is often used synonymously with mean.</p>
+</div>
 <ul>
-<li class="fragment"><p>But: medians and even modes are sometimes called an “average”.</p></li>
-<li class="fragment"><p>When you see the word, “average”, pay attention to which measure of location it describes.</p></li>
-<li class="fragment"><p>In this course, you should use statistical terms precisely, I.e., to indicate the same consistently. So if you want to say mean, say mean, etc.</p></li>
-</ul></section><section id="mean" class="slide level2"><h2>Mean</h2>
+<li><p>But: medians and even modes are sometimes called an “average”.</p></li>
+<li><p>When you see the word, “average”, pay attention to which measure of location it describes.</p></li>
+</ul>
+
+<aside><div>
+<p>In this course, you should use statistical terms precisely, i.e., to indicate the same consistently. So if you want to say mean, say mean, not average.</p>
+</div></aside></section><section id="arithmetic-mean" class="slide level2"><h2>(Arithmetic) Mean</h2>
 <div class="goal">
 <p>The sum of values divided by the sample size.</p>
 </div>
-<p><span class="math display">\[\bar{Y}=\frac{\sum_{i=1}^{n}Y_{i}}{n}\]</span></p>
+<p><font color="#00a1b7"><span class="math display">\[\bar{Y}=\frac{\sum_{i=1}^{n}Y_{i}}{n}\]</span> </font></p>
+<div class="columns">
+<div class="column">
 <ul>
 <li>
-<span class="math inline">\(\bar{Y}\)</span> is the mean value of variable <span class="math inline">\(Y\)</span>.</li>
+<span class="math inline">\(\bar{Y}\)</span> is the mean value of variable <span class="math inline">\(Y\)</span>
+</li>
 <li>
-<span class="math inline">\(\sum\)</span> signified “sum”.</li>
+<span class="math inline">\(\sum\)</span> signified “sum”</li>
+</ul>
+</div><div class="column">
+<ul>
 <li>
 <span class="math inline">\(n\)</span> is the number of individuals in the samples (sample size)</li>
 <li>
-<span class="math inline">\(Y_{i}\)</span> is the observed value for the <span class="math inline">\(i\)</span>-th individual.</li>
-</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<span class="math inline">\(Y_{i}\)</span> is the observed value for the <span class="math inline">\(i\)</span>-th individual</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p><strong>Example</strong>: The mean of the set of 11 numbers: <span class="math inline">\(1, 15,9, 16,6, 17, 10,  5, 12, 14, 13\)</span> is</p>
+<p><span class="math inline">\(\bar{Y} = 1+15+9+16+6+17+10+5+12+14+13/11 = 106.1818\)</span></p>
+
+</div>
+<aside><div>
+<p>This is the “arithmetic mean”, the one you see most often. The three pytagorean means also include the geometric mean and the harmonic mean.</p>
+</div></aside></section><section id="practice-mean-from-a-frequency-table" class="slide level2"><h2>Practice: Mean from a frequency table</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>Frequency tables show the number of times, <span class="math inline">\(n_{i}\)</span> a value, <span class="math inline">\(Y_{i}\)</span>, is observed in a sample of size <span class="math inline">\(n_{total}\)</span></p></li>
+<li><p>We calculate the mean from a frequency table by summing the product of <span class="math inline">\(n_{i}\)</span> and <span class="math inline">\(Y_{i}\)</span> all values and diving by <span class="math inline">\(n_{total}\)</span>.</p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div id="uffwgbxvci" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uffwgbxvci table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#uffwgbxvci thead, #uffwgbxvci tbody, #uffwgbxvci tfoot, #uffwgbxvci tr, #uffwgbxvci td, #uffwgbxvci th {
+  border-style: none;
+}
+
+#uffwgbxvci p {
+  margin: 0;
+  padding: 0;
+}
+
+#uffwgbxvci .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uffwgbxvci .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uffwgbxvci .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uffwgbxvci .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uffwgbxvci .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uffwgbxvci .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uffwgbxvci .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uffwgbxvci .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uffwgbxvci .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#uffwgbxvci .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uffwgbxvci .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uffwgbxvci .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uffwgbxvci .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uffwgbxvci .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uffwgbxvci .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uffwgbxvci .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uffwgbxvci .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uffwgbxvci .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#uffwgbxvci .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uffwgbxvci .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uffwgbxvci .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uffwgbxvci .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uffwgbxvci .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uffwgbxvci .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uffwgbxvci .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uffwgbxvci .gt_left {
+  text-align: left;
+}
+
+#uffwgbxvci .gt_center {
+  text-align: center;
+}
+
+#uffwgbxvci .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uffwgbxvci .gt_font_normal {
+  font-weight: normal;
+}
+
+#uffwgbxvci .gt_font_bold {
+  font-weight: bold;
+}
+
+#uffwgbxvci .gt_font_italic {
+  font-style: italic;
+}
+
+#uffwgbxvci .gt_super {
+  font-size: 65%;
+}
+
+#uffwgbxvci .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#uffwgbxvci .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uffwgbxvci .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uffwgbxvci .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uffwgbxvci .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uffwgbxvci .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uffwgbxvci .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#uffwgbxvci .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#uffwgbxvci div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="convictions" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">convictions</th>
+<th id="frequency" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">frequency</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">0</td>
+<td class="gt_row gt_right" headers="frequency">265</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">1</td>
+<td class="gt_row gt_right" headers="frequency">49</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">2</td>
+<td class="gt_row gt_right" headers="frequency">21</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">3</td>
+<td class="gt_row gt_right" headers="frequency">19</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">4</td>
+<td class="gt_row gt_right" headers="frequency">10</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">5</td>
+<td class="gt_row gt_right" headers="frequency">10</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">6</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">7</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">8</td>
+<td class="gt_row gt_right" headers="frequency">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">9</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">10</td>
+<td class="gt_row gt_right" headers="frequency">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">11</td>
+<td class="gt_row gt_right" headers="frequency">4</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">12</td>
+<td class="gt_row gt_right" headers="frequency">3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">13</td>
+<td class="gt_row gt_right" headers="frequency">1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">14</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A frequency table. Data from Farrington (1994) and distributed at http://www.webapp.icpsr.umich.edu/cocoon/NACJD-STUDY/08488.xml.</p>
+</div>
+</div>
+</div></div>
+</section><section id="practice-mean-from-a-frequency-table-1" class="slide level2"><h2>Practice: Mean from a frequency table</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Frequency tables show the number of times, <span class="math inline">\(n_{i}\)</span> a value, <span class="math inline">\(Y_{i}\)</span>, is observed in a sample of size <span class="math inline">\(n_{total}\)</span>
+</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>convictions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>,</span>
+<span id="cb1-2"><a></a>    <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>,</span>
+<span id="cb1-3"><a></a>    <span class="dv">13</span>, <span class="dv">14</span>)</span>
+<span id="cb1-4"><a></a>freqs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">265</span>, <span class="dv">49</span>, <span class="dv">21</span>, <span class="dv">19</span>, <span class="dv">10</span>,</span>
+<span id="cb1-5"><a></a>    <span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>,</span>
+<span id="cb1-6"><a></a>    <span class="dv">2</span>)</span>
+<span id="cb1-7"><a></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(freqs)  <span class="co"># 395</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>. . .</p>
+<ul>
+<li>We calculate the mean from a frequency table by summing the product of <span class="math inline">\(n_{i}\)</span> and <span class="math inline">\(Y_{i}\)</span> across all values and diving by <span class="math inline">\(n_{total}\)</span>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># multiply two vectors of</span></span>
+<span id="cb2-2"><a></a><span class="co"># same length</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>FinalMean <span class="ot">&lt;-</span> <span class="fu">sum</span>(convictions <span class="sc">*</span></span>
+<span id="cb2-5"><a></a>    freqs)<span class="sc">/</span>n_total</span>
+<span id="cb2-6"><a></a>FinalMean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.126582</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="vilnllbnxk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vilnllbnxk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#vilnllbnxk thead, #vilnllbnxk tbody, #vilnllbnxk tfoot, #vilnllbnxk tr, #vilnllbnxk td, #vilnllbnxk th {
+  border-style: none;
+}
+
+#vilnllbnxk p {
+  margin: 0;
+  padding: 0;
+}
+
+#vilnllbnxk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#vilnllbnxk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vilnllbnxk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vilnllbnxk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vilnllbnxk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vilnllbnxk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vilnllbnxk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vilnllbnxk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vilnllbnxk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#vilnllbnxk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#vilnllbnxk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vilnllbnxk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vilnllbnxk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vilnllbnxk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vilnllbnxk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vilnllbnxk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#vilnllbnxk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#vilnllbnxk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#vilnllbnxk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vilnllbnxk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#vilnllbnxk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vilnllbnxk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vilnllbnxk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vilnllbnxk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vilnllbnxk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vilnllbnxk .gt_left {
+  text-align: left;
+}
+
+#vilnllbnxk .gt_center {
+  text-align: center;
+}
+
+#vilnllbnxk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vilnllbnxk .gt_font_normal {
+  font-weight: normal;
+}
+
+#vilnllbnxk .gt_font_bold {
+  font-weight: bold;
+}
+
+#vilnllbnxk .gt_font_italic {
+  font-style: italic;
+}
+
+#vilnllbnxk .gt_super {
+  font-size: 65%;
+}
+
+#vilnllbnxk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#vilnllbnxk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#vilnllbnxk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#vilnllbnxk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#vilnllbnxk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#vilnllbnxk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#vilnllbnxk .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#vilnllbnxk .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#vilnllbnxk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<caption>A frequency table</caption>
+<thead><tr class="gt_col_headings header">
+<th id="convictions" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">convictions</th>
+<th id="frequency" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">frequency</th>
+<th id="ConvictionxFreq" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">ConvictionxFreq</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">0</td>
+<td class="gt_row gt_right" headers="frequency">265</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">1</td>
+<td class="gt_row gt_right" headers="frequency">49</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">49</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">2</td>
+<td class="gt_row gt_right" headers="frequency">21</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">42</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">3</td>
+<td class="gt_row gt_right" headers="frequency">19</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">57</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">4</td>
+<td class="gt_row gt_right" headers="frequency">10</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">40</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">5</td>
+<td class="gt_row gt_right" headers="frequency">10</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">50</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">6</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">12</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">7</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">14</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">8</td>
+<td class="gt_row gt_right" headers="frequency">4</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">32</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">9</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">18</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">10</td>
+<td class="gt_row gt_right" headers="frequency">1</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">10</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">11</td>
+<td class="gt_row gt_right" headers="frequency">4</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">44</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">12</td>
+<td class="gt_row gt_right" headers="frequency">3</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">36</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="convictions">13</td>
+<td class="gt_row gt_right" headers="frequency">1</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">13</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="convictions">14</td>
+<td class="gt_row gt_right" headers="frequency">2</td>
+<td class="gt_row gt_right" headers="ConvictionxFreq">28</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="median" class="slide level2"><h2>Median</h2>
+<div class="goal">
+<p>The value halfway through an ordered list of observations.</p>
+</div>
+<ul>
+<li>The <span class="math inline">\((n + 1) / 2\)</span>-th value for odd sized samples.</li>
+<li>Mean of n/2 th and the <span class="math inline">\((n + 2) / 2\)</span>-th value for even sized samples.</li>
+</ul>
+<div class="fragment">
+<p><strong>Example</strong>: Using the same set of numbers as before (try):</p>
+<ul>
+<li>First, order the numbers: <span class="math inline">\(1,  5,  6,  9, 10, 12, 13, 14, 15, 16, 17\)</span>
+</li>
+<li>The <span class="math inline">\((n + 1) / 2\)</span>-th value for odd sized samples: <span class="math inline">\(12\)</span>
+</li>
+</ul>
+</div>
+</section><section id="mean-and-median-in-r" class="slide level2"><h2>Mean and Median in R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># a vector with the numbers</span></span>
+<span id="cb4-2"><a></a>mynumbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">15</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">6</span>, <span class="dv">17</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">13</span>)</span>
+<span id="cb4-3"><a></a><span class="co"># mean 'manually'</span></span>
+<span id="cb4-4"><a></a>mysum <span class="ot">&lt;-</span> <span class="fu">sum</span>(mynumbers)  <span class="co">#sum all numbers</span></span>
+<span id="cb4-5"><a></a>l <span class="ot">&lt;-</span> <span class="fu">length</span>(mynumbers)  <span class="co">#number of elements in vector</span></span>
+<span id="cb4-6"><a></a>mymean <span class="ot">&lt;-</span> mysum<span class="sc">/</span>l</span>
+<span id="cb4-7"><a></a>mymean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10.72727</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># note that you can use a built-in function for this:</span></span>
+<span id="cb6-2"><a></a>mymean2 <span class="ot">&lt;-</span> <span class="fu">mean</span>(mynumbers)</span>
+<span id="cb6-3"><a></a>mymean2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10.72727</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># median with built-in function</span></span>
+<span id="cb8-2"><a></a>mymedian <span class="ot">&lt;-</span> <span class="fu">median</span>(mynumbers)</span>
+<span id="cb8-3"><a></a>mymedian</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># median 'manually'</span></span>
+<span id="cb10-2"><a></a>mynumbers2 <span class="ot">&lt;-</span> <span class="fu">sort</span>(mynumbers)</span>
+<span id="cb10-3"><a></a>mynumbers2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  5  6  9 10 12 13 14 15 16 17</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6</span></span>
+<span id="cb12-2"><a></a>mynumbers2[<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12</code></pre>
+</div>
+</div>
+</section><section id="practice-median-with-even-sample-size" class="slide level2"><h2>Practice: Median with even sample size</h2>
+<div class="goal">
+<p>Calculate the median of the following 10 numbers: <span class="math inline">\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\)</span></p>
+</div>
+</section><section id="attention" class="slide level2"><h2>Attention</h2>
+<div class="columns">
+<div class="column">
+<p><font color="#00a1b7">Estimate = <span class="math inline">\(\bar{Y}, \bar{x}, \text{etc.}\)</span> </font> (sample mean)</p>
+<ul>
+<li>Variable</li>
+</ul>
+</div><div class="column">
+<p><font color="#ad7237">Parameter = <span class="math inline">\(\mu\)</span> </font> (population mean) - Constant</p>
+</div></div>
+</section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
+<div class="goal">
+<p>Recall the <font color="#fdfbf7"><code>iris</code> </font> dataset</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" class="quarto-figure quarto-figure-center" width="450" height="175"></p>
+</figure>
+</div>
+</section><section id="histograms-reveal-measures-of-center-1" class="slide level2"><h2>Histograms reveal measures of center</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">Figure</a></li>
+<li><a href="#tabset-1-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData_files/figure-revealjs/hist-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
+<span id="cb14-3"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb14-4"><a></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
+<span id="cb14-5"><a></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
+<span id="cb14-6"><a></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
+<span id="cb14-7"><a></a>    <span class="fu">bb_theme</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</div>
+</div>
+</div>
+</section><section id="histograms-reveal-measures-of-center-1-output" class="slide level2 output-location-slide"><h2>Histograms reveal measures of center</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData_files/figure-revealjs/hist2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div></section><section id="mean-x-median" class="slide level2"><h2>Mean x Median</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>The mean is more convinient mathematically.</p></li>
+<li><p>The mean is the center of gravity</p></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><p>The median is a better descriptor for skewed population distributions.</p></li>
+<li><p>The median is the middle measurement.</p></li>
+</ul>
+</div></div>
+<div class="goal">
+<p>Both can lead to values that don’t actually exist in the sample. Like the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2 (made up)</p>
+</div>
+</section><section id="skewness" class="slide level2"><h2>Skewness</h2>
+
+<img data-src="DisplayingAndDescribingData_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p><em>2005 U.S. Census</em>. The plot shows the income per household distribution for the bottom 98% of the population. Mean = <span class="math inline">\(\sim43\)</span>;Median: $64k.</p>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure><div class="quarto-figure quarto-figure-left">
+<figure><p><a href="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif"><img data-src="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif" class="quarto-figure quarto-figure-left" width="567"></a></p>
+</figure>
+</div>
+<figcaption>From: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution</figcaption></figure>
+</div>
+<aside class="notes"><p>For measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="mode" class="slide level2"><h2>Mode</h2>
+<div class="goal">
+<p>The most common value observed in a sample</p>
+</div>
+<ul>
+<li><p>easy to pick out as the peak in a histogram</p></li>
+<li><p>Unimodal vs bimodal (multimodal)</p></li>
+<li><p>Multimodal data usually reflects data has multiple (at least two) values that are equally common.</p></li>
+<li><p>Often results from two or more underlying groups being measured together.</p></li>
+<li><p>Useful because it <strong>always reflects a value actually seen in the dataset, unlike mean and median</strong></p></li>
+<li><p><strong>Can be used with data that isn’t numeric</strong></p></li>
+</ul></section><section id="but-how-will-you-know-how-your-data-is-distributed" class="slide level2 center" data-background="#006475"><h2>But how will you know how your data is distributed?</h2>
+<div class="r-fit-text">
+<p>First step: plot your data</p>
+</div>
+</section><section id="measures-of-dispersion" class="slide level2"><h2>Measures of dispersion</h2>
+<ul>
+<li class="fragment"><p>Range [<code>max value - min value</code>]</p></li>
+<li class="fragment"><p>Quartiles, interquartile range [<code>75th percentile - 25th percentile</code>]</p></li>
+<li class="fragment"><p>Variance [<font color="#00a1b7"> estimate = <span class="math inline">\(s^2\)</span> =<span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n-1}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma ^2\)</span> = <span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n}\)</span> ]</font></p></li>
+<li class="fragment"><p>Standard deviation [<font color="#00a1b7"> estimate = <span class="math inline">\(s\)</span> =<span class="math inline">\(\sqrt{s^2}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma\)</span> = <span class="math inline">\(\sqrt{\sigma^2}\)</span> ]</font></p></li>
+<li class="fragment"><p>Coefficient of variation [<font color="#00a1b7"> estimate = CV = <span class="math inline">\(\frac{s}{\bar{Y}}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\frac{\sigma}{\mu}\)</span> ]</font></p></li>
+</ul></section><section id="range" class="slide level2"><h2>Range</h2>
+<div class="goal">
+<p>The difference between the maximum and minimum observed values in a sample</p>
+</div>
+<p><strong>Problem:</strong> Small samples tend to give lower estimates of the range than large samples - how do we call this?</p>
+</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 

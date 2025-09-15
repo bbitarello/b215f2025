@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d5c0e57bac3d02429cb375849bdcca4b.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5b2586a9de7b0a88febf5bef87722489.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -148,49 +148,96 @@ Bárbara D. Bitarello
 <li>Correlation <em>vs.</em> Causation</li>
 </ul></section><section id="section" class="slide level2 center"><h2></h2>
 <blockquote>
-<p>In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, <strong>“confounding factor”</strong>, or “lurking variable”). <a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wikipedia Commons</a></p>
+<p>In statistics, a spurious relationship or <strong>spurious correlation</strong> is a mathematical relationship in which two or more events or variables are associated but <strong>not causally related</strong>, due to either <em>coincidence</em> or the <em>presence of a certain third, unseen factor</em> (referred to as a “common response variable”, <strong>“confounding factor”</strong>, or “lurking variable”). <a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wikipedia Commons</a></p>
 </blockquote>
 <div class="goal">
 <p>Confounding Variables: variables that are not considered in an experimental study and which potentially drive an association.</p>
 </div>
+</section><section id="example" class="slide level2"><h2>Example</h2>
+<div class="goal">
+<p>What could be happening here?</p>
+</div>
 
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Comparison_confounder_mediator.svg/2880px-Comparison_confounder_mediator.svg.png" alt="[From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)]" class="r-stretch quarto-figure-center"><p class="caption">From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)</p></section><section id="confounding-variables" class="slide level2"><h2>Confounding Variables?</h2>
+<img data-src="images/clipboard-2140213545.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="causal-inference" class="slide level2"><h2>Causal Inference</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-60992768.png" class="quarto-figure quarto-figure-center" width="410"></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-2283227453.png" class="quarto-figure quarto-figure-center" alt="&quot;Graphical model: Amediator is a factor in the causal chain (middle)&quot;" width="623"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-1536786161.png" class="quarto-figure quarto-figure-center" alt="A confounder is a spurious factor incorrectly implying causation (bottom)." width="617"></p>
+</figure>
+</div>
+</div>
+</section><section id="causal-inference-1" class="slide level2"><h2>Causal Inference</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-2079622277.png" class="quarto-figure quarto-figure-center" width="390"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-2801989989.png" class="quarto-figure quarto-figure-center" width="589"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-1726896338.png" class="quarto-figure quarto-figure-center" width="589"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Comparison_confounder_mediator.svg/2880px-Comparison_confounder_mediator.svg.png" alt="[From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)]"></p>
+<figcaption>From Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)</figcaption></figure>
+</div>
+</section><section id="example-2" class="slide level2"><h2>Example 2</h2>
 <div class="goal">
-<p>Example 1. Consider, a study showing (positive association) that people who ate more steaks can do more push-ups.</p>
+<p>Consider a study showing (positive association) that people who ate more steaks can do more push-ups.</p>
 </div>
 <ul>
-<li class="fragment">Eating steaks could give people more muscle tone/strength OR</li>
-<li class="fragment">A certain type of person may enjoy both eating steaks and building muscle OR</li>
-<li class="fragment">Something else</li>
+<li>Eating steaks could give people more muscle tone/strength OR</li>
+<li>A certain type of person may enjoy both eating steaks and building muscle OR</li>
+<li>Something else</li>
 </ul>
-<p>Questions:</p>
+<p><strong>Questions:</strong></p>
 <ul>
-<li class="fragment">Observational or experimental?</li>
-<li class="fragment">Is this enough to show causation?</li>
-</ul></section><section id="confounding-variables-1" class="slide level2"><h2>Confounding Variables?</h2>
+<li>Observational or experimental?</li>
+<li>Is this enough to show causation?</li>
+</ul></section><section id="example-3" class="slide level2"><h2>Example 3</h2>
 <div class="goal">
-<p>Example 2. Consider a study showing that plants with fewer pests had greater biomass.</p>
+<p>Consider a study showing that plants with fewer pests had greater biomass.</p>
 </div>
 <ul>
-<li class="fragment">Pests could decrease plant vigor. OR</li>
-<li class="fragment">Vigorous plants could fight off pests. OR</li>
-<li class="fragment">Something else</li>
+<li>Pests could decrease plant vigor OR</li>
+<li>Vigorous plants could fight off pests OR</li>
+<li>Something else</li>
 </ul>
-<p>Questions:</p>
+<p><strong>Questions:</strong></p>
 <ul>
-<li class="fragment">Observational or experimental?</li>
-<li class="fragment">Is this enough to show causation?</li>
+<li>Observational or experimental?</li>
+<li>Is this enough to show causation?</li>
 </ul></section><section id="observational-studies-cannot-separate-cause-and-effect" class="slide level2 center" data-background="#006475"><h2>Observational studies cannot separate cause and effect</h2>
 <div class="r-fit-text">
-<p>Simply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested</p>
+<p>Simply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested.</p>
+<p>The main purpose of experimental studies is to disentangle these effects.</p>
 </div>
-</section><section id="but-experiments-can-reveal-causation" class="slide level2 scrollable"><h2>But experiments can reveal causation</h2>
+</section><section id="but-experiments-can-reveal-causation" class="slide level2"><h2>But experiments can reveal causation</h2>
 <ul>
-<li class="fragment"><p>Because researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds<sup>1</sup> and allows us to separate cause and effect !!!</p></li>
+<li>Because researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds (except those that arise by chance!) and allows us to separate cause and effect !!!</li>
+</ul>
+<ul>
 <li class="fragment"><p>But be careful, experimental artifacts can introduce bias.</p></li>
-<li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the <strong>placebo effect</strong>.</p></li>
+<li class="fragment"><p>For example, the mental boost of receiving a treatment may help people feel better, an example of the <strong>placebo effect</strong> – an improvement in medical condition that results form the physychological effects of treatment.</p></li>
 <li class="fragment"><p>Appropriate controls are critical to a good experiment.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn1"><p>Except those that arise by chance!</p></li></ol></aside></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+</ul>
+<div class="fragment">
+<div class="note">
+<p>Placebo (Latin): “I shall please”, from placeō, “I please”. Read Interleaf 6 for more on the placebo effect.</p>
+</div>
+</div>
+</section><section id="section-1" class="slide level2 center" data-background="#006475"><h2></h2>
 
 
 
