@@ -549,13 +549,6 @@
     "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#histograms-reveal-measures-of-center-1-output",
-    "href": "slides/DisplayingAndDescribingData.html#histograms-reveal-measures-of-center-1-output",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center"
-  },
-  {
     "objectID": "slides/DisplayingAndDescribingData.html#mean-x-median",
     "href": "slides/DisplayingAndDescribingData.html#mean-x-median",
     "title": "2.1.Displaying & Describing Data",
