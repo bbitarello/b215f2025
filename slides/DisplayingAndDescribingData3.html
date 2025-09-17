@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-03325b20210ee815536666ba4a3739ba.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4a4176c2a757821146007d2a6478b1b5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-17">
 <meta name="keywords" content="Spread and Plots">
@@ -97,7 +97,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-69fb57dd407f173f8a223567542f2e2f.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d26673891339402210887695b597bb03.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -234,95 +234,9 @@ Bárbara D. Bitarello
 <li>Best practices in figure design</li>
 <li>How data types drive figure design</li>
 <li>How to make effective tables</li>
-</ul></section><section id="attention" class="slide level2"><h2>Attention</h2>
-<div class="columns">
-<div class="column">
-<p><font color="#00a1b7">Estimate = <span class="math inline">\(\bar{Y}, \bar{x}, \text{etc.}\)</span> </font> (sample mean)</p>
-<ul>
-<li>Variable</li>
-</ul>
-</div><div class="column">
-<p><font color="#ad7237">Parameter = <span class="math inline">\(\mu\)</span> </font> (population mean) - Constant</p>
-</div></div>
-</section><section id="practice-median-with-even-sample-size" class="slide level2"><h2>Practice: Median with even sample size</h2>
-<div class="goal">
-<p>Calculate the median of the following 10 numbers: <span class="math inline">\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\)</span></p>
-</div>
-</section><section id="mean-x-median" class="slide level2"><h2>Mean x Median</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li><p>The mean is more convinient mathematically.</p></li>
-<li><p>The mean is the center of gravity</p></li>
-</ul>
-</div><div class="column">
-<ul>
-<li><p>The median is a better descriptor for skewed population distributions.</p></li>
-<li><p>The median is the middle measurement.</p></li>
-</ul>
-</div></div>
-<div class="fragment">
-<div class="goal">
-<p>Both can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2</p>
-</div>
-</div>
-</section><section id="case-study" class="slide level2"><h2>Case Study</h2>
-<div class="goal">
-<p><em>2005 U.S. Census</em>. The plot shows the income per household distribution for the bottom 98% of the population. Mean = <span class="math inline">\(\sim43\)</span>k; Median: <span class="math inline">\(\sim64\)</span> k.</p>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure><div class="quarto-figure quarto-figure-left">
-<figure><p><a href="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif"><img data-src="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif" class="quarto-figure quarto-figure-left" width="600"></a></p>
-</figure>
-</div>
-<figcaption>From: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution</figcaption></figure>
-</div>
-<aside class="notes"><p>For measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="mean-or-median" class="slide level2"><h2>Mean or Median?</h2>
-<div class="goal">
-<p>Number of seeds per fruit. Which one is better in this case?</p>
-</div>
-
-<img data-src="images/clipboard-3321401039.png" class="r-stretch"></section><section id="mode" class="slide level2"><h2>Mode</h2>
-<div class="goal">
-<p>The most common value observed in a sample</p>
-</div>
-<ul>
-<li><p>easy to pick out as the peak in a histogram</p></li>
-<li><p>Useful because it <strong>always reflects a value actually seen in the dataset, unlike mean and median</strong></p></li>
-</ul>
-
-<img data-src="images/clipboard-1438712889.png" class="r-stretch"></section><section id="mode-1" class="slide level2"><h2>Mode</h2>
-<div class="goal">
-<p>The most common value observed in a sample</p>
-</div>
-<ul>
-<li><p>Unimodal vs bimodal (multimodal)</p></li>
-<li><p>Multimodal data usually reflects data has multiple (at least two) values that are equally common.</p></li>
-<li><p>Often results from two or more underlying groups being measured together.</p></li>
-<li><p><strong>Can be used with data that isn’t numeric</strong></p></li>
-</ul></section><section id="but-how-will-you-know-how-your-data-is-distributed" class="slide level2 center" data-background="#006475"><h2>But how will you know how your data is distributed?</h2>
-<div class="r-fit-text">
-<p>First step: plot your data</p>
-</div>
-</section><section id="skewness" class="slide level2"><h2>Skewness</h2>
-
-<img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"></section><section id="skewness-1" class="slide level2"><h2>Skewness</h2>
-<p><strong>Left: Asymmetric</strong> Few small values. <span class="math inline">\(&gt;1/2\)</span> of values exceed the mean.</p>
-<p><strong>Middle: Symmetric</strong> As many large as small values. <span class="math inline">\(\sim1/2\)</span> of values exceed the mean.</p>
-<p><strong>Right: Asymmetric</strong> Few large values. <span class="math inline">\(&lt;1/2\)</span> of values are less than the mean.</p>
-
-<img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch"></section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
+</ul></section><section><section id="add-this" class="title-slide slide level1"><h1>add this</h1>
+<p>A tibble: 3 × 3 Species mean median <fct><dbl><dbl> 1 setosa 0.246 0.2 2 versicolor 1.33 1.3 3 virginica 2.03 2</dbl></dbl></fct></p>
+</section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
 <div class="goal">
 <p>Recall the <font color="#fdfbf7"><code>iris</code> </font> dataset</p>
 </div>
@@ -349,13 +263,13 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
 <span id="cb1-3"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb1-4"><a></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
 <span id="cb1-5"><a></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
 <span id="cb1-6"><a></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">bb_theme</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a></a>    <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>
@@ -377,25 +291,25 @@ Bárbara D. Bitarello
 <p>Range of weight of 46 chicks at 20 days since birth</p>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
 <span id="cb2-2"><a></a>chick20 <span class="ot">&lt;-</span> ChickWeight[ChickWeight<span class="sc">$</span>Time <span class="sc">==</span> <span class="dv">20</span>, ]<span class="sc">$</span>weight</span>
-<span id="cb2-3"><a></a>chick20</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a></a>chick20</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Max and Min in this dataset at time 20:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># or</span></span>
-<span id="cb5-2"><a></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># or</span></span>
+<span id="cb5-2"><a></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1]  76 361</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># commonly the diff between them is shown</span></span>
-<span id="cb7-2"><a></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># commonly the diff between them is shown</span></span>
+<span id="cb7-2"><a></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 285</code></pre>
 </div>
@@ -405,23 +319,23 @@ Bárbara D. Bitarello
 <p>If I take a sample of just 10 chicks from those 46</p>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>chick10random <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> chick20, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> F)</span>
-<span id="cb9-2"><a></a><span class="fu">summary</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>chick10random <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> chick20, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> F)</span>
+<span id="cb9-2"><a></a><span class="fu">summary</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  133.0   172.0   214.5   211.5   246.2   295.0 </code></pre>
+  133.0   157.8   192.0   202.9   246.5   291.0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">max</span>(chick10random) <span class="sc">-</span> <span class="fu">min</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">max</span>(chick10random) <span class="sc">-</span> <span class="fu">min</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 162</code></pre>
+<pre><code>[1] 158</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">range</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">range</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 133 295</code></pre>
+<pre><code>[1] 133 291</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">diff</span>(<span class="fu">range</span>(chick10random))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">diff</span>(<span class="fu">range</span>(chick10random))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 162</code></pre>
+<pre><code>[1] 158</code></pre>
 </div>
 </div>
 </section><section id="small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples" class="slide level2 center"><h2>Small samples tend to give lower estimates of the range than large samples</h2>
@@ -503,19 +417,19 @@ Bárbara D. Bitarello
 </div></aside></section><section id="iqr-in-r" class="slide level2"><h2>IQR in R</h2>
 <p>IQR in R</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># weights at time 20, n = 46 chicks</span></span>
-<span id="cb17-2"><a></a><span class="fu">head</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># weights at time 20, n = 46 chicks</span></span>
+<span id="cb17-2"><a></a><span class="fu">head</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 199 209 198 160 220 160</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># summary gives quartiles and max/min</span></span>
-<span id="cb19-2"><a></a><span class="fu">summary</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># summary gives quartiles and max/min</span></span>
+<span id="cb19-2"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># IQR</span></span>
-<span id="cb21-2"><a></a><span class="fu">as.numeric</span>(<span class="fu">summary</span>(chick20)[<span class="dv">5</span>] <span class="sc">-</span> <span class="fu">summary</span>(chick20)[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># IQR</span></span>
+<span id="cb21-2"><a></a><span class="fu">as.numeric</span>(<span class="fu">summary</span>(chick20)[<span class="dv">5</span>] <span class="sc">-</span> <span class="fu">summary</span>(chick20)[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 98</code></pre>
 </div>
@@ -523,7 +437,7 @@ Bárbara D. Bitarello
 <div class="fragment">
 <p>Now the shortcut</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">IQR</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">IQR</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 98</code></pre>
 </div>
@@ -532,10 +446,10 @@ Bárbara D. Bitarello
 <div class="fragment">
 <p>And a boxplot</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">boxplot</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">boxplot</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
-<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -566,7 +480,7 @@ Bárbara D. Bitarello
 
 
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -741,7 +655,7 @@ Bárbara D. Bitarello
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -849,13 +763,14 @@ Bárbara D. Bitarello
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
