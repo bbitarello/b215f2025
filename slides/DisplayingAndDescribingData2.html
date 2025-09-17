@@ -209,14 +209,10 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-09-17</p>
-</section><section id="outline" class="slide level2"><h2>Outline</h2>
+</section><section id="last-time" class="slide level2"><h2>Last time</h2>
 <ul>
-<li>Estimates of location</li>
-<li>Estimates of width</li>
-<li>Explanatory and exploratory figures</li>
-<li>Best practices in figure design</li>
-<li>How data types drive figure design</li>
-<li>How to make effective tables</li>
+<li>Mean</li>
+<li>Median</li>
 </ul>
 <aside class="notes"><p>today: location and width; next class plots</p>
 <style type="text/css">
@@ -229,18 +225,59 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+      }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
 <ul>
-<li><strong>Differentiate between estimates of location and estimates of width.</strong></li>
-<li><strong>Recognize that variability is not simply noise, but is a key parameter that can be estimated.</strong></li>
-<li><strong>Become familiar with the most common descriptive statistics.</strong></li>
-<li><strong>Know when the mean or median is a more appropriate summary of location.</strong></li>
-<li>Distinguish between explanatory and exploratory figures.</li>
-<li>Identify what makes a good graph.</li>
-<li>Understand how data types drive figure design.</li>
-<li>Understand how to make effective tables.</li>
+<li>Median example</li>
+<li>Mode</li>
+<li>Estimates of width</li>
+<li>Explanatory and exploratory figures</li>
+<li>Best practices in figure design</li>
+<li>How data types drive figure design</li>
+<li>How to make effective tables</li>
+</ul></section><section id="attention" class="slide level2"><h2>Attention</h2>
+<div class="columns">
+<div class="column">
+<p><font color="#00a1b7">Estimate = <span class="math inline">\(\bar{Y}, \bar{x}, \text{etc.}\)</span> </font> (sample mean)</p>
+<ul>
+<li>Variable</li>
 </ul>
-<aside class="notes"><p>These learning goals are for the entire topic/unit. They will also be available in the study guide.</p>
+</div><div class="column">
+<p><font color="#ad7237">Parameter = <span class="math inline">\(\mu\)</span> </font> (population mean) - Constant</p>
+</div></div>
+</section><section id="practice-median-with-even-sample-size" class="slide level2"><h2>Practice: Median with even sample size</h2>
+<div class="goal">
+<p>Calculate the median of the following 10 numbers: <span class="math inline">\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\)</span></p>
+</div>
+</section><section id="mean-x-median" class="slide level2"><h2>Mean x Median</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>The mean is more convinient mathematically.</p></li>
+<li><p>The mean is the center of gravity</p></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><p>The median is a better descriptor for skewed population distributions.</p></li>
+<li><p>The median is the middle measurement.</p></li>
+</ul>
+</div></div>
+<div class="fragment">
+<div class="goal">
+<p>Both can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2</p>
+</div>
+</div>
+</section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p><em>2005 U.S. Census</em>. The plot shows the income per household distribution for the bottom 98% of the population. Mean = <span class="math inline">\(\sim43\)</span>k; Median: <span class="math inline">\(\sim64\)</span> k.</p>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure><div class="quarto-figure quarto-figure-left">
+<figure><p><a href="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif"><img data-src="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif" class="quarto-figure quarto-figure-left" width="600"></a></p>
+</figure>
+</div>
+<figcaption>From: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution</figcaption></figure>
+</div>
+<aside class="notes"><p>For measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -251,21 +288,41 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="practice-median-with-even-sample-size" class="slide level2"><h2>Practice: Median with even sample size</h2>
+      }</style></aside></section><section id="mean-or-median" class="slide level2"><h2>Mean or Median?</h2>
 <div class="goal">
-<p>Calculate the median of the following 10 numbers: <span class="math inline">\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\)</span></p>
+<p>Number of seeds per fruit. Which one is better in this case?</p>
 </div>
-</section><section id="attention" class="slide level2"><h2>Attention</h2>
-<div class="columns">
-<div class="column">
-<p><font color="#00a1b7">Estimate = <span class="math inline">\(\bar{Y}, \bar{x}, \text{etc.}\)</span> </font> (sample mean)</p>
+
+<img data-src="images/clipboard-3321401039.png" class="r-stretch"></section><section id="mode" class="slide level2"><h2>Mode</h2>
+<div class="goal">
+<p>The most common value observed in a sample</p>
+</div>
 <ul>
-<li>Variable</li>
+<li><p>easy to pick out as the peak in a histogram</p></li>
+<li><p>Useful because it <strong>always reflects a value actually seen in the dataset, unlike mean and median</strong></p></li>
 </ul>
-</div><div class="column">
-<p><font color="#ad7237">Parameter = <span class="math inline">\(\mu\)</span> </font> (population mean) - Constant</p>
-</div></div>
-</section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
+
+<img data-src="images/clipboard-1438712889.png" class="r-stretch"></section><section id="mode-1" class="slide level2"><h2>Mode</h2>
+<div class="goal">
+<p>The most common value observed in a sample</p>
+</div>
+<ul>
+<li><p>Unimodal vs bimodal (multimodal)</p></li>
+<li><p>Multimodal data usually reflects data has multiple (at least two) values that are equally common.</p></li>
+<li><p>Often results from two or more underlying groups being measured together.</p></li>
+<li><p><strong>Can be used with data that isn’t numeric</strong></p></li>
+</ul></section><section id="but-how-will-you-know-how-your-data-is-distributed" class="slide level2 center" data-background="#006475"><h2>But how will you know how your data is distributed?</h2>
+<div class="r-fit-text">
+<p>First step: plot your data</p>
+</div>
+</section><section id="skewness" class="slide level2"><h2>Skewness</h2>
+
+<img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"></section><section id="skewness-1" class="slide level2"><h2>Skewness</h2>
+<p><strong>Left: Asymmetric</strong> Few small values. <span class="math inline">\(&gt;1/2\)</span> of values exceed the mean.</p>
+<p><strong>Middle: Symmetric</strong> As many large as small values. <span class="math inline">\(\sim1/2\)</span> of values exceed the mean.</p>
+<p><strong>Right: Asymmetric</strong> Few large values. <span class="math inline">\(&lt;1/2\)</span> of values are less than the mean.</p>
+
+<img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch"></section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
 <div class="goal">
 <p>Recall the <font color="#fdfbf7"><code>iris</code> </font> dataset</p>
 </div>
@@ -304,61 +361,6 @@ Bárbara D. Bitarello
 </div>
 </div>
 </div>
-</section><section id="mean-x-median" class="slide level2"><h2>Mean x Median</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li><p>The mean is more convinient mathematically.</p></li>
-<li><p>The mean is the center of gravity</p></li>
-</ul>
-</div><div class="column">
-<ul>
-<li><p>The median is a better descriptor for skewed population distributions.</p></li>
-<li><p>The median is the middle measurement.</p></li>
-</ul>
-</div></div>
-<div class="goal">
-<p>Both can lead to values that don’t actually exist in the sample. Like the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2 (made up)</p>
-</div>
-</section><section id="skewness" class="slide level2"><h2>Skewness</h2>
-
-<img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
-<div class="goal">
-<p><em>2005 U.S. Census</em>. The plot shows the income per household distribution for the bottom 98% of the population. Mean = <span class="math inline">\(\sim43\)</span>;Median: $64k.</p>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure><div class="quarto-figure quarto-figure-left">
-<figure><p><a href="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif"><img data-src="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif" class="quarto-figure quarto-figure-left" width="567"></a></p>
-</figure>
-</div>
-<figcaption>From: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution</figcaption></figure>
-</div>
-<aside class="notes"><p>For measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="mode" class="slide level2"><h2>Mode</h2>
-<div class="goal">
-<p>The most common value observed in a sample</p>
-</div>
-<ul>
-<li><p>easy to pick out as the peak in a histogram</p></li>
-<li><p>Unimodal vs bimodal (multimodal)</p></li>
-<li><p>Multimodal data usually reflects data has multiple (at least two) values that are equally common.</p></li>
-<li><p>Often results from two or more underlying groups being measured together.</p></li>
-<li><p>Useful because it <strong>always reflects a value actually seen in the dataset, unlike mean and median</strong></p></li>
-<li><p><strong>Can be used with data that isn’t numeric</strong></p></li>
-</ul></section><section id="but-how-will-you-know-how-your-data-is-distributed" class="slide level2 center" data-background="#006475"><h2>But how will you know how your data is distributed?</h2>
-<div class="r-fit-text">
-<p>First step: plot your data</p>
-</div>
 </section><section id="measures-of-dispersion" class="slide level2"><h2>Measures of dispersion</h2>
 <ul>
 <li class="fragment"><p>Range [<code>max value - min value</code>]</p></li>
@@ -370,7 +372,196 @@ Bárbara D. Bitarello
 <div class="goal">
 <p>The difference between the maximum and minimum observed values in a sample</p>
 </div>
-<p><strong>Problem:</strong> Small samples tend to give lower estimates of the range than large samples - how do we call this?</p>
+</section><section id="range-1" class="slide level2"><h2>Range</h2>
+<div class="goal">
+<p>Range of weight of 46 chicks at 20 days since birth</p>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
+<span id="cb2-2"><a></a>chick20 <span class="ot">&lt;-</span> ChickWeight[ChickWeight<span class="sc">$</span>Time <span class="sc">==</span> <span class="dv">20</span>, ]<span class="sc">$</span>weight</span>
+<span id="cb2-3"><a></a>chick20</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Max and Min in this dataset at time 20:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># or</span></span>
+<span id="cb5-2"><a></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1]  76 361</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># commonly the diff between them is shown</span></span>
+<span id="cb7-2"><a></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 285</code></pre>
+</div>
+</div>
+</section><section id="range-2" class="slide level2"><h2>Range</h2>
+<div class="goal">
+<p>If I take a sample of just 10 chicks from those 46</p>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>chick10random <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> chick20, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> F)</span>
+<span id="cb9-2"><a></a><span class="fu">summary</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  133.0   177.0   199.0   213.6   262.8   288.0 </code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">max</span>(chick10random) <span class="sc">-</span> <span class="fu">min</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 155</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">range</span>(chick10random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 133 288</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">diff</span>(<span class="fu">range</span>(chick10random))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 155</code></pre>
+</div>
+</div>
+</section><section id="small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples" class="slide level2 center"><h2>Small samples tend to give lower estimates of the range than large samples</h2>
+<div class="fragment">
+<div class="r-fit-text">
+<p>how do we call this?</p>
+</div>
+<aside class="notes"><p>So sample range is a biased estimator of the true range of the population.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section><section id="scenario" class="slide level2"><h2>Scenario</h2>
+<div class="goal">
+<p>Salary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns</p>
+<p>What can you do then?</p>
+</div>
+<aside class="notes"><p>You could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="interquartile-range-iqr" class="slide level2"><h2>Interquartile Range (IQR)</h2>
+<div class="goal">
+<p>The difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.</p>
+</div>
+<ul>
+<li>less biased estimator than range</li>
+<li>necessary for making boxplots</li>
+</ul></section><section id="iqr" class="slide level2"><h2>IQR</h2>
+<div class="goal">
+<p>Example: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp</p>
+</div>
+
+<img data-src="images/clipboard-3649107495.png" class="r-stretch"><ul>
+<li>First quartile is the middle value of values &lt; median</li>
+<li>Third quartile is the middle value of values &gt; median</li>
+</ul>
+<p><strong>Attention:</strong></p>
+<ul>
+<li>
+<strong>Quantiles</strong> partition the data into <span class="math inline">\(n\)</span> parts</li>
+<li>
+<strong>Quartiles</strong> partition the data into <strong>quarters</strong>
+</li>
+</ul></section><section id="iqr-1" class="slide level2"><h2>IQR</h2>
+<p><img data-src="images/clipboard-3649107495.png"></p>
+<p><span class="math inline">\(n=16\)</span></p>
+<div class="columns">
+<div class="column">
+<div class="fragment">
+<p>1st quartile: <span class="math inline">\(j=0.25n=4\)</span></p>
+<p>3rd quartile: <span class="math inline">\(j=0.75n=12\)</span></p>
+</div>
+</div><div class="column">
+<div class="fragment">
+<p>If <span class="math inline">\(j\)</span> is integer, <span class="math inline">\(\frac{Y_{j}+Y_{j+1}}{2}\)</span></p>
+<p><span class="math inline">\(\frac{Y_{4}+Y_{5}}{2}=\frac{2.31+2.37}{2}=2.34\)</span></p>
+<p><span class="math inline">\(\frac{Y_{12}+Y_{13}}{2}=\frac{3+3.09}{2}=3.045\)</span></p>
+</div>
+</div></div>
+
+<aside><div>
+<p>Note: software may use slightly different algorithms.</p>
+</div></aside></section><section id="iqr-in-r" class="slide level2"><h2>IQR in R</h2>
+<p>IQR in R</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># weights at time 20, n = 46 chicks</span></span>
+<span id="cb17-2"><a></a><span class="fu">head</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 199 209 198 160 220 160</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># summary gives quartiles and max/min</span></span>
+<span id="cb19-2"><a></a><span class="fu">summary</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># IQR</span></span>
+<span id="cb21-2"><a></a><span class="fu">as.numeric</span>(<span class="fu">summary</span>(chick20)[<span class="dv">5</span>] <span class="sc">-</span> <span class="fu">summary</span>(chick20)[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 98</code></pre>
+</div>
+</div>
+<div class="fragment">
+<p>Now the shortcut</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">IQR</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 98</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>And a boxplot</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">boxplot</span>(chick20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle" class="slide level2 center" data-background="#898928"><h2>IQR can give us more information than the range, but it’s still only looking at the values “in the middle”</h2>
+</section><section id="but-there-are-metrics-that-look-at-all-the-values" class="slide level2 center" data-background="#ad7237"><h2>But there are metrics that look at all the values</h2>
+<div class="r-fit-text">
+<p>Meet variance and standard deviation!</p>
+</div>
+</section><section id="variance" class="slide level2"><h2>Variance</h2>
+<div class="goal">
+<p>A measure of spread that is the square of the standard deviation. But let’s define it in clearer terms</p>
+</div>
+<div class="fragment">
+<div class="r-fit-text">
+<p>Variance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population)</p>
+</div>
+</div>
+</section><section id="variance-1" class="slide level2"><h2>Variance</h2>
+<p><strong>Parameter</strong></p>
+<p><font color="#ad7237"><span class="math display">\[\sigma^2=\frac{\sum_{i=1}^{N}(Y_{i}-\mu)^2}{n}\]</span> </font> <span class="math inline">\(N\)</span>: number of individuals in population</p>
+<p><span class="math inline">\(\mu\)</span>: population mean</p>
+<p><strong>Estimate</strong></p>
+<p><font color="#00a1b7"><span class="math display">\[s^2=\frac{\sum_{i=1}^{N}(Y_{i}-\bar{Y})^2}{n-1}\]</span> </font> <span class="math inline">\(n\)</span>: number of individuals in sample</p>
+<p><span class="math inline">\(\bar{Y}\)</span>: sample mean</p>
 </section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
