@@ -1,17 +1,5 @@
 [
   {
-    "listing": "/slides.html",
-    "items": [
-      "/slides/Logistics.html",
-      "/slides/Statistics_and_Samples.html",
-      "/slides/Statistics_and_Samples2.html",
-      "/slides/Statistics_and_Samples3.html",
-      "/slides/Statistics_and_Samples4.html",
-      "/slides/DisplayingAndDescribingData.html",
-      "/slides/DisplayingAndDescribingData2.html"
-    ]
-  },
-  {
     "listing": "/psets.html",
     "items": [
       "/psets/pset-01-unix-quarto.html",
@@ -24,6 +12,18 @@
       "/psets/pset-08-linear-models.html",
       "/psets/pset-09-matrices.html",
       "/psets/pset-10-ml.html"
+    ]
+  },
+  {
+    "listing": "/slides.html",
+    "items": [
+      "/slides/Logistics.html",
+      "/slides/Statistics_and_Samples.html",
+      "/slides/Statistics_and_Samples2.html",
+      "/slides/Statistics_and_Samples3.html",
+      "/slides/Statistics_and_Samples4.html",
+      "/slides/DisplayingAndDescribingData.html",
+      "/slides/DisplayingAndDescribingData2.html"
     ]
   }
 ]
