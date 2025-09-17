@@ -2,46 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bbitarello.github.io/b215f2025/schedule.html</loc>
-    <lastmod>2025-09-04T23:46:04.304Z</lastmod>
+    <lastmod>2025-09-15T17:20:45.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/DisplayingAndDescribingData3.html</loc>
+    <lastmod>2025-09-17T17:38:16.964Z</lastmod>
   </url>
   <url>
     <loc>https://bbitarello.github.io/b215f2025/slides/Statistics_and_Samples.html</loc>
     <lastmod>2025-09-04T23:35:39.588Z</lastmod>
   </url>
   <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/Statistics_and_Samples2.html</loc>
+    <lastmod>2025-09-09T23:40:41.924Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/Statistics_and_Samples3.html</loc>
+    <lastmod>2025-09-14T22:50:52.169Z</lastmod>
+  </url>
+  <url>
     <loc>https://bbitarello.github.io/b215f2025/psets.html</loc>
     <lastmod>2025-08-22T18:32:49.918Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/slides.html</loc>
-    <lastmod>2025-09-03T22:29:21.771Z</lastmod>
+    <loc>https://bbitarello.github.io/b215f2025/list_of_datacamp_assignments.html</loc>
+    <lastmod>2023-09-26T16:40:24.000Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-08-linear-models.html</loc>
+    <loc>https://bbitarello.github.io/b215f2025/rlearn.html</loc>
+    <lastmod>2025-09-17T17:32:28.301Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-04-wrangling.html</loc>
     <lastmod>2025-08-22T18:32:49.920Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-06-prob.html</loc>
-    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-05-dataviz.html</loc>
-    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-07-election.html</loc>
-    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-01-unix-quarto.html</loc>
-    <lastmod>2025-08-22T18:32:49.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-09-matrices.html</loc>
-    <lastmod>2025-08-22T18:32:49.921Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-03-tidyverse.html</loc>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-02-r-vectorization.html</loc>
     <lastmod>2025-08-22T18:32:49.919Z</lastmod>
   </url>
   <url>
@@ -49,31 +45,59 @@
     <lastmod>2025-08-22T18:32:49.921Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-02-r-vectorization.html</loc>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-03-tidyverse.html</loc>
     <lastmod>2025-08-22T18:32:49.919Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/psets/pset-04-wrangling.html</loc>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-09-matrices.html</loc>
+    <lastmod>2025-08-22T18:32:49.921Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-01-unix-quarto.html</loc>
+    <lastmod>2025-08-22T18:32:49.918Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-07-election.html</loc>
     <lastmod>2025-08-22T18:32:49.920Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/rlearn.html</loc>
-    <lastmod>2025-09-01T00:50:10.043Z</lastmod>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-05-dataviz.html</loc>
+    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-06-prob.html</loc>
+    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/psets/pset-08-linear-models.html</loc>
+    <lastmod>2025-08-22T18:32:49.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides.html</loc>
+    <lastmod>2025-09-17T01:45:13.521Z</lastmod>
   </url>
   <url>
     <loc>https://bbitarello.github.io/b215f2025/index.html</loc>
-    <lastmod>2025-09-04T21:45:44.425Z</lastmod>
+    <lastmod>2025-09-15T17:21:19.873Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/Statistics_and_Samples4.html</loc>
+    <lastmod>2025-09-15T15:38:50.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bbitarello.github.io/b215f2025/slides/DisplayingAndDescribingData.html</loc>
+    <lastmod>2025-09-15T17:08:30.722Z</lastmod>
   </url>
   <url>
     <loc>https://bbitarello.github.io/b215f2025/slides/Logistics.html</loc>
     <lastmod>2025-09-04T23:42:32.932Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/syllabus.html</loc>
-    <lastmod>2025-09-04T21:08:29.929Z</lastmod>
+    <loc>https://bbitarello.github.io/b215f2025/slides/DisplayingAndDescribingData2.html</loc>
+    <lastmod>2025-09-17T17:36:55.504Z</lastmod>
   </url>
   <url>
-    <loc>https://bbitarello.github.io/b215f2025/slides/Statistics_and_Samples2.html</loc>
-    <lastmod>2025-09-07T19:44:52.147Z</lastmod>
+    <loc>https://bbitarello.github.io/b215f2025/syllabus.html</loc>
+    <lastmod>2025-09-04T21:08:29.929Z</lastmod>
   </url>
 </urlset>

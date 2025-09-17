@@ -41,21 +41,26 @@ Ask for volunteers to remind these concepts
 
 ## Today
 
+::: nonincremental
 -   ~~Goals of statistics~~
 -   ~~Populations and Samples~~
 -   ~~Statistics and parameters~~
 -   **Estimate errors due to sampling**
 -   **Types of experiments**
 -   **Types of variables**
+-   **Types of studies**
+:::
 
 ## Learning Goals
 
+::: nonincremental
 -   ~~Understand the major goal of statistics~~
 -   ~~Distinguish between a sample and a population~~
 -   ~~Distinguish between an estimate and a parameter~~
--   Identify why estimates from samples may deviate from parameters of populations
--   Identify the properties of a good sample
--   Be able to detect the differences between observational and experimental studies
+-   **Identify why estimates from samples may deviate from parameters of populations**
+-   **Identify the properties of a good sample**
+-   **Be able to detect the differences between observational and experimental studies**
+:::
 
 ::: notes
 These learning goals are for the entire topic/unit. They will also be available in the study guide.
@@ -64,7 +69,7 @@ These learning goals are for the entire topic/unit. They will also be available 
 ## Volunteer bias
 
 ::: goal
-Volunteers for a study are likely to be different, on average, from the population.
+Volunteers for a study are likely to be different, on average, from the population. Also known as "self-selection" bias.
 :::
 
 For example:
@@ -79,6 +84,10 @@ For example:
 Ask for volunteers to name some. The US elections example also involves sample of convenience.
 :::
 
+## Selection bias
+
+[![From: https://xkcd.com/2618/. We carefully sampled the general population and found that most people are familiar with acquiescence bias.](https://imgs.xkcd.com/comics/selection_bias.png){fig-alt="[Blondie is standing on a podium behind a lectern with a microphone. She is standing under a hanging sign with large text. In front of the podium is an audience of five seated persons all with their hands raised above their heads. The audience includes two guys that look like Cueball, Hairbun, and two other persons with dark and blonde hair.]     Sign: Statistics Conference 2022     Blondie: Raise your hand if you’re familiar with selection bias.      Blondie: As you can see, it’s a term most people know..." fig-align="center" width="425"}](https://xkcd.com/2618/)
+
 ## Sample of convenience
 
 ::: goal
@@ -87,7 +96,7 @@ A sample of convenience is a collection of individuals that happen to be availab
 
 Other definitions[^1]:
 
-[^1]: Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000
+[^1]: Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. DOI: 10.1177/0253717620977000
 
 > A convenience sample is the one that is drawn from a source that is conveniently accessible to the researcher.
 
@@ -101,7 +110,7 @@ Problems:
 -   "In research, we therefore implicitly seek to generalize the findings from our sample to the entire population, present and future."[^2]
 :::
 
-[^2]: Andrade C (2021). The Inconvenient Truth About Convenience and Purposive Samples. Indian J Psychol Med, 43(1):86-88. Doi: 10.1177/0253717620977000
+[^2]: Andrade C (2021). Indian J Psychol Med, 43(1):86-88. DOI: 10.1177/0253717620977000
 
 ::: incremental
 -   low generalizability. What is true for your sample might not reflect what is true for the population.
@@ -138,21 +147,80 @@ Even when you did NOTHING wrong.
 Sampling error is the difference between the estimate and its true parameter value — and it can be quantified!
 :::
 
-## Sampling error
-
--   Even if you sample perfectly, by the book, your estimates will differ from the true parameter.
-
--   Unlike bias, it is not systematic. Rather, it is governed by chance and does not occur in a systematic direction
-
-E.g: average horn size in rhinoceros taken from two same-sized samples from the same population (unbiased samples) might (very likely) will give estimates that differ to some extent from each other but without a clear “direction”
-
 ## Example of sampling error
 
-to do: use R code
+```{r, echo  = F, eval = T}
+library(tidyverse)
+source("bb_theme.R")
+p1<-iris |> 
+  ggplot(aes(x= Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) + bb_theme() + 
+  theme(legend.position="none") +
+  ggtitle("Full 'IRIS' dataset\n(n = 150)") +
+  xlab("")
+p2<-iris |> sample_n(size = 20) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) +  bb_theme() + 
+  theme(legend.position="none")+
+  ggtitle("Random sample\n (n = 20)") +
+  xlab("")
+p3<-iris |> sample_n(size = 20) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) + bb_theme() + 
+  theme(legend.position="none") +
+  ggtitle("Another random sample\n (n = 20)") +
+  xlab("")
+library(patchwork)
+p1 + p2 + p3
 
-## Sampling error declines with sample size
+```
 
-to do: use R code
+::: aside
+
+The iris data set gives the measurements (in cm) of the variables sepal length and width and petal length and width for 50 flowers from each of 3 species of iris. The species are *Iris setosa*, *Iris versicolor*, and *Iris virginica*.
+:::
+
+## Sampling error declines with sample size 
+
+```{r, echo  = F, eval = T}
+library(tidyverse)
+source("bb_theme.R")
+
+p1<-iris |> sample_n(size = 10) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) +  bb_theme() + 
+  theme(legend.position="none")+
+  ggtitle("Random sample\n (n = 10)") +
+  xlab("")
+p2<-iris |> sample_n(size = 50) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) + bb_theme() + 
+  theme(legend.position="none") +
+  ggtitle("Random sample\n (n = 50)") +
+  xlab("")
+p3<-iris |> sample_n(size = 100) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) + bb_theme() + 
+  theme(legend.position="none") +
+  ggtitle("Random sample\n (n = 100)") +
+  xlab("")
+p4<-iris |> sample_n(size = 130) |>
+  ggplot(aes(x = Species, fill = Species)) + 
+  geom_bar() + 
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) + bb_theme() + 
+  theme(legend.position="none") +
+  ggtitle("Random sample\n (n = 130)") +
+  xlab("")
+library(patchwork)
+(p1 + p2) / (p3 + p4)
+
+```
 
 ## Estimates are random variables
 
@@ -199,42 +267,72 @@ Accuracy (on average gets the correct answer)
 Precision (gives a similar answer repeatedly)
 :::
 
-![Image: Wikipedia Commons (public domain). Representation of high accuracy and low precision.](images/clipboard-1978701112.png){fig-alt="Left: low accuracy due to low precision. Shot grouping shows four hits around the central circle, somewhat equi-distant from each other. right: low accuracy even with high precision. Shot grouping with four shots near each other to the left-bottom of the center of the central target."}
+![Image: Wikipedia Commons (public domain).](images/clipboard-1978701112.png){fig-alt="Left: low accuracy due to low precision. Shot grouping shows four hits around the central circle, somewhat equi-distant from each other. right: low accuracy even with high precision. Shot grouping with four shots near each other to the left-bottom of the center of the central target."}
 
-## Sampling error vs bias: Practical example
+## Sampling error vs. bias
 
-use R code
+In this figure, the "X" is the population parameter. The circles are different estimates calculated from different samples taken from that population.
 
-![](images/clipboard-3433743313.png)
+```{r biaserror, fig.height=5, fig.width=8,fig.align='center', warning=FALSE, echo = F, fig.cap = "Figure made in R with code borrowed from Y. Brandvain", fig.alt= "top left: all estimates are near each other and enar the bulls eye, so they are unbiased and precise; top right: all samples near each other but far from the bulls eye, so they are precise but also biased; bottom left, estimates are scattered 'randomly' around bulls eye, so they are unbiased but also imprecise; bottom right, samples are scattered around acenter that is not the bulls eye, so they are imprecise and biased."}
+library(tidyverse)
+source("bb_theme.R")
+df <-  tibble(x = rnorm(n = 64, mean = rep(c(0, 1.5), each = 32), 
+                                         sd = rep(c(1.5,  .4), each = 16)), 
+                               y = rnorm(n = 64, mean = rep(c(0, 1.5), each = 32), 
+                                         sd = rep(c(1.5,  .4), each = 16)),
+                               sample = factor(1:64),
+                               bias  = factor(rep(c("unbiased","biased"), each = 32), levels = c("unbiased","biased")),
+                               samplingerror = factor(rep(c("imprecise","precise", "imprecise", "precise"), each = 16), levels = c("precise", "imprecise")))
 
-## Sampling error vs bias: Practical example
+ggplot(data = df, aes(x=x,y=y))+
+  geom_point(aes(x=0,y=0), size = 4, shape = 4, show.legend = FALSE,stroke = 3, color = "red") +
+  geom_point(size = 5, aes( color = sample),show.legend = FALSE, alpha = .4)+
+  bb_theme() +
+  xlim(c(-5,5)) +
+  ylim(c(-5,5))+
+  facet_grid(vars(samplingerror), vars(bias),switch = "y") +
+  ggtitle(label = stringr::str_wrap("How sampling bias & sampling error affect estimates", width = 80)) +
+  ylab("") +
+  xlab("")
+```
 
-Top row: High precision with high (left) and low (right) accuracy 
+## Properties of a good sample
 
-Bottom row: Low precision with high (left) and low accuracy 
+::: goal
+Independent selection of individuals
+:::
 
-Properties of a good sample
+-   no influence of sampling one individual on other individuals that get sampled.
 
--   A good sample is made up of a **random and independent** selection of a sufficiently large number of individuals.
+::: goal
+Random selection of individuals
+:::
 
--   In a random sample, each member of a population has an equal and independent chance of being selected
+-   each member of a population has an equal and independent chance of being selected
+-   equality: probability of being selected reflects its representation in the population
 
--   Equality: probability of being selected reflects its representation in the population
+::: goal
+Sufficiently large
+:::
 
--   Independence: no influence of sampling one individual on other individuals that get sampled.
+-   What is the point of each of these principles in terms of sampling error and bias and accuracy and precision?
 
 ## Random samples
 
-::: Goal
+::: goal
 Taking random samples is hard and requires effort
 :::
 
-Why are they important? Reduce sampling bias
+::: nonincremental
+-   Why are they important? Reduce sampling bias
+-   How to get a random sample (ideal):
+-   Carefully characterize a population and use computer code to select participants randomly.
+:::
 
-How to get a random sample (ideal):
+![](images/clipboard-4130122363.png){fig-align="center" width="608"}
 
-![](images/clipboard-4130122363.png){fig-align="center" width="608"} Carefully characterize a population and use computer code to select participants randomly.
+
 
 ## That's all for today
 
-![From: makeameme.org](images/forrestgump.png){fig-alt="Forrest says \"And that's all I wanted to say about that\"" width="347"}
+![From: makeameme.org](images/forrestgump.png){fig-alt="Forrest says \"And that's all I wanted to say about that\"" width="347"} 

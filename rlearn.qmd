@@ -47,3 +47,15 @@ Updated often. If you're an enrolled students and would like to contribute conte
 -   [Quick-R](https://www.statmethods.net/r-tutorial/index.html)
 -   [Rstudio Education](https://education.rstudio.com/learn/beginner/)
 -   [Posit Cloud Recipes](https://posit.cloud/learn/recipes)
+
+
+## Freely Available (Biological) Datasets
+
+I will keep adding stuff here, but here are some good places to search.
+
+* [Dryad](https://datadryad.org/) - lots of scientific papers make their datasets available here.
+* [Zenodo](https://zenodo.org/) - lots of scientific papers make their datasets available here.
+* [National Library of Medicine Dataset Catalog](https://datasetcatalog.nlm.nih.gov/) - great resource from the NIH, points to datasets elsewher elike zenodo, dryad, figshare,  etc.
+* [re3data](https://www.re3data.org/)
+* [FigShare]() - lots of scientific papers make their datasets available here.
+* [Wold Population Review](https://worldpopulationreview.com/) - not focused on biology but very cool nevertheless. There are subsections that have biological datasets though like the one focusing on health, for example. 

@@ -7,8 +7,11 @@ listing:
     contents:
       - slides/Logistics.qmd
       - slides/Statistics_and_Samples.qmd
-      
-
+      - slides/Statistics_and_Samples2.qmd
+      - slides/Statistics_and_Samples3.qmd
+      - slides/Statistics_and_Samples4.qmd
+      - slides/DisplayingAndDescribingData.qmd 
+      - slides/DisplayingAndDescribingData2.qmd 
     type: table
     fields: [keywords, title, date]
     date-format: "ddd, MMM DD"
@@ -16,7 +19,7 @@ listing:
       keywords: "Topic"
       title: "Title"
       date: "Date"
-    sort: [filename]
+    #sort: [date]
     sort-ui: false
     filter-ui: false
 tbl-colwidths: [10,50,40]

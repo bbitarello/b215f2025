@@ -1,0 +1,3131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ch 2. Displaying Data – BIOL B215: Biostatistics with R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-54f0065fef14266c202334da9f6db56b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="../site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="../site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      BIOL B215: Biostatistics with R
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">BIOL B215: Biostatistics with R</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/bbitarello/b215f2025" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24" title="RStudio Cloud" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../rlearn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-learning-goals" id="toc-key-learning-goals" class="nav-link active" data-scroll-target="#key-learning-goals">Key Learning Goals</a></li>
+  <li><a href="#displaying-data" id="toc-displaying-data" class="nav-link" data-scroll-target="#displaying-data">Displaying Data</a></li>
+  <li><a href="#exploratory-vs-explanatory-plots-goals" id="toc-exploratory-vs-explanatory-plots-goals" class="nav-link" data-scroll-target="#exploratory-vs-explanatory-plots-goals">Exploratory vs Explanatory Plots: Goals</a></li>
+  <li><a href="#exploratory-vs-explanatory-plots-focus" id="toc-exploratory-vs-explanatory-plots-focus" class="nav-link" data-scroll-target="#exploratory-vs-explanatory-plots-focus">Exploratory vs Explanatory Plots: Focus</a></li>
+  <li><a href="#data-visualizartion-example-anscombes-quartet" id="toc-data-visualizartion-example-anscombes-quartet" class="nav-link" data-scroll-target="#data-visualizartion-example-anscombes-quartet">Data Visualizartion Example: Anscombe’s quartet</a>
+  <ul class="collapse">
+  <li><a href="#anscombes-quartet-data-summary" id="toc-anscombes-quartet-data-summary" class="nav-link" data-scroll-target="#anscombes-quartet-data-summary">Anscombe’s quartet: Data Summary</a></li>
+  <li><a href="#anscombes-quartet-trendlines" id="toc-anscombes-quartet-trendlines" class="nav-link" data-scroll-target="#anscombes-quartet-trendlines">Anscombe’s quartet: Trendlines</a></li>
+  <li><a href="#anscombes-quartet-data" id="toc-anscombes-quartet-data" class="nav-link" data-scroll-target="#anscombes-quartet-data">Anscombe’s Quartet: Data</a></li>
+  </ul></li>
+  <li><a href="#rules-of-data-visualization" id="toc-rules-of-data-visualization" class="nav-link" data-scroll-target="#rules-of-data-visualization">Rules of Data Visualization</a>
+  <ul class="collapse">
+  <li><a href="#how-to-make-a-good-plot" id="toc-how-to-make-a-good-plot" class="nav-link" data-scroll-target="#how-to-make-a-good-plot">How to Make A Good Plot</a></li>
+  </ul></li>
+  <li><a href="#mistakes" id="toc-mistakes" class="nav-link" data-scroll-target="#mistakes">Mistakes</a>
+  <ul class="collapse">
+  <li><a href="#mistake-1-hiding-the-data" id="toc-mistake-1-hiding-the-data" class="nav-link" data-scroll-target="#mistake-1-hiding-the-data">Mistake 1: Hiding the data</a></li>
+  <li><a href="#not-showing-data-just-a-summary" id="toc-not-showing-data-just-a-summary" class="nav-link" data-scroll-target="#not-showing-data-just-a-summary">👎 Not showing data 👎 just a summary</a></li>
+  <li><a href="#not-showing-data-overploting" id="toc-not-showing-data-overploting" class="nav-link" data-scroll-target="#not-showing-data-overploting">👎 Not showing data 👎 overploting</a></li>
+  <li><a href="#show-the-data-sinaplots" id="toc-show-the-data-sinaplots" class="nav-link" data-scroll-target="#show-the-data-sinaplots">👍 Show the data 👍 Sinaplots</a></li>
+  <li><a href="#show-the-data-jittering" id="toc-show-the-data-jittering" class="nav-link" data-scroll-target="#show-the-data-jittering">👍 Show the data 👍 Jittering</a></li>
+  <li><a href="#mistake-2-making-patterns-hard-to-see" id="toc-mistake-2-making-patterns-hard-to-see" class="nav-link" data-scroll-target="#mistake-2-making-patterns-hard-to-see">Mistake 2: Making patterns hard to see</a></li>
+  <li><a href="#nonsensical-order-hides-patterns" id="toc-nonsensical-order-hides-patterns" class="nav-link" data-scroll-target="#nonsensical-order-hides-patterns">👎 Nonsensical order hides patterns 👎</a></li>
+  <li><a href="#bad-axis-limits-hide-patterns" id="toc-bad-axis-limits-hide-patterns" class="nav-link" data-scroll-target="#bad-axis-limits-hide-patterns">👎 Bad axis limits hide patterns 👎</a></li>
+  <li><a href="#transform-data-to-reveal-patterns" id="toc-transform-data-to-reveal-patterns" class="nav-link" data-scroll-target="#transform-data-to-reveal-patterns">👍 Transform data to reveal patterns 👍</a></li>
+  <li><a href="#mistake-3-dishonest-magnitudes" id="toc-mistake-3-dishonest-magnitudes" class="nav-link" data-scroll-target="#mistake-3-dishonest-magnitudes">Mistake 3: Dishonest magnitudes</a></li>
+  <li><a href="#present-magnitude-dishonestly-12" id="toc-present-magnitude-dishonestly-12" class="nav-link" data-scroll-target="#present-magnitude-dishonestly-12">👎 Present magnitude dishonestly [1/2]</a></li>
+  <li><a href="#present-magnitude-dishonestly-22" id="toc-present-magnitude-dishonestly-22" class="nav-link" data-scroll-target="#present-magnitude-dishonestly-22">👎 Present magnitude dishonestly [2/2]</a></li>
+  <li><a href="#mistake-4-draw-elements-unclearly" id="toc-mistake-4-draw-elements-unclearly" class="nav-link" data-scroll-target="#mistake-4-draw-elements-unclearly">Mistake 4: Draw elements unclearly</a></li>
+  <li><a href="#draw-graphics-unclearly" id="toc-draw-graphics-unclearly" class="nav-link" data-scroll-target="#draw-graphics-unclearly">👎 Draw graphics UNclearly 👎</a></li>
+  <li><a href="#clear-graphics-flip-coordinates" id="toc-clear-graphics-flip-coordinates" class="nav-link" data-scroll-target="#clear-graphics-flip-coordinates">👍 Clear graphics 👍 Flip coordinates</a></li>
+  <li><a href="#clear-graphics-for-everyone" id="toc-clear-graphics-for-everyone" class="nav-link" data-scroll-target="#clear-graphics-for-everyone">👍 Clear graphics 👍 for everyone</a></li>
+  <li><a href="#clear-graphics-direct-labelling." id="toc-clear-graphics-direct-labelling." class="nav-link" data-scroll-target="#clear-graphics-direct-labelling.">👍 Clear graphics 👍 Direct labelling.</a></li>
+  <li><a href="#clear-graphics-redundant-coding." id="toc-clear-graphics-redundant-coding." class="nav-link" data-scroll-target="#clear-graphics-redundant-coding.">👍 Clear graphics 👍 Redundant coding.</a></li>
+  </ul></li>
+  <li><a href="#consider-data-type" id="toc-consider-data-type" class="nav-link" data-scroll-target="#consider-data-type">Consider data type!</a></li>
+  <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">Categorical variables</a>
+  <ul class="collapse">
+  <li><a href="#nonesensical-ordering-hides-patterns" id="toc-nonesensical-ordering-hides-patterns" class="nav-link" data-scroll-target="#nonesensical-ordering-hides-patterns">Nonesensical ordering hides patterns</a></li>
+  <li><a href="#ordering-factors-nonsensically" id="toc-ordering-factors-nonsensically" class="nav-link" data-scroll-target="#ordering-factors-nonsensically">Ordering factors nonsensically</a></li>
+  <li><a href="#ordering-factors-meaningfully" id="toc-ordering-factors-meaningfully" class="nav-link" data-scroll-target="#ordering-factors-meaningfully">Ordering factors meaningfully</a></li>
+  <li><a href="#tables-should-follow-similar-rules" id="toc-tables-should-follow-similar-rules" class="nav-link" data-scroll-target="#tables-should-follow-similar-rules">Tables should follow similar rules</a></li>
+  <li><a href="#tables-should-follow-similar-rules-1" id="toc-tables-should-follow-similar-rules-1" class="nav-link" data-scroll-target="#tables-should-follow-similar-rules-1">Tables should follow similar rules</a></li>
+  </ul></li>
+  <li><a href="#one-numerical-variable.-example-words-in-gettysburg-address" id="toc-one-numerical-variable.-example-words-in-gettysburg-address" class="nav-link" data-scroll-target="#one-numerical-variable.-example-words-in-gettysburg-address">One numerical variable. <br> Example: Words in Gettysburg address</a>
+  <ul class="collapse">
+  <li><a href="#one-numerical-variable---goals." id="toc-one-numerical-variable---goals." class="nav-link" data-scroll-target="#one-numerical-variable---goals.">One numerical variable - Goals.</a></li>
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw data</a></li>
+  <li><a href="#summary-tables" id="toc-summary-tables" class="nav-link" data-scroll-target="#summary-tables">Summary tables</a></li>
+  <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
+  <li><a href="#histograms.-consider-yout-bins" id="toc-histograms.-consider-yout-bins" class="nav-link" data-scroll-target="#histograms.-consider-yout-bins">Histograms. Consider yout bins</a></li>
+  <li><a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots">Density plots</a></li>
+  <li><a href="#cumulative-frequency-distributions" id="toc-cumulative-frequency-distributions" class="nav-link" data-scroll-target="#cumulative-frequency-distributions">Cumulative Frequency Distributions</a></li>
+  <li><a href="#shapes-of-distributions" id="toc-shapes-of-distributions" class="nav-link" data-scroll-target="#shapes-of-distributions">Shapes of distributions</a></li>
+  <li><a href="#distribution-shapes-histrograms." id="toc-distribution-shapes-histrograms." class="nav-link" data-scroll-target="#distribution-shapes-histrograms.">Distribution shapes: Histrograms.</a></li>
+  <li><a href="#distribution-shapes-density-plots." id="toc-distribution-shapes-density-plots." class="nav-link" data-scroll-target="#distribution-shapes-density-plots.">Distribution shapes: Density Plots.</a></li>
+  <li><a href="#distribution-shapes-cumulative-frequency-distributions" id="toc-distribution-shapes-cumulative-frequency-distributions" class="nav-link" data-scroll-target="#distribution-shapes-cumulative-frequency-distributions">Distribution shapes: Cumulative Frequency Distributions</a></li>
+  </ul></li>
+  <li><a href="#two-categorical-variables.-example-is-breeding-dangerous-for-birds" id="toc-two-categorical-variables.-example-is-breeding-dangerous-for-birds" class="nav-link" data-scroll-target="#two-categorical-variables.-example-is-breeding-dangerous-for-birds">Two categorical variables. Example: Is breeding dangerous for birds?</a>
+  <ul class="collapse">
+  <li><a href="#two-categorical-variables---goals" id="toc-two-categorical-variables---goals" class="nav-link" data-scroll-target="#two-categorical-variables---goals">Two categorical variables - Goals</a></li>
+  <li><a href="#is-breeding-dangerous-for-birds" id="toc-is-breeding-dangerous-for-birds" class="nav-link" data-scroll-target="#is-breeding-dangerous-for-birds">Is breeding dangerous for birds?</a></li>
+  <li><a href="#visualization-a-grouped-bar-graph" id="toc-visualization-a-grouped-bar-graph" class="nav-link" data-scroll-target="#visualization-a-grouped-bar-graph">Visualization: A grouped bar graph</a></li>
+  <li><a href="#visualization-a-stacked-bar-graph" id="toc-visualization-a-stacked-bar-graph" class="nav-link" data-scroll-target="#visualization-a-stacked-bar-graph">Visualization: A stacked bar graph</a></li>
+  <li><a href="#bar-graphs-stacked-v-grouped" id="toc-bar-graphs-stacked-v-grouped" class="nav-link" data-scroll-target="#bar-graphs-stacked-v-grouped">Bar graphs: Stacked v grouped</a></li>
+  <li><a href="#visualization-mosaic-plot" id="toc-visualization-mosaic-plot" class="nav-link" data-scroll-target="#visualization-mosaic-plot">Visualization: Mosaic plot</a></li>
+  </ul></li>
+  <li><a href="#associations-between-categorical-and-numerical-variables.-example-iris-flowers." id="toc-associations-between-categorical-and-numerical-variables.-example-iris-flowers." class="nav-link" data-scroll-target="#associations-between-categorical-and-numerical-variables.-example-iris-flowers.">Associations between categorical and numerical variables. Example: Iris flowers.</a>
+  <ul class="collapse">
+  <li><a href="#data-edgar-andersons-iris-dataset" id="toc-data-edgar-andersons-iris-dataset" class="nav-link" data-scroll-target="#data-edgar-andersons-iris-dataset">DATA: Edgar Andersons’ Iris dataset</a></li>
+  <li><a href="#multiple-histograms" id="toc-multiple-histograms" class="nav-link" data-scroll-target="#multiple-histograms">Multiple Histograms</a></li>
+  <li><a href="#ridegeline-plots" id="toc-ridegeline-plots" class="nav-link" data-scroll-target="#ridegeline-plots">Ridegeline plots</a></li>
+  <li><a href="#a-bad-visualization." id="toc-a-bad-visualization." class="nav-link" data-scroll-target="#a-bad-visualization.">A bad visualization.</a></li>
+  <li><a href="#better-option-strip-chart" id="toc-better-option-strip-chart" class="nav-link" data-scroll-target="#better-option-strip-chart">Better option: Strip chart</a></li>
+  <li><a href="#better-option-sina-plot" id="toc-better-option-sina-plot" class="nav-link" data-scroll-target="#better-option-sina-plot">Better option: Sina plot</a></li>
+  <li><a href="#better-option-violin-plot" id="toc-better-option-violin-plot" class="nav-link" data-scroll-target="#better-option-violin-plot">Better option: Violin Plot</a></li>
+  <li><a href="#better-option-violin-sinaplot" id="toc-better-option-violin-sinaplot" class="nav-link" data-scroll-target="#better-option-violin-sinaplot">Better option: Violin + Sinaplot</a></li>
+  <li><a href="#better-option-boxplot" id="toc-better-option-boxplot" class="nav-link" data-scroll-target="#better-option-boxplot">Better option: Boxplot</a></li>
+  <li><a href="#better-option-boxplot-jitter" id="toc-better-option-boxplot-jitter" class="nav-link" data-scroll-target="#better-option-boxplot-jitter">Better option: Boxplot + Jitter</a></li>
+  </ul></li>
+  <li><a href="#associations-between-two-numerical-variables-beyond.-example-iris-data" id="toc-associations-between-two-numerical-variables-beyond.-example-iris-data" class="nav-link" data-scroll-target="#associations-between-two-numerical-variables-beyond.-example-iris-data">Associations between two numerical variables &amp; beyond. Example: Iris data</a>
+  <ul class="collapse">
+  <li><a href="#two-numerical-variables---goals" id="toc-two-numerical-variables---goals" class="nav-link" data-scroll-target="#two-numerical-variables---goals">Two numerical variables - Goals</a></li>
+  <li><a href="#scatterplots" id="toc-scatterplots" class="nav-link" data-scroll-target="#scatterplots">Scatterplots</a></li>
+  <li><a href="#two-continuous-one-categorical-13" id="toc-two-continuous-one-categorical-13" class="nav-link" data-scroll-target="#two-continuous-one-categorical-13">Two continuous, One categorical [1/3]</a></li>
+  <li><a href="#two-continuous-one-categorical-23" id="toc-two-continuous-one-categorical-23" class="nav-link" data-scroll-target="#two-continuous-one-categorical-23">Two continuous, One categorical [2/3]</a></li>
+  <li><a href="#two-continuous-one-categorical-33" id="toc-two-continuous-one-categorical-33" class="nav-link" data-scroll-target="#two-continuous-one-categorical-33">Two continuous, One categorical [3/3]</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/testch2.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ch 2. Displaying Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+</div>
+<section id="key-learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="key-learning-goals">Key Learning Goals</h2>
+<p>Distinguish between explanatory and exploratory figures</p>
+<p>Identify what makes a good graph.</p>
+<p>Understand how data types drive figure design.</p>
+<p>How to make effective tables.</p>
+<p>Identify best practices in figure design.</p>
+</section>
+<section id="displaying-data" class="level2">
+<h2 class="anchored" data-anchor-id="displaying-data">Displaying Data</h2>
+<p>Is so very very important</p>
+<ul>
+<li><p>Can help you understand your data</p></li>
+<li><p>Can help you make clear points to others</p></li>
+<li><p>Always a good starting place</p></li>
+</ul>
+</section>
+<section id="exploratory-vs-explanatory-plots-goals" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-vs-explanatory-plots-goals">Exploratory vs Explanatory Plots: Goals</h2>
+<p><font size="8"> In <font color="magenta">exploratory data analysis,</font> you aim to find the story of the data. </font><br>
+<br></p>
+<p><font size="8"> In <font color="magenta">explanatory data analysis,</font> you aim to share the story of the data. </font> <br><br><br><br>
+<font size="4">Note: there is a continuum between explanatory and exploratory plots. For example: the plot you show your lab is probably somewhere in between what you make for yourself and what you send to the New York Times. </font></p>
+</section>
+<section id="exploratory-vs-explanatory-plots-focus" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-vs-explanatory-plots-focus">Exploratory vs Explanatory Plots: Focus</h2>
+<p><font size="6"> For <font color="magenta">exploratory plots:</font> Don’t fuss about colors, label size, names etc. If you see the story you’re good!</font></p>
+<p><font size="6"> For <font color="magenta"> explanatory plots:</font> Fuss about all the things above. Facilitate understanding of audience (eg people unfamiliar with your data, or don’t print in color, or are colorblind, etc).</font></p>
+<p><br><br><br><br><br>
+<font size="4"> The suggestions below will help the story of the data reveal itself, and <font color="magenta">is therefore useful for exploratory &amp; explanatory</font> plots. </font></p>
+</section>
+<section id="data-visualizartion-example-anscombes-quartet" class="level1">
+<h1>Data Visualizartion Example: Anscombe’s quartet</h1>
+<section id="anscombes-quartet-data-summary" class="level2">
+<h2 class="anchored" data-anchor-id="anscombes-quartet-data-summary">Anscombe’s quartet: Data Summary</h2>
+<p>Four data sets with identical summary statistics.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:700px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean.x</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean.y</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sd.x</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sd.y</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cor.xy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">3.32</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">3.32</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">3.32</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">3.32</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">0.82</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="anscombes-quartet-trendlines" class="level2">
+<h2 class="anchored" data-anchor-id="anscombes-quartet-trendlines">Anscombe’s quartet: Trendlines</h2>
+<p>Trendlines do not reveal differences in the data sets.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="anscombes-quartet-data" class="level2">
+<h2 class="anchored" data-anchor-id="anscombes-quartet-data">Anscombe’s Quartet: Data</h2>
+<p>Showing the data reveals serious differences in the data sets.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="rules-of-data-visualization" class="level1">
+<h1>Rules of Data Visualization</h1>
+<section id="how-to-make-a-good-plot" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-make-a-good-plot">How to Make A Good Plot</h2>
+<p><font size="7">1. Show the data</font></p>
+<p><font size="7">2. Make patterns easy to see</font></p>
+<p><font size="7">3. Represent magnitudes honestly</font><br>
+(this goes for all aspects of the data)</p>
+<p><font size="7">4. Draw graphical elements clearly</font></p>
+</section>
+</section>
+<section id="mistakes" class="level1">
+<h1>Mistakes</h1>
+<section id="mistake-1-hiding-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="mistake-1-hiding-the-data">Mistake 1: Hiding the data</h2>
+<p><font size="6," color="black"> How to hide data:</font> <font size="5"></font></p><font size="5">
+<ul>
+<li>Provide only stat summaries.<br>
+</li>
+<li>Overplot.</li>
+</ul>
+<p><font size="6," color="black">How to reveal data:</font></p>
+</font><ul><font size="5">
+<li>Present all of the data points.<br>
+</li>
+</font><li><font size="5">While allowing all to be seen.<br>
+</font></li>
+</ul>
+</section>
+<section id="not-showing-data-just-a-summary" class="level2">
+<h2 class="anchored" data-anchor-id="not-showing-data-just-a-summary">👎 Not showing data 👎 just a summary</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="not-showing-data-overploting" class="level2">
+<h2 class="anchored" data-anchor-id="not-showing-data-overploting">👎 Not showing data 👎 overploting</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="show-the-data-sinaplots" class="level2">
+<h2 class="anchored" data-anchor-id="show-the-data-sinaplots">👍 Show the data 👍 Sinaplots</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="show-the-data-jittering" class="level2">
+<h2 class="anchored" data-anchor-id="show-the-data-jittering">👍 Show the data 👍 Jittering</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="mistake-2-making-patterns-hard-to-see" class="level2">
+<h2 class="anchored" data-anchor-id="mistake-2-making-patterns-hard-to-see">Mistake 2: Making patterns hard to see</h2>
+<p><font size="6," color="black"> How to hide patterns:</font> <font size="5"></font></p><font size="5">
+</font><ul><font size="5">
+<li>Make one plot and call it good.<br>
+</li>
+<li>Unreasonable scales.<br>
+</li>
+</font><li><font size="5">Arrange factors nonsensically.<br>
+</font></li>
+</ul>
+<p><font size="6," color="black">How to reveal patterns:</font> <font size="5"></font></p><font size="5">
+<ul>
+<li>Explore multiple potential plots.<br>
+</li>
+<li>Appropriate scales.<br>
+</li>
+<li>Arrange factors meaningfully <font size="4"> (in order for ordinal, by mean for nominal). </font></li>
+</ul>
+</font><p><font size="5"></font></p>
+</section>
+<section id="nonsensical-order-hides-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="nonsensical-order-hides-patterns">👎 Nonsensical order hides patterns 👎</h2>
+<p>Here, the non-intuitive ordering of factors hides the pattern.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bad-axis-limits-hide-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="bad-axis-limits-hide-patterns">👎 Bad axis limits hide patterns 👎</h2>
+<p>Here the large scale hides the pattern</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="transform-data-to-reveal-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="transform-data-to-reveal-patterns">👍 Transform data to reveal patterns 👍</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><font size="4"> Relationship between body size and lifespan in mammals, <a href="http://lib.stat.cmu.edu/datasets/sleep">data</a> from <a href="http://science.sciencemag.org/content/194/4266/732">Allison &amp; Cicchetti 1976</a> </font></p>
+</section>
+<section id="mistake-3-dishonest-magnitudes" class="level2">
+<h2 class="anchored" data-anchor-id="mistake-3-dishonest-magnitudes">Mistake 3: Dishonest magnitudes</h2>
+<p><font size="6," color="black"> How to represent magnitudes dishonestly:</font> <font size="5"></font></p><font size="5">
+</font><ul><font size="5">
+</font><li><font size="5">Start bar plots at a non-zero value<br>
+</font></li>
+</ul>
+<p><font size="6," color="black"> How to represent magnitudes honestly:</font> <font size="5"></font></p><font size="5">
+</font><ul><font size="5">
+</font><li><font size="5">Start bar plots at zero </font></li>
+</ul>
+<p><br><br><br><br><br><br></p>
+<p><font size="4," color="red">Why? The weight of a barplot makes us think in magnitudes. </font></p>
+</section>
+<section id="present-magnitude-dishonestly-12" class="level2">
+<h2 class="anchored" data-anchor-id="present-magnitude-dishonestly-12">👎 Present magnitude dishonestly [1/2]</h2>
+<p>The plot suggests that centers are 20X taller than guards.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="present-magnitude-dishonestly-22" class="level2">
+<h2 class="anchored" data-anchor-id="present-magnitude-dishonestly-22">👎 Present magnitude dishonestly [2/2]</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="mistake-4-draw-elements-unclearly" class="level2">
+<h2 class="anchored" data-anchor-id="mistake-4-draw-elements-unclearly">Mistake 4: Draw elements unclearly</h2>
+<p><font size="6," color="black"> How to draw graphical elements unclearly:</font> <font size="5"></font></p><font size="5">
+<ul>
+<li><p>Unthinkingly accept default options from plotting programs.</p></li>
+<li><p>Do not consider how a diverse audience will consume your figure.</p></li>
+</ul>
+</font><p><font size="5"></font></p>
+<p><font size="6," color="black"> How to draw graphical elements clearly:</font> <font size="5"></font></p><font size="5">
+</font><ul><font size="5">
+<li><p>Reflect on plot design.</p></li>
+</font><li><font size="5"></font><p><font size="5">Consider the diverse audience you are reaching and how they may interact with your plot. </font></p></li>
+</ul>
+</section>
+<section id="draw-graphics-unclearly" class="level2">
+<h2 class="anchored" data-anchor-id="draw-graphics-unclearly">👎 Draw graphics UNclearly 👎</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clear-graphics-flip-coordinates" class="level2">
+<h2 class="anchored" data-anchor-id="clear-graphics-flip-coordinates">👍 Clear graphics 👍 Flip coordinates</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clear-graphics-for-everyone" class="level2">
+<h2 class="anchored" data-anchor-id="clear-graphics-for-everyone">👍 Clear graphics 👍 for everyone</h2>
+<p>Consider colorblind readers</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
+3.5.0.
+ℹ Please use the `legend.position.inside` argument of `theme()` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clear-graphics-direct-labelling." class="level2">
+<h2 class="anchored" data-anchor-id="clear-graphics-direct-labelling.">👍 Clear graphics 👍 Direct labelling.</h2>
+<p>Which of these is easier to interpret?</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="816"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clear-graphics-redundant-coding." class="level2">
+<h2 class="anchored" data-anchor-id="clear-graphics-redundant-coding.">👍 Clear graphics 👍 Redundant coding.</h2>
+<p>Which of these is easier to interpret?</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="816"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="consider-data-type" class="level1">
+<h1>Consider data type!</h1>
+<p>Plots often follow from data structure</p>
+</section>
+<section id="categorical-variables" class="level1">
+<h1>Categorical variables</h1>
+<p><font color="LAVENDERBLUSH">Barplots &amp; </font><br>
+<font color="LAVENDERBLUSH">Tables </font></p>
+<section id="nonesensical-ordering-hides-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="nonesensical-ordering-hides-patterns">Nonesensical ordering hides patterns</h2>
+<p><font color="magenta" size="10">Order ordinal factors meaningfully</font></p>
+<ul>
+<li>For example from January to December.<br>
+<br><br></li>
+</ul>
+<p><font color="magenta" size="10">Order nominal factors by count</font>.</p>
+<ul>
+<li>If there is a grab bag category, place it after the lowest count.</li>
+</ul>
+</section>
+<section id="ordering-factors-nonsensically" class="level2">
+<h2 class="anchored" data-anchor-id="ordering-factors-nonsensically">Ordering factors nonsensically</h2>
+<p>👎 Before re-ordering factors 👎 👍 After re-ordering factors 👍</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ordering-factors-meaningfully" class="level2">
+<h2 class="anchored" data-anchor-id="ordering-factors-meaningfully">Ordering factors meaningfully</h2>
+<p>👍 After re-ordering factors 👍</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="tables-should-follow-similar-rules" class="level2">
+<h2 class="anchored" data-anchor-id="tables-should-follow-similar-rules">Tables should follow similar rules</h2>
+<p>👎 Ordered nonsensically 👎</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:500px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">Number</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">Cause_of_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">6688</td>
+<td style="text-align: left;">Accidents</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">11</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1653</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">All other cause</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: left;">Cerebrov. disease</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">107</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Chronic res. disease</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">222</td>
+<td style="text-align: left;">Congen. abnor.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">8</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">73</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Flu/pneumonia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">463</td>
+<td style="text-align: left;">Heart disease</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2093</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Homicide</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">745</td>
+<td style="text-align: left;">Malig. tumor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">10</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">52</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Other tumor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">1615</td>
+<td style="text-align: left;">Suicide</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="tables-should-follow-similar-rules-1" class="level2">
+<h2 class="anchored" data-anchor-id="tables-should-follow-similar-rules-1">Tables should follow similar rules</h2>
+<p>👍 Ordered to show patterns 👍</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:500px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">Number</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">Cause_of_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">6688</td>
+<td style="text-align: left;">Accidents</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">2093</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Homicide</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1615</td>
+<td style="text-align: left;">Suicide</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">745</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Malig. tumor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">463</td>
+<td style="text-align: left;">Heart disease</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">222</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Congen. abnor.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">107</td>
+<td style="text-align: left;">Chronic res. disease</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">73</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Flu/pneumonia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">67</td>
+<td style="text-align: left;">Cerebrov. disease</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">52</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">Other tumor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1653</td>
+<td style="text-align: left;">All other cause</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="one-numerical-variable.-example-words-in-gettysburg-address" class="level1">
+<h1>One numerical variable. <br> Example: Words in Gettysburg address</h1>
+<p><font color="LAVENDERBLUSH">Histograms </font><br>
+<font color="LAVENDERBLUSH">Density Plots &amp; </font><br>
+<font color="LAVENDERBLUSH">Cumulative Frequency Distributions</font></p>
+<section id="one-numerical-variable---goals." class="level2">
+<h2 class="anchored" data-anchor-id="one-numerical-variable---goals.">One numerical variable - Goals.</h2>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED"> center</font> (<em>mean</em>) </font></p>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED">width </font> (<em>variation</em>) </font></p>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED"> shape </font> (<em>distribution</em>) </font></p>
+</section>
+<section id="raw-data" class="level2">
+<h2 class="anchored" data-anchor-id="raw-data">Raw data</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:450px; overflow-x: scroll; width:500px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">all.words</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">word.lengths</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important; position: sticky; top: 0; background-color: #FFFFFF;">speech</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Four</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">score</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">and</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">seven</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">years</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">ago</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">our</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">fathers</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">brought</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">forth</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">on</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">this</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">continent</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">a</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">new</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">nation</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">conceived</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">in</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Liberty</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">and</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dedicated</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">to</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">proposition</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">11</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">all</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">men</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">are</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">created</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">equal</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Now</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">we</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">are</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">engaged</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">in</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">a</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">great</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">civil</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">war</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">testing</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">whether</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nation</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">or</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">any</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">nation</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">so</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">conceived</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">9</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">and</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">so</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dedicated</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">can</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">long</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">endure</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">are</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">met</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">on</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">a</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">great</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">battlefield</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">of</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">war</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">have</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">come</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">to</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dedicate</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">a</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">portion</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">of</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">field</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">as</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">a</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">final</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">resting</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">place</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">for</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">those</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">who</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">here</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">gave</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">their</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">lives</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nation</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">might</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">live</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">It</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">is</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">altogether</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">10</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fitting</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">and</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">proper</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">we</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">should</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">do</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">this</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">But</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">in</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">a</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">larger</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sense</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">we</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">can</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">not</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dedicate</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">we</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">can</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">not</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">consecrate</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">we</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">can</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">not</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">hallow</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">this</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ground</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">The</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">brave</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">men</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">living</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">and</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dead</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">who</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">struggled</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">here</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">have</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">consecrated</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">11</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">it</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">far</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">above</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">our</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">poor</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">power</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">infinitive</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">add</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">or</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">detract</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">world</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">will</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">little</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">note</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">nor</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">long</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">remember</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">8</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">what</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">we</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">say</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">here</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">but</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">conjunction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">it</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">can</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">never</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">forget</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">what</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">they</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">did</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">here</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">It</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">is</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">for</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">us</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">living</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">rather</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">be</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dedicated</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">here</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">unfinished</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">work</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">which</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">they</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">who</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">fought</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">here</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">have</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thus</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">far</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">so</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">nobly</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">advanced</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">It</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">is</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">rather</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adverb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">for</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">us</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">be</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">here</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">dedicated</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">9</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">great</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">task</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">remaining</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">before</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">us</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">from</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">these</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">honored</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">dead</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">we</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">take</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">increased</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">devotion</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">8</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cause</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">for</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">which</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">they</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gave</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">last</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">full</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">measure</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">of</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">devotion</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">we</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">here</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">highly</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">resolve</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">these</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dead</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">shall</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">not</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">have</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">died</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">in</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">vain</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">adjective</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">that</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">pronoun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">this</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">nation</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">under</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">God</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">shall</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">have</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">a</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">new</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">adjective</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">birth</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">verb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">of</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">freedom</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">and</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">conjunction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">that</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">pronoun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">government</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">10</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">of</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">people</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">by</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">preposition</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">the</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">article</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">people</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">noun</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">for</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">people</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">noun</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">shall</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">not</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">adverb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">perish</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">verb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">from</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">preposition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: WHITESMOKE !important;">the</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: left; background-color: WHITESMOKE !important;">article</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">earth</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">noun</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-tables" class="level2">
+<h2 class="anchored" data-anchor-id="summary-tables">Summary tables</h2>
+<p><code>#</code> of words of length <code>word.lengths</code> in the Gettysburg address</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:500px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>word.lengths.table</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important;">word.lengths</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">2</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">8</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: WHITESMOKE !important;">10</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms" class="level2">
+<h2 class="anchored" data-anchor-id="histograms">Histograms</h2>
+<p><font color="black">Histograms</font> provide a visual description of these patterns</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms.-consider-yout-bins" class="level2">
+<h2 class="anchored" data-anchor-id="histograms.-consider-yout-bins">Histograms. Consider yout bins</h2>
+<p><font size="10," color="Goldenrod"> Changing bins can change stories</font></p>
+<ul>
+<li>Don’t be fooled. Don’t allow binwidth to obscure your data</li>
+</ul>
+<p><font size="10," color="Maroon"> Never use defaults (w.o thinking)</font></p>
+</section>
+<section id="density-plots" class="level2">
+<h2 class="anchored" data-anchor-id="density-plots">Density plots</h2>
+<p><font color="black">Density plots</font> serve a similar purpose as histograms, but smooth the distribution.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><font size="4," color="maroon">Like histograms (even more so), we can be fooled by bandwidth. take control of this</font></p>
+</section>
+<section id="cumulative-frequency-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="cumulative-frequency-distributions">Cumulative Frequency Distributions</h2>
+<p><font color="black">Cumulative Frequency Distributions </font> Provide a visualization that clearly communicates quantiles.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="shapes-of-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="shapes-of-distributions">Shapes of distributions</h2>
+<p><font size="10">Histograms, density plots, &amp; cumulative frequency plots can </font><br>
+<font size="10"> <font color="MEDIUMVIOLETRED"> Reveal The Shapes</font> of distributions</font></p>
+<p>This is important for understanding data and choosing stats</p>
+</section>
+<section id="distribution-shapes-histrograms." class="level2">
+<h2 class="anchored" data-anchor-id="distribution-shapes-histrograms.">Distribution shapes: Histrograms.</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-shapes-density-plots." class="level2">
+<h2 class="anchored" data-anchor-id="distribution-shapes-density-plots.">Distribution shapes: Density Plots.</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-shapes-cumulative-frequency-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-shapes-cumulative-frequency-distributions">Distribution shapes: Cumulative Frequency Distributions</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stderr">
+<pre><code>Scale for x is already present.
+Adding another scale for x, which will replace the existing scale.</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="two-categorical-variables.-example-is-breeding-dangerous-for-birds" class="level1">
+<h1>Two categorical variables. Example: Is breeding dangerous for birds?</h1>
+<p><font color="LAVENDERBLUSH">Bar Plots (Grouped, Stacked, or Filled) &amp; </font><br>
+<font color="LAVENDERBLUSH">Contingency Tables &amp; </font><br>
+<font color="LAVENDERBLUSH">Mosaic Plots</font></p>
+<section id="two-categorical-variables---goals" class="level2">
+<h2 class="anchored" data-anchor-id="two-categorical-variables---goals">Two categorical variables - Goals</h2>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED"> association</font> between variables </font></p>
+</section>
+<section id="is-breeding-dangerous-for-birds" class="level2">
+<h2 class="anchored" data-anchor-id="is-breeding-dangerous-for-birds">Is breeding dangerous for birds?</h2>
+<div style="float:right; position: relative; bottom: 5px;margin-left: 10px;margin-bottom: .5em;">
+<p><img src="https://www.researchgate.net/profile/Peter_Adamik/publication/225733187/figure/fig1/AS:302798743851019@1449204254459/A-great-tit-with-characteristic-skin-avipoxvirus-lesion-Photo-graphed-by-Karel-Novotny_Q320.jpg" class="img-fluid"></p>
+<p><font size="4"> A bird with malaria. Iimage from<br>
+<a href="https://link.springer.com/article/10.1007/s10344-009-0345-5">Literak et al.&nbsp;2010</a> </font></p>
+</div>
+<p>To find out, <a href="https://www.nature.com/articles/381565a0">Oppliger et al (1996)</a>, removed eggs from some, and not other, <em>Parus major</em> to encourage them to breed more.</p>
+<p>They later assayed moms for malaria. Here are the data as a <font color="black"> contingency table </font></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; color: white !important; background-color: grey !important;">outcome</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important;">control</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important;">removed</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: white !important; background-color: grey !important;">total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">malaria</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right; color: lightgrey !important;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no_malaria</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right; color: lightgrey !important;">43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; color: lightgrey !important;">total</td>
+<td style="text-align: right; color: lightgrey !important;">35</td>
+<td style="text-align: right; color: lightgrey !important;">30</td>
+<td style="text-align: right; color: lightgrey !important; color: lightgrey !important;">65</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="visualization-a-grouped-bar-graph" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-a-grouped-bar-graph">Visualization: A grouped bar graph</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="visualization-a-stacked-bar-graph" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-a-stacked-bar-graph">Visualization: A stacked bar graph</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bar-graphs-stacked-v-grouped" class="level2">
+<h2 class="anchored" data-anchor-id="bar-graphs-stacked-v-grouped">Bar graphs: Stacked v grouped</h2>
+<ul>
+<li><p>Which do we like better?</p></li>
+<li><p>The appropriate graph depends on the question</p></li>
+</ul>
+</section>
+<section id="visualization-mosaic-plot" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-mosaic-plot">Visualization: Mosaic plot</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Vectorized input to `element_text()` is not officially supported.
+ℹ Results may be unexpected or may change in future versions of ggplot2.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `scale_name` argument of `continuous_scale()` is deprecated as of ggplot2
+3.5.0.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `trans` argument of `continuous_scale()` is deprecated as of ggplot2 3.5.0.
+ℹ Please use the `transform` argument instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `unite_()` was deprecated in tidyr 1.2.0.
+ℹ Please use `unite()` instead.
+ℹ The deprecated feature was likely used in the ggmosaic package.
+  Please report the issue at &lt;https://github.com/haleyjeppson/ggmosaic&gt;.</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="associations-between-categorical-and-numerical-variables.-example-iris-flowers." class="level1">
+<h1>Associations between categorical and numerical variables. Example: Iris flowers.</h1>
+<p><font color="LAVENDERBLUSH">Multiple Hitograms or Joyplots &amp; </font><br>
+<font color="LAVENDERBLUSH">Stripcharts, Sinaplots or Boxplots</font></p>
+<section id="data-edgar-andersons-iris-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="data-edgar-andersons-iris-dataset">DATA: Edgar Andersons’ Iris dataset</h2>
+<p><img src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" width="800" height="300"></p>
+</section>
+<section id="multiple-histograms" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-histograms">Multiple Histograms</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ridegeline-plots" class="level2">
+<h2 class="anchored" data-anchor-id="ridegeline-plots">Ridegeline plots</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="a-bad-visualization." class="level2">
+<h2 class="anchored" data-anchor-id="a-bad-visualization.">A bad visualization.</h2>
+<p>Be sure to avoid <font color="black"> overplotting </font></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="better-option-strip-chart" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-strip-chart">Better option: Strip chart</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="better-option-sina-plot" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-sina-plot">Better option: Sina plot</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="better-option-violin-plot" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-violin-plot">Better option: Violin Plot</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="better-option-violin-sinaplot" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-violin-sinaplot">Better option: Violin + Sinaplot</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="better-option-boxplot" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-boxplot">Better option: Boxplot</h2>
+<div style="float:left; position: relative; bottom: 5px;margin-rightt: 10px;margin-bottom: .5em;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid figure-img" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><font color="black">Boxplot refresher</font><br>
+<font size="5">Largest non extreme </font></p>
+<p><font size="5"><br> Q3: Upper Quartile<br>
+Q2: Median<br>
+Q1: Lower Quartile </font></p>
+<p><font size="5"> Smallest non extreme </font></p>
+<p><font size="5">Dots denote extreme points</font></p>
+</section>
+<section id="better-option-boxplot-jitter" class="level2">
+<h2 class="anchored" data-anchor-id="better-option-boxplot-jitter">Better option: Boxplot + Jitter</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="associations-between-two-numerical-variables-beyond.-example-iris-data" class="level1">
+<h1>Associations between two numerical variables &amp; beyond. Example: Iris data</h1>
+<p><font color="LAVENDERBLUSH">Scatterplots</font></p>
+<section id="two-numerical-variables---goals" class="level2">
+<h2 class="anchored" data-anchor-id="two-numerical-variables---goals">Two numerical variables - Goals</h2>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED"> association</font> </font></p>
+<p><font size="10">Visualize the <font color="MEDIUMVIOLETRED"> joint distribution</font> </font></p>
+</section>
+<section id="scatterplots" class="level2">
+<h2 class="anchored" data-anchor-id="scatterplots">Scatterplots</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="two-continuous-one-categorical-13" class="level2">
+<h2 class="anchored" data-anchor-id="two-continuous-one-categorical-13">Two continuous, One categorical [1/3]</h2>
+<p>Try “small muliples”</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="two-continuous-one-categorical-23" class="level2">
+<h2 class="anchored" data-anchor-id="two-continuous-one-categorical-23">Two continuous, One categorical [2/3]</h2>
+<p>Try scatterplots with legends.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="two-continuous-one-categorical-33" class="level2">
+<h2 class="anchored" data-anchor-id="two-continuous-one-categorical-33">Two continuous, One categorical [3/3]</h2>
+<p>Try scatterplots with direct labeling.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="testch2_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/testch2.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

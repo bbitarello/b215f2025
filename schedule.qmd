@@ -10,23 +10,25 @@ Please check often. Subject to change. New material is added approximately on a 
 Chapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.
 
 | Week | Dates | Topic | Recommended Readings |
-|:--------------|:--------------|:--------------|:--------------|
-| 1 | 9/3 | 1.1 Statistics & Samples I | Ch. 1 |
-| 2 | 9/8 | 1.2 Statistics & Samples II | Ch.1, Interleaf 1: Correlation does not require causation |
-|  |  | 2.1 Describing Data I | Ch.3 |
-| 2 | 9/10 | 2.2 Describing Data II | Ch.3 |
-|  |  | 3.1. Displaying Data I | Ch.2 |
-| 3 | 9/15 | 3.2. Displaying Data II | Ch.2 |
-|  |  | 4.1 Probability I | Ch.5 |
-| 3 | 9/17 | 4.2 Probability II | Ch.5 |
-| 4 | 9/22 | 4.3 Probability III | Ch. 5 |
-| 4 | 9/24 | 4.4 Probability IV | Ch. 5 |
-| 5 | 9/29 | 5.1 Estimation I | Ch.4 |
-| 5 | 10/1 | 5.2 Estimation II | Ch.4 |
-| 6 | 10/6 | 6.1 Hypothesis Testing I | Ch.6 |
-| 6 | 10/8 | 6.2 Hypothesis Testing II | Ch. 6 |
+|:--|:----|:--------------|:--------------|
+| 1 | 9/3 | 1.1 Statistics & Samples| Ch. 1 |
+| 2 | 9/8 | 1.2 Statistics & Samples | Ch.1, Interleaf 1: Correlation does not require causation |
+| 2 | 9/10 | 1.3 Statistics & Samples| Ch.1, Interleaf 1: Correlation does not require causation |
+|3 | 9/15| 1.4 Statistics and Samples | Interleaf 6: Controls in medical studies|
+|| |2.1 Displaying & Describing Data | Ch.2-3 |
+| 3 | 9/17 | 2.2 Displaying & Describing Data | Ch.2-3 |
+| 4 | 9/22| 2.3 Displaying & Describing Data   | Ch.5 |
+|  | | 4.1 Probability  | Ch.5 |
+| 4 | 9/22 | 4.2 Probability | Ch. 5 |
+| 4 | 9/24 | 4.3 Probability | Ch. 5 |
+| 5 | 9/29 | 4.4 Probability| Ch.5 |
+| 5 | 9/29 | 5.1 Estimation | Ch.4 |
+| 5 | 10/1 | 5.2 Estimation | Ch.4 |
+| 5 | 10/6 | 5.3 Estimation | Ch.4 |
+| 6 | 10/6 | 6.1 Hypothesis Testing | Ch.6 |
+| 6 | 10/8 | 6.2 Hypothesis Testing | Ch. 6 |
 |  | 10/13 | No classes (Fall Break!) |  |
-| 7 | 10/20 |  |  |
+| 7 | 10/20 |6.3 Hypothesis Testing | Ch. 6 |
 | 7 | 10/22 |  |  |
 | 8 | 10/27 |  |  |
 | 8 | 10/30 |  |  |
@@ -37,7 +39,7 @@ Chapters refer to the assigned textbook (3rd edition). Corresponding chapters ex
 | 11 | 11/17 |  |  |
 | 11 | 11/19 |  |  |
 | 12 | 11/24 |  |  |
-| 12 | 11/26 |  |  |
+| 12 | 11/26 | No in-person class (recorded lecture posted on Moodle) |  |
 | 13 | 12/1 |  |  |
 | 13 | 12/3 |  |  |
 | 14 | 12/8 | Wrap-up, Review |  |
@@ -45,10 +47,11 @@ Chapters refer to the assigned textbook (3rd edition). Corresponding chapters ex
 
 ## Labs {#sec-labs}
 
+
 | Week | Date  | Topic                     | Prep  |
-|:-----|:------|:--------------------------|:------|
+|:--|:--|:----|:------------|
 | 1    | 2/9   | Course Logistics          |       |
-| 1    | 2/9   | Rstudio/R introduction    | Video |
+| 1    | 2/9   | Rstudio/R introduction    | DC[^1] "Introduction to R" (all chapters)
 | 2    | 9/9   |                           |       |
 | 3    | 9/16  |                           |       |
 | 4    | 9/23  |                           |       |
@@ -63,6 +66,9 @@ Chapters refer to the assigned textbook (3rd edition). Corresponding chapters ex
 | 11   | 11/25 |                           |       |
 | 12   | 12/2  |                           |       |
 | 13   | 12/9  | Wrap-up                   |       |
+
+
+[^1]: DataCamp
 
 ## Problem sets {#sec-PS}
 
@@ -90,16 +96,15 @@ Chapters refer to the assigned textbook (3rd edition). Corresponding chapters ex
 
 ## Office Hours {#sec-oh}
 
-Please attend OH ***at least 2x*** during the semester (the more the merrier).[^1]
+Please attend OH ***at least 2x*** during the semester (the more the merrier).
 
-[^1]: Professor drop-in hours subject to change depending on TA office hours
 
 | Who | When[^2] | Where |
 |:-----------------------|:-----------------------|:-----------------------|
 | Professor drop-in hours | Monday 2-3:30pm | Park 211 |
 | Professor drop-in hours | Wednesday 2-3:30pm | Park 211 |
 | Professor drop-in hours | Thursday 2-3:30pm | Zoom[^3] |
-| TA | TBD by survey | TBD. Please answer [survey](https://docs.google.com/forms/d/e/1FAIpQLSfx4dTtQUbyItAP2aqLE0y5coJff1Jim6AQoneV2WtjlDvJnA/viewform). |
+| TA | Thursday 4-6pm | Park 227 |
 
 [^2]: Note: no drop-in hours on 09/08; 10/13 and 10/15 (Fall break); 12/01
 

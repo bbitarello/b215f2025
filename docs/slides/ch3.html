@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yaniv">
+<meta name="dcterms.date" content="2025-09-15">
+
+<title>Ch 3. Describing Data – BIOL B215: Biostatistics with R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-54f0065fef14266c202334da9f6db56b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="../site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet">
+<script src="../site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      BIOL B215: Biostatistics with R
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">BIOL B215: Biostatistics with R</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/bbitarello/b215f2025" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24" title="RStudio Cloud" class="quarto-navigation-tool px-1" aria-label="RStudio Cloud"><i class="bi bi-cloud-fill"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../rlearn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cartoons" id="toc-cartoons" class="nav-link active" data-scroll-target="#cartoons">Cartoons</a></li>
+  <li><a href="#describing-data" id="toc-describing-data" class="nav-link" data-scroll-target="#describing-data">Describing data</a>
+  <ul class="collapse">
+  <li><a href="#three-common-descriptions-of-data" id="toc-three-common-descriptions-of-data" class="nav-link" data-scroll-target="#three-common-descriptions-of-data">Three common descriptions of data</a></li>
+  <li><a href="#samples-and-populations" id="toc-samples-and-populations" class="nav-link" data-scroll-target="#samples-and-populations">Samples and Populations</a></li>
+  <li><a href="#estimates-and-parameters" id="toc-estimates-and-parameters" class="nav-link" data-scroll-target="#estimates-and-parameters">Estimates and Parameters</a></li>
+  </ul></li>
+  <li><a href="#measures-of-location" id="toc-measures-of-location" class="nav-link" data-scroll-target="#measures-of-location">Measures of location</a>
+  <ul class="collapse">
+  <li><a href="#mean-median-and-mode" id="toc-mean-median-and-mode" class="nav-link" data-scroll-target="#mean-median-and-mode">Mean, Median and Mode</a></li>
+  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean">Mean</a></li>
+  <li><a href="#histograms-reveal-measures-of-center" id="toc-histograms-reveal-measures-of-center" class="nav-link" data-scroll-target="#histograms-reveal-measures-of-center">Histograms reveal measures of center</a></li>
+  <li><a href="#mean-an-example-from-r" id="toc-mean-an-example-from-r" class="nav-link" data-scroll-target="#mean-an-example-from-r">Mean: an example from <code>R</code></a></li>
+  <li><a href="#median-an-example-from-r" id="toc-median-an-example-from-r" class="nav-link" data-scroll-target="#median-an-example-from-r">Median: an example from <code>R</code></a></li>
+  <li><a href="#mean-from-a-freq.-table-12" id="toc-mean-from-a-freq.-table-12" class="nav-link" data-scroll-target="#mean-from-a-freq.-table-12">Mean from a freq. table [1/2]</a></li>
+  <li><a href="#mean-from-a-freq.-table-22" id="toc-mean-from-a-freq.-table-22" class="nav-link" data-scroll-target="#mean-from-a-freq.-table-22">Mean from a freq. table [2/2]</a></li>
+  <li><a href="#the-proportion-is-the-mean" id="toc-the-proportion-is-the-mean" class="nav-link" data-scroll-target="#the-proportion-is-the-mean">The proportion is the mean</a></li>
+  <li><a href="#mean-or-median" id="toc-mean-or-median" class="nav-link" data-scroll-target="#mean-or-median">Mean or Median?</a></li>
+  <li><a href="#skewness" id="toc-skewness" class="nav-link" data-scroll-target="#skewness">Skewness</a></li>
+  </ul></li>
+  <li><a href="#width-of-the-data" id="toc-width-of-the-data" class="nav-link" data-scroll-target="#width-of-the-data">Width of the data</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-width" id="toc-measures-of-width" class="nav-link" data-scroll-target="#measures-of-width">Measures of width</a></li>
+  <li><a href="#histograms-reveal-spread" id="toc-histograms-reveal-spread" class="nav-link" data-scroll-target="#histograms-reveal-spread">Histograms reveal spread</a></li>
+  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
+  <li><a href="#quartiles" id="toc-quartiles" class="nav-link" data-scroll-target="#quartiles">Quartiles</a></li>
+  <li><a href="#boxplots-reveals-quartiles" id="toc-boxplots-reveals-quartiles" class="nav-link" data-scroll-target="#boxplots-reveals-quartiles">Boxplots reveals quartiles</a></li>
+  <li><a href="#variance-and-standard-deviation" id="toc-variance-and-standard-deviation" class="nav-link" data-scroll-target="#variance-and-standard-deviation">Variance and Standard Deviation</a></li>
+  <li><a href="#coefficient-of-variation" id="toc-coefficient-of-variation" class="nav-link" data-scroll-target="#coefficient-of-variation">Coefficient of Variation</a></li>
+  </ul></li>
+  <li><a href="#effect-of-sample-size-on-estimates" id="toc-effect-of-sample-size-on-estimates" class="nav-link" data-scroll-target="#effect-of-sample-size-on-estimates">Effect of sample size on estimates</a>
+  <ul class="collapse">
+  <li><a href="#most-good-estimators-are-unbiased." id="toc-most-good-estimators-are-unbiased." class="nav-link" data-scroll-target="#most-good-estimators-are-unbiased.">Most (good) estimators are unbiased.</a></li>
+  <li><a href="#sampling-error-decreases-w-n-samples." id="toc-sampling-error-decreases-w-n-samples." class="nav-link" data-scroll-target="#sampling-error-decreases-w-n-samples.">Sampling error decreases w n samples.</a></li>
+  </ul></li>
+  <li><a href="#review-nomenclature" id="toc-review-nomenclature" class="nav-link" data-scroll-target="#review-nomenclature">Review &amp; Nomenclature</a>
+  <ul class="collapse">
+  <li><a href="#describing-data-1" id="toc-describing-data-1" class="nav-link" data-scroll-target="#describing-data-1">Describing data</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/ch3.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ch 3. Describing Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yaniv </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 15, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="cartoons" class="level2">
+<h2 class="anchored" data-anchor-id="cartoons">Cartoons</h2>
+</section>
+<section id="describing-data" class="level1">
+<h1>Describing data</h1>
+<section id="three-common-descriptions-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="three-common-descriptions-of-data">Three common descriptions of data</h2>
+<p><br></p>
+<p><font size="8">Location <font color="lightgrey">(or central tendency) </font></font> <br><br></p>
+<p><font size="8">Width <font color="lightgrey">(or spread) </font></font> <br><br></p>
+<p><font size="8">Association <font color="lightgrey">(or correlation)</font></font></p>
+</section>
+<section id="samples-and-populations" class="level2">
+<h2 class="anchored" data-anchor-id="samples-and-populations">Samples and Populations</h2>
+<p>Recall, we do statistics to learn about the <br> <br> <font size="8" color="LIGHTSALMON">World Out There (the population)</font></p>
+<p>from</p>
+<p><font size="8" color="STEELBLUE"> Data (the sample)</font></p>
+</section>
+<section id="estimates-and-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="estimates-and-parameters">Estimates and Parameters</h2>
+<p><br> <br> <br></p>
+<p>We almost never sample an entire population. So we can’t nail down <font size="8" color="LIGHTSALMON">parameters from populations</font></p>
+<p><br> <br> <br></p>
+<p>But we can provide an educated guess of parameters by making <font size="8" color="STEELBLUE"> estimates from samples</font></p>
+</section>
+</section>
+<section id="measures-of-location" class="level1">
+<h1>Measures of location</h1>
+<p><font color="LAVENDERBLUSH">Mean</font><br>
+<font color="LAVENDERBLUSH">Median</font><br>
+<font color="LAVENDERBLUSH">Mode</font></p>
+<section id="mean-median-and-mode" class="level2">
+<h2 class="anchored" data-anchor-id="mean-median-and-mode">Mean, Median and Mode</h2>
+<p><font size="8">Mean</font> The weight of your data. <font color="black"> The average value.</font><br>
+<br></p>
+<p><font size="8">Median</font> A <font color="black">typical individual.</font>… If I take an individual at random, this is the value we expect them to be closest to.<br>
+<br></p>
+<p><font size="8">Mode</font> The <font color="black">typical individual</font> most common value for an individual.. The most likely answer for an individual selected at random.</p>
+</section>
+<section id="mean" class="level2">
+<h2 class="anchored" data-anchor-id="mean">Mean</h2>
+<p><font size="8" color="STEELBLUE"> Estimate = <span class="math inline">\(\bar{Y}\)</span></font>, <font size="8" color="LIGHTSALMON">Parameter = <span class="math inline">\(\mu\)</span>,</font></p>
+<p><font color="STEELBLUE"><span class="math inline">\(\Huge{\bar{Y}=\frac{(\Sigma Y_i)}{n}}\)</span></font></p>
+<p>Where:</p>
+<ul>
+<li><p><font color="black"><span class="math inline">\(\bar{Y}\)</span> is the mean value</font></p></li>
+<li><p><font color="black"><span class="math inline">\(\Sigma\)</span></font> means sum</p></li>
+<li><p><font color="black"><span class="math inline">\(n\)</span></font> is the number of samples</p></li>
+<li><p><font color="black"><span class="math inline">\(Y_i\)</span></font> is the observed value for the <span class="math inline">\(i^{th}\)</span> individual</p></li>
+</ul>
+</section>
+<section id="histograms-reveal-measures-of-center" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-reveal-measures-of-center">Histograms reveal measures of center</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><img src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" width="450" height="175"></p>
+</section>
+<section id="mean-an-example-from-r" class="level2">
+<h2 class="anchored" data-anchor-id="mean-an-example-from-r">Mean: an example from <code>R</code></h2>
+<p>Sum up all observations and divide by sample size.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean.by.math =</span> <span class="fu">sum</span>(Petal.Width) <span class="sc">/</span> <span class="fu">n</span>(),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean.by.r.function =</span> <span class="fu">mean</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  Species    mean.by.math mean.by.r.function
+  &lt;fct&gt;             &lt;dbl&gt;              &lt;dbl&gt;
+1 setosa            0.246              0.246
+2 versicolor        1.33               1.33 
+3 virginica         2.03               2.03 </code></pre>
+</div>
+</div>
+<p><img src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" width="450" height="175"></p>
+</section>
+<section id="median-an-example-from-r" class="level2">
+<h2 class="anchored" data-anchor-id="median-an-example-from-r">Median: an example from <code>R</code></h2>
+<p>Sort your flowers in order of petal width.<br>
+Go halfway down, and find the middle value. <font size="4," color="lightgrey"><br>
+The mean of the <span class="math inline">\((n+1)/2^{th}\)</span> value for samples of odd sizes.<br>
+The mean of the n/2 and 1+n/2 values for samples of even sizes)</font></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">median =</span> <span class="fu">median</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Species    median
+  &lt;fct&gt;       &lt;dbl&gt;
+1 setosa        0.2
+2 versicolor    1.3
+3 virginica     2  </code></pre>
+</div>
+</div>
+<div style="float:right; position: relative; bottom: 20px;">
+<p><img src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" width="450" height="175"></p>
+</div>
+</section>
+<section id="mean-from-a-freq.-table-12" class="level2">
+<h2 class="anchored" data-anchor-id="mean-from-a-freq.-table-12">Mean from a freq. table [1/2]</h2>
+<p><font size="6"><span class="math inline">\(\frac{\sum_{cat = 1}^{n.cat}  \text{Number}_i \times \text{Value}_i}{n.total}\)</span></font></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="mean-from-a-freq.-table-22" class="level2">
+<h2 class="anchored" data-anchor-id="mean-from-a-freq.-table-22">Mean from a freq. table [2/2]</h2>
+<p>Find the mean word length in Gettysburg address from a Frequency Table</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:180px; overflow-x: scroll; width:800px; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>word.lengths.table</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; color: white !important; background-color: grey !important;">word.lengths</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; color: white !important; background-color: grey !important;">count</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">7</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">60</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">34</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">15</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right; background-color: WHITESMOKE !important;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><font size="6"><span class="math inline">\(\frac{\sum_{cat = 1}^{n.cat}  \text{Number}_i \times \text{Value}_i}{n.total}\)</span></font></p>
+<p><font size="4"> numer = 1x7 + 2x50 + 3x60 + 4x58 + 5x34 + 6x24 + 7x15 + 8x6 + 9x10 + 10x4 + 11x3 = 1149.</font> <font size="4"> denom = 7 + 50 + 60 + 58 + 34+ 24+ 15+ 6+ 10 + 4 + 3 = 271 .</font></p>
+<p><font color="black">1149 / 271 = 4.24</font></p>
+</section>
+<section id="the-proportion-is-the-mean" class="level2">
+<h2 class="anchored" data-anchor-id="the-proportion-is-the-mean">The proportion is the mean</h2>
+<p><font size="4">coding categoricals as yes/no, and set yes = 1, no = 0)</font></p>
+<p>Returning to the scene of the crime,<br>
+What prop. of deaths (age 15-19 USA 1999) where <font color="red">homicides?</font></p>
+<p>There wher 2093 Homicides of 13778 deaths.</p>
+<p>So 2093 / 13778 = .15 lf deaths where by homocide.</p>
+</section>
+<section id="mean-or-median" class="level2">
+<h2 class="anchored" data-anchor-id="mean-or-median">Mean or Median?</h2>
+<p>The mean is more convinient mathematically.</p>
+<p>The median is a better descriptor for skewed population.</p>
+<p><img src="./figs/scale.png" class="img-fluid"></p>
+<p><font size="4," color="black">The mean is the center of gravity </font> <font size="4," color="black">The median is the middle measurement.</font></p>
+</section>
+<section id="skewness" class="level2">
+<h2 class="anchored" data-anchor-id="skewness">Skewness</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="width-of-the-data" class="level1">
+<h1>Width of the data</h1>
+<p><font color="LAVENDERBLUSH">Range</font><br>
+<font color="LAVENDERBLUSH">Interquartile Range</font><br>
+<font color="LAVENDERBLUSH">Variance</font><br>
+<font color="LAVENDERBLUSH">Standard deviation</font><br>
+<font color="LAVENDERBLUSH">Coefficient of variation</font></p>
+<section id="measures-of-width" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-width">Measures of width</h2>
+<ul>
+<li><p>Range [<code>max value - min value</code>]</p></li>
+<li><p>Quartiles [<code>75th percentile - 25th percentile</code>]</p></li>
+<li><p>Variance [<font color="STEELBLUE"> estimate = <span class="math inline">\(s^2\)</span> =<span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n-1}\)</span></font>, <font color="LIGHTSALMON">param = <span class="math inline">\(\sigma ^2\)</span> = <span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n}\)</span> ]</font></p></li>
+<li><p>Standard deviation [<font color="STEELBLUE"> estimate = <span class="math inline">\(s\)</span> =<span class="math inline">\(\sqrt{s^2}\)</span></font>, <font color="LIGHTSALMON">param = <span class="math inline">\(\sigma\)</span> = <span class="math inline">\(\sqrt{\sigma^2}\)</span> ]</font></p></li>
+<li><p>Coefficient of variation [<font color="STEELBLUE"> estimate = CV = <span class="math inline">\(\frac{s}{\bar{Y}}\)</span></font>, <font color="LIGHTSALMON">param = <span class="math inline">\(\frac{\sigma}{\mu}\)</span> ]</font></p></li>
+</ul>
+</section>
+<section id="histograms-reveal-spread" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-reveal-spread">Histograms reveal spread</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="range" class="level2">
+<h2 class="anchored" data-anchor-id="range">Range</h2>
+<p>The range is a poor measure of distribution width</p>
+<p>Small samples tend to give lower estimates of the range than large samples</p>
+<p>So, the sample range is a <strong>biased estimator</strong> of the true range of the population.</p>
+</section>
+<section id="quartiles" class="level2">
+<h2 class="anchored" data-anchor-id="quartiles">Quartiles</h2>
+<p>Imagine sorting your data.</p>
+<ul>
+<li><p>The individual in the middle is the median</p></li>
+<li><p>The first and last individuals mark the range</p></li>
+<li><p>The other two quantiles are the individuals 1/4 and 3/4 the way into your sorted list of data.</p>
+<ul>
+<li>The difference between these two is the <strong>interquartile range</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="boxplots-reveals-quartiles" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots-reveals-quartiles">Boxplots reveals quartiles</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="variance-and-standard-deviation" class="level2">
+<h2 class="anchored" data-anchor-id="variance-and-standard-deviation">Variance and Standard Deviation</h2>
+<p>The <font size="8">variance</font> measures the average squared difference between the <span class="math inline">\(\mu\)</span> and a random sample from this population.</p>
+<p>The sample variance (<span class="math inline">\(s^2\)</span>) equals the <font color="black">sum of squares</font> <span class="math inline">\(\Sigma(x_i - \bar{x})^2\)</span> divided by the sample size minus one.</p>
+<p>The population variance (<span class="math inline">\(\sigma^2\)</span>) equals the sum of squares divided by the sample size.</p>
+<p>The <font size="8">standard deviation</font> equals the square root of the variance. <font color="lightgrey"> Use sample variance (<span class="math inline">\(s^2\)</span>) for sample sd (<span class="math inline">\(s\)</span>), and population variance (<span class="math inline">\(\sigma^2\)</span>) for population sd (<span class="math inline">\(\sigma\)</span>). </font></p>
+</section>
+<section id="coefficient-of-variation" class="level2">
+<h2 class="anchored" data-anchor-id="coefficient-of-variation">Coefficient of Variation</h2>
+<p><br></p>
+<p>The <font size="8">coefficient of variation</font> equals the standard deviation divided by the mean.</p>
+<p><span class="math display">\[\text{coef var} = \frac{\text{sd}}{\overline{x}}\]</span> <br></p>
+<p>This allows for fair comparisons of variability between measures on different scales.</p>
+</section>
+</section>
+<section id="effect-of-sample-size-on-estimates" class="level1">
+<h1>Effect of sample size on estimates</h1>
+<section id="most-good-estimators-are-unbiased." class="level2">
+<h2 class="anchored" data-anchor-id="most-good-estimators-are-unbiased.">Most (good) estimators are unbiased.</h2>
+<p>Most descriptors do not change reliably with sample size.<br>
+Except for Range (and to a lesser extent IQR).<br>
+Thus range is a biased estimator or width, and we don’t like it</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sampling-error-decreases-w-n-samples." class="level2">
+<h2 class="anchored" data-anchor-id="sampling-error-decreases-w-n-samples.">Sampling error decreases w n samples.</h2>
+<p>Noise in estimates reliably decrease with sample size.<br>
+Thus increased sample size increase precision.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'count'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ch3_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="review-nomenclature" class="level1">
+<h1>Review &amp; Nomenclature</h1>
+<section id="describing-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="describing-data-1">Describing data</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 38%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Population parameters</th>
+<th>Sample statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean</td>
+<td><span class="math inline">\(\Huge{\mu}\)</span></td>
+<td><span class="math inline">\(\Huge{\bar{Y}}\)</span></td>
+</tr>
+<tr class="even">
+<td>Variance</td>
+<td><span class="math inline">\(\Huge{\sigma^2}\)</span></td>
+<td><span class="math inline">\(\Huge{s^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Standard deviation</td>
+<td><span class="math inline">\(\Huge{\sigma}\)</span></td>
+<td><span class="math inline">\(\Huge{s}\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/slides/ch3.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

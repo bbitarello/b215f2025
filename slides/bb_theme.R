@@ -50,7 +50,8 @@ bb_theme <-  function() {
     plot.title = element_text(family = "Roboto Condensed", size = 18),
     strip.text =  element_text(size = 14),
     panel.background = element_blank(),
-    panel.grid.major.x = element_line(color = "gray", linewidth = 0.1)
+    panel.grid.major.x = element_line(color = "gray", linewidth = 0.1),
+    strip.background = element_blank()
   )
 }
 

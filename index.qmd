@@ -6,8 +6,8 @@ title: "BIOL B215: Biostatistics with R"
 
 -   Instructor: Bárbara D. Bitarello (bbitarello \[at\] brynmawr.edu)
 -   TA: Nicole Cavalieri (ncavalieri \[at\] brynmawr.edu)
--   Lecture: Monday & Wednesday 11:40 AM (Park 264)
--   Lab: Wednesday 1:10 - 4 PM (park 128)
+-   Lecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)
+-   Lab: Wednesday 1:10 - 4 PM (Park 11)
 -   Read the [Syllabus](syllabus.qmd), [listen to Snoop Dog](https://www.youtube.com/embed/aL_fP5axQV4).
 -   [Piazza (for Qs)](https://piazza.com/brynmawr/fall2025/bmcbiolb215001f25)
 -   [Rstudio (Posit) Cloud](https://posit.cloud/spaces/678147/join?access_code=hl0WMhTu8LNwvW1hn-uIdm_lx1Xm8sCjIUMwCW24)

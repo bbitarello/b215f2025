@@ -1,0 +1,327 @@
+---
+title: "2.3.Displaying & Describing Data"
+subtitle: "Measures of spread and plots"
+author: "Bárbara D. Bitarello"
+date: "09-17-2025"
+keywords: "Spread and Plots"
+format:
+  revealjs:
+    embed-resources: false
+    smaller: true
+    scrollable: true
+    incremental: false
+    slide-number: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-dark
+    footer: "B21: Biostatistics with R"
+    center-title-slide: false
+    theme: [custom.scss]
+    chalkboard: true
+    callout-appearance: simple
+    code-fold: true
+    auto-slide: 133000
+code-link: true
+execute:
+  echo: true
+  freeze: false
+knitr: 
+  opts_chunk:
+    tidy: true
+    tidy-opts: { "value": "list(width.cutoff = I(60))", "tag": "!expr" }
+---
+
+## Last time
+
+```{r setup, include = F}
+source("bb_theme.R")
+library(tidyverse)
+human_genes<-read_csv("../data/human_genes.csv")
+crimes<-read_csv("https://whitlockschluter3e.zoology.ubc.ca/Data/chapter03/chap03t1.2ConvictionsFreq.csv")
+library(gt)
+chick20<-ChickWeight[ChickWeight$Time == 20,]$weight
+```
+
+-   Mean
+-   Median
+
+::: notes
+today: location and width; next class plots
+:::
+
+## Today
+
+-   Median example
+-   Mode
+-   Estimates of width
+-   Explanatory and exploratory figures
+-   Best practices in figure design
+-   How data types drive figure design
+-   How to make effective tables
+
+# add this
+
+ A tibble: 3 × 3
+  Species     mean median
+  <fct>      <dbl>  <dbl>
+1 setosa     0.246    0.2
+2 versicolor 1.33     1.3
+3 virginica  2.03     2  
+
+## Histograms reveal measures of center
+
+::: goal
+Recall the <font color =  #fdfbf7>`iris` </font> dataset
+:::
+
+![](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png){fig-align="center" width="450" height="175"}
+
+## Histograms reveal measures of center
+
+::: panel-tabset
+### Figure
+
+```{r hist}
+#| echo: false
+#| tidy: true
+#| tidy-opts: !expr list(width.cutoff = 50)
+library(ggplot2)
+ggplot(iris , 
+       aes(x = Petal.Width, fill = Species) ) +
+  geom_histogram(binwidth = .1, show.legend = FALSE, alpha = .9) +  
+  xlab("Petal Width (cm)") + 
+  facet_wrap(~ Species, ncol = 1) + 
+  scale_x_continuous(breaks = seq(.5,2.5,.5)) +
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) +
+  bb_theme()
+```
+
+### Code
+
+```{r hist2}
+#| echo: true
+#| eval: false
+#| tidy: true
+#| tidy-opts: !expr list(width.cutoff = 50)
+library(ggplot2)
+ggplot(iris , 
+       aes(x = Petal.Width, fill = Species) ) +
+  geom_histogram(binwidth = .1, show.legend = FALSE, alpha = .9) +  
+  xlab("Petal Width (cm)") + 
+  facet_wrap(~ Species, ncol = 1) + 
+  scale_x_continuous(breaks = seq(.5,2.5,.5)) +
+  scale_fill_manual(values = wesanderson::wes_palette("AsteroidCity1")) +
+  bb_theme()
+```
+:::
+
+## Measures of dispersion
+
+::: incremental
+-   Range \[`max value - min value`\]
+
+-   Quartiles, interquartile range \[`75th percentile - 25th percentile`\]
+
+-   Variance \[<font color = #00a1b7> estimate = $s^2$ =$\frac{\Sigma(x_i - \bar{x})^2}{n-1}$</font>, <font color = #ad7237>param = $\sigma ^2$ = $\frac{\Sigma(x_i - \bar{x})^2}{n}$ \]</font>
+
+-   Standard deviation \[<font color =  #00a1b7> estimate = $s$ =$\sqrt{s^2}$</font>, <font color = #ad7237>param = $\sigma$ = $\sqrt{\sigma^2}$ \]</font>
+
+-   Coefficient of variation \[<font color =  #00a1b7> estimate = CV = $\frac{s}{\bar{Y}}$</font>, <font color = #ad7237>param = $\frac{\sigma}{\mu}$ \]</font>
+:::
+
+## Range
+
+::: goal
+The difference between the maximum and minimum observed values in a sample
+:::
+
+## Range
+
+::: goal
+Range of weight of 46 chicks at 20 days since birth
+:::
+
+```{r, eval = F}
+data("ChickWeight")
+chick20<-ChickWeight[ChickWeight$Time == 20,]$weight
+chick20
+```
+
+Max and Min in this dataset at time 20:
+
+```{r}
+summary(chick20) 
+#or
+c(min(chick20), max(chick20))
+# commonly the diff between them is shown
+max(chick20)- min(chick20)
+```
+
+## Range
+
+::: goal
+If I take a sample of just 10 chicks from those 46
+:::
+
+```{r, eval = T}
+chick10random<-sample(x = chick20, size = 10, replace = F) 
+summary(chick10random)
+max(chick10random)- min(chick10random)
+range(chick10random)
+diff(range(chick10random))
+```
+
+## Small samples tend to give lower estimates of the range than large samples {.center}
+
+. . .
+
+::: r-fit-text
+how do we call this?
+:::
+
+::: notes
+So sample range is a biased estimator of the true range of the population.
+:::
+
+## Scenario
+
+::: goal
+Salary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns
+
+What can you do then?
+:::
+
+::: notes
+You could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here
+:::
+
+## Interquartile Range (IQR)
+
+::: goal
+The difference between the 75th and 25th percentiles of the data. A.k.a., the "middle 50%" of the data.
+:::
+
+-   less biased estimator than range
+-   necessary for making boxplots
+
+## IQR
+
+::: goal
+Example: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp
+:::
+
+![](images/clipboard-3649107495.png)
+
+-   First quartile is the middle value of values \< median
+-   Third quartile is the middle value of values \> median
+
+**Attention:**
+
+-   **Quantiles** partition the data into $n$ parts
+-   **Quartiles** partition the data into **quarters**
+
+## IQR
+
+![](images/clipboard-3649107495.png)
+
+$n=16$
+
+::::::: columns
+:::: column
+::: fragment
+1st quartile: $j=0.25n=4$
+
+3rd quartile: $j=0.75n=12$
+:::
+::::
+
+:::: column
+::: fragment
+If $j$ is integer, $\frac{Y_{j}+Y_{j+1}}{2}$
+
+$\frac{Y_{4}+Y_{5}}{2}=\frac{2.31+2.37}{2}=2.34$
+
+$\frac{Y_{12}+Y_{13}}{2}=\frac{3+3.09}{2}=3.045$
+:::
+::::
+:::::::
+
+::: aside
+Note: software may use slightly different algorithms.
+:::
+
+## IQR in R
+
+IQR in R
+
+```{r}
+# weights at time 20, n = 46 chicks
+head(chick20)
+
+# summary gives quartiles and max/min
+summary(chick20)
+
+# IQR
+as.numeric(summary(chick20)[5] - summary(chick20)[2])
+
+```
+
+::: fragment
+Now the shortcut
+
+```{r}
+IQR(chick20)
+```
+:::
+
+::: fragment
+And a boxplot
+
+```{r}
+boxplot(chick20)
+```
+:::
+
+## IQR can give us more information than the range, but it’s still only looking at the values “in the middle” {.center background="#898928"}
+
+
+
+## But there are metrics that look at all the values {.center background="#ad7237"}
+
+::: r-fit-text
+Meet variance and standard deviation!
+:::
+
+## Variance
+
+::: goal
+A measure of spread that is the square of the standard deviation. But let’s define it in clearer terms
+:::
+
+. . .
+
+::: r-fit-text
+
+Variance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population)
+
+:::
+
+## Variance 
+
+**Parameter**
+
+<font color =  #ad7237>$$\sigma^2=\frac{\sum_{i=1}^{N}(Y_{i}-\mu)^2}{n}$$ </font>
+$N$: number of individuals in population
+
+$\mu$: population mean
+
+**Estimate**
+
+<font color = #00a1b7>$$s^2=\frac{\sum_{i=1}^{N}(Y_{i}-\bar{Y})^2}{n-1}$$ </font>
+$n$: number of individuals in sample
+
+$\bar{Y}$: sample mean
+
+## That's all for today
+
+![From: makeameme.org](images/forrestgump.png){fig-alt="Forrest says \"And that's all I wanted to say about that\"" width="347"}
