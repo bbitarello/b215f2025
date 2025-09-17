@@ -133,7 +133,7 @@
     "href": "slides/DisplayingAndDescribingData3.html#range-2",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 10 chicks from those 46\n\n\nCodechick10random &lt;- sample(x = chick20, size = 10, replace = F)\nsummary(chick10random)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  133.0   157.8   192.0   202.9   246.5   291.0 \n\nCodemax(chick10random) - min(chick10random)\n\n[1] 158\n\nCoderange(chick10random)\n\n[1] 133 291\n\nCodediff(range(chick10random))\n\n[1] 158"
+    "text": "Range\n\nIf I take a sample of just 10 chicks from those 46\n\n\nCodechick10random &lt;- sample(x = chick20, size = 10, replace = F)\nsummary(chick10random)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  120.0   162.2   207.5   201.8   234.8   280.0 \n\nCodemax(chick10random) - min(chick10random)\n\n[1] 160\n\nCoderange(chick10random)\n\n[1] 120 280\n\nCodediff(range(chick10random))\n\n[1] 160"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
