@@ -84,63 +84,56 @@
     "href": "slides/DisplayingAndDescribingData3.html#last-time",
     "title": "2.3.Displaying & Describing Data",
     "section": "Last time",
-    "text": "Last time\n\nMean\nMedian\n\ntoday: location and width; next class plots"
+    "text": "Last time\n\nMean, median, mode\nRange\n\ntoday: location and width; next class plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#today",
-    "href": "slides/DisplayingAndDescribingData3.html#today",
+    "objectID": "slides/DisplayingAndDescribingData3.html#this-week",
+    "href": "slides/DisplayingAndDescribingData3.html#this-week",
     "title": "2.3.Displaying & Describing Data",
-    "section": "Today",
-    "text": "Today\n\nMedian example\nMode\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
+    "section": "This week",
+    "text": "This week\n\nEstimates of width (cont.)\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#histograms-reveal-measures-of-center",
-    "href": "slides/DisplayingAndDescribingData3.html#histograms-reveal-measures-of-center",
+    "objectID": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
+    "href": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
     "title": "2.3.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\nRecall the iris  dataset"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#histograms-reveal-measures-of-center-1",
-    "href": "slides/DisplayingAndDescribingData3.html#histograms-reveal-measures-of-center-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
+    "section": "Recall this histogram",
+    "text": "Recall this histogram\n\n\nFigure\nMean and Median\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 3\n  Species     mean median\n  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 setosa     0.246    0.2\n2 versicolor 1.33     1.3\n3 virginica  2.03     2"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
     "href": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
     "title": "2.3.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value] (cont.)\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{N}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "href": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Width (aka variability)",
+    "text": "Width (aka variability)\n\nVariability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.\nVariation has a true value from a population that we estimate from a sample."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#range",
     "href": "slides/DisplayingAndDescribingData3.html#range",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nThe difference between the maximum and minimum observed values in a sample"
+    "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#range-1",
     "href": "slides/DisplayingAndDescribingData3.html#range-1",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#range-2",
-    "href": "slides/DisplayingAndDescribingData3.html#range-2",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 10 chicks from those 46\n\n\nCodechick10random &lt;- sample(x = chick20, size = 10, replace = F)\nsummary(chick10random)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  120.0   162.2   207.5   201.8   234.8   280.0 \n\nCodemax(chick10random) - min(chick10random)\n\n[1] 160\n\nCoderange(chick10random)\n\n[1] 120 280\n\nCodediff(range(chick10random))\n\n[1] 160"
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 327\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
     "href": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
     "title": "2.3.Displaying & Describing Data",
     "section": "Small samples tend to give lower estimates of the range than large samples",
-    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nhow do we call this?\n\nSo sample range is a biased estimator of the true range of the population."
+    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nSo the sample range is a biased estimator of the true range of the population\n\nSo sample range is a biased estimator of the true range of the population."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#scenario",
@@ -154,28 +147,35 @@
     "href": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
     "title": "2.3.Displaying & Describing Data",
     "section": "Interquartile Range (IQR)",
-    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots"
+    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots\n\n\nHow?"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#iqr",
     "href": "slides/DisplayingAndDescribingData3.html#iqr",
     "title": "2.3.Displaying & Describing Data",
     "section": "IQR",
-    "text": "IQR\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\n\nFirst quartile is the middle value of values &lt; median\nThird quartile is the middle value of values &gt; median\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
+    "text": "IQR\nImagine sorting your data.\n\nThe individual in the middle is the median.\nThe first and last individuals mark the range\nThe other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data\nThe difference between these is the interquartile range"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-1",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-1",
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example",
     "title": "2.3.Displaying & Describing Data",
-    "section": "IQR",
-    "text": "IQR\n\n\\(n=16\\)\n\n\n\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
+    "section": "IQR Example",
+    "text": "IQR Example\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR Example",
+    "text": "IQR Example\n\n\n\n\n\\(n=16\\)\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
     "href": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
     "title": "2.3.Displaying & Describing Data",
     "section": "IQR in R",
-    "text": "IQR in R\nIQR in R\n\nCode# weights at time 20, n = 46 chicks\nhead(chick20)\n\n[1] 199 209 198 160 220 160\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# IQR\nas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\n\nNow the shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\n\nAnd a boxplot\n\nCodeboxplot(chick20)"
+    "text": "IQR in R\n\n\nsummary() gives quartiles and max/min\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\n\nThe “long” route:\n\nCodeas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\nThe shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\nBoxplots reveal quartiles\n\nCodeboxplot(chick20, names = \"chicks day 20\")"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
@@ -189,21 +189,70 @@
     "href": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
     "title": "2.3.Displaying & Describing Data",
     "section": "But there are metrics that look at all the values",
-    "text": "But there are metrics that look at all the values\n\nMeet variance and standard deviation!"
+    "text": "But there are metrics that look at all the values\n\nVariance, Standard Deviation, & Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.\n\n\n\nBecause (by definition) the differences between all observations and the mean sum to zero (\\(\\sum{Y_i-\\bar{Y}=0}\\)), these summaries work from the squared difference between observations and the mean (\\(\\sum{(Y_i-\\bar{Y})^2}\\))."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#variance",
     "href": "slides/DisplayingAndDescribingData3.html#variance",
     "title": "2.3.Displaying & Describing Data",
     "section": "Variance",
-    "text": "Variance\n\nA measure of spread that is the square of the standard deviation. But let’s define it in clearer terms\n\n\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population)"
+    "text": "Variance\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#variance-1",
     "href": "slides/DisplayingAndDescribingData3.html#variance-1",
     "title": "2.3.Displaying & Describing Data",
     "section": "Variance",
-    "text": "Variance\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{n}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
+    "text": "Variance\n\n\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean\n\n\n\nNote: the numerator here is called “sum of squares”"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "href": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Sample variance (shortcut)",
+    "text": "Sample variance (shortcut)\n\\[s^2=\\left(\\frac{n}{n-1}\\right)\\left(\\frac{\\sum^{n}_{i=1}{Y^2_i}}{n}-\\bar{Y}^2\\right)\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance Example",
+    "text": "Variance Example\n\nLifespan of 12 forager bees (in hours).\n\n\n\nMean\nSum of squares\nSum of squares (cont)\n\n\n\n\n2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7\n\n\\[\\bar{Y} = \\frac{\\sum{Y_i}}{n} = \\frac{919}{33}= 27.848\\text{ hours}\\]\n\n\n\nCodebeesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\n\n# A tibble: 33 × 3\n   hours `Y-meanY` `(Y-meanY)^2`\n   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1   2.3     -25.5          653.\n 2   2.3     -25.5          653.\n 3   3.9     -23.9          574.\n 4   4       -23.8          569.\n 5   7.1     -20.7          430.\n 6   9.5     -18.3          337.\n 7   9.6     -18.2          333.\n 8  10.8     -17.0          291.\n 9  12.8     -15.0          226.\n10  13.6     -14.2          203.\n# ℹ 23 more rows\n\n\n\n\n\nCodebeesDF &lt;- beesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\nsum(beesDF[, 3])\n\n[1] 13520.96\n\n\nSo\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\]\nNote: the unit here is hours squared. Also, note that we don’t divide by \\(n\\) but by \\(n-1\\).\n4 differences from population mean:\ns^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\n\n\nParameter\n\\[\\sigma=\\sqrt{\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}}=\\sqrt{\\sigma^2}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\sqrt{\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}}=\\sqrt{s^2}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\nUsing the previous example, with forager bees.\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\] \\[s^2 = \\sqrt{422.53}\\] ## In R\nVariance\n\nCodevar(beesDF$hours)\n\n[1] 422.5301\n\n\nStandard deviation\n\nCodesd(beesDF$hours)\n\n[1] 20.55554\n\nCodesqrt(var(beesDF$hours))\n\n[1] 20.55554"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "href": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Coefficient of Variation (CV)",
+    "text": "Coefficient of Variation (CV)\n\nThe variance and standard deviation increase with the mean.\nThe coefficient of variation allows for fair comparisons of variability between measures on different scales.\n\n\\[CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "href": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "In summary",
+    "text": "In summary\n\nRange: The difference between the largest and smallest values.\nInterquartile Range: The difference between the 25th and 75th percentile.\nVariance & Standard Deviation: The difference between a random sample & the mean.\nCoefficient of Variation: A measure of the standard deviation that’s independent of the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance, Standard Deviation or Coefficient of Variation?",
+    "text": "Variance, Standard Deviation or Coefficient of Variation?\n\n\nVariance and standard deviation convey the same information and are used in many equations.\n\nThe coefficient of variation is less directly used in equations, but is idea for comparing variation between different types of comparisons."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
@@ -823,7 +872,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -1278,7 +1327,7 @@
     "href": "slides/DisplayingAndDescribingData2.html#skewness-1",
     "title": "2.2.Displaying & Describing Data",
     "section": "Skewness",
-    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&lt;1/2\\) of values exceed the mean."
+    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&gt;1/2\\) of values are less than the mean."
   },
   {
     "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
@@ -1299,7 +1348,7 @@
     "href": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
     "title": "2.2.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData2.html#range",

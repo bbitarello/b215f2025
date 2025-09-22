@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-17">
+<meta name="dcterms.date" content="2025-09-22">
 <meta name="keywords" content="Spread and Plots">
 <title>BIOL B215: Biostatistics with R – 2.3.Displaying &amp; Describing Data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -208,11 +208,11 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-17</p>
+  <p class="date">2025-09-22</p>
 </section><section id="last-time" class="slide level2"><h2>Last time</h2>
 <ul>
-<li>Mean</li>
-<li>Median</li>
+<li>Mean, median, mode</li>
+<li>Range</li>
 </ul>
 <aside class="notes"><p>today: location and width; next class plots</p>
 <style type="text/css">
@@ -225,30 +225,18 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
+      }</style></aside></section><section id="this-week" class="slide level2"><h2>This week</h2>
 <ul>
-<li>Median example</li>
-<li>Mode</li>
-<li>Estimates of width</li>
+<li>Estimates of width (cont.)</li>
 <li>Explanatory and exploratory figures</li>
 <li>Best practices in figure design</li>
 <li>How data types drive figure design</li>
 <li>How to make effective tables</li>
-</ul></section><section><section id="add-this" class="title-slide slide level1"><h1>add this</h1>
-<p>A tibble: 3 × 3 Species mean median <fct><dbl><dbl> 1 setosa 0.246 0.2 2 versicolor 1.33 1.3 3 virginica 2.03 2</dbl></dbl></fct></p>
-</section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
-<div class="goal">
-<p>Recall the <font color="#fdfbf7"><code>iris</code> </font> dataset</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" class="quarto-figure quarto-figure-center" width="450" height="175"></p>
-</figure>
-</div>
-</section><section id="histograms-reveal-measures-of-center-1" class="slide level2"><h2>Histograms reveal measures of center</h2>
+</ul></section><section id="recall-this-histogram" class="slide level2"><h2>Recall this histogram</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-1-1">Figure</a></li>
-<li><a href="#tabset-1-2">Code</a></li>
+<li><a href="#tabset-1-2">Mean and Median</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1">
@@ -263,30 +251,31 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
-<span id="cb1-3"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-4"><a></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
-<span id="cb1-5"><a></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
-<span id="cb1-6"><a></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  Species     mean median
+  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+1 setosa     0.246    0.2
+2 versicolor 1.33     1.3
+3 virginica  2.03     2  </code></pre>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section><section id="measures-of-dispersion" class="slide level2"><h2>Measures of dispersion</h2>
 <ul>
-<li class="fragment"><p>Range [<code>max value - min value</code>]</p></li>
-<li class="fragment"><p>Quartiles, interquartile range [<code>75th percentile - 25th percentile</code>]</p></li>
-<li class="fragment"><p>Variance [<font color="#00a1b7"> estimate = <span class="math inline">\(s^2\)</span> =<span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n-1}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma ^2\)</span> = <span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n}\)</span> ]</font></p></li>
-<li class="fragment"><p>Standard deviation [<font color="#00a1b7"> estimate = <span class="math inline">\(s\)</span> =<span class="math inline">\(\sqrt{s^2}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma\)</span> = <span class="math inline">\(\sqrt{\sigma^2}\)</span> ]</font></p></li>
-<li class="fragment"><p>Coefficient of variation [<font color="#00a1b7"> estimate = CV = <span class="math inline">\(\frac{s}{\bar{Y}}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\frac{\sigma}{\mu}\)</span> ]</font></p></li>
-</ul></section><section id="range" class="slide level2"><h2>Range</h2>
-<div class="goal">
-<p>The difference between the maximum and minimum observed values in a sample</p>
+<li><p>Range [<code>max value - min value</code>] (cont.)</p></li>
+<li><p>Quartiles, interquartile range [<code>75th percentile - 25th percentile</code>]</p></li>
+<li><p>Variance [<font color="#00a1b7"> estimate = <span class="math inline">\(s^2\)</span> =<span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n-1}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma ^2\)</span> = <span class="math inline">\(\frac{\Sigma(x_i - \mu)^2}{N}\)</span> ]</font></p></li>
+<li><p>Standard deviation [<font color="#00a1b7"> estimate = <span class="math inline">\(s\)</span> =<span class="math inline">\(\sqrt{s^2}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma\)</span> = <span class="math inline">\(\sqrt{\sigma^2}\)</span> ]</font></p></li>
+<li><p>Coefficient of variation [<font color="#00a1b7"> estimate = CV = <span class="math inline">\(\frac{s}{\bar{Y}}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\frac{\sigma}{\mu}\)</span> ]</font></p></li>
+</ul></section><section id="width-aka-variability" class="slide level2 center" data-background="#898928"><h2>Width (aka variability)</h2>
+<div class="r-fit-text">
+<p>Variability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.</p>
+<p>Variation has a true value from a population that we estimate from a sample.</p>
 </div>
-</section><section id="range-1" class="slide level2"><h2>Range</h2>
+</section><section id="range" class="slide level2"><h2>Range</h2>
 <div class="goal">
 <p>Range of weight of 46 chicks at 20 days since birth</p>
 </div>
@@ -314,34 +303,46 @@ Bárbara D. Bitarello
 <pre><code>[1] 285</code></pre>
 </div>
 </div>
-</section><section id="range-2" class="slide level2"><h2>Range</h2>
+</section><section id="range-1" class="slide level2"><h2>Range</h2>
 <div class="goal">
-<p>If I take a sample of just 10 chicks from those 46</p>
+<p>If I take a sample of just 5 chicks from those 46 …</p>
 </div>
+<div class="columns">
+<div class="column">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>chick10random <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> chick20, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> F)</span>
-<span id="cb9-2"><a></a><span class="fu">summary</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">range</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  120.0   162.2   207.5   201.8   234.8   280.0 </code></pre>
+<pre><code>[1]  76 361</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">max</span>(chick10random) <span class="sc">-</span> <span class="fu">min</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">hist</span>(chick20, <span class="at">xlab =</span> <span class="st">"46 chicks"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/chick20-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>chick5random <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> chick20,</span>
+<span id="cb12-2"><a></a>    <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> F)</span>
+<span id="cb12-3"><a></a><span class="fu">range</span>(chick5random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 160</code></pre>
+<pre><code>[1] 157 327</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">range</span>(chick10random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 120 280</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">diff</span>(<span class="fu">range</span>(chick10random))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 160</code></pre>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">hist</span>(chick5random, <span class="at">xlab =</span> <span class="st">" 10 chicks"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/chick5random-1.png" width="960"></p>
+</figure>
 </div>
 </div>
+</div>
+</div></div>
 </section><section id="small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples" class="slide level2 center"><h2>Small samples tend to give lower estimates of the range than large samples</h2>
 <div class="fragment">
 <div class="r-fit-text">
-<p>how do we call this?</p>
+<p>So the sample range is a <em>biased estimator</em> of the true range of the population</p>
 </div>
 <aside class="notes"><p>So sample range is a biased estimator of the true range of the population.</p>
 <style type="text/css">
@@ -379,28 +380,37 @@ Bárbara D. Bitarello
 <ul>
 <li>less biased estimator than range</li>
 <li>necessary for making boxplots</li>
-</ul></section><section id="iqr" class="slide level2"><h2>IQR</h2>
+</ul>
+<div class="fragment">
+<p>How?</p>
+</div>
+</section><section id="iqr" class="slide level2"><h2>IQR</h2>
+<p>Imagine sorting your data.</p>
+<ul>
+<li>The individual in the middle is the median.</li>
+<li>The first and last individuals mark the range</li>
+<li>The other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data</li>
+<li>The difference between these is the interquartile range</li>
+</ul>
+
+<img data-src="images/clipboard-3649107495.png" class="r-stretch"></section><section id="iqr-example" class="slide level2"><h2>IQR Example</h2>
 <div class="goal">
 <p>Example: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp</p>
 </div>
 
-<img data-src="images/clipboard-3649107495.png" class="r-stretch"><ul>
-<li>First quartile is the middle value of values &lt; median</li>
-<li>Third quartile is the middle value of values &gt; median</li>
-</ul>
-<p><strong>Attention:</strong></p>
+<img data-src="images/clipboard-3649107495.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Attention:</strong></p>
 <ul>
 <li>
 <strong>Quantiles</strong> partition the data into <span class="math inline">\(n\)</span> parts</li>
 <li>
 <strong>Quartiles</strong> partition the data into <strong>quarters</strong>
 </li>
-</ul></section><section id="iqr-1" class="slide level2"><h2>IQR</h2>
+</ul></section><section id="iqr-example-1" class="slide level2"><h2>IQR Example</h2>
 <p><img data-src="images/clipboard-3649107495.png"></p>
-<p><span class="math inline">\(n=16\)</span></p>
 <div class="columns">
 <div class="column">
 <div class="fragment">
+<p><span class="math inline">\(n=16\)</span></p>
 <p>1st quartile: <span class="math inline">\(j=0.25n=4\)</span></p>
 <p>3rd quartile: <span class="math inline">\(j=0.75n=12\)</span></p>
 </div>
@@ -415,72 +425,197 @@ Bárbara D. Bitarello
 <aside><div>
 <p>Note: software may use slightly different algorithms.</p>
 </div></aside></section><section id="iqr-in-r" class="slide level2"><h2>IQR in R</h2>
-<p>IQR in R</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> gives quartiles and max/min</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># weights at time 20, n = 46 chicks</span></span>
-<span id="cb17-2"><a></a><span class="fu">head</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 199 209 198 160 220 160</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># summary gives quartiles and max/min</span></span>
-<span id="cb19-2"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># summary gives quartiles and max/min</span></span>
+<span id="cb15-2"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># IQR</span></span>
-<span id="cb21-2"><a></a><span class="fu">as.numeric</span>(<span class="fu">summary</span>(chick20)[<span class="dv">5</span>] <span class="sc">-</span> <span class="fu">summary</span>(chick20)[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The “long” route:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">summary</span>(chick20)[<span class="dv">5</span>] <span class="sc">-</span> <span class="fu">summary</span>(chick20)[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 98</code></pre>
 </div>
 </div>
-<div class="fragment">
-<p>Now the shortcut</p>
+<p>The shortcut</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">IQR</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">IQR</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 98</code></pre>
 </div>
 </div>
-</div>
-<div class="fragment">
-<p>And a boxplot</p>
+</div><div class="column" style="width:60%;">
+<p>Boxplots reveal quartiles</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">boxplot</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">boxplot</span>(chick20, <span class="at">names =</span> <span class="st">"chicks day 20"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
-<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<figure><p><img data-src="DisplayingAndDescribingData3_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </section><section id="iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle" class="slide level2 center" data-background="#898928"><h2>IQR can give us more information than the range, but it’s still only looking at the values “in the middle”</h2>
-</section><section id="but-there-are-metrics-that-look-at-all-the-values" class="slide level2 center" data-background="#ad7237"><h2>But there are metrics that look at all the values</h2>
+</section><section id="but-there-are-metrics-that-look-at-all-the-values" class="slide level2" data-background="#586028"><h2>But there are metrics that look at all the values</h2>
 <div class="r-fit-text">
-<p>Meet variance and standard deviation!</p>
+<p>Variance, Standard Deviation, &amp; Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.</p>
 </div>
-</section><section id="variance" class="slide level2"><h2>Variance</h2>
+
+<aside><div>
+<p><font color="#d1d9ce">Because (by definition) the differences between all observations and the mean sum to zero (<span class="math inline">\(\sum{Y_i-\bar{Y}=0}\)</span>), these summaries work from the squared difference between observations and the mean (<span class="math inline">\(\sum{(Y_i-\bar{Y})^2}\)</span>).</font></p>
+</div></aside></section><section id="variance" class="slide level2"><h2>Variance</h2>
 <div class="goal">
-<p>A measure of spread that is the square of the standard deviation. But let’s define it in clearer terms</p>
-</div>
-<div class="fragment">
-<div class="r-fit-text">
-<p>Variance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population)</p>
-</div>
+<p>Variance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean.</p>
 </div>
 </section><section id="variance-1" class="slide level2"><h2>Variance</h2>
-<p><strong>Parameter</strong></p>
-<p><font color="#ad7237"><span class="math display">\[\sigma^2=\frac{\sum_{i=1}^{N}(Y_{i}-\mu)^2}{n}\]</span> </font> <span class="math inline">\(N\)</span>: number of individuals in population</p>
+<div class="columns">
+<div class="column">
+<p><font color="#ad7237"><strong>Parameter</strong></font></p>
+<p><font color="#ad7237"><span class="math display">\[\sigma^2=\frac{\sum_{i=1}^{N}(Y_{i}-\mu)^2}{N}\]</span> </font> <span class="math inline">\(N\)</span>: number of individuals in population</p>
 <p><span class="math inline">\(\mu\)</span>: population mean</p>
-<p><strong>Estimate</strong></p>
-<p><font color="#00a1b7"><span class="math display">\[s^2=\frac{\sum_{i=1}^{N}(Y_{i}-\bar{Y})^2}{n-1}\]</span> </font> <span class="math inline">\(n\)</span>: number of individuals in sample</p>
+</div><div class="column">
+<p><font color="#00a1b7"><strong>Estimate</strong></font></p>
+<p><font color="#00a1b7"><span class="math display">\[s^2=\frac{\sum_{i=1}^{n}(Y_{i}-\bar{Y})^2}{n-1}\]</span> </font> <span class="math inline">\(n\)</span>: number of individuals in sample</p>
 <p><span class="math inline">\(\bar{Y}\)</span>: sample mean</p>
+</div></div>
+
+<aside><div>
+<p>Note: the numerator here is called “sum of squares”</p>
+</div></aside></section><section id="sample-variance-shortcut" class="slide level2"><h2>Sample variance (shortcut)</h2>
+<p><span class="math display">\[s^2=\left(\frac{n}{n-1}\right)\left(\frac{\sum^{n}_{i=1}{Y^2_i}}{n}-\bar{Y}^2\right)\]</span></p>
+</section><section id="variance-example" class="slide level2"><h2>Variance Example</h2>
+<div class="goal">
+<p>Lifespan of 12 forager bees (in hours).</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">Mean</a></li>
+<li><a href="#tabset-2-2">Sum of squares</a></li>
+<li><a href="#tabset-2-3">Sum of squares (cont)</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<blockquote>
+<p>2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7</p>
+</blockquote>
+<p><span class="math display">\[\bar{Y} = \frac{\sum{Y_i}}{n} = \frac{919}{33}= 27.848\text{ hours}\]</span></p>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>beesDF <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a></a>    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Y-meanY</span><span class="st">`</span> <span class="ot">=</span> hours <span class="sc">-</span> <span class="fu">mean</span>(hours)) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a></a>    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">(Y-meanY)^2</span><span class="st">`</span> <span class="ot">=</span> (hours <span class="sc">-</span> <span class="fu">mean</span>(hours))<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 33 × 3
+   hours `Y-meanY` `(Y-meanY)^2`
+   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
+ 1   2.3     -25.5          653.
+ 2   2.3     -25.5          653.
+ 3   3.9     -23.9          574.
+ 4   4       -23.8          569.
+ 5   7.1     -20.7          430.
+ 6   9.5     -18.3          337.
+ 7   9.6     -18.2          333.
+ 8  10.8     -17.0          291.
+ 9  12.8     -15.0          226.
+10  13.6     -14.2          203.
+# ℹ 23 more rows</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>beesDF <span class="ot">&lt;-</span> beesDF <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a></a>    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Y-meanY</span><span class="st">`</span> <span class="ot">=</span> hours <span class="sc">-</span> <span class="fu">mean</span>(hours)) <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a></a>    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">(Y-meanY)^2</span><span class="st">`</span> <span class="ot">=</span> (hours <span class="sc">-</span> <span class="fu">mean</span>(hours))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb24-4"><a></a><span class="fu">sum</span>(beesDF[, <span class="dv">3</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 13520.96</code></pre>
+</div>
+</div>
+<p>So</p>
+<p><span class="math display">\[s^2 = \frac{13520.96}{33-1}=422.53\text{ hours}^2\]</span></p>
+<p>Note: the unit here is hours <strong>squared</strong>. Also, note that we don’t divide by <span class="math inline">\(n\)</span> but by <span class="math inline">\(n-1\)</span>.</p>
+<aside class="notes"><p>4 differences from population mean:<br>
+s^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</div>
+</div>
+</section><section id="standard-deviation" class="slide level2"><h2>Standard Deviation</h2>
+<div class="columns">
+<div class="column">
+<p><font color="#ad7237"><strong>Parameter</strong></font></p>
+<p><font color="#ad7237"><span class="math display">\[\sigma=\sqrt{\frac{\sum_{i=1}^{N}(Y_{i}-\mu)^2}{N}}=\sqrt{\sigma^2}\]</span> </font> <span class="math inline">\(N\)</span>: number of individuals in population</p>
+<p><span class="math inline">\(\mu\)</span>: population mean</p>
+</div><div class="column">
+<p><font color="#00a1b7"><strong>Estimate</strong></font></p>
+<p><font color="#00a1b7"><span class="math display">\[s^2=\sqrt{\frac{\sum_{i=1}^{n}(Y_{i}-\bar{Y})^2}{n-1}}=\sqrt{s^2}\]</span> </font> <span class="math inline">\(n\)</span>: number of individuals in sample</p>
+<p><span class="math inline">\(\bar{Y}\)</span>: sample mean</p>
+</div></div>
+</section><section id="standard-deviation-1" class="slide level2"><h2>Standard Deviation</h2>
+<p>Using the previous example, with forager bees.</p>
+<p><span class="math display">\[s^2 = \frac{13520.96}{33-1}=422.53\text{ hours}^2\]</span> <span class="math display">\[s^2 = \sqrt{422.53}\]</span> ## In R</p>
+<p>Variance</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">var</span>(beesDF<span class="sc">$</span>hours)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 422.5301</code></pre>
+</div>
+</div>
+<p>Standard deviation</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">sd</span>(beesDF<span class="sc">$</span>hours)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.55554</code></pre>
+</div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">sqrt</span>(<span class="fu">var</span>(beesDF<span class="sc">$</span>hours))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.55554</code></pre>
+</div>
+</div>
+</section><section id="coefficient-of-variation-cv" class="slide level2"><h2>Coefficient of Variation (CV)</h2>
+<ul>
+<li><p>The variance and standard deviation increase with the mean.</p></li>
+<li><p>The coefficient of variation allows for fair comparisons of variability between measures on different scales.</p></li>
+</ul>
+<p><span class="math display">\[CV = 100\% \times \frac{s}{\bar{Y}}\]</span></p>
+</section><section id="in-summary" class="slide level2"><h2>In summary</h2>
+<div class="goal">
+<p>Range: The difference between the largest and smallest values.</p>
+<p>Interquartile Range: The difference between the 25th and 75th percentile.</p>
+<p>Variance &amp; Standard Deviation: The difference between a random sample &amp; the mean.</p>
+<p>Coefficient of Variation: A measure of the standard deviation that’s independent of the mean.</p>
+</div>
+</section><section id="variance-standard-deviation-or-coefficient-of-variation" class="slide level2 center" data-background="#55cfd8"><h2>Variance, Standard Deviation or Coefficient of Variation?</h2>
+<div class="columns">
+<div class="column">
+<p>Variance and standard deviation convey the same information and are used in many equations.</p>
+</div><div class="column">
+<p>The coefficient of variation is less directly used in equations, but is idea for comparing variation between different types of comparisons.</p>
+</div></div>
 </section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section></section>
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
