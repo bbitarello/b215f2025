@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/psets.html",
-    "items": []
-  },
-  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -13,7 +9,12 @@
       "/slides/Statistics_and_Samples4.html",
       "/slides/DisplayingAndDescribingData.html",
       "/slides/DisplayingAndDescribingData2.html",
-      "/slides/DisplayingAndDescribingData3.html"
+      "/slides/DisplayingAndDescribingData3.html",
+      "/slides/DisplayingAndDescribingData4.html"
     ]
+  },
+  {
+    "listing": "/psets.html",
+    "items": []
   }
 ]

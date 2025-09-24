@@ -328,7 +328,7 @@ Bárbara D. Bitarello
 <span id="cb12-2"><a></a>    <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> F)</span>
 <span id="cb12-3"><a></a><span class="fu">range</span>(chick5random)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 133 280</code></pre>
+<pre><code>[1] 133 235</code></pre>
 </div>
 <details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">hist</span>(chick5random, <span class="at">xlab =</span> <span class="st">" 10 chicks"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
@@ -572,7 +572,7 @@ s^2 instead of sigma^2; uses sample size instead of population size, taken as de
 </div></div>
 </section><section id="standard-deviation-1" class="slide level2"><h2>Standard Deviation</h2>
 <p>Using the previous example, with forager bees.</p>
-<p><span class="math display">\[s^2 = \frac{13520.96}{33-1}=422.53\text{ hours}^2\]</span> <span class="math display">\[s^2 = \sqrt{422.53}\]</span> ## In R</p>
+<p><span class="math display">\[s^2 = \frac{13520.96}{33-1}=422.53\text{ hours}^2\]</span> <span class="math display">\[s = \sqrt{422.53}=20.555\]</span> ## In R</p>
 <p>Variance</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">var</span>(beesDF<span class="sc">$</span>hours)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -601,7 +601,7 @@ s^2 instead of sigma^2; uses sample size instead of population size, taken as de
 <div class="goal">
 <p>Range: The difference between the largest and smallest values.</p>
 <p>Interquartile Range: The difference between the 25th and 75th percentile.</p>
-<p>Variance &amp; Standard Deviation: The difference between a random sample &amp; the mean.</p>
+<p>Variance &amp; Standard Deviation: The difference between observations &amp; the mean.</p>
 <p>Coefficient of Variation: A measure of the standard deviation that’s independent of the mean.</p>
 </div>
 </section><section id="variance-standard-deviation-or-coefficient-of-variation" class="slide level2 center" data-background="#55cfd8"><h2>Variance, Standard Deviation or Coefficient of Variation?</h2>
