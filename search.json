@@ -126,7 +126,7 @@
     "href": "slides/DisplayingAndDescribingData3.html#range-1",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 133 235\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 318\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
@@ -844,7 +844,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
