@@ -1429,7 +1429,15 @@ Bárbara D. Bitarello
 <div class="goal">
 <p>Histogram</p>
 </div>
-
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Temp)) <span class="sc">+</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">xlab</span>(<span class="st">"Temp (in Fahrenheit)"</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"Maximum Daily Temperature"</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">bb_theme</span>() <span class="co"># this is just a theme I made to make plots look better</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 <img data-src="DisplayingAndDescribingData4_files/figure-revealjs/temp-hist-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">30 bins</p><aside class="notes"><p>30 bins</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1463,57 +1471,11 @@ Bárbara D. Bitarello
 <img data-src="images/clipboard-2434782249.png" class="r-stretch quarto-figure-center"><p class="caption">Measured in LaGuardia Airport, NY, 1973. Data from the “airquality” dataset from the datasets package.</p><ul>
 <li class="fragment"><p>11 bins</p></li>
 <li class="fragment"><p>equally-sized</p></li>
-</ul></section><section id="how-to-make-good-plots" class="slide level2 scrollable"><h2>How to make good plots</h2>
-<ol type="1">
-<li class="fragment">Show the data.</li>
-<li class="fragment">Make patterns easy to see.</li>
-<li class="fragment">Display magnitudes honestly.</li>
-<li class="fragment">Draw graphics clearly.</li>
-</ol></section><section id="cumulative-frequency-distributions" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-3424427183.png" class="quarto-figure quarto-figure-center" width="524"></p>
-</figure>
-</div>
-<p>The cumulative frequency of a value is the proportion of individuals equal to or less than that value.</p>
-<p>Sort data, calculate cumulative frequency…</p>
-
-<aside><div>
-<p>https://statisticsbyjim.com/basics/cumulative-frequency/</p>
-</div></aside></section><section id="cumulative-frequency-distributions-1" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+</ul></section><section id="next-week" class="slide level2"><h2>Next week</h2>
 <ul>
-<li class="fragment">Sort all values</li>
-<li class="fragment">Calculate the fraction of values <span class="math inline">\(\leq\)</span> each value – the cumulative relative frequency</li>
-<li class="fragment">Plot the values on the <span class="math inline">\(x\)</span> and their cumulative relative frequencies on the <span class="math inline">\(y\)</span>
-</li>
-<li class="fragment">Connect the values with lines</li>
-</ul></section><section id="cumulative-frequency-distributions-2" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Temp)) <span class="sc">+</span> <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()  <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<img data-src="DisplayingAndDescribingData4_files/figure-revealjs/cumdist-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">ECDF: empirical cumulative distribution function</p></section><section id="cumulative-frequency-distributions-3" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
-
-<img data-src="images/clipboard-1050603070.png" class="r-stretch"><p>Cumulative frequency distributions clearly communicate quantiles.</p>
-</section><section id="distribution-shapes" class="slide level2"><h2>Distribution shapes</h2>
-<p><strong>Histograms</strong></p>
-
-<img data-src="DisplayingAndDescribingData4_files/figure-revealjs/distribs-1.png" width="960" class="r-stretch"></section><section id="distribution-shapes-1" class="slide level2"><h2>Distribution shapes</h2>
-<p><strong>Cumulative Frequency Distributions</strong></p>
-
-<img data-src="DisplayingAndDescribingData4_files/figure-revealjs/distribs3-1.png" width="960" class="r-stretch"></section><section id="distribution-shapes-2" class="slide level2"><h2>Distribution shapes</h2>
-<ul>
-<li class="fragment"><p>Histograms, density plots, &amp; cumulative frequency plots can reveal the shapes of distributions.</p></li>
-<li class="fragment"><p>This is important for understanding data and choosing a statistical approach.</p></li>
-</ul></section><section id="less-common-plots-for-one-numerical-variable" class="slide level2"><h2>Less common plots for one numerical variable</h2>
-<ul>
-<li class="fragment">Boxplots</li>
-<li class="fragment">Violin plots</li>
-<li class="fragment">Strip charts</li>
-<li class="fragment">These are more often used to look at the association between a numerical and a categorical variable</li>
-</ul></section><section id="to-visualize-two-or-more-variables" class="slide level2"><h2>To visualize two or more variables …</h2>
-
-<img data-src="images/clipboard-866997848.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<li class="fragment">More on the types of plots/tables for different types of data</li>
+<li class="fragment">Principles of good plots</li>
+</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today!</h2>
 
 
 
