@@ -97,7 +97,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d26673891339402210887695b597bb03.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fd974a36f16bbeb2c1027230ee91187a.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -212,62 +212,1936 @@ Bárbara D. Bitarello
 </section><section id="outline" class="slide level2"><h2>Outline</h2>
 <ul>
 <li class="fragment">Letting data type guide visualizations</li>
-<li class="fragment">Rules of data visualization</li>
-</ul></section><section id="how-to-make-good-plots" class="slide level2 scrollable"><h2>How to make good plots</h2>
-<ol type="1">
-<li class="fragment">Show the data.</li>
-<li class="fragment">Make patterns easy to see.</li>
-<li class="fragment">Display magnitudes honestly.</li>
-<li class="fragment">Draw graphics clearly.</li>
-</ol></section><section id="cumulative-frequency-distributions" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-3424427183.png" class="quarto-figure quarto-figure-center" width="524"></p>
-</figure>
+<li class="fragment">Rules of data visualization - principles of good plots</li>
+</ul></section><section id="cumulative-frequency-distributions" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+<div class="example">
+<p>Number of students per grade</p>
 </div>
-<p>The cumulative frequency of a value is the proportion of individuals equal to or less than that value.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="svxskertot" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#svxskertot table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#svxskertot thead, #svxskertot tbody, #svxskertot tfoot, #svxskertot tr, #svxskertot td, #svxskertot th {
+  border-style: none;
+}
+
+#svxskertot p {
+  margin: 0;
+  padding: 0;
+}
+
+#svxskertot .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#svxskertot .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#svxskertot .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#svxskertot .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#svxskertot .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#svxskertot .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svxskertot .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#svxskertot .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#svxskertot .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#svxskertot .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#svxskertot .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#svxskertot .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#svxskertot .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#svxskertot .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#svxskertot .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#svxskertot .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#svxskertot .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#svxskertot .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#svxskertot .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svxskertot .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#svxskertot .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#svxskertot .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#svxskertot .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svxskertot .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#svxskertot .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#svxskertot .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svxskertot .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svxskertot .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#svxskertot .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svxskertot .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#svxskertot .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#svxskertot .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#svxskertot .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svxskertot .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#svxskertot .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#svxskertot .gt_left {
+  text-align: left;
+}
+
+#svxskertot .gt_center {
+  text-align: center;
+}
+
+#svxskertot .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#svxskertot .gt_font_normal {
+  font-weight: normal;
+}
+
+#svxskertot .gt_font_bold {
+  font-weight: bold;
+}
+
+#svxskertot .gt_font_italic {
+  font-style: italic;
+}
+
+#svxskertot .gt_super {
+  font-size: 65%;
+}
+
+#svxskertot .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#svxskertot .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#svxskertot .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#svxskertot .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#svxskertot .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#svxskertot .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#svxskertot .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#svxskertot .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#svxskertot div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="school_grade" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">school_grade</th>
+<th id="Frequency_of_Students" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Frequency_of_Students</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="school_grade">1</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">23</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="school_grade">2</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">20</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="school_grade">3</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">15</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="school_grade">4</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">12</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="school_grade">5</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">10</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="school_grade">6</td>
+<td class="gt_row gt_right" headers="Frequency_of_Students">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The cumulative frequency of a value is the proportion of individuals equal to or less than that value. In this case, equal or less than a given grade.</p>
 <p>Sort data, calculate cumulative frequency…</p>
 
 <aside><div>
-<p>https://statisticsbyjim.com/basics/cumulative-frequency/</p>
-</div></aside></section><section id="cumulative-frequency-distributions-1" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
-<ul>
-<li class="fragment">Sort all values</li>
-<li class="fragment">Calculate the fraction of values <span class="math inline">\(\leq\)</span> each value – the cumulative relative frequency</li>
-<li class="fragment">Plot the values on the <span class="math inline">\(x\)</span> and their cumulative relative frequencies on the <span class="math inline">\(y\)</span>
-</li>
-<li class="fragment">Connect the values with lines</li>
-</ul></section><section id="cumulative-frequency-distributions-2" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+<p>Based on example from: https://statisticsbyjim.com/basics/cumulative-frequency/</p>
+</div></aside></section><section id="cumulative-frequency-distributions-1" class="slide level2 scrollable"><h2>Cumulative Frequency Distributions</h2>
+<ol type="1">
+<li>Sort all values</li>
+<li>Calculate the fraction of values <span class="math inline">\(\leq\)</span> each value – the cumulative relative frequency</li>
+</ol>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Temp)) <span class="sc">+</span> <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()  <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a></a>    <span class="fu">mutate</span>(<span class="at">Cumul_Freq =</span> <span class="fu">cumsum</span>(Frequency_of_Students))</span>
+<span id="cb1-4"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a></a>    <span class="fu">mutate</span>(<span class="at">Rel_CFreq =</span> Cumul_Freq<span class="sc">/</span><span class="fu">sum</span>(Frequency_of_Students))</span>
+<span id="cb1-6"><a></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>  school_grade Frequency_of_Students Cumul_Freq Rel_CFreq
+1            1                    23         23 0.2613636
+2            2                    20         43 0.4886364
+3            3                    15         58 0.6590909
+4            4                    12         70 0.7954545
+5            5                    10         80 0.9090909
+6            6                     8         88 1.0000000</code></pre>
+</div>
+</div>
+</section><section id="cumulative-frequency-distributions-2" class="slide level2 scrollable"><h2>Cumulative Frequency Distributions</h2>
+<ol start="3" type="1">
+<li>Plot the values on the <span class="math inline">\(x\)</span> and their cumulative relative frequencies on the <span class="math inline">\(y\)</span>
+</li>
+<li>Connect the values with lines</li>
+</ol>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li>
+<li><a href="#tabset-1-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/cumdist3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> school_grade))<span class="sc">+</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/cumdist-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">ECDF: empirical cumulative distribution function</p></section><section id="cumulative-frequency-distributions-3" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+</div>
+</div>
+</div>
+</section><section id="cumulative-frequency-distributions-3" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+<div class="goal">
+<p>example 2: Temperatures near LaGuardia (1973)</p>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> Temp)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/cumdist5-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">ECDF: empirical cumulative distribution function</p></section><section id="cumulative-frequency-distributions-4" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
+<div class="goal">
+<p>Example 3: Spider running speed</p>
+</div>
 
-<img data-src="images/clipboard-1050603070.png" class="r-stretch"><p>Cumulative frequency distributions clearly communicate quantiles.</p>
+<img data-src="images/clipboard-1050603070.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: Figure 3.4-1 from the textbook</p><p>Cumulative frequency distributions clearly communicate quantiles.</p>
+</section><section><section id="section" class="title-slide slide level1"><h1></h1>
+<div class="r-fit-text">
+<p>Histograms, density plots, &amp; cumulative frequency plots …</p>
+<div class="goal">
+<ul>
+<li><p>can reveal the shapes of distributions</p></li>
+<li><p>important for understanding data</p></li>
+<li><p>and choosing a statistical approach</p></li>
+</ul>
+</div>
+</div>
 </section><section id="distribution-shapes" class="slide level2"><h2>Distribution shapes</h2>
 <p><strong>Histograms</strong></p>
 
 <img data-src="DisplayingAndDescribingData5_files/figure-revealjs/distribs-1.png" width="960" class="r-stretch"></section><section id="distribution-shapes-1" class="slide level2"><h2>Distribution shapes</h2>
 <p><strong>Cumulative Frequency Distributions</strong></p>
 
-<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/distribs3-1.png" width="960" class="r-stretch"></section><section id="distribution-shapes-2" class="slide level2"><h2>Distribution shapes</h2>
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/distribs3-1.png" width="960" class="r-stretch"></section><section id="less-common-plots-for-one-numerical-variable" class="slide level2"><h2>Less common plots for one numerical variable</h2>
+<p>These are more often used to look at the association between a numerical and a categorical variable:</p>
 <ul>
-<li class="fragment"><p>Histograms, density plots, &amp; cumulative frequency plots can reveal the shapes of distributions.</p></li>
-<li class="fragment"><p>This is important for understanding data and choosing a statistical approach.</p></li>
-</ul></section><section id="less-common-plots-for-one-numerical-variable" class="slide level2"><h2>Less common plots for one numerical variable</h2>
+<li>Boxplots</li>
+<li>Violin plots</li>
+<li>Strip charts</li>
+</ul></section><section id="section-1" class="slide level2 center" data-background="#55cfd8"><h2></h2>
+<div class="r-fit-text">
+<p>Two or more variables …</p>
+</div>
+</section><section id="section-2" class="slide level2" data-background="#55cfd8"><h2></h2>
+
+<img data-src="images/clipboard-866997848.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="categorical-x-categorical" class="slide level2"><h2>Categorical x Categorical</h2>
+<div class="goal">
+<p>Contingency Table</p>
+</div>
+
+<img data-src="images/clipboard-2401696263.png" class="r-stretch quarto-figure-center"><p class="caption">From: Whitlock &amp; Schluter, The Analysis of Biological Data</p></section><section id="categorical-x-categorical-1" class="slide level2"><h2>Categorical x Categorical</h2>
+<div class="goal">
+<p>Grouped bar plot</p>
+</div>
+
+<img data-src="images/clipboard-922525518.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 2.3-1 from Whitlock &amp; Schluter, The Analysis of Biological Data</p></section><section id="categorical-x-categorical-2" class="slide level2"><h2>Categorical x Categorical</h2>
+<div class="goal">
+<p>Mosaic plot</p>
+</div>
+
+<img data-src="images/clipboard-2555793338.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 2.3-2 from Whitlock &amp; Schluter, The Analysis of Biological Data</p><p>2+ variables. No upper limit, but too many variables may be confusing</p>
+<p>Width indicates the relative proportion of the corresponding value</p>
+</section><section id="numerical-x-numerical" class="slide level2"><h2>Numerical x Numerical</h2>
+<p><strong>Scatter Plot</strong></p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">Plot</a></li>
+<li><a href="#tabset-2-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/scatter-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a></a><span class="fu">ggplot</span>(iris,<span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> </span>
+<span id="cb5-5"><a></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section><section id="numerical-x-numerical-1" class="slide level2"><h2>Numerical x Numerical</h2>
+<p><strong>Scatter Plot</strong></p>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">Plot</a></li>
+<li><a href="#tabset-3-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/scatter2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb6-3"><a></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section><section id="numerical-x-categorical" class="slide level2"><h2>Numerical x Categorical</h2>
+<p><strong>Multiple Histograms</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/hist-1.png" width="960" class="r-stretch"></section><section id="numerical-x-categorical-1" class="slide level2"><h2>Numerical x Categorical</h2>
+<p><strong>Strip Chart</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/strip-1.png" width="960" class="r-stretch"></section><section id="numerical-x-categorical-2" class="slide level2"><h2>Numerical x Categorical</h2>
+<p><strong>Boxplot</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/box-1.png" width="960" class="r-stretch"></section><section id="numerical-x-categorical-3" class="slide level2"><h2>Numerical x Categorical</h2>
+<p><strong>Violin Plot</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/strip2-1.png" width="960" class="r-stretch"></section><section id="numerical-2-categorical" class="slide level2"><h2>Numerical (2) + Categorical</h2>
+<p><strong>Multiple Scatterplots with legend</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/scatter3-1.png" width="960" class="r-stretch"></section><section id="numerical-2-x-categorical" class="slide level2"><h2>Numerical (2) x Categorical</h2>
+<p><strong>Multiple scatterplots plotted separately</strong></p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/scatter4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section><section id="visualizations-over-time-and-space" class="slide level2"><h2>Visualizations Over Time and Space</h2>
+<p><strong>Line Graphs Show Data Over Time</strong></p>
+<p>For temporal data, note all observations with a data point, and connect each point with a line.</p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/laguardia-1.png" width="960" class="r-stretch"></section><section id="small-multiples-line-chart" class="slide level2"><h2>Small multiples line chart</h2>
+<p>A grid of line charts that uses the same scales and axes</p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/laguardia2-1.png" width="960" class="r-stretch"></section><section id="to-show-spatial-data" class="slide level2"><h2>To show spatial data</h2>
+<p><strong>Maps</strong></p>
+<p>Spatial data does not have to be a geographical map</p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/anatom-1.png" width="960" class="r-stretch"></section><section id="section-3" class="slide level2 center" data-background="#55cfd8"><h2></h2>
+<div class="r-fit-text">
+<p>How to make good plots</p>
+</div>
+</section><section id="section-4" class="slide level2 scrollable"><h2></h2>
+<div class="r-fit-text">
+<div class="goal">
+<ol type="1">
+<li class="fragment">
+<strong>Show</strong> the data.</li>
+<li class="fragment">Make patterns <strong>easy</strong> to see.</li>
+<li class="fragment">Display magnitudes <strong>honestly</strong>.</li>
+<li class="fragment">Draw graphics <strong>clearly</strong>.</li>
+</ol>
+</div>
+</div>
+</section><section id="section-5" class="slide level2 dark-theme scrollable"><h2></h2>
+<div class="r-fit-text">
+<p>Mistakes in displaying data:</p>
+<ol type="1">
+<li class="fragment">Hiding the data</li>
+</ol>
+</div>
+</section><section id="what-is-the-main-problem-here" class="slide level2 scrollable"><h2>What is the main problem here?</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="goal">
+<ol type="A">
+<li>Hide the data.</li>
+<li>Make patterns hard to see.</li>
+<li>Display magnitudes dishonestly.</li>
+<li>Draw graphics unclearly.</li>
+</ol>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="not-showing-data-just-summaries" class="slide level2 scrollable"><h2>👎 Not showing data, just summaries</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="goal">
+<ol type="A">
+<li><strong>Hide the data.</strong></li>
+<li>Make patterns hard to see.</li>
+<li>Display magnitudes dishonestly.</li>
+<li>Draw graphics unclearly.</li>
+</ol>
+<p>This plot hides the variation between positions.</p>
+</div>
+</div><div class="column" style="width:75%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="what-is-the-main-problem-here-1" class="slide level2 scrollable"><h2>What is the main problem here?</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="goal">
+<ol type="A">
+<li>Hide the data.</li>
+<li>Make patterns hard to see.</li>
+<li>Display magnitudes dishonestly.</li>
+<li>Draw graphics unclearly.</li>
+</ol>
+</div>
+</div><div class="column" style="width:75%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="not-showing-data-overplotting" class="slide level2 scrollable"><h2>👎 Not showing data, overplotting</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="goal">
+<ol type="A">
+<li>Hide the data.</li>
+<li>Make patterns hard to see.</li>
+<li>Display magnitudes dishonestly.</li>
+<li>Draw graphics unclearly.</li>
+</ol>
+</div>
+</div><div class="column" style="width:75%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider2b-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><p>Over-plotting hides data by placing data points on top of each other.</p>
+</div>
+</section><section id="showing-data-by-jittering" class="slide level2"><h2>👍 Showing data by jittering</h2>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider3-1.png" width="960" class="r-stretch"><p>This plot shows all the observations</p>
+</section><section id="section-6" class="slide level2 center" data-background="#55cfd8"><h2></h2>
+<div class="r-fit-text">
+<p>👎 <strong>How to hide data</strong></p>
 <ul>
-<li class="fragment">Boxplots</li>
-<li class="fragment">Violin plots</li>
-<li class="fragment">Strip charts</li>
-<li class="fragment">These are more often used to look at the association between a numerical and a categorical variable</li>
-</ul></section><section id="to-visualize-two-or-more-variables" class="slide level2"><h2>To visualize two or more variables …</h2>
+<li class="fragment">Provide only statistical summaries.</li>
+<li class="fragment">Over-plotting - too many points.</li>
+</ul>
+<p>👍 <strong>How to reveal data</strong></p>
+<ul>
+<li class="fragment">Present all of the data points.</li>
+<li class="fragment">Allow all points to be seen.</li>
+</ul>
+</div>
+</section><section id="section-7" class="slide level2 dark-theme scrollable"><h2></h2>
+<div class="r-fit-text">
+<p>Mistakes in displaying data:</p>
+<ol start="2" type="1">
+<li class="fragment">Making patterns hard to see</li>
+</ol>
+</div>
+</section><section id="whats-the-main-problem-here" class="slide level2"><h2>What’s the main problem here?</h2>
 
-<img data-src="images/clipboard-866997848.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/death-1.png" width="960" class="r-stretch"></section><section id="nonsensical-order-hides-pattern" class="slide level2"><h2>Nonsensical order hides pattern</h2>
+<p>Reordering factors makes pattern clear</p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/death2-1.png" width="960" class="r-stretch"></section><section id="tables-should-follow-similar-rules" class="slide level2"><h2>Tables should follow similar rules</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="vgysilgozb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vgysilgozb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#vgysilgozb thead, #vgysilgozb tbody, #vgysilgozb tfoot, #vgysilgozb tr, #vgysilgozb td, #vgysilgozb th {
+  border-style: none;
+}
+
+#vgysilgozb p {
+  margin: 0;
+  padding: 0;
+}
+
+#vgysilgozb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#vgysilgozb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vgysilgozb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vgysilgozb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vgysilgozb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vgysilgozb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vgysilgozb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vgysilgozb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vgysilgozb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#vgysilgozb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#vgysilgozb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vgysilgozb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vgysilgozb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vgysilgozb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vgysilgozb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vgysilgozb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#vgysilgozb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#vgysilgozb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#vgysilgozb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vgysilgozb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#vgysilgozb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vgysilgozb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vgysilgozb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vgysilgozb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vgysilgozb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vgysilgozb .gt_left {
+  text-align: left;
+}
+
+#vgysilgozb .gt_center {
+  text-align: center;
+}
+
+#vgysilgozb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vgysilgozb .gt_font_normal {
+  font-weight: normal;
+}
+
+#vgysilgozb .gt_font_bold {
+  font-weight: bold;
+}
+
+#vgysilgozb .gt_font_italic {
+  font-style: italic;
+}
+
+#vgysilgozb .gt_super {
+  font-size: 65%;
+}
+
+#vgysilgozb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#vgysilgozb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#vgysilgozb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#vgysilgozb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#vgysilgozb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#vgysilgozb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#vgysilgozb .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#vgysilgozb .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#vgysilgozb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="Cause_of_death" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cause_of_death</th>
+<th id="Number" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Number</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Congen. abnor.</td>
+<td class="gt_row gt_right" headers="Number">222</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Heart disease</td>
+<td class="gt_row gt_right" headers="Number">463</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Accidents</td>
+<td class="gt_row gt_right" headers="Number">6688</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">All other cause</td>
+<td class="gt_row gt_right" headers="Number">1653</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Other tumor</td>
+<td class="gt_row gt_right" headers="Number">52</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Suicide</td>
+<td class="gt_row gt_right" headers="Number">1615</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Homicide</td>
+<td class="gt_row gt_right" headers="Number">2093</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Chronic res. disease</td>
+<td class="gt_row gt_right" headers="Number">107</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Cerebrov. disease</td>
+<td class="gt_row gt_right" headers="Number">67</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Flu/pneumonia</td>
+<td class="gt_row gt_right" headers="Number">73</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Malig. tumor</td>
+<td class="gt_row gt_right" headers="Number">745</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:&quot;60%;">
+<p>👎</p>
+<ul>
+<li class="fragment"><p>Nonsense order hides patterns</p></li>
+<li class="fragment"><p>Alphabetical order is usually a bad idea.</p></li>
+</ul>
+</div></div>
+</section><section id="tables-should-follow-similar-rules-1" class="slide level2"><h2>Tables should follow similar rules</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="mpwfozsama" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mpwfozsama table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mpwfozsama thead, #mpwfozsama tbody, #mpwfozsama tfoot, #mpwfozsama tr, #mpwfozsama td, #mpwfozsama th {
+  border-style: none;
+}
+
+#mpwfozsama p {
+  margin: 0;
+  padding: 0;
+}
+
+#mpwfozsama .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mpwfozsama .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mpwfozsama .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mpwfozsama .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mpwfozsama .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mpwfozsama .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mpwfozsama .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mpwfozsama .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mpwfozsama .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mpwfozsama .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mpwfozsama .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mpwfozsama .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mpwfozsama .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mpwfozsama .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mpwfozsama .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpwfozsama .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mpwfozsama .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mpwfozsama .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mpwfozsama .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpwfozsama .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mpwfozsama .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpwfozsama .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mpwfozsama .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpwfozsama .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpwfozsama .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpwfozsama .gt_left {
+  text-align: left;
+}
+
+#mpwfozsama .gt_center {
+  text-align: center;
+}
+
+#mpwfozsama .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mpwfozsama .gt_font_normal {
+  font-weight: normal;
+}
+
+#mpwfozsama .gt_font_bold {
+  font-weight: bold;
+}
+
+#mpwfozsama .gt_font_italic {
+  font-style: italic;
+}
+
+#mpwfozsama .gt_super {
+  font-size: 65%;
+}
+
+#mpwfozsama .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mpwfozsama .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mpwfozsama .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mpwfozsama .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mpwfozsama .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mpwfozsama .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mpwfozsama .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mpwfozsama .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mpwfozsama div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="Cause_of_death" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cause_of_death</th>
+<th id="Number" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Number</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Accidents</td>
+<td class="gt_row gt_right" headers="Number">6688</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Homicide</td>
+<td class="gt_row gt_right" headers="Number">2093</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Suicide</td>
+<td class="gt_row gt_right" headers="Number">1615</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Malig. tumor</td>
+<td class="gt_row gt_right" headers="Number">745</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Heart disease</td>
+<td class="gt_row gt_right" headers="Number">463</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Congen. abnor.</td>
+<td class="gt_row gt_right" headers="Number">222</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Chronic res. disease</td>
+<td class="gt_row gt_right" headers="Number">107</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Flu/pneumonia</td>
+<td class="gt_row gt_right" headers="Number">73</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">Cerebrov. disease</td>
+<td class="gt_row gt_right" headers="Number">67</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Cause_of_death">Other tumor</td>
+<td class="gt_row gt_right" headers="Number">52</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="Cause_of_death">All other cause</td>
+<td class="gt_row gt_right" headers="Number">1653</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:&quot;60%;">
+<p>👍</p>
+<ul>
+<li class="fragment"><p>Order to reveal patterns</p></li>
+<li class="fragment"><p>List ordinal factors in a meaningful order</p></li>
+<li class="fragment"><p>List nominal factors from greatest to least, with “all others” last.</p></li>
+</ul>
+</div></div>
+</section><section id="section-8" class="slide level2"><h2></h2>
+<div class="columns">
+<div class="column" data-align="center">
+<p><strong>How to hide patterns</strong> 👎</p>
+<div class="goal">
+<ul>
+<li>Make one plot and call it good</li>
+<li>Unreasonable scales</li>
+<li>Arrange factors nonsensically</li>
+</ul>
+</div>
+</div><div class="column">
+<p><strong>How to reveal patterns</strong> 👍</p>
+<div class="goal">
+<ul>
+<li>Explore multiple potential plots</li>
+<li>Use appropriate scales</li>
+<li>Arrange factors meaningfully</li>
+<li>Order ordinal factors meaningfully (e.g., January to December.</li>
+<li>Order nominal factors by count.</li>
+<li>If there is a grab bag category, place it after the lowest count.</li>
+</ul>
+</div>
+</div></div>
+</section><section id="problem" class="slide level2"><h2>Problem?</h2>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider4-1.png" width="960" class="r-stretch"></section><section id="bad-axis-limits-hide-patterns" class="slide level2"><h2>Bad Axis-Limits Hide Patterns 👎</h2>
+<p>In this plot, the large scale hides the pattern (difference between the two groups)</p>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/spider5-1.png" width="960" class="r-stretch"></section><section id="problem-1" class="slide level2"><h2>Problem? 👎</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="DisplayingAndDescribingData5_files/figure-revealjs/mammals-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Lifespan by body size in mammals, data from Allison &amp; Cicchetti 1976</p>
+</div></aside></section><section id="transform-data-to-reveal-patterns" class="slide level2"><h2>Transform Data to Reveal Patterns 👍</h2>
+
+<img data-src="DisplayingAndDescribingData5_files/figure-revealjs/mammals2-1.png" width="960" class="r-stretch"></section><section id="problem-2" class="slide level2"><h2>Problem?</h2>
+
+<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="presenting-magnitudes-dishonestly" class="slide level2"><h2>Presenting magnitudes dishonestly</h2>
+<ul>
+<li class="fragment">This plot suggests that centers are 20X taller than guards.</li>
+</ul>
+
+<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="problem-3" class="slide level2"><h2>Problem? 👎</h2>
+</section><section id="section-9" class="slide level2"><h2><img data-src="images/clipboard-1596364516.png"></h2>
+<ul>
+<li class="fragment">x-axis labels obscure one another.</li>
+</ul></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
