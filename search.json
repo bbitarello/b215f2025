@@ -24,7 +24,7 @@
     "href": "schedule.html#sec-labs",
     "title": "Schedule",
     "section": "2 Labs",
-    "text": "2 Labs\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrep\n\n\n\n\n1\n2/9\nCourse Logistics\n\n\n\n1\n2/9\nRstudio/R introduction\nDC1 Introduction to R\n\n\n2\n9/9\nData Types\nDC Introduction to R\n\n\n3\n9/16\nData Stuctures\nDC Introduction to Importing Data With R\n\n\n4\n9/23\nDescribing Data: Summary Statistics and Plots\nDC Data Manipulation with dplyr\n\n\n\n\n\nDC Introduction to the Tidyverse (Grouping and Summarizing; Data Wrangling; Data Visualization; Types of visualizations)\n\n\n5\n9/30\n\nDC Reporting with Rmarkdown (Getting Started; Adding Analyses and Visualizations)\n\n\n6\n10/7\n\n\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n7\n10/21\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n8\n11/4\n\n\n\n\n9\n11/10\n\n\n\n\n10\n11/18\n\n\n\n\n11\n11/25\n\n\n\n\n12\n12/2\n\n\n\n\n13\n12/9\nWrap-up",
+    "text": "2 Labs\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrep\n\n\n\n\n1\n2/9\nCourse Logistics\n\n\n\n1\n2/9\nRstudio/R introduction\nDC1 Introduction to R\n\n\n2\n9/9\nData Types\nDC Introduction to R\n\n\n3\n9/16\nData Stuctures\nDC Introduction to Importing Data With R\n\n\n4\n9/23\nDescribing Data: Summary Statistics and Plots\nDC Data Manipulation with dplyr\n\n\n\n\n\nDC Introduction to the Tidyverse (Grouping and Summarizing; Data Wrangling; Data Visualization; Types of visualizations)\n\n\n5\n9/30\n\nDC Reporting with Rmarkdown (Getting Started; Adding Analyses and Visualizations)\n\n\n6\n10/7\n\nIntroduction to Data Visualization with ggplot2 (Introduction; Geometries; Aesthetics)\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n7\n10/21\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n8\n11/4\n\n\n\n\n9\n11/10\n\n\n\n\n10\n11/18\n\n\n\n\n11\n11/25\n\n\n\n\n12\n12/2\n\n\n\n\n13\n12/9\nWrap-up",
     "crumbs": [
       "Schedule"
     ]
@@ -126,7 +126,7 @@
     "href": "slides/DisplayingAndDescribingData3.html#range-1",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1]  76 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 100 327\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
@@ -1034,7 +1034,7 @@
     "href": "index.html#acknowledgments",
     "title": "BIOL B215: Biostatistics with R",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, [Rstudio] (https://github.com/rstudio-conf-2022/teach-ds-course-website/tree/main), and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, Rstudio, and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
     "crumbs": [
       "Home"
     ]
@@ -1491,6 +1491,13 @@
     "text": "Presenting magnitudes dishonestly\n\nThis plot suggests that centers are 20X taller than guards."
   },
   {
+    "objectID": "slides/DisplayingAndDescribingData6.html#section",
+    "href": "slides/DisplayingAndDescribingData6.html#section",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "How to represent magnitudes dishonestly: 👎 • Start bar plots at a non-zero value\nHow to represent magnitudes honestly: 👍\n• Start bar plots at zero (if the variable starts at zero)\n\nWhy? The height of a bar plot makes us think in magnitudes."
+  },
+  {
     "objectID": "slides/DisplayingAndDescribingData6.html#problem-2",
     "href": "slides/DisplayingAndDescribingData6.html#problem-2",
     "title": "2.5.Displaying & Describing Data",
@@ -1502,21 +1509,21 @@
     "href": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
     "title": "2.5.Displaying & Describing Data",
     "section": "👍 Flip Axes to Present Graphics Clearly",
-    "text": "👍 Flip Axes to Present Graphics Clearly\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nAccidents\n6688\n\n\nHomicide\n2093\n\n\nSuicide\n1615\n\n\nMalig. tumor\n745\n\n\nHeart disease\n463\n\n\nCongen. abnor.\n222\n\n\nChronic res. disease\n107\n\n\nFlu/pneumonia\n73\n\n\nCerebrov. disease\n67\n\n\nOther tumor\n52\n\n\nAll other cause\n1653"
+    "text": "👍 Flip Axes to Present Graphics Clearly"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
     "href": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
     "title": "2.5.Displaying & Describing Data",
     "section": "👍 Clear Graphics for Everyone",
-    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\nColorblind simulator: [www.color-blindness.com/coblis-color-blindness-simulator/](www.color-blindness.com/coblis-color-blindness-simulator/)"
+    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
     "href": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
     "title": "2.5.Displaying & Describing Data",
     "section": "Direct Labelling May Clarify Graphics",
-    "text": "Direct Labelling May Clarify Graphics\n\n\n\nLabels directly on plots (left hand side) quickly clarifies patterns\n\nHow to draw graphical elements unclearly:\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\nHow to draw graphical elements clearly:\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot\n\nPlease contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12\nThat’s all for today\n\n\n\n\nFrom: makeameme.org"
+    "text": "Direct Labelling May Clarify Graphics\n\n\n\nLabels directly on plots (left hand side) quickly clarifies patterns\n\nHow to draw graphical elements unclearly:\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\nHow to draw graphical elements clearly: 👍\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot\n\nPlease contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12\nThat’s all for today\n\n\n\n\nFrom: makeameme.org"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData5.html#outline",
