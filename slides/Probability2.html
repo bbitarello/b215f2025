@@ -11,8 +11,8 @@
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-10-01">
-<meta name="keywords" content="Making good plots">
-<title>BIOL B215: Biostatistics with R – 2.6.Displaying &amp; Describing Data</title>
+<meta name="keywords" content="Probability - Foundational Concepts">
+<title>BIOL B215: Biostatistics with R – 3.2.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,8 +131,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">2.6.Displaying &amp; Describing Data</h1>
-  <p class="subtitle">Plots and Tables</p>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">3.2.Probability</h1>
+  <p class="subtitle">Acknowledgments: many examples taken from the book Intuitive Biostatistics,4th edition</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -145,120 +145,255 @@ Bárbara D. Bitarello
   <p class="date">2025-10-01</p>
 </section><section id="outline" class="slide level2"><h2>Outline</h2>
 <ul>
-<li class="fragment">Wrap-up: Rules of data visualization - principles of good plots</li>
-</ul></section><section id="problem" class="slide level2"><h2>Problem? 👎</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="DisplayingAndDescribingData6_files/figure-revealjs/mammals-1.png" width="960"></p>
-</figure>
+<li><p>We don’t expect variability to depend on sample size</p></li>
+<li><p>Definitions &amp; notations</p></li>
+<li><p>Foundational concepts: random trials, exclusive and non-exclusive outcomes, etc Probability distributions and sampling distributions</p></li>
+<li><p>Probability rules: the addition principle (general and special)</p></li>
+</ul></section><section id="statistics-and-probability-in-particular-are-not-intuitive" class="slide level2 dark-theme center"><h2>Statistics (and probability, in particular) are not intuitive</h2>
+<ul>
+<li>we see patterns in random data</li>
+<li>we tend to be overconfident</li>
+</ul></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Gelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).</p>
 </div>
+<ul>
+<li><p>Results: Countries with lowest per-capita incidence – these tended to be countries with small populations</p></li>
+<li><p>Hypothesis: perhaps something to do with rural environments in those countries?</p></li>
+</ul></section><section id="case-study-1" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Random variation can have a greater effect on “averages” within small groups than within small groups.</p>
 </div>
-</div>
-
-<aside><div>
-<p>Lifespan by body size in mammals, data from Allison &amp; Cicchetti 1976</p>
-</div></aside></section><section id="transform-data-to-reveal-patterns" class="slide level2"><h2>Transform Data to Reveal Patterns 👍</h2>
-
-<img data-src="DisplayingAndDescribingData6_files/figure-revealjs/mammals2-1.png" width="960" class="r-stretch"></section><section id="section" class="slide level2 dark-theme scrollable"><h2></h2>
-<div class="r-fit-text">
-<p>Mistakes in displaying data:</p>
-<ol start="3" type="1">
-<li class="fragment">Displayig Magnitudes Dishonestly</li>
+<ul>
+<li>Larger countries/populations: spread around the mean is lower.</li>
+<li>Imagine an extreme example: a country with 1,000 people where:
+<ul>
+<li>0 people have kidney cancer: lowest incidence possible</li>
+<li>1 person has kidney cancer: super high incidencence (100 per 100,000)</li>
+</ul>
+</li>
+</ul>
+<aside class="notes"><p>Logical yet unintuitive</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="statistics-and-probability-are-not-intuitive" class="slide level2"><h2>Statistics and probability are not intuitive</h2>
+<ul>
+<li>
+<p>Our brains do a bad job of interpreting data:</p>
+<ul>
+<li>we see patterns in random data</li>
+<li>we tend to be overconfident</li>
+<li>We tend to jump to conclusions</li>
+<li>We don’t realize that coincidences are common</li>
+<li>We don’t expect variability to depend on sample size</li>
+<li>We have incorrect feelings about probability</li>
+<li>We find it hard to combine probabilities</li>
+</ul>
+</li>
+</ul></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 center"><h2>To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking</h2>
+</section><section id="why-do-we-need-probabilities" class="slide level2"><h2>Why do we need probabilities?</h2>
+<p>We can use probability theory to connect <font color="#C0532B">sample <strong>estimates</strong></font></p>
+<ul>
+<li>Which we can obtain from data.</li>
+<li>Which take their values by chance (variable).</li>
+</ul>
+<p>To <font color="#00a1b7">population <strong>parameters</strong></font>:</p>
+<ul>
+<li>Which we can almost never obtain.</li>
+<li>With values free from chance (constant).</li>
+</ul></section><section id="what-is-probability" class="slide level2"><h2>What is probability?</h2>
+<ul>
+<li>It depends.</li>
+<li>Probability is super complex.</li>
+<li>Entire books have been written on it and there are fiery debates about what even <em>IS</em> a probability.</li>
+</ul></section><section id="some-definitions" class="slide level2 scrollable"><h2>Some definitions</h2>
+<ol type="1">
+<li>Probability “out there” - outside your head.</li>
 </ol>
-</div>
-</section><section id="problem-1" class="slide level2"><h2>Problem?</h2>
-
-<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="presenting-magnitudes-dishonestly" class="slide level2"><h2>Presenting magnitudes dishonestly</h2>
-<ul>
-<li class="fragment">This plot suggests that centers are 20X taller than guards.</li>
-</ul>
-
-<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="section-1" class="slide level2"><h2></h2>
-<p>How to represent magnitudes dishonestly: 👎</p>
-<ul>
-<li class="fragment">Start bar plots at a non-zero value</li>
-</ul>
-<p>How to represent magnitudes honestly: 👍</p>
-<ul>
-<li class="fragment">Start bar plots at zero (if the variable starts at zero)</li>
-</ul>
-<div class="goal">
-<p>Why? The height of a bar plot makes us think in magnitudes.</p>
-</div>
-</section><section id="section-2" class="slide level2 dark-theme scrollable"><h2></h2>
-<div class="r-fit-text">
-<p>Mistakes in displaying data:</p>
-<ol start="4" type="1">
-<li class="fragment">Draw elements unclearly</li>
+<p>But also…</p>
+<ol start="2" type="1">
+<li><p>Probability that is inside your head — as strength of subjective beliefs; may vary among people or even different assessments by the same person.</p></li>
+<li><p>“Probabilities” used to quantify ignorance – e.g.&nbsp;probability that a pregnant person is pregnant with a girl</p></li>
+<li><p>Quantitive predictions of one time events – e.g., presidential polls</p></li>
 </ol>
-</div>
-</section><section id="problem-2" class="slide level2"><h2>Problem? 👎</h2>
-
-<img data-src="images/clipboard-1596364516.png" class="r-stretch"><ul>
-<li class="fragment">x-axis labels obscure one another.</li>
-</ul></section><section id="flip-axes-to-present-graphics-clearly" class="slide level2"><h2>👍 Flip Axes to Present Graphics Clearly</h2>
-
-<img data-src="DisplayingAndDescribingData6_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="clear-graphics-for-everyone" class="slide level2"><h2>👍 Clear Graphics for Everyone</h2>
-<p>Consider your audience</p>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-887721364.png" class="quarto-figure quarto-figure-center" style="width:77.0%"></p>
-</figure>
-</div>
 
 <aside><div>
-<p>Colorblind simulator: <a href="www.color-blindness.com/coblis-color-blindness-simulator/">www.color-blindness.com/coblis-color-blindness-simulator/</a></p>
-</div></aside></section><section id="direct-labelling-may-clarify-graphics" class="slide level2"><h2>Direct Labelling May Clarify Graphics</h2>
-<p><img data-src="images/clipboard-3226121188.png" style="height:38.0%"></p>
-<p>Labels directly on plots may also help with clarifying patterns</p>
-</section><section id="section-3" class="slide level2 center"><h2></h2>
-<div class="r-fit-text">
+<p>From: Kruschke’s (2011) terminology.</p>
+</div></aside></section><section id="probability-out-there---outside-your-head" class="slide level2"><h2>Probability “out there” - outside your head</h2>
+<p>What we deal with in biology most of the time</p>
 <div class="goal">
-<p>How to draw graphical elements unclearly: 👎</p>
-</div>
 <ul>
-<li class="fragment"><p>Unthinkingly accept default options from plotting programs</p></li>
-<li class="fragment"><p>Do not consider how a diverse audience will consume your figure</p></li>
-</ul>
-<div class="goal">
-<p>How to draw graphical elements clearly: 👍</p>
-</div>
-<ul>
-<li class="fragment"><p>Reflect on plot design</p></li>
-<li class="fragment"><p>Consider the diverse audience you are reaching and how they may interact with your plot</p></li>
+<li>This is probability as long-term frequency</li>
+<li>The probability that a certain event will happen has a definite value (a parameter)</li>
+<li>We rarely have enough data to know that value precisely (or good data to know it accurately), but we estimate it and give it different levels of confidence</li>
 </ul>
 </div>
-</section><section id="a-note-about-boxplots" class="slide level2"><h2>A note about boxplots</h2>
+</section><section id="probability-as-long-term-frequency" class="slide level2"><h2>Probability as long-term frequency</h2>
 <ul>
-<li class="fragment"><p>There is more than one way to define the whiskers in a boxplot</p></li>
-<li class="fragment"><p>R (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value</p></li>
-<li class="fragment"><p>But how are outliers defined?</p></li>
-</ul></section><section id="case-1-if-there-are-no-outliers-in-the-dataset" class="slide level2"><h2>Case 1: If there are no outliers in the dataset</h2>
-<p>R uses the popular method of <span class="math inline">\(\text{lower fence}=Q1–1.5(IQR)\)</span> and <span class="math inline">\(\text{upper fence}=Q3+1.5(IQR)\)</span>. If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-132056386.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<li><p>The probability of an event is its true relative frequency - “out there”</p></li>
+<li><p>This is the proportion of times the event would occur if we repeated the same process over and over again</p></li>
+</ul></section><section id="probability-theory-statistics" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>Probabilities take values from 0-1 (or 0-100%)</p>
+<p>They are used to quantify a prediction about a future event <strong><em>OR</em></strong> the certainty of a belief</p>
+</section><section id="probability-theory-statistics-1" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of zero (0%) indicates:</p>
+<ul>
+<li>An event is impossible<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is wrong</li>
+</ul></section><section id="probability-theory-statistics-2" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of one (100%) indicates:</p>
+<ul>
+<li>An event is certain to happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is correct</li>
+</ul></section><section id="probability-theory-statistics-3" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of 0.5 (50%) indicates:</p>
+<ul>
+<li>An event is equally likely to happen or not happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone believes that a statement is equally likely to be true or false</li>
+</ul></section><section id="example" class="slide level2"><h2>Example</h2>
+<div class="goal">
+<p>Example: what’s the probability that a fair die will give me 2 if I roll it once?</p>
 </div>
-
-<aside><div>
-<p>Image: https://www.mathbootcamps.com/how-to-read-a-boxplot/</p>
-</div></aside></section><section id="case-2-there-are-outliers" class="slide level2"><h2>Case 2: there are outliers</h2>
-<p>If there are outliers, whiskers go up to <span class="math inline">\(Q3+1.5IQR\)</span> and down to <span class="math inline">\(Q1-1.5IQR\)</span> and outliers are shown as circles</p>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-2138431199.png" width="478"></p>
-<figcaption>Case 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)</figcaption></figure>
+<ul>
+<li>This is probability as long-term frequency</li>
+<li>It comes from the notion that if I could roll this die many, many times, I would get a 2 in about <span class="math inline">\(1/6\)</span> of the times</li>
+<li>So we say the answer here is <span class="math inline">\(1/6\)</span>
+</li>
+</ul></section><section id="lingo-odds-vs-probability" class="slide level2"><h2>Lingo: Odds vs probability</h2>
+<ul>
+<li>They express the same thing</li>
+<li>Probabilities can be expressed as odds</li>
+<li>Odds can be expressed as probability</li>
+<li>No consistency across fields and no advantage of one over the other</li>
+<li>I learned and most often use “probability” - It sounds less ambiguous to me than odds, which people use more in normal parlance</li>
+</ul></section><section id="example-sex-ratio" class="slide level2"><h2>Example: Sex ratio</h2>
+<div class="goal">
+<p>Worldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?</p>
 </div>
+<p><u><strong>Odds:</strong></u> Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).</p>
+<ul>
+<li>Odds of having boy versus girl is 1.07 to 1, or 1.07, or 1.07:1</li>
+<li>This is equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc</li>
+</ul>
+<p><u><strong>Probability:</strong></u> if there are 107 boys born for every 100 girls, <span class="math inline">\(107/(100+107)=51.7\%\)</span> or <span class="math inline">\(0.517\)</span> is the probability of having a boy.</p>
+</section><section id="probability-as-long-term-frequency-1" class="slide level2"><h2>Probability as long-term frequency</h2>
+<p>Two subtypes:</p>
+<ul>
+<li><p>Probabilities as predictions from a model</p></li>
+<li><p>Probabilities based on data</p></li>
+</ul></section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
+</div>
+<p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p>
+<p>A model is a simplified description of a (usually complex) mechanism. Let’s create a model</p>
+<blockquote>
+<p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
+</blockquote>
+</section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+<ul>
+<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes</li>
+<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome</li>
+<li class="fragment">Only one sperm will fertilize the ovum</li>
+<li class="fragment">Every sperm has an equal chance of doing so</li>
+<li class="fragment">If winning sperm has X chromosome, joined with another X from ovum would result in biological sex as determined by XX as female.</li>
+<li class="fragment">If winning sperm has Y chromosome, joined with an X from ovum will result in XY (male).</li>
+<li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
+</ul>
+<div class="goal">
+<p>If you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.</p>
+</div>
+</section><section id="probabilities-based-on-data" class="slide level2"><h2>Probabilities based on data</h2>
+<ul>
+<li><p>According to statistics from around the world from 2011 (CIA), 51.7% of babies born were boys.</p></li>
+<li><p>We don’t need to know why more boys were born</p></li>
+<li><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
+<li><p>These proportions have been consistent across countries for quite a while</p></li>
+</ul>
+<div class="goal">
+<p>Based on these data, the probability of having a boy is 51.7% (or ~ 0.517) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</p>
+</div>
+</section><section id="foundational-concepts-in-probability-theory" class="slide level2"><h2>Foundational Concepts in Probability Theory</h2>
+</section><section id="random-trials" class="slide level2"><h2>Random Trials</h2>
+<p>A random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.</p>
+<p>Only one outcome is observed from each repetition of a random trial.</p>
+<p>Example: rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither).</p>
+</section><section id="random-trials-1" class="slide level2"><h2>Random Trials</h2>
+<p>A Venn diagram represents these possibilities Example: rolling a six-sided die</p>
 
-<aside><div>
-<p>Image: https://www.mathbootcamps.com/how-to-read-a-boxplot/</p>
-</div></aside></section><section id="please-contribute" class="slide level2 center"><h2>Please contribute!</h2>
-<p>A thread on plots that could use some TLC:</p>
-<p><a href="https://piazza.com/class/mekmad7xwqw14d/post/12" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/12</a></p>
-</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="events-can-be-exclusive-or-non-exclusive" class="slide level2"><h2>Events can be exclusive or non-exclusive</h2>
+
+<img data-src="images/clipboard-3323191186.png" width="514" class="r-stretch"></section><section id="mutually-exclusive-events" class="slide level2"><h2>Mutually exclusive events</h2>
+<p>If A AND B are mutually exclusive</p>
+<ul>
+<li><p>A OR B are plausible outcomes. E.g. P(1 or 6) in a die roll</p></li>
+<li><p><span class="math inline">\(P[A\&amp;B]=0\)</span> E.g. P(heads AND tails) in a coin toss</p></li>
+</ul>
+
+<img data-src="images/clipboard-4154530475.png" class="r-stretch"></section><section id="non-mutually-exclusive-events" class="slide level2"><h2>Non-Mutually exclusive events</h2>
+<p>If A&amp;B are not mutually exclusive - There’s a chance of outcome A AND B. - <span class="math inline">\(P[A\&amp;B]\neq0\)</span> E.g. P [&lt;3 &amp; odd] in a die roll</p>
+
+<img data-src="images/clipboard-2064704944.png" class="r-stretch"></section><section id="probability-distributions" class="slide level2"><h2>Probability distributions</h2>
+</section><section id="what-is-a-probability-distribution" class="slide level2"><h2>What is A Probability Distribution?</h2>
+<p>A probability distribution is the true relative frequency of all possible values of a random variable.</p>
+<p>Probability distributions describe discrete variables.</p>
+<p>All discrete outcomes have finite probabilities.</p>
+<p>Probability distributions sum to 1.</p>
+
+<img data-src="images/clipboard-1390492242.png" class="r-stretch"><p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
+</section><section id="example-probability-distribution-for-rolling-a-die" class="slide level2"><h2>Example: probability distribution for rolling a die</h2>
+<p><span class="math inline">\(x={1,2,3,4,5,6}\)</span></p>
+<p><span class="math inline">\(p[1]=1/6\)</span></p>
+<p><span class="math inline">\(p[2]=1/6,\text{etc}\)</span></p>
+<p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
+
+<img data-src="images/clipboard-4068246779.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.4-1 from the textbook.</p></section><section id="probability-density" class="slide level2"><h2>Probability density</h2>
+<p>Probability densities describe continuous variables. The probability of any continuous outcome is infinitesimal. Probability densities integrate to 1.</p>
+
+<img data-src="images/clipboard-1878400023.png" class="r-stretch"><p><span class="math inline">\(\int{p[x]}=1\)</span></p>
+</section><section id="example-the-normal-distribution" class="slide level2"><h2>Example: the normal distribution!</h2>
+<p>Area under the curve gives you the probability of values in a range [a,b] Each value has an an infinitesimal probability value</p>
+
+<img data-src="images/clipboard-1619218967.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.4-4 from the textbook.</p></section><section id="proportion" class="slide level2"><h2>Proportion</h2>
+<p>The proportion is the number of times an event occurs divided by the number of tries.</p>
+<p>We can think of a proportion as a realized sample from our probability distribution.</p>
+</section><section id="proportion-outcome-of-a-die" class="slide level2"><h2>Proportion: Outcome of a Die 🎲</h2>
+</section><section id="compare-probability-to-proportion" class="slide level2"><h2>Compare Probability to Proportion 🎲</h2>
+</section><section id="compare-probability-to-proportion-1" class="slide level2"><h2>Compare Probability to Proportion 🎲</h2>
+</section><section id="the-sampling-distribution" class="slide level2"><h2>The Sampling Distribution</h2>
+<p>The sampling distribution is the distribution of the parameter estimate of interest from these samples.</p>
+<p>The sampling distribution is among the most important probability distributions for statistics.</p>
+</section><section id="probability-rules" class="slide level2"><h2>Probability rules</h2>
+</section><section id="the-general-addition-principle-this-or-that" class="slide level2"><h2>The general addition principle (“this or that”)</h2>
+<p>P[A or B]= P[A] + P[B] - P[A and B]</p>
+
+<img data-src="images/clipboard-1859844765.png" class="r-stretch"></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+<ul>
+<li>Understand why probability theory is the foundation for statistical reasoning.</li>
+<li>Think addition upon hearing “OR”.</li>
+<li>Think multiplication upon hearing “AND”.</li>
+<li>Calculate probabilities of complex events by using standard rules of probability theory.</li>
+<li>Explain probabilities and proportions.</li>
+<li>Explain the binomial – when would you use it</li>
+<li>Understand the binomial distribution and connect it to simple probability rules.</li>
+<li>Understand once and for all that statistics and probability are NOT intuitive</li>
+</ul>
 
 
-
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
