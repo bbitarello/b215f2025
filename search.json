@@ -126,7 +126,7 @@
     "href": "slides/DisplayingAndDescribingData3.html#range-1",
     "title": "2.3.Displaying & Describing Data",
     "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 100 327\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
@@ -682,144 +682,361 @@
     "text": "That’s all for today!\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Logistics.html#overview",
-    "href": "slides/Logistics.html#overview",
-    "title": "0.Logistics",
-    "section": "Overview",
-    "text": "Overview\n\nIntroductions\nCourse Logistics\nTo-Dos for this week"
+    "objectID": "slides/DisplayingAndDescribingData6.html#outline",
+    "href": "slides/DisplayingAndDescribingData6.html#outline",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Outline",
+    "text": "Outline\n\nWrap-up: Rules of data visualization - principles of good plots"
   },
   {
-    "objectID": "slides/Logistics.html#hello",
-    "href": "slides/Logistics.html#hello",
-    "title": "0.Logistics",
-    "section": "Hello!",
-    "text": "Hello!\n\n\n\n\n\nBárbara D. Bitarello (she/her/hers)\nPhD in human evolutionary genetics\nProfessor \\@ BMC since July 2021\nComputational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc\nInterested in all things related to evolution"
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem",
+    "href": "slides/DisplayingAndDescribingData6.html#problem",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem? 👎",
+    "text": "Problem? 👎\n\n\n\n\n\n\n\n\n\n\nLifespan by body size in mammals, data from Allison & Cicchetti 1976"
   },
   {
-    "objectID": "slides/Logistics.html#our-ta",
-    "href": "slides/Logistics.html#our-ta",
-    "title": "0.Logistics",
-    "section": "Our TA",
-    "text": "Our TA\n\nNicole Cavalieri\nEnglish Major/ Data Science Minor\nR rockstar!"
+    "objectID": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
+    "href": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Transform Data to Reveal Patterns 👍",
+    "text": "Transform Data to Reveal Patterns 👍"
   },
   {
-    "objectID": "slides/Logistics.html#pre-reqs",
-    "href": "slides/Logistics.html#pre-reqs",
-    "title": "0.Logistics",
-    "section": "Pre-Reqs",
-    "text": "Pre-Reqs\n\nNo prior experience with programming is required!\nBIOL B110 or B111 highly recommended (though not required). Why? Examples are heavily focused on biology, though the concepts and skills learned will be transferable\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nHigh school algebra - if you’re not sure, I recommend checking Khan Academy - Algebra Basics for a recap"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section",
+    "href": "slides/DisplayingAndDescribingData6.html#section",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDisplayig Magnitudes Dishonestly"
   },
   {
-    "objectID": "slides/Logistics.html#logistics",
-    "href": "slides/Logistics.html#logistics",
-    "title": "0.Logistics",
-    "section": "Logistics",
-    "text": "Logistics\nEverything I am about to say is in the syllabus!\n\nMaterials\nThings to do/install\nCourse structure\nPolicies\nHow to succeed"
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem-1",
+    "href": "slides/DisplayingAndDescribingData6.html#problem-1",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem?",
+    "text": "Problem?"
   },
   {
-    "objectID": "slides/Logistics.html#materials",
-    "href": "slides/Logistics.html#materials",
-    "title": "0.Logistics",
-    "section": "Materials",
-    "text": "Materials\n\n\n\nTextbook: Whitlock and Schluter The Analysis of Biological Data, 3rd edition (2nd: ok, but check pages)\n\n\n\n\nLaptop with browser for labs\nScientific calculator (not graphing calculator) \\(\\sim\\$12\\)\n\nScientific vs Graphing Calculator"
+    "objectID": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
+    "href": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Presenting magnitudes dishonestly",
+    "text": "Presenting magnitudes dishonestly\n\nThis plot suggests that centers are 20X taller than guards."
   },
   {
-    "objectID": "slides/Logistics.html#tech-things-to-do",
-    "href": "slides/Logistics.html#tech-things-to-do",
-    "title": "0.Logistics",
-    "section": "Tech things to do",
-    "text": "Tech things to do\n\nHave a laptop for labs and calculator for exams\nJoin Piazza\nMake accounts in DataCamp and Posit Cloud using BMC/HC email\nThen accept invite sent by email (check spam)"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-1",
+    "href": "slides/DisplayingAndDescribingData6.html#section-1",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "How to represent magnitudes dishonestly: 👎\n\nStart bar plots at a non-zero value\n\nHow to represent magnitudes honestly: 👍\n\nStart bar plots at zero (if the variable starts at zero)\n\n\nWhy? The height of a bar plot makes us think in magnitudes."
   },
   {
-    "objectID": "slides/Logistics.html#other-things-to-do",
-    "href": "slides/Logistics.html#other-things-to-do",
-    "title": "0.Logistics",
-    "section": "Other things to do",
-    "text": "Other things to do\n\nRead course info document and schedule (posted on Moodle)\nAnswer pre-course survey\nCheck course schedule and reach out asap if there are issues\nCheck midterm dates and plan accordingly"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-2",
+    "href": "slides/DisplayingAndDescribingData6.html#section-2",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDraw elements unclearly"
   },
   {
-    "objectID": "slides/Logistics.html#course-pages",
-    "href": "slides/Logistics.html#course-pages",
-    "title": "0.Logistics",
-    "section": "Course Pages",
-    "text": "Course Pages\n\nCourse website: https://bbitarello.github.io/b215f2025/ has syllabus, schedule, etc.\nAll assignments must be uploaded on Moodle (except DataCamp)\nKeys, slides, study guides will also be posted on Moodle"
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem-2",
+    "href": "slides/DisplayingAndDescribingData6.html#problem-2",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem? 👎",
+    "text": "Problem? 👎\n\n\nx-axis labels obscure one another."
   },
   {
-    "objectID": "slides/Logistics.html#course-pages-1",
-    "href": "slides/Logistics.html#course-pages-1",
-    "title": "0.Logistics",
-    "section": "Course Pages",
-    "text": "Course Pages\n\nPiazza is the preferred method for any questions that may benefit classmates, both logistical and content-related\nPiazza allows you to post anonymously (note: I will still know your identity)\n\n\n\nDatacamp and Posit Cloud will also be used weekly so join asap!"
+    "objectID": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
+    "href": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "👍 Flip Axes to Present Graphics Clearly",
+    "text": "👍 Flip Axes to Present Graphics Clearly"
   },
   {
-    "objectID": "slides/Logistics.html#course-structure",
-    "href": "slides/Logistics.html#course-structure",
-    "title": "0.Logistics",
-    "section": "Course Structure",
-    "text": "Course Structure\n\nLectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day."
+    "objectID": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
+    "href": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "👍 Clear Graphics for Everyone",
+    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
   },
   {
-    "objectID": "slides/Logistics.html#formative-vs-summative-assessments",
-    "href": "slides/Logistics.html#formative-vs-summative-assessments",
-    "title": "0.Logistics",
-    "section": "Formative vs Summative Assessments",
-    "text": "Formative vs Summative Assessments"
+    "objectID": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
+    "href": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Direct Labelling May Clarify Graphics",
+    "text": "Direct Labelling May Clarify Graphics\n\nLabels directly on plots may also help with clarifying patterns"
   },
   {
-    "objectID": "slides/Logistics.html#formative-assessments",
-    "href": "slides/Logistics.html#formative-assessments",
-    "title": "0.Logistics",
-    "section": "Formative Assessments",
-    "text": "Formative Assessments\n\n\n\nFormative assessments happen often and are focused on learning\nDC and R labs are gladed for completion/effort\nQuizzes may be taken multiple times (final grade is average)\nPS graded benevolently\nAllows instructor to adjust pace and support"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-3",
+    "href": "slides/DisplayingAndDescribingData6.html#section-3",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "How to draw graphical elements unclearly: 👎\n\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\n\nHow to draw graphical elements clearly: 👍\n\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot"
   },
   {
-    "objectID": "slides/Logistics.html#summative-assessments",
-    "href": "slides/Logistics.html#summative-assessments",
-    "title": "0.Logistics",
-    "section": "Summative Assessments",
-    "text": "Summative Assessments\n\n\n\nEvaluate students’ individual progress: have they met the learning goals? Have they mastered the material?\nTypically occur at the end of a learning period\nThe first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative"
+    "objectID": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
+    "href": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "A note about boxplots",
+    "text": "A note about boxplots\n\nThere is more than one way to define the whiskers in a boxplot\nR (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value\nBut how are outliers defined?"
   },
   {
-    "objectID": "slides/Logistics.html#datacamp",
-    "href": "slides/Logistics.html#datacamp",
-    "title": "0.Logistics",
-    "section": "DataCamp",
-    "text": "DataCamp\n\nAssigned weekly to practice lab skills\nDC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly"
+    "objectID": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "href": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 1: If there are no outliers in the dataset",
+    "text": "Case 1: If there are no outliers in the dataset\nR uses the popular method of \\(\\text{lower fence}=Q1–1.5(IQR)\\) and \\(\\text{upper fence}=Q3+1.5(IQR)\\). If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:\n\n\n\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
   },
   {
-    "objectID": "slides/Logistics.html#attendance-and-late-work",
-    "href": "slides/Logistics.html#attendance-and-late-work",
-    "title": "0.Logistics",
-    "section": "Attendance and Late Work",
-    "text": "Attendance and Late Work\n\nPlease communicate need to miss class by email.\nGrace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment\nLate work otherwise penalyzed -10% per day"
+    "objectID": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
+    "href": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 2: there are outliers",
+    "text": "Case 2: there are outliers\nIf there are outliers, whiskers go up to \\(Q3+1.5IQR\\) and down to \\(Q1-1.5IQR\\) and outliers are shown as circles\n\n\nCase 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
   },
   {
-    "objectID": "slides/Logistics.html#ai-policy",
-    "href": "slides/Logistics.html#ai-policy",
-    "title": "0.Logistics",
-    "section": "AI policy",
-    "text": "AI policy\nWe are following the BMC Honor Code. Please see syllabus.\nQuestions about this: now or later on Piazza.\nwho has read the syllabus? if not, read now the part on this"
+    "objectID": "slides/DisplayingAndDescribingData6.html#please-contribute",
+    "href": "slides/DisplayingAndDescribingData6.html#please-contribute",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Please contribute!",
+    "text": "Please contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12"
   },
   {
-    "objectID": "slides/Logistics.html#faqs-answered-in-the-syllabus",
-    "href": "slides/Logistics.html#faqs-answered-in-the-syllabus",
-    "title": "0.Logistics",
-    "section": "FAQs answered in the syllabus",
-    "text": "FAQs answered in the syllabus\nPlease visit the FAQ section of the syllabus. A few examples…\n\nWhat if I have to miss class?\nWhat if I cannot turn in an assignment in time?\nWhat if I am requesting an extension because of sickness?\nWhat if I have accommodations?"
+    "objectID": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Logistics.html#how-to-succeed",
-    "href": "slides/Logistics.html#how-to-succeed",
-    "title": "0.Logistics",
-    "section": "How to succeed",
-    "text": "How to succeed\n\nAttendance\nPre-class prep\nComplete all activities — be consistent and diligent\nCheck Piazza regularly, attend office hours at least 2x\nDon’t leave everything for last minute — that will not work well\nCommunicate proactively"
+    "objectID": "slides/Probability.html#outline",
+    "href": "slides/Probability.html#outline",
+    "title": "3.1.Probability",
+    "section": "Outline",
+    "text": "Outline\n\nUnderstand once and for all that statistics and probability are NOT intuitive\nDefinitions, terminology & notations\n\nNext week:\n\nFoundational concepts: random trials, exclusive and non-exclusive outcomes, probability rules\nProbability distributions and sampling distributions"
   },
   {
-    "objectID": "slides/Logistics.html#questions",
-    "href": "slides/Logistics.html#questions",
-    "title": "0.Logistics",
-    "section": "Questions?",
-    "text": "Questions?"
+    "objectID": "slides/Probability.html#section",
+    "href": "slides/Probability.html#section",
+    "title": "3.1.Probability",
+    "section": "",
+    "text": "Motivation"
+  },
+  {
+    "objectID": "slides/Probability.html#why-sample",
+    "href": "slides/Probability.html#why-sample",
+    "title": "3.1.Probability",
+    "section": "Why sample?",
+    "text": "Why sample?\nWe almost never sample an entire population. So we can’t nail down parameters from populations.\nBut we can make educated guesses of parameters by making estimates from samples."
+  },
+  {
+    "objectID": "slides/Probability.html#estimation-with-uncertainty",
+    "href": "slides/Probability.html#estimation-with-uncertainty",
+    "title": "3.1.Probability",
+    "section": "Estimation with uncertainty",
+    "text": "Estimation with uncertainty\n\nWe know that estimates will differ from parameters by chance.\nSo, we must incorporate uncertainty in our estimation.\nHow can we rigorously quantify this uncertainty?"
+  },
+  {
+    "objectID": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive",
+    "href": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive",
+    "title": "3.1.Probability",
+    "section": "Statistics (and probability, in particular) are not intuitive",
+    "text": "Statistics (and probability, in particular) are not intuitive\n\n“If something has a 50% chance of happening, then 9 times out of 10 it will” — Yogi Berra"
+  },
+  {
+    "objectID": "slides/Probability.html#meaning-of-intuitive",
+    "href": "slides/Probability.html#meaning-of-intuitive",
+    "title": "3.1.Probability",
+    "section": "Meaning of “intuitive”",
+    "text": "Meaning of “intuitive”\n\n“easy to understand”\n“instinctive, or acting on what one feels to be true even without reason”"
+  },
+  {
+    "objectID": "slides/Probability.html#each-row-is-a-basketball-player",
+    "href": "slides/Probability.html#each-row-is-a-basketball-player",
+    "title": "3.1.Probability",
+    "section": "Each row is a basketball player",
+    "text": "Each row is a basketball player\nDo you spot any patterns?"
+  },
+  {
+    "objectID": "slides/Probability.html#generalizing-from-a-sample-to-a-population-seems-to-be-hard-wired-into-our-brains",
+    "href": "slides/Probability.html#generalizing-from-a-sample-to-a-population-seems-to-be-hard-wired-into-our-brains",
+    "title": "3.1.Probability",
+    "section": "Generalizing from a sample to a population seems to be hard-wired into our brains",
+    "text": "Generalizing from a sample to a population seems to be hard-wired into our brains\n\n\nImages: AFP/Getty Images/Warner Bros Records. Taken from: https://www.bbc.com/future/article/20140730-why-do-we-see-faces-in-objects"
+  },
+  {
+    "objectID": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive-1",
+    "href": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive-1",
+    "title": "3.1.Probability",
+    "section": "Statistics (and probability, in particular) are not intuitive",
+    "text": "Statistics (and probability, in particular) are not intuitive\n\nwe see patterns in random data"
+  },
+  {
+    "objectID": "slides/Probability.html#section-2",
+    "href": "slides/Probability.html#section-2",
+    "title": "3.1.Probability",
+    "section": "",
+    "text": "Pick a range that you think has a 90% chance of containing the right answer\n\nDon’t consult anything/anyone. The goal is to quantify your uncertainty. If you truly have no idea, you can use the broadest range that is plausible (which you can be 100% sure includes the answer) but try to narrow down your answers to a range that you are 90% sure contains the right answer.\n\n\n\n\nMartin Luther King Jr’s age at death\nLength of the Nile river (miles; km)\nNumber of countries in OPEC1\n\nNumber of books in the Old Testament\nDiameter of the moon (miles; km)\nWeight of an empty Boeing 747 (lbs; kg)\n\n\n\nYear Mozart was born\nGestation period of an Asian elephant (days)\nDistance from London to Tokyo (miles; km)\nDeepest know point in the ocean (miles; km)\n\n\nOrganization of the Petroleum Exporting Countries"
+  },
+  {
+    "objectID": "slides/Probability.html#of-people-are-overconfident-in-this-test",
+    "href": "slides/Probability.html#of-people-are-overconfident-in-this-test",
+    "title": "3.1.Probability",
+    "section": "99% of people are overconfident in this test",
+    "text": "99% of people are overconfident in this test\n\nThese questions were used in a study by Russo and Shoemaker (1989) and 99% of \\(~1,000\\) participants, but most of them included narrow ranges that included 30 to 60% of correct answers.\n\nSimilar studies done with experts answering questions in their own field of expertise led to similar results."
+  },
+  {
+    "objectID": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive-2",
+    "href": "slides/Probability.html#statistics-and-probability-in-particular-are-not-intuitive-2",
+    "title": "3.1.Probability",
+    "section": "Statistics (and probability, in particular) are not intuitive",
+    "text": "Statistics (and probability, in particular) are not intuitive\n\nwe see patterns in random data\nwe tend to be overconfident"
+  },
+  {
+    "objectID": "slides/Probability.html#case-study",
+    "href": "slides/Probability.html#case-study",
+    "title": "3.1.Probability",
+    "section": "Case Study",
+    "text": "Case Study\n\nGelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).\n\n\nResults: Countries with lowest per-capita incidence – these tended to be countries with small populations\nHypothesis: perhaps something to do with rural environments in those countries?"
+  },
+  {
+    "objectID": "slides/Probability.html#case-study-1",
+    "href": "slides/Probability.html#case-study-1",
+    "title": "3.1.Probability",
+    "section": "Case Study",
+    "text": "Case Study\n\nRandom variation can have a greater effect on “averages” within small groups than within small groups.\n\n\nLarger countries/populations: spread around the mean is lower.\nImagine an extreme example: a country with 1,000 people where:\n\n0 people have kidney cancer: lowest incidence possible\n1 person has kidney cancer: super high incidencence (100 per 100,000)\n\n\n\nLogical yet unintuitive"
+  },
+  {
+    "objectID": "slides/Probability.html#statistics-and-probability-are-not-intuitive",
+    "href": "slides/Probability.html#statistics-and-probability-are-not-intuitive",
+    "title": "3.1.Probability",
+    "section": "Statistics and probability are not intuitive",
+    "text": "Statistics and probability are not intuitive\n\n\nOur brains do a bad job of interpreting data:\n\nwe see patterns in random data\nwe tend to be overconfident\nWe tend to jump to conclusions\nWe don’t realize that coincidences are common\nWe don’t expect variability to depend on sample size\nWe have incorrect feelings about probability\nWe find it hard to combine probabilities"
+  },
+  {
+    "objectID": "slides/Probability.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
+    "href": "slides/Probability.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
+    "title": "3.1.Probability",
+    "section": "To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking",
+    "text": "To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking"
+  },
+  {
+    "objectID": "slides/Probability.html#why-do-we-need-probabilities",
+    "href": "slides/Probability.html#why-do-we-need-probabilities",
+    "title": "3.1.Probability",
+    "section": "Why do we need probabilities?",
+    "text": "Why do we need probabilities?\nWe can use probability theory to connect sample estimates\n\nWhich we can obtain from data.\nWhich take their values by chance (variable).\n\nTo population parameters:\n\nWhich we can almost never obtain.\nWith values free from chance (constant)."
+  },
+  {
+    "objectID": "slides/Probability.html#what-is-probability",
+    "href": "slides/Probability.html#what-is-probability",
+    "title": "3.1.Probability",
+    "section": "What is probability?",
+    "text": "What is probability?\n\nIt depends.\nProbability is super complex.\nEntire books have been written on it and there are fiery debates about what even IS a probability."
+  },
+  {
+    "objectID": "slides/Probability.html#some-definitions",
+    "href": "slides/Probability.html#some-definitions",
+    "title": "3.1.Probability",
+    "section": "Some definitions",
+    "text": "Some definitions\n\nProbability “out there” - outside your head.\n\nBut also…\n\nProbability that is inside your head — as strength of subjective beliefs; may vary among people or even different assessments by the same person.\n“Probabilities” used to quantify ignorance – e.g. probability that a pregnant person is pregnant with a girl\nQuantitive predictions of one time events – e.g., presidential polls\n\n\n\nFrom: Kruschke’s (2011) terminology."
+  },
+  {
+    "objectID": "slides/Probability.html#probability-out-there---outside-your-head",
+    "href": "slides/Probability.html#probability-out-there---outside-your-head",
+    "title": "3.1.Probability",
+    "section": "Probability “out there” - outside your head",
+    "text": "Probability “out there” - outside your head\nWhat we deal with in biology most of the time\n\n\nThis is probability as long-term frequency\nThe probability that a certain event will happen has a definite value (a parameter)\nWe rarely have enough data to know that value precisely (or good data to know it accurately), but we estimate it and give it different levels of confidence"
+  },
+  {
+    "objectID": "slides/Probability.html#probability-as-long-term-frequency",
+    "href": "slides/Probability.html#probability-as-long-term-frequency",
+    "title": "3.1.Probability",
+    "section": "Probability as long-term frequency",
+    "text": "Probability as long-term frequency\n\nThe probability of an event is its true relative frequency - “out there”\nThis is the proportion of times the event would occur if we repeated the same process over and over again"
+  },
+  {
+    "objectID": "slides/Probability.html#probability-theory-statistics",
+    "href": "slides/Probability.html#probability-theory-statistics",
+    "title": "3.1.Probability",
+    "section": "Probability theory & Statistics",
+    "text": "Probability theory & Statistics\nProbabilities take values from 0-1 (or 0-100%)\nThey are used to quantify a prediction about a future event OR the certainty of a belief"
+  },
+  {
+    "objectID": "slides/Probability.html#probability-theory-statistics-1",
+    "href": "slides/Probability.html#probability-theory-statistics-1",
+    "title": "3.1.Probability",
+    "section": "Probability theory & Statistics",
+    "text": "Probability theory & Statistics\nA probability of zero (0%) indicates:\n\nAn event is impossibleOR\n\nSomeone is absolutely (100%) sure that a statement is wrong"
+  },
+  {
+    "objectID": "slides/Probability.html#probability-theory-statistics-2",
+    "href": "slides/Probability.html#probability-theory-statistics-2",
+    "title": "3.1.Probability",
+    "section": "Probability theory & Statistics",
+    "text": "Probability theory & Statistics\nA probability of one (100%) indicates:\n\nAn event is certain to happenOR\n\nSomeone is absolutely (100%) sure that a statement is correct"
+  },
+  {
+    "objectID": "slides/Probability.html#probability-theory-statistics-3",
+    "href": "slides/Probability.html#probability-theory-statistics-3",
+    "title": "3.1.Probability",
+    "section": "Probability theory & Statistics",
+    "text": "Probability theory & Statistics\nA probability of 0.5 (50%) indicates:\n\nAn event is equally likely to happen or not happenOR\n\nSomeone believes that a statement is equally likely to be true or false"
+  },
+  {
+    "objectID": "slides/Probability.html#example",
+    "href": "slides/Probability.html#example",
+    "title": "3.1.Probability",
+    "section": "Example",
+    "text": "Example\n\nExample: what’s the probability that a fair die will give me 2 if I roll it once?\n\n\nThis is probability as long-term frequency\nIt comes from the notion that if I could roll this die many, many times, I would get a 2 in about \\(1/6\\) of the times\nSo we say the answer here is \\(1/6\\)"
+  },
+  {
+    "objectID": "slides/Probability.html#lingo-odds-vs-probability",
+    "href": "slides/Probability.html#lingo-odds-vs-probability",
+    "title": "3.1.Probability",
+    "section": "Lingo: Odds vs probability",
+    "text": "Lingo: Odds vs probability\n\nThey express the same thing\nProbabilities can be expressed as odds\nOdds can be expressed as probability\nNo consistency across fields and no advantage of one over the other\nI learned and most often use “probability” - It sounds less ambiguous to me than odds, which people use more in normal parlance"
+  },
+  {
+    "objectID": "slides/Probability.html#example-sex-ratio",
+    "href": "slides/Probability.html#example-sex-ratio",
+    "title": "3.1.Probability",
+    "section": "Example: Sex ratio",
+    "text": "Example: Sex ratio\n\nWorldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?\n\nOdds: Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).\n\nOdds of having boy versus girl is 1.07 to 1, or 1.07, or 1.07:1\nThis is equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc\n\nProbability: if there are 107 boys born for every 100 girls, \\(107/(100+107)=51.7\\%\\) or \\(0.517\\) is the probability of having a boy."
+  },
+  {
+    "objectID": "slides/Probability.html#probability-as-long-term-frequency-1",
+    "href": "slides/Probability.html#probability-as-long-term-frequency-1",
+    "title": "3.1.Probability",
+    "section": "Probability as long-term frequency",
+    "text": "Probability as long-term frequency\nTwo subtypes:\n\nProbabilities as predictions from a model\nProbabilities based on data"
+  },
+  {
+    "objectID": "slides/Probability.html#probabilities-as-predictions-from-a-model",
+    "href": "slides/Probability.html#probabilities-as-predictions-from-a-model",
+    "title": "3.1.Probability",
+    "section": "Probabilities as predictions from a model",
+    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nA model is a simplified description of a (usually complex) mechanism. Let’s create a model\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
+  },
+  {
+    "objectID": "slides/Probability.html#creatingdefining-the-model",
+    "href": "slides/Probability.html#creatingdefining-the-model",
+    "title": "3.1.Probability",
+    "section": "Creating/defining the model",
+    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome, joined with another X from ovum would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome, joined with an X from ovum will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%."
+  },
+  {
+    "objectID": "slides/Probability.html#probabilities-based-on-data",
+    "href": "slides/Probability.html#probabilities-based-on-data",
+    "title": "3.1.Probability",
+    "section": "Probabilities based on data",
+    "text": "Probabilities based on data\n\nAccording to statistics from around the world from 2011 (CIA), 51.7% of babies born were boys.\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while\n\n\nBased on these data, the probability of having a boy is 51.7% (or ~ 0.517) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
+  },
+  {
+    "objectID": "slides/Probability.html#thats-all-for-today",
+    "href": "slides/Probability.html#thats-all-for-today",
+    "title": "3.1.Probability",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData.html#outline",
@@ -1054,7 +1271,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nProbability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -1084,7 +1301,7 @@
     "href": "rlearn.html#free-online-books",
     "title": "Learning R",
     "section": "2 Free Online Books",
-    "text": "2 Free Online Books\n\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
+    "text": "2 Free Online Books\n\n“R Graphic Cookbook”\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
     "crumbs": [
       "R resources"
     ]
@@ -1456,74 +1673,270 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#outline",
-    "href": "slides/DisplayingAndDescribingData6.html#outline",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/Logistics.html#overview",
+    "href": "slides/Logistics.html#overview",
+    "title": "0.Logistics",
+    "section": "Overview",
+    "text": "Overview\n\nIntroductions\nCourse Logistics\nTo-Dos for this week"
+  },
+  {
+    "objectID": "slides/Logistics.html#hello",
+    "href": "slides/Logistics.html#hello",
+    "title": "0.Logistics",
+    "section": "Hello!",
+    "text": "Hello!\n\n\n\n\n\nBárbara D. Bitarello (she/her/hers)\nPhD in human evolutionary genetics\nProfessor \\@ BMC since July 2021\nComputational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc\nInterested in all things related to evolution"
+  },
+  {
+    "objectID": "slides/Logistics.html#our-ta",
+    "href": "slides/Logistics.html#our-ta",
+    "title": "0.Logistics",
+    "section": "Our TA",
+    "text": "Our TA\n\nNicole Cavalieri\nEnglish Major/ Data Science Minor\nR rockstar!"
+  },
+  {
+    "objectID": "slides/Logistics.html#pre-reqs",
+    "href": "slides/Logistics.html#pre-reqs",
+    "title": "0.Logistics",
+    "section": "Pre-Reqs",
+    "text": "Pre-Reqs\n\nNo prior experience with programming is required!\nBIOL B110 or B111 highly recommended (though not required). Why? Examples are heavily focused on biology, though the concepts and skills learned will be transferable\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nHigh school algebra - if you’re not sure, I recommend checking Khan Academy - Algebra Basics for a recap"
+  },
+  {
+    "objectID": "slides/Logistics.html#logistics",
+    "href": "slides/Logistics.html#logistics",
+    "title": "0.Logistics",
+    "section": "Logistics",
+    "text": "Logistics\nEverything I am about to say is in the syllabus!\n\nMaterials\nThings to do/install\nCourse structure\nPolicies\nHow to succeed"
+  },
+  {
+    "objectID": "slides/Logistics.html#materials",
+    "href": "slides/Logistics.html#materials",
+    "title": "0.Logistics",
+    "section": "Materials",
+    "text": "Materials\n\n\n\nTextbook: Whitlock and Schluter The Analysis of Biological Data, 3rd edition (2nd: ok, but check pages)\n\n\n\n\nLaptop with browser for labs\nScientific calculator (not graphing calculator) \\(\\sim\\$12\\)\n\nScientific vs Graphing Calculator"
+  },
+  {
+    "objectID": "slides/Logistics.html#tech-things-to-do",
+    "href": "slides/Logistics.html#tech-things-to-do",
+    "title": "0.Logistics",
+    "section": "Tech things to do",
+    "text": "Tech things to do\n\nHave a laptop for labs and calculator for exams\nJoin Piazza\nMake accounts in DataCamp and Posit Cloud using BMC/HC email\nThen accept invite sent by email (check spam)"
+  },
+  {
+    "objectID": "slides/Logistics.html#other-things-to-do",
+    "href": "slides/Logistics.html#other-things-to-do",
+    "title": "0.Logistics",
+    "section": "Other things to do",
+    "text": "Other things to do\n\nRead course info document and schedule (posted on Moodle)\nAnswer pre-course survey\nCheck course schedule and reach out asap if there are issues\nCheck midterm dates and plan accordingly"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-pages",
+    "href": "slides/Logistics.html#course-pages",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nCourse website: https://bbitarello.github.io/b215f2025/ has syllabus, schedule, etc.\nAll assignments must be uploaded on Moodle (except DataCamp)\nKeys, slides, study guides will also be posted on Moodle"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-pages-1",
+    "href": "slides/Logistics.html#course-pages-1",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nPiazza is the preferred method for any questions that may benefit classmates, both logistical and content-related\nPiazza allows you to post anonymously (note: I will still know your identity)\n\n\n\nDatacamp and Posit Cloud will also be used weekly so join asap!"
+  },
+  {
+    "objectID": "slides/Logistics.html#course-structure",
+    "href": "slides/Logistics.html#course-structure",
+    "title": "0.Logistics",
+    "section": "Course Structure",
+    "text": "Course Structure\n\nLectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day."
+  },
+  {
+    "objectID": "slides/Logistics.html#formative-vs-summative-assessments",
+    "href": "slides/Logistics.html#formative-vs-summative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative vs Summative Assessments",
+    "text": "Formative vs Summative Assessments"
+  },
+  {
+    "objectID": "slides/Logistics.html#formative-assessments",
+    "href": "slides/Logistics.html#formative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative Assessments",
+    "text": "Formative Assessments\n\n\n\nFormative assessments happen often and are focused on learning\nDC and R labs are gladed for completion/effort\nQuizzes may be taken multiple times (final grade is average)\nPS graded benevolently\nAllows instructor to adjust pace and support"
+  },
+  {
+    "objectID": "slides/Logistics.html#summative-assessments",
+    "href": "slides/Logistics.html#summative-assessments",
+    "title": "0.Logistics",
+    "section": "Summative Assessments",
+    "text": "Summative Assessments\n\n\n\nEvaluate students’ individual progress: have they met the learning goals? Have they mastered the material?\nTypically occur at the end of a learning period\nThe first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative"
+  },
+  {
+    "objectID": "slides/Logistics.html#datacamp",
+    "href": "slides/Logistics.html#datacamp",
+    "title": "0.Logistics",
+    "section": "DataCamp",
+    "text": "DataCamp\n\nAssigned weekly to practice lab skills\nDC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly"
+  },
+  {
+    "objectID": "slides/Logistics.html#attendance-and-late-work",
+    "href": "slides/Logistics.html#attendance-and-late-work",
+    "title": "0.Logistics",
+    "section": "Attendance and Late Work",
+    "text": "Attendance and Late Work\n\nPlease communicate need to miss class by email.\nGrace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment\nLate work otherwise penalyzed -10% per day"
+  },
+  {
+    "objectID": "slides/Logistics.html#ai-policy",
+    "href": "slides/Logistics.html#ai-policy",
+    "title": "0.Logistics",
+    "section": "AI policy",
+    "text": "AI policy\nWe are following the BMC Honor Code. Please see syllabus.\nQuestions about this: now or later on Piazza.\nwho has read the syllabus? if not, read now the part on this"
+  },
+  {
+    "objectID": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "href": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "title": "0.Logistics",
+    "section": "FAQs answered in the syllabus",
+    "text": "FAQs answered in the syllabus\nPlease visit the FAQ section of the syllabus. A few examples…\n\nWhat if I have to miss class?\nWhat if I cannot turn in an assignment in time?\nWhat if I am requesting an extension because of sickness?\nWhat if I have accommodations?"
+  },
+  {
+    "objectID": "slides/Logistics.html#how-to-succeed",
+    "href": "slides/Logistics.html#how-to-succeed",
+    "title": "0.Logistics",
+    "section": "How to succeed",
+    "text": "How to succeed\n\nAttendance\nPre-class prep\nComplete all activities — be consistent and diligent\nCheck Piazza regularly, attend office hours at least 2x\nDon’t leave everything for last minute — that will not work well\nCommunicate proactively"
+  },
+  {
+    "objectID": "slides/Logistics.html#questions",
+    "href": "slides/Logistics.html#questions",
+    "title": "0.Logistics",
+    "section": "Questions?",
+    "text": "Questions?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#outline",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#outline",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Outline",
     "text": "Outline\n\nWrap-up: Rules of data visualization - principles of good plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem",
-    "href": "slides/DisplayingAndDescribingData6.html#problem",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#problem",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#problem",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Problem? 👎",
-    "text": "Problem? 👎\n\n\n\n\n\n\n\n\n\n\nLifespan by body size in mammals, data from Allison & Cicchetti 1976"
+    "text": "Problem? 👎\n\n\n\n\n\n\n\n\n\n\n\nLifespan by body size in mammals, data from Allison & Cicchetti 1976"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
-    "href": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#transform-data-to-reveal-patterns",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#transform-data-to-reveal-patterns",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Transform Data to Reveal Patterns 👍",
     "text": "Transform Data to Reveal Patterns 👍"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem-1",
-    "href": "slides/DisplayingAndDescribingData6.html#problem-1",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#section",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#section",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDisplayig Magnitudes Dishonestly"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#problem-1",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#problem-1",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Problem?",
     "text": "Problem?"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
-    "href": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#presenting-magnitudes-dishonestly",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#presenting-magnitudes-dishonestly",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Presenting magnitudes dishonestly",
     "text": "Presenting magnitudes dishonestly\n\nThis plot suggests that centers are 20X taller than guards."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#section",
-    "href": "slides/DisplayingAndDescribingData6.html#section",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#section-1",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#section-1",
+    "title": "2.6.Displaying & Describing Data",
     "section": "",
-    "text": "How to represent magnitudes dishonestly: 👎 • Start bar plots at a non-zero value\nHow to represent magnitudes honestly: 👍\n• Start bar plots at zero (if the variable starts at zero)\n\nWhy? The height of a bar plot makes us think in magnitudes."
+    "text": "How to represent magnitudes dishonestly: 👎\n\nStart bar plots at a non-zero value\n\nHow to represent magnitudes honestly: 👍\n\nStart bar plots at zero (if the variable starts at zero)\n\n\nWhy? The height of a bar plot makes us think in magnitudes."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem-2",
-    "href": "slides/DisplayingAndDescribingData6.html#problem-2",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#section-2",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#section-2",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDraw elements unclearly"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#problem-2",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#problem-2",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Problem? 👎",
     "text": "Problem? 👎\n\n\nx-axis labels obscure one another."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
-    "href": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#flip-axes-to-present-graphics-clearly",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#flip-axes-to-present-graphics-clearly",
+    "title": "2.6.Displaying & Describing Data",
     "section": "👍 Flip Axes to Present Graphics Clearly",
     "text": "👍 Flip Axes to Present Graphics Clearly"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
-    "href": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#clear-graphics-for-everyone",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#clear-graphics-for-everyone",
+    "title": "2.6.Displaying & Describing Data",
     "section": "👍 Clear Graphics for Everyone",
-    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
+    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
-    "href": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
-    "title": "2.5.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#direct-labelling-may-clarify-graphics",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#direct-labelling-may-clarify-graphics",
+    "title": "2.6.Displaying & Describing Data",
     "section": "Direct Labelling May Clarify Graphics",
-    "text": "Direct Labelling May Clarify Graphics\n\n\n\nLabels directly on plots (left hand side) quickly clarifies patterns\n\nHow to draw graphical elements unclearly:\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\nHow to draw graphical elements clearly: 👍\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot\n\nPlease contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12\nThat’s all for today\n\n\n\n\nFrom: makeameme.org"
+    "text": "Direct Labelling May Clarify Graphics\n\nLabels directly on plots may also help with clarifying patterns"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#section-3",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#section-3",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "How to draw graphical elements unclearly: 👎\n\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\n\nHow to draw graphical elements clearly: 👍\n\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#a-note-about-boxplots",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#a-note-about-boxplots",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "A note about boxplots",
+    "text": "A note about boxplots\n\nThere is more than one way to define the whiskers in a boxplot\nR (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value\nBut how are outliers defined?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 1: If there are no outliers in the dataset",
+    "text": "Case 1: If there are no outliers in the dataset\nR uses the popular method of \\(\\text{lower fence}=Q1–1.5(IQR)\\) and \\(\\text{upper fence}=Q3+1.5(IQR)\\). If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:\n\n\n\n\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#case-2-there-are-outliers",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#case-2-there-are-outliers",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 2: there are outliers",
+    "text": "Case 2: there are outliers\nIf there are outliers, whiskers go up to \\(Q3+1.5IQR\\) and down to \\(Q1-1.5IQR\\) and outliers are shown as circles\n\n\n\nCase 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)\n\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#please-contribute",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#please-contribute",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Please contribute!",
+    "text": "Please contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.knit.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData6.knit.html#thats-all-for-today",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData5.html#outline",

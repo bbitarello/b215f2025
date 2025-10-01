@@ -11,8 +11,8 @@
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-29">
-<meta name="keywords" content="Plots and Tables">
-<title>BIOL B215: Biostatistics with R – 2.5.Displaying &amp; Describing Data</title>
+<meta name="keywords" content="Making good plots">
+<title>BIOL B215: Biostatistics with R – 2.6.Displaying &amp; Describing Data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fd974a36f16bbeb2c1027230ee91187a.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0a4adf8a88f9696a4dbf792a9cb776e.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -131,7 +131,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">2.5.Displaying &amp; Describing Data</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">2.6.Displaying &amp; Describing Data</h1>
   <p class="subtitle">Plots and Tables</p>
 
 <div class="quarto-title-authors">
@@ -160,19 +160,38 @@ Bárbara D. Bitarello
 <p>Lifespan by body size in mammals, data from Allison &amp; Cicchetti 1976</p>
 </div></aside></section><section id="transform-data-to-reveal-patterns" class="slide level2"><h2>Transform Data to Reveal Patterns 👍</h2>
 
-<img data-src="DisplayingAndDescribingData6_files/figure-revealjs/mammals2-1.png" width="960" class="r-stretch"></section><section id="problem-1" class="slide level2"><h2>Problem?</h2>
+<img data-src="DisplayingAndDescribingData6_files/figure-revealjs/mammals2-1.png" width="960" class="r-stretch"></section><section id="section" class="slide level2 dark-theme scrollable"><h2></h2>
+<div class="r-fit-text">
+<p>Mistakes in displaying data:</p>
+<ol start="3" type="1">
+<li class="fragment">Displayig Magnitudes Dishonestly</li>
+</ol>
+</div>
+</section><section id="problem-1" class="slide level2"><h2>Problem?</h2>
 
 <img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="presenting-magnitudes-dishonestly" class="slide level2"><h2>Presenting magnitudes dishonestly</h2>
 <ul>
 <li class="fragment">This plot suggests that centers are 20X taller than guards.</li>
 </ul>
 
-<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="section" class="slide level2"><h2></h2>
-<p>How to represent magnitudes dishonestly: 👎 • Start bar plots at a non-zero value</p>
+<img data-src="images/clipboard-22627969.png" class="r-stretch"></section><section id="section-1" class="slide level2"><h2></h2>
+<p>How to represent magnitudes dishonestly: 👎</p>
+<ul>
+<li class="fragment">Start bar plots at a non-zero value</li>
+</ul>
 <p>How to represent magnitudes honestly: 👍</p>
-<p>• Start bar plots at zero (if the variable starts at zero)</p>
+<ul>
+<li class="fragment">Start bar plots at zero (if the variable starts at zero)</li>
+</ul>
 <div class="goal">
 <p>Why? The height of a bar plot makes us think in magnitudes.</p>
+</div>
+</section><section id="section-2" class="slide level2 dark-theme scrollable"><h2></h2>
+<div class="r-fit-text">
+<p>Mistakes in displaying data:</p>
+<ol start="4" type="1">
+<li class="fragment">Draw elements unclearly</li>
+</ol>
 </div>
 </section><section id="problem-2" class="slide level2"><h2>Problem? 👎</h2>
 
@@ -190,34 +209,56 @@ Bárbara D. Bitarello
 <aside><div>
 <p>Colorblind simulator: <a href="www.color-blindness.com/coblis-color-blindness-simulator/">www.color-blindness.com/coblis-color-blindness-simulator/</a></p>
 </div></aside></section><section id="direct-labelling-may-clarify-graphics" class="slide level2"><h2>Direct Labelling May Clarify Graphics</h2>
-<p><img data-src="images/clipboard-3226121188.png"></p>
-<ul>
-<li class="fragment">
-<p>Labels directly on plots (left hand side) quickly clarifies patterns</p>
-<h2 id="section-1"></h2>
-<p>How to draw graphical elements unclearly:</p>
+<p><img data-src="images/clipboard-3226121188.png" style="height:38.0%"></p>
+<p>Labels directly on plots may also help with clarifying patterns</p>
+</section><section id="section-3" class="slide level2 center"><h2></h2>
+<div class="r-fit-text">
+<div class="goal">
+<p>How to draw graphical elements unclearly: 👎</p>
+</div>
 <ul>
 <li class="fragment"><p>Unthinkingly accept default options from plotting programs</p></li>
 <li class="fragment"><p>Do not consider how a diverse audience will consume your figure</p></li>
 </ul>
+<div class="goal">
 <p>How to draw graphical elements clearly: 👍</p>
+</div>
 <ul>
 <li class="fragment"><p>Reflect on plot design</p></li>
 <li class="fragment"><p>Consider the diverse audience you are reaching and how they may interact with your plot</p></li>
 </ul>
-<h2 id="please-contribute">Please contribute!</h2>
-<p>A thread on plots that could use some TLC:</p>
-<p><a href="https://piazza.com/class/mekmad7xwqw14d/post/12" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/12</a></p>
-<h2 id="thats-all-for-today">That’s all for today</h2>
-</li>
-</ul>
+</div>
+</section><section id="a-note-about-boxplots" class="slide level2"><h2>A note about boxplots</h2>
+<ul>
+<li class="fragment"><p>There is more than one way to define the whiskers in a boxplot</p></li>
+<li class="fragment"><p>R (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value</p></li>
+<li class="fragment"><p>But how are outliers defined?</p></li>
+</ul></section><section id="case-1-if-there-are-no-outliers-in-the-dataset" class="slide level2"><h2>Case 1: If there are no outliers in the dataset</h2>
+<p>R uses the popular method of <span class="math inline">\(\text{lower fence}=Q1–1.5(IQR)\)</span> and <span class="math inline">\(\text{upper fence}=Q3+1.5(IQR)\)</span>. If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347"></p>
-<figcaption>From: makeameme.org</figcaption></figure>
+<figure><p><img data-src="images/clipboard-132056386.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
 
+<aside><div>
+<p>Image: https://www.mathbootcamps.com/how-to-read-a-boxplot/</p>
+</div></aside></section><section id="case-2-there-are-outliers" class="slide level2"><h2>Case 2: there are outliers</h2>
+<p>If there are outliers, whiskers go up to <span class="math inline">\(Q3+1.5IQR\)</span> and down to <span class="math inline">\(Q1-1.5IQR\)</span> and outliers are shown as circles</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-2138431199.png" width="478"></p>
+<figcaption>Case 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)</figcaption></figure>
+</div>
 
-</section>
+<aside><div>
+<p>Image: https://www.mathbootcamps.com/how-to-read-a-boxplot/</p>
+</div></aside></section><section id="please-contribute" class="slide level2 center"><h2>Please contribute!</h2>
+<p>A thread on plots that could use some TLC:</p>
+<p><a href="https://piazza.com/class/mekmad7xwqw14d/post/12" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/12</a></p>
+</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+
+
+
+<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

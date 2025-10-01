@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-17">
-<meta name="keywords" content="Central tendency and spread">
-<title>BIOL B215: Biostatistics with R – 2.2.Displaying &amp; Describing Data</title>
+<meta name="dcterms.date" content="2025-10-01">
+<meta name="keywords" content="Probability">
+<title>BIOL B215: Biostatistics with R – 3.1.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,72 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #b3b1ad; background-color: #0a0e14; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #b3b1ad; } /* Normal */
-    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #e6b673; } /* Annotation */
-    code span.at { color: #59c2ff; } /* Attribute */
-    code span.bn { color: #e6b450; } /* BaseN */
-    code span.bu { color: #95e6cb; } /* BuiltIn */
-    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #95e6cb; } /* Char */
-    code span.cn { color: #ffee99; } /* Constant */
-    code span.co { color: #626a73; font-style: italic; } /* Comment */
-    code span.cv { color: #ffee99; } /* CommentVar */
-    code span.do { color: #626a73; } /* Documentation */
-    code span.dt { color: #ff8f40; } /* DataType */
-    code span.dv { color: #e6b450; } /* DecVal */
-    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
-    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
-    code span.fl { color: #e6b450; } /* Float */
-    code span.fu { color: #ffb454; } /* Function */
-    code span.im { color: #c2d94c; } /* Import */
-    code span.in { color: #e6b450; } /* Information */
-    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
-    code span.op { color: #f29668; } /* Operator */
-    code span.ot { color: #39bae6; } /* Other */
-    code span.pp { color: #f07178; } /* Preprocessor */
-    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
-    code span.sc { color: #95e6cb; } /* SpecialChar */
-    code span.ss { color: #95e6cb; } /* SpecialString */
-    code span.st { color: #c2d94c; } /* String */
-    code span.va { color: #39bae6; } /* Variable */
-    code span.vs { color: #c2d94c; } /* VerbatimString */
-    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0a4adf8a88f9696a4dbf792a9cb776e.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -197,8 +131,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">2.2.Displaying &amp; Describing Data</h1>
-  <p class="subtitle">Measures of central tendency and spread</p>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">3.1.Probability</h1>
+  <p class="subtitle">Acknowledgments: many examples taken from the book Intuitive Biostatistics,4th edition</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -208,197 +142,252 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-09-17</p>
-</section><section id="last-time" class="slide level2"><h2>Last time</h2>
+  <p class="date">2025-10-01</p>
+</section><section id="outline" class="slide level2"><h2>Outline</h2>
 <ul>
-<li>Mean</li>
-<li>Median</li>
+<li><p>Understand once and for all that statistics and probability are NOT intuitive</p></li>
+<li><p>Definitions, terminology &amp; notations</p></li>
+<li>
+<p>Next week:</p>
+<ul>
+<li><p>Foundational concepts: random trials, exclusive and non-exclusive outcomes, probability rules</p></li>
+<li><p>Probability distributions and sampling distributions</p></li>
 </ul>
-<aside class="notes"><p>today: location and width; next class plots</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="today" class="slide level2"><h2>Today</h2>
-<ul>
-<li>Median example</li>
-<li>Mode</li>
-<li>Estimates of width</li>
-<li>Explanatory and exploratory figures</li>
-<li>Best practices in figure design</li>
-<li>How data types drive figure design</li>
-<li>How to make effective tables</li>
-</ul></section><section id="attention" class="slide level2"><h2>Attention</h2>
-<div class="columns">
-<div class="column">
-<p><font color="#00a1b7">Estimate = <span class="math inline">\(\bar{Y}, \bar{x}, \text{etc.}\)</span> </font> (sample mean)</p>
-<ul>
-<li>Variable</li>
-</ul>
-</div><div class="column">
-<p><font color="#ad7237">Parameter = <span class="math inline">\(\mu\)</span> </font> (population mean) - Constant</p>
-</div></div>
-</section><section id="practice-median-with-even-sample-size" class="slide level2"><h2>Practice: Median with even sample size</h2>
-<div class="goal">
-<p>Calculate the median of the following 10 numbers: <span class="math inline">\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\)</span></p>
-</div>
-</section><section id="mean-x-median" class="slide level2"><h2>Mean x Median</h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li><p>The mean is more convinient mathematically.</p></li>
-<li><p>The mean is the center of gravity</p></li>
-</ul>
-</div><div class="column">
-<ul>
-<li><p>The median is a better descriptor for skewed population distributions.</p></li>
-<li><p>The median is the middle measurement.</p></li>
-</ul>
-</div></div>
-<div class="fragment">
-<div class="goal">
-<p>Both can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2</p>
-</div>
-</div>
-</section><section id="case-study" class="slide level2"><h2>Case Study</h2>
-<div class="goal">
-<p><em>2005 U.S. Census</em>. The plot shows the income per household distribution for the bottom 98% of the population. Median = <span class="math inline">\(\sim46\)</span>k; Mean: <span class="math inline">\(\sim63\)</span>k.</p>
-</div>
-<div class="quarto-figure quarto-figure-left">
-<figure><div class="quarto-figure quarto-figure-left">
-<figure><p><a href="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif"><img data-src="http://visualeconsite.s3.amazonaws.com/wp-content/uploads/2005_income_distribution.gif" class="quarto-figure quarto-figure-left" width="600"></a></p>
-</figure>
-</div>
-<figcaption>From: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution</figcaption></figure>
-</div>
-<aside class="notes"><p>For measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="mean-or-median" class="slide level2"><h2>Mean or Median?</h2>
-<div class="goal">
-<p>Number of seeds per fruit. Which one is better in this case?</p>
-</div>
-
-<img data-src="images/clipboard-3321401039.png" class="r-stretch"></section><section id="mode" class="slide level2"><h2>Mode</h2>
-<div class="goal">
-<p>The most common value observed in a sample</p>
-</div>
-<ul>
-<li><p>easy to pick out as the peak in a histogram</p></li>
-<li><p>Useful because it <strong>always reflects a value actually seen in the dataset, unlike mean and median</strong></p></li>
-</ul>
-
-<img data-src="images/clipboard-1438712889.png" class="r-stretch"></section><section id="mode-1" class="slide level2"><h2>Mode</h2>
-<div class="goal">
-<p>The most common value observed in a sample</p>
-</div>
-<ul>
-<li><p>Unimodal vs bimodal (multimodal)</p></li>
-<li><p>Multimodal data usually reflects data has multiple (at least two) values that are equally common.</p></li>
-<li><p>Often results from two or more underlying groups being measured together.</p></li>
-<li><p><strong>Can be used with data that isn’t numeric</strong></p></li>
-</ul></section><section id="but-how-will-you-know-how-your-data-is-distributed" class="slide level2 center" data-background="#006475"><h2>But how will you know how your data is distributed?</h2>
+</li>
+</ul></section><section id="section" class="slide level2 dark-theme center"><h2></h2>
 <div class="r-fit-text">
-<p>First step: plot your data</p>
+<p>Motivation</p>
 </div>
-</section><section id="skewness" class="slide level2"><h2>Skewness</h2>
-
-<img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"></section><section id="skewness-1" class="slide level2"><h2>Skewness</h2>
-<p><strong>Left: Asymmetric</strong> Few small values. <span class="math inline">\(&gt;1/2\)</span> of values exceed the mean.</p>
-<p><strong>Middle: Symmetric</strong> As many large as small values. <span class="math inline">\(\sim1/2\)</span> of values exceed the mean.</p>
-<p><strong>Right: Asymmetric</strong> Few large values. <span class="math inline">\(&gt;1/2\)</span> of values are less than the mean.</p>
-
-<img data-src="DisplayingAndDescribingData2_files/figure-revealjs/unnamed-chunk-2-1.png" width="768" class="r-stretch"></section><section id="histograms-reveal-measures-of-center" class="slide level2"><h2>Histograms reveal measures of center</h2>
-<div class="goal">
-<p>Recall the <font color="#fdfbf7"><code>iris</code> </font> dataset</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Machine+Learning+R/iris-machinelearning.png" class="quarto-figure quarto-figure-center" width="450" height="175"></p>
-</figure>
-</div>
-</section><section id="histograms-reveal-measures-of-center-1" class="slide level2"><h2>Histograms reveal measures of center</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">Figure</a></li>
-<li><a href="#tabset-1-2">Code</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="DisplayingAndDescribingData2_files/figure-revealjs/hist-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
-<span id="cb1-3"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-4"><a></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
-<span id="cb1-5"><a></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
-<span id="cb1-6"><a></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</section><section id="measures-of-dispersion" class="slide level2"><h2>Measures of dispersion</h2>
+</section><section id="why-sample" class="slide level2"><h2>Why sample?</h2>
+<p>We almost never sample an entire population. So we can’t nail down parameters from populations.</p>
+<p>But we can make educated guesses of <font color="#00a1b7">parameters</font> by making <font color="#C0532B">estimates</font> from samples.</p>
+</section><section id="estimation-with-uncertainty" class="slide level2"><h2>Estimation with uncertainty</h2>
 <ul>
-<li class="fragment"><p>Range [<code>max value - min value</code>]</p></li>
-<li class="fragment"><p>Quartiles, interquartile range [<code>75th percentile - 25th percentile</code>]</p></li>
-<li class="fragment"><p>Variance [<font color="#00a1b7"> estimate = <span class="math inline">\(s^2\)</span> =<span class="math inline">\(\frac{\Sigma(x_i - \bar{x})^2}{n-1}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma ^2\)</span> = <span class="math inline">\(\frac{\Sigma(x_i - \mu)^2}{n}\)</span> ]</font></p></li>
-<li class="fragment"><p>Standard deviation [<font color="#00a1b7"> estimate = <span class="math inline">\(s\)</span> =<span class="math inline">\(\sqrt{s^2}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\sigma\)</span> = <span class="math inline">\(\sqrt{\sigma^2}\)</span> ]</font></p></li>
-<li class="fragment"><p>Coefficient of variation [<font color="#00a1b7"> estimate = CV = <span class="math inline">\(\frac{s}{\bar{Y}}\)</span></font>, <font color="#ad7237">param = <span class="math inline">\(\frac{\sigma}{\mu}\)</span> ]</font></p></li>
-</ul></section><section id="range" class="slide level2"><h2>Range</h2>
+<li><p>We know that estimates will differ from parameters by chance.</p></li>
+<li><p>So, we must incorporate <strong>uncertainty</strong> in our estimation.</p></li>
+<li><p>How can we rigorously <em>quantify</em> this uncertainty?</p></li>
+</ul></section><section id="statistics-and-probability-in-particular-are-not-intuitive" class="slide level2 dark-theme center"><h2>Statistics (and probability, in particular) are not intuitive</h2>
+<div class="r-fit-text">
+<p>“If something has a 50% chance of happening, then 9 times out of 10 it will” — Yogi Berra</p>
+</div>
+</section><section id="meaning-of-intuitive" class="slide level2 scrollable"><h2>Meaning of “intuitive”</h2>
+<ol type="1">
+<li><p>“easy to understand”</p></li>
+<li><p>“instinctive, or acting on what one feels to be true even without reason”</p></li>
+</ol></section><section id="each-row-is-a-basketball-player" class="slide level2"><h2>Each row is a basketball player</h2>
+<p>Do you spot any patterns?</p>
+
+<img data-src="images/clipboard-4178396868.png" width="531" class="r-stretch"></section><section id="generalizing-from-a-sample-to-a-population-seems-to-be-hard-wired-into-our-brains" class="slide level2"><h2>Generalizing from a sample to a population seems to be hard-wired into our brains</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.bbc.com/future/article/20140730-why-do-we-see-faces-in-objects"><img data-src="images/clipboard-1022667622.png" width="517"></a></p>
+<figcaption>Images: AFP/Getty Images/Warner Bros Records. Taken from: https://www.bbc.com/future/article/20140730-why-do-we-see-faces-in-objects</figcaption></figure>
+</div>
+</section><section id="statistics-and-probability-in-particular-are-not-intuitive-1" class="slide level2 dark-theme center"><h2>Statistics (and probability, in particular) are not intuitive</h2>
+<ul>
+<li>we see patterns in random data</li>
+</ul></section><section id="section-2" class="slide level2 scrollable"><h2></h2>
+<p>Pick a range that you think has a 90% chance of containing the right answer</p>
 <div class="goal">
-<p>The difference between the maximum and minimum observed values in a sample</p>
+<p>Don’t consult anything/anyone. The goal is to quantify your uncertainty. If you truly have no idea, you can use the broadest range that is plausible (which you can be 100% sure includes the answer) but try to narrow down your answers to a range that you are 90% sure contains the right answer.</p>
 </div>
-</section><section id="range-1" class="slide level2"><h2>Range</h2>
+<div class="columns">
+<div class="column">
+<ol type="1">
+<li>Martin Luther King Jr’s age at death</li>
+<li>Length of the Nile river (miles; km)</li>
+<li>Number of countries in OPEC<sup>1</sup>
+</li>
+<li>Number of books in the Old Testament</li>
+<li>Diameter of the moon (miles; km)</li>
+<li>Weight of an empty Boeing 747 (lbs; kg)</li>
+</ol>
+</div><div class="column">
+<ol start="7" type="1">
+<li>Year Mozart was born</li>
+<li>Gestation period of an Asian elephant (days)</li>
+<li>Distance from London to Tokyo (miles; km)</li>
+<li>Deepest know point in the ocean (miles; km)</li>
+</ol>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Organization of the Petroleum Exporting Countries</p></li></ol></aside></section><section id="of-people-are-overconfident-in-this-test" class="slide level2"><h2>99% of people are overconfident in this test</h2>
 <div class="goal">
-<p>Range of weight of 46 chicks at 20 days since birth</p>
+<p>These questions were used in a study by Russo and Shoemaker (1989) and 99% of <span class="math inline">\(~1,000\)</span> participants, but most of them included narrow ranges that included 30 to 60% of correct answers.</p>
 </div>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
-<span id="cb2-2"><a></a>chick20 <span class="ot">&lt;-</span> ChickWeight[ChickWeight<span class="sc">$</span>Time <span class="sc">==</span> <span class="dv">20</span>, ]<span class="sc">$</span>weight</span>
-<span id="cb2-3"><a></a>chick20</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+<p>Similar studies done with experts answering questions in their own field of expertise led to similar results.</p>
+</section><section id="statistics-and-probability-in-particular-are-not-intuitive-2" class="slide level2 dark-theme center"><h2>Statistics (and probability, in particular) are not intuitive</h2>
+<ul>
+<li>we see patterns in random data</li>
+<li>we tend to be overconfident</li>
+</ul></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Gelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).</p>
 </div>
-<p>Max and Min in this dataset at time 20:</p>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
+<ul>
+<li><p>Results: Countries with lowest per-capita incidence – these tended to be countries with small populations</p></li>
+<li><p>Hypothesis: perhaps something to do with rural environments in those countries?</p></li>
+</ul></section><section id="case-study-1" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Random variation can have a greater effect on “averages” within small groups than within small groups.</p>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># or</span></span>
-<span id="cb5-2"><a></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1]  76 361</code></pre>
+<ul>
+<li>Larger countries/populations: spread around the mean is lower.</li>
+<li>Imagine an extreme example: a country with 1,000 people where:
+<ul>
+<li>0 people have kidney cancer: lowest incidence possible</li>
+<li>1 person has kidney cancer: super high incidencence (100 per 100,000)</li>
+</ul>
+</li>
+</ul>
+<aside class="notes"><p>Logical yet unintuitive</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="statistics-and-probability-are-not-intuitive" class="slide level2"><h2>Statistics and probability are not intuitive</h2>
+<ul>
+<li>
+<p>Our brains do a bad job of interpreting data:</p>
+<ul>
+<li>we see patterns in random data</li>
+<li>we tend to be overconfident</li>
+<li>We tend to jump to conclusions</li>
+<li>We don’t realize that coincidences are common</li>
+<li>We don’t expect variability to depend on sample size</li>
+<li>We have incorrect feelings about probability</li>
+<li>We find it hard to combine probabilities</li>
+</ul>
+</li>
+</ul></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 center"><h2>To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking</h2>
+</section><section id="why-do-we-need-probabilities" class="slide level2"><h2>Why do we need probabilities?</h2>
+<p>We can use probability theory to connect <font color="#C0532B">sample <strong>estimates</strong></font></p>
+<ul>
+<li>Which we can obtain from data.</li>
+<li>Which take their values by chance (variable).</li>
+</ul>
+<p>To <font color="#00a1b7">population <strong>parameters</strong></font>:</p>
+<ul>
+<li>Which we can almost never obtain.</li>
+<li>With values free from chance (constant).</li>
+</ul></section><section id="what-is-probability" class="slide level2"><h2>What is probability?</h2>
+<ul>
+<li>It depends.</li>
+<li>Probability is super complex.</li>
+<li>Entire books have been written on it and there are fiery debates about what even <em>IS</em> a probability.</li>
+</ul></section><section id="some-definitions" class="slide level2 scrollable"><h2>Some definitions</h2>
+<ol type="1">
+<li>Probability “out there” - outside your head.</li>
+</ol>
+<p>But also…</p>
+<ol start="2" type="1">
+<li><p>Probability that is inside your head — as strength of subjective beliefs; may vary among people or even different assessments by the same person.</p></li>
+<li><p>“Probabilities” used to quantify ignorance – e.g.&nbsp;probability that a pregnant person is pregnant with a girl</p></li>
+<li><p>Quantitive predictions of one time events – e.g., presidential polls</p></li>
+</ol>
+
+<aside><div>
+<p>From: Kruschke’s (2011) terminology.</p>
+</div></aside></section><section id="probability-out-there---outside-your-head" class="slide level2"><h2>Probability “out there” - outside your head</h2>
+<p>What we deal with in biology most of the time</p>
+<div class="goal">
+<ul>
+<li>This is probability as long-term frequency</li>
+<li>The probability that a certain event will happen has a definite value (a parameter)</li>
+<li>We rarely have enough data to know that value precisely (or good data to know it accurately), but we estimate it and give it different levels of confidence</li>
+</ul>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># commonly the diff between them is shown</span></span>
-<span id="cb7-2"><a></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1] 285</code></pre>
+</section><section id="probability-as-long-term-frequency" class="slide level2"><h2>Probability as long-term frequency</h2>
+<ul>
+<li><p>The probability of an event is its true relative frequency - “out there”</p></li>
+<li><p>This is the proportion of times the event would occur if we repeated the same process over and over again</p></li>
+</ul></section><section id="probability-theory-statistics" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>Probabilities take values from 0-1 (or 0-100%)</p>
+<p>They are used to quantify a prediction about a future event <strong><em>OR</em></strong> the certainty of a belief</p>
+</section><section id="probability-theory-statistics-1" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of zero (0%) indicates:</p>
+<ul>
+<li>An event is impossible<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is wrong</li>
+</ul></section><section id="probability-theory-statistics-2" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of one (100%) indicates:</p>
+<ul>
+<li>An event is certain to happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is correct</li>
+</ul></section><section id="probability-theory-statistics-3" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
+<p>A probability of 0.5 (50%) indicates:</p>
+<ul>
+<li>An event is equally likely to happen or not happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone believes that a statement is equally likely to be true or false</li>
+</ul></section><section id="example" class="slide level2"><h2>Example</h2>
+<div class="goal">
+<p>Example: what’s the probability that a fair die will give me 2 if I roll it once?</p>
 </div>
+<ul>
+<li>This is probability as long-term frequency</li>
+<li>It comes from the notion that if I could roll this die many, many times, I would get a 2 in about <span class="math inline">\(1/6\)</span> of the times</li>
+<li>So we say the answer here is <span class="math inline">\(1/6\)</span>
+</li>
+</ul></section><section id="lingo-odds-vs-probability" class="slide level2"><h2>Lingo: Odds vs probability</h2>
+<ul>
+<li>They express the same thing</li>
+<li>Probabilities can be expressed as odds</li>
+<li>Odds can be expressed as probability</li>
+<li>No consistency across fields and no advantage of one over the other</li>
+<li>I learned and most often use “probability” - It sounds less ambiguous to me than odds, which people use more in normal parlance</li>
+</ul></section><section id="example-sex-ratio" class="slide level2"><h2>Example: Sex ratio</h2>
+<div class="goal">
+<p>Worldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?</p>
+</div>
+<p><u><strong>Odds:</strong></u> Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).</p>
+<ul>
+<li>Odds of having boy versus girl is 1.07 to 1, or 1.07, or 1.07:1</li>
+<li>This is equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc</li>
+</ul>
+<p><u><strong>Probability:</strong></u> if there are 107 boys born for every 100 girls, <span class="math inline">\(107/(100+107)=51.7\%\)</span> or <span class="math inline">\(0.517\)</span> is the probability of having a boy.</p>
+</section><section id="probability-as-long-term-frequency-1" class="slide level2"><h2>Probability as long-term frequency</h2>
+<p>Two subtypes:</p>
+<ul>
+<li><p>Probabilities as predictions from a model</p></li>
+<li><p>Probabilities based on data</p></li>
+</ul></section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
+</div>
+<p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p>
+<p>A model is a simplified description of a (usually complex) mechanism. Let’s create a model</p>
+<blockquote>
+<p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
+</blockquote>
+</section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+<ul>
+<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes</li>
+<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome</li>
+<li class="fragment">Only one sperm will fertilize the ovum</li>
+<li class="fragment">Every sperm has an equal chance of doing so</li>
+<li class="fragment">If winning sperm has X chromosome, joined with another X from ovum would result in biological sex as determined by XX as female.</li>
+<li class="fragment">If winning sperm has Y chromosome, joined with an X from ovum will result in XY (male).</li>
+<li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
+</ul>
+<div class="goal">
+<p>If you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.</p>
+</div>
+</section><section id="probabilities-based-on-data" class="slide level2"><h2>Probabilities based on data</h2>
+<ul>
+<li><p>According to statistics from around the world from 2011 (CIA), 51.7% of babies born were boys.</p></li>
+<li><p>We don’t need to know why more boys were born</p></li>
+<li><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
+<li><p>These proportions have been consistent across countries for quite a while</p></li>
+</ul>
+<div class="goal">
+<p>Based on these data, the probability of having a boy is 51.7% (or ~ 0.517) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</p>
 </div>
 </section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
