@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0a4adf8a88f9696a4dbf792a9cb776e.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -198,17 +264,17 @@ Bárbara D. Bitarello
 <li>We find it hard to combine probabilities</li>
 </ul>
 </li>
-</ul></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 center"><h2>To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking</h2>
+</ul></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 center"><h2>To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking</h2>
 </section><section id="why-do-we-need-probabilities" class="slide level2"><h2>Why do we need probabilities?</h2>
 <p>We can use probability theory to connect <font color="#C0532B">sample <strong>estimates</strong></font></p>
 <ul>
 <li>Which we can obtain from data.</li>
-<li>Which take their values by chance (variable).</li>
+<li>Which take their values by chance (<font color="#C0532B"><strong>variable</strong></font>).</li>
 </ul>
 <p>To <font color="#00a1b7">population <strong>parameters</strong></font>:</p>
 <ul>
 <li>Which we can almost never obtain.</li>
-<li>With values free from chance (constant).</li>
+<li>With values free from chance (<font color="#00a1b7">population <strong>constant</strong></font>).</li>
 </ul></section><section id="what-is-probability" class="slide level2"><h2>What is probability?</h2>
 <ul>
 <li>It depends.</li>
@@ -281,58 +347,92 @@ Bárbara D. Bitarello
 <div class="goal">
 <p>Worldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?</p>
 </div>
+<div class="fragment">
 <p><u><strong>Odds:</strong></u> Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).</p>
-<ul>
-<li>Odds of having boy versus girl is 1.07 to 1, or 1.07, or 1.07:1</li>
-<li>This is equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc</li>
-</ul>
+<p>. . . - Odds of having boy versus girl is:<span class="math inline">\(p[boy]/p[girl]=1.07\)</span> – can also be phrased as <span class="math inline">\(1.07 \text{ to } 1\)</span> or <span class="math inline">\(1.07:1\)</span> - Equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc</p>
+</div>
+<div class="fragment">
 <p><u><strong>Probability:</strong></u> if there are 107 boys born for every 100 girls, <span class="math inline">\(107/(100+107)=51.7\%\)</span> or <span class="math inline">\(0.517\)</span> is the probability of having a boy.</p>
+</div>
 </section><section id="probability-as-long-term-frequency-1" class="slide level2"><h2>Probability as long-term frequency</h2>
 <p>Two subtypes:</p>
 <ul>
 <li><p>Probabilities as predictions from a model</p></li>
 <li><p>Probabilities based on data</p></li>
-</ul></section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
-<div class="goal">
-<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
-</div>
-<p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p>
-<p>A model is a simplified description of a (usually complex) mechanism. Let’s create a model</p>
+</ul></section><section id="models" class="slide level2 center"><h2>Models</h2>
 <blockquote>
 <p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
 </blockquote>
-</section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+</section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy. (this is really the same problem as before)</p>
+</div>
 <ul>
-<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes</li>
-<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome</li>
+<li><p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p></li>
+<li><p>A model is a simplified description of a (usually complex) mechanism. Let’s create a model</p></li>
+</ul></section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+<ul>
+<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
+</li>
+<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome: <span class="math inline">\(p[X]=1/2;p[Y]=1/2\)</span>
+</li>
 <li class="fragment">Only one sperm will fertilize the ovum</li>
 <li class="fragment">Every sperm has an equal chance of doing so</li>
-<li class="fragment">If winning sperm has X chromosome, joined with another X from ovum would result in biological sex as determined by XX as female.</li>
-<li class="fragment">If winning sperm has Y chromosome, joined with an X from ovum will result in XY (male).</li>
+<li class="fragment">If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
+<li class="fragment">If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
 <li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
+</ul></section><section id="creatingdefining-the-model-1" class="slide level2"><h2>Creating/defining the model</h2>
+<ul>
+<li>Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
+</li>
+<li>Half the sperm have one X (no Y) and half have a Y (no X) chromosome: <span class="math inline">\(p[X]=1/2;p[Y]=1/2\)</span>
+</li>
+<li>Only one sperm will fertilize the ovum</li>
+<li>Every sperm has an equal chance of doing so</li>
+<li>If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
+<li>If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
+<li>Miscarriages are equally likely for XX or XY fetuses</li>
 </ul>
 <div class="goal">
 <p>If you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.</p>
 </div>
 </section><section id="probabilities-based-on-data" class="slide level2"><h2>Probabilities based on data</h2>
 <ul>
-<li><p>According to statistics from around the world from 2011 (CIA), 51.7% of babies born were boys.</p></li>
+<li><p>According to statistics from around the world from 2011 (CIA), <span class="math inline">\(51.7\%\)</span> of babies born were boys</p></li>
 <li><p>We don’t need to know why more boys were born</p></li>
 <li><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
 <li><p>These proportions have been consistent across countries for quite a while</p></li>
 </ul>
 <div class="goal">
-<p>Based on these data, the probability of having a boy is 51.7% (or ~ 0.517) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</p>
+<p>Based on these data, the probability of having a boy is <span class="math inline">\(51.7\%\)</span> (or <span class="math inline">\(\sim0.517\)</span>) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</p>
 </div>
-</section><section id="foundational-concepts-in-probability-theory" class="slide level2"><h2>Foundational Concepts in Probability Theory</h2>
+</section><section id="foundational-concepts-in-probability-theory" class="slide level2 center dark-theme"><h2>Foundational Concepts in Probability Theory</h2>
 </section><section id="random-trials" class="slide level2"><h2>Random Trials</h2>
-<p>A random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.</p>
-<p>Only one outcome is observed from each repetition of a random trial.</p>
-<p>Example: rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither).</p>
+<ul>
+<li><p>A random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.</p></li>
+<li><p>Only one outcome is observed from each repetition of a random trial.</p></li>
+</ul>
+<p><strong>Example:</strong> rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither).</p>
 </section><section id="random-trials-1" class="slide level2"><h2>Random Trials</h2>
-<p>A Venn diagram represents these possibilities Example: rolling a six-sided die</p>
+<div class="goal">
+<p>Probability of getting a 4 in one roll (trial) of a six-sided die</p>
+</div>
 
-<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="events-can-be-exclusive-or-non-exclusive" class="slide level2"><h2>Events can be exclusive or non-exclusive</h2>
+<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="r" class="slide level2"><h2>R</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>DieRoll <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">times =</span> <span class="dv">1</span>) {</span>
+<span id="cb1-2"><a></a>    <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> times, <span class="at">replace =</span> T)</span>
+<span id="cb1-3"><a></a>}</span>
+<span id="cb1-4"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">6</span>), <span class="at">NrRolls =</span> <span class="dv">6</span>)</span>
+<span id="cb1-5"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">12</span>), <span class="at">NrRolls =</span> <span class="dv">12</span>))</span>
+<span id="cb1-6"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">18</span>), <span class="at">NrRolls =</span> <span class="dv">18</span>))</span>
+<span id="cb1-7"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">24</span>), <span class="at">NrRolls =</span> <span class="dv">24</span>))</span>
+<span id="cb1-8"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">32</span>), <span class="at">NrRolls =</span> <span class="dv">32</span>))</span>
+<span id="cb1-9"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">40</span>), <span class="at">NrRolls =</span> <span class="dv">40</span>))</span>
+<span id="cb1-10"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Outcome)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>NrRolls)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<img data-src="Probability2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="events-can-be-exclusive-or-non-exclusive" class="slide level2"><h2>Events can be exclusive or non-exclusive</h2>
 
 <img data-src="images/clipboard-3323191186.png" width="514" class="r-stretch"></section><section id="mutually-exclusive-events" class="slide level2"><h2>Mutually exclusive events</h2>
 <p>If A AND B are mutually exclusive</p>

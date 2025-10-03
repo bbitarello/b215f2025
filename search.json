@@ -24,7 +24,7 @@
     "href": "schedule.html#sec-labs",
     "title": "Schedule",
     "section": "2 Labs",
-    "text": "2 Labs\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrep\n\n\n\n\n1\n2/9\nCourse Logistics\n\n\n\n1\n2/9\nRstudio/R introduction\nDC1 Introduction to R\n\n\n2\n9/9\nData Types\nDC Introduction to R\n\n\n3\n9/16\nData Stuctures\nDC Introduction to Importing Data With R\n\n\n4\n9/23\nDescribing Data: Summary Statistics and Plots\nDC Data Manipulation with dplyr\n\n\n\n\n\nDC Introduction to the Tidyverse (Grouping and Summarizing; Data Wrangling; Data Visualization; Types of visualizations)\n\n\n5\n9/30\nR markdown, Tidyverse, and Exploratory Data Analysis\nDC Reporting with Rmarkdown (Getting Started; Adding Analyses and Visualizations)\n\n\n6\n10/7\n\nIntroduction to Data Visualization with ggplot2\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n7\n10/21\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n8\n11/4\n\n\n\n\n9\n11/10\n\n\n\n\n10\n11/18\n\n\n\n\n11\n11/25\n\n\n\n\n12\n12/2\n\n\n\n\n13\n12/9\nWrap-up",
+    "text": "2 Labs\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPrep\n\n\n\n\n1\n2/9\nCourse Logistics\n\n\n\n1\n2/9\nRstudio/R introduction\nDC1 Introduction to R\n\n\n2\n9/9\nData Types\nDC Introduction to R\n\n\n3\n9/16\nData Stuctures\nDC Introduction to Importing Data With R\n\n\n4\n9/23\nDescribing Data: Summary Statistics and Plots\nDC Data Manipulation with dplyr\n\n\n\n\n\nDC Introduction to the Tidyverse (Grouping and Summarizing; Data Wrangling; Data Visualization; Types of visualizations)\n\n\n5\n9/30\nR markdown, Tidyverse, and Exploratory Data Analysis\nDC Reporting with Rmarkdown (Getting Started; Adding Analyses and Visualizations)\n\n\n6\n10/7\n\nIntroduction to Data Visualization with ggplot2\n\n\n\n10/7\n\nIf possible, also: Data Manipulation with dplyr(Selecting and Transforming Data; Transforming Data)\n\n\n\n10/14\nNo lab (fall break!)\n\n\n\n7\n10/21\n\n\n\n\n\n10/28\nNo lab (in class Midterm)\n\n\n\n8\n11/4\n\n\n\n\n9\n11/10\n\n\n\n\n10\n11/18\n\n\n\n\n11\n11/25\n\n\n\n\n12\n12/2\n\n\n\n\n13\n12/9\nWrap-up",
     "crumbs": [
       "Schedule"
     ]
@@ -64,7 +64,7 @@
     "href": "schedule.html#sec-oh",
     "title": "Schedule",
     "section": "6 Office Hours",
-    "text": "6 Office Hours\nPlease attend OH at least 2x during the semester (the more the merrier).\n\n\n\n\n\n\n\n\nWho\nWhen2\nWhere\n\n\n\n\nProfessor drop-in hours\nMonday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2-3:30pm\nZoom3\n\n\nTA\nThursday 4-6pm\nPark 227\n\n\n\nIf you can’t attend any of the times above you can schedule an appointment with me using my calendly link.",
+    "text": "6 Office Hours\nPlease attend OH at least 2x during the semester (the more the merrier).\n\n\n\n\n\n\n\n\nWho\nWhen2\nWhere\n\n\n\n\nProfessor drop-in hours\nMonday 2:-3pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2:30-3:30pm\nZoom3\n\n\nTA\nThursday 4-6pm\nPark 227\n\n\n\nIf you can’t attend any of the times above you can schedule an appointment with me using my calendly link.",
     "crumbs": [
       "Schedule"
     ]
@@ -74,7 +74,7 @@
     "href": "schedule.html#footnotes",
     "title": "Schedule",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nDataCamp↩︎\nNote: no drop-in hours on 09/08; 10/13 and 10/15 (Fall break); 12/01↩︎\nPlease email if planning to attend. If I am also available in person, I will send an announcement.↩︎",
+    "text": "Footnotes\n\n\nDataCamp↩︎\nNote: no drop-in hours on 9/8; 9/29; 10/13 and 10/15 (Fall break); 12/01↩︎\nPlease email if planning to attend. If I am also available in person, I will send an announcement.↩︎",
     "crumbs": [
       "Schedule"
     ]
@@ -118,15 +118,15 @@
     "objectID": "slides/Probability2.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
     "href": "slides/Probability2.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
     "title": "3.2.Probability",
-    "section": "To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking",
-    "text": "To help us when generalizing from sample to population, we need Probability theory: The foundation of Statistical thinking"
+    "section": "To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking",
+    "text": "To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking"
   },
   {
     "objectID": "slides/Probability2.html#why-do-we-need-probabilities",
     "href": "slides/Probability2.html#why-do-we-need-probabilities",
     "title": "3.2.Probability",
     "section": "Why do we need probabilities?",
-    "text": "Why do we need probabilities?\nWe can use probability theory to connect sample estimates\n\nWhich we can obtain from data.\nWhich take their values by chance (variable).\n\nTo population parameters:\n\nWhich we can almost never obtain.\nWith values free from chance (constant)."
+    "text": "Why do we need probabilities?\nWe can use probability theory to connect sample estimates\n\nWhich we can obtain from data.\nWhich take their values by chance (variable).\n\nTo population parameters:\n\nWhich we can almost never obtain.\nWith values free from chance (population constant)."
   },
   {
     "objectID": "slides/Probability2.html#what-is-probability",
@@ -203,7 +203,7 @@
     "href": "slides/Probability2.html#example-sex-ratio",
     "title": "3.2.Probability",
     "section": "Example: Sex ratio",
-    "text": "Example: Sex ratio\n\nWorldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?\n\nOdds: Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).\n\nOdds of having boy versus girl is 1.07 to 1, or 1.07, or 1.07:1\nThis is equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc\n\nProbability: if there are 107 boys born for every 100 girls, \\(107/(100+107)=51.7\\%\\) or \\(0.517\\) is the probability of having a boy."
+    "text": "Example: Sex ratio\n\nWorldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?\n\n\nOdds: Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).\n. . . - Odds of having boy versus girl is:\\(p[boy]/p[girl]=1.07\\) – can also be phrased as \\(1.07 \\text{ to } 1\\) or \\(1.07:1\\) - Equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc\n\n\nProbability: if there are 107 boys born for every 100 girls, \\(107/(100+107)=51.7\\%\\) or \\(0.517\\) is the probability of having a boy."
   },
   {
     "objectID": "slides/Probability2.html#probability-as-long-term-frequency-1",
@@ -213,25 +213,39 @@
     "text": "Probability as long-term frequency\nTwo subtypes:\n\nProbabilities as predictions from a model\nProbabilities based on data"
   },
   {
+    "objectID": "slides/Probability2.html#models",
+    "href": "slides/Probability2.html#models",
+    "title": "3.2.Probability",
+    "section": "Models",
+    "text": "Models\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
+  },
+  {
     "objectID": "slides/Probability2.html#probabilities-as-predictions-from-a-model",
     "href": "slides/Probability2.html#probabilities-as-predictions-from-a-model",
     "title": "3.2.Probability",
     "section": "Probabilities as predictions from a model",
-    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nA model is a simplified description of a (usually complex) mechanism. Let’s create a model\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
+    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy. (this is really the same problem as before)\n\n\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nA model is a simplified description of a (usually complex) mechanism. Let’s create a model"
   },
   {
     "objectID": "slides/Probability2.html#creatingdefining-the-model",
     "href": "slides/Probability2.html#creatingdefining-the-model",
     "title": "3.2.Probability",
     "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome, joined with another X from ovum would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome, joined with an X from ovum will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%."
+    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses"
+  },
+  {
+    "objectID": "slides/Probability2.html#creatingdefining-the-model-1",
+    "href": "slides/Probability2.html#creatingdefining-the-model-1",
+    "title": "3.2.Probability",
+    "section": "Creating/defining the model",
+    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%."
   },
   {
     "objectID": "slides/Probability2.html#probabilities-based-on-data",
     "href": "slides/Probability2.html#probabilities-based-on-data",
     "title": "3.2.Probability",
     "section": "Probabilities based on data",
-    "text": "Probabilities based on data\n\nAccording to statistics from around the world from 2011 (CIA), 51.7% of babies born were boys.\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while\n\n\nBased on these data, the probability of having a boy is 51.7% (or ~ 0.517) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
+    "text": "Probabilities based on data\n\nAccording to statistics from around the world from 2011 (CIA), \\(51.7\\%\\) of babies born were boys\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while\n\n\nBased on these data, the probability of having a boy is \\(51.7\\%\\) (or \\(\\sim0.517\\)) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
   },
   {
     "objectID": "slides/Probability2.html#foundational-concepts-in-probability-theory",
@@ -245,14 +259,21 @@
     "href": "slides/Probability2.html#random-trials",
     "title": "3.2.Probability",
     "section": "Random Trials",
-    "text": "Random Trials\nA random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.\nOnly one outcome is observed from each repetition of a random trial.\nExample: rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither)."
+    "text": "Random Trials\n\nA random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.\nOnly one outcome is observed from each repetition of a random trial.\n\nExample: rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither)."
   },
   {
     "objectID": "slides/Probability2.html#random-trials-1",
     "href": "slides/Probability2.html#random-trials-1",
     "title": "3.2.Probability",
     "section": "Random Trials",
-    "text": "Random Trials\nA Venn diagram represents these possibilities Example: rolling a six-sided die\n\nFigure caption: figure 5.2-1 from the textbook."
+    "text": "Random Trials\n\nProbability of getting a 4 in one roll (trial) of a six-sided die\n\n\nFigure caption: figure 5.2-1 from the textbook."
+  },
+  {
+    "objectID": "slides/Probability2.html#r",
+    "href": "slides/Probability2.html#r",
+    "title": "3.2.Probability",
+    "section": "R",
+    "text": "R\n\nCodeDieRoll &lt;- function(times = 1) {\n    sample(x = 1:6, size = times, replace = T)\n}\ndf &lt;- data.frame(Outcome = DieRoll(times = 6), NrRolls = 6)\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 12), NrRolls = 12))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 18), NrRolls = 18))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 24), NrRolls = 24))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 32), NrRolls = 32))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 40), NrRolls = 40))\nggplot(df, aes(x = Outcome)) + geom_bar() + facet_wrap(~NrRolls)"
   },
   {
     "objectID": "slides/Probability2.html#events-can-be-exclusive-or-non-exclusive",
