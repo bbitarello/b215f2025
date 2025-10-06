@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="dcterms.date" content="2025-10-06">
 <meta name="keywords" content="Probability - Foundational Concepts">
 <title>BIOL B215: Biostatistics with R – 3.2.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,79 +30,11 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #b3b1ad; background-color: #0a0e14; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #b3b1ad; } /* Normal */
-    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #e6b673; } /* Annotation */
-    code span.at { color: #59c2ff; } /* Attribute */
-    code span.bn { color: #e6b450; } /* BaseN */
-    code span.bu { color: #95e6cb; } /* BuiltIn */
-    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #95e6cb; } /* Char */
-    code span.cn { color: #ffee99; } /* Constant */
-    code span.co { color: #626a73; font-style: italic; } /* Comment */
-    code span.cv { color: #ffee99; } /* CommentVar */
-    code span.do { color: #626a73; } /* Documentation */
-    code span.dt { color: #ff8f40; } /* DataType */
-    code span.dv { color: #e6b450; } /* DecVal */
-    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
-    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
-    code span.fl { color: #e6b450; } /* Float */
-    code span.fu { color: #ffb454; } /* Function */
-    code span.im { color: #c2d94c; } /* Import */
-    code span.in { color: #e6b450; } /* Information */
-    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
-    code span.op { color: #f29668; } /* Operator */
-    code span.ot { color: #39bae6; } /* Other */
-    code span.pp { color: #f07178; } /* Preprocessor */
-    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
-    code span.sc { color: #95e6cb; } /* SpecialChar */
-    code span.ss { color: #95e6cb; } /* SpecialString */
-    code span.st { color: #c2d94c; } /* String */
-    code span.va { color: #39bae6; } /* Variable */
-    code span.vs { color: #c2d94c; } /* VerbatimString */
-    code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0a4adf8a88f9696a4dbf792a9cb776e.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
 <style type="text/css">
     .reveal div.sourceCode {
@@ -208,38 +140,38 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-10-01</p>
+  <p class="date">2025-10-06</p>
 </section><section id="outline" class="slide level2"><h2>Outline</h2>
 <ul>
-<li><p>We don’t expect variability to depend on sample size</p></li>
-<li><p>Definitions &amp; notations</p></li>
-<li><p>Foundational concepts: random trials, exclusive and non-exclusive outcomes, etc Probability distributions and sampling distributions</p></li>
-<li><p>Probability rules: the addition principle (general and special)</p></li>
-</ul></section><section id="statistics-and-probability-in-particular-are-not-intuitive" class="slide level2 dark-theme center"><h2>Statistics (and probability, in particular) are not intuitive</h2>
+<li>Definition(s) &amp; Foundational Concepts
+<ul>
+<li>Probability vs.&nbsp;Odds</li>
+<li>Probability as long-term frequency</li>
+<li>Random trials</li>
+<li>Types of events (exclusive and non-exclusive)</li>
+<li>Probability distributions x probability densities x proportions</li>
+</ul>
+</li>
+<li>Probability rules
+<ul>
+<li>the addition principle</li>
+<li>the general multiplication principle</li>
+</ul>
+</li>
+</ul></section><section id="recap" class="slide level2"><h2>Recap</h2>
+<div class="goal">
+<p>Statistics and probability are not intuitive. Our brains do a bad job of interpreting data</p>
+</div>
 <ul>
 <li>we see patterns in random data</li>
 <li>we tend to be overconfident</li>
-</ul></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
-<div class="goal">
-<p>Gelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).</p>
-</div>
-<ul>
-<li><p>Results: Countries with lowest per-capita incidence – these tended to be countries with small populations</p></li>
-<li><p>Hypothesis: perhaps something to do with rural environments in those countries?</p></li>
-</ul></section><section id="case-study-1" class="slide level2"><h2>Case Study</h2>
-<div class="goal">
-<p>Random variation can have a greater effect on “averages” within small groups than within small groups.</p>
-</div>
-<ul>
-<li>Larger countries/populations: spread around the mean is lower.</li>
-<li>Imagine an extreme example: a country with 1,000 people where:
-<ul>
-<li>0 people have kidney cancer: lowest incidence possible</li>
-<li>1 person has kidney cancer: super high incidencence (100 per 100,000)</li>
+<li>we tend to jump to conclusions</li>
+<li>we don’t realize that coincidences are common</li>
+<li>we have incorrect feelings about probability</li>
+<li>we don’t expect variability to depend on sample size</li>
+<li>we find it hard to combine probabilities (coming up soon)</li>
 </ul>
-</li>
-</ul>
-<aside class="notes"><p>Logical yet unintuitive</p>
+<aside class="notes"><p>We saw a lot of these last week</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -250,21 +182,8 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="statistics-and-probability-are-not-intuitive" class="slide level2"><h2>Statistics and probability are not intuitive</h2>
-<ul>
-<li>
-<p>Our brains do a bad job of interpreting data:</p>
-<ul>
-<li>we see patterns in random data</li>
-<li>we tend to be overconfident</li>
-<li>We tend to jump to conclusions</li>
-<li>We don’t realize that coincidences are common</li>
-<li>We don’t expect variability to depend on sample size</li>
-<li>We have incorrect feelings about probability</li>
-<li>We find it hard to combine probabilities</li>
-</ul>
-</li>
-</ul></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 center"><h2>To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking</h2>
+      }</style></aside></section><section id="to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking" class="slide level2 dark-theme center"><h2>To help us when generalizing from sample to population, we need Probability Theory: The foundation of statistical thinking</h2>
+</section><section id="definitions-terminologies-and-notations" class="slide level2 dark-theme center"><h2>Definitions, Terminologies, and Notations</h2>
 </section><section id="why-do-we-need-probabilities" class="slide level2"><h2>Why do we need probabilities?</h2>
 <p>We can use probability theory to connect <font color="#C0532B">sample <strong>estimates</strong></font></p>
 <ul>
@@ -286,9 +205,9 @@ Bárbara D. Bitarello
 </ol>
 <p>But also…</p>
 <ol start="2" type="1">
-<li><p>Probability that is inside your head — as strength of subjective beliefs; may vary among people or even different assessments by the same person.</p></li>
-<li><p>“Probabilities” used to quantify ignorance – e.g.&nbsp;probability that a pregnant person is pregnant with a girl</p></li>
-<li><p>Quantitive predictions of one time events – e.g., presidential polls</p></li>
+<li class="fragment"><p>Probability that is “inside your head” — as strength of subjective beliefs; may vary among people or even different assessments by the same person.</p></li>
+<li class="fragment"><p>“Probabilities” used to quantify ignorance – e.g.&nbsp;probability that a pregnant person is pregnant with a girl</p></li>
+<li class="fragment"><p>Quantitive predictions of one time events – e.g., presidential polls</p></li>
 </ol>
 
 <aside><div>
@@ -306,27 +225,6 @@ Bárbara D. Bitarello
 <ul>
 <li><p>The probability of an event is its true relative frequency - “out there”</p></li>
 <li><p>This is the proportion of times the event would occur if we repeated the same process over and over again</p></li>
-</ul></section><section id="probability-theory-statistics" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
-<p>Probabilities take values from 0-1 (or 0-100%)</p>
-<p>They are used to quantify a prediction about a future event <strong><em>OR</em></strong> the certainty of a belief</p>
-</section><section id="probability-theory-statistics-1" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
-<p>A probability of zero (0%) indicates:</p>
-<ul>
-<li>An event is impossible<br><u><strong><em>OR</em></strong></u>
-</li>
-<li>Someone is absolutely (100%) sure that a statement is wrong</li>
-</ul></section><section id="probability-theory-statistics-2" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
-<p>A probability of one (100%) indicates:</p>
-<ul>
-<li>An event is certain to happen<br><u><strong><em>OR</em></strong></u>
-</li>
-<li>Someone is absolutely (100%) sure that a statement is correct</li>
-</ul></section><section id="probability-theory-statistics-3" class="slide level2"><h2>Probability theory &amp; Statistics</h2>
-<p>A probability of 0.5 (50%) indicates:</p>
-<ul>
-<li>An event is equally likely to happen or not happen<br><u><strong><em>OR</em></strong></u>
-</li>
-<li>Someone believes that a statement is equally likely to be true or false</li>
 </ul></section><section id="example" class="slide level2"><h2>Example</h2>
 <div class="goal">
 <p>Example: what’s the probability that a fair die will give me 2 if I roll it once?</p>
@@ -336,7 +234,58 @@ Bárbara D. Bitarello
 <li>It comes from the notion that if I could roll this die many, many times, I would get a 2 in about <span class="math inline">\(1/6\)</span> of the times</li>
 <li>So we say the answer here is <span class="math inline">\(1/6\)</span>
 </li>
-</ul></section><section id="lingo-odds-vs-probability" class="slide level2"><h2>Lingo: Odds vs probability</h2>
+</ul>
+
+<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="probability-as-long-term-frequency-1" class="slide level2"><h2>Probability as long-term frequency</h2>
+<p>Two subtypes:</p>
+<p><strong>1) Probabilities as predictions from a model</strong></p>
+<ul>
+<li>e.g.&nbsp;odds of a baby being XX or XY is 50:50 based on meiosis alone</li>
+</ul>
+<p><strong>2) Probabilities based on data</strong></p>
+<ul>
+<li>in reality, long-term data cross many countries suggest odds of XX to XY baby are 51.7:50</li>
+</ul></section><section id="probability-theory-statistics" class="slide level2"><h2>Probability Theory &amp; Statistics</h2>
+<p>Probabilities take values from 0-1 (or 0-100%)</p>
+<p>They are used to quantify a prediction about a future event <strong><em>OR</em></strong> the certainty of a belief</p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="column quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="goal">
+<div class="fragment fade-in">
+<p>A probability of zero (0%) indicates:</p>
+<ul>
+<li>An event is impossible<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is wrong</li>
+</ul>
+</div>
+</div>
+</div><div class="column quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="goal">
+<div class="fragment fade-in">
+<p>A probability of one (100%) indicates:</p>
+<ul>
+<li>An event is certain to happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone is absolutely (100%) sure that a statement is correct</li>
+</ul>
+</div>
+</div>
+</div><div class="column quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="goal">
+<div class="fragment fade-in">
+<p>A probability of 0.5 (50%) indicates:</p>
+<ul>
+<li>An event is equally likely to happen or not happen<br><u><strong><em>OR</em></strong></u>
+</li>
+<li>Someone believes that a statement is equally likely to be true or false</li>
+</ul>
+</div>
+</div>
+</div></div>
+</div>
+</section><section id="lingo-odds-vs-probability" class="slide level2"><h2>Lingo: Odds vs probability</h2>
 <ul>
 <li>They express the same thing</li>
 <li>Probabilities can be expressed as odds</li>
@@ -349,159 +298,241 @@ Bárbara D. Bitarello
 </div>
 <div class="fragment">
 <p><u><strong>Odds:</strong></u> Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).</p>
-<p>. . . - Odds of having boy versus girl is:<span class="math inline">\(p[boy]/p[girl]=1.07\)</span> – can also be phrased as <span class="math inline">\(1.07 \text{ to } 1\)</span> or <span class="math inline">\(1.07:1\)</span> - Equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc</p>
-</div>
-<div class="fragment">
+<ul>
+<li><p>Odds of having boy versus girl is:<span class="math inline">\(p[boy]/p[girl]=1.07\)</span> – can also be phrased as <span class="math inline">\(1.07 \text{ to } 1\)</span> or <span class="math inline">\(1.07:1\)</span></p></li>
+<li><p>Equivalent to <span class="math inline">\(107 \text{ to } 100\)</span> (<span class="math inline">\(107:100\)</span>), <span class="math inline">\(1070 \text{ to } 1000\)</span> (<span class="math inline">\(1070:1000\)</span>), etc</p></li>
+</ul>
 <p><u><strong>Probability:</strong></u> if there are 107 boys born for every 100 girls, <span class="math inline">\(107/(100+107)=51.7\%\)</span> or <span class="math inline">\(0.517\)</span> is the probability of having a boy.</p>
-</div>
-</section><section id="probability-as-long-term-frequency-1" class="slide level2"><h2>Probability as long-term frequency</h2>
-<p>Two subtypes:</p>
-<ul>
-<li><p>Probabilities as predictions from a model</p></li>
-<li><p>Probabilities based on data</p></li>
-</ul></section><section id="models" class="slide level2 center"><h2>Models</h2>
-<blockquote>
-<p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
-</blockquote>
-</section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
-<div class="goal">
-<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy. (this is really the same problem as before)</p>
-</div>
-<ul>
-<li><p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p></li>
-<li><p>A model is a simplified description of a (usually complex) mechanism. Let’s create a model</p></li>
-</ul></section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
-<ul>
-<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
-</li>
-<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome: <span class="math inline">\(p[X]=1/2;p[Y]=1/2\)</span>
-</li>
-<li class="fragment">Only one sperm will fertilize the ovum</li>
-<li class="fragment">Every sperm has an equal chance of doing so</li>
-<li class="fragment">If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
-<li class="fragment">If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
-<li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
-</ul></section><section id="creatingdefining-the-model-1" class="slide level2"><h2>Creating/defining the model</h2>
-<ul>
-<li>Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
-</li>
-<li>Half the sperm have one X (no Y) and half have a Y (no X) chromosome: <span class="math inline">\(p[X]=1/2;p[Y]=1/2\)</span>
-</li>
-<li>Only one sperm will fertilize the ovum</li>
-<li>Every sperm has an equal chance of doing so</li>
-<li>If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
-<li>If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
-<li>Miscarriages are equally likely for XX or XY fetuses</li>
-</ul>
-<div class="goal">
-<p>If you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.</p>
-</div>
-</section><section id="probabilities-based-on-data" class="slide level2"><h2>Probabilities based on data</h2>
-<ul>
-<li><p>According to statistics from around the world from 2011 (CIA), <span class="math inline">\(51.7\%\)</span> of babies born were boys</p></li>
-<li><p>We don’t need to know why more boys were born</p></li>
-<li><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
-<li><p>These proportions have been consistent across countries for quite a while</p></li>
-</ul>
-<div class="goal">
-<p>Based on these data, the probability of having a boy is <span class="math inline">\(51.7\%\)</span> (or <span class="math inline">\(\sim0.517\)</span>) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</p>
 </div>
 </section><section id="foundational-concepts-in-probability-theory" class="slide level2 center dark-theme"><h2>Foundational Concepts in Probability Theory</h2>
 </section><section id="random-trials" class="slide level2"><h2>Random Trials</h2>
+<div class="goal">
+<p>Example: Probability of getting a 4 in one roll (trial) of a six-sided die</p>
+</div>
 <ul>
 <li><p>A random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.</p></li>
 <li><p>Only one outcome is observed from each repetition of a random trial.</p></li>
 </ul>
-<p><strong>Example:</strong> rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither).</p>
-</section><section id="random-trials-1" class="slide level2"><h2>Random Trials</h2>
+
+<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="types-of-events" class="slide level2"><h2>Types of Events</h2>
 <div class="goal">
-<p>Probability of getting a 4 in one roll (trial) of a six-sided die</p>
+<p>Example: possible numbers in a die roll</p>
 </div>
-
-<img data-src="images/clipboard-2248999926.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.2-1 from the textbook.</p></section><section id="r" class="slide level2"><h2>R</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>DieRoll <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">times =</span> <span class="dv">1</span>) {</span>
-<span id="cb1-2"><a></a>    <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> times, <span class="at">replace =</span> T)</span>
-<span id="cb1-3"><a></a>}</span>
-<span id="cb1-4"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">6</span>), <span class="at">NrRolls =</span> <span class="dv">6</span>)</span>
-<span id="cb1-5"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">12</span>), <span class="at">NrRolls =</span> <span class="dv">12</span>))</span>
-<span id="cb1-6"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">18</span>), <span class="at">NrRolls =</span> <span class="dv">18</span>))</span>
-<span id="cb1-7"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">24</span>), <span class="at">NrRolls =</span> <span class="dv">24</span>))</span>
-<span id="cb1-8"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">32</span>), <span class="at">NrRolls =</span> <span class="dv">32</span>))</span>
-<span id="cb1-9"><a></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df, <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">40</span>), <span class="at">NrRolls =</span> <span class="dv">40</span>))</span>
-<span id="cb1-10"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Outcome)) <span class="sc">+</span> <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>NrRolls)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<img data-src="Probability2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="events-can-be-exclusive-or-non-exclusive" class="slide level2"><h2>Events can be exclusive or non-exclusive</h2>
-
-<img data-src="images/clipboard-3323191186.png" width="514" class="r-stretch"></section><section id="mutually-exclusive-events" class="slide level2"><h2>Mutually exclusive events</h2>
-<p>If A AND B are mutually exclusive</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><font color="#586028">Mutually Exclusive</font></p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive:</p>
 <ul>
-<li><p>A OR B are plausible outcomes. E.g. P(1 or 6) in a die roll</p></li>
-<li><p><span class="math inline">\(P[A\&amp;B]=0\)</span> E.g. P(heads AND tails) in a coin toss</p></li>
+<li>Either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> are individually plausible outcomes</li>
+<li>
+<span class="math inline">\(A\&amp;B\)</span> is not plausible (i.e., <span class="math inline">\(P(A\&amp;B)=0\)</span>)</li>
 </ul>
-
-<img data-src="images/clipboard-4154530475.png" class="r-stretch"></section><section id="non-mutually-exclusive-events" class="slide level2"><h2>Non-Mutually exclusive events</h2>
-<p>If A&amp;B are not mutually exclusive - There’s a chance of outcome A AND B. - <span class="math inline">\(P[A\&amp;B]\neq0\)</span> E.g. P [&lt;3 &amp; odd] in a die roll</p>
-
-<img data-src="images/clipboard-2064704944.png" class="r-stretch"></section><section id="probability-distributions" class="slide level2"><h2>Probability distributions</h2>
-</section><section id="what-is-a-probability-distribution" class="slide level2"><h2>What is A Probability Distribution?</h2>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="Probability2_files/figure-revealjs/even_odd-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>E.g., <span class="math inline">\(P(\text{even AND odd})=0\)</span> in a die roll</p>
+</div></div>
+</section><section id="types-of-events-1" class="slide level2"><h2>Types of Events</h2>
+<div class="goal">
+<p>Example: possible numbers in a die roll</p>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><font color="#586028">Non-mutually exclusive</font></p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <em>not</em> mutually exclusive:</p>
+<ul>
+<li>There’s a chance of outcome <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
+</li>
+<li>I.e., it is plausible that <span class="math inline">\(P(A\&amp;B)\neq0\)</span>
+</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="Probability2_files/figure-revealjs/even_prime-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>E.g., <span class="math inline">\(P(\text{even AND prime}) \neq 0\)</span> in a die roll – in fact, what is it?</p>
+</div></div>
+<aside class="notes"><p>only one nummber out of the six is both even and prime,so: 2/6=1/3</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="probability-distributions" class="slide level2 dark-theme center"><h2>Probability distributions</h2>
 <p>A probability distribution is the true relative frequency of all possible values of a random variable.</p>
-<p>Probability distributions describe discrete variables.</p>
-<p>All discrete outcomes have finite probabilities.</p>
+</section><section id="probability-distributions-vs.-densities" class="slide level2"><h2>Probability: Distributions vs.&nbsp;Densities</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Probability distributions describe <strong>discrete</strong> variables.</p>
 <p>Probability distributions sum to 1.</p>
-
-<img data-src="images/clipboard-1390492242.png" class="r-stretch"><p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
-</section><section id="example-probability-distribution-for-rolling-a-die" class="slide level2"><h2>Example: probability distribution for rolling a die</h2>
-<p><span class="math inline">\(x={1,2,3,4,5,6}\)</span></p>
-<p><span class="math inline">\(p[1]=1/6\)</span></p>
-<p><span class="math inline">\(p[2]=1/6,\text{etc}\)</span></p>
 <p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
+</div><div class="column" style="width:75%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="Probability2_files/figure-revealjs/probdist-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 
-<img data-src="images/clipboard-4068246779.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.4-1 from the textbook.</p></section><section id="probability-density" class="slide level2"><h2>Probability density</h2>
-<p>Probability densities describe continuous variables. The probability of any continuous outcome is infinitesimal. Probability densities integrate to 1.</p>
-
-<img data-src="images/clipboard-1878400023.png" class="r-stretch"><p><span class="math inline">\(\int{p[x]}=1\)</span></p>
+<aside><div>
+<p>Technically, only discrete variables have probability distributions,as all discrete values have a finite probability.</p>
+</div></aside></section><section id="example-probability-distribution-for-rolling-a-die" class="slide level2"><h2>Example: probability distribution for rolling a die</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>All possible values: <span class="math inline">\(x=\{1,2,3,4,5,6\}\)</span></p>
+<p>Probabilities of particular outcomes: <span class="math inline">\(p[1]=1/6\)</span></p>
+<p><span class="math inline">\(p[2]=1/6,\text{etc}\)</span></p>
+<p>Sum of probabilities of all possible outcomes:</p>
+<p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
+</div><div class="column" style="width:75%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-4068246779.png"></p>
+<figcaption>Figure caption: figure 5.4-1 from the textbook.</figcaption></figure>
+</div>
+</div></div>
+</section><section id="probability-distributions-vs.-densities-1" class="slide level2"><h2>Probability: Distributions <em>vs.</em> Densities</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<ul>
+<li><p>The probability of any value from a <strong>continuous</strong> distribution is infinitesimally small.</p></li>
+<li><p>Probability densities integrate to 1.</p></li>
+</ul>
+<p><span class="math inline">\(\int{p[x]}=1\)</span></p>
+</div><div class="column" style="width:75%;">
+<p><img data-src="images/clipboard-419390973.png" width="344"></p>
+</div></div>
 </section><section id="example-the-normal-distribution" class="slide level2"><h2>Example: the normal distribution!</h2>
-<p>Area under the curve gives you the probability of values in a range [a,b] Each value has an an infinitesimal probability value</p>
+<p>Area under the curve gives you the probability of values in a range <span class="math inline">\(\left[a,b\right]\)</span> Each value has an an infinitesimal probability value</p>
 
 <img data-src="images/clipboard-1619218967.png" class="r-stretch quarto-figure-center"><p class="caption">Figure caption: figure 5.4-4 from the textbook.</p></section><section id="proportion" class="slide level2"><h2>Proportion</h2>
-<p>The proportion is the number of times an event occurs divided by the number of tries.</p>
-<p>We can think of a proportion as a realized sample from our probability distribution.</p>
-</section><section id="proportion-outcome-of-a-die" class="slide level2"><h2>Proportion: Outcome of a Die 🎲</h2>
-</section><section id="compare-probability-to-proportion" class="slide level2"><h2>Compare Probability to Proportion 🎲</h2>
-</section><section id="compare-probability-to-proportion-1" class="slide level2"><h2>Compare Probability to Proportion 🎲</h2>
-</section><section id="the-sampling-distribution" class="slide level2"><h2>The Sampling Distribution</h2>
+<ul>
+<li><p>The proportion is the number of times an event occurs divided by the number of tries.</p></li>
+<li><p>We can think of a proportion as a realized sample from our probability distribution.</p></li>
+</ul></section><section id="proportion-outcome-of-a-die" class="slide level2"><h2>Proportion: Outcome of a Die 🎲</h2>
+
+<img data-src="Probability2_files/figure-revealjs/dice1-1.png" width="960" class="r-stretch"></section><section id="the-sampling-distribution" class="slide level2"><h2>The Sampling Distribution</h2>
 <p>The sampling distribution is the distribution of the parameter estimate of interest from these samples.</p>
 <p>The sampling distribution is among the most important probability distributions for statistics.</p>
-</section><section id="probability-rules" class="slide level2"><h2>Probability rules</h2>
-</section><section id="the-general-addition-principle-this-or-that" class="slide level2"><h2>The general addition principle (“this or that”)</h2>
-<p>P[A or B]= P[A] + P[B] - P[A and B]</p>
 
-<img data-src="images/clipboard-1859844765.png" class="r-stretch"></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<aside><div>
+<p>We will come back to this a lot in the coming weeks.</p>
+</div></aside></section><section id="sampling-distribution" class="slide level2"><h2>Sampling Distribution 🎲</h2>
+<p>If we repeat die rolls a number of times, we can plot the proportions of {1,2,3,4,5,6} observed throughout many trials</p>
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section><section id="learning-goals" class="slide level2"><h2>Learning Goals</h2>
+<img data-src="Probability2_files/figure-revealjs/dice3-1.png" width="960" class="r-stretch"></section><section id="probability-rules" class="slide level2 dark-theme"><h2>Probability rules</h2>
+<div class="{r-fit-text}">
 <ul>
-<li>Understand why probability theory is the foundation for statistical reasoning.</li>
-<li>Think addition upon hearing “OR”.</li>
-<li>Think multiplication upon hearing “AND”.</li>
-<li>Calculate probabilities of complex events by using standard rules of probability theory.</li>
-<li>Explain probabilities and proportions.</li>
-<li>Explain the binomial – when would you use it</li>
-<li>Understand the binomial distribution and connect it to simple probability rules.</li>
-<li>Understand once and for all that statistics and probability are NOT intuitive</li>
+<li><p>The general multiplication principle</p></li>
+<li><p>The general addition principle</p></li>
+</ul>
+</div>
+</section><section id="the-general-addition-principle-this-or-that" class="slide level2"><h2>The general addition principle (“this OR that”)</h2>
+<p><span class="math inline">\(P[A \text{ OR } B]=P[A] + P[B] - P[A \text{ and } B]\)</span></p>
+</section><section id="lets-practice" class="slide level2"><h2>Let’s practice</h2>
+<div class="goal">
+<p>What is the probability of a die roll resulting in an even number OR a prime number?</p>
+</div>
+<p><span class="math inline">\(P[A \text{ OR } B]\)</span></p>
+<p><span class="math inline">\(+P[A]\)</span></p>
+<p><span class="math inline">\(+P[B]\)</span></p>
+<p><span class="math inline">\(- P[A \text{ and }B]\)</span></p>
+</section><section id="a-special-case-of-the-addition-principle" class="slide level2"><h2>A special case of the addition principle</h2>
+<p><strong><em>IF</em></strong> <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, i.e., <span class="math inline">\(P[A text{AND } B]=0\)</span>, so:</p>
+<p>Thus,</p>
+<p><span class="math inline">\(P[A text{AND } B]=P[A]+P[B]\)</span></p>
+</section><section id="example-1-probability-of-a-range" class="slide level2"><h2>Example 1: probability of a range</h2>
+<div class="goal">
+<p>What is the probability the sum of two dice is between six and eight?</p>
+</div>
+
+<img data-src="Probability2_files/figure-revealjs/dice4-1.png" width="960" class="r-stretch"></section><section id="example-1-cont." class="slide level2"><h2>Example 1 (cont.)</h2>
+<p><span class="math inline">\(P[6]+P[7]+P[8] - P[6 \text{ AND } 7 \text{ AND } 8]\)</span></p>
+
+<img data-src="Probability2_files/figure-revealjs/dice6-1.png" width="960" class="r-stretch"></section><section id="example-2-probability-of-not" class="slide level2"><h2>Example 2: probability of NOT</h2>
+<div class="goal">
+<p>The probability the sum of two dice is *<strong>not</strong> between six and eight.</p>
+</div>
+<div class="fragment">
+<p>We know that <span class="math inline">\(\sum{P[X]}=1\)</span>, so <span class="math inline">\(P[\text{ not }X]=1-P[X]\)</span></p>
+</div>
+</section><section id="another-example" class="slide level2"><h2>Another example</h2>
+<div class="goal">
+<p>Probability that the sum of two dice is odd or between 6 and 8.</p>
+</div>
+<p>Subtract P[A &amp; B] to avoid double counting nonexclusive events</p>
+<p><span class="math inline">\(P[A \text{ or } B] = P[A] + P[B] - P[A \text{ and } B]\)</span></p>
+
+<img data-src="Probability2_files/figure-revealjs/dice-again-1.png" width="960" class="r-stretch"></section><section id="the-general-multiplication-principle" class="slide level2"><h2>The General Multiplication Principle</h2>
+<p><span class="math inline">\(P[A \text{ &amp; } B] = P[A] × P[B | A]\)</span></p>
+<ul>
+<li>
+<p>The probability of A and B equals:</p>
+<p>the probability of one event <strong><em>times</em></strong> the probability of the other, conditioned on the first.</p>
+</li>
+<li><p>Read “A|B” as “A given B”</p></li>
+</ul>
+<p><strong>Independence:</strong></p>
+<ul>
+<li><p>Two events are independent if the occurrence of one gives no information about whether the second will occur.</p></li>
+<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if <span class="math inline">\(P[B | A] = P[B]\)</span></p></li>
 </ul>
 
-
+<aside><div>
+<p>Note: (in)dependence does not imply any mechanistic or causative relationship.</p>
+</div></aside></section><section id="a-special-case-of-the-multiplication-principle" class="slide level2"><h2>A special case of the multiplication principle</h2>
+<div class="goal">
+<p>Probabilities for independent variables</p>
+</div>
+<ul>
+<li><p>General multiplication principle: <span class="math inline">\(P[A \text{ &amp; } B] = P[A] × P[B | A]\)</span></p></li>
+<li><p>If <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P[B| A] = P[B]\)</span></p></li>
+<li><p>So <span class="math inline">\(P[A\&amp;B]=P[A]\times P[B]\)</span></p></li>
+<li><p>I.e., if <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent, the probability of “A AND B” is the product of their probabilities.</p></li>
+</ul></section><section id="example-oguchi-disease" class="slide level2"><h2>Example: Oguchi Disease</h2>
+<blockquote>
+<p>Oguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)</p>
+</blockquote>
+<p><strong>Autosomal:</strong> not sex chromosome;</p>
+<p><strong>Recessive:</strong> phenotype only expressed if two copies are present (in diploids).</p>
+<div class="goal">
+<p>If both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?</p>
+</div>
+<p>[work in pairs for a few mins]</p>
+</section><section id="scenario-2-child-of-two-oguchi-carriers" class="slide level2"><h2>Scenario 2: Child of Two Oguchi Carriers</h2>
+<div class="goal">
+<p>If both of parents have an affected chromosome but no disease, what’s the probability that <strong><em>both</em></strong> of their children will have Oguchi disease?</p>
+</div>
+<p>[Work in pairs for a few minutes]</p>
+</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+<p><img data-src="images/forrestgump.png" alt="From: makeameme.org">{fig-alt=“Forrest says "And that’s all I wanted to say about that" width=”347”}</p>
 </section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>B21: Biostatistics with R</p>
+<p>B215: Biostatistics with R</p>
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -513,8 +544,7 @@ Bárbara D. Bitarello
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -685,7 +715,7 @@ Bárbara D. Bitarello
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

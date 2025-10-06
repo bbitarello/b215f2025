@@ -84,42 +84,28 @@
     "href": "slides/Probability2.html#outline",
     "title": "3.2.Probability",
     "section": "Outline",
-    "text": "Outline\n\nWe don’t expect variability to depend on sample size\nDefinitions & notations\nFoundational concepts: random trials, exclusive and non-exclusive outcomes, etc Probability distributions and sampling distributions\nProbability rules: the addition principle (general and special)"
+    "text": "Outline\n\nDefinition(s) & Foundational Concepts\n\nProbability vs. Odds\nProbability as long-term frequency\nRandom trials\nTypes of events (exclusive and non-exclusive)\nProbability distributions x probability densities x proportions\n\n\nProbability rules\n\nthe addition principle\nthe general multiplication principle"
   },
   {
-    "objectID": "slides/Probability2.html#statistics-and-probability-in-particular-are-not-intuitive",
-    "href": "slides/Probability2.html#statistics-and-probability-in-particular-are-not-intuitive",
+    "objectID": "slides/Probability2.html#recap",
+    "href": "slides/Probability2.html#recap",
     "title": "3.2.Probability",
-    "section": "Statistics (and probability, in particular) are not intuitive",
-    "text": "Statistics (and probability, in particular) are not intuitive\n\nwe see patterns in random data\nwe tend to be overconfident"
-  },
-  {
-    "objectID": "slides/Probability2.html#case-study",
-    "href": "slides/Probability2.html#case-study",
-    "title": "3.2.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nGelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).\n\n\nResults: Countries with lowest per-capita incidence – these tended to be countries with small populations\nHypothesis: perhaps something to do with rural environments in those countries?"
-  },
-  {
-    "objectID": "slides/Probability2.html#case-study-1",
-    "href": "slides/Probability2.html#case-study-1",
-    "title": "3.2.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nRandom variation can have a greater effect on “averages” within small groups than within small groups.\n\n\nLarger countries/populations: spread around the mean is lower.\nImagine an extreme example: a country with 1,000 people where:\n\n0 people have kidney cancer: lowest incidence possible\n1 person has kidney cancer: super high incidencence (100 per 100,000)\n\n\n\nLogical yet unintuitive"
-  },
-  {
-    "objectID": "slides/Probability2.html#statistics-and-probability-are-not-intuitive",
-    "href": "slides/Probability2.html#statistics-and-probability-are-not-intuitive",
-    "title": "3.2.Probability",
-    "section": "Statistics and probability are not intuitive",
-    "text": "Statistics and probability are not intuitive\n\n\nOur brains do a bad job of interpreting data:\n\nwe see patterns in random data\nwe tend to be overconfident\nWe tend to jump to conclusions\nWe don’t realize that coincidences are common\nWe don’t expect variability to depend on sample size\nWe have incorrect feelings about probability\nWe find it hard to combine probabilities"
+    "section": "Recap",
+    "text": "Recap\n\nStatistics and probability are not intuitive. Our brains do a bad job of interpreting data\n\n\nwe see patterns in random data\nwe tend to be overconfident\nwe tend to jump to conclusions\nwe don’t realize that coincidences are common\nwe have incorrect feelings about probability\nwe don’t expect variability to depend on sample size\nwe find it hard to combine probabilities (coming up soon)\n\nWe saw a lot of these last week"
   },
   {
     "objectID": "slides/Probability2.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
     "href": "slides/Probability2.html#to-help-us-when-generalizing-from-sample-to-population-we-need-probability-theory-the-foundation-of-statistical-thinking",
     "title": "3.2.Probability",
-    "section": "To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking",
-    "text": "To help us when generalizing from sample to population, we need Probability theory: The foundation of statistical thinking"
+    "section": "To help us when generalizing from sample to population, we need Probability Theory: The foundation of statistical thinking",
+    "text": "To help us when generalizing from sample to population, we need Probability Theory: The foundation of statistical thinking"
+  },
+  {
+    "objectID": "slides/Probability2.html#definitions-terminologies-and-notations",
+    "href": "slides/Probability2.html#definitions-terminologies-and-notations",
+    "title": "3.2.Probability",
+    "section": "Definitions, Terminologies, and Notations",
+    "text": "Definitions, Terminologies, and Notations"
   },
   {
     "objectID": "slides/Probability2.html#why-do-we-need-probabilities",
@@ -140,7 +126,7 @@
     "href": "slides/Probability2.html#some-definitions",
     "title": "3.2.Probability",
     "section": "Some definitions",
-    "text": "Some definitions\n\nProbability “out there” - outside your head.\n\nBut also…\n\nProbability that is inside your head — as strength of subjective beliefs; may vary among people or even different assessments by the same person.\n“Probabilities” used to quantify ignorance – e.g. probability that a pregnant person is pregnant with a girl\nQuantitive predictions of one time events – e.g., presidential polls\n\n\n\nFrom: Kruschke’s (2011) terminology."
+    "text": "Some definitions\n\nProbability “out there” - outside your head.\n\nBut also…\n\nProbability that is “inside your head” — as strength of subjective beliefs; may vary among people or even different assessments by the same person.\n“Probabilities” used to quantify ignorance – e.g. probability that a pregnant person is pregnant with a girl\nQuantitive predictions of one time events – e.g., presidential polls\n\n\n\nFrom: Kruschke’s (2011) terminology."
   },
   {
     "objectID": "slides/Probability2.html#probability-out-there---outside-your-head",
@@ -157,39 +143,25 @@
     "text": "Probability as long-term frequency\n\nThe probability of an event is its true relative frequency - “out there”\nThis is the proportion of times the event would occur if we repeated the same process over and over again"
   },
   {
-    "objectID": "slides/Probability2.html#probability-theory-statistics",
-    "href": "slides/Probability2.html#probability-theory-statistics",
-    "title": "3.2.Probability",
-    "section": "Probability theory & Statistics",
-    "text": "Probability theory & Statistics\nProbabilities take values from 0-1 (or 0-100%)\nThey are used to quantify a prediction about a future event OR the certainty of a belief"
-  },
-  {
-    "objectID": "slides/Probability2.html#probability-theory-statistics-1",
-    "href": "slides/Probability2.html#probability-theory-statistics-1",
-    "title": "3.2.Probability",
-    "section": "Probability theory & Statistics",
-    "text": "Probability theory & Statistics\nA probability of zero (0%) indicates:\n\nAn event is impossibleOR\n\nSomeone is absolutely (100%) sure that a statement is wrong"
-  },
-  {
-    "objectID": "slides/Probability2.html#probability-theory-statistics-2",
-    "href": "slides/Probability2.html#probability-theory-statistics-2",
-    "title": "3.2.Probability",
-    "section": "Probability theory & Statistics",
-    "text": "Probability theory & Statistics\nA probability of one (100%) indicates:\n\nAn event is certain to happenOR\n\nSomeone is absolutely (100%) sure that a statement is correct"
-  },
-  {
-    "objectID": "slides/Probability2.html#probability-theory-statistics-3",
-    "href": "slides/Probability2.html#probability-theory-statistics-3",
-    "title": "3.2.Probability",
-    "section": "Probability theory & Statistics",
-    "text": "Probability theory & Statistics\nA probability of 0.5 (50%) indicates:\n\nAn event is equally likely to happen or not happenOR\n\nSomeone believes that a statement is equally likely to be true or false"
-  },
-  {
     "objectID": "slides/Probability2.html#example",
     "href": "slides/Probability2.html#example",
     "title": "3.2.Probability",
     "section": "Example",
-    "text": "Example\n\nExample: what’s the probability that a fair die will give me 2 if I roll it once?\n\n\nThis is probability as long-term frequency\nIt comes from the notion that if I could roll this die many, many times, I would get a 2 in about \\(1/6\\) of the times\nSo we say the answer here is \\(1/6\\)"
+    "text": "Example\n\nExample: what’s the probability that a fair die will give me 2 if I roll it once?\n\n\nThis is probability as long-term frequency\nIt comes from the notion that if I could roll this die many, many times, I would get a 2 in about \\(1/6\\) of the times\nSo we say the answer here is \\(1/6\\)\n\n\n\nFigure caption: figure 5.2-1 from the textbook."
+  },
+  {
+    "objectID": "slides/Probability2.html#probability-as-long-term-frequency-1",
+    "href": "slides/Probability2.html#probability-as-long-term-frequency-1",
+    "title": "3.2.Probability",
+    "section": "Probability as long-term frequency",
+    "text": "Probability as long-term frequency\nTwo subtypes:\n1) Probabilities as predictions from a model\n\ne.g. odds of a baby being XX or XY is 50:50 based on meiosis alone\n\n2) Probabilities based on data\n\nin reality, long-term data cross many countries suggest odds of XX to XY baby are 51.7:50"
+  },
+  {
+    "objectID": "slides/Probability2.html#probability-theory-statistics",
+    "href": "slides/Probability2.html#probability-theory-statistics",
+    "title": "3.2.Probability",
+    "section": "Probability Theory & Statistics",
+    "text": "Probability Theory & Statistics\nProbabilities take values from 0-1 (or 0-100%)\nThey are used to quantify a prediction about a future event OR the certainty of a belief\n\n\n\n\n\nA probability of zero (0%) indicates:\n\nAn event is impossibleOR\n\nSomeone is absolutely (100%) sure that a statement is wrong\n\n\n\n\n\n\nA probability of one (100%) indicates:\n\nAn event is certain to happenOR\n\nSomeone is absolutely (100%) sure that a statement is correct\n\n\n\n\n\n\nA probability of 0.5 (50%) indicates:\n\nAn event is equally likely to happen or not happenOR\n\nSomeone believes that a statement is equally likely to be true or false"
   },
   {
     "objectID": "slides/Probability2.html#lingo-odds-vs-probability",
@@ -203,49 +175,7 @@
     "href": "slides/Probability2.html#example-sex-ratio",
     "title": "3.2.Probability",
     "section": "Example: Sex ratio",
-    "text": "Example: Sex ratio\n\nWorldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?\n\n\nOdds: Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).\n. . . - Odds of having boy versus girl is:\\(p[boy]/p[girl]=1.07\\) – can also be phrased as \\(1.07 \\text{ to } 1\\) or \\(1.07:1\\) - Equivalent to 107 to 100 (107:100), 1070 to 1000 (1070:1000), etc\n\n\nProbability: if there are 107 boys born for every 100 girls, \\(107/(100+107)=51.7\\%\\) or \\(0.517\\) is the probability of having a boy."
-  },
-  {
-    "objectID": "slides/Probability2.html#probability-as-long-term-frequency-1",
-    "href": "slides/Probability2.html#probability-as-long-term-frequency-1",
-    "title": "3.2.Probability",
-    "section": "Probability as long-term frequency",
-    "text": "Probability as long-term frequency\nTwo subtypes:\n\nProbabilities as predictions from a model\nProbabilities based on data"
-  },
-  {
-    "objectID": "slides/Probability2.html#models",
-    "href": "slides/Probability2.html#models",
-    "title": "3.2.Probability",
-    "section": "Models",
-    "text": "Models\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
-  },
-  {
-    "objectID": "slides/Probability2.html#probabilities-as-predictions-from-a-model",
-    "href": "slides/Probability2.html#probabilities-as-predictions-from-a-model",
-    "title": "3.2.Probability",
-    "section": "Probabilities as predictions from a model",
-    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy. (this is really the same problem as before)\n\n\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nA model is a simplified description of a (usually complex) mechanism. Let’s create a model"
-  },
-  {
-    "objectID": "slides/Probability2.html#creatingdefining-the-model",
-    "href": "slides/Probability2.html#creatingdefining-the-model",
-    "title": "3.2.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses"
-  },
-  {
-    "objectID": "slides/Probability2.html#creatingdefining-the-model-1",
-    "href": "slides/Probability2.html#creatingdefining-the-model-1",
-    "title": "3.2.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%."
-  },
-  {
-    "objectID": "slides/Probability2.html#probabilities-based-on-data",
-    "href": "slides/Probability2.html#probabilities-based-on-data",
-    "title": "3.2.Probability",
-    "section": "Probabilities based on data",
-    "text": "Probabilities based on data\n\nAccording to statistics from around the world from 2011 (CIA), \\(51.7\\%\\) of babies born were boys\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while\n\n\nBased on these data, the probability of having a boy is \\(51.7\\%\\) (or \\(\\sim0.517\\)) In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
+    "text": "Example: Sex ratio\n\nWorldwide, the boy to girl sex ratio of babies born has been estimated to be 1.07. What is the probability of a random birth being a boy?\n\n\nOdds: Probability that event will occur (male born) divided by probability it will not occur (female born). Can be any value 0 or positive (not negative).\n\nOdds of having boy versus girl is:\\(p[boy]/p[girl]=1.07\\) – can also be phrased as \\(1.07 \\text{ to } 1\\) or \\(1.07:1\\)\nEquivalent to \\(107 \\text{ to } 100\\) (\\(107:100\\)), \\(1070 \\text{ to } 1000\\) (\\(1070:1000\\)), etc\n\nProbability: if there are 107 boys born for every 100 girls, \\(107/(100+107)=51.7\\%\\) or \\(0.517\\) is the probability of having a boy."
   },
   {
     "objectID": "slides/Probability2.html#foundational-concepts-in-probability-theory",
@@ -259,84 +189,63 @@
     "href": "slides/Probability2.html#random-trials",
     "title": "3.2.Probability",
     "section": "Random Trials",
-    "text": "Random Trials\n\nA random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.\nOnly one outcome is observed from each repetition of a random trial.\n\nExample: rolling a six-sided die; tossing a coin (heads or tails), having a baby (boy, girl, neither)."
+    "text": "Random Trials\n\nExample: Probability of getting a 4 in one roll (trial) of a six-sided die\n\n\nA random trial is a process or experiment that has two or more possible outcomes whose occurrence cannot be predicted with certainty.\nOnly one outcome is observed from each repetition of a random trial.\n\n\nFigure caption: figure 5.2-1 from the textbook."
   },
   {
-    "objectID": "slides/Probability2.html#random-trials-1",
-    "href": "slides/Probability2.html#random-trials-1",
+    "objectID": "slides/Probability2.html#types-of-events",
+    "href": "slides/Probability2.html#types-of-events",
     "title": "3.2.Probability",
-    "section": "Random Trials",
-    "text": "Random Trials\n\nProbability of getting a 4 in one roll (trial) of a six-sided die\n\n\nFigure caption: figure 5.2-1 from the textbook."
+    "section": "Types of Events",
+    "text": "Types of Events\n\nExample: possible numbers in a die roll\n\n\n\nMutually Exclusive\nIf \\(A\\) and \\(B\\) are mutually exclusive:\n\nEither \\(A\\) or \\(B\\) are individually plausible outcomes\n\n\\(A\\&B\\) is not plausible (i.e., \\(P(A\\&B)=0\\))\n\n\n\n\n\n\n\n\n\n\nE.g., \\(P(\\text{even AND odd})=0\\) in a die roll"
   },
   {
-    "objectID": "slides/Probability2.html#r",
-    "href": "slides/Probability2.html#r",
+    "objectID": "slides/Probability2.html#types-of-events-1",
+    "href": "slides/Probability2.html#types-of-events-1",
     "title": "3.2.Probability",
-    "section": "R",
-    "text": "R\n\nCodeDieRoll &lt;- function(times = 1) {\n    sample(x = 1:6, size = times, replace = T)\n}\ndf &lt;- data.frame(Outcome = DieRoll(times = 6), NrRolls = 6)\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 12), NrRolls = 12))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 18), NrRolls = 18))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 24), NrRolls = 24))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 32), NrRolls = 32))\ndf &lt;- rbind(df, data.frame(Outcome = DieRoll(times = 40), NrRolls = 40))\nggplot(df, aes(x = Outcome)) + geom_bar() + facet_wrap(~NrRolls)"
-  },
-  {
-    "objectID": "slides/Probability2.html#events-can-be-exclusive-or-non-exclusive",
-    "href": "slides/Probability2.html#events-can-be-exclusive-or-non-exclusive",
-    "title": "3.2.Probability",
-    "section": "Events can be exclusive or non-exclusive",
-    "text": "Events can be exclusive or non-exclusive"
-  },
-  {
-    "objectID": "slides/Probability2.html#mutually-exclusive-events",
-    "href": "slides/Probability2.html#mutually-exclusive-events",
-    "title": "3.2.Probability",
-    "section": "Mutually exclusive events",
-    "text": "Mutually exclusive events\nIf A AND B are mutually exclusive\n\nA OR B are plausible outcomes. E.g. P(1 or 6) in a die roll\n\\(P[A\\&B]=0\\) E.g. P(heads AND tails) in a coin toss"
-  },
-  {
-    "objectID": "slides/Probability2.html#non-mutually-exclusive-events",
-    "href": "slides/Probability2.html#non-mutually-exclusive-events",
-    "title": "3.2.Probability",
-    "section": "Non-Mutually exclusive events",
-    "text": "Non-Mutually exclusive events\nIf A&B are not mutually exclusive - There’s a chance of outcome A AND B. - \\(P[A\\&B]\\neq0\\) E.g. P [&lt;3 & odd] in a die roll"
+    "section": "Types of Events",
+    "text": "Types of Events\n\nExample: possible numbers in a die roll\n\n\n\nNon-mutually exclusive\nIf \\(A\\) and \\(B\\) are not mutually exclusive:\n\nThere’s a chance of outcome \\(A\\) and \\(B\\)\n\nI.e., it is plausible that \\(P(A\\&B)\\neq0\\)\n\n\n\n\n\n\n\n\n\n\n\nE.g., \\(P(\\text{even AND prime}) \\neq 0\\) in a die roll – in fact, what is it?\n\nonly one nummber out of the six is both even and prime,so: 2/6=1/3"
   },
   {
     "objectID": "slides/Probability2.html#probability-distributions",
     "href": "slides/Probability2.html#probability-distributions",
     "title": "3.2.Probability",
     "section": "Probability distributions",
-    "text": "Probability distributions"
+    "text": "Probability distributions\nA probability distribution is the true relative frequency of all possible values of a random variable."
   },
   {
-    "objectID": "slides/Probability2.html#what-is-a-probability-distribution",
-    "href": "slides/Probability2.html#what-is-a-probability-distribution",
+    "objectID": "slides/Probability2.html#probability-distributions-vs.-densities",
+    "href": "slides/Probability2.html#probability-distributions-vs.-densities",
     "title": "3.2.Probability",
-    "section": "What is A Probability Distribution?",
-    "text": "What is A Probability Distribution?\nA probability distribution is the true relative frequency of all possible values of a random variable.\nProbability distributions describe discrete variables.\nAll discrete outcomes have finite probabilities.\nProbability distributions sum to 1.\n\n\\(\\sum{p[x]}=1\\)"
+    "section": "Probability: Distributions vs. Densities",
+    "text": "Probability: Distributions vs. Densities\n\n\nProbability distributions describe discrete variables.\nProbability distributions sum to 1.\n\\(\\sum{p[x]}=1\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTechnically, only discrete variables have probability distributions,as all discrete values have a finite probability."
   },
   {
     "objectID": "slides/Probability2.html#example-probability-distribution-for-rolling-a-die",
     "href": "slides/Probability2.html#example-probability-distribution-for-rolling-a-die",
     "title": "3.2.Probability",
     "section": "Example: probability distribution for rolling a die",
-    "text": "Example: probability distribution for rolling a die\n\\(x={1,2,3,4,5,6}\\)\n\\(p[1]=1/6\\)\n\\(p[2]=1/6,\\text{etc}\\)\n\\(\\sum{p[x]}=1\\)\n\nFigure caption: figure 5.4-1 from the textbook."
+    "text": "Example: probability distribution for rolling a die\n\n\nAll possible values: \\(x=\\{1,2,3,4,5,6\\}\\)\nProbabilities of particular outcomes: \\(p[1]=1/6\\)\n\\(p[2]=1/6,\\text{etc}\\)\nSum of probabilities of all possible outcomes:\n\\(\\sum{p[x]}=1\\)\n\n\n\nFigure caption: figure 5.4-1 from the textbook."
   },
   {
-    "objectID": "slides/Probability2.html#probability-density",
-    "href": "slides/Probability2.html#probability-density",
+    "objectID": "slides/Probability2.html#probability-distributions-vs.-densities-1",
+    "href": "slides/Probability2.html#probability-distributions-vs.-densities-1",
     "title": "3.2.Probability",
-    "section": "Probability density",
-    "text": "Probability density\nProbability densities describe continuous variables. The probability of any continuous outcome is infinitesimal. Probability densities integrate to 1.\n\n\\(\\int{p[x]}=1\\)"
+    "section": "Probability: Distributions vs. Densities",
+    "text": "Probability: Distributions vs. Densities\n\n\n\nThe probability of any value from a continuous distribution is infinitesimally small.\nProbability densities integrate to 1.\n\n\\(\\int{p[x]}=1\\)"
   },
   {
     "objectID": "slides/Probability2.html#example-the-normal-distribution",
     "href": "slides/Probability2.html#example-the-normal-distribution",
     "title": "3.2.Probability",
     "section": "Example: the normal distribution!",
-    "text": "Example: the normal distribution!\nArea under the curve gives you the probability of values in a range [a,b] Each value has an an infinitesimal probability value\n\nFigure caption: figure 5.4-4 from the textbook."
+    "text": "Example: the normal distribution!\nArea under the curve gives you the probability of values in a range \\(\\left[a,b\\right]\\) Each value has an an infinitesimal probability value\n\nFigure caption: figure 5.4-4 from the textbook."
   },
   {
     "objectID": "slides/Probability2.html#proportion",
     "href": "slides/Probability2.html#proportion",
     "title": "3.2.Probability",
     "section": "Proportion",
-    "text": "Proportion\nThe proportion is the number of times an event occurs divided by the number of tries.\nWe can think of a proportion as a realized sample from our probability distribution."
+    "text": "Proportion\n\nThe proportion is the number of times an event occurs divided by the number of tries.\nWe can think of a proportion as a realized sample from our probability distribution."
   },
   {
     "objectID": "slides/Probability2.html#proportion-outcome-of-a-die",
@@ -346,53 +255,109 @@
     "text": "Proportion: Outcome of a Die 🎲"
   },
   {
-    "objectID": "slides/Probability2.html#compare-probability-to-proportion",
-    "href": "slides/Probability2.html#compare-probability-to-proportion",
-    "title": "3.2.Probability",
-    "section": "Compare Probability to Proportion 🎲",
-    "text": "Compare Probability to Proportion 🎲"
-  },
-  {
-    "objectID": "slides/Probability2.html#compare-probability-to-proportion-1",
-    "href": "slides/Probability2.html#compare-probability-to-proportion-1",
-    "title": "3.2.Probability",
-    "section": "Compare Probability to Proportion 🎲",
-    "text": "Compare Probability to Proportion 🎲"
-  },
-  {
     "objectID": "slides/Probability2.html#the-sampling-distribution",
     "href": "slides/Probability2.html#the-sampling-distribution",
     "title": "3.2.Probability",
     "section": "The Sampling Distribution",
-    "text": "The Sampling Distribution\nThe sampling distribution is the distribution of the parameter estimate of interest from these samples.\nThe sampling distribution is among the most important probability distributions for statistics."
+    "text": "The Sampling Distribution\nThe sampling distribution is the distribution of the parameter estimate of interest from these samples.\nThe sampling distribution is among the most important probability distributions for statistics.\n\n\nWe will come back to this a lot in the coming weeks."
+  },
+  {
+    "objectID": "slides/Probability2.html#sampling-distribution",
+    "href": "slides/Probability2.html#sampling-distribution",
+    "title": "3.2.Probability",
+    "section": "Sampling Distribution 🎲",
+    "text": "Sampling Distribution 🎲\nIf we repeat die rolls a number of times, we can plot the proportions of {1,2,3,4,5,6} observed throughout many trials"
   },
   {
     "objectID": "slides/Probability2.html#probability-rules",
     "href": "slides/Probability2.html#probability-rules",
     "title": "3.2.Probability",
     "section": "Probability rules",
-    "text": "Probability rules"
+    "text": "Probability rules\n\n\nThe general multiplication principle\nThe general addition principle"
   },
   {
     "objectID": "slides/Probability2.html#the-general-addition-principle-this-or-that",
     "href": "slides/Probability2.html#the-general-addition-principle-this-or-that",
     "title": "3.2.Probability",
-    "section": "The general addition principle (“this or that”)",
-    "text": "The general addition principle (“this or that”)\nP[A or B]= P[A] + P[B] - P[A and B]"
+    "section": "The general addition principle (“this OR that”)",
+    "text": "The general addition principle (“this OR that”)\n\\(P[A \\text{ OR } B]=P[A] + P[B] - P[A \\text{ and } B]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#lets-practice",
+    "href": "slides/Probability2.html#lets-practice",
+    "title": "3.2.Probability",
+    "section": "Let’s practice",
+    "text": "Let’s practice\n\nWhat is the probability of a die roll resulting in an even number OR a prime number?\n\n\\(P[A \\text{ OR } B]\\)\n\\(+P[A]\\)\n\\(+P[B]\\)\n\\(- P[A \\text{ and }B]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#a-special-case-of-the-addition-principle",
+    "href": "slides/Probability2.html#a-special-case-of-the-addition-principle",
+    "title": "3.2.Probability",
+    "section": "A special case of the addition principle",
+    "text": "A special case of the addition principle\nIF \\(A\\) and \\(B\\) are mutually exclusive, i.e., \\(P[A text{AND } B]=0\\), so:\nThus,\n\\(P[A text{AND } B]=P[A]+P[B]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#example-1-probability-of-a-range",
+    "href": "slides/Probability2.html#example-1-probability-of-a-range",
+    "title": "3.2.Probability",
+    "section": "Example 1: probability of a range",
+    "text": "Example 1: probability of a range\n\nWhat is the probability the sum of two dice is between six and eight?"
+  },
+  {
+    "objectID": "slides/Probability2.html#example-1-cont.",
+    "href": "slides/Probability2.html#example-1-cont.",
+    "title": "3.2.Probability",
+    "section": "Example 1 (cont.)",
+    "text": "Example 1 (cont.)\n\\(P[6]+P[7]+P[8] - P[6 \\text{ AND } 7 \\text{ AND } 8]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#example-2-probability-of-not",
+    "href": "slides/Probability2.html#example-2-probability-of-not",
+    "title": "3.2.Probability",
+    "section": "Example 2: probability of NOT",
+    "text": "Example 2: probability of NOT\n\nThe probability the sum of two dice is *not between six and eight.\n\n\nWe know that \\(\\sum{P[X]}=1\\), so \\(P[\\text{ not }X]=1-P[X]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#another-example",
+    "href": "slides/Probability2.html#another-example",
+    "title": "3.2.Probability",
+    "section": "Another example",
+    "text": "Another example\n\nProbability that the sum of two dice is odd or between 6 and 8.\n\nSubtract P[A & B] to avoid double counting nonexclusive events\n\\(P[A \\text{ or } B] = P[A] + P[B] - P[A \\text{ and } B]\\)"
+  },
+  {
+    "objectID": "slides/Probability2.html#the-general-multiplication-principle",
+    "href": "slides/Probability2.html#the-general-multiplication-principle",
+    "title": "3.2.Probability",
+    "section": "The General Multiplication Principle",
+    "text": "The General Multiplication Principle\n\\(P[A \\text{ & } B] = P[A] × P[B | A]\\)\n\n\nThe probability of A and B equals:\nthe probability of one event times the probability of the other, conditioned on the first.\n\nRead “A|B” as “A given B”\n\nIndependence:\n\nTwo events are independent if the occurrence of one gives no information about whether the second will occur.\n\\(A\\) and \\(B\\) are independent if \\(P[B | A] = P[B]\\)\n\n\n\nNote: (in)dependence does not imply any mechanistic or causative relationship."
+  },
+  {
+    "objectID": "slides/Probability2.html#a-special-case-of-the-multiplication-principle",
+    "href": "slides/Probability2.html#a-special-case-of-the-multiplication-principle",
+    "title": "3.2.Probability",
+    "section": "A special case of the multiplication principle",
+    "text": "A special case of the multiplication principle\n\nProbabilities for independent variables\n\n\nGeneral multiplication principle: \\(P[A \\text{ & } B] = P[A] × P[B | A]\\)\nIf \\(A\\) & \\(B\\) are independent: \\(P[B| A] = P[B]\\)\nSo \\(P[A\\&B]=P[A]\\times P[B]\\)\nI.e., if \\(A\\) & \\(B\\) are independent, the probability of “A AND B” is the product of their probabilities."
+  },
+  {
+    "objectID": "slides/Probability2.html#example-oguchi-disease",
+    "href": "slides/Probability2.html#example-oguchi-disease",
+    "title": "3.2.Probability",
+    "section": "Example: Oguchi Disease",
+    "text": "Example: Oguchi Disease\n\nOguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)\n\nAutosomal: not sex chromosome;\nRecessive: phenotype only expressed if two copies are present (in diploids).\n\nIf both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?\n\n[work in pairs for a few mins]"
+  },
+  {
+    "objectID": "slides/Probability2.html#scenario-2-child-of-two-oguchi-carriers",
+    "href": "slides/Probability2.html#scenario-2-child-of-two-oguchi-carriers",
+    "title": "3.2.Probability",
+    "section": "Scenario 2: Child of Two Oguchi Carriers",
+    "text": "Scenario 2: Child of Two Oguchi Carriers\n\nIf both of parents have an affected chromosome but no disease, what’s the probability that both of their children will have Oguchi disease?\n\n[Work in pairs for a few minutes]"
   },
   {
     "objectID": "slides/Probability2.html#thats-all-for-today",
     "href": "slides/Probability2.html#thats-all-for-today",
     "title": "3.2.Probability",
     "section": "That’s all for today",
-    "text": "That’s all for today\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/Probability2.html#learning-goals",
-    "href": "slides/Probability2.html#learning-goals",
-    "title": "3.2.Probability",
-    "section": "Learning Goals",
-    "text": "Learning Goals\n\nUnderstand why probability theory is the foundation for statistical reasoning.\nThink addition upon hearing “OR”.\nThink multiplication upon hearing “AND”.\nCalculate probabilities of complex events by using standard rules of probability theory.\nExplain probabilities and proportions.\nExplain the binomial – when would you use it\nUnderstand the binomial distribution and connect it to simple probability rules.\nUnderstand once and for all that statistics and probability are NOT intuitive"
+    "text": "That’s all for today\n{fig-alt=“Forrest says \"And that’s all I wanted to say about that\" width=”347”}"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
@@ -1264,7 +1229,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
