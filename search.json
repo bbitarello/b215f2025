@@ -294,7 +294,7 @@
     "href": "slides/Probability2.html#a-special-case-of-the-addition-principle",
     "title": "3.2.Probability",
     "section": "A special case of the addition principle",
-    "text": "A special case of the addition principle\nIF \\(A\\) and \\(B\\) are mutually exclusive, i.e., \\(P[A \\text{ AND } B]=0\\), so:\nThus,\n\\(P[A \\text{ AND } B]=P[A]+P[B]\\)"
+    "text": "A special case of the addition principle\nIF \\(A\\) and \\(B\\) are mutually exclusive, i.e., \\(P[A \\text{ AND } B]=0\\), so:\nThus,\n\\(P[A \\text{ OR } B]=P[A]+P[B]\\)"
   },
   {
     "objectID": "slides/Probability2.html#example-1-probability-of-a-range",
