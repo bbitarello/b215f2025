@@ -315,7 +315,7 @@
     "href": "slides/Probability2.html#example-2-probability-of-not",
     "title": "3.2.Probability",
     "section": "Example 2: probability of NOT",
-    "text": "Example 2: probability of NOT\n\nThe probability the sum of two dice is *not between six and eight.\n\n\nWe know that \\(\\sum{P[X]}=1\\), so \\(P[\\text{ not }X]=1-P[X]\\)"
+    "text": "Example 2: probability of NOT\n\nThe probability the sum of two dice is not between six and eight.\n\n\nWe know that \\(\\sum{P[X]}=1\\), so \\(P[\\text{ not }X]=1-P[X]\\)"
   },
   {
     "objectID": "slides/Probability2.html#another-example",
@@ -357,7 +357,7 @@
     "href": "slides/Probability2.html#thats-all-for-today",
     "title": "3.2.Probability",
     "section": "That’s all for today",
-    "text": "That’s all for today\n{fig-alt=“Forrest says \"And that’s all I wanted to say about that\" width=”347”}"
+    "text": "That’s all for today\n{fig-alt=“Forrest says \"And that’s all I wanted to say about that\" width=”320”}"
   },
   {
     "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
