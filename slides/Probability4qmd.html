@@ -12,7 +12,7 @@
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-10-08">
 <meta name="keywords" content="Probability Rules">
-<title>BIOL B215: Biostatistics with R – 3.3.Probability</title>
+<title>BIOL B215: Biostatistics with R – 3.4.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,7 +129,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">3.3.Probability</h1>
+<section id="title-slide" class="quarto-title-block"><h1 class="title">3.4.Probability</h1>
   <p class="subtitle">Acknowledgments: many code snippets borrowed from Y. Brandvain</p>
 
 <div class="quarto-title-authors">
@@ -141,260 +141,626 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-10-08</p>
-</section><section id="announcements" class="slide level2"><h2>Announcements</h2>
-<ul>
-<li><p>Please answer this poll before 10/20: https://piazza.com/class/mekmad7xwqw14d/post/13</p></li>
-<li><p>Exam content will be up to 10/20 (more on Piazza, stay tuned)</p></li>
-<li><p>PS2 posted yesterday (due 10/22)</p></li>
-<li><p>Coding Assignment 1 will be posted by Friday</p></li>
-</ul></section><section id="outline" class="slide level2"><h2>Outline</h2>
-<ul>
-<li>Probability rules
-<ul>
-<li><del>the addition principle</del></li>
-<li>addition principle: one more example</li>
-<li>the general multiplication principle</li>
-<li>using probability trees to solve probability problems</li>
-<li>dependent events and conditional probabilities</li>
-<li>the Law of Total Probability</li>
-</ul>
-</li>
-<li>Principles
-<ul>
-<li>Bayes theorem</li>
-</ul>
-</li>
-</ul></section><section id="recap-addition-principle" class="slide level2"><h2>Recap: Addition Principle</h2>
-<ul>
-<li><p>The probability of OR involves addition: <span class="math inline">\(P[A \text{ OR } B] = P[A] + P[B]− P[A \&amp; B]\)</span></p></li>
-<li><p>If two events are mutually exclusive: P[A &amp; B] = 0</p></li>
-</ul>
+</section><section id="challenge-rare-disease-diagnosis" class="slide level2"><h2>Challenge: Rare Disease Diagnosis</h2>
 <div class="goal">
-<p>Therefore for mutually exclusive events: <span class="math inline">\(P[A OR B] = P[A] + P[B]\)</span></p>
-</div>
-</section><section id="example-3" class="slide level2"><h2>Example 3</h2>
-<div class="goal">
-<p>Probability that the sum of two dice is odd or between 6 and 8.</p>
-</div>
-<div class="fragment">
+<p>What proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?</p>
 <ul>
-<li>Subtract P[A &amp; B] to avoid double counting nonexclusive events: <span class="math inline">\(P[A \text{ or } B] = P[A] + P[B] - P[A \text{ and } B]\)</span>
-</li>
+<li><p>About 20 in 1000 women (ages 40-49) have breast cancer.</p></li>
+<li><p>A mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.</p></li>
+<li><p>A mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.</p></li>
 </ul>
 </div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="Probability3_files/figure-revealjs/dice-again-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section><section id="section" class="slide level2 dark-theme center"><h2></h2>
-<p><span class="r-fit-text">The General Multiplication principle (“this AND that”)</span></p>
-</section><section id="the-general-multiplication-principle" class="slide level2"><h2>The General Multiplication Principle</h2>
-<p><span class="math display">\[P[A \text{ &amp; } B] = P[A] \times P[B|A]\]</span></p>
-<ul>
-<li>
-<p>The probability of “<span class="math inline">\(A \text{ &amp; }B\)</span>” equals:</p>
-<p>the probability of one event <strong><em>times</em></strong> the probability of the other, conditioned on the first.</p>
-</li>
-<li><p>Read <span class="math inline">\(A\|B\)</span> as “<span class="math inline">\(A \text{ given }B\)</span>”</p></li>
-</ul>
-<div class="fragment">
-<p><strong>Independence:</strong></p>
-<ul>
-<li class="fragment"><p>Two events are independent if the occurrence of one gives no information about whether the second will occur.</p></li>
-<li class="fragment"><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if <span class="math inline">\(P[B | A] = P[B]\)</span></p></li>
-</ul>
-
-</div>
-<aside><div>
-<p>Note: (in)dependence does not imply any mechanistic or causative relationship.</p>
-</div></aside></section><section id="a-special-case-of-the-multiplication-principle" class="slide level2"><h2>A special case of the multiplication principle</h2>
-<div class="goal">
-<p>Probabilities for independent variables</p>
-</div>
-<ul>
-<li><p>General multiplication principle: <span class="math inline">\(P[A \text{ &amp; } B] = P[A] × P[B | A]\)</span></p></li>
-<li><p>If <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P[B| A] = P[B]\)</span></p></li>
-<li><p>So <span class="math inline">\(P[A\text{ &amp; }B]=P[A]\times P[B]\)</span></p></li>
-<li><p>I.e., if <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent, the probability of “<span class="math inline">\(A \text{ AND }B\)</span>” is the product of their probabilities.</p></li>
-</ul></section><section id="example-oguchi-disease" class="slide level2"><h2>Example: Oguchi Disease</h2>
-<blockquote>
-<p>Oguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)</p>
-</blockquote>
-<p><strong>Autosomal:</strong> not sex chromosome;</p>
-<p><strong>Recessive:</strong> phenotype only expressed if two copies are present (in diploids).</p>
-</section><section id="example-oguchi-disease-1" class="slide level2"><h2>Example: Oguchi Disease</h2>
-<div class="goal">
-<p>Scenario 1: If both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?</p>
-</div>
-<p>[work in pairs for a few mins]</p>
-</section><section id="oguchi-disease-answer" class="slide level2"><h2>Oguchi Disease (answer)</h2>
-<p><strong>Thinking:</strong></p>
-<p>A child has a ½ chance of inheriting mom’s affected chromosome AND a ½ chance of inheriting dad’s affected chromosome.</p>
-<p><strong>Answer</strong></p>
-<p>The probability that a given child of heterozygotes has the disease ½ x ½ = ¼.</p>
-</section><section id="scenario-2-child-of-two-oguchi-carriers" class="slide level2"><h2>Scenario 2: Child of Two Oguchi Carriers</h2>
-<div class="goal">
-<p>If both of parents have an affected chromosome but no disease, what’s the probability that <strong><em>both</em></strong> of their children will have Oguchi disease?</p>
-</div>
-<p>[Work in pairs for a few minutes]</p>
-</section><section id="scenario-2-answer" class="slide level2"><h2>Scenario 2: Answer</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="images/clipboard-2188679080.png" width="435"></p>
-</div><div class="column" style="width:40%;">
-<p><span class="math inline">\(P[\text{Both kids have Oguchi}]=\)</span></p>
-<p><span class="math inline">\(P[\text{Child 1 has it}]\times P[\text{Child 2 has it}]\times\)</span></p>
-<p><span class="math inline">\(=1/4\times 1/4=1/16\)</span></p>
-</div></div>
-</section><section id="using-probability-trees" class="slide level2 center"><h2>Using probability trees</h2>
-</section><section id="why" class="slide level2"><h2>Why?</h2>
-<div class="{r-fit-text}">
-<p>Probability theory can be hard.</p>
-<p>Being explicit about what you’re doing makes this easier.</p>
-<p>Probability trees offer a simple way to follow accounting.</p>
-</div>
-</section><section id="how-to-make-probability-trees" class="slide level2 scrollable"><h2>How to make probability trees</h2>
-<ol type="1">
-<li><p>Write down all possible outcomes for event one, two… etc. and connect them.</p></li>
-<li><p>Write down the probability of each outcome, conditional on their path.</p></li>
-<li>
-<p>Multiply each value down a path to find the probability of that path.</p>
-<p>Repeat 1-3 for all paths.</p>
-</li>
-<li><p>Find probability: sum paths that lead to the same destination - i.e. the same outcome.</p></li>
-</ol></section><section id="scenario-3-children-of-oguchi-carriers" class="slide level2"><h2>Scenario 3: Children of Oguchi Carriers</h2>
-<div class="goal">
-<p>If both of parents have an affected chromosome but no disease, what’s the probability that <strong><em>none, one or both (three separate questions here)</em></strong> of their children will have Oguchi disease?</p>
-</div>
-<p>Let’s use probability trees!</p>
-</section><section id="step-1-write-down-all-possible-outcomes" class="slide level2"><h2>Step 1: Write down all possible outcomes</h2>
-
-<img data-src="images/clipboard-897739780.png" class="r-stretch"></section><section id="step-1-write-down-all-possible-outcomes-1" class="slide level2"><h2>Step 1: Write down all possible outcomes</h2>
-
-<img data-src="images/clipboard-7639108.png" class="r-stretch"></section><section id="step-2.-write-down-the-probability-of-each-outcome-conditional-on-their-path" class="slide level2"><h2>Step 2. Write down the probability of each outcome, conditional on their path</h2>
-
-<img data-src="images/clipboard-3251760107.png" class="r-stretch"></section><section id="step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path" class="slide level2"><h2>Step 3. Multiply each value down a path to find the probability of that path</h2>
-
-<img data-src="images/clipboard-4091397874.png" class="r-stretch"></section><section id="step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path-1" class="slide level2"><h2>Step 3. Multiply each value down a path to find the probability of that path</h2>
-
-<img data-src="images/clipboard-3424223039.png" class="r-stretch"></section><section id="step-4.-sum-paths-that-lead-to-the-same-destination" class="slide level2"><h2>Step 4. Sum paths that lead to the same destination</h2>
-<p><span class="math inline">\(P[2\text{Affected }] = 1/16\)</span>; <span class="math inline">\(P[1\text{ Affected }] = 6/16\)</span> ; <span class="math inline">\(P[0 \text{ Affected }= 9/16]\)</span></p>
-
-<img data-src="images/clipboard-2539150621.png" class="r-stretch"></section><section id="dependent-events-conditional-probabilities" class="slide level2 dark-theme center"><h2>Dependent events &amp; Conditional Probabilities</h2>
-</section><section id="dependent-events" class="slide level2"><h2>Dependent Events</h2>
-<p>Events are dependent when the probability of one event depends on the outcome of another.</p>
-<p>E.g. The Probability of <span class="math inline">\(A\)</span> depends on the value of <span class="math inline">\(B\)</span>.</p>
-<p>If <span class="math inline">\(A\)</span> depends on <span class="math inline">\(B\)</span>:</p>
-<p><span class="math display">\[P[A\text{ &amp; }B]\neq P[A]\times P[B]\]</span></p>
-</section><section id="example-surviving-the-titanic" class="slide level2"><h2>Example: Surviving the Titanic</h2>
-<div class="goal">
-<p>Of the 2092 Adults on the Titanic</p>
-<ul>
-<li>319 [<span class="math inline">\(\approx 0.152\)</span>] sat in 1st class.<br>
-</li>
-<li>654 [<span class="math inline">\(\approx 0.312\)</span>] survived.</li>
-</ul>
-</div>
-<p><strong>Hypothesis:</strong> <strong><em>If</em></strong> survival and sitting in 1st class are <strong>independent</strong>:</p>
-<p><span class="math display">\[P[\text{ 1st class &amp; survived }] = P[\text{ 1st class }] x P[\text{ survived }]\]</span></p>
-<ul>
-<li>
-<p>Expected number of 1st class adults to survive:</p>
-<p><span class="math inline">\(0.152\times0.312=0.047424 \times2092 = 99.7256\approx100\)</span> 1st class adults would survive.</p>
-</li>
-<li>
-<p>Expected number of non-1st class adults to survive: we expect</p>
-<p><span class="math inline">\(0.848\times0.312=0.2649 =0.26\times2092 \approx 554\)</span> other adults would survive</p>
-</li>
-</ul></section><section id="surviving-the-titanic" class="slide level2"><h2>Surviving the titanic</h2>
-<h3 id="actually">Actually …</h3>
-<ul>
-<li>
-<p><em>More</em> 1st class passengers survived than expected.</p>
-<ul>
-<li>197 of the 319 people in 1st class survived. (~ 62%)</li>
-<li>This severely exceeds the 100 expected survivors.</li>
-</ul>
-</li>
-<li>
-<p><em>Fewer</em> other passengers survived than expected.</p>
-<ul>
-<li>457 of the 1773 other passengers survived. (~ 26%)</li>
-<li>This is way less than the 554 expected survivors.</li>
-</ul>
-</li>
-</ul>
-
-<aside><div>
-<p>We will learn soon how to test how likely (or unlikely) such an event is under the assumption of independence.</p>
-</div></aside></section><section id="conditional-probability" class="slide level2"><h2>Conditional Probability</h2>
-<ul>
-<li><p>The conditional probability of an event is the probability of that event occurring given that a condition is met.</p></li>
-<li><p><span class="math inline">\(P[X|Y]\)</span> (read “<span class="math inline">\(|\)</span>” as “given”.)</p></li>
-<li><p><span class="math inline">\(P[X|Y]\)</span> means the probability of <span class="math inline">\(X\)</span> if <span class="math inline">\(Y\)</span> is true.</p></li>
-</ul></section><section id="example-surviving-the-titanic-conditional-on-class" class="slide level2"><h2>Example: Surviving the Titanic Conditional on Class</h2>
-<div class="goal">
-<p>Hypothesis: If survival and sitting in 1st class are not independent</p>
-</div>
-<p><span class="math inline">\(P[\text{ Survive| Adult in 1st class}] = 197/319 = 0.62\)</span></p>
-<p><span class="math inline">\(P[\text{ Survive| Adult NOT in 1st class}] = 457/1773 = 0.26\)</span></p>
-</section><section id="the-law-of-total-probability" class="slide level2"><h2>The Law of Total Probability</h2>
-<blockquote>
-<p>Convert conditional probabilities (<span class="math inline">\(P[X|Y_{i}\)</span>]) to total probabilities (<span class="math inline">\(P[X]\)</span>) by weighting conditional probabilities by the probability of the condition (<span class="math inline">\(Y_{i}\)</span>) and summing over all conditions.</p>
-</blockquote>
-<p><span class="math display">\[P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\]</span></p>
-</section><section id="example-the-total-probability-of-surviving-the-titanic" class="slide level2"><h2>Example: The Total Probability of Surviving the Titanic</h2>
-<p><span class="math inline">\(P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\)</span></p>
-<p>Of the 2092 Adults on the Titanic</p>
-<ul>
-<li><p>319 [<span class="math inline">\(\approx0.152\)</span>] sat in 1st class.</p></li>
-<li><p>654 [<span class="math inline">\(\approx0.312\)</span>] survived.</p></li>
-<li><p>197 of the 319 people in 1st class survived. (<span class="math inline">\(\approx0.62\)</span>)</p></li>
-<li><p>457 of the 1773 other passengers survived. (<span class="math inline">\(\approx0.26\)</span>)</p></li>
-</ul></section><section id="example-the-total-probability-of-surviving-the-titanic-1" class="slide level2"><h2>Example: The Total Probability of Surviving the Titanic</h2>
-<p><span class="math display">\[P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\]</span></p>
-<p><span class="math inline">\(P[\text{Survive}]=\sum{(P[\text{Survive}|\text{Class}_{i}]\times P[\text{Class}_{i}])}\)</span></p>
-<p><span class="math inline">\(P[\text{Survive}]=\sum{(P[\text{Survive}|\text{1st class}]\times P[\text{1st class}])}\)</span></p>
-<p><span class="math inline">\(+\)</span></p>
-<p><span class="math inline">\(P[\text{Survive}|\text{NOT 1st class}]\times P[\text{NOT 1st class}])\)</span></p>
-<p><span class="math inline">\(P[\text{Survive}]=(0.62\times 0.152)+(0.26\times 0.848)\)</span></p>
-<p><span class="math inline">\(P[\text{Survive}]=0.314\)</span></p>
-</section><section id="titanic-survival-conditional-on-class-with-probability-trees" class="slide level2"><h2>Titanic survival conditional on class with probability trees</h2>
-
-<img data-src="images/clipboard-2128921652.png" class="r-stretch"><p>We recover <span class="math inline">\(P[\text{survive}]=0.094+0.220=0.314\)</span></p>
-</section><section id="bayes-theorem" class="slide level2 dark-theme center"><h2>Bayes’ Theorem</h2>
-</section><section id="bayes-theorem-definition" class="slide level2"><h2>Bayes’ Theorem: Definition</h2>
-<blockquote>
-<p>The probability of “<span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” equals the probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span> times the probability of <span class="math inline">\(A\)</span> divided by the probability of <span class="math inline">\(B\)</span>.</p>
-</blockquote>
-<p><span class="math display">\[P[A|B]=\frac{P[B|A] \times P[A]}{P[B]}\]</span></p>
-</section><section id="bayes-theorem-derivation" class="slide level2"><h2>Bayes’ Theorem: Derivation</h2>
-
-<img data-src="images/clipboard-2798250529.png" class="r-stretch"></section><section id="bayes-theorem-titanic-example" class="slide level2"><h2>Bayes’ Theorem: Titanic Example</h2>
-<div class="goal">
-<p>Find the probability that an adult survivor was in 1st class.</p>
-</div>
-<ul>
-<li><p>319 of the 2092 adults on the Titanic where in 1st class.</p></li>
-<li><p>197 of the 319 adults in 1st class survived.</p></li>
-<li><p>457 of the other adults survived.</p></li>
-</ul>
-<p><span class="math inline">\(P[\text{1st class}|\text{Survive}]=?\)</span></p>
 <p>[work in pairs]</p>
-</section><section id="solution" class="slide level2"><h2>Solution</h2>
-<p><span class="math inline">\(P[\text{1st class}|\text{Survive}]=\frac{P[\text{Survive}|\text{1st class}]\times P[\text{1st class}]}{P[\text{Survive}]}\)</span></p>
-<p><span class="math inline">\(P[\text{1st class}|\text{Survive}]=\frac{197/319\times(319/2092)}{[(197+457)/2092]}=0.30\)</span></p>
+
+<aside><div>
+<p>Tip: use a probability tree</p>
+</div></aside></section><section id="solution" class="slide level2"><h2>Solution</h2>
+
+<img data-src="images/clipboard-62078940.png" class="r-stretch"></section><section id="solution-1" class="slide level2"><h2>Solution</h2>
+
+<img data-src="images/clipboard-1659772672.png" class="r-stretch"></section><section id="solution-2" class="slide level2" data-visibilit="hidden"><h2>Solution</h2>
+
+<img data-src="images/clipboard-874207709.png" width="423" class="r-stretch"><p><span class="math inline">\(P[+]=0.0184+0.098=0.1164\)</span></p>
+<p><span class="math inline">\(P[C\&amp;+]=0.0184\)</span></p>
+<p><span class="math inline">\(P[C|+]=P[C \text{ &amp; } +]/P[+]=0.158\)</span></p>
+</section><section id="solution-2-1" class="slide level2"><h2>Solution 2</h2>
+
+<img data-src="images/clipboard-1219818132.png" class="r-stretch"></section><section id="bayes-theorem-on-the-beach" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="454"></a></p>
+<figcaption>From: https://xkcd.com/1236/</figcaption></figure>
+</div>
+</section><section id="probability-wrap-up" class="slide level2"><h2>Probability Wrap Up</h2>
+<ul>
+<li><p>Probability theory provides a foundation for rigorous statistics.</p></li>
+<li><p>Application of simple rules of probability facilitates the generation of more complex predictions.</p></li>
+<li><p>We can use Bayes’ Theorem to translate between probabilistic statements</p></li>
+</ul></section><section id="short-summary-multiplication-principle" class="slide level2"><h2>Short summary: Multiplication Principle</h2>
+<ul>
+<li><p>The probability of AND involves multiplication: P[A &amp; B] = P[A] × P[B | A]</p></li>
+<li><p>If the two are independent : P[B | A] = P[B]</p></li>
+<li><p>Therefore, for independent events: P[A &amp; B] = P[A] × P[B]</p></li>
+</ul></section><section id="bayes-theorem-on-the-beach-1" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="454"></a></p>
+<figcaption>From: https://xkcd.com/1236/</figcaption></figure>
+</div>
 </section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
+<img data-src="images/forrestgump.png" alt="&quot;Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section><section id="key-learning-goals" class="slide level2"><h2>Key Learning Goals</h2>
+<ul>
+<li>Understand once and for all that statistics and probability are NOT intuitive</li>
+<li>Understand why probability theory is the foundation for statistical reasoning.</li>
+<li>Think addition upon hearing “OR”.</li>
+<li>Think multiplication upon hearing “AND”.</li>
+<li>Calculate probabilities of complex events by using standard rules of probability theory.</li>
+<li>Explain probabilities and proportions.</li>
+<li>Explain the binomial – when would you use it</li>
+<li>Understand the binomial distribution and connect it to simple probability rules.</li>
+</ul></section><section id="models" class="slide level2"><h2>Models</h2>
+<blockquote>
+<p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
+</blockquote>
+</section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
+</div>
+<ul>
+<li class="fragment"><p>A model is a simplified description of a (usually complex) mechanism.</p></li>
+<li class="fragment"><p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p></li>
+<li class="fragment"><p>Let’s create a model!</p></li>
+</ul></section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+<ul>
+<li class="fragment">Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
+</li>
+<li class="fragment">Half the sperm have one X (no Y) and half have a Y (no X) chromosome: <span class="math inline">\(p[X]=1/2;p[Y]=1/2\)</span>
+</li>
+<li class="fragment">Only one sperm will fertilize the ovum</li>
+<li class="fragment">Every sperm has an equal chance of doing so</li>
+<li class="fragment">If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
+<li class="fragment">If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
+<li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
+</ul></section><section id="creatingdefining-the-model-1" class="slide level2"><h2>Creating/defining the model</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="goal">
+<p>If you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.</p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="nspzxzkxbv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nspzxzkxbv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+#nspzxzkxbv thead, #nspzxzkxbv tbody, #nspzxzkxbv tfoot, #nspzxzkxbv tr, #nspzxzkxbv td, #nspzxzkxbv th {
+  border-style: none;
+}
 
-<img data-src="images/forrestgump.png" alt="&quot;Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+#nspzxzkxbv p {
+  margin: 0;
+  padding: 0;
+}
+
+#nspzxzkxbv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nspzxzkxbv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nspzxzkxbv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nspzxzkxbv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nspzxzkxbv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nspzxzkxbv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nspzxzkxbv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nspzxzkxbv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nspzxzkxbv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nspzxzkxbv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nspzxzkxbv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nspzxzkxbv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nspzxzkxbv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nspzxzkxbv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nspzxzkxbv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nspzxzkxbv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nspzxzkxbv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nspzxzkxbv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nspzxzkxbv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nspzxzkxbv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nspzxzkxbv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nspzxzkxbv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nspzxzkxbv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nspzxzkxbv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nspzxzkxbv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nspzxzkxbv .gt_left {
+  text-align: left;
+}
+
+#nspzxzkxbv .gt_center {
+  text-align: center;
+}
+
+#nspzxzkxbv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nspzxzkxbv .gt_font_normal {
+  font-weight: normal;
+}
+
+#nspzxzkxbv .gt_font_bold {
+  font-weight: bold;
+}
+
+#nspzxzkxbv .gt_font_italic {
+  font-style: italic;
+}
+
+#nspzxzkxbv .gt_super {
+  font-size: 65%;
+}
+
+#nspzxzkxbv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nspzxzkxbv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nspzxzkxbv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nspzxzkxbv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nspzxzkxbv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nspzxzkxbv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nspzxzkxbv .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#nspzxzkxbv .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#nspzxzkxbv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="gamete" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">gamete</th>
+<th id="chromosome" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">chromosome</th>
+<th id="prob" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">prob</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="gamete">egg</td>
+<td class="gt_row gt_left" headers="chromosome">X</td>
+<td class="gt_row gt_right" headers="prob">1.0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="gamete">egg</td>
+<td class="gt_row gt_left" headers="chromosome">Y</td>
+<td class="gt_row gt_right" headers="prob">0.0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="gamete">sperm</td>
+<td class="gt_row gt_left" headers="chromosome">X</td>
+<td class="gt_row gt_right" headers="prob">0.5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="gamete">sperm</td>
+<td class="gt_row gt_left" headers="chromosome">Y</td>
+<td class="gt_row gt_right" headers="prob">0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model" class="slide level2"><h2>Same problem as before but based on data rather than a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
+</div>
+<ul>
+<li class="fragment"><p>According to statistics from around the world from 2011 (CIA), <span class="math inline">\(51.7\%\)</span> of babies born were boys</p></li>
+<li class="fragment"><p>We don’t need to know why more boys were born</p></li>
+<li class="fragment"><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
+<li class="fragment"><p>These proportions have been consistent across countries for quite a while</p></li>
+</ul></section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model-1" class="slide level2"><h2>Same problem as before but based on data rather than a model</h2>
+<div class="goal">
+<p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
+</div>
+<ul>
+<li class="fragment">Based on these data, the probability of having a boy is <span class="math inline">\(51.7\%\)</span> (or <span class="math inline">\(\sim0.517\)</span>)</li>
+<li class="fragment">In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</li>
+</ul></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Gelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).</p>
+</div>
+<ul>
+<li><p>Results: Countries with lowest per-capita incidence – these tended to be countries with small populations</p></li>
+<li><p>Hypothesis: perhaps something to do with rural environments in those countries?</p></li>
+</ul></section><section id="case-study-1" class="slide level2"><h2>Case Study</h2>
+<div class="goal">
+<p>Random variation can have a greater effect on “averages” within small groups than within small groups.</p>
+</div>
+<ul>
+<li>Larger countries/populations: spread around the mean is lower.</li>
+<li>Imagine an extreme example: a country with 1,000 people where:
+<ul>
+<li>0 people have kidney cancer: lowest incidence possible</li>
+<li>1 person has kidney cancer: super high incidencence (100 per 100,000)</li>
+</ul>
+</li>
+</ul>
+<aside class="notes"><p>Logical yet unintuitive</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/psets.html",
-    "items": []
-  },
-  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -20,5 +16,9 @@
       "/slides/Probability.html",
       "/slides/Probability2.html"
     ]
+  },
+  {
+    "listing": "/psets.html",
+    "items": []
   }
 ]
