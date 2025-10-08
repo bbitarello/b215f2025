@@ -339,746 +339,683 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#last-time",
-    "href": "slides/DisplayingAndDescribingData3.html#last-time",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/Probability4.html#challenge-rare-disease-diagnosis",
+    "href": "slides/Probability4.html#challenge-rare-disease-diagnosis",
+    "title": "3.4.Probability",
+    "section": "Challenge: Rare Disease Diagnosis",
+    "text": "Challenge: Rare Disease Diagnosis\n\nWhat proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?\n\nAbout 20 in 1000 women (ages 40-49) have breast cancer.\nA mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.\nA mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.\n\n\n[work in pairs]\n\n\nTip: use a probability tree"
+  },
+  {
+    "objectID": "slides/Probability4.html#solution",
+    "href": "slides/Probability4.html#solution",
+    "title": "3.4.Probability",
+    "section": "Solution",
+    "text": "Solution"
+  },
+  {
+    "objectID": "slides/Probability4.html#solution-1",
+    "href": "slides/Probability4.html#solution-1",
+    "title": "3.4.Probability",
+    "section": "Solution",
+    "text": "Solution"
+  },
+  {
+    "objectID": "slides/Probability4.html#solution-2",
+    "href": "slides/Probability4.html#solution-2",
+    "title": "3.4.Probability",
+    "section": "Solution",
+    "text": "Solution\n\n\\(P[+]=0.0184+0.098=0.1164\\)\n\\(P[C\\&+]=0.0184\\)\n\\(P[C|+]=P[C \\text{ & } +]/P[+]=0.158\\)"
+  },
+  {
+    "objectID": "slides/Probability4.html#solution-2-1",
+    "href": "slides/Probability4.html#solution-2-1",
+    "title": "3.4.Probability",
+    "section": "Solution 2",
+    "text": "Solution 2"
+  },
+  {
+    "objectID": "slides/Probability4.html#bayes-theorem-on-the-beach",
+    "href": "slides/Probability4.html#bayes-theorem-on-the-beach",
+    "title": "3.4.Probability",
+    "section": "Bayes’ Theorem On the Beach",
+    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
+  },
+  {
+    "objectID": "slides/Probability4.html#probability-wrap-up",
+    "href": "slides/Probability4.html#probability-wrap-up",
+    "title": "3.4.Probability",
+    "section": "Probability Wrap Up",
+    "text": "Probability Wrap Up\n\nProbability theory provides a foundation for rigorous statistics.\nApplication of simple rules of probability facilitates the generation of more complex predictions.\nWe can use Bayes’ Theorem to translate between probabilistic statements"
+  },
+  {
+    "objectID": "slides/Probability4.html#short-summary-multiplication-principle",
+    "href": "slides/Probability4.html#short-summary-multiplication-principle",
+    "title": "3.4.Probability",
+    "section": "Short summary: Multiplication Principle",
+    "text": "Short summary: Multiplication Principle\n\nThe probability of AND involves multiplication: P[A & B] = P[A] × P[B | A]\nIf the two are independent : P[B | A] = P[B]\nTherefore, for independent events: P[A & B] = P[A] × P[B]"
+  },
+  {
+    "objectID": "slides/Probability4.html#bayes-theorem-on-the-beach-1",
+    "href": "slides/Probability4.html#bayes-theorem-on-the-beach-1",
+    "title": "3.4.Probability",
+    "section": "Bayes’ Theorem On the Beach",
+    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
+  },
+  {
+    "objectID": "slides/Probability4.html#thats-all-for-today",
+    "href": "slides/Probability4.html#thats-all-for-today",
+    "title": "3.4.Probability",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\nFrom: makeameme.org"
+  },
+  {
+    "objectID": "slides/Probability4.html#key-learning-goals",
+    "href": "slides/Probability4.html#key-learning-goals",
+    "title": "3.4.Probability",
+    "section": "Key Learning Goals",
+    "text": "Key Learning Goals\n\nUnderstand once and for all that statistics and probability are NOT intuitive\nUnderstand why probability theory is the foundation for statistical reasoning.\nThink addition upon hearing “OR”.\nThink multiplication upon hearing “AND”.\nCalculate probabilities of complex events by using standard rules of probability theory.\nExplain probabilities and proportions.\nExplain the binomial – when would you use it\nUnderstand the binomial distribution and connect it to simple probability rules."
+  },
+  {
+    "objectID": "slides/Probability4.html#models",
+    "href": "slides/Probability4.html#models",
+    "title": "3.4.Probability",
+    "section": "Models",
+    "text": "Models\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
+  },
+  {
+    "objectID": "slides/Probability4.html#probabilities-as-predictions-from-a-model",
+    "href": "slides/Probability4.html#probabilities-as-predictions-from-a-model",
+    "title": "3.4.Probability",
+    "section": "Probabilities as predictions from a model",
+    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nA model is a simplified description of a (usually complex) mechanism.\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nLet’s create a model!"
+  },
+  {
+    "objectID": "slides/Probability4.html#creatingdefining-the-model",
+    "href": "slides/Probability4.html#creatingdefining-the-model",
+    "title": "3.4.Probability",
+    "section": "Creating/defining the model",
+    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses"
+  },
+  {
+    "objectID": "slides/Probability4.html#creatingdefining-the-model-1",
+    "href": "slides/Probability4.html#creatingdefining-the-model-1",
+    "title": "3.4.Probability",
+    "section": "Creating/defining the model",
+    "text": "Creating/defining the model\n\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.\n\n\n\n\n\n\n\n\ngamete\nchromosome\nprob\n\n\n\negg\nX\n1.0\n\n\negg\nY\n0.0\n\n\nsperm\nX\n0.5\n\n\nsperm\nY\n0.5"
+  },
+  {
+    "objectID": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
+    "href": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
+    "title": "3.4.Probability",
+    "section": "Same problem as before but based on data rather than a model",
+    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nAccording to statistics from around the world from 2011 (CIA), \\(51.7\\%\\) of babies born were boys\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while"
+  },
+  {
+    "objectID": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
+    "href": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
+    "title": "3.4.Probability",
+    "section": "Same problem as before but based on data rather than a model",
+    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nBased on these data, the probability of having a boy is \\(51.7\\%\\) (or \\(\\sim0.517\\))\nIn any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
+  },
+  {
+    "objectID": "slides/Probability4.html#case-study",
+    "href": "slides/Probability4.html#case-study",
+    "title": "3.4.Probability",
+    "section": "Case Study",
+    "text": "Case Study\n\nGelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).\n\n\nResults: Countries with lowest per-capita incidence – these tended to be countries with small populations\nHypothesis: perhaps something to do with rural environments in those countries?"
+  },
+  {
+    "objectID": "slides/Probability4.html#case-study-1",
+    "href": "slides/Probability4.html#case-study-1",
+    "title": "3.4.Probability",
+    "section": "Case Study",
+    "text": "Case Study\n\nRandom variation can have a greater effect on “averages” within small groups than within small groups.\n\n\nLarger countries/populations: spread around the mean is lower.\nImagine an extreme example: a country with 1,000 people where:\n\n0 people have kidney cancer: lowest incidence possible\n1 person has kidney cancer: super high incidencence (100 per 100,000)\n\n\n\nLogical yet unintuitive"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
+    "href": "slides/DisplayingAndDescribingData2.html#last-time",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Last time",
-    "text": "Last time\n\nMean, median, mode\nRange\n\ntoday: location and width; next class plots"
+    "text": "Last time\n\nMean\nMedian\n\ntoday: location and width; next class plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#this-week",
-    "href": "slides/DisplayingAndDescribingData3.html#this-week",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "This week",
-    "text": "This week\n\nEstimates of width (cont.)\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
+    "objectID": "slides/DisplayingAndDescribingData2.html#today",
+    "href": "slides/DisplayingAndDescribingData2.html#today",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Today",
+    "text": "Today\n\nMedian example\nMode\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
-    "href": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Recall this histogram",
-    "text": "Recall this histogram\n\n\nFigure\nMean and Median\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 3\n  Species     mean median\n  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 setosa     0.246    0.2\n2 versicolor 1.33     1.3\n3 virginica  2.03     2"
+    "objectID": "slides/DisplayingAndDescribingData2.html#attention",
+    "href": "slides/DisplayingAndDescribingData2.html#attention",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Attention",
+    "text": "Attention\n\n\nEstimate = \\(\\bar{Y}, \\bar{x}, \\text{etc.}\\)  (sample mean)\n\nVariable\n\n\nParameter = \\(\\mu\\)  (population mean) - Constant"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
-    "href": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
+    "href": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Practice: Median with even sample size",
+    "text": "Practice: Median with even sample size\n\nCalculate the median of the following 10 numbers: \\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\\)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mean-x-median",
+    "href": "slides/DisplayingAndDescribingData2.html#mean-x-median",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mean x Median",
+    "text": "Mean x Median\n\n\n\nThe mean is more convinient mathematically.\nThe mean is the center of gravity\n\n\n\nThe median is a better descriptor for skewed population distributions.\nThe median is the middle measurement.\n\n\n\n\nBoth can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#case-study",
+    "href": "slides/DisplayingAndDescribingData2.html#case-study",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Case Study",
+    "text": "Case Study\n\n2005 U.S. Census. The plot shows the income per household distribution for the bottom 98% of the population. Median = \\(\\sim46\\)k; Mean: \\(\\sim63\\)k.\n\n\n\n\n\n\nFrom: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution\n\nFor measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mean-or-median",
+    "href": "slides/DisplayingAndDescribingData2.html#mean-or-median",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mean or Median?",
+    "text": "Mean or Median?\n\nNumber of seeds per fruit. Which one is better in this case?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mode",
+    "href": "slides/DisplayingAndDescribingData2.html#mode",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mode",
+    "text": "Mode\n\nThe most common value observed in a sample\n\n\neasy to pick out as the peak in a histogram\nUseful because it always reflects a value actually seen in the dataset, unlike mean and median"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mode-1",
+    "href": "slides/DisplayingAndDescribingData2.html#mode-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mode",
+    "text": "Mode\n\nThe most common value observed in a sample\n\n\nUnimodal vs bimodal (multimodal)\nMultimodal data usually reflects data has multiple (at least two) values that are equally common.\nOften results from two or more underlying groups being measured together.\nCan be used with data that isn’t numeric"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
+    "href": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "But how will you know how your data is distributed?",
+    "text": "But how will you know how your data is distributed?\n\nFirst step: plot your data"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#skewness",
+    "href": "slides/DisplayingAndDescribingData2.html#skewness",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Skewness",
+    "text": "Skewness"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#skewness-1",
+    "href": "slides/DisplayingAndDescribingData2.html#skewness-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Skewness",
+    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&gt;1/2\\) of values are less than the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
+    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Histograms reveal measures of center",
+    "text": "Histograms reveal measures of center\n\nRecall the iris  dataset"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
+    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Histograms reveal measures of center",
+    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
+    "href": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value] (cont.)\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{N}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
-    "href": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Width (aka variability)",
-    "text": "Width (aka variability)\n\nVariability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.\nVariation has a true value from a population that we estimate from a sample."
+    "objectID": "slides/DisplayingAndDescribingData2.html#range",
+    "href": "slides/DisplayingAndDescribingData2.html#range",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Range",
+    "text": "Range\n\nThe difference between the maximum and minimum observed values in a sample"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#range",
-    "href": "slides/DisplayingAndDescribingData3.html#range",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#range-1",
+    "href": "slides/DisplayingAndDescribingData2.html#range-1",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Range",
     "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#range-1",
-    "href": "slides/DisplayingAndDescribingData3.html#range-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
-    "href": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Small samples tend to give lower estimates of the range than large samples",
-    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nSo the sample range is a biased estimator of the true range of the population\n\nSo sample range is a biased estimator of the true range of the population."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#scenario",
-    "href": "slides/DisplayingAndDescribingData3.html#scenario",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Scenario",
-    "text": "Scenario\n\nSalary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns\nWhat can you do then?\n\nYou could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
-    "href": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Interquartile Range (IQR)",
-    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots\n\n\nHow?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR",
-    "text": "IQR\nImagine sorting your data.\n\nThe individual in the middle is the median.\nThe first and last individuals mark the range\nThe other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data\nThe difference between these is the interquartile range"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-example",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR Example",
-    "text": "IQR Example\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR Example",
-    "text": "IQR Example\n\n\n\n\n\\(n=16\\)\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR in R",
-    "text": "IQR in R\n\n\nsummary() gives quartiles and max/min\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\n\nThe “long” route:\n\nCodeas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\nThe shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\nBoxplots reveal quartiles\n\nCodeboxplot(chick20, names = \"chicks day 20\")"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”",
-    "text": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
-    "href": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "But there are metrics that look at all the values",
-    "text": "But there are metrics that look at all the values\n\nVariance, Standard Deviation, & Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.\n\n\n\nBecause (by definition) the differences between all observations and the mean sum to zero (\\(\\sum{Y_i-\\bar{Y}=0}\\)), these summaries work from the squared difference between observations and the mean (\\(\\sum{(Y_i-\\bar{Y})^2}\\))."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance",
-    "href": "slides/DisplayingAndDescribingData3.html#variance",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance",
-    "text": "Variance\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-1",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance",
-    "text": "Variance\n\n\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean\n\n\n\nNote: the numerator here is called “sum of squares”"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
-    "href": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Sample variance (shortcut)",
-    "text": "Sample variance (shortcut)\n\\[s^2=\\left(\\frac{n}{n-1}\\right)\\left(\\frac{\\sum^{n}_{i=1}{Y^2_i}}{n}-\\bar{Y}^2\\right)\\]"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-example",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-example",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance Example",
-    "text": "Variance Example\n\nLifespan of 12 forager bees (in hours).\n\n\n\nMean\nSum of squares\nSum of squares (cont)\n\n\n\n\n2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7\n\n\\[\\bar{Y} = \\frac{\\sum{Y_i}}{n} = \\frac{919}{33}= 27.848\\text{ hours}\\]\n\n\n\nCodebeesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\n\n# A tibble: 33 × 3\n   hours `Y-meanY` `(Y-meanY)^2`\n   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1   2.3     -25.5          653.\n 2   2.3     -25.5          653.\n 3   3.9     -23.9          574.\n 4   4       -23.8          569.\n 5   7.1     -20.7          430.\n 6   9.5     -18.3          337.\n 7   9.6     -18.2          333.\n 8  10.8     -17.0          291.\n 9  12.8     -15.0          226.\n10  13.6     -14.2          203.\n# ℹ 23 more rows\n\n\n\n\n\nCodebeesDF &lt;- beesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\nsum(beesDF[, 3])\n\n[1] 13520.96\n\n\nSo\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\]\nNote: the unit here is hours squared. Also, note that we don’t divide by \\(n\\) but by \\(n-1\\).\n4 differences from population mean:\ns^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation",
-    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Standard Deviation",
-    "text": "Standard Deviation\n\n\nParameter\n\\[\\sigma=\\sqrt{\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}}=\\sqrt{\\sigma^2}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s=\\sqrt{\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}}=\\sqrt{s^2}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
-    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Standard Deviation",
-    "text": "Standard Deviation\nUsing the previous example, with forager bees.\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\] \\[s = \\sqrt{422.53}=20.555\\] ## In R\nVariance\n\nCodevar(beesDF$hours)\n\n[1] 422.5301\n\n\nStandard deviation\n\nCodesd(beesDF$hours)\n\n[1] 20.55554\n\nCodesqrt(var(beesDF$hours))\n\n[1] 20.55554"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
-    "href": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Coefficient of Variation (CV)",
-    "text": "Coefficient of Variation (CV)\n\nThe variance and standard deviation increase with the mean.\nThe coefficient of variation allows for fair comparisons of variability between measures on different scales.\n\n\\[CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\]"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#in-summary",
-    "href": "slides/DisplayingAndDescribingData3.html#in-summary",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "In summary",
-    "text": "In summary\n\nRange: The difference between the largest and smallest values.\nInterquartile Range: The difference between the 25th and 75th percentile.\nVariance & Standard Deviation: The difference between observations & the mean.\nCoefficient of Variation: A measure of the standard deviation that’s independent of the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance, Standard Deviation or Coefficient of Variation?",
-    "text": "Variance, Standard Deviation or Coefficient of Variation?\n\n\nVariance and standard deviation convey the same information and are used in many equations.\n\nThe coefficient of variation is less directly used in equations, but is ideal for comparing variation between different types of comparisons."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
+    "title": "2.2.Displaying & Describing Data",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Statistics_and_Samples.html#overview",
-    "href": "slides/Statistics_and_Samples.html#overview",
-    "title": "1.1.Statistics and Samples",
-    "section": "Overview",
-    "text": "Overview\n\nGoals of statistics\nPopulations and Samples\nStatistics and parameters\nEstimate errors due to sampling\nTypes of experiments\nTypes of variables\n\n\n\nwe will continue on this topic next time"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#learning-goals",
-    "href": "slides/Statistics_and_Samples.html#learning-goals",
-    "title": "1.1.Statistics and Samples",
-    "section": "Learning Goals",
-    "text": "Learning Goals\n\nUnderstand the major goal of statistics\nDistinguish between a sample and a population\nDistinguish between an estimate and a parameter\nIdentify why estimates from samples may deviate from parameters of populations\nIdentify the properties of a good sample\nBe able to detect the differences between observational and experimental studies\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics",
-    "href": "slides/Statistics_and_Samples.html#what-is-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nTweet from someone I don’t know, but very on point, so thank you!"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics-1",
-    "href": "slides/Statistics_and_Samples.html#what-is-statistics-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is statistics?",
-    "text": "What is statistics?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-biostatistics",
-    "href": "slides/Statistics_and_Samples.html#what-is-biostatistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is BIOstatistics?",
-    "text": "What is BIOstatistics?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
-    "href": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "Why should you care about statistics?",
-    "text": "Why should you care about statistics?\n\nBiology (ecology, genetics, immunology, microbiology, …)\nBiomedical sciences\nPublic health\nData science\nEconomy, Psychology, Social Science"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
-    "href": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "Why should anyone care about statistics?",
-    "text": "Why should anyone care about statistics?\n\n\n\nGood science!\nCritical evaluation of “scientific evidence”\nStatistics and probability are not intuitive\nWe tend to jump to conclusions and we are very often wrong\nTransferable skills\n\n\n\n\nThis is my adorable dog, Cashew"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#challenge-data-deluge",
-    "href": "slides/Statistics_and_Samples.html#challenge-data-deluge",
-    "title": "1.1.Statistics and Samples",
-    "section": "Challenge: data deluge",
-    "text": "Challenge: data deluge\n\nCover from “The Economist” (Feb 27-March 10, 2010)"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#challenge-understanding",
-    "href": "slides/Statistics_and_Samples.html#challenge-understanding",
-    "title": "1.1.Statistics and Samples",
-    "section": "Challenge: understanding",
-    "text": "Challenge: understanding\n\nFrom: https://xkcd.com/1478/"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#goals",
-    "href": "slides/Statistics_and_Samples.html#goals",
-    "title": "1.1.Statistics and Samples",
-    "section": "Goals",
-    "text": "Goals\n\nGoal: learn about the world\n\n\nFrom: imgflip.com/memegenerator"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#in-practice-then",
-    "href": "slides/Statistics_and_Samples.html#in-practice-then",
-    "title": "1.1.Statistics and Samples",
-    "section": "In practice, then…",
-    "text": "In practice, then…\n\nChallenge: We can’t look at the whole world.\nSolution: Take a sample and generalize outward."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#great-but",
-    "href": "slides/Statistics_and_Samples.html#great-but",
-    "title": "1.1.Statistics and Samples",
-    "section": "Great but…",
-    "text": "Great but…\n\nNew Challenge: Samples deviate from the populations by\\ luck/chance (sampling error) or unrepresentative sampling (sampling bias)\n\nSolution:\n\nEstimate the values of important parameters\nHave measures of uncertainty for estimates\nTest hypotheses about those parameters"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#lets-try-again",
-    "href": "slides/Statistics_and_Samples.html#lets-try-again",
-    "title": "1.1.Statistics and Samples",
-    "section": "Let’s try again",
-    "text": "Let’s try again\n\nStatistics are a quantitative technology for empirical science.\nA logic and methodology for the measurement of uncertainty and for an examination of that uncertainty.\nThe key word here is uncertainty. Statistics becomes necessary when observations are variable."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-about-biostats",
-    "href": "slides/Statistics_and_Samples.html#what-about-biostats",
-    "title": "1.1.Statistics and Samples",
-    "section": "What about biostats?",
-    "text": "What about biostats?\n\nWhat is the motivating biological question?\nWhat experiments can be done and/or data can be collected to address this question?\nDo results support an interesting conclusion?\nWhat are the shortcomings/limitations of statistical models and causal frameworks in the analysis?\nHow do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#the-central-obsession",
-    "href": "slides/Statistics_and_Samples.html#the-central-obsession",
-    "title": "1.1.Statistics and Samples",
-    "section": "The Central Obsession",
-    "text": "The Central Obsession\n\n\n\nQuestion: How do we make inferences about the WORLD from our finite observations?\n\n\n\nAnswer: Make models to account for the process of sampling and the associated hazards."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#important-distinctions",
-    "href": "slides/Statistics_and_Samples.html#important-distinctions",
-    "title": "1.1.Statistics and Samples",
-    "section": "Important distinctions",
-    "text": "Important distinctions\n\nPopulations vs. samples\nParameters vs. estimates"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#populations",
-    "href": "slides/Statistics_and_Samples.html#populations",
-    "title": "1.1.Statistics and Samples",
-    "section": "Populations",
-    "text": "Populations\n\n\n\nIn Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.\n\n\n\nIn Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#statistics-parameters",
-    "href": "slides/Statistics_and_Samples.html#statistics-parameters",
-    "title": "1.1.Statistics and Samples",
-    "section": "Statistics & parameters",
-    "text": "Statistics & parameters\nA parameter is some property of the world, i.e., the “truth”\n\n\n\n\n\n\nSeriously, though, \\&lt;3 X-files!"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#a-population-of-starfish",
-    "href": "slides/Statistics_and_Samples.html#a-population-of-starfish",
-    "title": "1.1.Statistics and Samples",
-    "section": "A population of starfish",
-    "text": "A population of starfish\n\n\n\nParameters describe populations\nE.g. proportion of pink starfish among all starfish of a given species in a certain location"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
-    "href": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
-    "title": "1.1.Statistics and Samples",
-    "section": "A sample of starfish",
-    "text": "A sample of starfish\n\n\n\nEstimates (statistics) approximate parameters as inferred from samples\nWe estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#in-summary",
-    "href": "slides/Statistics_and_Samples.html#in-summary",
-    "title": "1.1.Statistics and Samples",
-    "section": "In summary",
-    "text": "In summary\n\n\nParameters and populations\n\nParameters describe Populations\nBecause we can’t sample an entire population, we usually don’t know parameters.\n\n\nEstimates and samples\n\nBut we can get a good sense of the parameters from estimates we make from samples.\nEstimates approximate parameters as inferred from Samples"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
-    "href": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling: What could go wrong?",
-    "text": "Sampling: What could go wrong?\nMeet sampling error and sampling bias"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling bias",
-    "text": "Sampling bias\n\n\n\nIf you collected these against a dark background without careful procedures… \n\n\n\n\nThis sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-1",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling bias",
-    "text": "Sampling bias\nSystematic difference between parameters & estimates.\n\n\nCase study: Polls in the 1936 US Election."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#the-1936-election",
-    "href": "slides/Statistics_and_Samples.html#the-1936-election",
-    "title": "1.1.Statistics and Samples",
-    "section": "The 1936 Election",
-    "text": "The 1936 Election\n\n\n\n\n\nRepublican Alf Landon\n\n\n\n\nDemocrat Franklin Roosevelt"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll",
-    "href": "slides/Statistics_and_Samples.html#literary-digest-poll",
-    "title": "1.1.Statistics and Samples",
-    "section": "1936 Literary Digest poll",
-    "text": "1936 Literary Digest poll\n2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
-    "href": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "1936 Literary Digest poll",
-    "text": "1936 Literary Digest poll\n\nFigure made in R with code borrowed from Y. Brandvain"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
-    "href": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
-    "title": "1.1.Statistics and Samples",
-    "section": "Election: Roosevelt won in a landslide",
-    "text": "Election: Roosevelt won in a landslide\n\nThis plot was made in R"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling Bias in the 1936 Polls",
-    "text": "Sampling Bias in the 1936 Polls\n\nQuestionnaire was more likely to reach rich people (who could afford phones & attend book clubs) than those with fewer means.\nVoting and party preference are correlated with wealth.\nPoorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#thats-all-for-today",
-    "href": "slides/Statistics_and_Samples.html#thats-all-for-today",
-    "title": "1.1.Statistics and Samples",
-    "section": "That’s all for today",
-    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData4.html#outline",
-    "href": "slides/DisplayingAndDescribingData4.html#outline",
-    "title": "2.4.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData5.html#outline",
+    "href": "slides/DisplayingAndDescribingData5.html#outline",
+    "title": "2.5.Displaying & Describing Data",
     "section": "Outline",
-    "text": "Outline\n\nCV example\nManipulating means and variance (example: converting units)\nWhy plot? Aren’t numerical summaries enough?\nLetting data type guide visualizations"
+    "text": "Outline\n\nLetting data type guide visualizations\nRules of data visualization - principles of good plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#cv-example",
-    "href": "slides/DisplayingAndDescribingData4.html#cv-example",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "CV example",
-    "text": "CV example\n\nRecall the bee lifespan example. We found that \\(\\bar{Y}=27.848\\) hours and \\(s=20.555\\) hours.\n\n\n\\(CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\)\n\n\n\\(CV = 100 \\% \\times \\frac{20.555}{27.848}=100 \\times 0.738 = 73.813\\)\n\n\n\nThe CV does not have to be expressed as a percentage. You may also find it as simply a proportion, i.e., \\(\\frac{\\sigma}{\\mu}\\) (parameter) or \\(\\frac{s}{\\bar{Y}}\\) (estimate)."
+    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions",
+    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Cumulative Frequency Distributions",
+    "text": "Cumulative Frequency Distributions\n\nNumber of students per grade\n\n\n\n\n\n\n\nschool_grade\nFrequency_of_Students\n\n\n\n1\n23\n\n\n2\n20\n\n\n3\n15\n\n\n4\n12\n\n\n5\n10\n\n\n6\n8\n\n\n\n\n\n\nThe cumulative frequency of a value is the proportion of individuals equal to or less than that value. In this case, equal or less than a given grade.\nSort data, calculate cumulative frequency…\n\n\nBased on example from: https://statisticsbyjim.com/basics/cumulative-frequency/"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#good-estimators-are-unbiased",
-    "href": "slides/DisplayingAndDescribingData4.html#good-estimators-are-unbiased",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Good estimators are unbiased",
-    "text": "Good estimators are unbiased\n\nThe expected value of an unbiased estimator equals the population parameter.\nBiased estimators should be avoided if possible.\nBiased estimators (often) change with the sample size.\nThe sample variance and sample standard deviation are divided by (n – 1), rather than n to minimize bias.\nThe range is a bad summary statistic because it is biased, and increases with sample size."
+    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-1",
+    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Cumulative Frequency Distributions",
+    "text": "Cumulative Frequency Distributions\n\nSort all values\nCalculate the fraction of values \\(\\leq\\) each value – the cumulative relative frequency\n\n\nCodelibrary(dplyr)\ndf &lt;- df |&gt;\n    mutate(Cumul_Freq = cumsum(Frequency_of_Students))\ndf &lt;- df |&gt;\n    mutate(Rel_CFreq = Cumul_Freq/sum(Frequency_of_Students))\ndf\n\n  school_grade Frequency_of_Students Cumul_Freq Rel_CFreq\n1            1                    23         23 0.2613636\n2            2                    20         43 0.4886364\n3            3                    15         58 0.6590909\n4            4                    12         70 0.7954545\n5            5                    10         80 0.9090909\n6            6                     8         88 1.0000000"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#measures-of-width-in-graphical-terms",
-    "href": "slides/DisplayingAndDescribingData4.html#measures-of-width-in-graphical-terms",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Measures of width in graphical terms",
-    "text": "Measures of width in graphical terms\n\nSD and var: Particularly informative for symmetric distributions, but not for asymmetric ones"
+    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-2",
+    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-2",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Cumulative Frequency Distributions",
+    "text": "Cumulative Frequency Distributions\n\nPlot the values on the \\(x\\) and their cumulative relative frequencies on the \\(y\\)\n\nConnect the values with lines\n\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodeggplot(df, aes(x = school_grade))+\n  stat_ecdf(geom = \"step\") +\n  theme_bw() #this is just to make the background clear"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#manipulating-means",
-    "href": "slides/DisplayingAndDescribingData4.html#manipulating-means",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Manipulating means",
-    "text": "Manipulating means\n\nThe mean of the sum of two variables \\(X\\) and \\(Y\\): \\(E[X + Y] = E[X]+ E[Y]\\)\nThe mean of the sum of a variable \\(X\\) and a constant \\(c\\): \\(E[X + c] = E[X]+ c\\)\nThe mean of a product of a variable \\(X\\) and a constant \\(c\\): \\(E[cX] = cE[X]\\)\n\n\n\n\\(E\\): expected value of a variable"
+    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-3",
+    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-3",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Cumulative Frequency Distributions",
+    "text": "Cumulative Frequency Distributions\n\nexample 2: Temperatures near LaGuardia (1973)\n\n\nCodedatasets::airquality |&gt; \n  ggplot(aes(x= Temp)) + \n  stat_ecdf(geom = \"step\") +\n  theme_bw() #this is just to make the background clear\n\n\nECDF: empirical cumulative distribution function"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#manipulating-variance",
-    "href": "slides/DisplayingAndDescribingData4.html#manipulating-variance",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Manipulating variance",
-    "text": "Manipulating variance\n\nThe variance of the sum of two variables \\(X\\) and \\(Y\\): \\(Var[X + Y] = Var[X]+ Var[Y]\\) (if and only if X and Y are independent).\nThe variance of the sum of a variable \\(X\\) and a constant \\(c\\): \\(Var[X + c] = Var[X]\\)\nThe variance of a product of a variable \\(X\\) and a constant \\(c\\): \\(Var[cX] = c^2 Var[X]\\)"
+    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-4",
+    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-4",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Cumulative Frequency Distributions",
+    "text": "Cumulative Frequency Distributions\n\nExample 3: Spider running speed\n\n\nFigure caption: Figure 3.4-1 from the textbookCumulative frequency distributions clearly communicate quantiles."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#example-converting-units",
-    "href": "slides/DisplayingAndDescribingData4.html#example-converting-units",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Example: converting units",
-    "text": "Example: converting units\n\nIf the mean and variance in height (in centimers) in a sample are \\(\\bar{X}=169.8\\text{ cm}\\) and \\(s^2=131.98\\text{ cm}^2\\) and \\(1\\text{ cm} = 0.394\\) inches, find the mean and variance in inches.\n\n\nMean: \\(E[cX] = cE[X]\\)\n\\(0.394\\times169.8\\text{ cm}=66.90\\text{ inches}\\)\nVariance: \\(Var[cX] = c^2 Var[X]\\)\n\\(0.394^2\\times131.98\\text{ cm}^2 = 20.488\\text{ inches}^2\\)"
+    "objectID": "slides/DisplayingAndDescribingData5.html#distribution-shapes",
+    "href": "slides/DisplayingAndDescribingData5.html#distribution-shapes",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Distribution shapes",
+    "text": "Distribution shapes\nHistograms"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#lastly-rounding",
-    "href": "slides/DisplayingAndDescribingData4.html#lastly-rounding",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Lastly: Rounding",
-    "text": "Lastly: Rounding\n\nComputers can return values with precision that exceeds biological interest.\nWhen sharing results, round numbers to a reasonable number of significant figures.\nPresenting one or two more digits than initially measured is a good rule of thumb.\nDO NOT round while calculating or sharing intermediate results!\nRound only the final results of the specific summaries of interest."
+    "objectID": "slides/DisplayingAndDescribingData5.html#distribution-shapes-1",
+    "href": "slides/DisplayingAndDescribingData5.html#distribution-shapes-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Distribution shapes",
+    "text": "Distribution shapes\nCumulative Frequency Distributions"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#how-about-plots",
-    "href": "slides/DisplayingAndDescribingData4.html#how-about-plots",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "How about plots?",
-    "text": "How about plots?\n\nAren’t numerical summaries enough?"
+    "objectID": "slides/DisplayingAndDescribingData5.html#less-common-plots-for-one-numerical-variable",
+    "href": "slides/DisplayingAndDescribingData5.html#less-common-plots-for-one-numerical-variable",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Less common plots for one numerical variable",
+    "text": "Less common plots for one numerical variable\nThese are more often used to look at the association between a numerical and a categorical variable:\n\nBoxplots\nViolin plots\nStrip charts"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#no",
-    "href": "slides/DisplayingAndDescribingData4.html#no",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "No!",
-    "text": "No!"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-1",
+    "href": "slides/DisplayingAndDescribingData5.html#section-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "Two or more variables …"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#case-study-anscombes-quartet",
-    "href": "slides/DisplayingAndDescribingData4.html#case-study-anscombes-quartet",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Case Study: Anscombe’s Quartet",
-    "text": "Case Study: Anscombe’s Quartet\nFour data sets (A-D) with identical summaries (mean and sd)\n\nCodelibrary(datasets)\nhead(anscombe)\n\n  x1 x2 x3 x4   y1   y2    y3   y4\n1 10 10 10  8 8.04 9.14  7.46 6.58\n2  8  8  8  8 6.95 8.14  6.77 5.76\n3 13 13 13  8 7.58 8.74 12.74 7.71\n4  9  9  9  8 8.81 8.77  7.11 8.84\n5 11 11 11  8 8.33 9.26  7.81 8.47\n6 14 14 14  8 9.96 8.10  8.84 7.04\n\nCodestr(anscombe)\n\n'data.frame':   11 obs. of  8 variables:\n $ x1: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x2: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x3: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x4: num  8 8 8 8 8 8 8 19 8 8 ...\n $ y1: num  8.04 6.95 7.58 8.81 8.33 ...\n $ y2: num  9.14 8.14 8.74 8.77 9.26 8.1 6.13 3.1 9.13 7.26 ...\n $ y3: num  7.46 6.77 12.74 7.11 7.81 ...\n $ y4: num  6.58 5.76 7.71 8.84 8.47 7.04 5.25 12.5 5.56 7.91 ...\n\n\nFour datasets (A-D) 11 observations per variable per dataset Each dataset has x and y variables (both numerical)"
+    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical",
+    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Categorical x Categorical",
+    "text": "Categorical x Categorical\n\nContingency Table\n\n\nFrom: Whitlock & Schluter, The Analysis of Biological Data"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-summary-statistics",
-    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-summary-statistics",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Anscombe’s quartet: summary statistics",
-    "text": "Anscombe’s quartet: summary statistics\n\n\n\n\n\n\ngroup\nmean.x\nmean.y\nsd.x\nsd.y\ncor.xy\n\n\n\nA\n9\n7.500909\n3.316625\n2.031568\n0.8164205\n\n\nB\n9\n7.500909\n3.316625\n2.031657\n0.8162365\n\n\nC\n9\n7.500000\n3.316625\n2.030424\n0.8162867\n\n\nD\n9\n7.500909\n3.316625\n2.030579\n0.8165214"
+    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-1",
+    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Categorical x Categorical",
+    "text": "Categorical x Categorical\n\nGrouped bar plot\n\n\nFigure caption: figure 2.3-1 from Whitlock & Schluter, The Analysis of Biological Data"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-trendlines",
-    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-trendlines",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Anscombe’s quartet: trendlines",
-    "text": "Anscombe’s quartet: trendlines\nTrendlines reveal no difference"
+    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-2",
+    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-2",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Categorical x Categorical",
+    "text": "Categorical x Categorical\n\nMosaic plot\n\n\nFigure caption: figure 2.3-2 from Whitlock & Schluter, The Analysis of Biological Data2+ variables. No upper limit, but too many variables may be confusing\nWidth indicates the relative proportion of the corresponding value"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-data",
-    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-data",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Anscombe’s Quartet: Data",
-    "text": "Anscombe’s Quartet: Data\nShowing the data reveals large differences"
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Numerical",
+    "text": "Numerical x Numerical\nScatter Plot\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris,aes(x = Petal.Width, y = Petal.Length)) + \n  geom_point()+\n  xlab(\"Petal Width (cm)\") + \n  ylab(\"Petal Length (cm)\")"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#ascombe-described-the-article-as-being-intended-to-counter-the-impression-among-statisticians-that-numerical-calculations-are-exact-but-graphs-are-rough.",
-    "href": "slides/DisplayingAndDescribingData4.html#ascombe-described-the-article-as-being-intended-to-counter-the-impression-among-statisticians-that-numerical-calculations-are-exact-but-graphs-are-rough.",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Ascombe described the article as being intended to counter the impression among statisticians that “numerical calculations are exact, but graphs are rough.”",
-    "text": "Ascombe described the article as being intended to counter the impression among statisticians that “numerical calculations are exact, but graphs are rough.”\nConstructed by F. Anscombe (1973)\nDemonstrates both the importance of graphing data when analyzing it, and the effect of outliers and other influential observations on statistical properties."
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical-1",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Numerical",
+    "text": "Numerical x Numerical\nScatter Plot\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +\n    geom_point() + xlab(\"Petal Width (cm)\") + ylab(\"Petal Length (cm)\") +\n    geom_smooth(method = \"lm\", se = F)"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#displaying-data-is-very-important",
-    "href": "slides/DisplayingAndDescribingData4.html#displaying-data-is-very-important",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Displaying data is very important",
-    "text": "Displaying data is very important\n\nDisplaying data helps you:\n\nUnderstand your data\nCommunicate your results"
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Categorical",
+    "text": "Numerical x Categorical\nMultiple Histograms"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-goals",
-    "href": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-goals",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Exploratory vs Explanatory Plots: Goals",
-    "text": "Exploratory vs Explanatory Plots: Goals\n\nIn exploratory data analysis, you aim to find the story of the data.\nIn explanatory data analysis, you aim to share the story of the data.\n\n\n\nNote: There is a continuum between explanatory and exploratory plots. For example, the plot you show your lab is probably somewhere between what you make for yourself and what you send to the New York Times."
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-1",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Categorical",
+    "text": "Numerical x Categorical\nStrip Chart"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-focus",
-    "href": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-focus",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Exploratory vs Explanatory Plots: Focus",
-    "text": "Exploratory vs Explanatory Plots: Focus\n\nFor exploratory plots: Don’t fuss about colors, labels, names etc. The goal is for you to understand the data.\nFor explanatory plots: Fuss about all of this. You must consider your audience may, for example, consist of:\n- People unfamiliar with your data\n- People who are colorblind\n\n\n\nThe suggestions we will cover will help the story of the data reveal itself, and are therefore useful for exploratory & explanatory plots."
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-2",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-2",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Categorical",
+    "text": "Numerical x Categorical\nBoxplot"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#which-types-of-summaries-and-graphs-to-use",
-    "href": "slides/DisplayingAndDescribingData4.html#which-types-of-summaries-and-graphs-to-use",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Which types of summaries and graphs to use?",
-    "text": "Which types of summaries and graphs to use?\n\nLet data type guide presentation"
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-3",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-3",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical x Categorical",
+    "text": "Numerical x Categorical\nViolin Plot"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#to-visualize-data-for-a-single-variable",
-    "href": "slides/DisplayingAndDescribingData4.html#to-visualize-data-for-a-single-variable",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "To visualize data for a single variable…",
-    "text": "To visualize data for a single variable…\nShow its frequency distribution"
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-2-categorical",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-2-categorical",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical (2) + Categorical",
+    "text": "Numerical (2) + Categorical\nMultiple Scatterplots with legend"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable",
-    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One categorical variable",
-    "text": "One categorical variable\n\nBarplot/bar graph\n\n\n\n\nWhat is the variable?\nNotice the ordering\nAbsolute or relative frequencies?\nBar area reflects frequencies"
+    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-2-x-categorical",
+    "href": "slides/DisplayingAndDescribingData5.html#numerical-2-x-categorical",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Numerical (2) x Categorical",
+    "text": "Numerical (2) x Categorical\nMultiple scatterplots plotted separately"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-1",
-    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-1",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One categorical variable",
-    "text": "One categorical variable\n\nPie chart\n\n\nSame purpose as bar graph\nMuch harder to spot patterns\nBar graphs generally preferred"
+    "objectID": "slides/DisplayingAndDescribingData5.html#visualizations-over-time-and-space",
+    "href": "slides/DisplayingAndDescribingData5.html#visualizations-over-time-and-space",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Visualizations Over Time and Space",
+    "text": "Visualizations Over Time and Space\nLine Graphs Show Data Over Time\nFor temporal data, note all observations with a data point, and connect each point with a line."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-2",
-    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-2",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One categorical variable",
-    "text": "One categorical variable\n\nFrequency table\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nAccidents\n6688\n\n\nHomicide\n2093\n\n\nSuicide\n1615\n\n\nMalig. tumor\n745\n\n\nHeart disease\n463\n\n\nCongen. abnor.\n222\n\n\nChronic res. disease\n107\n\n\nFlu/pneumonia\n73\n\n\nCerebrov. disease\n67\n\n\nOther tumor\n52\n\n\nAll other cause\n1653\n\n\n\n\n\n\n\nWhat is the variable?\nNotice the ordering\nAbsolute or relative frequencies?"
+    "objectID": "slides/DisplayingAndDescribingData5.html#small-multiples-line-chart",
+    "href": "slides/DisplayingAndDescribingData5.html#small-multiples-line-chart",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Small multiples line chart",
+    "text": "Small multiples line chart\nA grid of line charts that uses the same scales and axes"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable",
-    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One numerical variable",
-    "text": "One numerical variable\nGoals\n\nVisualize the center (“average”)\nVisualize the spread (variability)\nVisualize the shape (distribution)"
+    "objectID": "slides/DisplayingAndDescribingData5.html#to-show-spatial-data",
+    "href": "slides/DisplayingAndDescribingData5.html#to-show-spatial-data",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "To show spatial data",
+    "text": "To show spatial data\nMaps\nSpatial data does not have to be a geographical map"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-1",
-    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-1",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One numerical variable",
-    "text": "One numerical variable\n\nHistogram\n\n\nCodedatasets::airquality |&gt;\n  ggplot(aes(x = Temp)) +\n  geom_histogram() +\n  xlab(\"Temp (in Fahrenheit)\") +\n  ggtitle(\"Maximum Daily Temperature\") +\n  bb_theme() # this is just a theme I made to make plots look better\n\n\n30 bins30 bins"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-3",
+    "href": "slides/DisplayingAndDescribingData5.html#section-3",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "How to make good plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#histograms-consider-your-bins",
-    "href": "slides/DisplayingAndDescribingData4.html#histograms-consider-your-bins",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Histograms – consider your bins",
-    "text": "Histograms – consider your bins\n\nEach block of a histogram is called a “bin”\nThe size or “width” of a bin refers to the range in each block.\nChanging bins can change stories\nDon’t be fooled.\nDon’t allow bad bin widths to obscure your data.\n\n\nDO NOT assume that default bin widths are appropriate."
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-4",
+    "href": "slides/DisplayingAndDescribingData5.html#section-4",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "Show the data.\nMake patterns easy to see.\nDisplay magnitudes honestly.\nDraw graphics clearly."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-2",
-    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-2",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One numerical variable",
-    "text": "One numerical variable\nDensity Plots"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-5",
+    "href": "slides/DisplayingAndDescribingData5.html#section-5",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nHiding the data"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-3",
-    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-3",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "One numerical variable",
-    "text": "One numerical variable\n\nFrequency table\n\n\nMeasured in LaGuardia Airport, NY, 1973. Data from the “airquality” dataset from the datasets package.\n11 bins\nequally-sized"
+    "objectID": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here",
+    "href": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "What is the main problem here?",
+    "text": "What is the main problem here?\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#next-week",
-    "href": "slides/DisplayingAndDescribingData4.html#next-week",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "Next week",
-    "text": "Next week\n\nMore on the types of plots/tables for different types of data\nPrinciples of good plots"
+    "objectID": "slides/DisplayingAndDescribingData5.html#not-showing-data-just-summaries",
+    "href": "slides/DisplayingAndDescribingData5.html#not-showing-data-just-summaries",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "👎 Not showing data, just summaries",
+    "text": "👎 Not showing data, just summaries\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly.\n\nThis plot hides the variation between positions."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData4.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData4.html#thats-all-for-today",
-    "title": "2.4.Displaying & Describing Data",
-    "section": "That’s all for today!",
-    "text": "That’s all for today!\n\n\n\nFrom: makeameme.org"
+    "objectID": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here-1",
+    "href": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "What is the main problem here?",
+    "text": "What is the main problem here?\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly."
   },
   {
-    "objectID": "slides/Logistics.html#overview",
-    "href": "slides/Logistics.html#overview",
-    "title": "0.Logistics",
-    "section": "Overview",
-    "text": "Overview\n\nIntroductions\nCourse Logistics\nTo-Dos for this week"
+    "objectID": "slides/DisplayingAndDescribingData5.html#not-showing-data-overplotting",
+    "href": "slides/DisplayingAndDescribingData5.html#not-showing-data-overplotting",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "👎 Not showing data, overplotting",
+    "text": "👎 Not showing data, overplotting\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly.\n\n\n\n\n\n\n\n\n\n\n\nOver-plotting hides data by placing data points on top of each other."
   },
   {
-    "objectID": "slides/Logistics.html#hello",
-    "href": "slides/Logistics.html#hello",
-    "title": "0.Logistics",
-    "section": "Hello!",
-    "text": "Hello!\n\n\n\n\n\nBárbara D. Bitarello (she/her/hers)\nPhD in human evolutionary genetics\nProfessor \\@ BMC since July 2021\nComputational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc\nInterested in all things related to evolution"
+    "objectID": "slides/DisplayingAndDescribingData5.html#showing-data-by-jittering",
+    "href": "slides/DisplayingAndDescribingData5.html#showing-data-by-jittering",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "👍 Showing data by jittering",
+    "text": "👍 Showing data by jittering\n\nThis plot shows all the observations"
   },
   {
-    "objectID": "slides/Logistics.html#our-ta",
-    "href": "slides/Logistics.html#our-ta",
-    "title": "0.Logistics",
-    "section": "Our TA",
-    "text": "Our TA\n\nNicole Cavalieri\nEnglish Major/ Data Science Minor\nR rockstar!"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-6",
+    "href": "slides/DisplayingAndDescribingData5.html#section-6",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "👎 How to hide data\n\nProvide only statistical summaries.\nOver-plotting - too many points.\n\n👍 How to reveal data\n\nPresent all of the data points.\nAllow all points to be seen."
   },
   {
-    "objectID": "slides/Logistics.html#pre-reqs",
-    "href": "slides/Logistics.html#pre-reqs",
-    "title": "0.Logistics",
-    "section": "Pre-Reqs",
-    "text": "Pre-Reqs\n\nNo prior experience with programming is required!\nBIOL B110 or B111 highly recommended (though not required). Why? Examples are heavily focused on biology, though the concepts and skills learned will be transferable\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nHigh school algebra - if you’re not sure, I recommend checking Khan Academy - Algebra Basics for a recap"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-7",
+    "href": "slides/DisplayingAndDescribingData5.html#section-7",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nMaking patterns hard to see"
   },
   {
-    "objectID": "slides/Logistics.html#logistics",
-    "href": "slides/Logistics.html#logistics",
-    "title": "0.Logistics",
-    "section": "Logistics",
-    "text": "Logistics\nEverything I am about to say is in the syllabus!\n\nMaterials\nThings to do/install\nCourse structure\nPolicies\nHow to succeed"
+    "objectID": "slides/DisplayingAndDescribingData5.html#whats-the-main-problem-here",
+    "href": "slides/DisplayingAndDescribingData5.html#whats-the-main-problem-here",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "What’s the main problem here?",
+    "text": "What’s the main problem here?"
   },
   {
-    "objectID": "slides/Logistics.html#materials",
-    "href": "slides/Logistics.html#materials",
-    "title": "0.Logistics",
-    "section": "Materials",
-    "text": "Materials\n\n\n\nTextbook: Whitlock and Schluter The Analysis of Biological Data, 3rd edition (2nd: ok, but check pages)\n\n\n\n\nLaptop with browser for labs\nScientific calculator (not graphing calculator) \\(\\sim\\$12\\)\n\nScientific vs Graphing Calculator"
+    "objectID": "slides/DisplayingAndDescribingData5.html#nonsensical-order-hides-pattern",
+    "href": "slides/DisplayingAndDescribingData5.html#nonsensical-order-hides-pattern",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Nonsensical order hides pattern",
+    "text": "Nonsensical order hides pattern\nReordering factors makes pattern clear"
   },
   {
-    "objectID": "slides/Logistics.html#tech-things-to-do",
-    "href": "slides/Logistics.html#tech-things-to-do",
-    "title": "0.Logistics",
-    "section": "Tech things to do",
-    "text": "Tech things to do\n\nHave a laptop for labs and calculator for exams\nJoin Piazza\nMake accounts in DataCamp and Posit Cloud using BMC/HC email\nThen accept invite sent by email (check spam)"
+    "objectID": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules",
+    "href": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Tables should follow similar rules",
+    "text": "Tables should follow similar rules\n\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nCongen. abnor.\n222\n\n\nHeart disease\n463\n\n\nAccidents\n6688\n\n\nAll other cause\n1653\n\n\nOther tumor\n52\n\n\nSuicide\n1615\n\n\nHomicide\n2093\n\n\nChronic res. disease\n107\n\n\nCerebrov. disease\n67\n\n\nFlu/pneumonia\n73\n\n\nMalig. tumor\n745\n\n\n\n\n\n\n\n👎\n\nNonsense order hides patterns\nAlphabetical order is usually a bad idea."
   },
   {
-    "objectID": "slides/Logistics.html#other-things-to-do",
-    "href": "slides/Logistics.html#other-things-to-do",
-    "title": "0.Logistics",
-    "section": "Other things to do",
-    "text": "Other things to do\n\nRead course info document and schedule (posted on Moodle)\nAnswer pre-course survey\nCheck course schedule and reach out asap if there are issues\nCheck midterm dates and plan accordingly"
+    "objectID": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules-1",
+    "href": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules-1",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Tables should follow similar rules",
+    "text": "Tables should follow similar rules\n\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nAccidents\n6688\n\n\nHomicide\n2093\n\n\nSuicide\n1615\n\n\nMalig. tumor\n745\n\n\nHeart disease\n463\n\n\nCongen. abnor.\n222\n\n\nChronic res. disease\n107\n\n\nFlu/pneumonia\n73\n\n\nCerebrov. disease\n67\n\n\nOther tumor\n52\n\n\nAll other cause\n1653\n\n\n\n\n\n\n\n👍\n\nOrder to reveal patterns\nList ordinal factors in a meaningful order\nList nominal factors from greatest to least, with “all others” last."
   },
   {
-    "objectID": "slides/Logistics.html#course-pages",
-    "href": "slides/Logistics.html#course-pages",
-    "title": "0.Logistics",
-    "section": "Course Pages",
-    "text": "Course Pages\n\nCourse website: https://bbitarello.github.io/b215f2025/ has syllabus, schedule, etc.\nAll assignments must be uploaded on Moodle (except DataCamp)\nKeys, slides, study guides will also be posted on Moodle"
+    "objectID": "slides/DisplayingAndDescribingData5.html#section-8",
+    "href": "slides/DisplayingAndDescribingData5.html#section-8",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "",
+    "text": "How to hide patterns 👎\n\n\nMake one plot and call it good\nUnreasonable scales\nArrange factors nonsensically\n\n\n\nHow to reveal patterns 👍\n\n\nExplore multiple potential plots\nUse appropriate scales\nArrange factors meaningfully\nOrder ordinal factors meaningfully (e.g., January to December.\nOrder nominal factors by count\nIf there is a grab bag category, place it after the lowest count"
   },
   {
-    "objectID": "slides/Logistics.html#course-pages-1",
-    "href": "slides/Logistics.html#course-pages-1",
-    "title": "0.Logistics",
-    "section": "Course Pages",
-    "text": "Course Pages\n\nPiazza is the preferred method for any questions that may benefit classmates, both logistical and content-related\nPiazza allows you to post anonymously (note: I will still know your identity)\n\n\n\nDatacamp and Posit Cloud will also be used weekly so join asap!"
+    "objectID": "slides/DisplayingAndDescribingData5.html#problem",
+    "href": "slides/DisplayingAndDescribingData5.html#problem",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Problem?",
+    "text": "Problem?"
   },
   {
-    "objectID": "slides/Logistics.html#course-structure",
-    "href": "slides/Logistics.html#course-structure",
-    "title": "0.Logistics",
-    "section": "Course Structure",
-    "text": "Course Structure\n\nLectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day."
+    "objectID": "slides/DisplayingAndDescribingData5.html#bad-axis-limits-hide-patterns",
+    "href": "slides/DisplayingAndDescribingData5.html#bad-axis-limits-hide-patterns",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "Bad Axis-Limits Hide Patterns 👎",
+    "text": "Bad Axis-Limits Hide Patterns 👎\nIn this plot, the large scale hides the pattern (difference between the two groups)"
   },
   {
-    "objectID": "slides/Logistics.html#formative-vs-summative-assessments",
-    "href": "slides/Logistics.html#formative-vs-summative-assessments",
-    "title": "0.Logistics",
-    "section": "Formative vs Summative Assessments",
-    "text": "Formative vs Summative Assessments"
+    "objectID": "slides/DisplayingAndDescribingData5.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData5.html#thats-all-for-today",
+    "title": "2.5.Displaying & Describing Data",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Logistics.html#formative-assessments",
-    "href": "slides/Logistics.html#formative-assessments",
-    "title": "0.Logistics",
-    "section": "Formative Assessments",
-    "text": "Formative Assessments\n\n\n\nFormative assessments happen often and are focused on learning\nDC and R labs are gladed for completion/effort\nQuizzes may be taken multiple times (final grade is average)\nPS graded benevolently\nAllows instructor to adjust pace and support"
+    "objectID": "slides/DisplayingAndDescribingData6.html#outline",
+    "href": "slides/DisplayingAndDescribingData6.html#outline",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Outline",
+    "text": "Outline\n\nWrap-up: Rules of data visualization - principles of good plots"
   },
   {
-    "objectID": "slides/Logistics.html#summative-assessments",
-    "href": "slides/Logistics.html#summative-assessments",
-    "title": "0.Logistics",
-    "section": "Summative Assessments",
-    "text": "Summative Assessments\n\n\n\nEvaluate students’ individual progress: have they met the learning goals? Have they mastered the material?\nTypically occur at the end of a learning period\nThe first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative"
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem",
+    "href": "slides/DisplayingAndDescribingData6.html#problem",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem? 👎",
+    "text": "Problem? 👎\n\n\n\n\n\n\n\n\n\n\nLifespan by body size in mammals, data from Allison & Cicchetti 1976"
   },
   {
-    "objectID": "slides/Logistics.html#datacamp",
-    "href": "slides/Logistics.html#datacamp",
-    "title": "0.Logistics",
-    "section": "DataCamp",
-    "text": "DataCamp\n\nAssigned weekly to practice lab skills\nDC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly"
+    "objectID": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
+    "href": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Transform Data to Reveal Patterns 👍",
+    "text": "Transform Data to Reveal Patterns 👍"
   },
   {
-    "objectID": "slides/Logistics.html#attendance-and-late-work",
-    "href": "slides/Logistics.html#attendance-and-late-work",
-    "title": "0.Logistics",
-    "section": "Attendance and Late Work",
-    "text": "Attendance and Late Work\n\nPlease communicate need to miss class by email.\nGrace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment\nLate work otherwise penalyzed -10% per day"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section",
+    "href": "slides/DisplayingAndDescribingData6.html#section",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDisplayig Magnitudes Dishonestly"
   },
   {
-    "objectID": "slides/Logistics.html#ai-policy",
-    "href": "slides/Logistics.html#ai-policy",
-    "title": "0.Logistics",
-    "section": "AI policy",
-    "text": "AI policy\nWe are following the BMC Honor Code. Please see syllabus.\nQuestions about this: now or later on Piazza.\nwho has read the syllabus? if not, read now the part on this"
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem-1",
+    "href": "slides/DisplayingAndDescribingData6.html#problem-1",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem?",
+    "text": "Problem?"
   },
   {
-    "objectID": "slides/Logistics.html#faqs-answered-in-the-syllabus",
-    "href": "slides/Logistics.html#faqs-answered-in-the-syllabus",
-    "title": "0.Logistics",
-    "section": "FAQs answered in the syllabus",
-    "text": "FAQs answered in the syllabus\nPlease visit the FAQ section of the syllabus. A few examples…\n\nWhat if I have to miss class?\nWhat if I cannot turn in an assignment in time?\nWhat if I am requesting an extension because of sickness?\nWhat if I have accommodations?"
+    "objectID": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
+    "href": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Presenting magnitudes dishonestly",
+    "text": "Presenting magnitudes dishonestly\n\nThis plot suggests that centers are 20X taller than guards."
   },
   {
-    "objectID": "slides/Logistics.html#how-to-succeed",
-    "href": "slides/Logistics.html#how-to-succeed",
-    "title": "0.Logistics",
-    "section": "How to succeed",
-    "text": "How to succeed\n\nAttendance\nPre-class prep\nComplete all activities — be consistent and diligent\nCheck Piazza regularly, attend office hours at least 2x\nDon’t leave everything for last minute — that will not work well\nCommunicate proactively"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-1",
+    "href": "slides/DisplayingAndDescribingData6.html#section-1",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "How to represent magnitudes dishonestly: 👎\n\nStart bar plots at a non-zero value\n\nHow to represent magnitudes honestly: 👍\n\nStart bar plots at zero (if the variable starts at zero)\n\n\nWhy? The height of a bar plot makes us think in magnitudes."
   },
   {
-    "objectID": "slides/Logistics.html#questions",
-    "href": "slides/Logistics.html#questions",
-    "title": "0.Logistics",
-    "section": "Questions?",
-    "text": "Questions?"
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-2",
+    "href": "slides/DisplayingAndDescribingData6.html#section-2",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "Mistakes in displaying data:\n\nDraw elements unclearly"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#problem-2",
+    "href": "slides/DisplayingAndDescribingData6.html#problem-2",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Problem? 👎",
+    "text": "Problem? 👎\n\n\nx-axis labels obscure one another."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
+    "href": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "👍 Flip Axes to Present Graphics Clearly",
+    "text": "👍 Flip Axes to Present Graphics Clearly"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
+    "href": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "👍 Clear Graphics for Everyone",
+    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
+    "href": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Direct Labelling May Clarify Graphics",
+    "text": "Direct Labelling May Clarify Graphics\n\nLabels directly on plots may also help with clarifying patterns"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#section-3",
+    "href": "slides/DisplayingAndDescribingData6.html#section-3",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "",
+    "text": "How to draw graphical elements unclearly: 👎\n\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\n\nHow to draw graphical elements clearly: 👍\n\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
+    "href": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "A note about boxplots",
+    "text": "A note about boxplots\n\nThere is more than one way to define the whiskers in a boxplot\nR (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value\nBut how are outliers defined?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "href": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 1: If there are no outliers in the dataset",
+    "text": "Case 1: If there are no outliers in the dataset\nR uses the popular method of \\(\\text{lower fence}=Q1–1.5(IQR)\\) and \\(\\text{upper fence}=Q3+1.5(IQR)\\). If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:\n\n\n\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
+    "href": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Case 2: there are outliers",
+    "text": "Case 2: there are outliers\nIf there are outliers, whiskers go up to \\(Q3+1.5IQR\\) and down to \\(Q1-1.5IQR\\) and outliers are shown as circles\n\n\nCase 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#please-contribute",
+    "href": "slides/DisplayingAndDescribingData6.html#please-contribute",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "Please contribute!",
+    "text": "Please contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
+    "title": "2.6.Displaying & Describing Data",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
     "objectID": "slides/Probability.html#outline",
@@ -1404,7 +1341,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -1806,681 +1743,744 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Probability4qmd.html#challenge-rare-disease-diagnosis",
-    "href": "slides/Probability4qmd.html#challenge-rare-disease-diagnosis",
-    "title": "3.4.Probability",
-    "section": "Challenge: Rare Disease Diagnosis",
-    "text": "Challenge: Rare Disease Diagnosis\n\nWhat proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?\n\nAbout 20 in 1000 women (ages 40-49) have breast cancer.\nA mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.\nA mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.\n\n\n[work in pairs]\n\n\nTip: use a probability tree"
+    "objectID": "slides/Logistics.html#overview",
+    "href": "slides/Logistics.html#overview",
+    "title": "0.Logistics",
+    "section": "Overview",
+    "text": "Overview\n\nIntroductions\nCourse Logistics\nTo-Dos for this week"
   },
   {
-    "objectID": "slides/Probability4qmd.html#solution",
-    "href": "slides/Probability4qmd.html#solution",
-    "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution"
+    "objectID": "slides/Logistics.html#hello",
+    "href": "slides/Logistics.html#hello",
+    "title": "0.Logistics",
+    "section": "Hello!",
+    "text": "Hello!\n\n\n\n\n\nBárbara D. Bitarello (she/her/hers)\nPhD in human evolutionary genetics\nProfessor \\@ BMC since July 2021\nComputational biologist/population geneticist/evolutionary biologist/statistical geneticist, etc\nInterested in all things related to evolution"
   },
   {
-    "objectID": "slides/Probability4qmd.html#solution-1",
-    "href": "slides/Probability4qmd.html#solution-1",
-    "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution"
+    "objectID": "slides/Logistics.html#our-ta",
+    "href": "slides/Logistics.html#our-ta",
+    "title": "0.Logistics",
+    "section": "Our TA",
+    "text": "Our TA\n\nNicole Cavalieri\nEnglish Major/ Data Science Minor\nR rockstar!"
   },
   {
-    "objectID": "slides/Probability4qmd.html#solution-2",
-    "href": "slides/Probability4qmd.html#solution-2",
-    "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution\n\n\\(P[+]=0.0184+0.098=0.1164\\)\n\\(P[C\\&+]=0.0184\\)\n\\(P[C|+]=P[C \\text{ & } +]/P[+]=0.158\\)"
+    "objectID": "slides/Logistics.html#pre-reqs",
+    "href": "slides/Logistics.html#pre-reqs",
+    "title": "0.Logistics",
+    "section": "Pre-Reqs",
+    "text": "Pre-Reqs\n\nNo prior experience with programming is required!\nBIOL B110 or B111 highly recommended (though not required). Why? Examples are heavily focused on biology, though the concepts and skills learned will be transferable\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nHigh school algebra - if you’re not sure, I recommend checking Khan Academy - Algebra Basics for a recap"
   },
   {
-    "objectID": "slides/Probability4qmd.html#solution-2-1",
-    "href": "slides/Probability4qmd.html#solution-2-1",
-    "title": "3.4.Probability",
-    "section": "Solution 2",
-    "text": "Solution 2"
+    "objectID": "slides/Logistics.html#logistics",
+    "href": "slides/Logistics.html#logistics",
+    "title": "0.Logistics",
+    "section": "Logistics",
+    "text": "Logistics\nEverything I am about to say is in the syllabus!\n\nMaterials\nThings to do/install\nCourse structure\nPolicies\nHow to succeed"
   },
   {
-    "objectID": "slides/Probability4qmd.html#bayes-theorem-on-the-beach",
-    "href": "slides/Probability4qmd.html#bayes-theorem-on-the-beach",
-    "title": "3.4.Probability",
-    "section": "Bayes’ Theorem On the Beach",
-    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
+    "objectID": "slides/Logistics.html#materials",
+    "href": "slides/Logistics.html#materials",
+    "title": "0.Logistics",
+    "section": "Materials",
+    "text": "Materials\n\n\n\nTextbook: Whitlock and Schluter The Analysis of Biological Data, 3rd edition (2nd: ok, but check pages)\n\n\n\n\nLaptop with browser for labs\nScientific calculator (not graphing calculator) \\(\\sim\\$12\\)\n\nScientific vs Graphing Calculator"
   },
   {
-    "objectID": "slides/Probability4qmd.html#probability-wrap-up",
-    "href": "slides/Probability4qmd.html#probability-wrap-up",
-    "title": "3.4.Probability",
-    "section": "Probability Wrap Up",
-    "text": "Probability Wrap Up\n\nProbability theory provides a foundation for rigorous statistics.\nApplication of simple rules of probability facilitates the generation of more complex predictions.\nWe can use Bayes’ Theorem to translate between probabilistic statements"
+    "objectID": "slides/Logistics.html#tech-things-to-do",
+    "href": "slides/Logistics.html#tech-things-to-do",
+    "title": "0.Logistics",
+    "section": "Tech things to do",
+    "text": "Tech things to do\n\nHave a laptop for labs and calculator for exams\nJoin Piazza\nMake accounts in DataCamp and Posit Cloud using BMC/HC email\nThen accept invite sent by email (check spam)"
   },
   {
-    "objectID": "slides/Probability4qmd.html#short-summary-multiplication-principle",
-    "href": "slides/Probability4qmd.html#short-summary-multiplication-principle",
-    "title": "3.4.Probability",
-    "section": "Short summary: Multiplication Principle",
-    "text": "Short summary: Multiplication Principle\n\nThe probability of AND involves multiplication: P[A & B] = P[A] × P[B | A]\nIf the two are independent : P[B | A] = P[B]\nTherefore, for independent events: P[A & B] = P[A] × P[B]"
+    "objectID": "slides/Logistics.html#other-things-to-do",
+    "href": "slides/Logistics.html#other-things-to-do",
+    "title": "0.Logistics",
+    "section": "Other things to do",
+    "text": "Other things to do\n\nRead course info document and schedule (posted on Moodle)\nAnswer pre-course survey\nCheck course schedule and reach out asap if there are issues\nCheck midterm dates and plan accordingly"
   },
   {
-    "objectID": "slides/Probability4qmd.html#bayes-theorem-on-the-beach-1",
-    "href": "slides/Probability4qmd.html#bayes-theorem-on-the-beach-1",
-    "title": "3.4.Probability",
-    "section": "Bayes’ Theorem On the Beach",
-    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
+    "objectID": "slides/Logistics.html#course-pages",
+    "href": "slides/Logistics.html#course-pages",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nCourse website: https://bbitarello.github.io/b215f2025/ has syllabus, schedule, etc.\nAll assignments must be uploaded on Moodle (except DataCamp)\nKeys, slides, study guides will also be posted on Moodle"
   },
   {
-    "objectID": "slides/Probability4qmd.html#thats-all-for-today",
-    "href": "slides/Probability4qmd.html#thats-all-for-today",
-    "title": "3.4.Probability",
-    "section": "That’s all for today",
-    "text": "That’s all for today\n\nFrom: makeameme.org"
+    "objectID": "slides/Logistics.html#course-pages-1",
+    "href": "slides/Logistics.html#course-pages-1",
+    "title": "0.Logistics",
+    "section": "Course Pages",
+    "text": "Course Pages\n\nPiazza is the preferred method for any questions that may benefit classmates, both logistical and content-related\nPiazza allows you to post anonymously (note: I will still know your identity)\n\n\n\nDatacamp and Posit Cloud will also be used weekly so join asap!"
   },
   {
-    "objectID": "slides/Probability4qmd.html#key-learning-goals",
-    "href": "slides/Probability4qmd.html#key-learning-goals",
-    "title": "3.4.Probability",
-    "section": "Key Learning Goals",
-    "text": "Key Learning Goals\n\nUnderstand once and for all that statistics and probability are NOT intuitive\nUnderstand why probability theory is the foundation for statistical reasoning.\nThink addition upon hearing “OR”.\nThink multiplication upon hearing “AND”.\nCalculate probabilities of complex events by using standard rules of probability theory.\nExplain probabilities and proportions.\nExplain the binomial – when would you use it\nUnderstand the binomial distribution and connect it to simple probability rules."
+    "objectID": "slides/Logistics.html#course-structure",
+    "href": "slides/Logistics.html#course-structure",
+    "title": "0.Logistics",
+    "section": "Course Structure",
+    "text": "Course Structure\n\nLectures: Statistical concepts, address questions based on readings. In-class activities will occur often and count towards participation. Lectures are designed with the assumption that you have completed the pre-assigned readings, enabling us to dive deeper into nuances, applications, and questions. Labs: R computer lab (bring your laptop) with guided tutorial. R Labs are due by the end of the day."
   },
   {
-    "objectID": "slides/Probability4qmd.html#models",
-    "href": "slides/Probability4qmd.html#models",
-    "title": "3.4.Probability",
-    "section": "Models",
-    "text": "Models\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
+    "objectID": "slides/Logistics.html#formative-vs-summative-assessments",
+    "href": "slides/Logistics.html#formative-vs-summative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative vs Summative Assessments",
+    "text": "Formative vs Summative Assessments"
   },
   {
-    "objectID": "slides/Probability4qmd.html#probabilities-as-predictions-from-a-model",
-    "href": "slides/Probability4qmd.html#probabilities-as-predictions-from-a-model",
-    "title": "3.4.Probability",
-    "section": "Probabilities as predictions from a model",
-    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nA model is a simplified description of a (usually complex) mechanism.\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nLet’s create a model!"
+    "objectID": "slides/Logistics.html#formative-assessments",
+    "href": "slides/Logistics.html#formative-assessments",
+    "title": "0.Logistics",
+    "section": "Formative Assessments",
+    "text": "Formative Assessments\n\n\n\nFormative assessments happen often and are focused on learning\nDC and R labs are gladed for completion/effort\nQuizzes may be taken multiple times (final grade is average)\nPS graded benevolently\nAllows instructor to adjust pace and support"
   },
   {
-    "objectID": "slides/Probability4qmd.html#creatingdefining-the-model",
-    "href": "slides/Probability4qmd.html#creatingdefining-the-model",
-    "title": "3.4.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses"
+    "objectID": "slides/Logistics.html#summative-assessments",
+    "href": "slides/Logistics.html#summative-assessments",
+    "title": "0.Logistics",
+    "section": "Summative Assessments",
+    "text": "Summative Assessments\n\n\n\nEvaluate students’ individual progress: have they met the learning goals? Have they mastered the material?\nTypically occur at the end of a learning period\nThe first coding assignment will actually be formative and you will be allowed to resubmit; the 2nd will be summative"
   },
   {
-    "objectID": "slides/Probability4qmd.html#creatingdefining-the-model-1",
-    "href": "slides/Probability4qmd.html#creatingdefining-the-model-1",
-    "title": "3.4.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.\n\n\n\n\n\n\n\n\ngamete\nchromosome\nprob\n\n\n\negg\nX\n1.0\n\n\negg\nY\n0.0\n\n\nsperm\nX\n0.5\n\n\nsperm\nY\n0.5"
+    "objectID": "slides/Logistics.html#datacamp",
+    "href": "slides/Logistics.html#datacamp",
+    "title": "0.Logistics",
+    "section": "DataCamp",
+    "text": "DataCamp\n\nAssigned weekly to practice lab skills\nDC shows the hard deadlines but ideally you should complete the weekly DC activities as they are assigned, weekly"
   },
   {
-    "objectID": "slides/Probability4qmd.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
-    "href": "slides/Probability4qmd.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
-    "title": "3.4.Probability",
-    "section": "Same problem as before but based on data rather than a model",
-    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nAccording to statistics from around the world from 2011 (CIA), \\(51.7\\%\\) of babies born were boys\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while"
+    "objectID": "slides/Logistics.html#attendance-and-late-work",
+    "href": "slides/Logistics.html#attendance-and-late-work",
+    "title": "0.Logistics",
+    "section": "Attendance and Late Work",
+    "text": "Attendance and Late Work\n\nPlease communicate need to miss class by email.\nGrace days: every one gets 4, no questions asked, just email a day before deadline and say how many days you need for a given assignment\nLate work otherwise penalyzed -10% per day"
   },
   {
-    "objectID": "slides/Probability4qmd.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
-    "href": "slides/Probability4qmd.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
-    "title": "3.4.Probability",
-    "section": "Same problem as before but based on data rather than a model",
-    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nBased on these data, the probability of having a boy is \\(51.7\\%\\) (or \\(\\sim0.517\\))\nIn any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
+    "objectID": "slides/Logistics.html#ai-policy",
+    "href": "slides/Logistics.html#ai-policy",
+    "title": "0.Logistics",
+    "section": "AI policy",
+    "text": "AI policy\nWe are following the BMC Honor Code. Please see syllabus.\nQuestions about this: now or later on Piazza.\nwho has read the syllabus? if not, read now the part on this"
   },
   {
-    "objectID": "slides/Probability4qmd.html#case-study",
-    "href": "slides/Probability4qmd.html#case-study",
-    "title": "3.4.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nGelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).\n\n\nResults: Countries with lowest per-capita incidence – these tended to be countries with small populations\nHypothesis: perhaps something to do with rural environments in those countries?"
+    "objectID": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "href": "slides/Logistics.html#faqs-answered-in-the-syllabus",
+    "title": "0.Logistics",
+    "section": "FAQs answered in the syllabus",
+    "text": "FAQs answered in the syllabus\nPlease visit the FAQ section of the syllabus. A few examples…\n\nWhat if I have to miss class?\nWhat if I cannot turn in an assignment in time?\nWhat if I am requesting an extension because of sickness?\nWhat if I have accommodations?"
   },
   {
-    "objectID": "slides/Probability4qmd.html#case-study-1",
-    "href": "slides/Probability4qmd.html#case-study-1",
-    "title": "3.4.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nRandom variation can have a greater effect on “averages” within small groups than within small groups.\n\n\nLarger countries/populations: spread around the mean is lower.\nImagine an extreme example: a country with 1,000 people where:\n\n0 people have kidney cancer: lowest incidence possible\n1 person has kidney cancer: super high incidencence (100 per 100,000)\n\n\n\nLogical yet unintuitive"
+    "objectID": "slides/Logistics.html#how-to-succeed",
+    "href": "slides/Logistics.html#how-to-succeed",
+    "title": "0.Logistics",
+    "section": "How to succeed",
+    "text": "How to succeed\n\nAttendance\nPre-class prep\nComplete all activities — be consistent and diligent\nCheck Piazza regularly, attend office hours at least 2x\nDon’t leave everything for last minute — that will not work well\nCommunicate proactively"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#outline",
-    "href": "slides/DisplayingAndDescribingData6.html#outline",
-    "title": "2.6.Displaying & Describing Data",
+    "objectID": "slides/Logistics.html#questions",
+    "href": "slides/Logistics.html#questions",
+    "title": "0.Logistics",
+    "section": "Questions?",
+    "text": "Questions?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#outline",
+    "href": "slides/DisplayingAndDescribingData4.html#outline",
+    "title": "2.4.Displaying & Describing Data",
     "section": "Outline",
-    "text": "Outline\n\nWrap-up: Rules of data visualization - principles of good plots"
+    "text": "Outline\n\nCV example\nManipulating means and variance (example: converting units)\nWhy plot? Aren’t numerical summaries enough?\nLetting data type guide visualizations"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem",
-    "href": "slides/DisplayingAndDescribingData6.html#problem",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Problem? 👎",
-    "text": "Problem? 👎\n\n\n\n\n\n\n\n\n\n\nLifespan by body size in mammals, data from Allison & Cicchetti 1976"
+    "objectID": "slides/DisplayingAndDescribingData4.html#cv-example",
+    "href": "slides/DisplayingAndDescribingData4.html#cv-example",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "CV example",
+    "text": "CV example\n\nRecall the bee lifespan example. We found that \\(\\bar{Y}=27.848\\) hours and \\(s=20.555\\) hours.\n\n\n\\(CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\)\n\n\n\\(CV = 100 \\% \\times \\frac{20.555}{27.848}=100 \\times 0.738 = 73.813\\)\n\n\n\nThe CV does not have to be expressed as a percentage. You may also find it as simply a proportion, i.e., \\(\\frac{\\sigma}{\\mu}\\) (parameter) or \\(\\frac{s}{\\bar{Y}}\\) (estimate)."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
-    "href": "slides/DisplayingAndDescribingData6.html#transform-data-to-reveal-patterns",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Transform Data to Reveal Patterns 👍",
-    "text": "Transform Data to Reveal Patterns 👍"
+    "objectID": "slides/DisplayingAndDescribingData4.html#good-estimators-are-unbiased",
+    "href": "slides/DisplayingAndDescribingData4.html#good-estimators-are-unbiased",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Good estimators are unbiased",
+    "text": "Good estimators are unbiased\n\nThe expected value of an unbiased estimator equals the population parameter.\nBiased estimators should be avoided if possible.\nBiased estimators (often) change with the sample size.\nThe sample variance and sample standard deviation are divided by (n – 1), rather than n to minimize bias.\nThe range is a bad summary statistic because it is biased, and increases with sample size."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#section",
-    "href": "slides/DisplayingAndDescribingData6.html#section",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "",
-    "text": "Mistakes in displaying data:\n\nDisplayig Magnitudes Dishonestly"
+    "objectID": "slides/DisplayingAndDescribingData4.html#measures-of-width-in-graphical-terms",
+    "href": "slides/DisplayingAndDescribingData4.html#measures-of-width-in-graphical-terms",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Measures of width in graphical terms",
+    "text": "Measures of width in graphical terms\n\nSD and var: Particularly informative for symmetric distributions, but not for asymmetric ones"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem-1",
-    "href": "slides/DisplayingAndDescribingData6.html#problem-1",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Problem?",
-    "text": "Problem?"
+    "objectID": "slides/DisplayingAndDescribingData4.html#manipulating-means",
+    "href": "slides/DisplayingAndDescribingData4.html#manipulating-means",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Manipulating means",
+    "text": "Manipulating means\n\nThe mean of the sum of two variables \\(X\\) and \\(Y\\): \\(E[X + Y] = E[X]+ E[Y]\\)\nThe mean of the sum of a variable \\(X\\) and a constant \\(c\\): \\(E[X + c] = E[X]+ c\\)\nThe mean of a product of a variable \\(X\\) and a constant \\(c\\): \\(E[cX] = cE[X]\\)\n\n\n\n\\(E\\): expected value of a variable"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
-    "href": "slides/DisplayingAndDescribingData6.html#presenting-magnitudes-dishonestly",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Presenting magnitudes dishonestly",
-    "text": "Presenting magnitudes dishonestly\n\nThis plot suggests that centers are 20X taller than guards."
+    "objectID": "slides/DisplayingAndDescribingData4.html#manipulating-variance",
+    "href": "slides/DisplayingAndDescribingData4.html#manipulating-variance",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Manipulating variance",
+    "text": "Manipulating variance\n\nThe variance of the sum of two variables \\(X\\) and \\(Y\\): \\(Var[X + Y] = Var[X]+ Var[Y]\\) (if and only if X and Y are independent).\nThe variance of the sum of a variable \\(X\\) and a constant \\(c\\): \\(Var[X + c] = Var[X]\\)\nThe variance of a product of a variable \\(X\\) and a constant \\(c\\): \\(Var[cX] = c^2 Var[X]\\)"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#section-1",
-    "href": "slides/DisplayingAndDescribingData6.html#section-1",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "",
-    "text": "How to represent magnitudes dishonestly: 👎\n\nStart bar plots at a non-zero value\n\nHow to represent magnitudes honestly: 👍\n\nStart bar plots at zero (if the variable starts at zero)\n\n\nWhy? The height of a bar plot makes us think in magnitudes."
+    "objectID": "slides/DisplayingAndDescribingData4.html#example-converting-units",
+    "href": "slides/DisplayingAndDescribingData4.html#example-converting-units",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Example: converting units",
+    "text": "Example: converting units\n\nIf the mean and variance in height (in centimers) in a sample are \\(\\bar{X}=169.8\\text{ cm}\\) and \\(s^2=131.98\\text{ cm}^2\\) and \\(1\\text{ cm} = 0.394\\) inches, find the mean and variance in inches.\n\n\nMean: \\(E[cX] = cE[X]\\)\n\\(0.394\\times169.8\\text{ cm}=66.90\\text{ inches}\\)\nVariance: \\(Var[cX] = c^2 Var[X]\\)\n\\(0.394^2\\times131.98\\text{ cm}^2 = 20.488\\text{ inches}^2\\)"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#section-2",
-    "href": "slides/DisplayingAndDescribingData6.html#section-2",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "",
-    "text": "Mistakes in displaying data:\n\nDraw elements unclearly"
+    "objectID": "slides/DisplayingAndDescribingData4.html#lastly-rounding",
+    "href": "slides/DisplayingAndDescribingData4.html#lastly-rounding",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Lastly: Rounding",
+    "text": "Lastly: Rounding\n\nComputers can return values with precision that exceeds biological interest.\nWhen sharing results, round numbers to a reasonable number of significant figures.\nPresenting one or two more digits than initially measured is a good rule of thumb.\nDO NOT round while calculating or sharing intermediate results!\nRound only the final results of the specific summaries of interest."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#problem-2",
-    "href": "slides/DisplayingAndDescribingData6.html#problem-2",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Problem? 👎",
-    "text": "Problem? 👎\n\n\nx-axis labels obscure one another."
+    "objectID": "slides/DisplayingAndDescribingData4.html#how-about-plots",
+    "href": "slides/DisplayingAndDescribingData4.html#how-about-plots",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "How about plots?",
+    "text": "How about plots?\n\nAren’t numerical summaries enough?"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
-    "href": "slides/DisplayingAndDescribingData6.html#flip-axes-to-present-graphics-clearly",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "👍 Flip Axes to Present Graphics Clearly",
-    "text": "👍 Flip Axes to Present Graphics Clearly"
+    "objectID": "slides/DisplayingAndDescribingData4.html#no",
+    "href": "slides/DisplayingAndDescribingData4.html#no",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "No!",
+    "text": "No!"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
-    "href": "slides/DisplayingAndDescribingData6.html#clear-graphics-for-everyone",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "👍 Clear Graphics for Everyone",
-    "text": "👍 Clear Graphics for Everyone\nConsider your audience\n\n\n\n\n\n\nColorblind simulator: www.color-blindness.com/coblis-color-blindness-simulator/"
+    "objectID": "slides/DisplayingAndDescribingData4.html#case-study-anscombes-quartet",
+    "href": "slides/DisplayingAndDescribingData4.html#case-study-anscombes-quartet",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Case Study: Anscombe’s Quartet",
+    "text": "Case Study: Anscombe’s Quartet\nFour data sets (A-D) with identical summaries (mean and sd)\n\nCodelibrary(datasets)\nhead(anscombe)\n\n  x1 x2 x3 x4   y1   y2    y3   y4\n1 10 10 10  8 8.04 9.14  7.46 6.58\n2  8  8  8  8 6.95 8.14  6.77 5.76\n3 13 13 13  8 7.58 8.74 12.74 7.71\n4  9  9  9  8 8.81 8.77  7.11 8.84\n5 11 11 11  8 8.33 9.26  7.81 8.47\n6 14 14 14  8 9.96 8.10  8.84 7.04\n\nCodestr(anscombe)\n\n'data.frame':   11 obs. of  8 variables:\n $ x1: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x2: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x3: num  10 8 13 9 11 14 6 4 12 7 ...\n $ x4: num  8 8 8 8 8 8 8 19 8 8 ...\n $ y1: num  8.04 6.95 7.58 8.81 8.33 ...\n $ y2: num  9.14 8.14 8.74 8.77 9.26 8.1 6.13 3.1 9.13 7.26 ...\n $ y3: num  7.46 6.77 12.74 7.11 7.81 ...\n $ y4: num  6.58 5.76 7.71 8.84 8.47 7.04 5.25 12.5 5.56 7.91 ...\n\n\nFour datasets (A-D) 11 observations per variable per dataset Each dataset has x and y variables (both numerical)"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
-    "href": "slides/DisplayingAndDescribingData6.html#direct-labelling-may-clarify-graphics",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Direct Labelling May Clarify Graphics",
-    "text": "Direct Labelling May Clarify Graphics\n\nLabels directly on plots may also help with clarifying patterns"
+    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-summary-statistics",
+    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-summary-statistics",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Anscombe’s quartet: summary statistics",
+    "text": "Anscombe’s quartet: summary statistics\n\n\n\n\n\n\ngroup\nmean.x\nmean.y\nsd.x\nsd.y\ncor.xy\n\n\n\nA\n9\n7.500909\n3.316625\n2.031568\n0.8164205\n\n\nB\n9\n7.500909\n3.316625\n2.031657\n0.8162365\n\n\nC\n9\n7.500000\n3.316625\n2.030424\n0.8162867\n\n\nD\n9\n7.500909\n3.316625\n2.030579\n0.8165214"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#section-3",
-    "href": "slides/DisplayingAndDescribingData6.html#section-3",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "",
-    "text": "How to draw graphical elements unclearly: 👎\n\n\nUnthinkingly accept default options from plotting programs\nDo not consider how a diverse audience will consume your figure\n\n\nHow to draw graphical elements clearly: 👍\n\n\nReflect on plot design\nConsider the diverse audience you are reaching and how they may interact with your plot"
+    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-trendlines",
+    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-trendlines",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Anscombe’s quartet: trendlines",
+    "text": "Anscombe’s quartet: trendlines\nTrendlines reveal no difference"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
-    "href": "slides/DisplayingAndDescribingData6.html#a-note-about-boxplots",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "A note about boxplots",
-    "text": "A note about boxplots\n\nThere is more than one way to define the whiskers in a boxplot\nR (both base and ggplot) use the following. If there are no outliers, whiskers go up to max and min value\nBut how are outliers defined?"
+    "objectID": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-data",
+    "href": "slides/DisplayingAndDescribingData4.html#anscombes-quartet-data",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Anscombe’s Quartet: Data",
+    "text": "Anscombe’s Quartet: Data\nShowing the data reveals large differences"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
-    "href": "slides/DisplayingAndDescribingData6.html#case-1-if-there-are-no-outliers-in-the-dataset",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Case 1: If there are no outliers in the dataset",
-    "text": "Case 1: If there are no outliers in the dataset\nR uses the popular method of \\(\\text{lower fence}=Q1–1.5(IQR)\\) and \\(\\text{upper fence}=Q3+1.5(IQR)\\). If there are no values beyond these limits, it considers the dataset to not have outliers for the purposes of a boxplot:\n\n\n\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+    "objectID": "slides/DisplayingAndDescribingData4.html#ascombe-described-the-article-as-being-intended-to-counter-the-impression-among-statisticians-that-numerical-calculations-are-exact-but-graphs-are-rough.",
+    "href": "slides/DisplayingAndDescribingData4.html#ascombe-described-the-article-as-being-intended-to-counter-the-impression-among-statisticians-that-numerical-calculations-are-exact-but-graphs-are-rough.",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Ascombe described the article as being intended to counter the impression among statisticians that “numerical calculations are exact, but graphs are rough.”",
+    "text": "Ascombe described the article as being intended to counter the impression among statisticians that “numerical calculations are exact, but graphs are rough.”\nConstructed by F. Anscombe (1973)\nDemonstrates both the importance of graphing data when analyzing it, and the effect of outliers and other influential observations on statistical properties."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
-    "href": "slides/DisplayingAndDescribingData6.html#case-2-there-are-outliers",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Case 2: there are outliers",
-    "text": "Case 2: there are outliers\nIf there are outliers, whiskers go up to \\(Q3+1.5IQR\\) and down to \\(Q1-1.5IQR\\) and outliers are shown as circles\n\n\nCase 2: there are outliers in the dataset. Whiskers defined by Q1–1.5(IQR) and Q3+1.5(IQR)\n\n\n\nImage: https://www.mathbootcamps.com/how-to-read-a-boxplot/"
+    "objectID": "slides/DisplayingAndDescribingData4.html#displaying-data-is-very-important",
+    "href": "slides/DisplayingAndDescribingData4.html#displaying-data-is-very-important",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Displaying data is very important",
+    "text": "Displaying data is very important\n\nDisplaying data helps you:\n\nUnderstand your data\nCommunicate your results"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#please-contribute",
-    "href": "slides/DisplayingAndDescribingData6.html#please-contribute",
-    "title": "2.6.Displaying & Describing Data",
-    "section": "Please contribute!",
-    "text": "Please contribute!\nA thread on plots that could use some TLC:\nhttps://piazza.com/class/mekmad7xwqw14d/post/12"
+    "objectID": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-goals",
+    "href": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-goals",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Exploratory vs Explanatory Plots: Goals",
+    "text": "Exploratory vs Explanatory Plots: Goals\n\nIn exploratory data analysis, you aim to find the story of the data.\nIn explanatory data analysis, you aim to share the story of the data.\n\n\n\nNote: There is a continuum between explanatory and exploratory plots. For example, the plot you show your lab is probably somewhere between what you make for yourself and what you send to the New York Times."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData6.html#thats-all-for-today",
-    "title": "2.6.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-focus",
+    "href": "slides/DisplayingAndDescribingData4.html#exploratory-vs-explanatory-plots-focus",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Exploratory vs Explanatory Plots: Focus",
+    "text": "Exploratory vs Explanatory Plots: Focus\n\nFor exploratory plots: Don’t fuss about colors, labels, names etc. The goal is for you to understand the data.\nFor explanatory plots: Fuss about all of this. You must consider your audience may, for example, consist of:\n- People unfamiliar with your data\n- People who are colorblind\n\n\n\nThe suggestions we will cover will help the story of the data reveal itself, and are therefore useful for exploratory & explanatory plots."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#which-types-of-summaries-and-graphs-to-use",
+    "href": "slides/DisplayingAndDescribingData4.html#which-types-of-summaries-and-graphs-to-use",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Which types of summaries and graphs to use?",
+    "text": "Which types of summaries and graphs to use?\n\nLet data type guide presentation"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#to-visualize-data-for-a-single-variable",
+    "href": "slides/DisplayingAndDescribingData4.html#to-visualize-data-for-a-single-variable",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "To visualize data for a single variable…",
+    "text": "To visualize data for a single variable…\nShow its frequency distribution"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable",
+    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One categorical variable",
+    "text": "One categorical variable\n\nBarplot/bar graph\n\n\n\n\nWhat is the variable?\nNotice the ordering\nAbsolute or relative frequencies?\nBar area reflects frequencies"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-1",
+    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-1",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One categorical variable",
+    "text": "One categorical variable\n\nPie chart\n\n\nSame purpose as bar graph\nMuch harder to spot patterns\nBar graphs generally preferred"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-2",
+    "href": "slides/DisplayingAndDescribingData4.html#one-categorical-variable-2",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One categorical variable",
+    "text": "One categorical variable\n\nFrequency table\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nAccidents\n6688\n\n\nHomicide\n2093\n\n\nSuicide\n1615\n\n\nMalig. tumor\n745\n\n\nHeart disease\n463\n\n\nCongen. abnor.\n222\n\n\nChronic res. disease\n107\n\n\nFlu/pneumonia\n73\n\n\nCerebrov. disease\n67\n\n\nOther tumor\n52\n\n\nAll other cause\n1653\n\n\n\n\n\n\n\nWhat is the variable?\nNotice the ordering\nAbsolute or relative frequencies?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable",
+    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One numerical variable",
+    "text": "One numerical variable\nGoals\n\nVisualize the center (“average”)\nVisualize the spread (variability)\nVisualize the shape (distribution)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-1",
+    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-1",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One numerical variable",
+    "text": "One numerical variable\n\nHistogram\n\n\nCodedatasets::airquality |&gt;\n  ggplot(aes(x = Temp)) +\n  geom_histogram() +\n  xlab(\"Temp (in Fahrenheit)\") +\n  ggtitle(\"Maximum Daily Temperature\") +\n  bb_theme() # this is just a theme I made to make plots look better\n\n\n30 bins30 bins"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#histograms-consider-your-bins",
+    "href": "slides/DisplayingAndDescribingData4.html#histograms-consider-your-bins",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Histograms – consider your bins",
+    "text": "Histograms – consider your bins\n\nEach block of a histogram is called a “bin”\nThe size or “width” of a bin refers to the range in each block.\nChanging bins can change stories\nDon’t be fooled.\nDon’t allow bad bin widths to obscure your data.\n\n\nDO NOT assume that default bin widths are appropriate."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-2",
+    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-2",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One numerical variable",
+    "text": "One numerical variable\nDensity Plots"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-3",
+    "href": "slides/DisplayingAndDescribingData4.html#one-numerical-variable-3",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "One numerical variable",
+    "text": "One numerical variable\n\nFrequency table\n\n\nMeasured in LaGuardia Airport, NY, 1973. Data from the “airquality” dataset from the datasets package.\n11 bins\nequally-sized"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#next-week",
+    "href": "slides/DisplayingAndDescribingData4.html#next-week",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "Next week",
+    "text": "Next week\n\nMore on the types of plots/tables for different types of data\nPrinciples of good plots"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData4.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData4.html#thats-all-for-today",
+    "title": "2.4.Displaying & Describing Data",
+    "section": "That’s all for today!",
+    "text": "That’s all for today!\n\n\n\nFrom: makeameme.org"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#overview",
+    "href": "slides/Statistics_and_Samples.html#overview",
+    "title": "1.1.Statistics and Samples",
+    "section": "Overview",
+    "text": "Overview\n\nGoals of statistics\nPopulations and Samples\nStatistics and parameters\nEstimate errors due to sampling\nTypes of experiments\nTypes of variables\n\n\n\nwe will continue on this topic next time"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#learning-goals",
+    "href": "slides/Statistics_and_Samples.html#learning-goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nUnderstand the major goal of statistics\nDistinguish between a sample and a population\nDistinguish between an estimate and a parameter\nIdentify why estimates from samples may deviate from parameters of populations\nIdentify the properties of a good sample\nBe able to detect the differences between observational and experimental studies\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nTweet from someone I don’t know, but very on point, so thank you!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is BIOstatistics?",
+    "text": "What is BIOstatistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should you care about statistics?",
+    "text": "Why should you care about statistics?\n\nBiology (ecology, genetics, immunology, microbiology, …)\nBiomedical sciences\nPublic health\nData science\nEconomy, Psychology, Social Science"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should anyone care about statistics?",
+    "text": "Why should anyone care about statistics?\n\n\n\nGood science!\nCritical evaluation of “scientific evidence”\nStatistics and probability are not intuitive\nWe tend to jump to conclusions and we are very often wrong\nTransferable skills\n\n\n\n\nThis is my adorable dog, Cashew"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "href": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: data deluge",
+    "text": "Challenge: data deluge\n\nCover from “The Economist” (Feb 27-March 10, 2010)"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "href": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: understanding",
+    "text": "Challenge: understanding\n\nFrom: https://xkcd.com/1478/"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#goals",
+    "href": "slides/Statistics_and_Samples.html#goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Goals",
+    "text": "Goals\n\nGoal: learn about the world\n\n\nFrom: imgflip.com/memegenerator"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-practice-then",
+    "href": "slides/Statistics_and_Samples.html#in-practice-then",
+    "title": "1.1.Statistics and Samples",
+    "section": "In practice, then…",
+    "text": "In practice, then…\n\nChallenge: We can’t look at the whole world.\nSolution: Take a sample and generalize outward."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#great-but",
+    "href": "slides/Statistics_and_Samples.html#great-but",
+    "title": "1.1.Statistics and Samples",
+    "section": "Great but…",
+    "text": "Great but…\n\nNew Challenge: Samples deviate from the populations by\\ luck/chance (sampling error) or unrepresentative sampling (sampling bias)\n\nSolution:\n\nEstimate the values of important parameters\nHave measures of uncertainty for estimates\nTest hypotheses about those parameters"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#lets-try-again",
+    "href": "slides/Statistics_and_Samples.html#lets-try-again",
+    "title": "1.1.Statistics and Samples",
+    "section": "Let’s try again",
+    "text": "Let’s try again\n\nStatistics are a quantitative technology for empirical science.\nA logic and methodology for the measurement of uncertainty and for an examination of that uncertainty.\nThe key word here is uncertainty. Statistics becomes necessary when observations are variable."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "href": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "title": "1.1.Statistics and Samples",
+    "section": "What about biostats?",
+    "text": "What about biostats?\n\nWhat is the motivating biological question?\nWhat experiments can be done and/or data can be collected to address this question?\nDo results support an interesting conclusion?\nWhat are the shortcomings/limitations of statistical models and causal frameworks in the analysis?\nHow do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "href": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "title": "1.1.Statistics and Samples",
+    "section": "The Central Obsession",
+    "text": "The Central Obsession\n\n\n\nQuestion: How do we make inferences about the WORLD from our finite observations?\n\n\n\nAnswer: Make models to account for the process of sampling and the associated hazards."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#important-distinctions",
+    "href": "slides/Statistics_and_Samples.html#important-distinctions",
+    "title": "1.1.Statistics and Samples",
+    "section": "Important distinctions",
+    "text": "Important distinctions\n\nPopulations vs. samples\nParameters vs. estimates"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#populations",
+    "href": "slides/Statistics_and_Samples.html#populations",
+    "title": "1.1.Statistics and Samples",
+    "section": "Populations",
+    "text": "Populations\n\n\n\nIn Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.\n\n\n\nIn Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "href": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "title": "1.1.Statistics and Samples",
+    "section": "Statistics & parameters",
+    "text": "Statistics & parameters\nA parameter is some property of the world, i.e., the “truth”\n\n\n\n\n\n\nSeriously, though, \\&lt;3 X-files!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A population of starfish",
+    "text": "A population of starfish\n\n\n\nParameters describe populations\nE.g. proportion of pink starfish among all starfish of a given species in a certain location"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A sample of starfish",
+    "text": "A sample of starfish\n\n\n\nEstimates (statistics) approximate parameters as inferred from samples\nWe estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-summary",
+    "href": "slides/Statistics_and_Samples.html#in-summary",
+    "title": "1.1.Statistics and Samples",
+    "section": "In summary",
+    "text": "In summary\n\n\nParameters and populations\n\nParameters describe Populations\nBecause we can’t sample an entire population, we usually don’t know parameters.\n\n\nEstimates and samples\n\nBut we can get a good sense of the parameters from estimates we make from samples.\nEstimates approximate parameters as inferred from Samples"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "href": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling: What could go wrong?",
+    "text": "Sampling: What could go wrong?\nMeet sampling error and sampling bias"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\n\n\n\nIf you collected these against a dark background without careful procedures… \n\n\n\n\nThis sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\nSystematic difference between parameters & estimates.\n\n\nCase study: Polls in the 1936 US Election."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-1936-election",
+    "href": "slides/Statistics_and_Samples.html#the-1936-election",
+    "title": "1.1.Statistics and Samples",
+    "section": "The 1936 Election",
+    "text": "The 1936 Election\n\n\n\n\n\nRepublican Alf Landon\n\n\n\n\nDemocrat Franklin Roosevelt"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n\nFigure made in R with code borrowed from Y. Brandvain"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "href": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "title": "1.1.Statistics and Samples",
+    "section": "Election: Roosevelt won in a landslide",
+    "text": "Election: Roosevelt won in a landslide\n\nThis plot was made in R"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling Bias in the 1936 Polls",
+    "text": "Sampling Bias in the 1936 Polls\n\nQuestionnaire was more likely to reach rich people (who could afford phones & attend book clubs) than those with fewer means.\nVoting and party preference are correlated with wealth.\nPoorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "href": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "title": "1.1.Statistics and Samples",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData5.html#outline",
-    "href": "slides/DisplayingAndDescribingData5.html#outline",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Outline",
-    "text": "Outline\n\nLetting data type guide visualizations\nRules of data visualization - principles of good plots"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions",
-    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Cumulative Frequency Distributions",
-    "text": "Cumulative Frequency Distributions\n\nNumber of students per grade\n\n\n\n\n\n\n\nschool_grade\nFrequency_of_Students\n\n\n\n1\n23\n\n\n2\n20\n\n\n3\n15\n\n\n4\n12\n\n\n5\n10\n\n\n6\n8\n\n\n\n\n\n\nThe cumulative frequency of a value is the proportion of individuals equal to or less than that value. In this case, equal or less than a given grade.\nSort data, calculate cumulative frequency…\n\n\nBased on example from: https://statisticsbyjim.com/basics/cumulative-frequency/"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-1",
-    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Cumulative Frequency Distributions",
-    "text": "Cumulative Frequency Distributions\n\nSort all values\nCalculate the fraction of values \\(\\leq\\) each value – the cumulative relative frequency\n\n\nCodelibrary(dplyr)\ndf &lt;- df |&gt;\n    mutate(Cumul_Freq = cumsum(Frequency_of_Students))\ndf &lt;- df |&gt;\n    mutate(Rel_CFreq = Cumul_Freq/sum(Frequency_of_Students))\ndf\n\n  school_grade Frequency_of_Students Cumul_Freq Rel_CFreq\n1            1                    23         23 0.2613636\n2            2                    20         43 0.4886364\n3            3                    15         58 0.6590909\n4            4                    12         70 0.7954545\n5            5                    10         80 0.9090909\n6            6                     8         88 1.0000000"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-2",
-    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-2",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Cumulative Frequency Distributions",
-    "text": "Cumulative Frequency Distributions\n\nPlot the values on the \\(x\\) and their cumulative relative frequencies on the \\(y\\)\n\nConnect the values with lines\n\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodeggplot(df, aes(x = school_grade))+\n  stat_ecdf(geom = \"step\") +\n  theme_bw() #this is just to make the background clear"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-3",
-    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-3",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Cumulative Frequency Distributions",
-    "text": "Cumulative Frequency Distributions\n\nexample 2: Temperatures near LaGuardia (1973)\n\n\nCodedatasets::airquality |&gt; \n  ggplot(aes(x= Temp)) + \n  stat_ecdf(geom = \"step\") +\n  theme_bw() #this is just to make the background clear\n\n\nECDF: empirical cumulative distribution function"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-4",
-    "href": "slides/DisplayingAndDescribingData5.html#cumulative-frequency-distributions-4",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Cumulative Frequency Distributions",
-    "text": "Cumulative Frequency Distributions\n\nExample 3: Spider running speed\n\n\nFigure caption: Figure 3.4-1 from the textbookCumulative frequency distributions clearly communicate quantiles."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#distribution-shapes",
-    "href": "slides/DisplayingAndDescribingData5.html#distribution-shapes",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Distribution shapes",
-    "text": "Distribution shapes\nHistograms"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#distribution-shapes-1",
-    "href": "slides/DisplayingAndDescribingData5.html#distribution-shapes-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Distribution shapes",
-    "text": "Distribution shapes\nCumulative Frequency Distributions"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#less-common-plots-for-one-numerical-variable",
-    "href": "slides/DisplayingAndDescribingData5.html#less-common-plots-for-one-numerical-variable",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Less common plots for one numerical variable",
-    "text": "Less common plots for one numerical variable\nThese are more often used to look at the association between a numerical and a categorical variable:\n\nBoxplots\nViolin plots\nStrip charts"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-1",
-    "href": "slides/DisplayingAndDescribingData5.html#section-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "Two or more variables …"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical",
-    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Categorical x Categorical",
-    "text": "Categorical x Categorical\n\nContingency Table\n\n\nFrom: Whitlock & Schluter, The Analysis of Biological Data"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-1",
-    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Categorical x Categorical",
-    "text": "Categorical x Categorical\n\nGrouped bar plot\n\n\nFigure caption: figure 2.3-1 from Whitlock & Schluter, The Analysis of Biological Data"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-2",
-    "href": "slides/DisplayingAndDescribingData5.html#categorical-x-categorical-2",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Categorical x Categorical",
-    "text": "Categorical x Categorical\n\nMosaic plot\n\n\nFigure caption: figure 2.3-2 from Whitlock & Schluter, The Analysis of Biological Data2+ variables. No upper limit, but too many variables may be confusing\nWidth indicates the relative proportion of the corresponding value"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Numerical",
-    "text": "Numerical x Numerical\nScatter Plot\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris,aes(x = Petal.Width, y = Petal.Length)) + \n  geom_point()+\n  xlab(\"Petal Width (cm)\") + \n  ylab(\"Petal Length (cm)\")"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical-1",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-numerical-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Numerical",
-    "text": "Numerical x Numerical\nScatter Plot\n\n\nPlot\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +\n    geom_point() + xlab(\"Petal Width (cm)\") + ylab(\"Petal Length (cm)\") +\n    geom_smooth(method = \"lm\", se = F)"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Categorical",
-    "text": "Numerical x Categorical\nMultiple Histograms"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-1",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Categorical",
-    "text": "Numerical x Categorical\nStrip Chart"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-2",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-2",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Categorical",
-    "text": "Numerical x Categorical\nBoxplot"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-3",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-x-categorical-3",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical x Categorical",
-    "text": "Numerical x Categorical\nViolin Plot"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-2-categorical",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-2-categorical",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical (2) + Categorical",
-    "text": "Numerical (2) + Categorical\nMultiple Scatterplots with legend"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#numerical-2-x-categorical",
-    "href": "slides/DisplayingAndDescribingData5.html#numerical-2-x-categorical",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Numerical (2) x Categorical",
-    "text": "Numerical (2) x Categorical\nMultiple scatterplots plotted separately"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#visualizations-over-time-and-space",
-    "href": "slides/DisplayingAndDescribingData5.html#visualizations-over-time-and-space",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Visualizations Over Time and Space",
-    "text": "Visualizations Over Time and Space\nLine Graphs Show Data Over Time\nFor temporal data, note all observations with a data point, and connect each point with a line."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#small-multiples-line-chart",
-    "href": "slides/DisplayingAndDescribingData5.html#small-multiples-line-chart",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Small multiples line chart",
-    "text": "Small multiples line chart\nA grid of line charts that uses the same scales and axes"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#to-show-spatial-data",
-    "href": "slides/DisplayingAndDescribingData5.html#to-show-spatial-data",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "To show spatial data",
-    "text": "To show spatial data\nMaps\nSpatial data does not have to be a geographical map"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-3",
-    "href": "slides/DisplayingAndDescribingData5.html#section-3",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "How to make good plots"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-4",
-    "href": "slides/DisplayingAndDescribingData5.html#section-4",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "Show the data.\nMake patterns easy to see.\nDisplay magnitudes honestly.\nDraw graphics clearly."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-5",
-    "href": "slides/DisplayingAndDescribingData5.html#section-5",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "Mistakes in displaying data:\n\nHiding the data"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here",
-    "href": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "What is the main problem here?",
-    "text": "What is the main problem here?\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#not-showing-data-just-summaries",
-    "href": "slides/DisplayingAndDescribingData5.html#not-showing-data-just-summaries",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "👎 Not showing data, just summaries",
-    "text": "👎 Not showing data, just summaries\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly.\n\nThis plot hides the variation between positions."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here-1",
-    "href": "slides/DisplayingAndDescribingData5.html#what-is-the-main-problem-here-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "What is the main problem here?",
-    "text": "What is the main problem here?\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#not-showing-data-overplotting",
-    "href": "slides/DisplayingAndDescribingData5.html#not-showing-data-overplotting",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "👎 Not showing data, overplotting",
-    "text": "👎 Not showing data, overplotting\n\n\n\n\nHide the data.\nMake patterns hard to see.\nDisplay magnitudes dishonestly.\nDraw graphics unclearly.\n\n\n\n\n\n\n\n\n\n\n\nOver-plotting hides data by placing data points on top of each other."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#showing-data-by-jittering",
-    "href": "slides/DisplayingAndDescribingData5.html#showing-data-by-jittering",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "👍 Showing data by jittering",
-    "text": "👍 Showing data by jittering\n\nThis plot shows all the observations"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-6",
-    "href": "slides/DisplayingAndDescribingData5.html#section-6",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "👎 How to hide data\n\nProvide only statistical summaries.\nOver-plotting - too many points.\n\n👍 How to reveal data\n\nPresent all of the data points.\nAllow all points to be seen."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-7",
-    "href": "slides/DisplayingAndDescribingData5.html#section-7",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "Mistakes in displaying data:\n\nMaking patterns hard to see"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#whats-the-main-problem-here",
-    "href": "slides/DisplayingAndDescribingData5.html#whats-the-main-problem-here",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "What’s the main problem here?",
-    "text": "What’s the main problem here?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#nonsensical-order-hides-pattern",
-    "href": "slides/DisplayingAndDescribingData5.html#nonsensical-order-hides-pattern",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Nonsensical order hides pattern",
-    "text": "Nonsensical order hides pattern\nReordering factors makes pattern clear"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules",
-    "href": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Tables should follow similar rules",
-    "text": "Tables should follow similar rules\n\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nCongen. abnor.\n222\n\n\nHeart disease\n463\n\n\nAccidents\n6688\n\n\nAll other cause\n1653\n\n\nOther tumor\n52\n\n\nSuicide\n1615\n\n\nHomicide\n2093\n\n\nChronic res. disease\n107\n\n\nCerebrov. disease\n67\n\n\nFlu/pneumonia\n73\n\n\nMalig. tumor\n745\n\n\n\n\n\n\n\n👎\n\nNonsense order hides patterns\nAlphabetical order is usually a bad idea."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules-1",
-    "href": "slides/DisplayingAndDescribingData5.html#tables-should-follow-similar-rules-1",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Tables should follow similar rules",
-    "text": "Tables should follow similar rules\n\n\n\n\n\n\n\n\nCause_of_death\nNumber\n\n\n\nAccidents\n6688\n\n\nHomicide\n2093\n\n\nSuicide\n1615\n\n\nMalig. tumor\n745\n\n\nHeart disease\n463\n\n\nCongen. abnor.\n222\n\n\nChronic res. disease\n107\n\n\nFlu/pneumonia\n73\n\n\nCerebrov. disease\n67\n\n\nOther tumor\n52\n\n\nAll other cause\n1653\n\n\n\n\n\n\n\n👍\n\nOrder to reveal patterns\nList ordinal factors in a meaningful order\nList nominal factors from greatest to least, with “all others” last."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#section-8",
-    "href": "slides/DisplayingAndDescribingData5.html#section-8",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "",
-    "text": "How to hide patterns 👎\n\n\nMake one plot and call it good\nUnreasonable scales\nArrange factors nonsensically\n\n\n\nHow to reveal patterns 👍\n\n\nExplore multiple potential plots\nUse appropriate scales\nArrange factors meaningfully\nOrder ordinal factors meaningfully (e.g., January to December.\nOrder nominal factors by count\nIf there is a grab bag category, place it after the lowest count"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#problem",
-    "href": "slides/DisplayingAndDescribingData5.html#problem",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Problem?",
-    "text": "Problem?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#bad-axis-limits-hide-patterns",
-    "href": "slides/DisplayingAndDescribingData5.html#bad-axis-limits-hide-patterns",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "Bad Axis-Limits Hide Patterns 👎",
-    "text": "Bad Axis-Limits Hide Patterns 👎\nIn this plot, the large scale hides the pattern (difference between the two groups)"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData5.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData5.html#thats-all-for-today",
-    "title": "2.5.Displaying & Describing Data",
-    "section": "That’s all for today",
-    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
-    "href": "slides/DisplayingAndDescribingData2.html#last-time",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#last-time",
+    "href": "slides/DisplayingAndDescribingData3.html#last-time",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Last time",
-    "text": "Last time\n\nMean\nMedian\n\ntoday: location and width; next class plots"
+    "text": "Last time\n\nMean, median, mode\nRange\n\ntoday: location and width; next class plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#today",
-    "href": "slides/DisplayingAndDescribingData2.html#today",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Today",
-    "text": "Today\n\nMedian example\nMode\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
+    "objectID": "slides/DisplayingAndDescribingData3.html#this-week",
+    "href": "slides/DisplayingAndDescribingData3.html#this-week",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "This week",
+    "text": "This week\n\nEstimates of width (cont.)\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#attention",
-    "href": "slides/DisplayingAndDescribingData2.html#attention",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Attention",
-    "text": "Attention\n\n\nEstimate = \\(\\bar{Y}, \\bar{x}, \\text{etc.}\\)  (sample mean)\n\nVariable\n\n\nParameter = \\(\\mu\\)  (population mean) - Constant"
+    "objectID": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
+    "href": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Recall this histogram",
+    "text": "Recall this histogram\n\n\nFigure\nMean and Median\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 3\n  Species     mean median\n  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 setosa     0.246    0.2\n2 versicolor 1.33     1.3\n3 virginica  2.03     2"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
-    "href": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Practice: Median with even sample size",
-    "text": "Practice: Median with even sample size\n\nCalculate the median of the following 10 numbers: \\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\\)"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mean-x-median",
-    "href": "slides/DisplayingAndDescribingData2.html#mean-x-median",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mean x Median",
-    "text": "Mean x Median\n\n\n\nThe mean is more convinient mathematically.\nThe mean is the center of gravity\n\n\n\nThe median is a better descriptor for skewed population distributions.\nThe median is the middle measurement.\n\n\n\n\nBoth can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#case-study",
-    "href": "slides/DisplayingAndDescribingData2.html#case-study",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Case Study",
-    "text": "Case Study\n\n2005 U.S. Census. The plot shows the income per household distribution for the bottom 98% of the population. Median = \\(\\sim46\\)k; Mean: \\(\\sim63\\)k.\n\n\n\n\n\n\nFrom: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution\n\nFor measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mean-or-median",
-    "href": "slides/DisplayingAndDescribingData2.html#mean-or-median",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mean or Median?",
-    "text": "Mean or Median?\n\nNumber of seeds per fruit. Which one is better in this case?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mode",
-    "href": "slides/DisplayingAndDescribingData2.html#mode",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mode",
-    "text": "Mode\n\nThe most common value observed in a sample\n\n\neasy to pick out as the peak in a histogram\nUseful because it always reflects a value actually seen in the dataset, unlike mean and median"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mode-1",
-    "href": "slides/DisplayingAndDescribingData2.html#mode-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mode",
-    "text": "Mode\n\nThe most common value observed in a sample\n\n\nUnimodal vs bimodal (multimodal)\nMultimodal data usually reflects data has multiple (at least two) values that are equally common.\nOften results from two or more underlying groups being measured together.\nCan be used with data that isn’t numeric"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
-    "href": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "But how will you know how your data is distributed?",
-    "text": "But how will you know how your data is distributed?\n\nFirst step: plot your data"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#skewness",
-    "href": "slides/DisplayingAndDescribingData2.html#skewness",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Skewness",
-    "text": "Skewness"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#skewness-1",
-    "href": "slides/DisplayingAndDescribingData2.html#skewness-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Skewness",
-    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&gt;1/2\\) of values are less than the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
-    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\nRecall the iris  dataset"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
-    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
-    "href": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
+    "href": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value] (cont.)\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{N}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#range",
-    "href": "slides/DisplayingAndDescribingData2.html#range",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Range",
-    "text": "Range\n\nThe difference between the maximum and minimum observed values in a sample"
+    "objectID": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "href": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Width (aka variability)",
+    "text": "Width (aka variability)\n\nVariability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.\nVariation has a true value from a population that we estimate from a sample."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#range-1",
-    "href": "slides/DisplayingAndDescribingData2.html#range-1",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#range",
+    "href": "slides/DisplayingAndDescribingData3.html#range",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Range",
     "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#range-1",
+    "href": "slides/DisplayingAndDescribingData3.html#range-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Range",
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
+    "href": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Small samples tend to give lower estimates of the range than large samples",
+    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nSo the sample range is a biased estimator of the true range of the population\n\nSo sample range is a biased estimator of the true range of the population."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#scenario",
+    "href": "slides/DisplayingAndDescribingData3.html#scenario",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Scenario",
+    "text": "Scenario\n\nSalary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns\nWhat can you do then?\n\nYou could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
+    "href": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Interquartile Range (IQR)",
+    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots\n\n\nHow?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR",
+    "text": "IQR\nImagine sorting your data.\n\nThe individual in the middle is the median.\nThe first and last individuals mark the range\nThe other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data\nThe difference between these is the interquartile range"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR Example",
+    "text": "IQR Example\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR Example",
+    "text": "IQR Example\n\n\n\n\n\\(n=16\\)\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR in R",
+    "text": "IQR in R\n\n\nsummary() gives quartiles and max/min\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\n\nThe “long” route:\n\nCodeas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\nThe shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\nBoxplots reveal quartiles\n\nCodeboxplot(chick20, names = \"chicks day 20\")"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”",
+    "text": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
+    "href": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "But there are metrics that look at all the values",
+    "text": "But there are metrics that look at all the values\n\nVariance, Standard Deviation, & Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.\n\n\n\nBecause (by definition) the differences between all observations and the mean sum to zero (\\(\\sum{Y_i-\\bar{Y}=0}\\)), these summaries work from the squared difference between observations and the mean (\\(\\sum{(Y_i-\\bar{Y})^2}\\))."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance",
+    "href": "slides/DisplayingAndDescribingData3.html#variance",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance",
+    "text": "Variance\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-1",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance",
+    "text": "Variance\n\n\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean\n\n\n\nNote: the numerator here is called “sum of squares”"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "href": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Sample variance (shortcut)",
+    "text": "Sample variance (shortcut)\n\\[s^2=\\left(\\frac{n}{n-1}\\right)\\left(\\frac{\\sum^{n}_{i=1}{Y^2_i}}{n}-\\bar{Y}^2\\right)\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance Example",
+    "text": "Variance Example\n\nLifespan of 12 forager bees (in hours).\n\n\n\nMean\nSum of squares\nSum of squares (cont)\n\n\n\n\n2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7\n\n\\[\\bar{Y} = \\frac{\\sum{Y_i}}{n} = \\frac{919}{33}= 27.848\\text{ hours}\\]\n\n\n\nCodebeesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\n\n# A tibble: 33 × 3\n   hours `Y-meanY` `(Y-meanY)^2`\n   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1   2.3     -25.5          653.\n 2   2.3     -25.5          653.\n 3   3.9     -23.9          574.\n 4   4       -23.8          569.\n 5   7.1     -20.7          430.\n 6   9.5     -18.3          337.\n 7   9.6     -18.2          333.\n 8  10.8     -17.0          291.\n 9  12.8     -15.0          226.\n10  13.6     -14.2          203.\n# ℹ 23 more rows\n\n\n\n\n\nCodebeesDF &lt;- beesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\nsum(beesDF[, 3])\n\n[1] 13520.96\n\n\nSo\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\]\nNote: the unit here is hours squared. Also, note that we don’t divide by \\(n\\) but by \\(n-1\\).\n4 differences from population mean:\ns^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\n\n\nParameter\n\\[\\sigma=\\sqrt{\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}}=\\sqrt{\\sigma^2}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s=\\sqrt{\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}}=\\sqrt{s^2}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\nUsing the previous example, with forager bees.\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\] \\[s = \\sqrt{422.53}=20.555\\] ## In R\nVariance\n\nCodevar(beesDF$hours)\n\n[1] 422.5301\n\n\nStandard deviation\n\nCodesd(beesDF$hours)\n\n[1] 20.55554\n\nCodesqrt(var(beesDF$hours))\n\n[1] 20.55554"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "href": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Coefficient of Variation (CV)",
+    "text": "Coefficient of Variation (CV)\n\nThe variance and standard deviation increase with the mean.\nThe coefficient of variation allows for fair comparisons of variability between measures on different scales.\n\n\\[CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "href": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "In summary",
+    "text": "In summary\n\nRange: The difference between the largest and smallest values.\nInterquartile Range: The difference between the 25th and 75th percentile.\nVariance & Standard Deviation: The difference between observations & the mean.\nCoefficient of Variation: A measure of the standard deviation that’s independent of the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance, Standard Deviation or Coefficient of Variation?",
+    "text": "Variance, Standard Deviation or Coefficient of Variation?\n\n\nVariance and standard deviation convey the same information and are used in many equations.\n\nThe coefficient of variation is less directly used in equations, but is ideal for comparing variation between different types of comparisons."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
+    "title": "2.3.Displaying & Describing Data",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
