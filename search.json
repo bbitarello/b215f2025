@@ -2356,42 +2356,56 @@
     "href": "slides/Probability3.html#outline",
     "title": "3.3.Probability",
     "section": "Outline",
-    "text": "Outline"
+    "text": "Outline\n\nProbability rules\n\nthe addition principle\naddition principle: one more example\nthe general multiplication principle\nusing probability trees to solve probability problems\ndependent events and conditional probabilities\nthe Law of Total Probability\n\n\nPrinciples\n\nBayes theorem"
   },
   {
-    "objectID": "slides/Probability3.html#another-example",
-    "href": "slides/Probability3.html#another-example",
+    "objectID": "slides/Probability3.html#recap-addition-principle",
+    "href": "slides/Probability3.html#recap-addition-principle",
     "title": "3.3.Probability",
-    "section": "Another example",
-    "text": "Another example\n\nProbability that the sum of two dice is odd or between 6 and 8.\n\nSubtract P[A & B] to avoid double counting nonexclusive events\n\\(P[A \\text{ or } B] = P[A] + P[B] - P[A \\text{ and } B]\\)"
+    "section": "Recap: Addition Principle",
+    "text": "Recap: Addition Principle\n\nThe probability of OR involves addition: \\(P[A \\text{ OR } B] = P[A] + P[B]− P[A \\& B]\\)\nIf two events are mutually exclusive: P[A & B] = 0\n\n\nTherefore for mutually exclusive events: \\(P[A OR B] = P[A] + P[B]\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#example-3",
+    "href": "slides/Probability3.html#example-3",
+    "title": "3.3.Probability",
+    "section": "Example 3",
+    "text": "Example 3\n\nProbability that the sum of two dice is odd or between 6 and 8.\n\n\n\nSubtract P[A & B] to avoid double counting nonexclusive events: \\(P[A \\text{ or } B] = P[A] + P[B] - P[A \\text{ and } B]\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#the-general-multiplication-principle-this-and-that",
+    "href": "slides/Probability3.html#the-general-multiplication-principle-this-and-that",
+    "title": "3.3.Probability",
+    "section": "The general multiplication principle (“this AND that”)",
+    "text": "The general multiplication principle (“this AND that”)"
   },
   {
     "objectID": "slides/Probability3.html#the-general-multiplication-principle",
     "href": "slides/Probability3.html#the-general-multiplication-principle",
     "title": "3.3.Probability",
     "section": "The General Multiplication Principle",
-    "text": "The General Multiplication Principle\n\\(P[A \\text{ & } B] = P[A] × P[B | A]\\)\n\n\nThe probability of A and B equals:\nthe probability of one event times the probability of the other, conditioned on the first.\n\nRead “A|B” as “A given B”\n\nIndependence:\n\nTwo events are independent if the occurrence of one gives no information about whether the second will occur.\n\\(A\\) and \\(B\\) are independent if \\(P[B | A] = P[B]\\)\n\n\n\nNote: (in)dependence does not imply any mechanistic or causative relationship."
+    "text": "The General Multiplication Principle\n\\[P[A \\text{ & } B] = P[A] \\times P[B|A]\\]\n\n\nThe probability of “\\(A \\text{ & }B\\)” equals:\nthe probability of one event times the probability of the other, conditioned on the first.\n\nRead \\(A\\|B\\) as “\\(A \\text{ given }B\\)”\n\n\nIndependence:\n\nTwo events are independent if the occurrence of one gives no information about whether the second will occur.\n\\(A\\) and \\(B\\) are independent if \\(P[B | A] = P[B]\\)\n\n\n\n\nNote: (in)dependence does not imply any mechanistic or causative relationship."
   },
   {
     "objectID": "slides/Probability3.html#a-special-case-of-the-multiplication-principle",
     "href": "slides/Probability3.html#a-special-case-of-the-multiplication-principle",
     "title": "3.3.Probability",
     "section": "A special case of the multiplication principle",
-    "text": "A special case of the multiplication principle\n\nProbabilities for independent variables\n\n\nGeneral multiplication principle: \\(P[A \\text{ & } B] = P[A] × P[B | A]\\)\nIf \\(A\\) & \\(B\\) are independent: \\(P[B| A] = P[B]\\)\nSo \\(P[A\\&B]=P[A]\\times P[B]\\)\nI.e., if \\(A\\) & \\(B\\) are independent, the probability of “A AND B” is the product of their probabilities."
+    "text": "A special case of the multiplication principle\n\nProbabilities for independent variables\n\n\nGeneral multiplication principle: \\(P[A \\text{ & } B] = P[A] × P[B | A]\\)\nIf \\(A\\) & \\(B\\) are independent: \\(P[B| A] = P[B]\\)\nSo \\(P[A\\text{ & }B]=P[A]\\times P[B]\\)\nI.e., if \\(A\\) & \\(B\\) are independent, the probability of “\\(A \\text{ AND }B\\)” is the product of their probabilities."
   },
   {
     "objectID": "slides/Probability3.html#example-oguchi-disease",
     "href": "slides/Probability3.html#example-oguchi-disease",
     "title": "3.3.Probability",
     "section": "Example: Oguchi Disease",
-    "text": "Example: Oguchi Disease\n\nOguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)\n\nAutosomal: not sex chromosome;\nRecessive: phenotype only expressed if two copies are present (in diploids).\n\nIf both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?\n\n[work in pairs for a few mins]"
+    "text": "Example: Oguchi Disease\n\nOguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)\n\nAutosomal: not sex chromosome;\nRecessive: phenotype only expressed if two copies are present (in diploids)."
   },
   {
-    "objectID": "slides/Probability3.html#oguchi-disease-answer",
-    "href": "slides/Probability3.html#oguchi-disease-answer",
+    "objectID": "slides/Probability3.html#example-oguchi-disease-1",
+    "href": "slides/Probability3.html#example-oguchi-disease-1",
     "title": "3.3.Probability",
-    "section": "Oguchi Disease (answer)",
-    "text": "Oguchi Disease (answer)\nThinking:\nA child has a ½ chance of inheriting mom’s affected chromosome AND a ½ chance of inheriting dad’s affected chromosome.\nAnswer: The probability that a given child of heterozygotes has the disease ½ x ½ = ¼."
+    "section": "Example: Oguchi Disease",
+    "text": "Example: Oguchi Disease\n\nScenario 1: If both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?\n\n[work in pairs for a few mins]"
   },
   {
     "objectID": "slides/Probability3.html#scenario-2-child-of-two-oguchi-carriers",
@@ -2401,11 +2415,221 @@
     "text": "Scenario 2: Child of Two Oguchi Carriers\n\nIf both of parents have an affected chromosome but no disease, what’s the probability that both of their children will have Oguchi disease?\n\n[Work in pairs for a few minutes]"
   },
   {
-    "objectID": "slides/Probability3.html#scenario-2",
-    "href": "slides/Probability3.html#scenario-2",
+    "objectID": "slides/Probability3.html#scenario-2-answer",
+    "href": "slides/Probability3.html#scenario-2-answer",
     "title": "3.3.Probability",
-    "section": "Scenario 2",
-    "text": "Scenario 2\n\n\\(P[\\text{(child 1 & child 2 have disease)}] = 1/4  \\times 1/4 = 1/16\\)"
+    "section": "Scenario 2: Answer",
+    "text": "Scenario 2: Answer\n\n\n\n\n\\(P[\\text{Both kids have Oguchi}]=\\)\n\\(P[\\text{Child 1 has it}]\\times P[\\text{Child 2 has it}]\\times\\)\n\\(=1/4\\times 1/4=1/16\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#using-probability-trees",
+    "href": "slides/Probability3.html#using-probability-trees",
+    "title": "3.3.Probability",
+    "section": "Using probability trees",
+    "text": "Using probability trees"
+  },
+  {
+    "objectID": "slides/Probability3.html#why",
+    "href": "slides/Probability3.html#why",
+    "title": "3.3.Probability",
+    "section": "Why?",
+    "text": "Why?\n\nProbability theory can be hard.\nBeing explicit about what you’re doing makes this easier.\nProbability trees offer a simple way to follow accounting."
+  },
+  {
+    "objectID": "slides/Probability3.html#how-to-make-probability-trees",
+    "href": "slides/Probability3.html#how-to-make-probability-trees",
+    "title": "3.3.Probability",
+    "section": "How to make probability trees",
+    "text": "How to make probability trees\n\nWrite down all possible outcomes for event one, two… etc. and connect them.\nWrite down the probability of each outcome, conditional on their path.\n\nMultiply each value down a path to find the probability of that path.\nRepeat 1-3 for all paths.\n\nFind probability: sum paths that lead to the same destination - i.e. the same outcome."
+  },
+  {
+    "objectID": "slides/Probability3.html#scenario-3-children-of-oguchi-carriers",
+    "href": "slides/Probability3.html#scenario-3-children-of-oguchi-carriers",
+    "title": "3.3.Probability",
+    "section": "Scenario 3: Children of Oguchi Carriers",
+    "text": "Scenario 3: Children of Oguchi Carriers\n\nIf both of parents have an affected chromosome but no disease, what’s the probability that none, one or both (three separate questions here) of their children will have Oguchi disease?\n\nLet’s use probability trees!"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-1-write-down-all-possible-outcomes",
+    "href": "slides/Probability3.html#step-1-write-down-all-possible-outcomes",
+    "title": "3.3.Probability",
+    "section": "Step 1: Write down all possible outcomes",
+    "text": "Step 1: Write down all possible outcomes"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-1-write-down-all-possible-outcomes-1",
+    "href": "slides/Probability3.html#step-1-write-down-all-possible-outcomes-1",
+    "title": "3.3.Probability",
+    "section": "Step 1: Write down all possible outcomes",
+    "text": "Step 1: Write down all possible outcomes"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-2.-write-down-the-probability-of-each-outcome-conditional-on-their-path",
+    "href": "slides/Probability3.html#step-2.-write-down-the-probability-of-each-outcome-conditional-on-their-path",
+    "title": "3.3.Probability",
+    "section": "Step 2. Write down the probability of each outcome, conditional on their path",
+    "text": "Step 2. Write down the probability of each outcome, conditional on their path"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path",
+    "href": "slides/Probability3.html#step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path",
+    "title": "3.3.Probability",
+    "section": "Step 3. Multiply each value down a path to find the probability of that path",
+    "text": "Step 3. Multiply each value down a path to find the probability of that path"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path-1",
+    "href": "slides/Probability3.html#step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path-1",
+    "title": "3.3.Probability",
+    "section": "Step 3. Multiply each value down a path to find the probability of that path",
+    "text": "Step 3. Multiply each value down a path to find the probability of that path"
+  },
+  {
+    "objectID": "slides/Probability3.html#step-4.-sum-paths-that-lead-to-the-same-destination",
+    "href": "slides/Probability3.html#step-4.-sum-paths-that-lead-to-the-same-destination",
+    "title": "3.3.Probability",
+    "section": "Step 4. Sum paths that lead to the same destination",
+    "text": "Step 4. Sum paths that lead to the same destination\n\\(P[2\\text{Affected }] = 1/16\\); \\(P[1\\text{ Affected }] = 6/16\\) ; \\(P[0 \\text{ Affected }= 9/16]\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#dependent-events-conditional-probabilities",
+    "href": "slides/Probability3.html#dependent-events-conditional-probabilities",
+    "title": "3.3.Probability",
+    "section": "Dependent events & Conditional Probabilities",
+    "text": "Dependent events & Conditional Probabilities"
+  },
+  {
+    "objectID": "slides/Probability3.html#dependent-events",
+    "href": "slides/Probability3.html#dependent-events",
+    "title": "3.3.Probability",
+    "section": "Dependent Events",
+    "text": "Dependent Events\nEvents are dependent when the probability of one event depends on the outcome of another.\nE.g. The Probability of \\(A\\) depends on the value of \\(B\\).\nIf \\(A\\) depends on \\(B\\):\n\\[P[A\\text{ & }B]\\neq P[A]\\times P[B]\\]"
+  },
+  {
+    "objectID": "slides/Probability3.html#example-surviving-the-titanic",
+    "href": "slides/Probability3.html#example-surviving-the-titanic",
+    "title": "3.3.Probability",
+    "section": "Example: Surviving the Titanic",
+    "text": "Example: Surviving the Titanic\n\nOf the 2092 Adults on the Titanic\n\n319 [\\(\\approx 0.152\\)] sat in 1st class.\n\n654 [\\(\\approx 0.312\\)] survived.\n\n\nHypothesis: If survival and sitting in 1st class are independent:\n\\(P[\\text{ 1st class & survived }] = P[\\text{ 1st class }] x P[\\text{ survived }]\\)\n\nExpected number of 1st class adults to survive: \\(\\approx 0.152\\times0.312\\times2092 = 100\\) 1st class adults would survive.\nExpected number of non-1st class adults to survive: we expect \\(\\approx0.848\\times0.312\\times2092 = 554\\) other adults would survive"
+  },
+  {
+    "objectID": "slides/Probability3.html#surviving-the-titanic-reality",
+    "href": "slides/Probability3.html#surviving-the-titanic-reality",
+    "title": "3.3.Probability",
+    "section": "Surviving the titanic: reality",
+    "text": "Surviving the titanic: reality\n\n\nActually: More 1st class passengers survived than expected.\n197 of the 319 people in 1st class survived. (~ 62%) This severely exceeds the 100 expected survivors.\n\n\nFewer other passengers survived than expected.\n457 of the 1773 other passengers survived. (~ 26%) This is way less than the 554 expected survivors.\n\n\n\n\nWe will learn soon how to test how likely (or unlikely) such an event is under the assumption of independence."
+  },
+  {
+    "objectID": "slides/Probability3.html#conditional-probability",
+    "href": "slides/Probability3.html#conditional-probability",
+    "title": "3.3.Probability",
+    "section": "Conditional Probability",
+    "text": "Conditional Probability\n\nThe conditional probability of an event is the probability of that event occurring given that a condition is met.\n\\(P[X|Y]\\) (read “\\(|\\)” as “given”.)\n\\(P[X|Y]\\) means the probability of \\(X\\) if \\(Y\\) is true."
+  },
+  {
+    "objectID": "slides/Probability3.html#example-surviving-the-titanic-conditional-on-class",
+    "href": "slides/Probability3.html#example-surviving-the-titanic-conditional-on-class",
+    "title": "3.3.Probability",
+    "section": "Example: Surviving the Titanic Conditional on Class",
+    "text": "Example: Surviving the Titanic Conditional on Class\n\nHypothesis: If survival and sitting in 1st class are not independent\n\n\\(P[\\text{ Survive| Adult in 1st class}] = 197/319 = 0.62\\)\n\\(P[\\text{ Survive| Adult NOT in 1st class}] = 457/1773 = 0.26\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#the-law-of-total-probability",
+    "href": "slides/Probability3.html#the-law-of-total-probability",
+    "title": "3.3.Probability",
+    "section": "The Law of Total Probability",
+    "text": "The Law of Total Probability\n\nConvert conditional probabilities (\\(P[X|Y_{i}\\)]) to total probabilities (\\(P[X]\\)) by weighting conditional probabilities by the probability of the condition (\\(Y_{i}\\)) and summing over all conditions.\n\n\\[P[X]=\\sum{(P[X|Y_{i}]\\times P[Y_{i}])}\\]"
+  },
+  {
+    "objectID": "slides/Probability3.html#example-the-total-probability-of-surviving-the-titanic",
+    "href": "slides/Probability3.html#example-the-total-probability-of-surviving-the-titanic",
+    "title": "3.3.Probability",
+    "section": "Example: The Total Probability of Surviving the Titanic",
+    "text": "Example: The Total Probability of Surviving the Titanic\n\\(P[X]=\\sum{(P[X|Y_{i}]\\times P[Y_{i}])}\\)\nOf the 2092 Adults on the Titanic\n\n319 [\\(\\approx0.152\\)] sat in 1st class.\n654 [\\(\\approx0.312\\)] survived.\n197 of the 319 people in 1st class survived. (\\(\\approx0.62\\))\n457 of the 1773 other passengers survived. (\\(\\approx0.26\\))"
+  },
+  {
+    "objectID": "slides/Probability3.html#example-the-total-probability-of-surviving-the-titanic-1",
+    "href": "slides/Probability3.html#example-the-total-probability-of-surviving-the-titanic-1",
+    "title": "3.3.Probability",
+    "section": "Example: The Total Probability of Surviving the Titanic",
+    "text": "Example: The Total Probability of Surviving the Titanic\n\\[P[X]=\\sum{(P[X|Y_{i}]\\times P[Y_{i}])}\\]\n\\(P[\\text{Survive}]=\\sum{(P[\\text{Survive}|\\text{Class}_{i}]\\times P[\\text{Class}_{i}])}\\)\n\\(P[\\text{Survive}]=\\sum{(P[\\text{Survive}|\\text{1st class}]\\times P[\\text{1st class}])}\\)\n\\(+\\)\n\\(P[\\text{Survive}|\\text{NOT 1st class}]\\times P[\\text{NOT 1st class}])\\)\n\\(P[\\text{Survive}]=(0.62\\times 0.152)+(0.26\\times 0.848)\\)\n\\(P[\\text{Survive}]=0.314\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#titanic-survival-conditional-on-class-with-probability-trees",
+    "href": "slides/Probability3.html#titanic-survival-conditional-on-class-with-probability-trees",
+    "title": "3.3.Probability",
+    "section": "Titanic survival conditional on class with probability trees",
+    "text": "Titanic survival conditional on class with probability trees\n\nWe recover \\(P[\\text{survive}]=0.094+0.220=0.314\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#bayes-theorem",
+    "href": "slides/Probability3.html#bayes-theorem",
+    "title": "3.3.Probability",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem"
+  },
+  {
+    "objectID": "slides/Probability3.html#bayes-theorem-definition",
+    "href": "slides/Probability3.html#bayes-theorem-definition",
+    "title": "3.3.Probability",
+    "section": "Bayes’ Theorem: Definition",
+    "text": "Bayes’ Theorem: Definition\n\nThe probability of “\\(A\\) given \\(B\\)” equals the probability of \\(B\\) given \\(A\\) times the probability of \\(A\\) divided by the probability of \\(B\\).\n\n\\[P[A|B]=\\frac{P[B|A] \\times P[A]}{P[B]}\\]"
+  },
+  {
+    "objectID": "slides/Probability3.html#bayes-theorem-derivation",
+    "href": "slides/Probability3.html#bayes-theorem-derivation",
+    "title": "3.3.Probability",
+    "section": "Bayes’ Theorem: Derivation",
+    "text": "Bayes’ Theorem: Derivation"
+  },
+  {
+    "objectID": "slides/Probability3.html#bayes-theorem-titanic-example",
+    "href": "slides/Probability3.html#bayes-theorem-titanic-example",
+    "title": "3.3.Probability",
+    "section": "Bayes’ Theorem: Titanic Example",
+    "text": "Bayes’ Theorem: Titanic Example\n\nFind the probability that an adult survivor was in 1st class.\n\n\n319 of the 2092 adults on the Titanic where in 1st class.\n197 of the 319 adults in 1st class survived.\n457 of the other adults survived.\n\n\\(P[\\text{1st class}|\\text{Survive}]=?\\)\n[work in pairs]"
+  },
+  {
+    "objectID": "slides/Probability3.html#challenge-rare-disease-diagnosis",
+    "href": "slides/Probability3.html#challenge-rare-disease-diagnosis",
+    "title": "3.3.Probability",
+    "section": "Challenge: Rare Disease Diagnosis",
+    "text": "Challenge: Rare Disease Diagnosis\n\nWhat proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?\n\nAbout 20 in 1000 women (ages 40-49) have breast cancer.\nA mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.\nA mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.\n\n\n[work in pairs]\n\n\nTip: use a probability tree"
+  },
+  {
+    "objectID": "slides/Probability3.html#solution-1",
+    "href": "slides/Probability3.html#solution-1",
+    "title": "3.3.Probability",
+    "section": "Solution",
+    "text": "Solution"
+  },
+  {
+    "objectID": "slides/Probability3.html#solution-2",
+    "href": "slides/Probability3.html#solution-2",
+    "title": "3.3.Probability",
+    "section": "Solution",
+    "text": "Solution"
+  },
+  {
+    "objectID": "slides/Probability3.html#solution-3",
+    "href": "slides/Probability3.html#solution-3",
+    "title": "3.3.Probability",
+    "section": "Solution",
+    "text": "Solution\n\n\\(P[+]=0.0184+0.098=0.1164\\)\n\\(P[C\\&+]=0.0184\\)\n\\(P[C|+]=P[C \\text{ & } +]/P[+]=0.158\\)"
+  },
+  {
+    "objectID": "slides/Probability3.html#probability-wrap-up",
+    "href": "slides/Probability3.html#probability-wrap-up",
+    "title": "3.3.Probability",
+    "section": "Probability Wrap Up",
+    "text": "Probability Wrap Up\n\nProbability theory provides a foundation for rigorous statistics.\nApplication of simple rules of probability facilitates the generation of more complex predictions.\nWe can use Bayes’ Theorem to translate between probabilistic statements"
+  },
+  {
+    "objectID": "slides/Probability3.html#bayes-theorem-on-the-beach",
+    "href": "slides/Probability3.html#bayes-theorem-on-the-beach",
+    "title": "3.3.Probability",
+    "section": "Bayes’ Theorem On the Beach",
+    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
   },
   {
     "objectID": "slides/Probability3.html#thats-all-for-today",

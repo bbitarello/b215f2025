@@ -10,8 +10,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-10-06">
-<meta name="keywords" content="Probability - Foundational Concepts">
+<meta name="dcterms.date" content="2025-10-08">
+<meta name="keywords" content="Probability Rules">
 <title>BIOL B215: Biostatistics with R – 3.3.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -130,7 +130,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block"><h1 class="title">3.3.Probability</h1>
-  <p class="subtitle">Acknowledgments: many examples taken from the book Intuitive Biostatistics,4th edition</p>
+  <p class="subtitle">Acknowledgments: many code snippets borrowed from Y. Brandvain</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -140,30 +140,70 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-10-06</p>
+  <p class="date">2025-10-08</p>
 </section><section id="outline" class="slide level2"><h2>Outline</h2>
-</section><section id="another-example" class="slide level2"><h2>Another example</h2>
+<ul>
+<li>Probability rules
+<ul>
+<li><del>the addition principle</del></li>
+<li>addition principle: one more example</li>
+<li>the general multiplication principle</li>
+<li>using probability trees to solve probability problems</li>
+<li>dependent events and conditional probabilities</li>
+<li>the Law of Total Probability</li>
+</ul>
+</li>
+<li>Principles
+<ul>
+<li>Bayes theorem</li>
+</ul>
+</li>
+</ul></section><section id="recap-addition-principle" class="slide level2"><h2>Recap: Addition Principle</h2>
+<ul>
+<li><p>The probability of OR involves addition: <span class="math inline">\(P[A \text{ OR } B] = P[A] + P[B]− P[A \&amp; B]\)</span></p></li>
+<li><p>If two events are mutually exclusive: P[A &amp; B] = 0</p></li>
+</ul>
+<div class="goal">
+<p>Therefore for mutually exclusive events: <span class="math inline">\(P[A OR B] = P[A] + P[B]\)</span></p>
+</div>
+</section><section id="example-3" class="slide level2"><h2>Example 3</h2>
 <div class="goal">
 <p>Probability that the sum of two dice is odd or between 6 and 8.</p>
 </div>
-<p>Subtract P[A &amp; B] to avoid double counting nonexclusive events</p>
-<p><span class="math inline">\(P[A \text{ or } B] = P[A] + P[B] - P[A \text{ and } B]\)</span></p>
-
-<img data-src="Probability3_files/figure-revealjs/dice-again-1.png" width="960" class="r-stretch"></section><section id="the-general-multiplication-principle" class="slide level2"><h2>The General Multiplication Principle</h2>
-<p><span class="math inline">\(P[A \text{ &amp; } B] = P[A] × P[B | A]\)</span></p>
+<div class="fragment">
+<ul>
+<li>Subtract P[A &amp; B] to avoid double counting nonexclusive events: <span class="math inline">\(P[A \text{ or } B] = P[A] + P[B] - P[A \text{ and } B]\)</span>
+</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="Probability3_files/figure-revealjs/dice-again-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="the-general-multiplication-principle-this-and-that" class="slide level2"><h2>The general multiplication principle (“this AND that”)</h2>
+</section><section id="the-general-multiplication-principle" class="slide level2"><h2>The General Multiplication Principle</h2>
+<p><span class="math display">\[P[A \text{ &amp; } B] = P[A] \times P[B|A]\]</span></p>
 <ul>
 <li>
-<p>The probability of A and B equals:</p>
+<p>The probability of “<span class="math inline">\(A \text{ &amp; }B\)</span>” equals:</p>
 <p>the probability of one event <strong><em>times</em></strong> the probability of the other, conditioned on the first.</p>
 </li>
-<li><p>Read “A|B” as “A given B”</p></li>
+<li><p>Read <span class="math inline">\(A\|B\)</span> as “<span class="math inline">\(A \text{ given }B\)</span>”</p></li>
 </ul>
+<div class="fragment">
 <p><strong>Independence:</strong></p>
 <ul>
-<li><p>Two events are independent if the occurrence of one gives no information about whether the second will occur.</p></li>
-<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if <span class="math inline">\(P[B | A] = P[B]\)</span></p></li>
+<li class="fragment"><p>Two events are independent if the occurrence of one gives no information about whether the second will occur.</p></li>
+<li class="fragment"><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if <span class="math inline">\(P[B | A] = P[B]\)</span></p></li>
 </ul>
 
+</div>
 <aside><div>
 <p>Note: (in)dependence does not imply any mechanistic or causative relationship.</p>
 </div></aside></section><section id="a-special-case-of-the-multiplication-principle" class="slide level2"><h2>A special case of the multiplication principle</h2>
@@ -173,30 +213,187 @@ Bárbara D. Bitarello
 <ul>
 <li><p>General multiplication principle: <span class="math inline">\(P[A \text{ &amp; } B] = P[A] × P[B | A]\)</span></p></li>
 <li><p>If <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent: <span class="math inline">\(P[B| A] = P[B]\)</span></p></li>
-<li><p>So <span class="math inline">\(P[A\&amp;B]=P[A]\times P[B]\)</span></p></li>
-<li><p>I.e., if <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent, the probability of “A AND B” is the product of their probabilities.</p></li>
+<li><p>So <span class="math inline">\(P[A\text{ &amp; }B]=P[A]\times P[B]\)</span></p></li>
+<li><p>I.e., if <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> are independent, the probability of “<span class="math inline">\(A \text{ AND }B\)</span>” is the product of their probabilities.</p></li>
 </ul></section><section id="example-oguchi-disease" class="slide level2"><h2>Example: Oguchi Disease</h2>
 <blockquote>
 <p>Oguchi disease, also called congenital stationary night blindness, Oguchi type 1 or Oguchi disease 1, is an autosomal recessive form of congenital stationary night blindness associated with (…) abnormally slow dark adaptation (From: Wikipedia)</p>
 </blockquote>
 <p><strong>Autosomal:</strong> not sex chromosome;</p>
 <p><strong>Recessive:</strong> phenotype only expressed if two copies are present (in diploids).</p>
+</section><section id="example-oguchi-disease-1" class="slide level2"><h2>Example: Oguchi Disease</h2>
 <div class="goal">
-<p>If both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?</p>
+<p>Scenario 1: If both of parents have an affected chromosome but no disease, what’s the probability that their child will have Oguchi disease?</p>
 </div>
 <p>[work in pairs for a few mins]</p>
-</section><section id="oguchi-disease-answer" class="slide level2"><h2>Oguchi Disease (answer)</h2>
-<p>Thinking:</p>
-<p>A child has a ½ chance of inheriting mom’s affected chromosome AND a ½ chance of inheriting dad’s affected chromosome.</p>
-<p>Answer: The probability that a given child of heterozygotes has the disease ½ x ½ = ¼.</p>
 </section><section id="scenario-2-child-of-two-oguchi-carriers" class="slide level2"><h2>Scenario 2: Child of Two Oguchi Carriers</h2>
 <div class="goal">
 <p>If both of parents have an affected chromosome but no disease, what’s the probability that <strong><em>both</em></strong> of their children will have Oguchi disease?</p>
 </div>
 <p>[Work in pairs for a few minutes]</p>
-</section><section id="scenario-2" class="slide level2"><h2>Scenario 2</h2>
+</section><section id="scenario-2-answer" class="slide level2"><h2>Scenario 2: Answer</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/clipboard-2188679080.png" width="435"></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math inline">\(P[\text{Both kids have Oguchi}]=\)</span></p>
+<p><span class="math inline">\(P[\text{Child 1 has it}]\times P[\text{Child 2 has it}]\times\)</span></p>
+<p><span class="math inline">\(=1/4\times 1/4=1/16\)</span></p>
+</div></div>
+</section><section id="using-probability-trees" class="slide level2 dark-theme center"><h2>Using probability trees</h2>
+</section><section id="why" class="slide level2"><h2>Why?</h2>
+<div class="{r-fit-text}">
+<p>Probability theory can be hard.</p>
+<p>Being explicit about what you’re doing makes this easier.</p>
+<p>Probability trees offer a simple way to follow accounting.</p>
+</div>
+</section><section id="how-to-make-probability-trees" class="slide level2 scrollable"><h2>How to make probability trees</h2>
+<ol type="1">
+<li><p>Write down all possible outcomes for event one, two… etc. and connect them.</p></li>
+<li><p>Write down the probability of each outcome, conditional on their path.</p></li>
+<li>
+<p>Multiply each value down a path to find the probability of that path.</p>
+<p>Repeat 1-3 for all paths.</p>
+</li>
+<li><p>Find probability: sum paths that lead to the same destination - i.e. the same outcome.</p></li>
+</ol></section><section id="scenario-3-children-of-oguchi-carriers" class="slide level2"><h2>Scenario 3: Children of Oguchi Carriers</h2>
+<div class="goal">
+<p>If both of parents have an affected chromosome but no disease, what’s the probability that <strong><em>none, one or both (three separate questions here)</em></strong> of their children will have Oguchi disease?</p>
+</div>
+<p>Let’s use probability trees!</p>
+</section><section id="step-1-write-down-all-possible-outcomes" class="slide level2"><h2>Step 1: Write down all possible outcomes</h2>
 
-<img data-src="Probability3_files/figure-revealjs/oguchi-1.png" width="960" class="r-stretch"><p><span class="math inline">\(P[\text{(child 1 &amp; child 2 have disease)}] = 1/4  \times 1/4 = 1/16\)</span></p>
+<img data-src="images/clipboard-897739780.png" class="r-stretch"></section><section id="step-1-write-down-all-possible-outcomes-1" class="slide level2"><h2>Step 1: Write down all possible outcomes</h2>
+
+<img data-src="images/clipboard-7639108.png" class="r-stretch"></section><section id="step-2.-write-down-the-probability-of-each-outcome-conditional-on-their-path" class="slide level2"><h2>Step 2. Write down the probability of each outcome, conditional on their path</h2>
+
+<img data-src="images/clipboard-3251760107.png" class="r-stretch"></section><section id="step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path" class="slide level2"><h2>Step 3. Multiply each value down a path to find the probability of that path</h2>
+
+<img data-src="images/clipboard-4091397874.png" class="r-stretch"></section><section id="step-3.-multiply-each-value-down-a-path-to-find-the-probability-of-that-path-1" class="slide level2"><h2>Step 3. Multiply each value down a path to find the probability of that path</h2>
+
+<img data-src="images/clipboard-3424223039.png" class="r-stretch"></section><section id="step-4.-sum-paths-that-lead-to-the-same-destination" class="slide level2"><h2>Step 4. Sum paths that lead to the same destination</h2>
+<p><span class="math inline">\(P[2\text{Affected }] = 1/16\)</span>; <span class="math inline">\(P[1\text{ Affected }] = 6/16\)</span> ; <span class="math inline">\(P[0 \text{ Affected }= 9/16]\)</span></p>
+
+<img data-src="images/clipboard-2539150621.png" class="r-stretch"></section><section id="dependent-events-conditional-probabilities" class="slide level2 dark-theme center"><h2>Dependent events &amp; Conditional Probabilities</h2>
+</section><section id="dependent-events" class="slide level2"><h2>Dependent Events</h2>
+<p>Events are dependent when the probability of one event depends on the outcome of another.</p>
+<p>E.g. The Probability of <span class="math inline">\(A\)</span> depends on the value of <span class="math inline">\(B\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> depends on <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[P[A\text{ &amp; }B]\neq P[A]\times P[B]\]</span></p>
+</section><section id="example-surviving-the-titanic" class="slide level2"><h2>Example: Surviving the Titanic</h2>
+<div class="goal">
+<p>Of the 2092 Adults on the Titanic</p>
+<ul>
+<li>319 [<span class="math inline">\(\approx 0.152\)</span>] sat in 1st class.<br>
+</li>
+<li>654 [<span class="math inline">\(\approx 0.312\)</span>] survived.</li>
+</ul>
+</div>
+<p><strong>Hypothesis:</strong> <em>If</em> survival and sitting in 1st class are independent:</p>
+<p><span class="math inline">\(P[\text{ 1st class &amp; survived }] = P[\text{ 1st class }] x P[\text{ survived }]\)</span></p>
+<ul>
+<li>Expected number of 1st class adults to survive: <span class="math inline">\(\approx 0.152\times0.312\times2092 = 100\)</span> 1st class adults would survive.</li>
+<li>Expected number of non-1st class adults to survive: we expect <span class="math inline">\(\approx0.848\times0.312\times2092 = 554\)</span> other adults would survive</li>
+</ul></section><section id="surviving-the-titanic-reality" class="slide level2"><h2>Surviving the titanic: reality</h2>
+<ul>
+<li>
+<p>Actually: More 1st class passengers survived than expected.</p>
+<p>197 of the 319 people in 1st class survived. (~ 62%) This severely exceeds the 100 expected survivors.</p>
+</li>
+<li>
+<p>Fewer other passengers survived than expected.</p>
+<p>457 of the 1773 other passengers survived. (~ 26%) This is way less than the 554 expected survivors.</p>
+</li>
+</ul>
+
+<aside><div>
+<p>We will learn soon how to test how likely (or unlikely) such an event is under the assumption of independence.</p>
+</div></aside></section><section id="conditional-probability" class="slide level2"><h2>Conditional Probability</h2>
+<ul>
+<li><p>The conditional probability of an event is the probability of that event occurring given that a condition is met.</p></li>
+<li><p><span class="math inline">\(P[X|Y]\)</span> (read “<span class="math inline">\(|\)</span>” as “given”.)</p></li>
+<li><p><span class="math inline">\(P[X|Y]\)</span> means the probability of <span class="math inline">\(X\)</span> if <span class="math inline">\(Y\)</span> is true.</p></li>
+</ul></section><section id="example-surviving-the-titanic-conditional-on-class" class="slide level2"><h2>Example: Surviving the Titanic Conditional on Class</h2>
+<div class="goal">
+<p>Hypothesis: If survival and sitting in 1st class are not independent</p>
+</div>
+<p><span class="math inline">\(P[\text{ Survive| Adult in 1st class}] = 197/319 = 0.62\)</span></p>
+<p><span class="math inline">\(P[\text{ Survive| Adult NOT in 1st class}] = 457/1773 = 0.26\)</span></p>
+</section><section id="the-law-of-total-probability" class="slide level2"><h2>The Law of Total Probability</h2>
+<blockquote>
+<p>Convert conditional probabilities (<span class="math inline">\(P[X|Y_{i}\)</span>]) to total probabilities (<span class="math inline">\(P[X]\)</span>) by weighting conditional probabilities by the probability of the condition (<span class="math inline">\(Y_{i}\)</span>) and summing over all conditions.</p>
+</blockquote>
+<p><span class="math display">\[P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\]</span></p>
+</section><section id="example-the-total-probability-of-surviving-the-titanic" class="slide level2"><h2>Example: The Total Probability of Surviving the Titanic</h2>
+<p><span class="math inline">\(P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\)</span></p>
+<p>Of the 2092 Adults on the Titanic</p>
+<ul>
+<li><p>319 [<span class="math inline">\(\approx0.152\)</span>] sat in 1st class.</p></li>
+<li><p>654 [<span class="math inline">\(\approx0.312\)</span>] survived.</p></li>
+<li><p>197 of the 319 people in 1st class survived. (<span class="math inline">\(\approx0.62\)</span>)</p></li>
+<li><p>457 of the 1773 other passengers survived. (<span class="math inline">\(\approx0.26\)</span>)</p></li>
+</ul></section><section id="example-the-total-probability-of-surviving-the-titanic-1" class="slide level2"><h2>Example: The Total Probability of Surviving the Titanic</h2>
+<p><span class="math display">\[P[X]=\sum{(P[X|Y_{i}]\times P[Y_{i}])}\]</span></p>
+<p><span class="math inline">\(P[\text{Survive}]=\sum{(P[\text{Survive}|\text{Class}_{i}]\times P[\text{Class}_{i}])}\)</span></p>
+<p><span class="math inline">\(P[\text{Survive}]=\sum{(P[\text{Survive}|\text{1st class}]\times P[\text{1st class}])}\)</span></p>
+<p><span class="math inline">\(+\)</span></p>
+<p><span class="math inline">\(P[\text{Survive}|\text{NOT 1st class}]\times P[\text{NOT 1st class}])\)</span></p>
+<p><span class="math inline">\(P[\text{Survive}]=(0.62\times 0.152)+(0.26\times 0.848)\)</span></p>
+<p><span class="math inline">\(P[\text{Survive}]=0.314\)</span></p>
+</section><section id="titanic-survival-conditional-on-class-with-probability-trees" class="slide level2"><h2>Titanic survival conditional on class with probability trees</h2>
+
+<img data-src="images/clipboard-174664923.png" class="r-stretch"><p>We recover <span class="math inline">\(P[\text{survive}]=0.094+0.220=0.314\)</span></p>
+</section><section id="bayes-theorem" class="slide level2 dark-theme center"><h2>Bayes’ Theorem</h2>
+</section><section id="bayes-theorem-definition" class="slide level2"><h2>Bayes’ Theorem: Definition</h2>
+<blockquote>
+<p>The probability of “<span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>” equals the probability of <span class="math inline">\(B\)</span> given <span class="math inline">\(A\)</span> times the probability of <span class="math inline">\(A\)</span> divided by the probability of <span class="math inline">\(B\)</span>.</p>
+</blockquote>
+<p><span class="math display">\[P[A|B]=\frac{P[B|A] \times P[A]}{P[B]}\]</span></p>
+</section><section id="bayes-theorem-derivation" class="slide level2"><h2>Bayes’ Theorem: Derivation</h2>
+
+<img data-src="images/clipboard-2798250529.png" class="r-stretch"></section><section id="bayes-theorem-titanic-example" class="slide level2"><h2>Bayes’ Theorem: Titanic Example</h2>
+<div class="goal">
+<p>Find the probability that an adult survivor was in 1st class.</p>
+</div>
+<ul>
+<li><p>319 of the 2092 adults on the Titanic where in 1st class.</p></li>
+<li><p>197 of the 319 adults in 1st class survived.</p></li>
+<li><p>457 of the other adults survived.</p></li>
+</ul>
+<p><span class="math inline">\(P[\text{1st class}|\text{Survive}]=?\)</span></p>
+<p>[work in pairs]</p>
+</section><section id="challenge-rare-disease-diagnosis" class="slide level2"><h2>Challenge: Rare Disease Diagnosis</h2>
+<div class="goal">
+<p>What proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?</p>
+<ul>
+<li><p>About 20 in 1000 women (ages 40-49) have breast cancer.</p></li>
+<li><p>A mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.</p></li>
+<li><p>A mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.</p></li>
+</ul>
+</div>
+<p>[work in pairs]</p>
+
+<aside><div>
+<p>Tip: use a probability tree</p>
+</div></aside></section><section id="solution-1" class="slide level2"><h2>Solution</h2>
+
+<img data-src="images/clipboard-62078940.png" class="r-stretch"></section><section id="solution-2" class="slide level2"><h2>Solution</h2>
+
+<img data-src="images/clipboard-1659772672.png" class="r-stretch"></section><section id="solution-3" class="slide level2" data-visibilit="hidden"><h2>Solution</h2>
+
+<img data-src="images/clipboard-874207709.png" width="423" class="r-stretch"><p><span class="math inline">\(P[+]=0.0184+0.098=0.1164\)</span></p>
+<p><span class="math inline">\(P[C\&amp;+]=0.0184\)</span></p>
+<p><span class="math inline">\(P[C|+]=P[C \text{ &amp; } +]/P[+]=0.158\)</span></p>
+</section><section id="probability-wrap-up" class="slide level2"><h2>Probability Wrap Up</h2>
+<ul>
+<li><p>Probability theory provides a foundation for rigorous statistics.</p></li>
+<li><p>Application of simple rules of probability facilitates the generation of more complex predictions.</p></li>
+<li><p>We can use Bayes’ Theorem to translate between probabilistic statements</p></li>
+</ul></section><section id="bayes-theorem-on-the-beach" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="454"></a></p>
+<figcaption>From: https://xkcd.com/1236/</figcaption></figure>
+</div>
 </section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
 
 <img data-src="images/forrestgump.png" alt="&quot;Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
