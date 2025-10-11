@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-09-03">
-<meta name="keywords" content="Displaying &amp; Describing Data">
 
-<title>Statistics and Samples – BIOL B215: Biostatistics with R</title>
+<title>Coding Assignment 1 – BIOL B215: Biostatistics with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Statistics and Samples</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../CodingAssignments/CA1.html">Coding Assignment 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,10 +134,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../CA1.html" class="sidebar-item-text sidebar-link">
+  <a href="../CodingAssignments/CA1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Coding Assignment 1</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+ <span class="menu-text">Coding Assignment 1</span>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../rlearn.html" class="sidebar-item-text sidebar-link">
@@ -157,135 +157,253 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key terms</a></li>
-  <li><a href="#supporting-materials-for-learning" id="toc-supporting-materials-for-learning" class="nav-link" data-scroll-target="#supporting-materials-for-learning">Supporting Materials for Learning</a></li>
-  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points">Key points</a>
+  <li><a href="#what-are-you-trying-to-answer-with-your-analysis" id="toc-what-are-you-trying-to-answer-with-your-analysis" class="nav-link active" data-scroll-target="#what-are-you-trying-to-answer-with-your-analysis"><span class="header-section-number">1</span> What are you trying to answer with your analysis?</a></li>
+  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda"><span class="header-section-number">2</span> Exploratory data analysis (EDA)</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#load-view-the-data-deal-with-missing-data" id="toc-load-view-the-data-deal-with-missing-data" class="nav-link" data-scroll-target="#load-view-the-data-deal-with-missing-data"><span class="header-section-number">2.1</span> Load &amp; View the Data &amp; Deal with Missing Data</a></li>
+  <li><a href="#sec-plots" id="toc-sec-plots" class="nav-link" data-scroll-target="#sec-plots"><span class="header-section-number">2.2</span> Visualizing the dataset using charts</a></li>
+  <li><a href="#sec-stats" id="toc-sec-stats" class="nav-link" data-scroll-target="#sec-stats"><span class="header-section-number">2.3</span> Summarizing the dataset using descriptive statistics</a></li>
+  <li><a href="#sec-disc" id="toc-sec-disc" class="nav-link" data-scroll-target="#sec-disc"><span class="header-section-number">2.4</span> Discussion</a></li>
   </ul></li>
+  <li><a href="#sec-report" id="toc-sec-report" class="nav-link" data-scroll-target="#sec-report"><span class="header-section-number">3</span> How to structure your report</a></li>
+  <li><a href="#what-to-cite-and-how-to-cite-it" id="toc-what-to-cite-and-how-to-cite-it" class="nav-link" data-scroll-target="#what-to-cite-and-how-to-cite-it"><span class="header-section-number">4</span> What to cite and how to cite it</a>
+  <ul class="collapse">
+  <li><a href="#llmsai" id="toc-llmsai" class="nav-link" data-scroll-target="#llmsai"><span class="header-section-number">4.1</span> LLMs/AI</a></li>
+  </ul></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">5</span> Evaluation</a></li>
+  <li><a href="#instructions-for-resubmission" id="toc-instructions-for-resubmission" class="nav-link" data-scroll-target="#instructions-for-resubmission"><span class="header-section-number">6</span> Instructions for resubmission</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn"><span class="header-section-number">7</span> Learn more about EDA and R markdown</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/handouts/Handout1.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/CodingAssignments/CA1.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistics and Samples</h1>
-<p class="subtitle lead">Study Guide</p>
+<h1 class="title">Coding Assignment 1</h1>
+<p class="subtitle lead">Exploratory Data Analysis of Phagocytosis Assay</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Bárbara D. Bitarello </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2025</p>
-    </div>
-  </div>
   
     
   </div>
   
 
-<div>
-  <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>Displaying &amp; Describing Data</p>
-  </div>
-</div>
 
 </header>
 
 
-<section id="learning-goals" class="level1">
-<h1>Learning Goals</h1>
+<div class="cell">
+<style type="text/css">
+div.callout-important{border-left-color:#00A1B7 !important}div.callout-tip{border-left-color:#898928 !important}div.callout-caution{border-left-color:#ad7237 !important}
+</style>
+</div>
+<p>You will work on a real biological dataset from Dr.&nbsp;Williamson, a professor in our Bio Department!</p>
+<p><strong><em><em>Your goal is to provide an exploratory data analysis (EDA) and craft a detailed report of your findings</em></em></strong></p>
+<p>A detailed explanation of Dr.&nbsp;Williamson’s dataset and experiment are provided in a separate document (Backgrund Information).</p>
+<section id="what-are-you-trying-to-answer-with-your-analysis" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> What are you trying to answer with your analysis?</h1>
+<p>You are trying to answer the following questions.</p>
+<ol type="1">
+<li><p>Does the amount of particles phagocytes eat depend on the particle’s stiffness?</p></li>
+<li><p>Does the amount of particles phagocytes eat depend of the substrate’s stiffness?</p></li>
+<li><p>Are there any interesting effects on the number of particles eaten that reflects both substrate and particle stiffness?</p></li>
+<li><p>Are there any noticeable batch effects<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in the dataset?</p></li>
+</ol>
+<p>I want you to use what we’ve learned in lectures and labs to explore this dataset.The tools you have learned so far will go a long way, but you will also need to learn new tools on your own, because that is an essential part of learning how to code. Visit <a href="rlearn.html">R resources</a> often!</p>
+</section>
+<section id="exploratory-data-analysis-eda" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Exploratory data analysis (EDA)</h1>
+<p>EDA is not a formal process with a strict set of rules. More than anything, EDA is a state of mind. Your goal during EDA is to develop <em><em>an understanding of your data</em></em>.</p>
+<p>During the initial phases of EDA you should feel free to investigate every idea that occurs to you. Some of these ideas will pan out, and some will be dead ends. As your exploration continues, you will home in on a few particularly productive areas that you’ll eventually write up and communicate to others.</p>
+<p>EDA involves exploring a dataset in three<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> ways:</p>
+<ol type="1">
+<li><p>Identifying missing values and deciding how to deal with them.</p></li>
+<li><p>Visualizing a dataset using charts.</p></li>
+<li><p>Summarizing a dataset using descriptive statistics.</p></li>
+</ol>
+<p>The report you will compile should contain four sections (see <a href="#sec-report" class="quarto-xref">Section&nbsp;3</a>).</p>
+<section id="load-view-the-data-deal-with-missing-data" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="load-view-the-data-deal-with-missing-data"><span class="header-section-number">2.1</span> Load &amp; View the Data &amp; Deal with Missing Data</h2>
+<p>This step involves three main tasks: a) getting the dataset into R, b) making sure that it is being read properly and if needed make changes to account for missing data, c) have that first look at your data to understand how it is structured or being understood by R. <em><em>You should narrate what you are doing before each chunk of code.</em></em></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Narrate everything! Code and comments related to code go in your code chunks. Everything else explaining your process is text, not code, and should be outside code chunks.</p>
+</div>
+</div>
+<p>Look at the spreadsheet and the associated README file, try to understand what’s in it, and decide how you will read it into R. We learned about some ways to do this in labs and DataCamp, and there are many others.</p>
+<p>Once the dataset is in R, identify any missing data in the datasets and assess whether they are being handled properly or not and, if not, change your code accordingly.</p>
+<p>This step also involves having that first look at your data.frame (or matrix). What does it look like? Which R data structure is best suited for this (matrix, data.frame, etc)? Does the dataset respect the rules of what should be the organization of a dataset? (rows are individual observations; columns are variables of interest) What are the dimensions of this dataset? You should assess this before and after deadline with missing data.</p>
+</section>
+<section id="sec-plots" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-plots"><span class="header-section-number">2.2</span> Visualizing the dataset using charts</h2>
+<p>This step involves deciding what types of visualizations make sense for your data and even any changes you make to your initial plots once you’ve made a first plot, and so on. What are the variables? What type of data are they? what types of plots and summaries are appropriate and which ones will help you answer the questions above?</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Not everything that is a number is a numeric variable
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Remember: not everything that is a number is a numeric variable, and the same goes for other types of variables. We covered the do-s and don’ts of data visualization in class and labs.</p>
+</div>
+</div>
+</div>
+<p>As outlined above, you should <em>narrate</em> what you are doing before each chunk of code.</p>
+</section>
+<section id="sec-stats" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-stats"><span class="header-section-number">2.3</span> Summarizing the dataset using descriptive statistics</h2>
+<p>This step involves one main task: summarising the data based on the types of variables it has.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Let the data guide you
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Remember: let the data type guide the visualization and summary processes! Since the question has to do with effects of different treatments on macrophage feeding habits, you will need to somehow summarise the observations for each of the groups/treatments.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-disc" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-disc"><span class="header-section-number">2.4</span> Discussion</h2>
+<p>Although your report will not include proper statistical testing of hypotheses, I want you to do your best in terms of interpreting your exploratory data analysis.</p>
+<p>The discussion should include:</p>
 <ul>
-<li>Understand the major goal of statistics.</li>
-<li>Distinguish between a sample and a population.</li>
-<li>Distinguish between an estimate and a parameter.</li>
-<li>Identify why estimates from samples may deviate from the parameters of populations.</li>
-<li>Identify the properties of a good sample.</li>
-<li>Describe the differences between observational and experimental studies.</li>
-<li>Identify whether a variable is numeric or categorical (and subtypes).</li>
-<li>Distinguish between sampling bias and sampling error.</li>
-<li>Distinguish between accuracy and precision and how these terms relate to sampling bias and sampling error.</li>
-<li>Understand the distinction between the term “population” in a statistical and a biological context.</li>
-<li>Distinguish between correlation and causation.</li>
+<li>Quick recap of your main observations</li>
+<li>Interpreting what these observations say about the questions you are trying to answer.</li>
+<li>Limitations/future studies: include any thoughts you have about what could be interesting to include in this experiment, what are the limitations, etc.</li>
 </ul>
 </section>
-<section id="key-terms" class="level1">
-<h1>Key terms</h1>
-<p>You should be able to explain and apply these concepts in their relevant concepts. Try to define them below with your own words. Then look them up and check.</p>
-<p><strong>Population (statistical):</strong> a collection of all individuals of a circumscribed type, or a generative process from which we can generate samples.</p>
-<p><strong>Sample:</strong> a subset of a population – individuals we measure.</p>
-<p><strong>Parameter:</strong> a true measure of a population.</p>
-<p><strong>Estimate:</strong> a guess at a parameter that is made from a finite sample.</p>
-<p><strong>Estimation:</strong> Estimation is the process of inferring an unknown quantity of a population using sample data.</p>
-<p><strong>Sampling error:</strong> describes the deviation between parameter and estimate attributable to the finite process of sampling.</p>
-<p><strong>Sampling bias:</strong> describes the deviation between parameter and estimate attributable to non-representative sampling.</p>
-<p><strong>Independence:</strong> samples are independent if the probability that one individual is studied is unrelated to the probability that any other individual is studied.</p>
-<p><strong>Explanatory variables:</strong> variables we think underlie or are associated with the biological process of interest.</p>
-<p><strong>Response variables:</strong> the outcome we aim to understand.</p>
-<p><strong>Quantitative variables:</strong> can be continuous or discrete.</p>
-<p><strong>Continuous variables:</strong> can assume any value in some possible unbounded interval of real numbers. Common examples: height, temperature, volume, weight, length. They arise from measurement and if the measuring instrument can be improved, more precision in the measurement can be achieved.</p>
-<p><strong>Discrete variables:</strong> assume only isolated values. Examples: trees per hectare, arms per sea star. They arise from counting.</p>
-<p><strong>Categorical variables:</strong> are qualitative data. Can be nominal or ordinal.</p>
-<p><strong>Ordinal variables:</strong> not measured (categorical) but have ordering nonetheless. For example: ranking of political candidates by voters, ordering and ranking students by height without actually measuring their heights. The rank value has no inherent meaning outside the “order” they provide. A candidate ranked as #2 is not twice as preferable as the candidate ranked as #1.</p>
-<p><strong>Nominal variables:</strong> there is no “natural ordering” that can be assigned to the categories. Examples: species, gender, sex, genotype, phenotype, healthy/diseased, marital status.</p>
 </section>
-<section id="supporting-materials-for-learning" class="level1">
-<h1>Supporting Materials for Learning</h1>
+<section id="sec-report" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> How to structure your report</h1>
+<p>Your report should have at least the following sections. You may use subheadings as well.</p>
 <ul>
-<li>Ch.1 + Interleaf 1 from textbook.</li>
+<li><p><strong>Background:</strong> give some information (in your own words) about the experiment and about the format of the dataset in the spreadsheet.</p></li>
+<li><p><strong>Exploratory data analysis:</strong> this includes the visualizations and descriptive statistics. Subheadings may come in handy here. This is the core part of your report. See <a href="#sec-plots" class="quarto-xref">Section&nbsp;2.2</a> and <a href="#sec-stats" class="quarto-xref">Section&nbsp;2.3</a>.</p></li>
+<li><p><strong>Discussion:</strong> (see <a href="#sec-disc" class="quarto-xref">Section&nbsp;2.4</a>)</p></li>
+<li><p><strong>References:</strong> include a reference section. There are no stringent formatting needs here. See below.</p></li>
 </ul>
 </section>
-<section id="key-points" class="level1">
-<h1>Key points</h1>
+<section id="what-to-cite-and-how-to-cite-it" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> What to cite and how to cite it</h1>
+<p><strong>Sharing/Reusing Code</strong></p>
+<p>There is a huge volume of code available on the web to solve any number of problems. You <strong>should</strong> online resources (e.g.&nbsp;StackOverflow, R-bloggers) to help you troubleshoot errors or learn new tools. You will not be penalized for searching for and/or recycling code as long as the source is explicitly cited (see below).</p>
+<p>The format of the citation is not going to be evaluated strictly but you must cite them and include: a link (if available), who (person, article, blog post, etc), when (approximate is fine), what (how did this person/AI/post) help you.personal communication (if this came from a conversation).</p>
+<p>For example, to cite this thread on Stack Overflow, and a particularly good answer in said threat<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, you would format it like this:</p>
+<p>Holcombe, A. How to change legend title in ggplot2? Retrieved October 10, 2025, from <a href="https://stackoverflow.com/questions/14622421/how-to-change-legend-title-in-ggplot">https://stackoverflow.com/questions/14622421/how-to-change-legend-title-in-ggplot</a></p>
+<p>And cite it in-text as (Holcombe, 2020).</p>
+<p>To cite a discussion with a classmate/TA:</p>
+<p>Cavalieri, N. (2025, October 25). Personal communication. Helped clarify how to change colors in boxplots.</p>
+<p>And cite in-text as (Cavalieri, 2025).</p>
+<p>To cite an interaction with an AI such as chatGPT, make it clear what the query was.</p>
+<section id="llmsai" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="llmsai"><span class="header-section-number">4.1</span> LLMs/AI</h2>
+<p>If you do use these tools, this is what is allowed:</p>
 <ul>
-<li><p>Most of statistics revolves around <strong>estimating values</strong> of <strong>population parameters based on samples</strong>, measuring the <strong>uncertainty of our estimates</strong>, and <strong>testing hypotheses</strong> about the parameters of interest based on our sample(s).</p></li>
-<li><p>Biostatistics lies at the intersection of critical thinking, thinking with numbers, and biology.</p></li>
-<li><p>Biostatistics practices involve thinking of a motivation or biological question, the experiments that have been or could be done and/or data that could be collected to answer such a question, designing experiments that could help answer the question, assessing whether results (based on samples) support interesting conclusions about the population of interest.</p></li>
-<li><p>To a statistician, the TRUTH is a population – a collection of all individuals of a circumscribed type (e.g.&nbsp;all grasshoppers in North America), or a process for generating these individuals (see note below). We characterize a population by its parameters (e.g.&nbsp;its TRUE mean, or its TRUE variance).</p></li>
-<li><p>However, it is often impractical or impossible to study every individual in a population. As such, we often deal with a sample – a subset of a population. We characterize a sample by taking an estimate of population parameters.</p></li>
-<li><p>Parameters are constants. Estimates are random variables. Because of this, estimates are always prone to sampling error.</p></li>
-<li><p>So a major goal of a statistical analysis is how to go from conclusions about a sample which we can measure and observe, to the population(s) we care about. In doing so we must worry about random differences between a sample and a population (known as Sampling Error), as well as any systematic issues in our sampling or measuring procedure which will cause estimates to reliably differ from the population (known as Sampling Bias).</p></li>
-<li><p>Estimates of any sample will differ somewhat from population parameters by chance sampling and/or imprecise measurement. This is why we always consider and report uncertainty in estimates and note that chance can contribute to any result. Much of this course focuses on acknowledging and accommodating sampling error. We can reliably decrease sampling error by increasing the sample size. Note that despite its name, sampling error does not imply that the researcher made a mistake.</p></li>
-<li><p>There are many ways for samples to systematically deviate from the population (bias). For example: volunteer bias, samples of convenience, and survivorship bias (in which survivors differ from a population in critical ways).</p></li>
-<li><p>The third major goal of statistics (in addition to estimation and hypothesis testing) is inferring causation. Causation cannot be inferred from correlation alone. Experimental evidence from carefully planned experiments is necessary.</p></li>
-<li><p>A probability distribution represents the proportion of a population with a given value. The frequency distribution represents the number of times a value occurs in a sample. Ideally, the frequency distribution from an unbiased sample should give you a decent estimate for the probabilities that pertain to the population. Understanding how much your sample gives you a good picture of the population is a big part of the challenge.</p></li>
-<li><p>In a random sample, each member of a population has an equal and independent chance of being selected.</p></li>
-<li><p>Samples are independent if the probability that one individual is studied is unrelated to the probability that any other individual is studied.</p></li>
-<li><p>Sampling does not always mean taking a subsample from a larger population. For example, in an experiment we interfere with a system and see how this intervention changes some outcome, or in flipping a coin we generate a new outcome that had not yet happened. Nonetheless, we can use the metaphor of sampling in all of these cases.</p></li>
-<li><p>Different types of data summaries, plots, and statistical tests are applicable to different types of variables.</p></li>
-<li><p>The distinction between an experimental and an observational experimental study is not about the equipment used or the lab vs.&nbsp;the field. For example, comparing patterns of methylation between live bearing and egg laying species of fish is an observation, not an experiment, as we did not randomly assign live-bearing or egg-laying to fish in this study.</p></li>
-<li><p>When conducting an experiment, the treatment variable (the one manipulated by the researcher) is the explanatory variable, and the measured effect of the treatment is the response variable.</p></li>
-<li><p>An association (or correlation) between variables is a powerful clue that there may be a causal relationship between those variables.</p></li>
-<li><p>The observation of correlation between two variables, even if statistically significant, cannot be the sole basis to infer causation.</p></li>
-<li><p>For example, the finding that people who smoke are more likely to get cancer comes from many observational studies. In an observational study, treatments are not randomly assigned to individuals. Therefore, confounding variables – unmodelled variables which distort the relationship between explanatory and response variables – can bias our interpretation. A simple association between smoking and lung cancer might suggest smoking causes lung cancer, or both are caused by stress, or genetics or whatever. We therefore must show extreme caution when attempting to learn about causation from observational studies. (Brandvain 2022).</p></li>
-<li><p>However, some caution is warranted here – a causal relationship in a controlled experiment under specified settings may not imply a causal relationship in nature. For example, exceptionally high doses of a pesticide may cause squirrels to die, but this does not mean that the smaller dose of insecticide found around farm fields is responsible for squirrel death.</p></li>
-<li><p>Experiments can also introduce bias via artifacts. E.g. the placebo effect. Appropriate controls are, therefore, critical.</p></li>
+<li>to brainstorm ideas</li>
+<li>to decode cryptic error messages or explain why they might have occurred</li>
+<li>to ask specific questions about R-language related things like function parameters, etc.</li>
 </ul>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Brandvain, Y. (2022). Applied Biostats. Bookdown. https://bookdown.org/ybrandvain/Applied_Biostats_2022/</p>
-<p>Whitlock, M., &amp; Schluter, D. (2020). The analysis of biological data. Macmillan. https://whitlockschluter3e.zoology.ubc.ca/</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>You may <em><em>not</em></em> use AI for:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>writing any portion of your report for you.</li>
+<li>writing your code for you.</li>
+</ul>
+</div>
+</div>
+<p>Don’t forget, your instructor, TA, and coursemates are here to help you! Collaborating is very much encouraged (as long as you don’t plagiarize), and pretty fun.</p>
+<p>All of the allowed uses must be properly cited. Recycled code that is not explicitly cited will be treated as plagiarism. Do not hesitate to ask if you are unsure what constitutes “direct use” or “substantive inspiration”.</p>
+<p>If you do use LLMs for a coding assignment, you must include citations for each instance where you used it, including the prompt you used.</p>
+<p>For example:</p>
+<p>ChatGPT, Oct 10th 2025. My query was: “can you tell me a funny reason why collaborating with people on writing R code is better than using AI to do it?”</p>
+</section>
+</section>
+<section id="evaluation" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Evaluation</h1>
+<p>You will be submitting 2 files:</p>
+<ul>
+<li>an Rmarkdown script that will include your text and your R code — all in one document, AND</li>
+<li>the compiled PDF that your R markdown script will generate.</li>
+</ul>
+<p>Finally, I am providing you with a template for this assignment in the Rstudio Cloud project titled Coding_Assignment_1. The assignment will be graded using the rubric described below. Effort will be rewarded. When in doubt, be as descriptive/detailed/explicit as you can!</p>
+<p>What will be evaluated:</p>
+<ul>
+<li>Your R Markdown (.Rmd) file and the PDF that results from compiling it. You will upload the PDF into Moodle under Coding Assignment 1.</li>
+<li>Your inclusion of each of the sections mentioned here and outlined in the R markdown template file I am providing.</li>
+<li>Running your code from top to bottom should allow me to recreate your results. I will test this by running your code within your copy of the Posit Cloud project, so make sure the file is there, especially if you have modified it in any way.</li>
+<li>The plots and descriptive statistics should be appropriate for the type of data.</li>
+<li>The report must attempt to answer the questions outlined.</li>
+</ul>
+</section>
+<section id="instructions-for-resubmission" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Instructions for resubmission</h1>
+<p>If your grade was less than 90% in this assignment, you may resubmit it based on my feedback. The final grade will be the mean of both attempts.</p>
+<ul>
+<li>Make a new Markdown adding _v2.Rmd at the end. Leave a copy of the markdown in the Posit Cloud space for this assignment.</li>
+<li>Knit the markdown into a PDF.</li>
+<li>Upload both files by the new due date: TBD</li>
+</ul>
+<div class="callout-import">
+<p>Very important: write a document separately or add it as a cover to your PDF where you explain IN DETAIL what you changed in this second version. I don’t have time to re-grade the assignment if you don’t tell me what to look for.</p>
+</div>
+</section>
+<section id="learn" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Learn more about EDA and R markdown</h1>
+<ul>
+<li><p>This online book chapter describes EDA in R pretty nicely: (<a href="https://fralfaro.github.io/r4ds-book/07_exploratory_data_analysis/">https://fralfaro.github.io/r4ds-book/07_exploratory_data_analysis/</a>).</p></li>
+<li><p>This datacamp course is aptly called “EDA in R” (<a href="https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r">https://app.datacamp.com/learn/courses/exploratory-data-analysis-in-r</a>)</p></li>
+<li><p>This article is also very good and, even though they are using python, the same principles apply (<a href="https://towardsdatascience.com/a-data-scientists-essential-guide-to-exploratory-data-analysis-25637eee0cf6">https://towardsdatascience.com/a-data-scientists-essential-guide-to-exploratory-data-analysis-25637eee0cf6</a>)</p></li>
+<li><p>R markdown: while we have been going over the basics in labs and datacamp assignments, you will need to learn a lot as you go. See more learning tips in <a href="rlearn.html">R resources</a>.</p></li>
+</ul>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In molecular biology, a batch effect occurs when non-biological factors in an experiment cause changes in the data produced by the experiment. The background information document provides important information about the biological replicates used in this study.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Technically, four, because the first thing to do is to clean up the data, but we haven’t learned that yet!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I am saying this name just as an example as it was the name of the user with the top reply in that thread.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -691,4 +809,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/handouts/Handout1.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bbitarello/b215f2025/blob/main/CodingAssignments/CA1.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
