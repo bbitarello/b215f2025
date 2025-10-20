@@ -469,11 +469,18 @@
     "text": "Key points to understanding the Monty Hall puzzle:\n\nTwo choices are 50-50 when you know nothing about them\nMonty helps us by “filtering” the bad choices on the other side.\nIt’s a choice of a random guess and the “Champ door” that’s the best on the other side.\nIn general, more information means you re-evaluate your choices."
   },
   {
-    "objectID": "slides/Probability4.html#solution",
-    "href": "slides/Probability4.html#solution",
+    "objectID": "slides/Probability4.html#monty-hall-one-solution",
+    "href": "slides/Probability4.html#monty-hall-one-solution",
     "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution"
+    "section": "Monty Hall: One Solution",
+    "text": "Monty Hall: One Solution"
+  },
+  {
+    "objectID": "slides/Probability4.html#monty-hall-one-solution-1",
+    "href": "slides/Probability4.html#monty-hall-one-solution-1",
+    "title": "3.4.Probability",
+    "section": "Monty Hall: One Solution",
+    "text": "Monty Hall: One Solution"
   },
   {
     "objectID": "slides/Probability4.html#section",
