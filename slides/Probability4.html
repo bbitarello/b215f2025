@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.24">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-10-08">
+<meta name="dcterms.date" content="2025-10-20">
 <meta name="keywords" content="Probability Rules">
 <title>BIOL B215: Biostatistics with R – 3.4.Probability</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -130,7 +130,6 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block"><h1 class="title">3.4.Probability</h1>
-  <p class="subtitle">Acknowledgments: many code snippets borrowed from Y. Brandvain</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -140,34 +139,78 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-10-08</p>
+  <p class="date">2025-10-20</p>
+</section><section id="recap" class="slide level2 dark-theme center"><h2>Recap</h2>
+</section><section id="short-summary-multiplication-principle" class="slide level2"><h2>Short summary: Multiplication Principle</h2>
+<ul>
+<li><p>The probability of <strong>AND</strong> involves multiplication: <span class="math inline">\(P[A \&amp; B]=P[A]\times P[B|A]\)</span></p></li>
+<li><p>If the two are independent : <span class="math inline">\(P[B|A] = P[B]\)</span></p></li>
+<li><p>Therefore, for independent events: <span class="math inline">\(P[A \&amp; B]= P[A]\times P[B]\)</span></p></li>
+</ul></section><section id="short-summary-addition-principle" class="slide level2"><h2>Short summary: Addition Principle</h2>
+<p>The probability of A <strong>OR</strong> B involves addition:</p>
+<p><span class="math inline">\(P[A \text{ OR } B] = P[A] + P[B] -  P[A  \text{ &amp; } B]\)</span></p>
+<ul>
+<li>if the two are mutually exclusive, <span class="math inline">\(P[A  \text{ &amp; } B] = 0\)</span>, and therefore <span class="math inline">\(P[A \text{ or } B] = P[A] + P[B]\)</span>
+</li>
+</ul></section><section id="bayes-theorem" class="slide level2"><h2>Bayes’ Theorem</h2>
+<p><span class="math display">\[\huge{P[A|B] = \frac{P[B|A]\times P[A]}{P[B]}}\]</span></p>
 </section><section id="challenge-rare-disease-diagnosis" class="slide level2"><h2>Challenge: Rare Disease Diagnosis</h2>
 <div class="goal">
 <p>What proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?</p>
 <ul>
 <li><p>About 20 in 1000 women (ages 40-49) have breast cancer.</p></li>
-<li><p>A mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.</p></li>
-<li><p>A mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.</p></li>
+<li><p>A mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer. (this is called a true positive” result)</p></li>
+<li><p>A mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer. (this is called a “false positive” result)</p></li>
 </ul>
 </div>
 <p>[work in pairs]</p>
 
 <aside><div>
-<p>Tip: use a probability tree</p>
-</div></aside></section><section id="solution" class="slide level2"><h2>Solution</h2>
+<p>Tip: use a probability tree or Bayes’ theorem</p>
+</div></aside></section><section id="month-hall" class="slide level2 dark-theme center"><h2>Month Hall</h2>
+</section><section id="the-problem" class="slide level2"><h2>The problem:</h2>
+<ul>
+<li>You are a contestant in a show and you are presented with 3 doors. You must choose one door and you get to keep what’s behind it. Behind one of the doors is a fancy new car</li>
+<li>You pick one door (but the host doesn’t open it yet)</li>
+<li>At this point the host chooses one of the other two doors and opens it. There is a goat behind it.</li>
+<li>He now offers you the chance to choose the other door (the one you didn’t choose and hasn’t been opened yet). What do you do?</li>
+</ul>
 
-<img data-src="images/clipboard-62078940.png" class="r-stretch"></section><section id="solution-1" class="slide level2"><h2>Solution</h2>
+<img data-src="images/clipboard-1597478462.png" class="r-stretch"></section><section id="cont." class="slide level2"><h2>Cont.</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">Scenario:</a></li>
+<li><a href="#tabset-1-2">Poll results</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ul>
+<li>There are no tricks here, just probabilityAll doors look identical. The host (who knows which door has the car) has a perfect poker face and reveals nothing</li>
+<li>Because the host knows where the car is, he would never have chosen the door that has the car.</li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<p><a href="https://piazza.com/class/mekmad7xwqw14d/post/13" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/13</a></p>
+</div>
+</div>
+</div>
 
-<img data-src="images/clipboard-1659772672.png" class="r-stretch"></section><section id="solution-2" class="slide level2" data-visibilit="hidden"><h2>Solution</h2>
-
-<img data-src="images/clipboard-874207709.png" width="423" class="r-stretch"><p><span class="math inline">\(P[+]=0.0184+0.098=0.1164\)</span></p>
-<p><span class="math inline">\(P[C\&amp;+]=0.0184\)</span></p>
-<p><span class="math inline">\(P[C|+]=P[C \text{ &amp; } +]/P[+]=0.158\)</span></p>
-</section><section id="solution-2-1" class="slide level2"><h2>Solution 2</h2>
-
-<img data-src="images/clipboard-1219818132.png" class="r-stretch"></section><section id="bayes-theorem-on-the-beach" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
+<aside><div>
+<p>Last chance:<a href="https://piazza.com/class/mekmad7xwqw14d/post/13" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/13</a></p>
+</div></aside></section><section id="key-points-to-understanding-the-monty-hall-puzzle" class="slide level2"><h2>Key points to understanding the Monty Hall puzzle:</h2>
+<ul>
+<li>Two choices are 50-50 when you know nothing about them</li>
+<li>Monty helps us by “filtering” the bad choices on the other side.</li>
+<li>It’s a choice of a random guess and the “Champ door” that’s the best on the other side.</li>
+<li>In general, more information means you re-evaluate your choices.</li>
+</ul></section><section id="section" class="slide level2 center"><h2></h2>
+<div class="r-fit-text">
+<p>The fatal flaw in the Monty Hall paradox is not taking Monty’s filtering into account, thinking the chances are the same before and after.</p>
+<p>But the goal isn’t to understand this puzzle — it’s to realize how subsequent actions &amp; information challenge previous decisions.</p>
+</div>
+</section><section id="bayes-theorem-on-the-beach" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="454"></a></p>
+<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="400"></a></p>
 <figcaption>From: https://xkcd.com/1236/</figcaption></figure>
 </div>
 </section><section id="probability-wrap-up" class="slide level2"><h2>Probability Wrap Up</h2>
@@ -175,33 +218,17 @@ Bárbara D. Bitarello
 <li><p>Probability theory provides a foundation for rigorous statistics.</p></li>
 <li><p>Application of simple rules of probability facilitates the generation of more complex predictions.</p></li>
 <li><p>We can use Bayes’ Theorem to translate between probabilistic statements</p></li>
-</ul></section><section id="short-summary-multiplication-principle" class="slide level2"><h2>Short summary: Multiplication Principle</h2>
-<ul>
-<li><p>The probability of AND involves multiplication: P[A &amp; B] = P[A] × P[B | A]</p></li>
-<li><p>If the two are independent : P[B | A] = P[B]</p></li>
-<li><p>Therefore, for independent events: P[A &amp; B] = P[A] × P[B]</p></li>
-</ul></section><section id="bayes-theorem-on-the-beach-1" class="slide level2"><h2>Bayes’ Theorem On the Beach</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/1236/"><img data-src="images/clipboard-665297176.png" width="454"></a></p>
-<figcaption>From: https://xkcd.com/1236/</figcaption></figure>
-</div>
-</section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>
+</ul>
 
-<img data-src="images/forrestgump.png" alt="&quot;Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section><section id="key-learning-goals" class="slide level2"><h2>Key Learning Goals</h2>
-<ul>
-<li>Understand once and for all that statistics and probability are NOT intuitive</li>
-<li>Understand why probability theory is the foundation for statistical reasoning.</li>
-<li>Think addition upon hearing “OR”.</li>
-<li>Think multiplication upon hearing “AND”.</li>
-<li>Calculate probabilities of complex events by using standard rules of probability theory.</li>
-<li>Explain probabilities and proportions.</li>
-<li>Explain the binomial – when would you use it</li>
-<li>Understand the binomial distribution and connect it to simple probability rules.</li>
-</ul></section><section id="models" class="slide level2"><h2>Models</h2>
+<aside><div>
+<p>Probability handout (Moodle) has more practice questions.</p>
+</div></aside></section><section id="section-1" class="slide level2"><h2></h2>
+
+<img data-src="images/forrestgump.png" alt="&quot;Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section><section id="models" class="slide level2" data-visibilty="hidden"><h2>Models</h2>
 <blockquote>
 <p>“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association</p>
 </blockquote>
-</section><section id="probabilities-as-predictions-from-a-model" class="slide level2"><h2>Probabilities as predictions from a model</h2>
+</section><section id="probabilities-as-predictions-from-a-model" class="slide level2" data-visibilty="hidden"><h2>Probabilities as predictions from a model</h2>
 <div class="goal">
 <p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
 </div>
@@ -209,7 +236,7 @@ Bárbara D. Bitarello
 <li class="fragment"><p>A model is a simplified description of a (usually complex) mechanism.</p></li>
 <li class="fragment"><p>Let’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.</p></li>
 <li class="fragment"><p>Let’s create a model!</p></li>
-</ul></section><section id="creatingdefining-the-model" class="slide level2"><h2>Creating/defining the model</h2>
+</ul></section><section id="creatingdefining-the-model" class="slide level2" data-visibilty="hidden"><h2>Creating/defining the model</h2>
 <ul>
 <li class="fragment">Each ovum has an X chromosome; none have Y chromosomes: <span class="math inline">\(p[X]=1; p[Y]=0\)</span>
 </li>
@@ -220,7 +247,7 @@ Bárbara D. Bitarello
 <li class="fragment">If winning sperm has X chromosome (<span class="math inline">\(p=1/2\)</span>), joined with another X from ovum (<span class="math inline">\(p=1\)</span>) would result in biological sex as determined by XX as female.</li>
 <li class="fragment">If winning sperm has Y chromosome (<span class="math inline">\(p=1/2\)</span>), joined with an X from ovum (<span class="math inline">\(p=1\)</span>) will result in XY (male).</li>
 <li class="fragment">Miscarriages are equally likely for XX or XY fetuses</li>
-</ul></section><section id="creatingdefining-the-model-1" class="slide level2"><h2>Creating/defining the model</h2>
+</ul></section><section id="creatingdefining-the-model-1" class="slide level2" data-visibilty="hidden"><h2>Creating/defining the model</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <div class="goal">
@@ -711,7 +738,7 @@ Bárbara D. Bitarello
 </div>
 </div>
 </div></div>
-</section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model" class="slide level2"><h2>Same problem as before but based on data rather than a model</h2>
+</section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model" class="slide level2" data-visibilty="hidden"><h2>Same problem as before but based on data rather than a model</h2>
 <div class="goal">
 <p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
 </div>
@@ -720,21 +747,21 @@ Bárbara D. Bitarello
 <li class="fragment"><p>We don’t need to know why more boys were born</p></li>
 <li class="fragment"><p>We don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)</p></li>
 <li class="fragment"><p>These proportions have been consistent across countries for quite a while</p></li>
-</ul></section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model-1" class="slide level2"><h2>Same problem as before but based on data rather than a model</h2>
+</ul></section><section id="same-problem-as-before-but-based-on-data-rather-than-a-model-1" class="slide level2" data-visibilty="hidden"><h2>Same problem as before but based on data rather than a model</h2>
 <div class="goal">
 <p>A woman wants to have a baby and wants to know the chance that her baby will be a boy.</p>
 </div>
 <ul>
 <li class="fragment">Based on these data, the probability of having a boy is <span class="math inline">\(51.7\%\)</span> (or <span class="math inline">\(\sim0.517\)</span>)</li>
 <li class="fragment">In any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value.</li>
-</ul></section><section id="case-study" class="slide level2"><h2>Case Study</h2>
+</ul></section><section id="case-study" class="slide level2" data-visibilty="hidden"><h2>Case Study</h2>
 <div class="goal">
 <p>Gelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).</p>
 </div>
 <ul>
 <li><p>Results: Countries with lowest per-capita incidence – these tended to be countries with small populations</p></li>
 <li><p>Hypothesis: perhaps something to do with rural environments in those countries?</p></li>
-</ul></section><section id="case-study-1" class="slide level2"><h2>Case Study</h2>
+</ul></section><section id="case-study-1" class="slide level2" data-visibilty="hidden"><h2>Case Study</h2>
 <div class="goal">
 <p>Random variation can have a greater effect on “averages” within small groups than within small groups.</p>
 </div>

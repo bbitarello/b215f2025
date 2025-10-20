@@ -336,39 +336,74 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
+    "objectID": "slides/Probability4.html#recap",
+    "href": "slides/Probability4.html#recap",
+    "title": "3.4.Probability",
+    "section": "Recap",
+    "text": "Recap"
+  },
+  {
+    "objectID": "slides/Probability4.html#short-summary-multiplication-principle",
+    "href": "slides/Probability4.html#short-summary-multiplication-principle",
+    "title": "3.4.Probability",
+    "section": "Short summary: Multiplication Principle",
+    "text": "Short summary: Multiplication Principle\n\nThe probability of AND involves multiplication: \\(P[A \\& B]=P[A]\\times P[B|A]\\)\nIf the two are independent : \\(P[B|A] = P[B]\\)\nTherefore, for independent events: \\(P[A \\& B]= P[A]\\times P[B]\\)"
+  },
+  {
+    "objectID": "slides/Probability4.html#short-summary-addition-principle",
+    "href": "slides/Probability4.html#short-summary-addition-principle",
+    "title": "3.4.Probability",
+    "section": "Short summary: Addition Principle",
+    "text": "Short summary: Addition Principle\nThe probability of A OR B involves addition:\n\\(P[A \\text{ OR } B] = P[A] + P[B] -  P[A  \\text{ & } B]\\)\n\nif the two are mutually exclusive, \\(P[A  \\text{ & } B] = 0\\), and therefore \\(P[A \\text{ or } B] = P[A] + P[B]\\)"
+  },
+  {
+    "objectID": "slides/Probability4.html#bayes-theorem",
+    "href": "slides/Probability4.html#bayes-theorem",
+    "title": "3.4.Probability",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\\[\\huge{P[A|B] = \\frac{P[B|A]\\times P[A]}{P[B]}}\\]"
+  },
+  {
     "objectID": "slides/Probability4.html#challenge-rare-disease-diagnosis",
     "href": "slides/Probability4.html#challenge-rare-disease-diagnosis",
     "title": "3.4.Probability",
     "section": "Challenge: Rare Disease Diagnosis",
-    "text": "Challenge: Rare Disease Diagnosis\n\nWhat proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?\n\nAbout 20 in 1000 women (ages 40-49) have breast cancer.\nA mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer.\nA mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer.\n\n\n[work in pairs]\n\n\nTip: use a probability tree"
+    "text": "Challenge: Rare Disease Diagnosis\n\nWhat proportion of women (ages 40-49) whose 1st mammogram suggests they have breast cancer actually do have breast cancer?\n\nAbout 20 in 1000 women (ages 40-49) have breast cancer.\nA mammogram will reliably detect breast cancer in ~ 920 of every 1000 patients who truly have cancer. (this is called a true positive” result)\nA mammogram will incorrectly diagnose 100 of every 1000 cancer free patients as having cancer. (this is called a “false positive” result)\n\n\n[work in pairs]\n\n\nTip: use a probability tree or Bayes’ theorem"
   },
   {
-    "objectID": "slides/Probability4.html#solution",
-    "href": "slides/Probability4.html#solution",
+    "objectID": "slides/Probability4.html#month-hall",
+    "href": "slides/Probability4.html#month-hall",
     "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution"
+    "section": "Month Hall",
+    "text": "Month Hall"
   },
   {
-    "objectID": "slides/Probability4.html#solution-1",
-    "href": "slides/Probability4.html#solution-1",
+    "objectID": "slides/Probability4.html#the-problem",
+    "href": "slides/Probability4.html#the-problem",
     "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution"
+    "section": "The problem:",
+    "text": "The problem:\n\nYou are a contestant in a show and you are presented with 3 doors. You must choose one door and you get to keep what’s behind it. Behind one of the doors is a fancy new car\nYou pick one door (but the host doesn’t open it yet)\nAt this point the host chooses one of the other two doors and opens it. There is a goat behind it.\nHe now offers you the chance to choose the other door (the one you didn’t choose and hasn’t been opened yet). What do you do?"
   },
   {
-    "objectID": "slides/Probability4.html#solution-2",
-    "href": "slides/Probability4.html#solution-2",
+    "objectID": "slides/Probability4.html#cont.",
+    "href": "slides/Probability4.html#cont.",
     "title": "3.4.Probability",
-    "section": "Solution",
-    "text": "Solution\n\n\\(P[+]=0.0184+0.098=0.1164\\)\n\\(P[C\\&+]=0.0184\\)\n\\(P[C|+]=P[C \\text{ & } +]/P[+]=0.158\\)"
+    "section": "Cont.",
+    "text": "Cont.\n\n\nScenario:\nPoll results\n\n\n\n\nThere are no tricks here, just probabilityAll doors look identical. The host (who knows which door has the car) has a perfect poker face and reveals nothing\nBecause the host knows where the car is, he would never have chosen the door that has the car.\n\n\n\nhttps://piazza.com/class/mekmad7xwqw14d/post/13\n\n\n\n\n\nLast chance:https://piazza.com/class/mekmad7xwqw14d/post/13"
   },
   {
-    "objectID": "slides/Probability4.html#solution-2-1",
-    "href": "slides/Probability4.html#solution-2-1",
+    "objectID": "slides/Probability4.html#key-points-to-understanding-the-monty-hall-puzzle",
+    "href": "slides/Probability4.html#key-points-to-understanding-the-monty-hall-puzzle",
     "title": "3.4.Probability",
-    "section": "Solution 2",
-    "text": "Solution 2"
+    "section": "Key points to understanding the Monty Hall puzzle:",
+    "text": "Key points to understanding the Monty Hall puzzle:\n\nTwo choices are 50-50 when you know nothing about them\nMonty helps us by “filtering” the bad choices on the other side.\nIt’s a choice of a random guess and the “Champ door” that’s the best on the other side.\nIn general, more information means you re-evaluate your choices."
+  },
+  {
+    "objectID": "slides/Probability4.html#section",
+    "href": "slides/Probability4.html#section",
+    "title": "3.4.Probability",
+    "section": "",
+    "text": "The fatal flaw in the Monty Hall paradox is not taking Monty’s filtering into account, thinking the chances are the same before and after.\nBut the goal isn’t to understand this puzzle — it’s to realize how subsequent actions & information challenge previous decisions."
   },
   {
     "objectID": "slides/Probability4.html#bayes-theorem-on-the-beach",
@@ -382,35 +417,14 @@
     "href": "slides/Probability4.html#probability-wrap-up",
     "title": "3.4.Probability",
     "section": "Probability Wrap Up",
-    "text": "Probability Wrap Up\n\nProbability theory provides a foundation for rigorous statistics.\nApplication of simple rules of probability facilitates the generation of more complex predictions.\nWe can use Bayes’ Theorem to translate between probabilistic statements"
+    "text": "Probability Wrap Up\n\nProbability theory provides a foundation for rigorous statistics.\nApplication of simple rules of probability facilitates the generation of more complex predictions.\nWe can use Bayes’ Theorem to translate between probabilistic statements\n\n\n\nProbability handout (Moodle) has more practice questions."
   },
   {
-    "objectID": "slides/Probability4.html#short-summary-multiplication-principle",
-    "href": "slides/Probability4.html#short-summary-multiplication-principle",
+    "objectID": "slides/Probability4.html#section-1",
+    "href": "slides/Probability4.html#section-1",
     "title": "3.4.Probability",
-    "section": "Short summary: Multiplication Principle",
-    "text": "Short summary: Multiplication Principle\n\nThe probability of AND involves multiplication: P[A & B] = P[A] × P[B | A]\nIf the two are independent : P[B | A] = P[B]\nTherefore, for independent events: P[A & B] = P[A] × P[B]"
-  },
-  {
-    "objectID": "slides/Probability4.html#bayes-theorem-on-the-beach-1",
-    "href": "slides/Probability4.html#bayes-theorem-on-the-beach-1",
-    "title": "3.4.Probability",
-    "section": "Bayes’ Theorem On the Beach",
-    "text": "Bayes’ Theorem On the Beach\n\n\nFrom: https://xkcd.com/1236/"
-  },
-  {
-    "objectID": "slides/Probability4.html#thats-all-for-today",
-    "href": "slides/Probability4.html#thats-all-for-today",
-    "title": "3.4.Probability",
-    "section": "That’s all for today",
-    "text": "That’s all for today\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/Probability4.html#key-learning-goals",
-    "href": "slides/Probability4.html#key-learning-goals",
-    "title": "3.4.Probability",
-    "section": "Key Learning Goals",
-    "text": "Key Learning Goals\n\nUnderstand once and for all that statistics and probability are NOT intuitive\nUnderstand why probability theory is the foundation for statistical reasoning.\nThink addition upon hearing “OR”.\nThink multiplication upon hearing “AND”.\nCalculate probabilities of complex events by using standard rules of probability theory.\nExplain probabilities and proportions.\nExplain the binomial – when would you use it\nUnderstand the binomial distribution and connect it to simple probability rules."
+    "section": "",
+    "text": "From: makeameme.org"
   },
   {
     "objectID": "slides/Probability4.html#models",
@@ -1106,393 +1120,137 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#outline",
-    "href": "slides/DisplayingAndDescribingData.html#outline",
-    "title": "2.1.Displaying & Describing Data",
+    "objectID": "slides/Estimation.html#outline",
+    "href": "slides/Estimation.html#outline",
+    "title": "4.1.Estimation",
     "section": "Outline",
-    "text": "Outline\n\nEstimates of location\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables\n\ntoday: location and width; next class plots"
+    "text": "Outline\n\nSampling - what’s the point?\nGetting a feel for sampling\nSampling distribution (again)\n\nStandard error\nStandard error of the mean\n\n\nConfidence intervals\nCI of the mean\n\nPseudo-replication\nError bars - common mistakes"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#learning-goals",
-    "href": "slides/DisplayingAndDescribingData.html#learning-goals",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Learning Goals",
-    "text": "Learning Goals\n\nDifferentiate between estimates of location and estimates of width.\nRecognize that variability is not simply noise, but is a key parameter that can be estimated.\nBecome familiar with the most common descriptive statistics.\nKnow when the mean or median is a more appropriate summary of location.\nDistinguish between explanatory and exploratory figures.\nIdentify what makes a good graph.\nUnderstand how data types drive figure design.\nUnderstand how to make effective tables.\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
+    "objectID": "slides/Estimation.html#samples-take-their-value-by-chance",
+    "href": "slides/Estimation.html#samples-take-their-value-by-chance",
+    "title": "4.1.Estimation",
+    "section": "Samples Take Their Value by Chance",
+    "text": "Samples Take Their Value by Chance\n\nSets of samples from the same distribution can be different.\nTherefore, estimates obtained from samples from the same population can differ by chance."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#frequency-vs.-probability-distribution",
-    "href": "slides/DisplayingAndDescribingData.html#frequency-vs.-probability-distribution",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Frequency vs. Probability Distribution",
-    "text": "Frequency vs. Probability Distribution\n\n\nFrequency Distribution \n\nsample\na snapshot of actual counts of outcomes in a given sample\n\n\nProbably Distribution \n\npopulation\nusually not known so based on probability rules: it represents the theoretical probability of all possible outcomes of a random variable"
+    "objectID": "slides/Estimation.html#samples-whats-the-point",
+    "href": "slides/Estimation.html#samples-whats-the-point",
+    "title": "4.1.Estimation",
+    "section": "Samples: what’s the point?",
+    "text": "Samples: what’s the point?\n\nWe sample because we cannot measure the entire population.\nWhen we take samples, we cannot see the sampling distribution.\nStill, considering the process of sampling allows us to quantify the uncertainty in estimates.\n\n\nEstimation: from samples to parameters (hopefully)"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#descriptive-statistics",
-    "href": "slides/DisplayingAndDescribingData.html#descriptive-statistics",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\nOr summary statistics: quantities that capture important features of frequency distributions"
+    "objectID": "slides/Estimation.html#two-ways-to-conceptualize-sampling",
+    "href": "slides/Estimation.html#two-ways-to-conceptualize-sampling",
+    "title": "4.1.Estimation",
+    "section": "Two Ways to Conceptualize Sampling",
+    "text": "Two Ways to Conceptualize Sampling\nOkay, so how do we do this?\nHere are the two right* ways to think about the process of taking a sample from a population.\n\nIf you had a full population and made an estimate from a sample of size \\(n\\).\nThink about the PROCESS that generates your population data: what would a sample generated by this process look like? (e.g. flipping a coin).\n\n\nBut sometimes one is more convenient than the other."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#three-common-descriptions-of-data",
-    "href": "slides/DisplayingAndDescribingData.html#three-common-descriptions-of-data",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Three Common Descriptions of Data",
-    "text": "Three Common Descriptions of Data\n\nLocation (central tendency)\nWidth (spread)\nAssociation (correlation)"
+    "objectID": "slides/Estimation.html#some-definitions",
+    "href": "slides/Estimation.html#some-definitions",
+    "title": "4.1.Estimation",
+    "section": "Some definitions",
+    "text": "Some definitions\n\nEstimation: a process of inferring a population parameter from sample data. This estimated value is almost never exactly identical to the true parameter value.\n\n\nSampling error affects precision of estimates. It is basically inevitable because it is inherent to random sampling.\n\n\n\nNote: This unit focuses on sampling error and assumes that samples are not biased - i.e, they are random."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#measures-of-location-central-tendency",
-    "href": "slides/DisplayingAndDescribingData.html#measures-of-location-central-tendency",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Measures of location (central tendency)",
-    "text": "Measures of location (central tendency)"
+    "objectID": "slides/Estimation.html#generating-samples-from-a-population",
+    "href": "slides/Estimation.html#generating-samples-from-a-population",
+    "title": "4.1.Estimation",
+    "section": "Generating samples from a population",
+    "text": "Generating samples from a population\nIn two easy steps:\n\nTake a sample of size n.\nCalculate the parameter estimates.\n\nThis is how we do science."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#measures-of-location",
-    "href": "slides/DisplayingAndDescribingData.html#measures-of-location",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Measures of location",
-    "text": "Measures of location\n\n\nMean: The weight of your data. The average value.\nMedian: A “typical individual”. If I take an individual at random, this is the value we expect them to be closest to.\nMode: The typical individual most common value for an individual. The most likely answer for an individual selected at random."
+    "objectID": "slides/Estimation.html#example",
+    "href": "slides/Estimation.html#example",
+    "title": "4.1.Estimation",
+    "section": "Example",
+    "text": "Example"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#the-average-problem",
-    "href": "slides/DisplayingAndDescribingData.html#the-average-problem",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "The average problem",
-    "text": "The average problem\n\n“Average” is often used synonymously with mean.\n\n\nBut: medians and even modes are sometimes called an “average”.\nWhen you see the word, “average”, pay attention to which measure of location it describes.\n\n\n\nIn this course, you should use statistical terms precisely, i.e., to indicate the same consistently. So if you want to say mean, say mean, not average."
+    "objectID": "slides/Estimation.html#a-population-of-diamonds",
+    "href": "slides/Estimation.html#a-population-of-diamonds",
+    "title": "4.1.Estimation",
+    "section": "A Population of Diamonds",
+    "text": "A Population of Diamonds\nA population of 180 diamonds of different sizes and colors."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#arithmetic-mean",
-    "href": "slides/DisplayingAndDescribingData.html#arithmetic-mean",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "(Arithmetic) Mean",
-    "text": "(Arithmetic) Mean\n\nThe sum of values divided by the sample size.\n\n\\[\\bar{Y}=\\frac{\\sum_{i=1}^{n}Y_{i}}{n}\\] \n\n\n\n\n\\(\\bar{Y}\\) is the mean value of variable \\(Y\\)\n\n\n\\(\\sum\\) signified “sum”\n\n\n\n\n\\(n\\) is the number of individuals in the samples (sample size)\n\n\\(Y_{i}\\) is the observed value for the \\(i\\)-th individual\n\n\n\nExample: The mean of the set of 11 numbers: \\(1, 15,9, 16,6, 17, 10,  5, 12, 14, 13\\) is\n\\(\\bar{Y} = 1+15+9+16+6+17+10+5+12+14+13/11 = 106.1818\\)\n\n\n\nThis is the “arithmetic mean”, the one you see most often. The three pytagorean means also include the geometric mean and the harmonic mean."
+    "objectID": "slides/Estimation.html#a-sample-of-20-diamonds",
+    "href": "slides/Estimation.html#a-sample-of-20-diamonds",
+    "title": "4.1.Estimation",
+    "section": "A sample of 20 diamonds",
+    "text": "A sample of 20 diamonds\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n3\n0\n\n\ngold\n1\n5\n3\n\n\nred\n3\n3\n0"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table",
-    "href": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Practice: Mean from a frequency table",
-    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) all values and diving by \\(n_{total}\\).\n\n\n\n\n\n\n\n\nconvictions\nfrequency\n\n\n\n0\n265\n\n\n1\n49\n\n\n2\n21\n\n\n3\n19\n\n\n4\n10\n\n\n5\n10\n\n\n6\n2\n\n\n7\n2\n\n\n8\n4\n\n\n9\n2\n\n\n10\n1\n\n\n11\n4\n\n\n12\n3\n\n\n13\n1\n\n\n14\n2\n\n\n\n\nA frequency table. Data from Farrington (1994) and distributed at http://www.webapp.icpsr.umich.edu/cocoon/NACJD-STUDY/08488.xml."
+    "objectID": "slides/Estimation.html#another-sample-of-20-diamonds",
+    "href": "slides/Estimation.html#another-sample-of-20-diamonds",
+    "title": "4.1.Estimation",
+    "section": "Another sample of 20 diamonds",
+    "text": "Another sample of 20 diamonds\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n3\n1\n\n\ngold\n5\n1\n1\n\n\nred\n3\n4\n0"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table-1",
-    "href": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table-1",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Practice: Mean from a frequency table",
-    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\n\n\n\nCodeconvictions &lt;- c(0, 1, 2, 3, 4,\n    5, 6, 7, 8, 9, 10, 11, 12,\n    13, 14)\nfreqs &lt;- c(265, 49, 21, 19, 10,\n    10, 2, 2, 4, 2, 1, 4, 3, 1,\n    2)\nn_total &lt;- sum(freqs)  # 395\n\n\n\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) across all values and diving by \\(n_{total}\\).\n\n\nCode# multiply two vectors of\n# same length\n\nFinalMean &lt;- sum(convictions *\n    freqs)/n_total\nFinalMean\n\n[1] 1.126582\n\n\n\n\n\n\n\n\nA frequency table\n\nconvictions\nfrequency\nConvictionxFreq\n\n\n\n0\n265\n0\n\n\n1\n49\n49\n\n\n2\n21\n42\n\n\n3\n19\n57\n\n\n4\n10\n40\n\n\n5\n10\n50\n\n\n6\n2\n12\n\n\n7\n2\n14\n\n\n8\n4\n32\n\n\n9\n2\n18\n\n\n10\n1\n10\n\n\n11\n4\n44\n\n\n12\n3\n36\n\n\n13\n1\n13\n\n\n14\n2\n28"
+    "objectID": "slides/Estimation.html#aaaand-another",
+    "href": "slides/Estimation.html#aaaand-another",
+    "title": "4.1.Estimation",
+    "section": "Aaaand … another",
+    "text": "Aaaand … another\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n4\n1\n\n\ngold\n6\n2\n1\n\n\nred\n1\n3\n0"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#median",
-    "href": "slides/DisplayingAndDescribingData.html#median",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Median",
-    "text": "Median\n\nThe value halfway through an ordered list of observations.\n\n\nThe \\((n + 1) / 2\\)-th value for odd sized samples.\nMean of n/2 th and the \\((n + 2) / 2\\)-th value for even sized samples.\n\n\nExample: Using the same set of numbers as before (try):\n\nFirst, order the numbers: \\(1,  5,  6,  9, 10, 12, 13, 14, 15, 16, 17\\)\n\nThe \\((n + 1) / 2\\)-th value for odd sized samples: \\(12\\)"
+    "objectID": "slides/Estimation.html#one-last-sample-of-20-diamonds",
+    "href": "slides/Estimation.html#one-last-sample-of-20-diamonds",
+    "title": "4.1.Estimation",
+    "section": "One Last Sample of 20 Diamonds",
+    "text": "One Last Sample of 20 Diamonds\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n3\n2\n2\n\n\ngold\n5\n4\n1\n\n\nred\n0\n3\n0"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#mean-and-median-in-r",
-    "href": "slides/DisplayingAndDescribingData.html#mean-and-median-in-r",
-    "title": "2.1.Displaying & Describing Data",
-    "section": "Mean and Median in R",
-    "text": "Mean and Median in R\n\nCode# a vector with the numbers\nmynumbers &lt;- c(1, 15, 9, 16, 6, 17, 10, 5, 12, 14, 13)\n# mean 'manually'\nmysum &lt;- sum(mynumbers)  #sum all numbers\nl &lt;- length(mynumbers)  #number of elements in vector\nmymean &lt;- mysum/l\nmymean\n\n[1] 10.72727\n\nCode# note that you can use a built-in function for this:\nmymean2 &lt;- mean(mynumbers)\nmymean2\n\n[1] 10.72727\n\nCode# median with built-in function\nmymedian &lt;- median(mynumbers)\nmymedian\n\n[1] 12\n\nCode# median 'manually'\nmynumbers2 &lt;- sort(mynumbers)\nmynumbers2\n\n [1]  1  5  6  9 10 12 13 14 15 16 17\n\nCode# since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6\nmynumbers2[6]\n\n[1] 12"
+    "objectID": "slides/Estimation.html#sampling-diamonds-lessons-learned",
+    "href": "slides/Estimation.html#sampling-diamonds-lessons-learned",
+    "title": "4.1.Estimation",
+    "section": "Sampling Diamonds: Lessons Learned",
+    "text": "Sampling Diamonds: Lessons Learned\n\n\n“Sampling is random”\nEstimates from sampling efforts varied and did not perfectly capture the true population values. I.e, there is sampling error involved.\n\nRandom DOES NOT mean that all outcomes are equally probable. E.g.:\n\n\nThere are no LARGE RED diamonds in the population so we never sampled a LARGE RED diamond.\nThe most common diamond color in the population is gold. Gold is often the most common color in a sample."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData.html#thats-all-for-today",
-    "title": "2.1.Displaying & Describing Data",
+    "objectID": "slides/Estimation.html#the-sampling-distribution",
+    "href": "slides/Estimation.html#the-sampling-distribution",
+    "title": "4.1.Estimation",
+    "section": "The sampling distribution",
+    "text": "The sampling distribution"
+  },
+  {
+    "objectID": "slides/Estimation.html#the-sampling-distribution-is-the-distribution-of-the-parameter-estimate-of-interest-from-these-samples",
+    "href": "slides/Estimation.html#the-sampling-distribution-is-the-distribution-of-the-parameter-estimate-of-interest-from-these-samples",
+    "title": "4.1.Estimation",
+    "section": "The sampling distribution is the distribution of the parameter estimate of interest from these samples",
+    "text": "The sampling distribution is the distribution of the parameter estimate of interest from these samples"
+  },
+  {
+    "objectID": "slides/Estimation.html#generating-a-sampling-distribution",
+    "href": "slides/Estimation.html#generating-a-sampling-distribution",
+    "title": "4.1.Estimation",
+    "section": "Generating a sampling distribution",
+    "text": "Generating a sampling distribution\nIn three easy steps:\n\nTake a sample of size \\(n\\).\nCalculate the parameter estimates.\nRinse and repeat many times."
+  },
+  {
+    "objectID": "slides/Estimation.html#the-sampling-distribution-of-diamonds",
+    "href": "slides/Estimation.html#the-sampling-distribution-of-diamonds",
+    "title": "4.1.Estimation",
+    "section": "The Sampling Distribution of Diamonds",
+    "text": "The Sampling Distribution of Diamonds\n\n\n\n\n\nreplicate\ncolor\nsmall\nmedium\nlarge\n\n\n\n1\nblue\n0.25\n0.10\n0.05\n\n\n1\ngold\n0.25\n0.10\n0.05\n\n\n1\nred\nNA\n0.20\nNA\n\n\n2\nblue\n0.05\n0.05\nNA\n\n\n2\ngold\n0.30\n0.30\n0.05\n\n\n2\nred\n0.05\n0.20\nNA\n\n\n3\nblue\n0.20\n0.10\n0.05\n\n\n3\ngold\n0.25\n0.05\n0.10\n\n\n3\nred\n0.10\n0.15\nNA\n\n\n4\nblue\n0.10\n0.15\n0.05\n\n\n4\ngold\n0.20\n0.20\nNA\n\n\n4\nred\n0.25\n0.05\nNA\n\n\n5\nblue\n0.15\n0.20\n0.15\n\n\n5\ngold\n0.15\n0.10\n0.05\n\n\n5\nred\n0.05\n0.15\nNA\n\n\n6\nblue\nNA\n0.10\nNA\n\n\n6\ngold\n0.30\n0.10\n0.15\n\n\n6\nred\n0.30\n0.05\nNA\n\n\n7\nblue\n0.20\n0.10\nNA\n\n\n7\ngold\n0.20\n0.20\n0.10\n\n\n7\nred\n0.10\n0.10\nNA\n\n\n8\nblue\n0.05\n0.15\n0.05\n\n\n8\ngold\n0.15\n0.20\n0.05\n\n\n8\nred\n0.20\n0.15\nNA\n\n\n9\nblue\n0.10\n0.35\nNA\n\n\n9\ngold\n0.25\nNA\n0.05\n\n\n9\nred\n0.15\n0.10\nNA\n\n\n10\nblue\nNA\n0.20\n0.05\n\n\n10\ngold\n0.20\n0.05\n0.15\n\n\n10\nred\n0.10\n0.25\nNA\n\n\n11\nblue\n0.15\n0.10\n0.05\n\n\n11\ngold\n0.15\n0.15\nNA\n\n\n11\nred\n0.25\n0.15\nNA\n\n\n12\nblue\n0.10\n0.15\n0.15\n\n\n12\ngold\n0.20\n0.15\n0.05\n\n\n12\nred\n0.15\n0.05\nNA\n\n\n13\nblue\n0.10\n0.15\n0.15\n\n\n13\ngold\n0.25\n0.05\n0.05\n\n\n13\nred\n0.05\n0.20\nNA\n\n\n14\nblue\n0.05\n0.25\nNA\n\n\n14\ngold\n0.25\n0.20\nNA\n\n\n14\nred\n0.10\n0.15\nNA\n\n\n15\nblue\n0.05\n0.15\n0.05\n\n\n15\ngold\n0.15\n0.25\n0.05\n\n\n15\nred\n0.20\n0.10\nNA\n\n\n16\nblue\nNA\n0.05\n0.05\n\n\n16\ngold\n0.15\n0.25\n0.10\n\n\n16\nred\n0.20\n0.20\nNA\n\n\n17\nblue\nNA\n0.20\n0.05\n\n\n17\ngold\n0.30\n0.15\nNA\n\n\n17\nred\n0.05\n0.25\nNA\n\n\n18\nblue\n0.10\n0.05\n0.10\n\n\n18\ngold\n0.25\n0.20\n0.20\n\n\n18\nred\n0.10\nNA\nNA\n\n\n19\nblue\n0.20\n0.10\nNA\n\n\n19\ngold\n0.30\nNA\n0.10\n\n\n19\nred\n0.10\n0.20\nNA\n\n\n20\nblue\n0.30\n0.20\n0.05\n\n\n20\ngold\n0.10\n0.10\n0.10\n\n\n20\nred\n0.10\n0.05\nNA\n\n\n21\nblue\n0.20\n0.05\n0.10\n\n\n21\ngold\n0.20\nNA\n0.05\n\n\n21\nred\n0.15\n0.25\nNA\n\n\n22\nblue\n0.05\n0.15\n0.05\n\n\n22\ngold\n0.15\n0.10\n0.20\n\n\n22\nred\n0.10\n0.20\nNA\n\n\n23\nblue\n0.10\n0.10\n0.05\n\n\n23\ngold\n0.25\n0.15\n0.05\n\n\n23\nred\n0.15\n0.15\nNA\n\n\n24\nblue\n0.15\n0.10\n0.05\n\n\n24\ngold\n0.25\nNA\n0.25\n\n\n24\nred\n0.10\n0.10\nNA\n\n\n25\nblue\nNA\n0.15\n0.20\n\n\n25\ngold\n0.15\n0.20\n0.15\n\n\n25\nred\n0.05\n0.10\nNA\n\n\n26\nblue\n0.10\n0.20\n0.05\n\n\n26\ngold\n0.20\n0.10\n0.10\n\n\n26\nred\n0.15\n0.10\nNA\n\n\n27\nblue\n0.25\n0.05\n0.10\n\n\n27\ngold\n0.20\n0.15\n0.05\n\n\n27\nred\n0.15\n0.05\nNA\n\n\n28\nblue\n0.05\n0.10\n0.05\n\n\n28\ngold\n0.10\n0.35\nNA\n\n\n28\nred\n0.15\n0.20\nNA\n\n\n29\nblue\n0.20\n0.05\n0.10\n\n\n29\ngold\n0.30\n0.20\n0.05\n\n\n29\nred\n0.05\n0.05\nNA\n\n\n30\nblue\n0.15\n0.05\nNA\n\n\n30\ngold\n0.50\nNA\n0.05\n\n\n30\nred\n0.15\n0.10\nNA\n\n\n31\nblue\n0.20\n0.10\nNA\n\n\n31\ngold\n0.10\n0.15\n0.25\n\n\n31\nred\n0.10\n0.10\nNA\n\n\n32\nblue\n0.05\n0.10\nNA\n\n\n32\ngold\n0.30\n0.05\n0.25\n\n\n32\nred\n0.10\n0.15\nNA\n\n\n33\nblue\n0.25\n0.20\n0.05\n\n\n33\ngold\n0.15\n0.05\n0.20\n\n\n33\nred\nNA\n0.10\nNA\n\n\n34\nblue\n0.05\n0.15\n0.05\n\n\n34\ngold\n0.25\n0.35\n0.05\n\n\n34\nred\nNA\n0.10\nNA\n\n\n35\nblue\n0.10\n0.05\nNA\n\n\n35\ngold\n0.25\n0.15\n0.15\n\n\n35\nred\n0.10\n0.20\nNA\n\n\n36\nblue\n0.15\n0.15\n0.10\n\n\n36\ngold\n0.25\n0.05\n0.15\n\n\n36\nred\n0.05\n0.10\nNA\n\n\n37\nblue\n0.15\n0.15\nNA\n\n\n37\ngold\n0.15\nNA\n0.20\n\n\n37\nred\n0.10\n0.25\nNA\n\n\n38\nblue\n0.15\n0.20\n0.15\n\n\n38\ngold\n0.05\n0.10\n0.15\n\n\n38\nred\n0.10\n0.10\nNA\n\n\n39\nblue\n0.10\n0.10\n0.10\n\n\n39\ngold\n0.25\n0.15\n0.15\n\n\n39\nred\n0.10\n0.05\nNA\n\n\n40\nblue\nNA\n0.15\n0.05\n\n\n40\ngold\n0.10\n0.20\n0.20\n\n\n40\nred\n0.15\n0.15\nNA\n\n\n41\nblue\n0.05\n0.10\nNA\n\n\n41\ngold\n0.35\n0.10\n0.10\n\n\n41\nred\n0.05\n0.25\nNA\n\n\n42\nblue\n0.10\n0.15\nNA\n\n\n42\ngold\n0.30\n0.15\n0.05\n\n\n42\nred\n0.10\n0.15\nNA\n\n\n43\nblue\n0.15\n0.15\nNA\n\n\n43\ngold\n0.20\n0.30\nNA\n\n\n43\nred\n0.15\n0.05\nNA\n\n\n44\nblue\n0.20\n0.20\n0.10\n\n\n44\ngold\n0.20\n0.10\nNA\n\n\n44\nred\n0.05\n0.15\nNA\n\n\n45\nblue\n0.05\n0.10\n0.05\n\n\n45\ngold\n0.35\n0.10\n0.15\n\n\n45\nred\n0.10\n0.10\nNA\n\n\n46\nblue\n0.05\n0.10\n0.10\n\n\n46\ngold\n0.25\n0.15\n0.05\n\n\n46\nred\n0.20\n0.10\nNA\n\n\n47\nblue\n0.10\n0.10\nNA\n\n\n47\ngold\n0.25\n0.15\n0.10\n\n\n47\nred\n0.10\n0.20\nNA\n\n\n48\nblue\n0.10\n0.15\n0.10\n\n\n48\ngold\n0.20\n0.20\n0.10\n\n\n48\nred\n0.05\n0.10\nNA\n\n\n49\nblue\n0.10\n0.10\n0.15\n\n\n49\ngold\n0.05\n0.25\n0.05\n\n\n49\nred\n0.10\n0.20\nNA\n\n\n50\nblue\nNA\n0.15\n0.05\n\n\n50\ngold\n0.15\n0.20\n0.10\n\n\n50\nred\n0.20\n0.15\nNA\n\n\n51\nblue\n0.15\n0.20\n0.10\n\n\n51\ngold\n0.20\n0.10\n0.05\n\n\n51\nred\n0.05\n0.15\nNA\n\n\n52\nblue\n0.05\n0.05\n0.05\n\n\n52\ngold\n0.25\n0.15\n0.10\n\n\n52\nred\n0.15\n0.20\nNA\n\n\n53\nblue\n0.15\n0.05\nNA\n\n\n53\ngold\n0.25\n0.15\n0.15\n\n\n53\nred\n0.10\n0.15\nNA\n\n\n54\nblue\n0.05\n0.10\n0.05\n\n\n54\ngold\n0.30\n0.10\n0.05\n\n\n54\nred\n0.10\n0.25\nNA\n\n\n55\nblue\n0.15\n0.25\n0.10\n\n\n55\ngold\n0.25\n0.05\n0.05\n\n\n55\nred\n0.05\n0.10\nNA\n\n\n56\nblue\n0.05\n0.15\n0.05\n\n\n56\ngold\n0.25\n0.15\n0.15\n\n\n56\nred\n0.10\n0.10\nNA\n\n\n57\nblue\n0.10\n0.15\nNA\n\n\n57\ngold\n0.25\n0.05\n0.25\n\n\n57\nred\n0.10\n0.10\nNA\n\n\n58\nblue\n0.10\n0.25\n0.05\n\n\n58\ngold\n0.20\n0.20\n0.10\n\n\n58\nred\nNA\n0.10\nNA\n\n\n59\nblue\n0.05\n0.10\n0.15\n\n\n59\ngold\n0.25\n0.10\n0.10\n\n\n59\nred\n0.15\n0.10\nNA\n\n\n60\nblue\nNA\n0.20\n0.05\n\n\n60\ngold\n0.30\n0.05\n0.05\n\n\n60\nred\n0.10\n0.25\nNA\n\n\n61\nblue\n0.10\n0.25\n0.15\n\n\n61\ngold\n0.35\n0.05\nNA\n\n\n61\nred\n0.05\n0.05\nNA\n\n\n62\nblue\n0.15\n0.15\nNA\n\n\n62\ngold\n0.25\n0.15\n0.15\n\n\n62\nred\n0.05\n0.10\nNA\n\n\n63\nblue\n0.10\n0.20\n0.05\n\n\n63\ngold\n0.20\n0.05\n0.10\n\n\n63\nred\n0.15\n0.15\nNA\n\n\n64\nblue\n0.05\n0.15\n0.10\n\n\n64\ngold\n0.15\n0.10\n0.10\n\n\n64\nred\n0.25\n0.10\nNA\n\n\n65\nblue\n0.05\n0.10\n0.05\n\n\n65\ngold\n0.30\n0.15\n0.10\n\n\n65\nred\n0.20\n0.05\nNA\n\n\n66\nblue\n0.10\n0.10\nNA\n\n\n66\ngold\n0.15\n0.05\n0.20\n\n\n66\nred\n0.20\n0.20\nNA\n\n\n67\nblue\n0.10\n0.15\nNA\n\n\n67\ngold\n0.05\n0.05\n0.15\n\n\n67\nred\n0.20\n0.30\nNA\n\n\n68\nblue\n0.05\n0.25\n0.05\n\n\n68\ngold\n0.40\n0.05\nNA\n\n\n68\nred\n0.10\n0.10\nNA\n\n\n69\nblue\n0.05\n0.20\nNA\n\n\n69\ngold\n0.25\n0.10\n0.15\n\n\n69\nred\n0.10\n0.15\nNA\n\n\n70\nblue\n0.05\n0.15\n0.05\n\n\n70\ngold\n0.20\n0.10\n0.10\n\n\n70\nred\n0.20\n0.15\nNA\n\n\n71\nblue\n0.10\n0.15\nNA\n\n\n71\ngold\n0.20\n0.05\n0.15\n\n\n71\nred\n0.15\n0.20\nNA\n\n\n72\nblue\n0.05\n0.15\n0.05\n\n\n72\ngold\n0.30\n0.05\n0.20\n\n\n72\nred\n0.15\n0.05\nNA\n\n\n73\nblue\n0.05\n0.10\n0.10\n\n\n73\ngold\n0.30\n0.20\n0.05\n\n\n73\nred\n0.15\n0.05\nNA\n\n\n74\nblue\n0.10\n0.05\n0.15\n\n\n74\ngold\n0.10\n0.15\n0.10\n\n\n74\nred\n0.10\n0.25\nNA\n\n\n75\nblue\n0.25\n0.15\n0.05\n\n\n75\ngold\n0.20\n0.15\n0.10\n\n\n75\nred\n0.05\n0.05\nNA\n\n\n76\nblue\nNA\n0.05\n0.05\n\n\n76\ngold\n0.30\n0.10\n0.10\n\n\n76\nred\n0.20\n0.20\nNA\n\n\n77\nblue\n0.10\n0.15\n0.05\n\n\n77\ngold\n0.20\n0.20\n0.05\n\n\n77\nred\n0.10\n0.15\nNA\n\n\n78\nblue\n0.15\n0.15\n0.15\n\n\n78\ngold\n0.30\n0.05\n0.10\n\n\n78\nred\n0.05\n0.05\nNA\n\n\n79\nblue\n0.20\n0.10\n0.05\n\n\n79\ngold\n0.25\n0.05\n0.10\n\n\n79\nred\n0.20\n0.05\nNA\n\n\n80\nblue\n0.15\n0.15\nNA\n\n\n80\ngold\n0.15\n0.10\n0.10\n\n\n80\nred\n0.15\n0.20\nNA\n\n\n81\nblue\n0.10\n0.10\nNA\n\n\n81\ngold\n0.20\n0.15\n0.20\n\n\n81\nred\n0.05\n0.20\nNA\n\n\n82\nblue\n0.25\n0.10\nNA\n\n\n82\ngold\n0.25\n0.15\n0.10\n\n\n82\nred\n0.05\n0.10\nNA\n\n\n83\nblue\n0.10\n0.15\n0.05\n\n\n83\ngold\n0.10\n0.10\n0.10\n\n\n83\nred\n0.20\n0.20\nNA\n\n\n84\nblue\n0.10\n0.10\nNA\n\n\n84\ngold\n0.35\n0.05\nNA\n\n\n84\nred\n0.10\n0.30\nNA\n\n\n85\nblue\n0.05\n0.10\nNA\n\n\n85\ngold\n0.25\n0.10\n0.35\n\n\n85\nred\n0.10\n0.05\nNA\n\n\n86\nblue\n0.15\n0.20\nNA\n\n\n86\ngold\n0.15\n0.05\n0.15\n\n\n86\nred\n0.10\n0.20\nNA\n\n\n87\nblue\n0.20\nNA\nNA\n\n\n87\ngold\n0.20\n0.20\nNA\n\n\n87\nred\n0.10\n0.30\nNA\n\n\n88\nblue\n0.15\n0.05\nNA\n\n\n88\ngold\n0.30\n0.05\n0.10\n\n\n88\nred\n0.20\n0.15\nNA\n\n\n89\nblue\n0.20\n0.05\nNA\n\n\n89\ngold\n0.25\n0.15\n0.10\n\n\n89\nred\n0.05\n0.20\nNA\n\n\n90\nblue\n0.05\n0.20\nNA\n\n\n90\ngold\n0.25\n0.10\n0.10\n\n\n90\nred\n0.20\n0.10\nNA\n\n\n91\nblue\n0.05\n0.20\nNA\n\n\n91\ngold\n0.30\n0.20\n0.05\n\n\n91\nred\n0.15\n0.05\nNA\n\n\n92\nblue\n0.10\n0.10\n0.10\n\n\n92\ngold\n0.30\n0.10\n0.10\n\n\n92\nred\n0.05\n0.15\nNA\n\n\n93\nblue\n0.20\n0.10\nNA\n\n\n93\ngold\n0.30\n0.10\nNA\n\n\n93\nred\n0.20\n0.10\nNA\n\n\n94\nblue\nNA\n0.15\n0.05\n\n\n94\ngold\n0.35\n0.05\n0.15\n\n\n94\nred\n0.10\n0.15\nNA\n\n\n95\nblue\n0.30\n0.10\n0.10\n\n\n95\ngold\n0.15\n0.10\n0.05\n\n\n95\nred\n0.20\nNA\nNA\n\n\n96\nblue\n0.05\n0.15\n0.05\n\n\n96\ngold\n0.25\n0.15\n0.10\n\n\n96\nred\n0.15\n0.10\nNA\n\n\n97\nblue\n0.10\n0.20\n0.05\n\n\n97\ngold\n0.20\n0.20\n0.05\n\n\n97\nred\n0.10\n0.10\nNA\n\n\n98\nblue\n0.05\n0.20\n0.05\n\n\n98\ngold\n0.25\n0.10\n0.10\n\n\n98\nred\n0.10\n0.15\nNA\n\n\n99\nblue\n0.10\n0.10\n0.05\n\n\n99\ngold\n0.25\n0.10\n0.20\n\n\n99\nred\n0.15\n0.05\nNA\n\n\n100\nblue\nNA\n0.20\n0.10\n\n\n100\ngold\n0.25\n0.10\n0.15\n\n\n100\nred\n0.05\n0.15\nNA\n\n\n101\nblue\nNA\n0.10\n0.20\n\n\n101\ngold\n0.25\n0.15\n0.05\n\n\n101\nred\n0.15\n0.10\nNA\n\n\n102\nblue\n0.05\n0.20\n0.05\n\n\n102\ngold\n0.30\n0.10\n0.10\n\n\n102\nred\n0.10\n0.10\nNA\n\n\n103\nblue\n0.05\n0.20\nNA\n\n\n103\ngold\n0.25\n0.15\n0.05\n\n\n103\nred\n0.20\n0.10\nNA\n\n\n104\nblue\nNA\n0.20\n0.10\n\n\n104\ngold\n0.20\n0.10\nNA\n\n\n104\nred\n0.25\n0.15\nNA\n\n\n105\nblue\nNA\n0.15\n0.05\n\n\n105\ngold\n0.20\n0.10\n0.15\n\n\n105\nred\n0.20\n0.15\nNA\n\n\n106\nblue\n0.05\n0.20\nNA\n\n\n106\ngold\n0.15\n0.25\n0.10\n\n\n106\nred\n0.15\n0.10\nNA\n\n\n107\nblue\n0.10\n0.10\n0.10\n\n\n107\ngold\n0.30\n0.20\n0.05\n\n\n107\nred\n0.10\n0.05\nNA\n\n\n108\nblue\n0.25\n0.15\nNA\n\n\n108\ngold\n0.15\n0.10\n0.15\n\n\n108\nred\n0.05\n0.15\nNA\n\n\n109\nblue\n0.20\n0.20\n0.05\n\n\n109\ngold\n0.35\n0.05\n0.05\n\n\n109\nred\n0.05\n0.05\nNA\n\n\n110\nblue\n0.10\n0.05\nNA\n\n\n110\ngold\n0.35\n0.05\n0.05\n\n\n110\nred\n0.10\n0.30\nNA\n\n\n111\nblue\n0.25\n0.10\nNA\n\n\n111\ngold\n0.20\nNA\n0.05\n\n\n111\nred\n0.15\n0.25\nNA\n\n\n112\nblue\n0.10\n0.10\n0.05\n\n\n112\ngold\n0.20\n0.25\n0.15\n\n\n112\nred\n0.05\n0.10\nNA\n\n\n113\nblue\n0.10\n0.20\n0.10\n\n\n113\ngold\n0.20\n0.15\n0.05\n\n\n113\nred\n0.05\n0.15\nNA\n\n\n114\nblue\n0.25\n0.05\nNA\n\n\n114\ngold\n0.40\n0.05\n0.10\n\n\n114\nred\n0.10\n0.05\nNA\n\n\n115\nblue\n0.15\n0.10\nNA\n\n\n115\ngold\n0.15\n0.30\n0.15\n\n\n115\nred\n0.05\n0.10\nNA\n\n\n116\nblue\n0.15\n0.15\n0.05\n\n\n116\ngold\n0.20\n0.05\n0.10\n\n\n116\nred\n0.15\n0.15\nNA\n\n\n117\nblue\n0.10\n0.20\n0.05\n\n\n117\ngold\n0.15\n0.20\n0.10\n\n\n117\nred\nNA\n0.20\nNA\n\n\n118\nblue\n0.15\n0.20\nNA\n\n\n118\ngold\n0.20\n0.10\n0.15\n\n\n118\nred\n0.15\n0.05\nNA\n\n\n119\nblue\n0.05\n0.10\n0.10\n\n\n119\ngold\n0.20\n0.15\n0.10\n\n\n119\nred\n0.05\n0.25\nNA\n\n\n120\nblue\n0.15\n0.10\n0.05\n\n\n120\ngold\n0.15\nNA\n0.20\n\n\n120\nred\n0.15\n0.20\nNA\n\n\n121\nblue\n0.20\nNA\n0.15\n\n\n121\ngold\n0.30\n0.15\nNA\n\n\n121\nred\n0.10\n0.10\nNA\n\n\n122\nblue\n0.05\n0.25\nNA\n\n\n122\ngold\n0.20\n0.20\nNA\n\n\n122\nred\n0.25\n0.05\nNA\n\n\n123\nblue\n0.10\n0.05\n0.05\n\n\n123\ngold\n0.30\n0.15\n0.20\n\n\n123\nred\n0.05\n0.10\nNA\n\n\n124\nblue\n0.05\n0.15\n0.05\n\n\n124\ngold\n0.25\n0.15\n0.10\n\n\n124\nred\n0.10\n0.15\nNA\n\n\n125\nblue\n0.05\n0.10\nNA\n\n\n125\ngold\n0.20\nNA\n0.25\n\n\n125\nred\n0.20\n0.20\nNA\n\n\n126\nblue\n0.20\n0.35\n0.05\n\n\n126\ngold\n0.20\n0.05\nNA\n\n\n126\nred\n0.15\nNA\nNA\n\n\n127\nblue\n0.15\n0.30\nNA\n\n\n127\ngold\n0.20\n0.10\n0.10\n\n\n127\nred\n0.05\n0.10\nNA\n\n\n128\nblue\n0.15\n0.15\nNA\n\n\n128\ngold\n0.25\n0.05\n0.15\n\n\n128\nred\n0.20\n0.05\nNA\n\n\n129\nblue\n0.15\n0.10\nNA\n\n\n129\ngold\n0.25\n0.15\n0.05\n\n\n129\nred\n0.10\n0.20\nNA\n\n\n130\nblue\n0.05\n0.05\n0.10\n\n\n130\ngold\n0.25\n0.20\n0.15\n\n\n130\nred\n0.10\n0.10\nNA\n\n\n131\nblue\nNA\n0.15\nNA\n\n\n131\ngold\n0.30\n0.15\n0.05\n\n\n131\nred\n0.20\n0.15\nNA\n\n\n132\nblue\n0.05\n0.30\nNA\n\n\n132\ngold\n0.20\n0.15\nNA\n\n\n132\nred\n0.15\n0.15\nNA\n\n\n133\nblue\n0.05\n0.10\n0.05\n\n\n133\ngold\n0.25\n0.25\n0.10\n\n\n133\nred\n0.15\n0.05\nNA\n\n\n134\nblue\nNA\n0.25\nNA\n\n\n134\ngold\n0.15\n0.15\nNA\n\n\n134\nred\n0.25\n0.20\nNA\n\n\n135\nblue\n0.05\n0.05\nNA\n\n\n135\ngold\n0.15\n0.20\n0.20\n\n\n135\nred\n0.25\n0.10\nNA\n\n\n136\nblue\n0.10\nNA\n0.10\n\n\n136\ngold\n0.20\n0.20\n0.15\n\n\n136\nred\n0.20\n0.05\nNA\n\n\n137\nblue\n0.10\n0.10\n0.10\n\n\n137\ngold\n0.25\n0.05\n0.20\n\n\n137\nred\n0.10\n0.10\nNA\n\n\n138\nblue\n0.10\n0.20\n0.05\n\n\n138\ngold\n0.10\n0.15\n0.10\n\n\n138\nred\n0.10\n0.20\nNA\n\n\n139\nblue\n0.10\n0.20\n0.05\n\n\n139\ngold\n0.25\n0.15\n0.05\n\n\n139\nred\n0.15\n0.05\nNA\n\n\n140\nblue\n0.10\n0.25\n0.10\n\n\n140\ngold\n0.15\n0.05\n0.20\n\n\n140\nred\n0.10\n0.05\nNA\n\n\n141\nblue\n0.05\n0.15\n0.05\n\n\n141\ngold\n0.10\n0.05\n0.20\n\n\n141\nred\n0.20\n0.20\nNA\n\n\n142\nblue\n0.05\n0.10\n0.05\n\n\n142\ngold\n0.30\n0.05\n0.10\n\n\n142\nred\n0.20\n0.15\nNA\n\n\n143\nblue\n0.15\n0.15\nNA\n\n\n143\ngold\n0.40\n0.15\n0.05\n\n\n143\nred\n0.05\n0.05\nNA\n\n\n144\nblue\n0.20\n0.05\nNA\n\n\n144\ngold\n0.35\n0.10\n0.10\n\n\n144\nred\n0.15\n0.05\nNA\n\n\n145\nblue\n0.05\n0.15\n0.10\n\n\n145\ngold\n0.20\n0.20\nNA\n\n\n145\nred\n0.15\n0.15\nNA\n\n\n146\nblue\n0.10\n0.15\n0.05\n\n\n146\ngold\n0.15\n0.15\nNA\n\n\n146\nred\n0.20\n0.20\nNA\n\n\n147\nblue\n0.10\n0.05\n0.10\n\n\n147\ngold\n0.25\n0.05\n0.05\n\n\n147\nred\n0.15\n0.25\nNA\n\n\n148\nblue\n0.10\n0.10\n0.05\n\n\n148\ngold\n0.25\n0.10\n0.05\n\n\n148\nred\n0.15\n0.20\nNA\n\n\n149\nblue\n0.15\n0.25\nNA\n\n\n149\ngold\n0.20\n0.15\nNA\n\n\n149\nred\n0.15\n0.10\nNA\n\n\n150\nblue\n0.10\n0.15\n0.05\n\n\n150\ngold\n0.35\n0.15\n0.10\n\n\n150\nred\n0.05\n0.05\nNA\n\n\n151\nblue\n0.10\n0.05\n0.05\n\n\n151\ngold\n0.10\n0.30\n0.20\n\n\n151\nred\n0.05\n0.15\nNA\n\n\n152\nblue\n0.15\n0.15\n0.10\n\n\n152\ngold\n0.20\n0.10\n0.15\n\n\n152\nred\n0.10\n0.05\nNA\n\n\n153\nblue\n0.15\n0.15\nNA\n\n\n153\ngold\n0.25\n0.15\nNA\n\n\n153\nred\n0.15\n0.15\nNA\n\n\n154\nblue\n0.05\n0.10\n0.05\n\n\n154\ngold\n0.30\n0.15\n0.15\n\n\n154\nred\n0.10\n0.10\nNA\n\n\n155\nblue\n0.15\n0.10\n0.15\n\n\n155\ngold\n0.25\n0.10\n0.15\n\n\n155\nred\nNA\n0.10\nNA\n\n\n156\nblue\n0.15\n0.20\nNA\n\n\n156\ngold\n0.40\nNA\n0.20\n\n\n156\nred\n0.05\nNA\nNA\n\n\n157\nblue\n0.25\n0.10\nNA\n\n\n157\ngold\n0.25\n0.10\n0.05\n\n\n157\nred\n0.15\n0.10\nNA\n\n\n158\nblue\n0.20\n0.15\n0.05\n\n\n158\ngold\n0.15\n0.15\n0.10\n\n\n158\nred\n0.10\n0.10\nNA\n\n\n159\nblue\n0.20\n0.10\nNA\n\n\n159\ngold\n0.15\n0.25\n0.05\n\n\n159\nred\n0.05\n0.20\nNA\n\n\n160\nblue\n0.05\n0.20\nNA\n\n\n160\ngold\n0.15\n0.15\n0.15\n\n\n160\nred\n0.20\n0.10\nNA\n\n\n161\nblue\n0.20\n0.15\n0.05\n\n\n161\ngold\n0.30\n0.15\n0.05\n\n\n161\nred\n0.05\n0.05\nNA\n\n\n162\nblue\n0.10\n0.05\n0.05\n\n\n162\ngold\n0.35\n0.05\nNA\n\n\n162\nred\n0.10\n0.30\nNA\n\n\n163\nblue\n0.05\n0.10\nNA\n\n\n163\ngold\n0.20\n0.20\n0.10\n\n\n163\nred\n0.10\n0.25\nNA\n\n\n164\nblue\n0.10\n0.10\nNA\n\n\n164\ngold\n0.30\n0.15\n0.10\n\n\n164\nred\n0.15\n0.10\nNA\n\n\n165\nblue\n0.15\n0.20\n0.10\n\n\n165\ngold\n0.30\n0.05\n0.15\n\n\n165\nred\nNA\n0.05\nNA\n\n\n166\nblue\n0.15\n0.15\n0.05\n\n\n166\ngold\n0.20\n0.15\n0.15\n\n\n166\nred\n0.05\n0.10\nNA\n\n\n167\nblue\n0.05\n0.15\n0.05\n\n\n167\ngold\n0.25\nNA\n0.10\n\n\n167\nred\n0.10\n0.30\nNA\n\n\n168\nblue\n0.05\n0.10\nNA\n\n\n168\ngold\n0.25\n0.05\n0.10\n\n\n168\nred\n0.20\n0.25\nNA\n\n\n169\nblue\nNA\n0.20\n0.15\n\n\n169\ngold\n0.10\n0.15\n0.05\n\n\n169\nred\n0.05\n0.30\nNA\n\n\n170\nblue\n0.10\n0.20\n0.15\n\n\n170\ngold\n0.25\n0.10\n0.05\n\n\n170\nred\n0.15\nNA\nNA\n\n\n171\nblue\n0.15\n0.25\n0.10\n\n\n171\ngold\n0.05\n0.20\n0.15\n\n\n171\nred\n0.05\n0.05\nNA\n\n\n172\nblue\n0.05\n0.05\nNA\n\n\n172\ngold\n0.30\n0.20\n0.15\n\n\n172\nred\n0.10\n0.15\nNA\n\n\n173\nblue\n0.05\n0.20\n0.10\n\n\n173\ngold\n0.25\n0.15\n0.10\n\n\n173\nred\n0.05\n0.10\nNA\n\n\n174\nblue\n0.10\n0.20\n0.05\n\n\n174\ngold\n0.30\n0.20\nNA\n\n\n174\nred\n0.10\n0.05\nNA\n\n\n175\nblue\n0.10\n0.15\n0.05\n\n\n175\ngold\n0.25\n0.15\n0.10\n\n\n175\nred\n0.10\n0.10\nNA\n\n\n176\nblue\n0.15\n0.10\n0.05\n\n\n176\ngold\n0.15\n0.10\n0.20\n\n\n176\nred\n0.15\n0.10\nNA\n\n\n177\nblue\n0.10\n0.30\n0.05\n\n\n177\ngold\n0.20\nNA\n0.10\n\n\n177\nred\n0.05\n0.20\nNA\n\n\n178\nblue\nNA\n0.10\n0.15\n\n\n178\ngold\n0.25\n0.25\n0.05\n\n\n178\nred\n0.10\n0.10\nNA\n\n\n179\nblue\n0.20\nNA\nNA\n\n\n179\ngold\n0.15\n0.25\n0.20\n\n\n179\nred\n0.05\n0.15\nNA\n\n\n180\nblue\n0.15\n0.05\n0.10\n\n\n180\ngold\n0.25\n0.25\n0.05\n\n\n180\nred\n0.10\n0.05\nNA\n\n\n181\nblue\n0.10\n0.10\n0.05\n\n\n181\ngold\n0.20\n0.10\n0.10\n\n\n181\nred\n0.15\n0.20\nNA\n\n\n182\nblue\n0.25\n0.05\n0.05\n\n\n182\ngold\n0.25\n0.05\n0.15\n\n\n182\nred\n0.05\n0.15\nNA\n\n\n183\nblue\n0.05\n0.15\n0.05\n\n\n183\ngold\n0.30\n0.10\n0.10\n\n\n183\nred\n0.20\n0.05\nNA\n\n\n184\nblue\n0.05\n0.25\n0.05\n\n\n184\ngold\n0.35\nNA\n0.05\n\n\n184\nred\n0.10\n0.15\nNA\n\n\n185\nblue\n0.15\n0.10\n0.05\n\n\n185\ngold\n0.20\n0.15\n0.05\n\n\n185\nred\n0.25\n0.05\nNA\n\n\n186\nblue\n0.15\n0.20\nNA\n\n\n186\ngold\n0.20\n0.15\n0.20\n\n\n186\nred\n0.10\nNA\nNA\n\n\n187\nblue\n0.10\n0.10\nNA\n\n\n187\ngold\n0.40\n0.10\n0.05\n\n\n187\nred\n0.10\n0.15\nNA\n\n\n188\nblue\n0.05\n0.05\n0.10\n\n\n188\ngold\n0.30\n0.15\n0.10\n\n\n188\nred\n0.10\n0.15\nNA\n\n\n189\nblue\n0.05\nNA\n0.05\n\n\n189\ngold\n0.40\n0.20\n0.15\n\n\n189\nred\nNA\n0.15\nNA\n\n\n190\nblue\n0.20\n0.05\n0.05\n\n\n190\ngold\n0.20\n0.10\n0.05\n\n\n190\nred\n0.10\n0.25\nNA\n\n\n191\nblue\n0.10\n0.10\n0.10\n\n\n191\ngold\n0.25\n0.15\n0.10\n\n\n191\nred\n0.10\n0.10\nNA\n\n\n192\nblue\n0.05\n0.20\nNA\n\n\n192\ngold\n0.40\n0.05\n0.05\n\n\n192\nred\n0.15\n0.10\nNA\n\n\n193\nblue\n0.10\n0.05\n0.05\n\n\n193\ngold\n0.30\n0.05\n0.15\n\n\n193\nred\n0.10\n0.20\nNA\n\n\n194\nblue\n0.20\n0.25\nNA\n\n\n194\ngold\n0.15\n0.15\n0.05\n\n\n194\nred\n0.10\n0.10\nNA\n\n\n195\nblue\n0.10\n0.10\n0.10\n\n\n195\ngold\n0.30\n0.10\n0.05\n\n\n195\nred\n0.15\n0.10\nNA\n\n\n196\nblue\n0.10\n0.10\n0.15\n\n\n196\ngold\n0.25\n0.15\n0.05\n\n\n196\nred\nNA\n0.20\nNA\n\n\n197\nblue\n0.10\n0.15\nNA\n\n\n197\ngold\n0.20\n0.25\nNA\n\n\n197\nred\n0.05\n0.25\nNA\n\n\n198\nblue\n0.10\n0.10\nNA\n\n\n198\ngold\n0.25\n0.10\n0.05\n\n\n198\nred\n0.05\n0.35\nNA\n\n\n199\nblue\n0.10\n0.25\nNA\n\n\n199\ngold\n0.20\n0.05\n0.25\n\n\n199\nred\n0.10\n0.05\nNA\n\n\n200\nblue\nNA\n0.15\n0.05\n\n\n200\ngold\n0.45\n0.20\n0.10\n\n\n200\nred\n0.05\nNA\nNA\n\n\n201\nblue\n0.05\n0.15\n0.10\n\n\n201\ngold\n0.35\n0.10\n0.10\n\n\n201\nred\n0.05\n0.10\nNA\n\n\n202\nblue\n0.20\n0.05\n0.05\n\n\n202\ngold\n0.25\n0.10\n0.15\n\n\n202\nred\n0.05\n0.15\nNA\n\n\n203\nblue\n0.15\n0.05\n0.05\n\n\n203\ngold\n0.25\n0.10\n0.10\n\n\n203\nred\n0.10\n0.20\nNA\n\n\n204\nblue\n0.15\n0.20\n0.05\n\n\n204\ngold\n0.05\n0.15\n0.05\n\n\n204\nred\n0.15\n0.20\nNA\n\n\n205\nblue\n0.15\n0.05\n0.05\n\n\n205\ngold\n0.15\n0.10\n0.25\n\n\n205\nred\n0.15\n0.10\nNA\n\n\n206\nblue\n0.10\n0.25\n0.10\n\n\n206\ngold\n0.20\n0.10\n0.05\n\n\n206\nred\n0.15\n0.05\nNA\n\n\n207\nblue\n0.15\n0.20\n0.05\n\n\n207\ngold\n0.20\n0.10\n0.10\n\n\n207\nred\nNA\n0.20\nNA\n\n\n208\nblue\n0.05\nNA\n0.15\n\n\n208\ngold\n0.20\n0.15\n0.05\n\n\n208\nred\n0.15\n0.25\nNA\n\n\n209\nblue\n0.15\n0.05\n0.05\n\n\n209\ngold\n0.25\n0.15\n0.25\n\n\n209\nred\nNA\n0.10\nNA\n\n\n210\nblue\n0.15\n0.05\nNA\n\n\n210\ngold\n0.15\n0.20\n0.15\n\n\n210\nred\n0.20\n0.10\nNA\n\n\n211\nblue\n0.10\n0.15\nNA\n\n\n211\ngold\n0.25\n0.10\n0.20\n\n\n211\nred\n0.05\n0.15\nNA\n\n\n212\nblue\n0.10\n0.15\n0.10\n\n\n212\ngold\n0.20\nNA\n0.15\n\n\n212\nred\n0.20\n0.10\nNA\n\n\n213\nblue\n0.20\n0.25\n0.05\n\n\n213\ngold\n0.15\n0.10\n0.05\n\n\n213\nred\n0.05\n0.15\nNA\n\n\n214\nblue\n0.20\n0.20\n0.05\n\n\n214\ngold\n0.15\n0.10\nNA\n\n\n214\nred\n0.20\n0.10\nNA\n\n\n215\nblue\n0.05\n0.20\n0.05\n\n\n215\ngold\n0.30\n0.15\n0.15\n\n\n215\nred\n0.10\nNA\nNA\n\n\n216\nblue\n0.10\n0.30\n0.10\n\n\n216\ngold\n0.25\n0.05\n0.10\n\n\n216\nred\n0.05\n0.05\nNA\n\n\n217\nblue\n0.05\n0.05\nNA\n\n\n217\ngold\n0.15\n0.20\n0.15\n\n\n217\nred\n0.20\n0.20\nNA\n\n\n218\nblue\n0.25\n0.10\nNA\n\n\n218\ngold\n0.25\n0.10\n0.05\n\n\n218\nred\n0.10\n0.15\nNA\n\n\n219\nblue\n0.05\n0.20\n0.05\n\n\n219\ngold\n0.15\n0.20\n0.15\n\n\n219\nred\n0.10\n0.10\nNA\n\n\n220\nblue\n0.10\n0.15\n0.05\n\n\n220\ngold\n0.30\n0.15\n0.10\n\n\n220\nred\n0.05\n0.10\nNA\n\n\n221\nblue\nNA\n0.05\nNA\n\n\n221\ngold\n0.45\n0.10\n0.10\n\n\n221\nred\n0.10\n0.20\nNA\n\n\n222\nblue\n0.10\n0.30\n0.05\n\n\n222\ngold\n0.10\n0.05\n0.15\n\n\n222\nred\n0.20\n0.05\nNA\n\n\n223\nblue\n0.10\n0.10\nNA\n\n\n223\ngold\n0.25\n0.25\n0.10\n\n\n223\nred\n0.05\n0.15\nNA\n\n\n224\nblue\n0.10\nNA\nNA\n\n\n224\ngold\n0.30\n0.20\n0.15\n\n\n224\nred\n0.20\n0.05\nNA\n\n\n225\nblue\n0.05\n0.15\n0.15\n\n\n225\ngold\n0.35\n0.10\n0.05\n\n\n225\nred\nNA\n0.15\nNA\n\n\n226\nblue\n0.15\n0.15\n0.05\n\n\n226\ngold\n0.10\n0.15\n0.10\n\n\n226\nred\n0.20\n0.10\nNA\n\n\n227\nblue\n0.15\n0.10\nNA\n\n\n227\ngold\n0.20\n0.20\nNA\n\n\n227\nred\n0.10\n0.25\nNA\n\n\n228\nblue\n0.10\n0.10\n0.05\n\n\n228\ngold\n0.45\nNA\n0.15\n\n\n228\nred\n0.05\n0.10\nNA\n\n\n229\nblue\n0.15\n0.05\n0.05\n\n\n229\ngold\n0.45\n0.15\nNA\n\n\n229\nred\n0.05\n0.10\nNA\n\n\n230\nblue\n0.10\n0.10\n0.10\n\n\n230\ngold\n0.10\n0.20\n0.10\n\n\n230\nred\n0.15\n0.15\nNA\n\n\n231\nblue\n0.20\n0.15\n0.05\n\n\n231\ngold\n0.10\n0.15\n0.10\n\n\n231\nred\n0.10\n0.15\nNA\n\n\n232\nblue\n0.10\n0.20\n0.05\n\n\n232\ngold\n0.25\n0.05\n0.05\n\n\n232\nred\n0.20\n0.10\nNA\n\n\n233\nblue\n0.15\n0.15\nNA\n\n\n233\ngold\n0.30\n0.20\nNA\n\n\n233\nred\n0.05\n0.15\nNA\n\n\n234\nblue\n0.05\n0.10\n0.05\n\n\n234\ngold\n0.20\n0.05\n0.05\n\n\n234\nred\n0.30\n0.20\nNA\n\n\n235\nblue\n0.05\nNA\n0.10\n\n\n235\ngold\n0.30\n0.15\n0.15\n\n\n235\nred\n0.10\n0.15\nNA\n\n\n236\nblue\n0.05\n0.20\n0.10\n\n\n236\ngold\n0.20\n0.15\n0.10\n\n\n236\nred\n0.10\n0.10\nNA\n\n\n237\nblue\n0.15\n0.25\n0.05\n\n\n237\ngold\n0.20\nNA\n0.10\n\n\n237\nred\n0.10\n0.15\nNA\n\n\n238\nblue\n0.15\n0.15\nNA\n\n\n238\ngold\n0.25\n0.20\n0.20\n\n\n238\nred\n0.05\nNA\nNA\n\n\n239\nblue\n0.10\n0.10\nNA\n\n\n239\ngold\n0.15\n0.30\n0.10\n\n\n239\nred\n0.10\n0.15\nNA\n\n\n240\nblue\n0.05\n0.15\nNA\n\n\n240\ngold\n0.25\n0.20\n0.05\n\n\n240\nred\n0.15\n0.15\nNA\n\n\n241\nblue\n0.05\n0.15\n0.15\n\n\n241\ngold\n0.25\n0.20\n0.10\n\n\n241\nred\n0.05\n0.05\nNA\n\n\n242\nblue\nNA\n0.15\nNA\n\n\n242\ngold\n0.30\n0.15\n0.10\n\n\n242\nred\n0.20\n0.10\nNA\n\n\n243\nblue\n0.10\n0.20\n0.10\n\n\n243\ngold\n0.20\n0.15\n0.05\n\n\n243\nred\n0.10\n0.10\nNA\n\n\n244\nblue\n0.15\n0.05\n0.05\n\n\n244\ngold\n0.30\n0.10\n0.20\n\n\n244\nred\n0.05\n0.10\nNA\n\n\n245\nblue\nNA\n0.10\nNA\n\n\n245\ngold\n0.35\n0.15\n0.15\n\n\n245\nred\n0.05\n0.20\nNA\n\n\n246\nblue\n0.30\n0.20\n0.05\n\n\n246\ngold\n0.15\n0.10\n0.10\n\n\n246\nred\nNA\n0.10\nNA\n\n\n247\nblue\n0.10\n0.05\nNA\n\n\n247\ngold\n0.25\n0.20\n0.15\n\n\n247\nred\n0.10\n0.15\nNA\n\n\n248\nblue\nNA\n0.10\nNA\n\n\n248\ngold\n0.25\n0.25\n0.05\n\n\n248\nred\n0.25\n0.10\nNA\n\n\n249\nblue\n0.20\n0.20\nNA\n\n\n249\ngold\n0.25\n0.05\n0.05\n\n\n249\nred\n0.10\n0.15\nNA\n\n\n250\nblue\n0.10\n0.30\n0.10\n\n\n250\ngold\n0.20\n0.05\n0.15\n\n\n250\nred\n0.05\n0.05\nNA\n\n\n251\nblue\n0.05\n0.20\n0.15\n\n\n251\ngold\n0.20\n0.10\n0.20\n\n\n251\nred\n0.05\n0.05\nNA\n\n\n252\nblue\n0.10\n0.05\n0.10\n\n\n252\ngold\n0.35\n0.15\n0.05\n\n\n252\nred\n0.10\n0.10\nNA\n\n\n253\nblue\n0.15\n0.10\nNA\n\n\n253\ngold\n0.30\n0.25\n0.05\n\n\n253\nred\nNA\n0.15\nNA\n\n\n254\nblue\n0.10\n0.10\nNA\n\n\n254\ngold\n0.35\n0.20\n0.05\n\n\n254\nred\n0.10\n0.10\nNA\n\n\n255\nblue\n0.05\nNA\n0.05\n\n\n255\ngold\n0.35\n0.15\n0.20\n\n\n255\nred\n0.15\n0.05\nNA\n\n\n256\nblue\n0.10\n0.10\n0.05\n\n\n256\ngold\n0.35\n0.10\n0.05\n\n\n256\nred\n0.25\nNA\nNA\n\n\n257\nblue\n0.15\n0.20\nNA\n\n\n257\ngold\n0.30\n0.05\n0.15\n\n\n257\nred\n0.10\n0.05\nNA\n\n\n258\nblue\n0.05\n0.10\nNA\n\n\n258\ngold\n0.20\n0.25\n0.15\n\n\n258\nred\n0.20\n0.05\nNA\n\n\n259\nblue\n0.10\n0.10\nNA\n\n\n259\ngold\n0.30\n0.15\n0.15\n\n\n259\nred\n0.10\n0.10\nNA\n\n\n260\nblue\n0.05\n0.30\n0.05\n\n\n260\ngold\n0.15\n0.20\n0.05\n\n\n260\nred\n0.05\n0.15\nNA\n\n\n261\nblue\nNA\n0.05\n0.05\n\n\n261\ngold\n0.30\n0.20\n0.15\n\n\n261\nred\n0.15\n0.10\nNA\n\n\n262\nblue\n0.10\n0.10\n0.05\n\n\n262\ngold\n0.20\n0.15\n0.05\n\n\n262\nred\n0.10\n0.25\nNA\n\n\n263\nblue\nNA\n0.05\n0.10\n\n\n263\ngold\n0.10\n0.25\n0.15\n\n\n263\nred\n0.20\n0.15\nNA\n\n\n264\nblue\n0.05\n0.15\n0.05\n\n\n264\ngold\n0.30\n0.05\n0.15\n\n\n264\nred\n0.05\n0.20\nNA\n\n\n265\nblue\n0.15\n0.15\n0.05\n\n\n265\ngold\n0.30\nNA\n0.10\n\n\n265\nred\n0.15\n0.10\nNA\n\n\n266\nblue\n0.10\n0.10\nNA\n\n\n266\ngold\n0.45\n0.05\n0.05\n\n\n266\nred\n0.10\n0.15\nNA\n\n\n267\nblue\nNA\n0.20\n0.10\n\n\n267\ngold\n0.25\n0.15\n0.10\n\n\n267\nred\n0.10\n0.10\nNA\n\n\n268\nblue\n0.15\n0.15\nNA\n\n\n268\ngold\n0.15\n0.05\n0.15\n\n\n268\nred\n0.10\n0.25\nNA\n\n\n269\nblue\nNA\n0.05\n0.05\n\n\n269\ngold\n0.25\n0.15\n0.10\n\n\n269\nred\n0.25\n0.15\nNA\n\n\n270\nblue\n0.15\n0.10\n0.05\n\n\n270\ngold\n0.35\n0.10\nNA\n\n\n270\nred\nNA\n0.25\nNA\n\n\n271\nblue\n0.15\n0.15\n0.10\n\n\n271\ngold\n0.20\n0.10\n0.10\n\n\n271\nred\n0.10\n0.10\nNA\n\n\n272\nblue\n0.10\n0.15\n0.05\n\n\n272\ngold\n0.20\n0.10\nNA\n\n\n272\nred\n0.30\n0.10\nNA\n\n\n273\nblue\n0.20\n0.05\nNA\n\n\n273\ngold\n0.20\n0.15\n0.05\n\n\n273\nred\n0.25\n0.10\nNA\n\n\n274\nblue\n0.05\n0.05\n0.10\n\n\n274\ngold\n0.35\n0.20\n0.15\n\n\n274\nred\nNA\n0.10\nNA\n\n\n275\nblue\n0.25\n0.10\nNA\n\n\n275\ngold\n0.20\nNA\nNA\n\n\n275\nred\n0.25\n0.20\nNA\n\n\n276\nblue\n0.05\n0.05\n0.05\n\n\n276\ngold\n0.15\n0.15\n0.20\n\n\n276\nred\n0.10\n0.25\nNA\n\n\n277\nblue\n0.20\n0.25\n0.15\n\n\n277\ngold\n0.15\n0.10\n0.05\n\n\n277\nred\n0.10\nNA\nNA\n\n\n278\nblue\n0.05\n0.15\n0.10\n\n\n278\ngold\n0.30\n0.10\nNA\n\n\n278\nred\n0.20\n0.10\nNA\n\n\n279\nblue\n0.15\n0.15\nNA\n\n\n279\ngold\n0.35\n0.10\n0.10\n\n\n279\nred\n0.15\nNA\nNA\n\n\n280\nblue\n0.15\n0.15\nNA\n\n\n280\ngold\n0.20\n0.20\n0.05\n\n\n280\nred\n0.10\n0.15\nNA\n\n\n281\nblue\n0.10\n0.25\n0.10\n\n\n281\ngold\n0.05\n0.10\n0.10\n\n\n281\nred\n0.20\n0.10\nNA\n\n\n282\nblue\n0.20\n0.20\n0.15\n\n\n282\ngold\n0.10\n0.15\n0.05\n\n\n282\nred\n0.05\n0.10\nNA\n\n\n283\nblue\n0.15\n0.10\n0.15\n\n\n283\ngold\n0.20\n0.05\n0.15\n\n\n283\nred\n0.15\n0.05\nNA\n\n\n284\nblue\n0.10\n0.10\n0.10\n\n\n284\ngold\n0.15\n0.25\n0.15\n\n\n284\nred\n0.05\n0.10\nNA\n\n\n285\nblue\n0.05\n0.10\n0.05\n\n\n285\ngold\n0.05\n0.40\n0.05\n\n\n285\nred\nNA\n0.30\nNA\n\n\n286\nblue\n0.05\n0.25\nNA\n\n\n286\ngold\n0.15\n0.20\n0.05\n\n\n286\nred\n0.05\n0.25\nNA\n\n\n287\nblue\n0.10\n0.10\nNA\n\n\n287\ngold\n0.15\n0.20\n0.20\n\n\n287\nred\n0.20\n0.05\nNA\n\n\n288\nblue\n0.10\nNA\n0.05\n\n\n288\ngold\n0.40\n0.10\n0.10\n\n\n288\nred\n0.10\n0.15\nNA\n\n\n289\nblue\n0.10\n0.10\nNA\n\n\n289\ngold\n0.20\nNA\n0.15\n\n\n289\nred\n0.15\n0.30\nNA\n\n\n290\nblue\n0.15\n0.10\n0.05\n\n\n290\ngold\n0.15\n0.05\n0.20\n\n\n290\nred\n0.10\n0.20\nNA\n\n\n291\nblue\nNA\n0.25\nNA\n\n\n291\ngold\n0.25\n0.05\n0.10\n\n\n291\nred\n0.10\n0.25\nNA\n\n\n292\nblue\n0.05\n0.10\n0.20\n\n\n292\ngold\n0.20\n0.10\n0.05\n\n\n292\nred\n0.10\n0.20\nNA\n\n\n293\nblue\n0.05\n0.10\nNA\n\n\n293\ngold\n0.20\n0.10\n0.05\n\n\n293\nred\n0.20\n0.30\nNA\n\n\n294\nblue\n0.10\n0.20\n0.05\n\n\n294\ngold\n0.10\n0.05\n0.20\n\n\n294\nred\n0.20\n0.10\nNA\n\n\n295\nblue\n0.05\n0.15\n0.05\n\n\n295\ngold\n0.25\n0.25\nNA\n\n\n295\nred\nNA\n0.25\nNA\n\n\n296\nblue\n0.05\n0.20\n0.15\n\n\n296\ngold\n0.15\n0.05\n0.05\n\n\n296\nred\n0.20\n0.15\nNA\n\n\n297\nblue\n0.10\n0.10\n0.05\n\n\n297\ngold\n0.25\n0.05\n0.20\n\n\n297\nred\n0.10\n0.15\nNA\n\n\n298\nblue\n0.05\n0.10\n0.05\n\n\n298\ngold\n0.15\n0.10\n0.15\n\n\n298\nred\n0.15\n0.25\nNA\n\n\n299\nblue\nNA\n0.10\n0.15\n\n\n299\ngold\n0.30\n0.20\n0.10\n\n\n299\nred\n0.10\n0.05\nNA\n\n\n300\nblue\n0.30\n0.15\n0.10\n\n\n300\ngold\n0.30\n0.05\nNA\n\n\n300\nred\n0.05\n0.05\nNA\n\n\n301\nblue\n0.05\n0.10\n0.10\n\n\n301\ngold\n0.35\n0.10\n0.15\n\n\n301\nred\nNA\n0.15\nNA\n\n\n302\nblue\n0.15\n0.05\n0.05\n\n\n302\ngold\n0.30\n0.20\n0.15\n\n\n302\nred\n0.05\n0.05\nNA\n\n\n303\nblue\n0.05\n0.15\nNA\n\n\n303\ngold\n0.30\n0.30\n0.05\n\n\n303\nred\n0.15\nNA\nNA\n\n\n304\nblue\n0.05\n0.10\n0.10\n\n\n304\ngold\n0.15\n0.15\n0.10\n\n\n304\nred\n0.05\n0.30\nNA\n\n\n305\nblue\n0.05\n0.25\nNA\n\n\n305\ngold\n0.25\n0.15\n0.05\n\n\n305\nred\n0.05\n0.20\nNA\n\n\n306\nblue\n0.20\n0.10\n0.10\n\n\n306\ngold\n0.20\n0.15\n0.05\n\n\n306\nred\n0.10\n0.10\nNA\n\n\n307\nblue\n0.15\n0.20\n0.10\n\n\n307\ngold\n0.20\n0.25\nNA\n\n\n307\nred\n0.10\nNA\nNA\n\n\n308\nblue\n0.15\n0.10\n0.05\n\n\n308\ngold\n0.20\nNA\nNA\n\n\n308\nred\n0.30\n0.20\nNA\n\n\n309\nblue\n0.15\n0.10\n0.05\n\n\n309\ngold\n0.10\n0.15\n0.10\n\n\n309\nred\n0.20\n0.15\nNA\n\n\n310\nblue\n0.05\n0.30\nNA\n\n\n310\ngold\n0.10\n0.15\n0.10\n\n\n310\nred\n0.20\n0.10\nNA\n\n\n311\nblue\nNA\n0.05\n0.10\n\n\n311\ngold\n0.30\n0.35\n0.05\n\n\n311\nred\n0.10\n0.05\nNA\n\n\n312\nblue\n0.15\n0.20\n0.05\n\n\n312\ngold\n0.15\n0.10\n0.10\n\n\n312\nred\n0.05\n0.20\nNA\n\n\n313\nblue\n0.15\n0.20\n0.10\n\n\n313\ngold\n0.15\n0.15\nNA\n\n\n313\nred\n0.10\n0.15\nNA\n\n\n314\nblue\n0.05\nNA\nNA\n\n\n314\ngold\n0.30\n0.20\n0.10\n\n\n314\nred\n0.10\n0.25\nNA\n\n\n315\nblue\n0.10\n0.05\nNA\n\n\n315\ngold\n0.35\n0.10\n0.05\n\n\n315\nred\n0.20\n0.15\nNA\n\n\n316\nblue\n0.10\n0.05\nNA\n\n\n316\ngold\n0.20\n0.10\n0.10\n\n\n316\nred\n0.25\n0.20\nNA\n\n\n317\nblue\n0.15\n0.15\nNA\n\n\n317\ngold\n0.10\n0.10\n0.15\n\n\n317\nred\n0.10\n0.25\nNA\n\n\n318\nblue\n0.20\n0.25\n0.10\n\n\n318\ngold\n0.10\n0.15\n0.15\n\n\n318\nred\n0.05\nNA\nNA\n\n\n319\nblue\n0.05\n0.20\n0.10\n\n\n319\ngold\n0.10\n0.15\nNA\n\n\n319\nred\n0.30\n0.10\nNA\n\n\n320\nblue\n0.05\n0.15\nNA\n\n\n320\ngold\n0.40\n0.10\n0.05\n\n\n320\nred\n0.10\n0.15\nNA\n\n\n321\nblue\n0.05\n0.30\nNA\n\n\n321\ngold\n0.30\n0.05\n0.10\n\n\n321\nred\n0.05\n0.15\nNA\n\n\n322\nblue\nNA\n0.20\n0.10\n\n\n322\ngold\n0.10\n0.25\n0.05\n\n\n322\nred\n0.20\n0.10\nNA\n\n\n323\nblue\n0.10\n0.20\n0.05\n\n\n323\ngold\n0.35\n0.05\n0.10\n\n\n323\nred\nNA\n0.15\nNA\n\n\n324\nblue\n0.05\nNA\n0.10\n\n\n324\ngold\n0.35\n0.10\n0.15\n\n\n324\nred\n0.05\n0.20\nNA\n\n\n325\nblue\n0.05\n0.10\n0.10\n\n\n325\ngold\n0.20\n0.15\n0.05\n\n\n325\nred\n0.20\n0.15\nNA\n\n\n326\nblue\n0.15\n0.15\n0.05\n\n\n326\ngold\n0.25\n0.10\n0.15\n\n\n326\nred\n0.10\n0.05\nNA\n\n\n327\nblue\n0.15\n0.05\n0.05\n\n\n327\ngold\n0.25\n0.20\n0.15\n\n\n327\nred\n0.05\n0.10\nNA\n\n\n328\nblue\nNA\n0.20\n0.10\n\n\n328\ngold\n0.20\n0.05\n0.10\n\n\n328\nred\n0.15\n0.20\nNA\n\n\n329\nblue\n0.05\n0.20\nNA\n\n\n329\ngold\n0.30\n0.05\n0.05\n\n\n329\nred\n0.10\n0.25\nNA\n\n\n330\nblue\nNA\n0.05\nNA\n\n\n330\ngold\n0.30\n0.25\n0.05\n\n\n330\nred\n0.20\n0.15\nNA\n\n\n331\nblue\n0.10\n0.25\nNA\n\n\n331\ngold\n0.15\n0.05\n0.10\n\n\n331\nred\n0.30\n0.05\nNA\n\n\n332\nblue\n0.10\nNA\n0.05\n\n\n332\ngold\n0.30\n0.15\n0.15\n\n\n332\nred\n0.20\n0.05\nNA\n\n\n333\nblue\n0.10\n0.05\n0.05\n\n\n333\ngold\n0.25\n0.25\n0.05\n\n\n333\nred\n0.20\n0.05\nNA\n\n\n334\nblue\n0.05\n0.25\n0.05\n\n\n334\ngold\n0.25\n0.15\n0.05\n\n\n334\nred\n0.10\n0.10\nNA\n\n\n335\nblue\n0.10\n0.10\n0.05\n\n\n335\ngold\n0.20\n0.15\n0.15\n\n\n335\nred\n0.10\n0.15\nNA\n\n\n336\nblue\n0.05\n0.10\nNA\n\n\n336\ngold\n0.20\n0.20\n0.05\n\n\n336\nred\n0.15\n0.25\nNA\n\n\n337\nblue\n0.10\n0.15\n0.05\n\n\n337\ngold\n0.20\n0.15\nNA\n\n\n337\nred\n0.20\n0.15\nNA\n\n\n338\nblue\n0.15\n0.20\n0.05\n\n\n338\ngold\n0.25\n0.05\n0.10\n\n\n338\nred\n0.05\n0.15\nNA\n\n\n339\nblue\n0.20\n0.05\n0.05\n\n\n339\ngold\n0.25\n0.10\n0.15\n\n\n339\nred\n0.10\n0.10\nNA\n\n\n340\nblue\n0.15\n0.20\n0.05\n\n\n340\ngold\n0.15\n0.10\n0.10\n\n\n340\nred\n0.10\n0.15\nNA\n\n\n341\nblue\n0.05\n0.15\n0.05\n\n\n341\ngold\n0.25\n0.15\n0.15\n\n\n341\nred\n0.05\n0.15\nNA\n\n\n342\nblue\n0.15\n0.15\nNA\n\n\n342\ngold\n0.10\n0.15\n0.15\n\n\n342\nred\n0.10\n0.20\nNA\n\n\n343\nblue\n0.05\n0.10\n0.05\n\n\n343\ngold\n0.35\n0.05\n0.15\n\n\n343\nred\n0.15\n0.10\nNA\n\n\n344\nblue\n0.05\n0.15\nNA\n\n\n344\ngold\n0.30\n0.15\n0.10\n\n\n344\nred\n0.10\n0.15\nNA\n\n\n345\nblue\n0.05\n0.15\n0.10\n\n\n345\ngold\n0.35\n0.15\nNA\n\n\n345\nred\n0.05\n0.15\nNA\n\n\n346\nblue\n0.05\n0.20\nNA\n\n\n346\ngold\n0.30\n0.20\n0.05\n\n\n346\nred\n0.20\nNA\nNA\n\n\n347\nblue\n0.10\n0.10\n0.10\n\n\n347\ngold\n0.20\n0.25\n0.15\n\n\n347\nred\n0.10\nNA\nNA\n\n\n348\nblue\n0.05\n0.15\n0.15\n\n\n348\ngold\n0.10\n0.10\n0.20\n\n\n348\nred\n0.15\n0.10\nNA\n\n\n349\nblue\n0.05\n0.15\n0.05\n\n\n349\ngold\n0.25\n0.10\n0.15\n\n\n349\nred\n0.05\n0.20\nNA\n\n\n350\nblue\n0.10\n0.15\nNA\n\n\n350\ngold\n0.15\n0.20\n0.05\n\n\n350\nred\n0.25\n0.10\nNA\n\n\n351\nblue\n0.15\n0.05\nNA\n\n\n351\ngold\n0.15\n0.10\n0.05\n\n\n351\nred\n0.15\n0.35\nNA\n\n\n352\nblue\n0.15\nNA\n0.05\n\n\n352\ngold\n0.15\n0.15\n0.20\n\n\n352\nred\n0.15\n0.15\nNA\n\n\n353\nblue\n0.05\n0.15\n0.15\n\n\n353\ngold\n0.25\nNA\nNA\n\n\n353\nred\n0.20\n0.20\nNA\n\n\n354\nblue\n0.10\n0.05\nNA\n\n\n354\ngold\n0.40\n0.25\n0.10\n\n\n354\nred\n0.10\nNA\nNA\n\n\n355\nblue\n0.10\nNA\n0.05\n\n\n355\ngold\n0.35\n0.30\n0.05\n\n\n355\nred\n0.05\n0.10\nNA\n\n\n356\nblue\nNA\n0.10\n0.10\n\n\n356\ngold\n0.20\n0.10\n0.20\n\n\n356\nred\n0.15\n0.15\nNA\n\n\n357\nblue\n0.05\n0.05\n0.05\n\n\n357\ngold\n0.35\n0.20\n0.05\n\n\n357\nred\n0.15\n0.10\nNA\n\n\n358\nblue\n0.15\n0.15\nNA\n\n\n358\ngold\n0.20\n0.05\n0.20\n\n\n358\nred\n0.10\n0.15\nNA\n\n\n359\nblue\nNA\n0.20\nNA\n\n\n359\ngold\n0.25\n0.20\n0.25\n\n\n359\nred\n0.05\n0.05\nNA\n\n\n360\nblue\n0.05\n0.05\n0.05\n\n\n360\ngold\n0.30\n0.05\n0.10\n\n\n360\nred\n0.20\n0.20\nNA\n\n\n361\nblue\n0.25\n0.10\n0.05\n\n\n361\ngold\n0.05\n0.20\n0.15\n\n\n361\nred\n0.15\n0.05\nNA\n\n\n362\nblue\nNA\n0.15\nNA\n\n\n362\ngold\n0.25\n0.10\n0.10\n\n\n362\nred\n0.15\n0.25\nNA\n\n\n363\nblue\n0.10\n0.10\n0.10\n\n\n363\ngold\n0.20\n0.15\n0.10\n\n\n363\nred\n0.10\n0.15\nNA\n\n\n364\nblue\n0.25\n0.05\nNA\n\n\n364\ngold\n0.30\n0.15\n0.05\n\n\n364\nred\n0.10\n0.10\nNA\n\n\n365\nblue\n0.10\n0.05\n0.05\n\n\n365\ngold\n0.30\n0.20\n0.15\n\n\n365\nred\n0.15\nNA\nNA\n\n\n366\nblue\n0.10\n0.20\n0.05\n\n\n366\ngold\n0.05\n0.05\n0.10\n\n\n366\nred\n0.20\n0.25\nNA\n\n\n367\nblue\n0.10\n0.15\nNA\n\n\n367\ngold\n0.30\n0.10\n0.05\n\n\n367\nred\n0.10\n0.20\nNA\n\n\n368\nblue\n0.05\n0.15\nNA\n\n\n368\ngold\n0.25\n0.30\n0.15\n\n\n368\nred\n0.10\nNA\nNA\n\n\n369\nblue\n0.05\n0.15\n0.10\n\n\n369\ngold\n0.15\n0.25\n0.05\n\n\n369\nred\n0.05\n0.20\nNA\n\n\n370\nblue\n0.20\n0.15\n0.05\n\n\n370\ngold\n0.15\n0.10\n0.10\n\n\n370\nred\n0.20\n0.05\nNA\n\n\n371\nblue\n0.15\n0.15\nNA\n\n\n371\ngold\n0.40\n0.05\n0.10\n\n\n371\nred\n0.10\n0.05\nNA\n\n\n372\nblue\n0.10\n0.15\nNA\n\n\n372\ngold\n0.20\n0.15\n0.05\n\n\n372\nred\n0.15\n0.20\nNA\n\n\n373\nblue\n0.15\n0.30\n0.10\n\n\n373\ngold\n0.05\n0.20\nNA\n\n\n373\nred\n0.15\n0.05\nNA\n\n\n374\nblue\n0.15\n0.15\n0.05\n\n\n374\ngold\n0.30\n0.15\nNA\n\n\n374\nred\n0.20\nNA\nNA\n\n\n375\nblue\n0.05\n0.15\nNA\n\n\n375\ngold\n0.20\n0.10\n0.25\n\n\n375\nred\n0.10\n0.15\nNA\n\n\n376\nblue\n0.15\n0.20\n0.05\n\n\n376\ngold\n0.05\n0.25\nNA\n\n\n376\nred\n0.15\n0.15\nNA\n\n\n377\nblue\n0.10\n0.15\n0.10\n\n\n377\ngold\n0.25\nNA\n0.10\n\n\n377\nred\n0.10\n0.20\nNA\n\n\n378\nblue\n0.05\n0.15\n0.05\n\n\n378\ngold\n0.20\n0.25\n0.10\n\n\n378\nred\n0.10\n0.10\nNA\n\n\n379\nblue\nNA\n0.15\n0.05\n\n\n379\ngold\n0.35\n0.10\nNA\n\n\n379\nred\n0.20\n0.15\nNA\n\n\n380\nblue\n0.10\n0.10\n0.05\n\n\n380\ngold\n0.25\n0.10\n0.05\n\n\n380\nred\n0.15\n0.20\nNA\n\n\n381\nblue\n0.10\n0.25\nNA\n\n\n381\ngold\n0.20\n0.15\n0.10\n\n\n381\nred\n0.10\n0.10\nNA\n\n\n382\nblue\n0.20\n0.15\n0.05\n\n\n382\ngold\n0.15\n0.05\n0.10\n\n\n382\nred\n0.15\n0.15\nNA\n\n\n383\nblue\n0.05\n0.05\n0.05\n\n\n383\ngold\n0.35\n0.15\n0.05\n\n\n383\nred\n0.20\n0.10\nNA\n\n\n384\nblue\n0.10\n0.20\n0.05\n\n\n384\ngold\n0.40\n0.10\n0.05\n\n\n384\nred\n0.05\n0.05\nNA\n\n\n385\nblue\n0.10\n0.15\nNA\n\n\n385\ngold\n0.35\n0.20\n0.05\n\n\n385\nred\n0.05\n0.10\nNA\n\n\n386\nblue\n0.15\n0.10\nNA\n\n\n386\ngold\n0.15\n0.15\n0.15\n\n\n386\nred\n0.20\n0.10\nNA\n\n\n387\nblue\n0.15\n0.15\n0.05\n\n\n387\ngold\n0.40\n0.10\nNA\n\n\n387\nred\nNA\n0.15\nNA\n\n\n388\nblue\n0.05\n0.25\n0.05\n\n\n388\ngold\n0.20\n0.20\n0.05\n\n\n388\nred\n0.10\n0.10\nNA\n\n\n389\nblue\n0.20\n0.10\n0.05\n\n\n389\ngold\n0.10\n0.10\n0.10\n\n\n389\nred\n0.15\n0.20\nNA\n\n\n390\nblue\n0.15\n0.10\n0.10\n\n\n390\ngold\n0.05\n0.20\n0.10\n\n\n390\nred\n0.15\n0.15\nNA\n\n\n391\nblue\n0.15\n0.05\n0.05\n\n\n391\ngold\n0.30\nNA\n0.10\n\n\n391\nred\n0.20\n0.15\nNA\n\n\n392\nblue\n0.05\n0.25\nNA\n\n\n392\ngold\n0.15\n0.15\n0.05\n\n\n392\nred\n0.15\n0.20\nNA\n\n\n393\nblue\n0.05\n0.05\n0.10\n\n\n393\ngold\n0.40\n0.10\n0.10\n\n\n393\nred\n0.15\n0.05\nNA\n\n\n394\nblue\n0.05\n0.10\n0.05\n\n\n394\ngold\n0.20\n0.20\n0.10\n\n\n394\nred\n0.15\n0.15\nNA\n\n\n395\nblue\n0.10\n0.10\n0.10\n\n\n395\ngold\n0.30\n0.10\n0.05\n\n\n395\nred\n0.10\n0.15\nNA\n\n\n396\nblue\n0.05\n0.20\n0.05\n\n\n396\ngold\n0.20\n0.10\n0.05\n\n\n396\nred\n0.15\n0.20\nNA\n\n\n397\nblue\n0.20\n0.10\n0.05\n\n\n397\ngold\n0.35\n0.15\nNA\n\n\n397\nred\n0.10\n0.05\nNA\n\n\n398\nblue\nNA\n0.20\n0.05\n\n\n398\ngold\n0.15\n0.20\n0.10\n\n\n398\nred\n0.15\n0.15\nNA\n\n\n399\nblue\n0.20\n0.15\nNA\n\n\n399\ngold\n0.25\n0.10\n0.10\n\n\n399\nred\n0.15\n0.05\nNA\n\n\n400\nblue\n0.10\n0.20\nNA\n\n\n400\ngold\n0.10\n0.15\n0.05\n\n\n400\nred\n0.15\n0.25\nNA\n\n\n401\nblue\n0.10\n0.20\n0.05\n\n\n401\ngold\n0.20\n0.15\n0.15\n\n\n401\nred\n0.05\n0.10\nNA\n\n\n402\nblue\n0.20\n0.05\n0.15\n\n\n402\ngold\n0.10\n0.25\n0.05\n\n\n402\nred\n0.05\n0.15\nNA\n\n\n403\nblue\n0.15\n0.15\n0.15\n\n\n403\ngold\n0.05\n0.15\n0.10\n\n\n403\nred\n0.15\n0.10\nNA\n\n\n404\nblue\n0.10\n0.15\nNA\n\n\n404\ngold\n0.10\n0.25\n0.20\n\n\n404\nred\n0.15\n0.05\nNA\n\n\n405\nblue\n0.20\n0.15\nNA\n\n\n405\ngold\n0.10\n0.20\n0.05\n\n\n405\nred\n0.15\n0.15\nNA\n\n\n406\nblue\n0.05\n0.05\n0.10\n\n\n406\ngold\n0.35\n0.25\n0.05\n\n\n406\nred\n0.10\n0.05\nNA\n\n\n407\nblue\n0.20\n0.15\nNA\n\n\n407\ngold\n0.20\n0.10\n0.05\n\n\n407\nred\n0.15\n0.15\nNA\n\n\n408\nblue\n0.20\n0.10\n0.05\n\n\n408\ngold\n0.35\n0.05\n0.10\n\n\n408\nred\n0.10\n0.05\nNA\n\n\n409\nblue\n0.10\n0.10\n0.05\n\n\n409\ngold\n0.30\n0.05\n0.10\n\n\n409\nred\n0.10\n0.20\nNA\n\n\n410\nblue\nNA\n0.20\nNA\n\n\n410\ngold\n0.35\n0.15\n0.10\n\n\n410\nred\n0.05\n0.15\nNA\n\n\n411\nblue\n0.10\n0.10\n0.10\n\n\n411\ngold\n0.10\n0.20\n0.05\n\n\n411\nred\n0.10\n0.25\nNA\n\n\n412\nblue\n0.15\nNA\nNA\n\n\n412\ngold\n0.30\n0.15\n0.10\n\n\n412\nred\n0.10\n0.20\nNA\n\n\n413\nblue\n0.05\n0.15\n0.10\n\n\n413\ngold\n0.15\n0.10\n0.15\n\n\n413\nred\n0.05\n0.25\nNA\n\n\n414\nblue\n0.10\n0.10\nNA\n\n\n414\ngold\n0.15\n0.05\n0.20\n\n\n414\nred\n0.10\n0.30\nNA\n\n\n415\nblue\n0.20\n0.05\n0.05\n\n\n415\ngold\n0.25\n0.15\n0.05\n\n\n415\nred\n0.10\n0.15\nNA\n\n\n416\nblue\n0.10\n0.10\n0.05\n\n\n416\ngold\n0.30\n0.10\n0.05\n\n\n416\nred\n0.10\n0.20\nNA\n\n\n417\nblue\n0.10\n0.05\n0.10\n\n\n417\ngold\n0.15\n0.05\n0.20\n\n\n417\nred\n0.15\n0.20\nNA\n\n\n418\nblue\n0.05\n0.15\n0.15\n\n\n418\ngold\n0.35\n0.05\n0.05\n\n\n418\nred\n0.10\n0.10\nNA\n\n\n419\nblue\n0.05\n0.10\n0.10\n\n\n419\ngold\n0.10\nNA\n0.15\n\n\n419\nred\n0.15\n0.35\nNA\n\n\n420\nblue\n0.15\n0.15\n0.05\n\n\n420\ngold\n0.20\n0.10\n0.10\n\n\n420\nred\n0.15\n0.10\nNA\n\n\n421\nblue\n0.05\n0.05\n0.10\n\n\n421\ngold\n0.20\n0.10\n0.10\n\n\n421\nred\n0.20\n0.20\nNA\n\n\n422\nblue\n0.05\n0.15\nNA\n\n\n422\ngold\n0.25\n0.15\n0.15\n\n\n422\nred\n0.20\n0.05\nNA\n\n\n423\nblue\n0.15\n0.05\n0.05\n\n\n423\ngold\n0.15\n0.10\n0.10\n\n\n423\nred\n0.10\n0.30\nNA\n\n\n424\nblue\n0.05\n0.20\n0.10\n\n\n424\ngold\n0.30\n0.10\n0.05\n\n\n424\nred\nNA\n0.20\nNA\n\n\n425\nblue\n0.10\n0.20\n0.05\n\n\n425\ngold\n0.10\n0.20\nNA\n\n\n425\nred\n0.15\n0.20\nNA\n\n\n426\nblue\n0.10\n0.10\n0.10\n\n\n426\ngold\n0.25\n0.15\n0.15\n\n\n426\nred\n0.10\n0.05\nNA\n\n\n427\nblue\nNA\n0.15\n0.10\n\n\n427\ngold\n0.15\n0.05\n0.05\n\n\n427\nred\n0.25\n0.25\nNA\n\n\n428\nblue\n0.40\n0.10\nNA\n\n\n428\ngold\n0.25\n0.05\n0.10\n\n\n428\nred\n0.05\n0.05\nNA\n\n\n429\nblue\n0.30\n0.10\n0.05\n\n\n429\ngold\n0.15\n0.10\n0.10\n\n\n429\nred\n0.15\n0.05\nNA\n\n\n430\nblue\n0.10\n0.30\nNA\n\n\n430\ngold\n0.25\n0.10\n0.05\n\n\n430\nred\n0.15\n0.05\nNA\n\n\n431\nblue\n0.05\n0.05\n0.05\n\n\n431\ngold\n0.15\n0.05\n0.20\n\n\n431\nred\n0.15\n0.30\nNA\n\n\n432\nblue\n0.10\n0.15\n0.10\n\n\n432\ngold\n0.30\n0.05\nNA\n\n\n432\nred\n0.20\n0.10\nNA\n\n\n433\nblue\n0.05\n0.15\n0.05\n\n\n433\ngold\n0.15\n0.10\n0.25\n\n\n433\nred\n0.15\n0.10\nNA\n\n\n434\nblue\n0.05\n0.15\n0.05\n\n\n434\ngold\n0.35\n0.10\n0.05\n\n\n434\nred\n0.10\n0.15\nNA\n\n\n435\nblue\n0.10\n0.20\n0.05\n\n\n435\ngold\n0.20\n0.15\n0.15\n\n\n435\nred\n0.10\n0.05\nNA\n\n\n436\nblue\n0.05\n0.20\n0.10\n\n\n436\ngold\n0.15\n0.10\n0.05\n\n\n436\nred\n0.20\n0.15\nNA\n\n\n437\nblue\nNA\n0.35\n0.10\n\n\n437\ngold\n0.35\nNA\nNA\n\n\n437\nred\n0.15\n0.05\nNA\n\n\n438\nblue\n0.15\n0.20\n0.10\n\n\n438\ngold\n0.15\n0.20\n0.05\n\n\n438\nred\n0.10\n0.05\nNA\n\n\n439\nblue\n0.05\n0.20\n0.05\n\n\n439\ngold\n0.20\n0.10\n0.10\n\n\n439\nred\n0.20\n0.10\nNA\n\n\n440\nblue\n0.05\n0.35\n0.05\n\n\n440\ngold\n0.15\n0.10\nNA\n\n\n440\nred\n0.20\n0.10\nNA\n\n\n441\nblue\n0.10\n0.10\n0.15\n\n\n441\ngold\n0.20\n0.10\nNA\n\n\n441\nred\n0.10\n0.25\nNA\n\n\n442\nblue\nNA\n0.25\n0.05\n\n\n442\ngold\n0.25\n0.05\n0.05\n\n\n442\nred\n0.20\n0.15\nNA\n\n\n443\nblue\n0.20\n0.05\nNA\n\n\n443\ngold\n0.20\n0.10\n0.05\n\n\n443\nred\n0.25\n0.15\nNA\n\n\n444\nblue\n0.05\n0.10\n0.05\n\n\n444\ngold\n0.30\n0.15\n0.05\n\n\n444\nred\n0.15\n0.15\nNA\n\n\n445\nblue\n0.15\n0.10\nNA\n\n\n445\ngold\n0.25\n0.05\n0.25\n\n\n445\nred\n0.15\n0.05\nNA\n\n\n446\nblue\n0.05\n0.10\nNA\n\n\n446\ngold\n0.45\n0.05\n0.20\n\n\n446\nred\n0.05\n0.10\nNA\n\n\n447\nblue\n0.05\n0.15\n0.05\n\n\n447\ngold\n0.05\n0.05\n0.30\n\n\n447\nred\n0.20\n0.15\nNA\n\n\n448\nblue\n0.15\n0.25\nNA\n\n\n448\ngold\n0.20\n0.05\n0.10\n\n\n448\nred\n0.10\n0.15\nNA\n\n\n449\nblue\n0.15\n0.15\nNA\n\n\n449\ngold\n0.30\n0.05\n0.15\n\n\n449\nred\n0.05\n0.15\nNA\n\n\n450\nblue\n0.10\n0.20\nNA\n\n\n450\ngold\n0.15\n0.10\n0.05\n\n\n450\nred\n0.25\n0.15\nNA\n\n\n451\nblue\n0.10\n0.15\nNA\n\n\n451\ngold\n0.25\n0.10\n0.10\n\n\n451\nred\n0.10\n0.20\nNA\n\n\n452\nblue\n0.05\n0.05\n0.05\n\n\n452\ngold\n0.40\n0.10\nNA\n\n\n452\nred\n0.15\n0.20\nNA\n\n\n453\nblue\n0.10\n0.15\n0.05\n\n\n453\ngold\n0.30\n0.15\n0.15\n\n\n453\nred\n0.05\n0.05\nNA\n\n\n454\nblue\n0.10\n0.05\n0.15\n\n\n454\ngold\n0.15\n0.10\n0.10\n\n\n454\nred\n0.15\n0.20\nNA\n\n\n455\nblue\n0.05\n0.15\n0.05\n\n\n455\ngold\n0.20\n0.25\n0.15\n\n\n455\nred\nNA\n0.15\nNA\n\n\n456\nblue\n0.10\n0.10\n0.05\n\n\n456\ngold\n0.20\n0.10\n0.15\n\n\n456\nred\n0.10\n0.20\nNA\n\n\n457\nblue\n0.05\n0.15\n0.05\n\n\n457\ngold\n0.10\n0.20\n0.15\n\n\n457\nred\n0.05\n0.25\nNA\n\n\n458\nblue\nNA\n0.25\n0.05\n\n\n458\ngold\n0.20\n0.05\n0.15\n\n\n458\nred\n0.15\n0.15\nNA\n\n\n459\nblue\n0.10\n0.15\n0.10\n\n\n459\ngold\n0.20\n0.15\n0.15\n\n\n459\nred\nNA\n0.15\nNA\n\n\n460\nblue\n0.05\n0.10\n0.05\n\n\n460\ngold\n0.15\n0.15\n0.25\n\n\n460\nred\n0.10\n0.15\nNA\n\n\n461\nblue\n0.15\n0.15\nNA\n\n\n461\ngold\n0.20\n0.15\n0.10\n\n\n461\nred\n0.10\n0.15\nNA\n\n\n462\nblue\n0.10\n0.05\n0.15\n\n\n462\ngold\n0.35\n0.15\n0.10\n\n\n462\nred\n0.05\n0.05\nNA\n\n\n463\nblue\n0.05\n0.15\n0.05\n\n\n463\ngold\n0.20\n0.10\n0.10\n\n\n463\nred\n0.05\n0.30\nNA\n\n\n464\nblue\n0.10\n0.10\n0.15\n\n\n464\ngold\n0.05\n0.10\n0.05\n\n\n464\nred\n0.10\n0.35\nNA\n\n\n465\nblue\n0.05\n0.05\n0.10\n\n\n465\ngold\n0.20\n0.30\n0.05\n\n\n465\nred\n0.15\n0.10\nNA\n\n\n466\nblue\n0.05\n0.30\n0.05\n\n\n466\ngold\n0.25\n0.05\n0.15\n\n\n466\nred\nNA\n0.15\nNA\n\n\n467\nblue\n0.10\n0.10\n0.05\n\n\n467\ngold\n0.20\n0.20\n0.15\n\n\n467\nred\n0.10\n0.10\nNA\n\n\n468\nblue\n0.05\n0.10\nNA\n\n\n468\ngold\n0.25\n0.20\n0.15\n\n\n468\nred\n0.20\n0.05\nNA\n\n\n469\nblue\n0.25\n0.05\nNA\n\n\n469\ngold\n0.30\n0.15\n0.05\n\n\n469\nred\n0.10\n0.10\nNA\n\n\n470\nblue\n0.15\n0.05\n0.10\n\n\n470\ngold\n0.15\n0.10\n0.15\n\n\n470\nred\n0.10\n0.20\nNA\n\n\n471\nblue\n0.10\n0.10\n0.05\n\n\n471\ngold\n0.35\n0.05\n0.15\n\n\n471\nred\n0.10\n0.10\nNA\n\n\n472\nblue\n0.10\n0.05\n0.05\n\n\n472\ngold\n0.30\nNA\n0.15\n\n\n472\nred\n0.10\n0.25\nNA\n\n\n473\nblue\n0.10\n0.15\nNA\n\n\n473\ngold\n0.45\n0.15\n0.10\n\n\n473\nred\nNA\n0.05\nNA\n\n\n474\nblue\n0.05\n0.10\n0.05\n\n\n474\ngold\n0.30\n0.20\n0.05\n\n\n474\nred\n0.10\n0.15\nNA\n\n\n475\nblue\n0.05\n0.20\n0.10\n\n\n475\ngold\n0.25\n0.10\n0.10\n\n\n475\nred\n0.05\n0.15\nNA\n\n\n476\nblue\n0.15\n0.10\nNA\n\n\n476\ngold\n0.20\n0.10\n0.10\n\n\n476\nred\n0.10\n0.25\nNA\n\n\n477\nblue\n0.10\n0.15\n0.05\n\n\n477\ngold\n0.25\n0.15\n0.05\n\n\n477\nred\n0.15\n0.10\nNA\n\n\n478\nblue\n0.10\n0.10\n0.10\n\n\n478\ngold\n0.35\n0.05\n0.10\n\n\n478\nred\n0.20\nNA\nNA\n\n\n479\nblue\n0.10\n0.05\nNA\n\n\n479\ngold\n0.20\n0.20\n0.10\n\n\n479\nred\n0.15\n0.20\nNA\n\n\n480\nblue\nNA\n0.15\nNA\n\n\n480\ngold\n0.40\n0.05\n0.10\n\n\n480\nred\n0.15\n0.15\nNA\n\n\n481\nblue\n0.05\n0.15\n0.05\n\n\n481\ngold\n0.15\n0.10\n0.10\n\n\n481\nred\n0.25\n0.15\nNA\n\n\n482\nblue\n0.05\n0.20\n0.05\n\n\n482\ngold\n0.30\n0.10\n0.05\n\n\n482\nred\n0.15\n0.10\nNA\n\n\n483\nblue\n0.10\n0.15\n0.05\n\n\n483\ngold\n0.25\n0.10\n0.10\n\n\n483\nred\n0.10\n0.15\nNA\n\n\n484\nblue\n0.05\n0.25\nNA\n\n\n484\ngold\n0.20\n0.05\nNA\n\n\n484\nred\n0.30\n0.15\nNA\n\n\n485\nblue\n0.10\n0.10\n0.05\n\n\n485\ngold\n0.25\n0.15\n0.20\n\n\n485\nred\n0.05\n0.10\nNA\n\n\n486\nblue\n0.05\n0.10\nNA\n\n\n486\ngold\n0.25\n0.25\n0.05\n\n\n486\nred\n0.10\n0.20\nNA\n\n\n487\nblue\nNA\n0.05\n0.15\n\n\n487\ngold\n0.25\n0.20\n0.05\n\n\n487\nred\n0.15\n0.15\nNA\n\n\n488\nblue\n0.05\n0.10\n0.05\n\n\n488\ngold\n0.15\n0.20\n0.10\n\n\n488\nred\n0.15\n0.20\nNA\n\n\n489\nblue\n0.10\n0.15\n0.05\n\n\n489\ngold\n0.20\nNA\n0.10\n\n\n489\nred\n0.15\n0.25\nNA\n\n\n490\nblue\n0.20\n0.15\n0.10\n\n\n490\ngold\n0.10\n0.20\n0.10\n\n\n490\nred\n0.10\n0.05\nNA\n\n\n491\nblue\n0.15\n0.05\n0.05\n\n\n491\ngold\n0.20\n0.15\n0.15\n\n\n491\nred\n0.10\n0.15\nNA\n\n\n492\nblue\n0.10\n0.15\n0.05\n\n\n492\ngold\n0.15\n0.10\n0.15\n\n\n492\nred\n0.10\n0.20\nNA\n\n\n493\nblue\n0.10\n0.15\n0.15\n\n\n493\ngold\n0.25\nNA\n0.10\n\n\n493\nred\n0.20\n0.05\nNA\n\n\n494\nblue\n0.10\n0.05\n0.05\n\n\n494\ngold\n0.25\n0.15\n0.15\n\n\n494\nred\n0.20\n0.05\nNA\n\n\n495\nblue\n0.10\n0.10\nNA\n\n\n495\ngold\n0.20\n0.35\n0.10\n\n\n495\nred\n0.10\n0.05\nNA\n\n\n496\nblue\n0.05\n0.15\n0.05\n\n\n496\ngold\n0.35\nNA\n0.10\n\n\n496\nred\n0.15\n0.15\nNA\n\n\n497\nblue\n0.05\n0.10\n0.10\n\n\n497\ngold\n0.10\n0.25\n0.05\n\n\n497\nred\n0.10\n0.25\nNA\n\n\n498\nblue\n0.05\n0.15\nNA\n\n\n498\ngold\n0.30\n0.10\n0.20\n\n\n498\nred\n0.05\n0.15\nNA\n\n\n499\nblue\n0.10\n0.10\n0.10\n\n\n499\ngold\n0.15\n0.25\nNA\n\n\n499\nred\n0.10\n0.20\nNA\n\n\n500\nblue\n0.05\nNA\n0.15\n\n\n500\ngold\n0.30\n0.10\n0.10\n\n\n500\nred\n0.15\n0.15\nNA\n\n\n501\nblue\n0.05\n0.25\n0.05\n\n\n501\ngold\n0.15\n0.25\n0.05\n\n\n501\nred\n0.10\n0.10\nNA\n\n\n502\nblue\n0.10\n0.15\n0.05\n\n\n502\ngold\n0.10\n0.15\n0.05\n\n\n502\nred\n0.15\n0.25\nNA\n\n\n503\nblue\n0.15\n0.05\n0.15\n\n\n503\ngold\n0.20\n0.15\nNA\n\n\n503\nred\n0.10\n0.20\nNA\n\n\n504\nblue\n0.05\n0.15\n0.15\n\n\n504\ngold\n0.25\n0.10\n0.05\n\n\n504\nred\n0.15\n0.10\nNA\n\n\n505\nblue\n0.10\n0.10\n0.05\n\n\n505\ngold\n0.20\n0.05\n0.15\n\n\n505\nred\n0.25\n0.10\nNA\n\n\n506\nblue\n0.10\n0.30\n0.10\n\n\n506\ngold\n0.10\nNA\n0.10\n\n\n506\nred\n0.10\n0.20\nNA\n\n\n507\nblue\n0.10\n0.25\n0.10\n\n\n507\ngold\n0.15\n0.10\n0.20\n\n\n507\nred\n0.05\n0.05\nNA\n\n\n508\nblue\n0.05\n0.10\n0.05\n\n\n508\ngold\n0.30\n0.10\n0.05\n\n\n508\nred\n0.05\n0.30\nNA\n\n\n509\nblue\n0.05\n0.15\n0.10\n\n\n509\ngold\n0.10\n0.20\n0.15\n\n\n509\nred\n0.05\n0.20\nNA\n\n\n510\nblue\nNA\n0.10\n0.10\n\n\n510\ngold\n0.20\n0.05\n0.10\n\n\n510\nred\n0.20\n0.25\nNA\n\n\n511\nblue\n0.05\n0.15\n0.05\n\n\n511\ngold\n0.15\n0.25\n0.05\n\n\n511\nred\n0.25\n0.05\nNA\n\n\n512\nblue\n0.20\n0.15\n0.10\n\n\n512\ngold\n0.20\n0.05\n0.10\n\n\n512\nred\nNA\n0.20\nNA\n\n\n513\nblue\n0.30\n0.05\n0.05\n\n\n513\ngold\n0.15\n0.05\n0.05\n\n\n513\nred\n0.25\n0.10\nNA\n\n\n514\nblue\n0.05\n0.25\nNA\n\n\n514\ngold\n0.20\n0.10\n0.25\n\n\n514\nred\n0.10\n0.05\nNA\n\n\n515\nblue\n0.15\n0.05\n0.15\n\n\n515\ngold\n0.20\n0.10\n0.20\n\n\n515\nred\nNA\n0.15\nNA\n\n\n516\nblue\n0.20\n0.05\nNA\n\n\n516\ngold\n0.20\n0.10\n0.20\n\n\n516\nred\n0.05\n0.20\nNA\n\n\n517\nblue\n0.05\n0.20\n0.05\n\n\n517\ngold\n0.20\n0.05\n0.20\n\n\n517\nred\n0.10\n0.15\nNA\n\n\n518\nblue\n0.15\n0.30\nNA\n\n\n518\ngold\n0.10\n0.15\n0.05\n\n\n518\nred\n0.05\n0.20\nNA\n\n\n519\nblue\n0.05\n0.15\nNA\n\n\n519\ngold\n0.35\n0.15\n0.10\n\n\n519\nred\n0.15\n0.05\nNA\n\n\n520\nblue\nNA\n0.10\n0.05\n\n\n520\ngold\n0.15\n0.35\n0.20\n\n\n520\nred\n0.05\n0.10\nNA\n\n\n521\nblue\n0.10\n0.10\n0.05\n\n\n521\ngold\n0.15\n0.20\n0.10\n\n\n521\nred\n0.10\n0.20\nNA\n\n\n522\nblue\n0.10\n0.10\nNA\n\n\n522\ngold\n0.20\n0.20\n0.05\n\n\n522\nred\n0.25\n0.10\nNA\n\n\n523\nblue\n0.10\n0.15\n0.05\n\n\n523\ngold\n0.25\n0.05\n0.05\n\n\n523\nred\n0.10\n0.25\nNA\n\n\n524\nblue\n0.10\n0.05\n0.05\n\n\n524\ngold\n0.30\n0.20\n0.15\n\n\n524\nred\n0.10\n0.05\nNA\n\n\n525\nblue\n0.15\n0.15\n0.05\n\n\n525\ngold\n0.20\n0.05\n0.20\n\n\n525\nred\nNA\n0.20\nNA\n\n\n526\nblue\nNA\n0.10\n0.05\n\n\n526\ngold\n0.25\n0.10\n0.15\n\n\n526\nred\n0.05\n0.30\nNA\n\n\n527\nblue\n0.10\n0.15\n0.05\n\n\n527\ngold\n0.20\n0.25\nNA\n\n\n527\nred\n0.15\n0.10\nNA\n\n\n528\nblue\n0.05\n0.15\n0.10\n\n\n528\ngold\n0.30\n0.05\n0.05\n\n\n528\nred\n0.15\n0.15\nNA\n\n\n529\nblue\nNA\n0.35\nNA\n\n\n529\ngold\n0.20\n0.20\nNA\n\n\n529\nred\n0.10\n0.15\nNA\n\n\n530\nblue\n0.20\n0.20\n0.05\n\n\n530\ngold\n0.20\n0.10\n0.05\n\n\n530\nred\n0.10\n0.10\nNA\n\n\n531\nblue\n0.10\n0.10\n0.05\n\n\n531\ngold\n0.25\n0.15\n0.15\n\n\n531\nred\n0.15\n0.05\nNA\n\n\n532\nblue\n0.20\n0.10\n0.10\n\n\n532\ngold\n0.20\n0.05\n0.10\n\n\n532\nred\n0.15\n0.10\nNA\n\n\n533\nblue\n0.15\n0.05\nNA\n\n\n533\ngold\n0.25\n0.15\n0.10\n\n\n533\nred\n0.15\n0.15\nNA\n\n\n534\nblue\n0.10\n0.10\nNA\n\n\n534\ngold\n0.25\n0.20\nNA\n\n\n534\nred\n0.20\n0.15\nNA\n\n\n535\nblue\n0.10\n0.15\n0.10\n\n\n535\ngold\n0.15\n0.25\n0.05\n\n\n535\nred\n0.10\n0.10\nNA\n\n\n536\nblue\n0.10\n0.05\n0.05\n\n\n536\ngold\n0.40\n0.15\n0.05\n\n\n536\nred\nNA\n0.20\nNA\n\n\n537\nblue\n0.15\n0.10\n0.10\n\n\n537\ngold\n0.25\n0.20\n0.15\n\n\n537\nred\n0.05\nNA\nNA\n\n\n538\nblue\n0.25\n0.15\n0.10\n\n\n538\ngold\n0.25\nNA\n0.15\n\n\n538\nred\n0.05\n0.05\nNA\n\n\n539\nblue\n0.15\n0.15\n0.05\n\n\n539\ngold\n0.25\n0.15\nNA\n\n\n539\nred\n0.05\n0.20\nNA\n\n\n540\nblue\n0.15\n0.20\n0.10\n\n\n540\ngold\n0.20\n0.20\n0.05\n\n\n540\nred\n0.05\n0.05\nNA\n\n\n541\nblue\n0.10\n0.25\n0.10\n\n\n541\ngold\n0.20\n0.05\n0.10\n\n\n541\nred\n0.15\n0.05\nNA\n\n\n542\nblue\n0.15\n0.05\nNA\n\n\n542\ngold\n0.25\n0.05\n0.15\n\n\n542\nred\nNA\n0.35\nNA\n\n\n543\nblue\n0.10\n0.15\nNA\n\n\n543\ngold\n0.20\n0.10\n0.15\n\n\n543\nred\n0.10\n0.20\nNA\n\n\n544\nblue\n0.15\n0.10\nNA\n\n\n544\ngold\n0.05\n0.20\n0.15\n\n\n544\nred\n0.20\n0.15\nNA\n\n\n545\nblue\n0.10\n0.15\nNA\n\n\n545\ngold\n0.40\nNA\n0.20\n\n\n545\nred\n0.05\n0.10\nNA\n\n\n546\nblue\n0.20\n0.05\n0.05\n\n\n546\ngold\n0.25\nNA\n0.05\n\n\n546\nred\n0.20\n0.20\nNA\n\n\n547\nblue\nNA\n0.35\nNA\n\n\n547\ngold\n0.30\n0.15\nNA\n\n\n547\nred\n0.20\nNA\nNA\n\n\n548\nblue\n0.15\n0.15\n0.10\n\n\n548\ngold\n0.25\n0.15\n0.05\n\n\n548\nred\n0.05\n0.10\nNA\n\n\n549\nblue\n0.10\n0.20\nNA\n\n\n549\ngold\n0.20\n0.10\n0.15\n\n\n549\nred\n0.25\nNA\nNA\n\n\n550\nblue\nNA\n0.15\nNA\n\n\n550\ngold\n0.45\n0.10\n0.05\n\n\n550\nred\n0.05\n0.20\nNA\n\n\n551\nblue\n0.05\n0.20\n0.05\n\n\n551\ngold\n0.15\n0.15\n0.10\n\n\n551\nred\n0.10\n0.20\nNA\n\n\n552\nblue\n0.05\n0.20\nNA\n\n\n552\ngold\n0.35\n0.10\n0.10\n\n\n552\nred\n0.10\n0.10\nNA\n\n\n553\nblue\n0.20\n0.10\nNA\n\n\n553\ngold\n0.20\n0.05\n0.20\n\n\n553\nred\n0.15\n0.10\nNA\n\n\n554\nblue\n0.25\n0.15\n0.05\n\n\n554\ngold\n0.15\n0.10\n0.15\n\n\n554\nred\nNA\n0.15\nNA\n\n\n555\nblue\n0.05\n0.20\n0.15\n\n\n555\ngold\n0.20\n0.05\n0.15\n\n\n555\nred\n0.15\n0.05\nNA\n\n\n556\nblue\n0.15\n0.10\n0.10\n\n\n556\ngold\n0.10\n0.10\n0.15\n\n\n556\nred\n0.10\n0.20\nNA\n\n\n557\nblue\n0.05\n0.20\n0.05\n\n\n557\ngold\n0.20\n0.10\n0.10\n\n\n557\nred\n0.20\n0.10\nNA\n\n\n558\nblue\n0.05\n0.05\n0.05\n\n\n558\ngold\n0.15\n0.15\n0.15\n\n\n558\nred\n0.25\n0.15\nNA\n\n\n559\nblue\n0.10\n0.20\n0.05\n\n\n559\ngold\n0.15\n0.10\n0.15\n\n\n559\nred\n0.10\n0.15\nNA\n\n\n560\nblue\nNA\n0.15\nNA\n\n\n560\ngold\n0.10\n0.20\n0.25\n\n\n560\nred\n0.20\n0.10\nNA\n\n\n561\ngold\n0.30\n0.20\n0.15\n\n\n561\nred\n0.20\n0.15\nNA\n\n\n562\nblue\n0.10\n0.10\n0.15\n\n\n562\ngold\n0.30\n0.05\n0.10\n\n\n562\nred\n0.10\n0.10\nNA\n\n\n563\nblue\n0.15\n0.15\n0.05\n\n\n563\ngold\n0.15\n0.15\n0.20\n\n\n563\nred\n0.10\n0.05\nNA\n\n\n564\nblue\n0.05\n0.15\n0.10\n\n\n564\ngold\n0.25\n0.10\n0.15\n\n\n564\nred\nNA\n0.20\nNA\n\n\n565\nblue\n0.05\n0.10\nNA\n\n\n565\ngold\n0.35\n0.10\n0.10\n\n\n565\nred\n0.15\n0.15\nNA\n\n\n566\nblue\n0.15\nNA\nNA\n\n\n566\ngold\n0.20\n0.20\n0.15\n\n\n566\nred\n0.15\n0.15\nNA\n\n\n567\nblue\n0.05\n0.20\nNA\n\n\n567\ngold\n0.35\n0.15\n0.15\n\n\n567\nred\n0.05\n0.05\nNA\n\n\n568\nblue\n0.10\n0.05\n0.10\n\n\n568\ngold\n0.25\n0.15\n0.05\n\n\n568\nred\n0.20\n0.10\nNA\n\n\n569\nblue\n0.10\n0.10\nNA\n\n\n569\ngold\n0.30\n0.30\n0.05\n\n\n569\nred\n0.05\n0.10\nNA\n\n\n570\nblue\n0.20\n0.10\nNA\n\n\n570\ngold\n0.10\n0.20\n0.10\n\n\n570\nred\n0.15\n0.15\nNA\n\n\n571\nblue\n0.15\n0.10\nNA\n\n\n571\ngold\n0.35\n0.20\n0.20\n\n\n572\nblue\n0.20\n0.05\n0.05\n\n\n572\ngold\n0.20\n0.05\n0.20\n\n\n572\nred\n0.10\n0.15\nNA\n\n\n573\nblue\n0.15\n0.05\nNA\n\n\n573\ngold\n0.25\n0.20\n0.15\n\n\n573\nred\n0.05\n0.15\nNA\n\n\n574\nblue\n0.05\n0.10\nNA\n\n\n574\ngold\n0.35\n0.10\n0.10\n\n\n574\nred\n0.10\n0.20\nNA\n\n\n575\nblue\n0.15\n0.10\n0.10\n\n\n575\ngold\n0.20\n0.10\n0.10\n\n\n575\nred\n0.05\n0.20\nNA\n\n\n576\nblue\n0.20\n0.05\nNA\n\n\n576\ngold\n0.10\n0.25\n0.10\n\n\n576\nred\n0.15\n0.15\nNA\n\n\n577\nblue\n0.10\n0.10\nNA\n\n\n577\ngold\n0.30\n0.05\n0.10\n\n\n577\nred\n0.15\n0.20\nNA\n\n\n578\nblue\n0.15\n0.05\nNA\n\n\n578\ngold\n0.10\n0.45\nNA\n\n\n578\nred\n0.15\n0.10\nNA\n\n\n579\nblue\n0.05\n0.15\nNA\n\n\n579\ngold\n0.25\n0.15\n0.15\n\n\n579\nred\n0.20\n0.05\nNA\n\n\n580\nblue\nNA\n0.15\nNA\n\n\n580\ngold\n0.35\n0.15\n0.10\n\n\n580\nred\n0.10\n0.15\nNA\n\n\n581\nblue\n0.10\n0.15\nNA\n\n\n581\ngold\n0.25\n0.20\n0.10\n\n\n581\nred\n0.10\n0.10\nNA\n\n\n582\nblue\n0.10\n0.10\nNA\n\n\n582\ngold\n0.35\n0.15\n0.10\n\n\n582\nred\n0.05\n0.15\nNA\n\n\n583\nblue\n0.05\n0.05\nNA\n\n\n583\ngold\n0.20\n0.10\n0.20\n\n\n583\nred\n0.20\n0.20\nNA\n\n\n584\nblue\n0.05\n0.15\n0.05\n\n\n584\ngold\n0.25\n0.20\nNA\n\n\n584\nred\n0.15\n0.15\nNA\n\n\n585\nblue\n0.10\n0.05\nNA\n\n\n585\ngold\n0.20\n0.15\n0.10\n\n\n585\nred\n0.25\n0.15\nNA\n\n\n586\nblue\n0.10\n0.15\n0.10\n\n\n586\ngold\n0.25\n0.05\n0.20\n\n\n586\nred\n0.05\n0.10\nNA\n\n\n587\nblue\n0.10\n0.25\nNA\n\n\n587\ngold\n0.25\n0.05\n0.15\n\n\n587\nred\n0.05\n0.15\nNA\n\n\n588\nblue\n0.10\n0.15\nNA\n\n\n588\ngold\n0.20\n0.20\n0.05\n\n\n588\nred\n0.15\n0.15\nNA\n\n\n589\nblue\n0.05\n0.15\n0.05\n\n\n589\ngold\n0.35\n0.10\n0.10\n\n\n589\nred\nNA\n0.20\nNA\n\n\n590\nblue\n0.05\n0.20\n0.05\n\n\n590\ngold\n0.15\n0.15\n0.15\n\n\n590\nred\n0.15\n0.10\nNA\n\n\n591\nblue\n0.20\nNA\n0.10\n\n\n591\ngold\n0.25\n0.15\n0.10\n\n\n591\nred\n0.10\n0.10\nNA\n\n\n592\nblue\n0.10\n0.15\n0.10\n\n\n592\ngold\n0.15\n0.15\n0.05\n\n\n592\nred\n0.20\n0.10\nNA\n\n\n593\nblue\n0.05\n0.20\nNA\n\n\n593\ngold\n0.30\n0.15\n0.10\n\n\n593\nred\nNA\n0.20\nNA\n\n\n594\nblue\n0.25\n0.05\n0.15\n\n\n594\ngold\n0.30\nNA\n0.10\n\n\n594\nred\nNA\n0.15\nNA\n\n\n595\nblue\n0.15\n0.15\n0.10\n\n\n595\ngold\n0.15\n0.15\n0.15\n\n\n595\nred\nNA\n0.15\nNA\n\n\n596\nblue\n0.25\n0.05\n0.05\n\n\n596\ngold\n0.25\n0.15\n0.15\n\n\n596\nred\n0.10\nNA\nNA\n\n\n597\nblue\n0.10\n0.10\n0.05\n\n\n597\ngold\n0.25\n0.15\n0.05\n\n\n597\nred\n0.10\n0.20\nNA\n\n\n598\nblue\n0.10\n0.10\n0.05\n\n\n598\ngold\n0.30\n0.10\n0.05\n\n\n598\nred\n0.10\n0.20\nNA\n\n\n599\nblue\n0.05\n0.10\nNA\n\n\n599\ngold\n0.25\n0.30\n0.10\n\n\n599\nred\n0.10\n0.10\nNA\n\n\n600\nblue\n0.15\n0.10\n0.15\n\n\n600\ngold\n0.45\n0.05\nNA\n\n\n600\nred\n0.10\nNA\nNA\n\n\n601\nblue\n0.20\n0.35\n0.05\n\n\n601\ngold\nNA\n0.10\n0.10\n\n\n601\nred\n0.10\n0.10\nNA\n\n\n602\nblue\n0.15\n0.20\n0.05\n\n\n602\ngold\n0.15\nNA\n0.15\n\n\n602\nred\n0.15\n0.15\nNA\n\n\n603\nblue\n0.15\n0.15\n0.10\n\n\n603\ngold\n0.15\n0.20\n0.05\n\n\n603\nred\n0.10\n0.10\nNA\n\n\n604\nblue\n0.10\n0.10\n0.05\n\n\n604\ngold\n0.20\nNA\n0.20\n\n\n604\nred\n0.25\n0.10\nNA\n\n\n605\nblue\n0.10\n0.05\nNA\n\n\n605\ngold\n0.20\n0.20\n0.30\n\n\n605\nred\n0.10\n0.05\nNA\n\n\n606\nblue\nNA\n0.15\nNA\n\n\n606\ngold\n0.25\n0.15\n0.10\n\n\n606\nred\n0.20\n0.15\nNA\n\n\n607\nblue\n0.10\n0.15\n0.05\n\n\n607\ngold\n0.30\nNA\n0.10\n\n\n607\nred\n0.10\n0.20\nNA\n\n\n608\nblue\n0.10\n0.10\n0.05\n\n\n608\ngold\n0.35\nNA\n0.10\n\n\n608\nred\n0.10\n0.20\nNA\n\n\n609\nblue\n0.20\n0.10\n0.05\n\n\n609\ngold\n0.10\n0.20\n0.15\n\n\n609\nred\nNA\n0.20\nNA\n\n\n610\nblue\nNA\n0.10\n0.05\n\n\n610\ngold\n0.10\n0.35\n0.10\n\n\n610\nred\n0.05\n0.25\nNA\n\n\n611\nblue\n0.05\n0.20\n0.10\n\n\n611\ngold\n0.30\n0.05\n0.05\n\n\n611\nred\nNA\n0.25\nNA\n\n\n612\nblue\n0.10\n0.10\nNA\n\n\n612\ngold\n0.20\n0.15\n0.10\n\n\n612\nred\n0.15\n0.20\nNA\n\n\n613\nblue\nNA\n0.05\nNA\n\n\n613\ngold\n0.20\n0.05\n0.25\n\n\n613\nred\n0.20\n0.25\nNA\n\n\n614\nblue\n0.10\n0.10\nNA\n\n\n614\ngold\n0.40\n0.20\nNA\n\n\n614\nred\n0.05\n0.15\nNA\n\n\n615\nblue\n0.25\nNA\n0.10\n\n\n615\ngold\n0.20\n0.20\n0.05\n\n\n615\nred\n0.10\n0.10\nNA\n\n\n616\nblue\n0.10\n0.10\n0.05\n\n\n616\ngold\n0.35\n0.10\n0.20\n\n\n616\nred\n0.05\n0.05\nNA\n\n\n617\nblue\n0.10\n0.05\nNA\n\n\n617\ngold\n0.45\n0.20\n0.10\n\n\n617\nred\nNA\n0.10\nNA\n\n\n618\nblue\n0.10\n0.05\nNA\n\n\n618\ngold\n0.35\n0.05\n0.10\n\n\n618\nred\n0.15\n0.20\nNA\n\n\n619\nblue\n0.15\n0.20\nNA\n\n\n619\ngold\n0.20\n0.15\n0.10\n\n\n619\nred\n0.10\n0.10\nNA\n\n\n620\nblue\n0.05\n0.10\nNA\n\n\n620\ngold\n0.40\nNA\n0.15\n\n\n620\nred\n0.25\n0.05\nNA\n\n\n621\nblue\n0.10\n0.20\n0.05\n\n\n621\ngold\n0.35\n0.10\n0.10\n\n\n621\nred\n0.05\n0.05\nNA\n\n\n622\nblue\n0.10\n0.15\n0.10\n\n\n622\ngold\n0.15\n0.15\nNA\n\n\n622\nred\n0.25\n0.10\nNA\n\n\n623\nblue\n0.10\n0.05\n0.05\n\n\n623\ngold\n0.15\n0.20\n0.05\n\n\n623\nred\n0.35\n0.05\nNA\n\n\n624\nblue\nNA\n0.15\nNA\n\n\n624\ngold\n0.25\n0.30\n0.10\n\n\n624\nred\n0.10\n0.10\nNA\n\n\n625\nblue\n0.10\n0.15\n0.05\n\n\n625\ngold\n0.20\n0.20\nNA\n\n\n625\nred\n0.20\n0.10\nNA\n\n\n626\nblue\n0.05\nNA\n0.10\n\n\n626\ngold\n0.30\n0.15\n0.05\n\n\n626\nred\n0.20\n0.15\nNA\n\n\n627\nblue\n0.05\n0.20\n0.05\n\n\n627\ngold\n0.15\n0.20\n0.15\n\n\n627\nred\n0.10\n0.10\nNA\n\n\n628\nblue\n0.10\n0.25\nNA\n\n\n628\ngold\n0.10\n0.05\n0.20\n\n\n628\nred\n0.15\n0.15\nNA\n\n\n629\nblue\n0.05\n0.05\n0.05\n\n\n629\ngold\n0.10\n0.20\n0.15\n\n\n629\nred\n0.20\n0.20\nNA\n\n\n630\nblue\n0.05\n0.15\n0.10\n\n\n630\ngold\n0.20\n0.15\n0.20\n\n\n630\nred\n0.05\n0.10\nNA\n\n\n631\nblue\n0.05\n0.15\nNA\n\n\n631\ngold\n0.35\n0.10\n0.05\n\n\n631\nred\n0.15\n0.15\nNA\n\n\n632\nblue\nNA\n0.05\n0.05\n\n\n632\ngold\n0.40\n0.30\n0.05\n\n\n632\nred\n0.15\nNA\nNA\n\n\n633\nblue\nNA\n0.10\n0.05\n\n\n633\ngold\n0.30\n0.25\n0.05\n\n\n633\nred\n0.05\n0.20\nNA\n\n\n634\nblue\n0.10\n0.15\nNA\n\n\n634\ngold\n0.15\n0.35\nNA\n\n\n634\nred\n0.10\n0.15\nNA\n\n\n635\nblue\n0.05\n0.10\n0.05\n\n\n635\ngold\n0.20\n0.20\n0.15\n\n\n635\nred\n0.10\n0.15\nNA\n\n\n636\nblue\n0.10\n0.15\n0.05\n\n\n636\ngold\n0.30\n0.10\n0.10\n\n\n636\nred\n0.05\n0.15\nNA\n\n\n637\nblue\n0.10\n0.25\n0.10\n\n\n637\ngold\n0.20\n0.10\n0.10\n\n\n637\nred\nNA\n0.15\nNA\n\n\n638\nblue\n0.25\n0.05\n0.10\n\n\n638\ngold\n0.20\n0.05\n0.20\n\n\n638\nred\nNA\n0.15\nNA\n\n\n639\nblue\n0.15\n0.20\nNA\n\n\n639\ngold\n0.30\n0.15\n0.05\n\n\n639\nred\n0.15\nNA\nNA\n\n\n640\nblue\n0.10\n0.15\nNA\n\n\n640\ngold\n0.35\n0.10\n0.15\n\n\n640\nred\nNA\n0.15\nNA\n\n\n641\nblue\n0.10\n0.20\n0.05\n\n\n641\ngold\n0.20\n0.10\n0.10\n\n\n641\nred\n0.10\n0.15\nNA\n\n\n642\nblue\n0.05\n0.10\n0.05\n\n\n642\ngold\n0.20\n0.20\n0.15\n\n\n642\nred\n0.15\n0.10\nNA\n\n\n643\nblue\n0.05\n0.25\nNA\n\n\n643\ngold\n0.15\n0.10\n0.25\n\n\n643\nred\n0.15\n0.05\nNA\n\n\n644\nblue\n0.05\n0.35\n0.10\n\n\n644\ngold\n0.15\n0.10\nNA\n\n\n644\nred\n0.10\n0.15\nNA\n\n\n645\nblue\nNA\n0.15\nNA\n\n\n645\ngold\n0.25\n0.35\nNA\n\n\n645\nred\n0.15\n0.10\nNA\n\n\n646\nblue\n0.05\n0.20\nNA\n\n\n646\ngold\n0.15\n0.25\n0.10\n\n\n646\nred\n0.15\n0.10\nNA\n\n\n647\nblue\n0.20\n0.30\nNA\n\n\n647\ngold\n0.15\n0.10\n0.05\n\n\n647\nred\n0.10\n0.10\nNA\n\n\n648\nblue\nNA\nNA\n0.05\n\n\n648\ngold\n0.15\n0.25\n0.15\n\n\n648\nred\n0.20\n0.20\nNA\n\n\n649\nblue\n0.20\n0.15\n0.15\n\n\n649\ngold\n0.25\n0.05\n0.15\n\n\n649\nred\nNA\n0.05\nNA\n\n\n650\nblue\n0.15\n0.30\nNA\n\n\n650\ngold\n0.35\n0.05\nNA\n\n\n650\nred\n0.05\n0.10\nNA\n\n\n651\nblue\n0.25\n0.20\nNA\n\n\n651\ngold\n0.15\n0.05\n0.20\n\n\n651\nred\n0.05\n0.10\nNA\n\n\n652\nblue\n0.10\n0.20\n0.05\n\n\n652\ngold\n0.35\nNA\n0.10\n\n\n652\nred\n0.10\n0.10\nNA\n\n\n653\nblue\n0.05\n0.15\n0.05\n\n\n653\ngold\n0.25\n0.15\n0.10\n\n\n653\nred\n0.15\n0.10\nNA\n\n\n654\nblue\nNA\n0.25\n0.10\n\n\n654\ngold\n0.40\n0.10\nNA\n\n\n654\nred\n0.05\n0.10\nNA\n\n\n655\nblue\nNA\n0.20\n0.10\n\n\n655\ngold\n0.20\n0.15\n0.25\n\n\n655\nred\n0.05\n0.05\nNA\n\n\n656\nblue\nNA\n0.15\n0.05\n\n\n656\ngold\n0.30\n0.10\n0.15\n\n\n656\nred\n0.10\n0.15\nNA\n\n\n657\nblue\n0.05\n0.15\nNA\n\n\n657\ngold\n0.40\n0.05\n0.10\n\n\n657\nred\n0.05\n0.20\nNA\n\n\n658\nblue\n0.05\n0.20\nNA\n\n\n658\ngold\n0.35\n0.05\n0.10\n\n\n658\nred\n0.10\n0.15\nNA\n\n\n659\nblue\n0.20\n0.10\nNA\n\n\n659\ngold\n0.25\n0.05\n0.10\n\n\n659\nred\n0.20\n0.10\nNA\n\n\n660\nblue\n0.15\n0.05\nNA\n\n\n660\ngold\n0.20\n0.15\n0.15\n\n\n660\nred\n0.05\n0.25\nNA\n\n\n661\nblue\n0.05\n0.10\n0.20\n\n\n661\ngold\n0.15\n0.10\n0.10\n\n\n661\nred\n0.10\n0.20\nNA\n\n\n662\nblue\n0.05\n0.15\nNA\n\n\n662\ngold\n0.30\n0.05\n0.10\n\n\n662\nred\n0.05\n0.30\nNA\n\n\n663\nblue\n0.10\n0.20\n0.05\n\n\n663\ngold\n0.10\n0.10\n0.05\n\n\n663\nred\n0.15\n0.25\nNA\n\n\n664\nblue\nNA\n0.10\nNA\n\n\n664\ngold\n0.20\n0.10\n0.05\n\n\n664\nred\n0.20\n0.35\nNA\n\n\n665\nblue\n0.10\n0.05\n0.10\n\n\n665\ngold\n0.40\n0.10\n0.10\n\n\n665\nred\n0.15\nNA\nNA\n\n\n666\nblue\n0.05\n0.15\n0.05\n\n\n666\ngold\n0.20\n0.20\n0.15\n\n\n666\nred\n0.10\n0.10\nNA\n\n\n667\nblue\n0.05\n0.30\n0.05\n\n\n667\ngold\n0.10\n0.15\n0.15\n\n\n667\nred\n0.15\n0.05\nNA\n\n\n668\nblue\n0.10\n0.15\nNA\n\n\n668\ngold\n0.25\n0.15\n0.10\n\n\n668\nred\n0.05\n0.20\nNA\n\n\n669\nblue\n0.20\nNA\nNA\n\n\n669\ngold\n0.35\n0.25\nNA\n\n\n669\nred\n0.05\n0.15\nNA\n\n\n670\nblue\n0.05\n0.15\n0.10\n\n\n670\ngold\n0.20\nNA\n0.05\n\n\n670\nred\n0.20\n0.25\nNA\n\n\n671\nblue\n0.30\n0.10\nNA\n\n\n671\ngold\n0.10\n0.15\n0.15\n\n\n671\nred\n0.15\n0.05\nNA\n\n\n672\nblue\n0.05\n0.15\n0.10\n\n\n672\ngold\n0.30\n0.15\n0.10\n\n\n672\nred\nNA\n0.15\nNA\n\n\n673\nblue\n0.10\n0.15\nNA\n\n\n673\ngold\n0.30\n0.10\n0.15\n\n\n673\nred\n0.05\n0.15\nNA\n\n\n674\nblue\n0.25\n0.10\n0.05\n\n\n674\ngold\n0.30\n0.05\n0.05\n\n\n674\nred\n0.15\n0.05\nNA\n\n\n675\nblue\n0.10\n0.20\nNA\n\n\n675\ngold\n0.35\n0.10\n0.10\n\n\n675\nred\n0.05\n0.10\nNA\n\n\n676\nblue\n0.10\n0.05\nNA\n\n\n676\ngold\n0.25\n0.20\n0.05\n\n\n676\nred\n0.05\n0.30\nNA\n\n\n677\nblue\n0.20\n0.15\nNA\n\n\n677\ngold\n0.20\n0.10\n0.20\n\n\n677\nred\n0.05\n0.10\nNA\n\n\n678\nblue\n0.10\nNA\n0.05\n\n\n678\ngold\n0.15\n0.10\n0.10\n\n\n678\nred\n0.20\n0.30\nNA\n\n\n679\nblue\n0.05\n0.15\n0.05\n\n\n679\ngold\n0.15\n0.10\n0.20\n\n\n679\nred\n0.15\n0.15\nNA\n\n\n680\nblue\n0.05\n0.05\n0.10\n\n\n680\ngold\n0.20\n0.15\nNA\n\n\n680\nred\n0.20\n0.25\nNA\n\n\n681\nblue\n0.15\n0.10\n0.05\n\n\n681\ngold\n0.30\nNA\n0.05\n\n\n681\nred\n0.15\n0.20\nNA\n\n\n682\nblue\n0.15\n0.25\n0.05\n\n\n682\ngold\n0.30\n0.10\n0.05\n\n\n682\nred\nNA\n0.10\nNA\n\n\n683\nblue\n0.15\n0.10\n0.05\n\n\n683\ngold\n0.30\n0.10\n0.15\n\n\n683\nred\n0.05\n0.10\nNA\n\n\n684\nblue\n0.15\n0.10\n0.05\n\n\n684\ngold\n0.30\n0.05\n0.10\n\n\n684\nred\n0.15\n0.10\nNA\n\n\n685\nblue\n0.10\n0.15\n0.15\n\n\n685\ngold\n0.10\n0.20\n0.10\n\n\n685\nred\n0.15\n0.05\nNA\n\n\n686\nblue\n0.10\n0.05\n0.10\n\n\n686\ngold\n0.15\n0.20\n0.15\n\n\n686\nred\n0.20\n0.05\nNA\n\n\n687\nblue\n0.10\n0.20\n0.10\n\n\n687\ngold\n0.15\n0.20\n0.10\n\n\n687\nred\nNA\n0.15\nNA\n\n\n688\nblue\nNA\n0.15\n0.10\n\n\n688\ngold\n0.20\n0.15\n0.15\n\n\n688\nred\n0.15\n0.10\nNA\n\n\n689\nblue\n0.10\n0.15\n0.05\n\n\n689\ngold\n0.15\n0.10\n0.15\n\n\n689\nred\n0.05\n0.25\nNA\n\n\n690\nblue\n0.05\n0.25\nNA\n\n\n690\ngold\n0.30\n0.10\n0.05\n\n\n690\nred\n0.10\n0.15\nNA\n\n\n691\nblue\n0.05\n0.25\n0.05\n\n\n691\ngold\n0.20\n0.10\n0.15\n\n\n691\nred\nNA\n0.20\nNA\n\n\n692\nblue\n0.20\n0.05\n0.05\n\n\n692\ngold\n0.15\n0.20\n0.10\n\n\n692\nred\n0.25\nNA\nNA\n\n\n693\nblue\nNA\n0.30\nNA\n\n\n693\ngold\n0.15\n0.10\n0.15\n\n\n693\nred\n0.20\n0.10\nNA\n\n\n694\nblue\n0.05\n0.10\n0.05\n\n\n694\ngold\n0.30\n0.15\n0.10\n\n\n694\nred\n0.10\n0.15\nNA\n\n\n695\nblue\n0.25\n0.05\nNA\n\n\n695\ngold\n0.35\n0.20\nNA\n\n\n695\nred\n0.05\n0.10\nNA\n\n\n696\nblue\n0.20\n0.05\nNA\n\n\n696\ngold\n0.40\n0.05\n0.15\n\n\n696\nred\nNA\n0.15\nNA\n\n\n697\nblue\n0.05\n0.10\n0.05\n\n\n697\ngold\n0.30\n0.10\n0.15\n\n\n697\nred\nNA\n0.25\nNA\n\n\n698\nblue\nNA\n0.10\n0.10\n\n\n698\ngold\n0.40\n0.05\n0.20\n\n\n698\nred\n0.10\n0.05\nNA\n\n\n699\nblue\n0.05\nNA\n0.10\n\n\n699\ngold\n0.40\n0.05\n0.10\n\n\n699\nred\n0.15\n0.15\nNA\n\n\n700\nblue\n0.10\nNA\nNA\n\n\n700\ngold\n0.40\n0.05\n0.15\n\n\n700\nred\n0.05\n0.25\nNA\n\n\n701\nblue\nNA\n0.10\nNA\n\n\n701\ngold\n0.35\n0.10\n0.15\n\n\n701\nred\n0.15\n0.15\nNA\n\n\n702\nblue\nNA\n0.20\nNA\n\n\n702\ngold\n0.35\n0.15\n0.05\n\n\n702\nred\n0.20\n0.05\nNA\n\n\n703\nblue\n0.05\n0.15\n0.05\n\n\n703\ngold\n0.30\n0.15\n0.10\n\n\n703\nred\nNA\n0.20\nNA\n\n\n704\nblue\n0.05\n0.05\n0.10\n\n\n704\ngold\n0.15\n0.25\n0.05\n\n\n704\nred\n0.20\n0.15\nNA\n\n\n705\nblue\n0.15\n0.15\n0.05\n\n\n705\ngold\n0.20\n0.15\nNA\n\n\n705\nred\n0.10\n0.20\nNA\n\n\n706\nblue\n0.25\n0.05\n0.10\n\n\n706\ngold\n0.25\nNA\n0.15\n\n\n706\nred\n0.10\n0.10\nNA\n\n\n707\nblue\nNA\n0.15\n0.10\n\n\n707\ngold\n0.10\n0.30\n0.10\n\n\n707\nred\n0.05\n0.20\nNA\n\n\n708\nblue\n0.15\n0.15\n0.05\n\n\n708\ngold\n0.15\n0.05\n0.10\n\n\n708\nred\n0.10\n0.25\nNA\n\n\n709\nblue\n0.10\n0.10\nNA\n\n\n709\ngold\n0.20\nNA\n0.05\n\n\n709\nred\n0.25\n0.30\nNA\n\n\n710\nblue\n0.15\n0.20\n0.05\n\n\n710\ngold\n0.15\n0.15\n0.15\n\n\n710\nred\n0.10\n0.05\nNA\n\n\n711\nblue\n0.15\n0.10\n0.05\n\n\n711\ngold\n0.30\n0.10\n0.05\n\n\n711\nred\n0.20\n0.05\nNA\n\n\n712\nblue\n0.05\n0.15\nNA\n\n\n712\ngold\n0.35\n0.05\n0.15\n\n\n712\nred\n0.15\n0.10\nNA\n\n\n713\nblue\n0.10\n0.15\nNA\n\n\n713\ngold\n0.20\n0.15\nNA\n\n\n713\nred\n0.20\n0.20\nNA\n\n\n714\nblue\n0.10\n0.05\n0.05\n\n\n714\ngold\n0.10\n0.15\n0.20\n\n\n714\nred\n0.15\n0.20\nNA\n\n\n715\nblue\n0.05\n0.15\nNA\n\n\n715\ngold\n0.30\n0.05\n0.10\n\n\n715\nred\n0.15\n0.20\nNA\n\n\n716\nblue\n0.25\n0.20\n0.05\n\n\n716\ngold\n0.25\n0.15\nNA\n\n\n716\nred\nNA\n0.10\nNA\n\n\n717\nblue\n0.25\n0.10\n0.05\n\n\n717\ngold\n0.10\n0.15\n0.15\n\n\n717\nred\n0.10\n0.10\nNA\n\n\n718\nblue\nNA\n0.10\n0.05\n\n\n718\ngold\n0.35\n0.10\n0.15\n\n\n718\nred\n0.15\n0.10\nNA\n\n\n719\nblue\n0.20\n0.10\nNA\n\n\n719\ngold\n0.20\n0.10\nNA\n\n\n719\nred\n0.10\n0.30\nNA\n\n\n720\nblue\n0.15\n0.25\n0.10\n\n\n720\ngold\n0.10\n0.10\n0.25\n\n\n720\nred\nNA\n0.05\nNA\n\n\n721\nblue\n0.05\n0.25\n0.05\n\n\n721\ngold\n0.15\n0.05\n0.10\n\n\n721\nred\n0.15\n0.20\nNA\n\n\n722\nblue\n0.15\n0.15\n0.05\n\n\n722\ngold\n0.15\n0.10\n0.05\n\n\n722\nred\n0.15\n0.20\nNA\n\n\n723\nblue\n0.10\n0.15\n0.10\n\n\n723\ngold\n0.15\n0.20\n0.10\n\n\n723\nred\n0.10\n0.10\nNA\n\n\n724\nblue\n0.10\n0.10\n0.05\n\n\n724\ngold\n0.25\n0.15\n0.05\n\n\n724\nred\n0.20\n0.10\nNA\n\n\n725\nblue\n0.10\n0.20\n0.05\n\n\n725\ngold\n0.15\n0.15\n0.05\n\n\n725\nred\n0.10\n0.20\nNA\n\n\n726\nblue\n0.10\n0.10\n0.05\n\n\n726\ngold\n0.15\n0.25\n0.10\n\n\n726\nred\n0.15\n0.10\nNA\n\n\n727\nblue\n0.05\n0.10\n0.05\n\n\n727\ngold\n0.20\n0.20\n0.05\n\n\n727\nred\n0.25\n0.10\nNA\n\n\n728\nblue\n0.05\n0.15\n0.05\n\n\n728\ngold\n0.35\n0.10\n0.10\n\n\n728\nred\n0.05\n0.15\nNA\n\n\n729\nblue\n0.15\n0.05\n0.05\n\n\n729\ngold\n0.40\n0.10\n0.05\n\n\n729\nred\n0.10\n0.10\nNA\n\n\n730\nblue\n0.20\n0.05\n0.05\n\n\n730\ngold\n0.25\n0.20\n0.15\n\n\n730\nred\n0.05\n0.05\nNA\n\n\n731\nblue\n0.05\n0.20\nNA\n\n\n731\ngold\n0.25\n0.20\n0.10\n\n\n731\nred\n0.10\n0.10\nNA\n\n\n732\nblue\n0.15\n0.15\nNA\n\n\n732\ngold\n0.20\n0.30\n0.10\n\n\n732\nred\n0.10\nNA\nNA\n\n\n733\nblue\n0.05\n0.15\n0.10\n\n\n733\ngold\n0.30\n0.10\n0.05\n\n\n733\nred\n0.10\n0.15\nNA\n\n\n734\nblue\n0.20\n0.05\nNA\n\n\n734\ngold\n0.25\n0.25\n0.05\n\n\n734\nred\n0.05\n0.15\nNA\n\n\n735\nblue\n0.25\n0.10\nNA\n\n\n735\ngold\n0.20\n0.10\n0.15\n\n\n735\nred\n0.05\n0.15\nNA\n\n\n736\nblue\n0.15\n0.15\nNA\n\n\n736\ngold\n0.30\n0.15\n0.10\n\n\n736\nred\n0.10\n0.05\nNA\n\n\n737\nblue\n0.05\n0.20\nNA\n\n\n737\ngold\n0.10\n0.10\n0.15\n\n\n737\nred\n0.20\n0.20\nNA\n\n\n738\nblue\nNA\n0.15\n0.05\n\n\n738\ngold\n0.20\n0.20\n0.15\n\n\n738\nred\n0.15\n0.10\nNA\n\n\n739\nblue\nNA\n0.15\n0.10\n\n\n739\ngold\n0.30\n0.15\n0.10\n\n\n739\nred\n0.10\n0.10\nNA\n\n\n740\nblue\n0.05\n0.20\n0.05\n\n\n740\ngold\n0.05\n0.20\n0.15\n\n\n740\nred\n0.15\n0.15\nNA\n\n\n741\nblue\n0.05\n0.10\n0.05\n\n\n741\ngold\n0.25\n0.10\n0.10\n\n\n741\nred\n0.10\n0.25\nNA\n\n\n742\nblue\n0.10\n0.25\n0.05\n\n\n742\ngold\n0.40\n0.05\n0.05\n\n\n742\nred\n0.10\nNA\nNA\n\n\n743\nblue\n0.05\nNA\n0.05\n\n\n743\ngold\n0.30\n0.10\n0.10\n\n\n743\nred\n0.25\n0.15\nNA\n\n\n744\nblue\n0.15\n0.10\n0.10\n\n\n744\ngold\n0.25\n0.15\n0.15\n\n\n744\nred\nNA\n0.10\nNA\n\n\n745\nblue\n0.05\n0.05\nNA\n\n\n745\ngold\n0.35\n0.15\n0.05\n\n\n745\nred\n0.20\n0.15\nNA\n\n\n746\nblue\n0.20\n0.10\nNA\n\n\n746\ngold\n0.35\n0.10\n0.10\n\n\n746\nred\nNA\n0.15\nNA\n\n\n747\nblue\n0.05\n0.30\nNA\n\n\n747\ngold\n0.15\n0.05\n0.15\n\n\n747\nred\n0.10\n0.20\nNA\n\n\n748\nblue\n0.10\n0.15\nNA\n\n\n748\ngold\n0.30\n0.15\nNA\n\n\n748\nred\n0.25\n0.05\nNA\n\n\n749\nblue\n0.15\n0.25\nNA\n\n\n749\ngold\n0.15\n0.15\n0.20\n\n\n749\nred\nNA\n0.10\nNA\n\n\n750\nblue\n0.05\n0.15\n0.10\n\n\n750\ngold\n0.25\n0.20\n0.05\n\n\n750\nred\n0.05\n0.15\nNA\n\n\n751\nblue\n0.15\nNA\n0.10\n\n\n751\ngold\n0.15\n0.20\n0.05\n\n\n751\nred\n0.15\n0.20\nNA\n\n\n752\nblue\n0.05\n0.10\n0.10\n\n\n752\ngold\n0.35\n0.05\n0.15\n\n\n752\nred\n0.10\n0.10\nNA\n\n\n753\nblue\n0.05\n0.15\n0.05\n\n\n753\ngold\n0.30\n0.10\n0.20\n\n\n753\nred\n0.05\n0.10\nNA\n\n\n754\nblue\n0.05\n0.15\nNA\n\n\n754\ngold\n0.10\n0.35\n0.05\n\n\n754\nred\n0.10\n0.20\nNA\n\n\n755\nblue\n0.25\n0.15\n0.10\n\n\n755\ngold\n0.10\n0.15\n0.05\n\n\n755\nred\n0.15\n0.05\nNA\n\n\n756\nblue\n0.10\n0.10\n0.15\n\n\n756\ngold\n0.20\n0.05\n0.05\n\n\n756\nred\n0.15\n0.20\nNA\n\n\n757\nblue\n0.10\n0.15\nNA\n\n\n757\ngold\n0.20\n0.20\n0.05\n\n\n757\nred\n0.10\n0.20\nNA\n\n\n758\nblue\n0.05\n0.10\nNA\n\n\n758\ngold\n0.50\n0.10\n0.10\n\n\n758\nred\n0.10\n0.05\nNA\n\n\n759\nblue\n0.20\n0.15\nNA\n\n\n759\ngold\n0.05\n0.15\n0.05\n\n\n759\nred\n0.20\n0.20\nNA\n\n\n760\nblue\n0.05\n0.30\nNA\n\n\n760\ngold\n0.25\n0.10\n0.05\n\n\n760\nred\n0.20\n0.05\nNA\n\n\n761\nblue\nNA\n0.10\n0.05\n\n\n761\ngold\n0.10\n0.20\n0.05\n\n\n761\nred\n0.25\n0.25\nNA\n\n\n762\nblue\n0.05\n0.10\nNA\n\n\n762\ngold\n0.30\n0.15\n0.15\n\n\n762\nred\n0.15\n0.10\nNA\n\n\n763\nblue\n0.20\n0.05\n0.05\n\n\n763\ngold\n0.30\n0.05\n0.05\n\n\n763\nred\n0.10\n0.20\nNA\n\n\n764\nblue\n0.20\n0.05\n0.05\n\n\n764\ngold\n0.20\n0.30\nNA\n\n\n764\nred\n0.10\n0.10\nNA\n\n\n765\nblue\n0.05\n0.30\nNA\n\n\n765\ngold\n0.15\n0.15\n0.15\n\n\n765\nred\n0.05\n0.15\nNA\n\n\n766\nblue\n0.15\n0.10\nNA\n\n\n766\ngold\n0.10\n0.10\n0.15\n\n\n766\nred\n0.15\n0.25\nNA\n\n\n767\nblue\n0.20\n0.10\n0.05\n\n\n767\ngold\n0.15\n0.10\nNA\n\n\n767\nred\n0.20\n0.20\nNA\n\n\n768\nblue\n0.05\n0.25\n0.05\n\n\n768\ngold\n0.10\n0.25\nNA\n\n\n768\nred\n0.10\n0.20\nNA\n\n\n769\nblue\n0.05\n0.15\nNA\n\n\n769\ngold\n0.25\n0.20\n0.15\n\n\n769\nred\n0.10\n0.10\nNA\n\n\n770\nblue\n0.25\n0.10\nNA\n\n\n770\ngold\n0.20\n0.10\n0.20\n\n\n770\nred\n0.05\n0.10\nNA\n\n\n771\nblue\n0.20\n0.10\n0.05\n\n\n771\ngold\n0.20\n0.05\n0.20\n\n\n771\nred\n0.05\n0.15\nNA\n\n\n772\nblue\n0.10\n0.20\nNA\n\n\n772\ngold\n0.30\nNA\nNA\n\n\n772\nred\n0.15\n0.25\nNA\n\n\n773\nblue\n0.10\n0.15\n0.05\n\n\n773\ngold\n0.25\n0.10\n0.05\n\n\n773\nred\n0.15\n0.15\nNA\n\n\n774\nblue\n0.05\n0.05\n0.10\n\n\n774\ngold\n0.30\n0.15\n0.20\n\n\n774\nred\n0.10\n0.05\nNA\n\n\n775\nblue\n0.15\n0.10\nNA\n\n\n775\ngold\n0.25\nNA\n0.20\n\n\n775\nred\n0.10\n0.20\nNA\n\n\n776\nblue\n0.20\n0.20\nNA\n\n\n776\ngold\n0.25\nNA\n0.05\n\n\n776\nred\n0.15\n0.15\nNA\n\n\n777\nblue\n0.15\nNA\nNA\n\n\n777\ngold\n0.15\n0.10\n0.25\n\n\n777\nred\n0.20\n0.15\nNA\n\n\n778\nblue\n0.15\n0.20\nNA\n\n\n778\ngold\n0.15\n0.15\n0.05\n\n\n778\nred\n0.10\n0.20\nNA\n\n\n779\nblue\n0.05\n0.25\n0.05\n\n\n779\ngold\n0.20\n0.25\n0.05\n\n\n779\nred\n0.15\nNA\nNA\n\n\n780\nblue\nNA\n0.05\n0.10\n\n\n780\ngold\n0.35\n0.15\n0.10\n\n\n780\nred\n0.20\n0.05\nNA\n\n\n781\nblue\n0.05\n0.15\nNA\n\n\n781\ngold\n0.30\n0.15\n0.05\n\n\n781\nred\n0.10\n0.20\nNA\n\n\n782\nblue\n0.05\n0.15\n0.10\n\n\n782\ngold\n0.30\n0.15\n0.15\n\n\n782\nred\n0.05\n0.05\nNA\n\n\n783\nblue\n0.25\nNA\n0.05\n\n\n783\ngold\n0.20\n0.15\n0.05\n\n\n783\nred\n0.20\n0.10\nNA\n\n\n784\nblue\n0.20\n0.15\n0.05\n\n\n784\ngold\n0.25\n0.15\n0.05\n\n\n784\nred\n0.10\n0.05\nNA\n\n\n785\nblue\n0.05\n0.25\n0.05\n\n\n785\ngold\n0.25\n0.05\n0.10\n\n\n785\nred\n0.10\n0.15\nNA\n\n\n786\nblue\n0.10\n0.20\n0.05\n\n\n786\ngold\n0.05\n0.15\n0.25\n\n\n786\nred\n0.05\n0.15\nNA\n\n\n787\nblue\n0.15\n0.15\n0.05\n\n\n787\ngold\n0.20\n0.15\n0.05\n\n\n787\nred\n0.10\n0.15\nNA\n\n\n788\nblue\n0.20\n0.30\nNA\n\n\n788\ngold\n0.10\n0.15\n0.05\n\n\n788\nred\n0.05\n0.15\nNA\n\n\n789\nblue\n0.10\n0.20\nNA\n\n\n789\ngold\n0.35\n0.15\n0.10\n\n\n789\nred\n0.10\nNA\nNA\n\n\n790\nblue\n0.10\n0.10\n0.10\n\n\n790\ngold\n0.20\n0.05\n0.05\n\n\n790\nred\n0.15\n0.25\nNA\n\n\n791\nblue\n0.10\n0.15\n0.10\n\n\n791\ngold\n0.25\n0.10\nNA\n\n\n791\nred\n0.05\n0.25\nNA\n\n\n792\nblue\n0.10\n0.10\nNA\n\n\n792\ngold\n0.15\n0.15\n0.05\n\n\n792\nred\n0.20\n0.25\nNA\n\n\n793\nblue\n0.15\n0.20\n0.10\n\n\n793\ngold\n0.15\n0.05\n0.15\n\n\n793\nred\n0.05\n0.15\nNA\n\n\n794\nblue\n0.05\n0.30\n0.10\n\n\n794\ngold\n0.25\n0.05\n0.05\n\n\n794\nred\n0.10\n0.10\nNA\n\n\n795\nblue\n0.20\n0.15\nNA\n\n\n795\ngold\n0.15\n0.10\n0.05\n\n\n795\nred\n0.15\n0.20\nNA\n\n\n796\nblue\n0.15\n0.10\nNA\n\n\n796\ngold\n0.25\n0.05\n0.15\n\n\n796\nred\n0.25\n0.05\nNA\n\n\n797\nblue\n0.05\n0.10\nNA\n\n\n797\ngold\n0.35\n0.20\n0.15\n\n\n797\nred\nNA\n0.15\nNA\n\n\n798\nblue\n0.05\n0.15\nNA\n\n\n798\ngold\n0.10\n0.25\n0.05\n\n\n798\nred\n0.25\n0.15\nNA\n\n\n799\nblue\n0.05\n0.10\n0.05\n\n\n799\ngold\n0.30\n0.20\nNA\n\n\n799\nred\n0.20\n0.10\nNA\n\n\n800\nblue\n0.20\n0.15\n0.10\n\n\n800\ngold\n0.10\n0.10\n0.10\n\n\n800\nred\n0.10\n0.15\nNA\n\n\n801\nblue\n0.05\n0.15\n0.10\n\n\n801\ngold\n0.15\n0.20\nNA\n\n\n801\nred\n0.15\n0.20\nNA\n\n\n802\nblue\n0.10\n0.15\n0.05\n\n\n802\ngold\n0.30\n0.10\n0.05\n\n\n802\nred\n0.15\n0.10\nNA\n\n\n803\nblue\n0.05\n0.15\n0.05\n\n\n803\ngold\n0.25\n0.15\n0.15\n\n\n803\nred\n0.10\n0.10\nNA\n\n\n804\nblue\n0.10\n0.05\nNA\n\n\n804\ngold\n0.30\n0.20\n0.05\n\n\n804\nred\n0.10\n0.20\nNA\n\n\n805\nblue\n0.10\n0.10\n0.10\n\n\n805\ngold\n0.20\n0.20\nNA\n\n\n805\nred\n0.15\n0.15\nNA\n\n\n806\nblue\n0.20\n0.15\n0.10\n\n\n806\ngold\n0.15\n0.10\n0.10\n\n\n806\nred\n0.20\nNA\nNA\n\n\n807\nblue\n0.20\n0.05\n0.05\n\n\n807\ngold\n0.10\n0.20\n0.10\n\n\n807\nred\n0.15\n0.15\nNA\n\n\n808\nblue\n0.15\n0.10\n0.05\n\n\n808\ngold\n0.30\n0.05\n0.10\n\n\n808\nred\n0.10\n0.15\nNA\n\n\n809\nblue\n0.15\n0.15\nNA\n\n\n809\ngold\n0.20\n0.15\n0.05\n\n\n809\nred\n0.10\n0.20\nNA\n\n\n810\nblue\n0.10\n0.10\nNA\n\n\n810\ngold\n0.45\n0.05\n0.15\n\n\n810\nred\n0.05\n0.10\nNA\n\n\n811\nblue\n0.10\n0.15\n0.05\n\n\n811\ngold\n0.15\n0.20\n0.20\n\n\n811\nred\n0.10\n0.05\nNA\n\n\n812\nblue\n0.15\n0.20\nNA\n\n\n812\ngold\n0.10\n0.10\n0.30\n\n\n812\nred\n0.10\n0.05\nNA\n\n\n813\nblue\n0.05\n0.25\nNA\n\n\n813\ngold\n0.40\n0.10\n0.05\n\n\n813\nred\n0.10\n0.05\nNA\n\n\n814\nblue\n0.05\n0.15\nNA\n\n\n814\ngold\n0.20\n0.10\n0.20\n\n\n814\nred\n0.15\n0.15\nNA\n\n\n815\nblue\n0.05\n0.15\n0.10\n\n\n815\ngold\n0.30\n0.10\n0.15\n\n\n815\nred\n0.05\n0.10\nNA\n\n\n816\ngold\n0.40\n0.25\n0.10\n\n\n816\nred\n0.15\n0.10\nNA\n\n\n817\nblue\n0.15\n0.15\nNA\n\n\n817\ngold\n0.25\n0.05\n0.05\n\n\n817\nred\n0.25\n0.10\nNA\n\n\n818\nblue\n0.15\nNA\n0.05\n\n\n818\ngold\n0.25\n0.20\n0.10\n\n\n818\nred\n0.20\n0.05\nNA\n\n\n819\nblue\n0.05\n0.15\nNA\n\n\n819\ngold\n0.35\n0.10\n0.15\n\n\n819\nred\n0.20\nNA\nNA\n\n\n820\nblue\n0.05\n0.20\n0.05\n\n\n820\ngold\n0.20\n0.20\n0.05\n\n\n820\nred\n0.10\n0.15\nNA\n\n\n821\nblue\n0.20\n0.15\n0.05\n\n\n821\ngold\n0.25\n0.10\n0.15\n\n\n821\nred\n0.05\n0.05\nNA\n\n\n822\nblue\n0.10\n0.15\n0.05\n\n\n822\ngold\n0.35\n0.15\n0.05\n\n\n822\nred\n0.10\n0.05\nNA\n\n\n823\nblue\n0.15\n0.10\n0.05\n\n\n823\ngold\n0.20\n0.10\n0.15\n\n\n823\nred\n0.20\n0.05\nNA\n\n\n824\nblue\n0.15\n0.10\nNA\n\n\n824\ngold\n0.25\n0.15\n0.05\n\n\n824\nred\n0.20\n0.10\nNA\n\n\n825\nblue\n0.05\n0.10\nNA\n\n\n825\ngold\n0.35\n0.20\n0.05\n\n\n825\nred\n0.15\n0.10\nNA\n\n\n826\nblue\n0.05\n0.20\nNA\n\n\n826\ngold\n0.25\n0.15\n0.10\n\n\n826\nred\n0.10\n0.15\nNA\n\n\n827\nblue\nNA\n0.20\n0.10\n\n\n827\ngold\n0.15\n0.10\n0.20\n\n\n827\nred\n0.15\n0.10\nNA\n\n\n828\nblue\n0.05\n0.25\nNA\n\n\n828\ngold\n0.15\n0.10\n0.15\n\n\n828\nred\n0.10\n0.20\nNA\n\n\n829\nblue\nNA\n0.20\n0.05\n\n\n829\ngold\n0.10\n0.30\n0.15\n\n\n829\nred\n0.05\n0.15\nNA\n\n\n830\nblue\n0.15\n0.05\nNA\n\n\n830\ngold\n0.25\n0.25\n0.05\n\n\n830\nred\n0.10\n0.15\nNA\n\n\n831\nblue\n0.10\n0.15\n0.10\n\n\n831\ngold\n0.15\n0.20\n0.15\n\n\n831\nred\n0.05\n0.10\nNA\n\n\n832\nblue\n0.25\n0.20\nNA\n\n\n832\ngold\n0.20\n0.20\n0.05\n\n\n832\nred\n0.05\n0.05\nNA\n\n\n833\nblue\n0.15\n0.20\nNA\n\n\n833\ngold\n0.15\n0.10\n0.05\n\n\n833\nred\n0.25\n0.10\nNA\n\n\n834\nblue\n0.05\nNA\n0.10\n\n\n834\ngold\n0.25\n0.25\n0.10\n\n\n834\nred\n0.10\n0.15\nNA\n\n\n835\nblue\nNA\n0.10\n0.05\n\n\n835\ngold\n0.35\n0.10\nNA\n\n\n835\nred\n0.15\n0.25\nNA\n\n\n836\nblue\n0.05\n0.30\n0.10\n\n\n836\ngold\n0.30\n0.10\nNA\n\n\n836\nred\n0.05\n0.10\nNA\n\n\n837\nblue\n0.25\n0.15\n0.10\n\n\n837\ngold\n0.10\n0.10\n0.05\n\n\n837\nred\n0.10\n0.15\nNA\n\n\n838\nblue\n0.15\n0.10\nNA\n\n\n838\ngold\n0.25\n0.05\n0.20\n\n\n838\nred\n0.20\n0.05\nNA\n\n\n839\nblue\n0.05\n0.05\n0.10\n\n\n839\ngold\n0.35\n0.05\n0.05\n\n\n839\nred\n0.10\n0.25\nNA\n\n\n840\nblue\n0.05\n0.10\nNA\n\n\n840\ngold\n0.40\n0.10\n0.05\n\n\n840\nred\n0.10\n0.20\nNA\n\n\n841\nblue\n0.10\n0.20\nNA\n\n\n841\ngold\n0.35\n0.20\n0.10\n\n\n841\nred\nNA\n0.05\nNA\n\n\n842\nblue\n0.15\n0.05\n0.05\n\n\n842\ngold\n0.05\n0.20\n0.20\n\n\n842\nred\n0.15\n0.15\nNA\n\n\n843\nblue\n0.25\n0.20\n0.10\n\n\n843\ngold\n0.20\n0.05\n0.05\n\n\n843\nred\n0.05\n0.10\nNA\n\n\n844\nblue\n0.10\n0.20\n0.05\n\n\n844\ngold\n0.35\n0.15\n0.05\n\n\n844\nred\nNA\n0.10\nNA\n\n\n845\nblue\n0.15\n0.15\nNA\n\n\n845\ngold\n0.25\n0.15\n0.05\n\n\n845\nred\n0.15\n0.10\nNA\n\n\n846\nblue\n0.10\n0.20\n0.05\n\n\n846\ngold\n0.20\n0.25\n0.05\n\n\n846\nred\n0.05\n0.10\nNA\n\n\n847\nblue\n0.10\n0.15\nNA\n\n\n847\ngold\n0.25\n0.20\nNA\n\n\n847\nred\n0.20\n0.10\nNA\n\n\n848\nblue\n0.15\n0.10\n0.10\n\n\n848\ngold\n0.20\n0.15\n0.15\n\n\n848\nred\n0.15\nNA\nNA\n\n\n849\nblue\n0.05\n0.25\n0.15\n\n\n849\ngold\n0.30\n0.05\n0.10\n\n\n849\nred\nNA\n0.10\nNA\n\n\n850\nblue\n0.10\n0.10\n0.10\n\n\n850\ngold\n0.15\n0.15\n0.15\n\n\n850\nred\n0.05\n0.20\nNA\n\n\n851\nblue\n0.20\n0.05\nNA\n\n\n851\ngold\n0.20\n0.20\n0.10\n\n\n851\nred\n0.15\n0.10\nNA\n\n\n852\nblue\n0.10\n0.30\nNA\n\n\n852\ngold\n0.05\n0.10\n0.10\n\n\n852\nred\n0.15\n0.20\nNA\n\n\n853\nblue\n0.05\n0.20\n0.05\n\n\n853\ngold\n0.20\n0.15\n0.05\n\n\n853\nred\n0.10\n0.20\nNA\n\n\n854\nblue\n0.15\n0.10\n0.05\n\n\n854\ngold\n0.20\n0.10\nNA\n\n\n854\nred\n0.25\n0.15\nNA\n\n\n855\nblue\n0.05\n0.15\n0.10\n\n\n855\ngold\n0.15\n0.05\n0.20\n\n\n855\nred\n0.10\n0.20\nNA\n\n\n856\nblue\n0.15\n0.05\nNA\n\n\n856\ngold\n0.30\n0.10\n0.15\n\n\n856\nred\n0.10\n0.15\nNA\n\n\n857\nblue\n0.10\n0.15\n0.05\n\n\n857\ngold\n0.35\nNA\n0.15\n\n\n857\nred\n0.10\n0.10\nNA\n\n\n858\nblue\n0.15\n0.05\nNA\n\n\n858\ngold\n0.50\n0.05\n0.05\n\n\n858\nred\n0.10\n0.10\nNA\n\n\n859\nblue\n0.15\n0.20\n0.05\n\n\n859\ngold\n0.30\n0.10\nNA\n\n\n859\nred\n0.15\n0.05\nNA\n\n\n860\nblue\n0.10\n0.15\nNA\n\n\n860\ngold\n0.40\n0.15\nNA\n\n\n860\nred\n0.10\n0.10\nNA\n\n\n861\nblue\n0.05\n0.05\nNA\n\n\n861\ngold\n0.40\n0.15\n0.10\n\n\n861\nred\n0.10\n0.15\nNA\n\n\n862\nblue\n0.10\n0.20\n0.05\n\n\n862\ngold\n0.20\n0.05\n0.10\n\n\n862\nred\n0.15\n0.15\nNA\n\n\n863\nblue\n0.05\n0.10\nNA\n\n\n863\ngold\n0.35\n0.15\n0.10\n\n\n863\nred\n0.10\n0.15\nNA\n\n\n864\nblue\n0.05\n0.10\n0.05\n\n\n864\ngold\n0.35\n0.10\n0.10\n\n\n864\nred\n0.10\n0.15\nNA\n\n\n865\nblue\n0.10\n0.10\n0.05\n\n\n865\ngold\n0.45\n0.10\n0.05\n\n\n865\nred\nNA\n0.15\nNA\n\n\n866\nblue\n0.05\n0.10\n0.10\n\n\n866\ngold\n0.40\n0.10\n0.10\n\n\n866\nred\n0.05\n0.10\nNA\n\n\n867\nblue\n0.05\n0.15\nNA\n\n\n867\ngold\n0.20\nNA\n0.10\n\n\n867\nred\n0.25\n0.25\nNA\n\n\n868\nblue\n0.05\n0.25\n0.10\n\n\n868\ngold\n0.15\n0.15\n0.05\n\n\n868\nred\n0.15\n0.10\nNA\n\n\n869\nblue\n0.05\n0.10\nNA\n\n\n869\ngold\n0.20\n0.15\n0.15\n\n\n869\nred\n0.30\n0.05\nNA\n\n\n870\nblue\n0.10\n0.05\n0.15\n\n\n870\ngold\n0.40\n0.05\nNA\n\n\n870\nred\n0.20\n0.05\nNA\n\n\n871\nblue\n0.05\n0.10\nNA\n\n\n871\ngold\n0.30\n0.10\n0.10\n\n\n871\nred\n0.10\n0.25\nNA\n\n\n872\nblue\n0.15\n0.10\n0.05\n\n\n872\ngold\n0.25\n0.10\n0.10\n\n\n872\nred\n0.15\n0.10\nNA\n\n\n873\nblue\n0.10\n0.20\n0.05\n\n\n873\ngold\n0.35\n0.10\n0.05\n\n\n873\nred\n0.10\n0.05\nNA\n\n\n874\nblue\n0.10\n0.10\nNA\n\n\n874\ngold\n0.35\n0.20\nNA\n\n\n874\nred\n0.10\n0.15\nNA\n\n\n875\nblue\n0.10\n0.10\n0.05\n\n\n875\ngold\n0.30\n0.10\n0.10\n\n\n875\nred\n0.20\n0.05\nNA\n\n\n876\nblue\nNA\n0.10\nNA\n\n\n876\ngold\n0.30\n0.15\n0.15\n\n\n876\nred\n0.05\n0.25\nNA\n\n\n877\nblue\n0.25\nNA\nNA\n\n\n877\ngold\n0.25\n0.30\n0.05\n\n\n877\nred\n0.15\nNA\nNA\n\n\n878\nblue\n0.25\n0.10\nNA\n\n\n878\ngold\n0.25\n0.10\n0.10\n\n\n878\nred\n0.20\nNA\nNA\n\n\n879\nblue\n0.20\n0.15\n0.05\n\n\n879\ngold\n0.15\n0.05\n0.20\n\n\n879\nred\n0.10\n0.10\nNA\n\n\n880\nblue\n0.10\n0.25\n0.10\n\n\n880\ngold\n0.25\n0.15\nNA\n\n\n880\nred\n0.10\n0.05\nNA\n\n\n881\nblue\n0.10\n0.20\n0.05\n\n\n881\ngold\n0.10\n0.10\n0.15\n\n\n881\nred\n0.20\n0.10\nNA\n\n\n882\nblue\nNA\n0.20\n0.05\n\n\n882\ngold\n0.20\n0.15\n0.20\n\n\n882\nred\n0.15\n0.05\nNA\n\n\n883\nblue\n0.10\n0.15\n0.10\n\n\n883\ngold\n0.15\n0.10\n0.05\n\n\n883\nred\n0.20\n0.15\nNA\n\n\n884\nblue\n0.15\n0.20\n0.05\n\n\n884\ngold\n0.30\n0.05\n0.10\n\n\n884\nred\n0.10\n0.05\nNA\n\n\n885\nblue\n0.20\n0.10\n0.05\n\n\n885\ngold\n0.05\nNA\n0.20\n\n\n885\nred\n0.25\n0.15\nNA\n\n\n886\nblue\nNA\n0.15\n0.05\n\n\n886\ngold\n0.25\n0.05\n0.25\n\n\n886\nred\n0.20\n0.05\nNA\n\n\n887\nblue\nNA\n0.15\nNA\n\n\n887\ngold\n0.30\nNA\n0.20\n\n\n887\nred\n0.15\n0.20\nNA\n\n\n888\nblue\n0.05\n0.15\n0.10\n\n\n888\ngold\n0.30\n0.10\n0.05\n\n\n888\nred\n0.15\n0.10\nNA\n\n\n889\nblue\nNA\n0.20\n0.10\n\n\n889\ngold\n0.20\n0.15\n0.05\n\n\n889\nred\n0.15\n0.15\nNA\n\n\n890\nblue\n0.20\n0.10\n0.10\n\n\n890\ngold\n0.25\n0.15\nNA\n\n\n890\nred\n0.10\n0.10\nNA\n\n\n891\nblue\n0.05\n0.20\nNA\n\n\n891\ngold\n0.25\n0.05\n0.20\n\n\n891\nred\n0.05\n0.20\nNA\n\n\n892\nblue\n0.10\n0.10\n0.15\n\n\n892\ngold\n0.25\n0.10\n0.10\n\n\n892\nred\n0.10\n0.10\nNA\n\n\n893\nblue\n0.10\n0.05\nNA\n\n\n893\ngold\n0.30\n0.25\n0.10\n\n\n893\nred\n0.15\n0.05\nNA\n\n\n894\nblue\n0.15\n0.05\n0.15\n\n\n894\ngold\n0.15\n0.25\n0.05\n\n\n894\nred\n0.10\n0.10\nNA\n\n\n895\nblue\nNA\n0.10\nNA\n\n\n895\ngold\n0.20\n0.30\n0.10\n\n\n895\nred\n0.15\n0.15\nNA\n\n\n896\nblue\nNA\n0.10\n0.10\n\n\n896\ngold\n0.35\n0.20\n0.05\n\n\n896\nred\n0.05\n0.15\nNA\n\n\n897\nblue\n0.05\n0.20\n0.05\n\n\n897\ngold\n0.30\n0.25\nNA\n\n\n897\nred\n0.10\n0.05\nNA\n\n\n898\nblue\n0.15\nNA\nNA\n\n\n898\ngold\n0.25\n0.15\n0.15\n\n\n898\nred\n0.15\n0.15\nNA\n\n\n899\nblue\n0.10\n0.15\nNA\n\n\n899\ngold\n0.20\n0.20\n0.10\n\n\n899\nred\n0.10\n0.15\nNA\n\n\n900\nblue\n0.10\n0.15\nNA\n\n\n900\ngold\n0.30\n0.10\n0.05\n\n\n900\nred\n0.25\n0.05\nNA\n\n\n901\nblue\n0.10\n0.15\n0.05\n\n\n901\ngold\n0.15\n0.15\n0.10\n\n\n901\nred\n0.25\n0.05\nNA\n\n\n902\nblue\nNA\n0.15\nNA\n\n\n902\ngold\n0.30\n0.05\n0.20\n\n\n902\nred\n0.20\n0.10\nNA\n\n\n903\nblue\n0.15\n0.10\nNA\n\n\n903\ngold\n0.35\n0.05\nNA\n\n\n903\nred\n0.10\n0.25\nNA\n\n\n904\nblue\nNA\nNA\n0.05\n\n\n904\ngold\n0.30\n0.20\n0.10\n\n\n904\nred\n0.15\n0.20\nNA\n\n\n905\nblue\n0.15\n0.15\nNA\n\n\n905\ngold\n0.10\n0.10\n0.05\n\n\n905\nred\n0.20\n0.25\nNA\n\n\n906\nblue\n0.15\n0.15\nNA\n\n\n906\ngold\n0.30\n0.10\n0.10\n\n\n906\nred\n0.05\n0.15\nNA\n\n\n907\nblue\n0.10\n0.25\n0.05\n\n\n907\ngold\n0.30\n0.10\n0.10\n\n\n907\nred\nNA\n0.10\nNA\n\n\n908\nblue\n0.05\n0.05\nNA\n\n\n908\ngold\n0.30\n0.25\n0.20\n\n\n908\nred\nNA\n0.15\nNA\n\n\n909\nblue\n0.20\n0.15\n0.05\n\n\n909\ngold\n0.20\n0.05\n0.10\n\n\n909\nred\n0.20\n0.05\nNA\n\n\n910\nblue\n0.10\n0.10\n0.10\n\n\n910\ngold\n0.25\n0.10\n0.10\n\n\n910\nred\n0.10\n0.15\nNA\n\n\n911\nblue\n0.05\n0.15\n0.05\n\n\n911\ngold\n0.25\n0.10\n0.15\n\n\n911\nred\n0.10\n0.15\nNA\n\n\n912\nblue\n0.10\n0.25\nNA\n\n\n912\ngold\n0.30\n0.15\n0.10\n\n\n912\nred\n0.05\n0.05\nNA\n\n\n913\nblue\n0.05\n0.15\n0.10\n\n\n913\ngold\n0.25\n0.10\n0.05\n\n\n913\nred\n0.10\n0.20\nNA\n\n\n914\nblue\n0.30\nNA\n0.05\n\n\n914\ngold\n0.30\n0.20\n0.05\n\n\n914\nred\n0.05\n0.05\nNA\n\n\n915\nblue\n0.05\n0.20\n0.05\n\n\n915\ngold\n0.30\n0.15\nNA\n\n\n915\nred\n0.10\n0.15\nNA\n\n\n916\nblue\n0.10\n0.10\n0.10\n\n\n916\ngold\n0.20\n0.10\n0.10\n\n\n916\nred\n0.10\n0.20\nNA\n\n\n917\nblue\n0.05\n0.10\n0.10\n\n\n917\ngold\n0.30\n0.15\n0.10\n\n\n917\nred\n0.10\n0.10\nNA\n\n\n918\nblue\n0.15\n0.10\nNA\n\n\n918\ngold\n0.40\n0.20\n0.05\n\n\n918\nred\n0.05\n0.05\nNA\n\n\n919\nblue\n0.05\n0.15\n0.10\n\n\n919\ngold\n0.40\n0.05\n0.05\n\n\n919\nred\n0.10\n0.10\nNA\n\n\n920\nblue\n0.05\n0.10\n0.05\n\n\n920\ngold\n0.10\n0.30\nNA\n\n\n920\nred\n0.20\n0.20\nNA\n\n\n921\nblue\nNA\n0.30\n0.05\n\n\n921\ngold\n0.20\n0.10\n0.05\n\n\n921\nred\n0.05\n0.25\nNA\n\n\n922\nblue\n0.05\n0.20\n0.05\n\n\n922\ngold\n0.25\n0.05\n0.05\n\n\n922\nred\n0.20\n0.15\nNA\n\n\n923\nblue\n0.05\n0.10\n0.05\n\n\n923\ngold\n0.45\n0.20\n0.05\n\n\n923\nred\n0.10\nNA\nNA\n\n\n924\nblue\n0.10\n0.15\n0.05\n\n\n924\ngold\n0.25\n0.20\n0.10\n\n\n924\nred\n0.05\n0.10\nNA\n\n\n925\nblue\n0.05\n0.15\n0.05\n\n\n925\ngold\n0.20\n0.25\nNA\n\n\n925\nred\n0.15\n0.15\nNA\n\n\n926\nblue\n0.05\n0.20\n0.05\n\n\n926\ngold\n0.15\n0.20\n0.10\n\n\n926\nred\n0.10\n0.15\nNA\n\n\n927\nblue\n0.10\n0.10\n0.05\n\n\n927\ngold\n0.20\n0.20\n0.20\n\n\n927\nred\n0.10\n0.05\nNA\n\n\n928\nblue\nNA\n0.25\n0.10\n\n\n928\ngold\n0.10\n0.15\n0.05\n\n\n928\nred\n0.15\n0.20\nNA\n\n\n929\nblue\n0.10\n0.05\n0.15\n\n\n929\ngold\n0.40\n0.05\n0.10\n\n\n929\nred\n0.05\n0.10\nNA\n\n\n930\nblue\n0.05\n0.10\n0.05\n\n\n930\ngold\n0.30\nNA\n0.10\n\n\n930\nred\n0.35\n0.05\nNA\n\n\n931\nblue\n0.10\n0.10\nNA\n\n\n931\ngold\n0.30\n0.25\n0.10\n\n\n931\nred\n0.10\n0.05\nNA\n\n\n932\nblue\n0.10\n0.10\n0.05\n\n\n932\ngold\n0.30\nNA\n0.10\n\n\n932\nred\n0.20\n0.15\nNA\n\n\n933\nblue\nNA\n0.10\nNA\n\n\n933\ngold\n0.45\n0.20\n0.10\n\n\n933\nred\n0.05\n0.10\nNA\n\n\n934\nblue\n0.10\n0.05\n0.10\n\n\n934\ngold\n0.20\nNA\n0.15\n\n\n934\nred\n0.20\n0.20\nNA\n\n\n935\nblue\n0.10\n0.10\nNA\n\n\n935\ngold\n0.25\n0.10\n0.15\n\n\n935\nred\n0.10\n0.20\nNA\n\n\n936\nblue\n0.10\n0.15\n0.10\n\n\n936\ngold\n0.35\n0.15\nNA\n\n\n936\nred\nNA\n0.15\nNA\n\n\n937\nblue\n0.10\n0.05\nNA\n\n\n937\ngold\n0.25\n0.15\n0.20\n\n\n937\nred\n0.10\n0.15\nNA\n\n\n938\nblue\n0.10\n0.20\n0.05\n\n\n938\ngold\n0.30\n0.05\n0.05\n\n\n938\nred\n0.25\nNA\nNA\n\n\n939\nblue\n0.10\n0.10\nNA\n\n\n939\ngold\n0.45\n0.10\n0.05\n\n\n939\nred\n0.20\nNA\nNA\n\n\n940\nblue\n0.15\n0.10\nNA\n\n\n940\ngold\n0.20\n0.10\n0.05\n\n\n940\nred\n0.25\n0.15\nNA\n\n\n941\nblue\n0.10\n0.15\n0.10\n\n\n941\ngold\n0.25\n0.15\n0.05\n\n\n941\nred\n0.15\n0.05\nNA\n\n\n942\nblue\n0.05\n0.20\nNA\n\n\n942\ngold\n0.20\n0.15\n0.10\n\n\n942\nred\n0.15\n0.15\nNA\n\n\n943\nblue\n0.10\n0.15\n0.10\n\n\n943\ngold\n0.15\n0.10\n0.05\n\n\n943\nred\n0.20\n0.15\nNA\n\n\n944\nblue\n0.15\n0.15\n0.05\n\n\n944\ngold\n0.20\n0.10\nNA\n\n\n944\nred\n0.30\n0.05\nNA\n\n\n945\nblue\n0.05\n0.15\nNA\n\n\n945\ngold\n0.15\n0.05\n0.20\n\n\n945\nred\n0.20\n0.20\nNA\n\n\n946\nblue\n0.15\n0.05\n0.10\n\n\n946\ngold\n0.25\n0.10\n0.05\n\n\n946\nred\n0.20\n0.10\nNA\n\n\n947\nblue\n0.05\nNA\n0.05\n\n\n947\ngold\n0.35\n0.05\n0.20\n\n\n947\nred\n0.10\n0.20\nNA\n\n\n948\nblue\n0.20\n0.05\n0.05\n\n\n948\ngold\n0.35\n0.10\n0.15\n\n\n948\nred\n0.10\nNA\nNA\n\n\n949\nblue\n0.10\nNA\nNA\n\n\n949\ngold\n0.35\n0.15\n0.15\n\n\n949\nred\n0.15\n0.10\nNA\n\n\n950\nblue\n0.15\n0.15\nNA\n\n\n950\ngold\n0.25\nNA\n0.05\n\n\n950\nred\n0.15\n0.25\nNA\n\n\n951\nblue\n0.05\n0.25\n0.05\n\n\n951\ngold\n0.15\n0.10\n0.05\n\n\n951\nred\n0.25\n0.10\nNA\n\n\n952\nblue\n0.20\n0.10\n0.05\n\n\n952\ngold\n0.15\n0.15\n0.15\n\n\n952\nred\n0.15\n0.05\nNA\n\n\n953\nblue\n0.15\n0.15\n0.05\n\n\n953\ngold\n0.20\n0.10\n0.05\n\n\n953\nred\n0.15\n0.15\nNA\n\n\n954\nblue\nNA\nNA\n0.20\n\n\n954\ngold\n0.15\n0.15\n0.10\n\n\n954\nred\n0.15\n0.25\nNA\n\n\n955\nblue\n0.15\n0.05\n0.05\n\n\n955\ngold\n0.20\n0.25\n0.15\n\n\n955\nred\n0.10\n0.05\nNA\n\n\n956\nblue\n0.05\n0.10\nNA\n\n\n956\ngold\n0.35\n0.15\n0.05\n\n\n956\nred\n0.15\n0.15\nNA\n\n\n957\nblue\nNA\n0.10\n0.05\n\n\n957\ngold\n0.15\n0.25\n0.25\n\n\n957\nred\n0.05\n0.15\nNA\n\n\n958\nblue\n0.15\n0.10\nNA\n\n\n958\ngold\n0.05\n0.30\n0.20\n\n\n958\nred\n0.05\n0.15\nNA\n\n\n959\nblue\nNA\n0.05\n0.05\n\n\n959\ngold\n0.25\n0.15\n0.10\n\n\n959\nred\n0.20\n0.20\nNA\n\n\n960\nblue\n0.05\n0.20\n0.05\n\n\n960\ngold\n0.25\n0.20\n0.05\n\n\n960\nred\n0.05\n0.15\nNA\n\n\n961\nblue\n0.10\n0.15\nNA\n\n\n961\ngold\n0.15\n0.30\n0.15\n\n\n961\nred\n0.10\n0.05\nNA\n\n\n962\nblue\n0.10\n0.25\nNA\n\n\n962\ngold\n0.20\n0.15\n0.10\n\n\n962\nred\n0.10\n0.10\nNA\n\n\n963\nblue\n0.10\n0.20\nNA\n\n\n963\ngold\n0.15\n0.15\n0.20\n\n\n963\nred\n0.05\n0.15\nNA\n\n\n964\nblue\n0.05\n0.20\nNA\n\n\n964\ngold\n0.15\n0.20\n0.15\n\n\n964\nred\n0.20\n0.05\nNA\n\n\n965\nblue\nNA\n0.25\n0.05\n\n\n965\ngold\n0.35\n0.15\n0.05\n\n\n965\nred\n0.05\n0.10\nNA\n\n\n966\nblue\n0.10\n0.10\nNA\n\n\n966\ngold\n0.40\n0.05\n0.10\n\n\n966\nred\n0.10\n0.15\nNA\n\n\n967\nblue\n0.10\n0.10\nNA\n\n\n967\ngold\n0.10\n0.05\n0.20\n\n\n967\nred\n0.10\n0.35\nNA\n\n\n968\nblue\n0.15\n0.05\n0.10\n\n\n968\ngold\n0.30\n0.20\n0.05\n\n\n968\nred\n0.15\nNA\nNA\n\n\n969\nblue\n0.05\n0.10\n0.05\n\n\n969\ngold\n0.35\n0.20\nNA\n\n\n969\nred\n0.15\n0.10\nNA\n\n\n970\nblue\n0.05\nNA\n0.15\n\n\n970\ngold\n0.30\n0.05\n0.10\n\n\n970\nred\n0.25\n0.10\nNA\n\n\n971\nblue\n0.05\n0.10\n0.15\n\n\n971\ngold\n0.10\n0.15\n0.10\n\n\n971\nred\n0.10\n0.25\nNA\n\n\n972\nblue\n0.05\n0.10\nNA\n\n\n972\ngold\n0.30\n0.15\n0.15\n\n\n972\nred\n0.10\n0.15\nNA\n\n\n973\nblue\n0.10\n0.15\nNA\n\n\n973\ngold\n0.25\n0.10\n0.15\n\n\n973\nred\n0.10\n0.15\nNA\n\n\n974\nblue\n0.15\n0.15\n0.10\n\n\n974\ngold\n0.15\n0.25\n0.05\n\n\n974\nred\n0.10\n0.05\nNA\n\n\n975\nblue\n0.10\n0.15\n0.10\n\n\n975\ngold\n0.10\n0.10\n0.10\n\n\n975\nred\n0.20\n0.15\nNA\n\n\n976\nblue\n0.15\n0.05\n0.05\n\n\n976\ngold\n0.30\n0.20\n0.10\n\n\n976\nred\n0.10\n0.05\nNA\n\n\n977\nblue\n0.15\n0.15\n0.05\n\n\n977\ngold\n0.20\n0.10\n0.15\n\n\n977\nred\n0.15\n0.05\nNA\n\n\n978\nblue\nNA\n0.20\nNA\n\n\n978\ngold\n0.10\n0.25\n0.15\n\n\n978\nred\n0.10\n0.20\nNA\n\n\n979\nblue\n0.20\n0.05\nNA\n\n\n979\ngold\n0.20\n0.10\n0.10\n\n\n979\nred\n0.15\n0.20\nNA\n\n\n980\nblue\n0.20\n0.15\n0.05\n\n\n980\ngold\n0.20\n0.05\n0.15\n\n\n980\nred\n0.15\n0.05\nNA\n\n\n981\nblue\nNA\n0.10\nNA\n\n\n981\ngold\n0.35\n0.10\n0.10\n\n\n981\nred\n0.30\n0.05\nNA\n\n\n982\nblue\n0.10\n0.25\nNA\n\n\n982\ngold\n0.25\n0.15\n0.05\n\n\n982\nred\n0.10\n0.10\nNA\n\n\n983\nblue\n0.20\n0.10\n0.05\n\n\n983\ngold\n0.30\n0.15\n0.05\n\n\n983\nred\n0.05\n0.10\nNA\n\n\n984\nblue\n0.05\n0.10\n0.10\n\n\n984\ngold\n0.25\n0.25\n0.10\n\n\n984\nred\n0.15\nNA\nNA\n\n\n985\nblue\n0.05\n0.10\n0.05\n\n\n985\ngold\n0.25\n0.15\n0.05\n\n\n985\nred\n0.20\n0.15\nNA\n\n\n986\nblue\n0.15\n0.10\n0.15\n\n\n986\ngold\n0.20\n0.15\n0.05\n\n\n986\nred\n0.15\n0.05\nNA\n\n\n987\nblue\n0.15\n0.20\n0.05\n\n\n987\ngold\n0.25\n0.05\n0.15\n\n\n987\nred\n0.05\n0.10\nNA\n\n\n988\nblue\n0.05\n0.20\nNA\n\n\n988\ngold\n0.20\n0.15\n0.10\n\n\n988\nred\n0.10\n0.20\nNA\n\n\n989\nblue\n0.10\n0.15\n0.10\n\n\n989\ngold\n0.25\n0.10\n0.15\n\n\n989\nred\n0.10\n0.05\nNA\n\n\n990\nblue\nNA\n0.20\n0.05\n\n\n990\ngold\n0.25\n0.10\n0.05\n\n\n990\nred\n0.10\n0.25\nNA\n\n\n991\nblue\n0.15\n0.05\n0.10\n\n\n991\ngold\n0.30\n0.05\nNA\n\n\n991\nred\n0.10\n0.25\nNA\n\n\n992\nblue\n0.15\n0.15\n0.05\n\n\n992\ngold\n0.25\n0.15\n0.05\n\n\n992\nred\n0.15\n0.05\nNA\n\n\n993\nblue\n0.10\n0.15\n0.10\n\n\n993\ngold\n0.25\n0.10\n0.20\n\n\n993\nred\n0.10\nNA\nNA\n\n\n994\nblue\nNA\n0.05\n0.15\n\n\n994\ngold\n0.20\n0.20\n0.10\n\n\n994\nred\n0.20\n0.10\nNA\n\n\n995\nblue\nNA\n0.10\n0.05\n\n\n995\ngold\n0.40\n0.20\n0.10\n\n\n995\nred\n0.05\n0.10\nNA\n\n\n996\nblue\n0.25\n0.10\nNA\n\n\n996\ngold\n0.25\n0.10\n0.05\n\n\n996\nred\n0.10\n0.15\nNA\n\n\n997\nblue\n0.05\n0.10\n0.05\n\n\n997\ngold\n0.40\n0.10\n0.10\n\n\n997\nred\n0.05\n0.15\nNA\n\n\n998\nblue\n0.15\n0.25\nNA\n\n\n998\ngold\n0.20\n0.15\nNA\n\n\n998\nred\n0.10\n0.15\nNA\n\n\n999\nblue\n0.15\n0.15\n0.05\n\n\n999\ngold\n0.25\n0.10\n0.15\n\n\n999\nred\nNA\n0.15\nNA\n\n\n1000\nblue\n0.10\n0.15\nNA\n\n\n1000\ngold\n0.25\n0.05\n0.10\n\n\n1000\nred\n0.15\n0.20\nNA"
+  },
+  {
+    "objectID": "slides/Estimation.html#sampling-distribution-of-diamond-size",
+    "href": "slides/Estimation.html#sampling-distribution-of-diamond-size",
+    "title": "4.1.Estimation",
+    "section": "Sampling distribution of diamond size",
+    "text": "Sampling distribution of diamond size"
+  },
+  {
+    "objectID": "slides/Estimation.html#thats-all-for-today",
+    "href": "slides/Estimation.html#thats-all-for-today",
+    "title": "4.1.Estimation",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#wrapping-it-up",
-    "href": "slides/Statistics_and_Samples4.html#wrapping-it-up",
-    "title": "1.4.Statistics and Samples",
-    "section": "Wrapping it up",
-    "text": "Wrapping it up\n\nTypes of experiments\nCorrelation vs. Causation"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#section",
-    "href": "slides/Statistics_and_Samples4.html#section",
-    "title": "1.4.Statistics and Samples",
-    "section": "",
-    "text": "In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, “confounding factor”, or “lurking variable”). Wikipedia Commons\n\n\nConfounding Variables: unmeasured variable that changes in tandem with one or more of the measured variables, giving a false appearance of a causal association between the measured variables."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#example",
-    "href": "slides/Statistics_and_Samples4.html#example",
-    "title": "1.4.Statistics and Samples",
-    "section": "Example",
-    "text": "Example\n\nWhat could be happening here?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#causal-inference",
-    "href": "slides/Statistics_and_Samples4.html#causal-inference",
-    "title": "1.4.Statistics and Samples",
-    "section": "Causal Inference",
-    "text": "Causal Inference"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#causal-inference-1",
-    "href": "slides/Statistics_and_Samples4.html#causal-inference-1",
-    "title": "1.4.Statistics and Samples",
-    "section": "Causal Inference",
-    "text": "Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#example-2",
-    "href": "slides/Statistics_and_Samples4.html#example-2",
-    "title": "1.4.Statistics and Samples",
-    "section": "Example 2",
-    "text": "Example 2\n\nConsider a study showing (positive association) that people who ate more steaks can do more push-ups.\n\n\nEating steaks could give people more muscle tone/strength OR\nA certain type of person may enjoy both eating steaks and building muscle OR\nSomething else\n\nQuestions:\n\nObservational or experimental?\nIs this enough to show causation?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#example-3",
-    "href": "slides/Statistics_and_Samples4.html#example-3",
-    "title": "1.4.Statistics and Samples",
-    "section": "Example 3",
-    "text": "Example 3\n\nConsider a study showing that plants with fewer pests had greater biomass.\n\n\nPests could decrease plant vigor OR\nVigorous plants could fight off pests OR\nSomething else\n\nQuestions:\n\nObservational or experimental?\nIs this enough to show causation?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#observational-studies-cannot-separate-cause-and-effect",
-    "href": "slides/Statistics_and_Samples4.html#observational-studies-cannot-separate-cause-and-effect",
-    "title": "1.4.Statistics and Samples",
-    "section": "Observational studies cannot separate cause and effect",
-    "text": "Observational studies cannot separate cause and effect\n\nSimply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested.\nThe main purpose of experimental studies is to disentangle these effects."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#but-experiments-can-reveal-causation",
-    "href": "slides/Statistics_and_Samples4.html#but-experiments-can-reveal-causation",
-    "title": "1.4.Statistics and Samples",
-    "section": "But experiments can reveal causation",
-    "text": "But experiments can reveal causation\n\nBecause researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds (except those that arise by chance!) and allows us to separate cause and effect !!!\n\n\nBut be careful, experimental artifacts can introduce bias.\nFor example, the mental boost of receiving a treatment may help people feel better, an example of the placebo effect – an improvement in medical condition that results form the physychological effects of treatment.\nAppropriate controls are critical to a good experiment.\n\n\n\nPlacebo (Latin): “I shall please”, from placeō, “I please”. Read Interleaf 6 for more on the placebo effect."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples4.html#section-1",
-    "href": "slides/Statistics_and_Samples4.html#section-1",
-    "title": "1.4.Statistics and Samples",
-    "section": "",
-    "text": "From: makeameme.org"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#general-information",
-    "href": "index.html#general-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#getting-help",
-    "href": "index.html#getting-help",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Getting help",
-    "text": "Getting help\nThe preferred methods to get help in this course are office hours for content questions (see the Schedule) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, Rstudio, and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "rlearn.html",
-    "href": "rlearn.html",
-    "title": "Learning R",
-    "section": "",
-    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-help",
-    "href": "rlearn.html#r-help",
-    "title": "Learning R",
-    "section": "1 Getting help with R",
-    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#free-online-books",
-    "href": "rlearn.html#free-online-books",
-    "title": "Learning R",
-    "section": "2 Free Online Books",
-    "text": "2 Free Online Books\n\n“R Graphic Cookbook”\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-vids",
-    "href": "rlearn.html#r-vids",
-    "title": "Learning R",
-    "section": "3 Videos",
-    "text": "3 Videos\n\nOverview of R Markdown: a crash course\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nR markdown Gallery: Check out the range of outputs and formats you can create using R Markdown.\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#tutorials-simulations",
-    "href": "rlearn.html#tutorials-simulations",
-    "title": "Learning R",
-    "section": "4 Tutorials & Simulations",
-    "text": "4 Tutorials & Simulations\n\nr-statistics.co, by Selva Prabhakaran - includes very good section on ggplot!\nFrom your textbook\nQuick-R\nRstudio Education\nPosit Cloud Recipes",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#freely-available-biological-datasets",
-    "href": "rlearn.html#freely-available-biological-datasets",
-    "title": "Learning R",
-    "section": "5 Freely Available (Biological) Datasets",
-    "text": "5 Freely Available (Biological) Datasets\nI will keep adding stuff here, but here are some good places to search.\n\nDryad - lots of scientific papers make their datasets available here.\nZenodo - lots of scientific papers make their datasets available here.\nNational Library of Medicine Dataset Catalog - great resource from the NIH, points to datasets elsewher elike zenodo, dryad, figshare, etc.\nre3data\nFigShare - lots of scientific papers make their datasets available here.\nWold Population Review - not focused on biology but very cool nevertheless. There are subsections that have biological datasets though like the one focusing on health, for example.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "handouts/Handout1.html",
-    "href": "handouts/Handout1.html",
-    "title": "Statistics and Samples",
-    "section": "",
-    "text": "Understand the major goal of statistics.\nDistinguish between a sample and a population.\nDistinguish between an estimate and a parameter.\nIdentify why estimates from samples may deviate from the parameters of populations.\nIdentify the properties of a good sample.\nDescribe the differences between observational and experimental studies.\nIdentify whether a variable is numeric or categorical (and subtypes).\nDistinguish between sampling bias and sampling error.\nDistinguish between accuracy and precision and how these terms relate to sampling bias and sampling error.\nUnderstand the distinction between the term “population” in a statistical and a biological context.\nDistinguish between correlation and causation."
-  },
-  {
-    "objectID": "handouts/Handout1.html#references",
-    "href": "handouts/Handout1.html#references",
-    "title": "Statistics and Samples",
-    "section": "References",
-    "text": "References\nBrandvain, Y. (2022). Applied Biostats. Bookdown. https://bookdown.org/ybrandvain/Applied_Biostats_2022/\nWhitlock, M., & Schluter, D. (2020). The analysis of biological data. Macmillan. https://whitlockschluter3e.zoology.ubc.ca/"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html",
-    "href": "list_of_datacamp_assignments.html",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "",
-    "text": "Last update: 10-04-2022"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#introduction-to-r",
-    "href": "list_of_datacamp_assignments.html#introduction-to-r",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Introduction to R",
-    "text": "Introduction to R\nEntire Course, which consists of these chapters (in order):\n\nIntro to Basics\nVectors\nMatrices\nFactors\nData frames\nLists"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#introduction-to-importing-data-with-r",
-    "href": "list_of_datacamp_assignments.html#introduction-to-importing-data-with-r",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Introduction to Importing Data with R",
-    "text": "Introduction to Importing Data with R\n\nImporting Data with Flatfiles from utils\nImporting excel data"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#reporting-with-r-markdown",
-    "href": "list_of_datacamp_assignments.html#reporting-with-r-markdown",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Reporting with R markdown",
-    "text": "Reporting with R markdown\n\nGetting Started with R markdown\nAdding analyses and visualizations"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#introduction-to-the-tidyverse",
-    "href": "list_of_datacamp_assignments.html#introduction-to-the-tidyverse",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Introduction to the Tidyverse",
-    "text": "Introduction to the Tidyverse\nEntire Course, which consists of these chapters (in order):\n\nData wrangling\nData visualization\nGrouping and summarising\nTypes of visualizations"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#data-manipulation-with-dplyr",
-    "href": "list_of_datacamp_assignments.html#data-manipulation-with-dplyr",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Data manipulation with dplyr",
-    "text": "Data manipulation with dplyr\n\nTransforming Data with dplyr\nAggregating Data"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#introduction-to-data-visualization-with-ggplot2",
-    "href": "list_of_datacamp_assignments.html#introduction-to-data-visualization-with-ggplot2",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Introduction to Data Visualization with ggplot2",
-    "text": "Introduction to Data Visualization with ggplot2\n\nIntroduction\nAesthetics\nGeometries\nThemes"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#exploratory-data-analysis-in-r",
-    "href": "list_of_datacamp_assignments.html#exploratory-data-analysis-in-r",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Exploratory Data Analysis in R",
-    "text": "Exploratory Data Analysis in R\n\nExploring Categorical Data [good review for exam]\nExploring Numerical Data [good review for exam]"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#introduction-to-statistics-in-r",
-    "href": "list_of_datacamp_assignments.html#introduction-to-statistics-in-r",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Introduction to Statistics in R",
-    "text": "Introduction to Statistics in R\n\nSummary Statistics [Lab6] [good review for exam]"
-  },
-  {
-    "objectID": "list_of_datacamp_assignments.html#sampling-in-r",
-    "href": "list_of_datacamp_assignments.html#sampling-in-r",
-    "title": "B215: List of DataCamp Assigments",
-    "section": "Sampling in R",
-    "text": "Sampling in R\n\nIntroduction to Sampling"
-  },
-  {
-    "objectID": "psets.html",
-    "href": "psets.html",
-    "title": "Problem Sets",
-    "section": "",
-    "text": "Topic\nDue date (at 11:59 PM)\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Statistics_and_Samples3.html#quick-recap",
@@ -1631,6 +1389,395 @@
     "objectID": "slides/Statistics_and_Samples3.html#thats-all-for-today",
     "href": "slides/Statistics_and_Samples3.html#thats-all-for-today",
     "title": "1.3.Statistics and Samples",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
+  },
+  {
+    "objectID": "psets.html",
+    "href": "psets.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Topic\nDue date (at 11:59 PM)\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html",
+    "href": "list_of_datacamp_assignments.html",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "",
+    "text": "Last update: 10-04-2022"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#introduction-to-r",
+    "href": "list_of_datacamp_assignments.html#introduction-to-r",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Introduction to R",
+    "text": "Introduction to R\nEntire Course, which consists of these chapters (in order):\n\nIntro to Basics\nVectors\nMatrices\nFactors\nData frames\nLists"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#introduction-to-importing-data-with-r",
+    "href": "list_of_datacamp_assignments.html#introduction-to-importing-data-with-r",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Introduction to Importing Data with R",
+    "text": "Introduction to Importing Data with R\n\nImporting Data with Flatfiles from utils\nImporting excel data"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#reporting-with-r-markdown",
+    "href": "list_of_datacamp_assignments.html#reporting-with-r-markdown",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Reporting with R markdown",
+    "text": "Reporting with R markdown\n\nGetting Started with R markdown\nAdding analyses and visualizations"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#introduction-to-the-tidyverse",
+    "href": "list_of_datacamp_assignments.html#introduction-to-the-tidyverse",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Introduction to the Tidyverse",
+    "text": "Introduction to the Tidyverse\nEntire Course, which consists of these chapters (in order):\n\nData wrangling\nData visualization\nGrouping and summarising\nTypes of visualizations"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#data-manipulation-with-dplyr",
+    "href": "list_of_datacamp_assignments.html#data-manipulation-with-dplyr",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Data manipulation with dplyr",
+    "text": "Data manipulation with dplyr\n\nTransforming Data with dplyr\nAggregating Data"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#introduction-to-data-visualization-with-ggplot2",
+    "href": "list_of_datacamp_assignments.html#introduction-to-data-visualization-with-ggplot2",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Introduction to Data Visualization with ggplot2",
+    "text": "Introduction to Data Visualization with ggplot2\n\nIntroduction\nAesthetics\nGeometries\nThemes"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#exploratory-data-analysis-in-r",
+    "href": "list_of_datacamp_assignments.html#exploratory-data-analysis-in-r",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Exploratory Data Analysis in R",
+    "text": "Exploratory Data Analysis in R\n\nExploring Categorical Data [good review for exam]\nExploring Numerical Data [good review for exam]"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#introduction-to-statistics-in-r",
+    "href": "list_of_datacamp_assignments.html#introduction-to-statistics-in-r",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Introduction to Statistics in R",
+    "text": "Introduction to Statistics in R\n\nSummary Statistics [Lab6] [good review for exam]"
+  },
+  {
+    "objectID": "list_of_datacamp_assignments.html#sampling-in-r",
+    "href": "list_of_datacamp_assignments.html#sampling-in-r",
+    "title": "B215: List of DataCamp Assigments",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\nIntroduction to Sampling"
+  },
+  {
+    "objectID": "handouts/Handout1.html",
+    "href": "handouts/Handout1.html",
+    "title": "Statistics and Samples",
+    "section": "",
+    "text": "Understand the major goal of statistics.\nDistinguish between a sample and a population.\nDistinguish between an estimate and a parameter.\nIdentify why estimates from samples may deviate from the parameters of populations.\nIdentify the properties of a good sample.\nDescribe the differences between observational and experimental studies.\nIdentify whether a variable is numeric or categorical (and subtypes).\nDistinguish between sampling bias and sampling error.\nDistinguish between accuracy and precision and how these terms relate to sampling bias and sampling error.\nUnderstand the distinction between the term “population” in a statistical and a biological context.\nDistinguish between correlation and causation."
+  },
+  {
+    "objectID": "handouts/Handout1.html#references",
+    "href": "handouts/Handout1.html#references",
+    "title": "Statistics and Samples",
+    "section": "References",
+    "text": "References\nBrandvain, Y. (2022). Applied Biostats. Bookdown. https://bookdown.org/ybrandvain/Applied_Biostats_2022/\nWhitlock, M., & Schluter, D. (2020). The analysis of biological data. Macmillan. https://whitlockschluter3e.zoology.ubc.ca/"
+  },
+  {
+    "objectID": "rlearn.html",
+    "href": "rlearn.html",
+    "title": "Learning R",
+    "section": "",
+    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#r-help",
+    "href": "rlearn.html#r-help",
+    "title": "Learning R",
+    "section": "1 Getting help with R",
+    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#free-online-books",
+    "href": "rlearn.html#free-online-books",
+    "title": "Learning R",
+    "section": "2 Free Online Books",
+    "text": "2 Free Online Books\n\n“R Graphic Cookbook”\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#r-vids",
+    "href": "rlearn.html#r-vids",
+    "title": "Learning R",
+    "section": "3 Videos",
+    "text": "3 Videos\n\nOverview of R Markdown: a crash course\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nR markdown Gallery: Check out the range of outputs and formats you can create using R Markdown.\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#tutorials-simulations",
+    "href": "rlearn.html#tutorials-simulations",
+    "title": "Learning R",
+    "section": "4 Tutorials & Simulations",
+    "text": "4 Tutorials & Simulations\n\nr-statistics.co, by Selva Prabhakaran - includes very good section on ggplot!\nFrom your textbook\nQuick-R\nRstudio Education\nPosit Cloud Recipes",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#freely-available-biological-datasets",
+    "href": "rlearn.html#freely-available-biological-datasets",
+    "title": "Learning R",
+    "section": "5 Freely Available (Biological) Datasets",
+    "text": "5 Freely Available (Biological) Datasets\nI will keep adding stuff here, but here are some good places to search.\n\nDryad - lots of scientific papers make their datasets available here.\nZenodo - lots of scientific papers make their datasets available here.\nNational Library of Medicine Dataset Catalog - great resource from the NIH, points to datasets elsewher elike zenodo, dryad, figshare, etc.\nre3data\nFigShare - lots of scientific papers make their datasets available here.\nWold Population Review - not focused on biology but very cool nevertheless. There are subsections that have biological datasets though like the one focusing on health, for example.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#general-information",
+    "href": "index.html#general-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-help",
+    "href": "index.html#getting-help",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Getting help",
+    "text": "Getting help\nThe preferred methods to get help in this course are office hours for content questions (see the Schedule) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, Rstudio, and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#wrapping-it-up",
+    "href": "slides/Statistics_and_Samples4.html#wrapping-it-up",
+    "title": "1.4.Statistics and Samples",
+    "section": "Wrapping it up",
+    "text": "Wrapping it up\n\nTypes of experiments\nCorrelation vs. Causation"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#section",
+    "href": "slides/Statistics_and_Samples4.html#section",
+    "title": "1.4.Statistics and Samples",
+    "section": "",
+    "text": "In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor (referred to as a “common response variable”, “confounding factor”, or “lurking variable”). Wikipedia Commons\n\n\nConfounding Variables: unmeasured variable that changes in tandem with one or more of the measured variables, giving a false appearance of a causal association between the measured variables."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#example",
+    "href": "slides/Statistics_and_Samples4.html#example",
+    "title": "1.4.Statistics and Samples",
+    "section": "Example",
+    "text": "Example\n\nWhat could be happening here?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#causal-inference",
+    "href": "slides/Statistics_and_Samples4.html#causal-inference",
+    "title": "1.4.Statistics and Samples",
+    "section": "Causal Inference",
+    "text": "Causal Inference"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#causal-inference-1",
+    "href": "slides/Statistics_and_Samples4.html#causal-inference-1",
+    "title": "1.4.Statistics and Samples",
+    "section": "Causal Inference",
+    "text": "Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Wikipedia Commons. Graphical model: Whereas a mediator is a factor in the causal chain (top), a confounder is a spurious factor incorrectly implying causation (bottom)"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#example-2",
+    "href": "slides/Statistics_and_Samples4.html#example-2",
+    "title": "1.4.Statistics and Samples",
+    "section": "Example 2",
+    "text": "Example 2\n\nConsider a study showing (positive association) that people who ate more steaks can do more push-ups.\n\n\nEating steaks could give people more muscle tone/strength OR\nA certain type of person may enjoy both eating steaks and building muscle OR\nSomething else\n\nQuestions:\n\nObservational or experimental?\nIs this enough to show causation?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#example-3",
+    "href": "slides/Statistics_and_Samples4.html#example-3",
+    "title": "1.4.Statistics and Samples",
+    "section": "Example 3",
+    "text": "Example 3\n\nConsider a study showing that plants with fewer pests had greater biomass.\n\n\nPests could decrease plant vigor OR\nVigorous plants could fight off pests OR\nSomething else\n\nQuestions:\n\nObservational or experimental?\nIs this enough to show causation?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#observational-studies-cannot-separate-cause-and-effect",
+    "href": "slides/Statistics_and_Samples4.html#observational-studies-cannot-separate-cause-and-effect",
+    "title": "1.4.Statistics and Samples",
+    "section": "Observational studies cannot separate cause and effect",
+    "text": "Observational studies cannot separate cause and effect\n\nSimply observing the association (correlation) is not enough to infer causation, but could point to hypotheses which, hopefully, can be tested.\nThe main purpose of experimental studies is to disentangle these effects."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#but-experiments-can-reveal-causation",
+    "href": "slides/Statistics_and_Samples4.html#but-experiments-can-reveal-causation",
+    "title": "1.4.Statistics and Samples",
+    "section": "But experiments can reveal causation",
+    "text": "But experiments can reveal causation\n\nBecause researchers can randomly assign individuals to treatments, a well-executed experimental study removes confounds (except those that arise by chance!) and allows us to separate cause and effect !!!\n\n\nBut be careful, experimental artifacts can introduce bias.\nFor example, the mental boost of receiving a treatment may help people feel better, an example of the placebo effect – an improvement in medical condition that results form the physychological effects of treatment.\nAppropriate controls are critical to a good experiment.\n\n\n\nPlacebo (Latin): “I shall please”, from placeō, “I please”. Read Interleaf 6 for more on the placebo effect."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples4.html#section-1",
+    "href": "slides/Statistics_and_Samples4.html#section-1",
+    "title": "1.4.Statistics and Samples",
+    "section": "",
+    "text": "From: makeameme.org"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#outline",
+    "href": "slides/DisplayingAndDescribingData.html#outline",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Outline",
+    "text": "Outline\n\nEstimates of location\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables\n\ntoday: location and width; next class plots"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#learning-goals",
+    "href": "slides/DisplayingAndDescribingData.html#learning-goals",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nDifferentiate between estimates of location and estimates of width.\nRecognize that variability is not simply noise, but is a key parameter that can be estimated.\nBecome familiar with the most common descriptive statistics.\nKnow when the mean or median is a more appropriate summary of location.\nDistinguish between explanatory and exploratory figures.\nIdentify what makes a good graph.\nUnderstand how data types drive figure design.\nUnderstand how to make effective tables.\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#frequency-vs.-probability-distribution",
+    "href": "slides/DisplayingAndDescribingData.html#frequency-vs.-probability-distribution",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Frequency vs. Probability Distribution",
+    "text": "Frequency vs. Probability Distribution\n\n\nFrequency Distribution \n\nsample\na snapshot of actual counts of outcomes in a given sample\n\n\nProbably Distribution \n\npopulation\nusually not known so based on probability rules: it represents the theoretical probability of all possible outcomes of a random variable"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#descriptive-statistics",
+    "href": "slides/DisplayingAndDescribingData.html#descriptive-statistics",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\nOr summary statistics: quantities that capture important features of frequency distributions"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#three-common-descriptions-of-data",
+    "href": "slides/DisplayingAndDescribingData.html#three-common-descriptions-of-data",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Three Common Descriptions of Data",
+    "text": "Three Common Descriptions of Data\n\nLocation (central tendency)\nWidth (spread)\nAssociation (correlation)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#measures-of-location-central-tendency",
+    "href": "slides/DisplayingAndDescribingData.html#measures-of-location-central-tendency",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Measures of location (central tendency)",
+    "text": "Measures of location (central tendency)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#measures-of-location",
+    "href": "slides/DisplayingAndDescribingData.html#measures-of-location",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Measures of location",
+    "text": "Measures of location\n\n\nMean: The weight of your data. The average value.\nMedian: A “typical individual”. If I take an individual at random, this is the value we expect them to be closest to.\nMode: The typical individual most common value for an individual. The most likely answer for an individual selected at random."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#the-average-problem",
+    "href": "slides/DisplayingAndDescribingData.html#the-average-problem",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "The average problem",
+    "text": "The average problem\n\n“Average” is often used synonymously with mean.\n\n\nBut: medians and even modes are sometimes called an “average”.\nWhen you see the word, “average”, pay attention to which measure of location it describes.\n\n\n\nIn this course, you should use statistical terms precisely, i.e., to indicate the same consistently. So if you want to say mean, say mean, not average."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#arithmetic-mean",
+    "href": "slides/DisplayingAndDescribingData.html#arithmetic-mean",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "(Arithmetic) Mean",
+    "text": "(Arithmetic) Mean\n\nThe sum of values divided by the sample size.\n\n\\[\\bar{Y}=\\frac{\\sum_{i=1}^{n}Y_{i}}{n}\\] \n\n\n\n\n\\(\\bar{Y}\\) is the mean value of variable \\(Y\\)\n\n\n\\(\\sum\\) signified “sum”\n\n\n\n\n\\(n\\) is the number of individuals in the samples (sample size)\n\n\\(Y_{i}\\) is the observed value for the \\(i\\)-th individual\n\n\n\nExample: The mean of the set of 11 numbers: \\(1, 15,9, 16,6, 17, 10,  5, 12, 14, 13\\) is\n\\(\\bar{Y} = 1+15+9+16+6+17+10+5+12+14+13/11 = 106.1818\\)\n\n\n\nThis is the “arithmetic mean”, the one you see most often. The three pytagorean means also include the geometric mean and the harmonic mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table",
+    "href": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Practice: Mean from a frequency table",
+    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) all values and diving by \\(n_{total}\\).\n\n\n\n\n\n\n\n\nconvictions\nfrequency\n\n\n\n0\n265\n\n\n1\n49\n\n\n2\n21\n\n\n3\n19\n\n\n4\n10\n\n\n5\n10\n\n\n6\n2\n\n\n7\n2\n\n\n8\n4\n\n\n9\n2\n\n\n10\n1\n\n\n11\n4\n\n\n12\n3\n\n\n13\n1\n\n\n14\n2\n\n\n\n\nA frequency table. Data from Farrington (1994) and distributed at http://www.webapp.icpsr.umich.edu/cocoon/NACJD-STUDY/08488.xml."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table-1",
+    "href": "slides/DisplayingAndDescribingData.html#practice-mean-from-a-frequency-table-1",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Practice: Mean from a frequency table",
+    "text": "Practice: Mean from a frequency table\n\n\n\nFrequency tables show the number of times, \\(n_{i}\\) a value, \\(Y_{i}\\), is observed in a sample of size \\(n_{total}\\)\n\n\n\nCodeconvictions &lt;- c(0, 1, 2, 3, 4,\n    5, 6, 7, 8, 9, 10, 11, 12,\n    13, 14)\nfreqs &lt;- c(265, 49, 21, 19, 10,\n    10, 2, 2, 4, 2, 1, 4, 3, 1,\n    2)\nn_total &lt;- sum(freqs)  # 395\n\n\n\nWe calculate the mean from a frequency table by summing the product of \\(n_{i}\\) and \\(Y_{i}\\) across all values and diving by \\(n_{total}\\).\n\n\nCode# multiply two vectors of\n# same length\n\nFinalMean &lt;- sum(convictions *\n    freqs)/n_total\nFinalMean\n\n[1] 1.126582\n\n\n\n\n\n\n\n\nA frequency table\n\nconvictions\nfrequency\nConvictionxFreq\n\n\n\n0\n265\n0\n\n\n1\n49\n49\n\n\n2\n21\n42\n\n\n3\n19\n57\n\n\n4\n10\n40\n\n\n5\n10\n50\n\n\n6\n2\n12\n\n\n7\n2\n14\n\n\n8\n4\n32\n\n\n9\n2\n18\n\n\n10\n1\n10\n\n\n11\n4\n44\n\n\n12\n3\n36\n\n\n13\n1\n13\n\n\n14\n2\n28"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#median",
+    "href": "slides/DisplayingAndDescribingData.html#median",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Median",
+    "text": "Median\n\nThe value halfway through an ordered list of observations.\n\n\nThe \\((n + 1) / 2\\)-th value for odd sized samples.\nMean of n/2 th and the \\((n + 2) / 2\\)-th value for even sized samples.\n\n\nExample: Using the same set of numbers as before (try):\n\nFirst, order the numbers: \\(1,  5,  6,  9, 10, 12, 13, 14, 15, 16, 17\\)\n\nThe \\((n + 1) / 2\\)-th value for odd sized samples: \\(12\\)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#mean-and-median-in-r",
+    "href": "slides/DisplayingAndDescribingData.html#mean-and-median-in-r",
+    "title": "2.1.Displaying & Describing Data",
+    "section": "Mean and Median in R",
+    "text": "Mean and Median in R\n\nCode# a vector with the numbers\nmynumbers &lt;- c(1, 15, 9, 16, 6, 17, 10, 5, 12, 14, 13)\n# mean 'manually'\nmysum &lt;- sum(mynumbers)  #sum all numbers\nl &lt;- length(mynumbers)  #number of elements in vector\nmymean &lt;- mysum/l\nmymean\n\n[1] 10.72727\n\nCode# note that you can use a built-in function for this:\nmymean2 &lt;- mean(mynumbers)\nmymean2\n\n[1] 10.72727\n\nCode# median with built-in function\nmymedian &lt;- median(mynumbers)\nmymedian\n\n[1] 12\n\nCode# median 'manually'\nmynumbers2 &lt;- sort(mynumbers)\nmynumbers2\n\n [1]  1  5  6  9 10 12 13 14 15 16 17\n\nCode# since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6\nmynumbers2[6]\n\n[1] 12"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData.html#thats-all-for-today",
+    "title": "2.1.Displaying & Describing Data",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
