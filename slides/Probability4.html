@@ -140,7 +140,16 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-10-20</p>
-</section><section id="recap" class="slide level2 dark-theme center"><h2>Recap</h2>
+</section><section id="remindersannouncements" class="slide level2"><h2>Reminders/Announcements</h2>
+<ul>
+<li>PS1 grades posted over the break; please chek key carefully (I graded benevolently)</li>
+<li>PS2 due Friday, no grace days – will not accept late assignments after I post a key Sat 00:30 am</li>
+<li>Coding Assignment 1 - due 11/2, resubmissions will be allowed after 1st grading</li>
+<li>Exam next week: announcement sent before breaka nd will start thread on Piazza this afternoon with info and space for Qs</li>
+<li>Please note slight change in OH on course page</li>
+<li>Please check Piazza often and participate</li>
+<li>Mid semester check-in</li>
+</ul></section><section id="recap" class="slide level2 dark-theme center"><h2>Recap</h2>
 </section><section id="short-summary-multiplication-principle" class="slide level2"><h2>Short summary: Multiplication Principle</h2>
 <ul>
 <li><p>The probability of <strong>AND</strong> involves multiplication: <span class="math inline">\(P[A \&amp; B]=P[A]\times P[B|A]\)</span></p></li>
@@ -167,7 +176,52 @@ Bárbara D. Bitarello
 
 <aside><div>
 <p>Tip: use a probability tree or Bayes’ theorem</p>
-</div></aside></section><section id="month-hall" class="slide level2 dark-theme center"><h2>Month Hall</h2>
+</div></aside></section><section id="solution-1" class="slide level2"><h2>Solution 1</h2>
+<p>What we know:</p>
+<ul>
+<li class="fragment"><p>Let <span class="math inline">\(C\)</span> and <span class="math inline">\(NC\)</span> be the cancer statuses and <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> the test results.</p></li>
+<li class="fragment"><p><span class="math inline">\(P[C]=0.02\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P[NC]=1-0.02=0.98\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P[+|C]=0.92\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P[+|NC]=0.10\)</span></p></li>
+<li class="fragment"><p>What we want: <span class="math inline">\(P[C|+]\)</span> or, in other words, the proportion of positive test cases that are actually true positives</p></li>
+<li class="fragment"><p>What proportion of + results actually are obtained by C patients?</p></li>
+</ul>
+<p><span class="math inline">\(\frac{P[C\&amp; +]}{P[+]}\)</span>, but what’s <span class="math inline">\(P[+]\)</span>?</p>
+</section><section id="solution-1-2" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-4142506875.png" class="r-stretch"></section><section id="solution-1-3" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-42998925.png" class="r-stretch"></section><section id="solution-1-4" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-914645614.png" class="r-stretch"></section><section id="solution-1-5" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-3203265178.png" class="r-stretch"></section><section id="solution-1-6" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-3322131651.png" class="r-stretch"></section><section id="solution-1-7" class="slide level2"><h2>Solution 1</h2>
+
+<img data-src="images/clipboard-225578788.png" width="455" class="r-stretch"><p><span class="math inline">\(P[+]=0.0184+0.098=0.1164\)</span></p>
+<p>Proportion of + tests where there actually is cancer is:</p>
+<p><span class="math inline">\(= \frac{P[C,+]}{P[+]}=\frac{0.0184}{0.1164}=0.1578\)</span></p>
+</section><section id="solution-2-bayes-theorem" class="slide level2"><h2>Solution 2: Bayes’ Theorem</h2>
+<ul>
+<li><p>Let <span class="math inline">\(C\)</span> and <span class="math inline">\(NC\)</span> be the cancer statuses and <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> the test results.</p></li>
+<li><p><span class="math inline">\(P[C]=0.02\)</span></p></li>
+<li><p><span class="math inline">\(P[NC]=1-0.02=0.98\)</span></p></li>
+<li><p><span class="math inline">\(P[+|C]=0.92\)</span></p></li>
+<li><p><span class="math inline">\(P[+|NC]=0.10\)</span></p></li>
+<li><p>What we want: <span class="math inline">\(P[C|+]\)</span> or, in other words, the proportion of positive test cases that are actually true positives</p></li>
+<li><p>So we want: <span class="math inline">\(P[C|+]=\frac{P[+|C]\times P[C]}{P[+]}\)</span></p></li>
+<li><p>We have <span class="math inline">\(P[+|C], P[C]\)</span>, but what about <span class="math inline">\(P[+]\)</span>?</p></li>
+</ul></section><section id="solution-2-bayes-theorem-1" class="slide level2"><h2>Solution 2: Bayes’ Theorem</h2>
+<ul>
+<li class="fragment"><p>So we want: <span class="math inline">\(P[C|+]=\frac{P[+|C]\times P[C]}{P[+]}\)</span></p></li>
+<li class="fragment"><p>We have <span class="math inline">\(P[+|C], P[C]\)</span>, but what about <span class="math inline">\(P[+]\)</span>?</p></li>
+<li class="fragment"><p>Law of total probability: <span class="math inline">\(P[+]=P[+|C]\times P[C]+(P[+|NC]\times P[NC]\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P[+]= (0.92\times0.02)+(0.10\times0.98)=0.0184+0.098=0.1164\)</span></p></li>
+<li class="fragment"><p>Now we can use Bayes’ theorem: <span class="math inline">\(P[C|+]=\frac{P[+|C]\times P[C]}{P[+]}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P[C|+]=\frac{0.92\times 0.02}{0.1164}=0.1580756\approx 0.158\)</span></p></li>
+</ul></section><section id="monty-hall" class="slide level2 dark-theme center"><h2>Monty Hall</h2>
 </section><section id="the-problem" class="slide level2"><h2>The problem:</h2>
 <ul>
 <li>You are a contestant in a show and you are presented with 3 doors. You must choose one door and you get to keep what’s behind it. Behind one of the doors is a fancy new car</li>
@@ -190,20 +244,23 @@ Bárbara D. Bitarello
 </ul>
 </div>
 <div id="tabset-1-2">
+<p><img data-src="images/clipboard-3941625862.png"></p>
 <p><a href="https://piazza.com/class/mekmad7xwqw14d/post/13" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/13</a></p>
 </div>
 </div>
 </div>
-
-<aside><div>
-<p>Last chance:<a href="https://piazza.com/class/mekmad7xwqw14d/post/13" class="uri">https://piazza.com/class/mekmad7xwqw14d/post/13</a></p>
-</div></aside></section><section id="key-points-to-understanding-the-monty-hall-puzzle" class="slide level2"><h2>Key points to understanding the Monty Hall puzzle:</h2>
+</section><section id="key-points-to-understanding-the-monty-hall-puzzle" class="slide level2"><h2>Key points to understanding the Monty Hall puzzle:</h2>
 <ul>
 <li>Two choices are 50-50 when you know nothing about them</li>
 <li>Monty helps us by “filtering” the bad choices on the other side.</li>
 <li>It’s a choice of a random guess and the “Champ door” that’s the best on the other side.</li>
 <li>In general, more information means you re-evaluate your choices.</li>
-</ul></section><section id="section" class="slide level2 center"><h2></h2>
+</ul></section><section id="solution" class="slide level2"><h2>Solution</h2>
+<div data-align="center">
+<iframe width="400" height="256" src="images/monty.mp4">
+</iframe>
+</div>
+</section><section id="section" class="slide level2 center"><h2></h2>
 <div class="r-fit-text">
 <p>The fatal flaw in the Monty Hall paradox is not taking Monty’s filtering into account, thinking the chances are the same before and after.</p>
 <p>But the goal isn’t to understand this puzzle — it’s to realize how subsequent actions &amp; information challenge previous decisions.</p>
