@@ -1271,28 +1271,28 @@
     "href": "slides/Estimation.html#another-sample-of-20-diamonds",
     "title": "4.1.Estimation with Uncertainty",
     "section": "Another sample of 20 diamonds",
-    "text": "Another sample of 20 diamonds\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) +\n  geom_point(shape = 18, show.legend = FALSE) + \n  scale_color_manual(values = asteroidcity1()) +\n  bb_theme() + \n  ylab(\"\") + ylab(\"\") +   theme(axis.text.x = element_blank(), axis.text.y = element_blank())\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n3\n1\n\n\ngold\n5\n1\n1\n\n\nred\n3\n4\n0"
+    "text": "Another sample of 20 diamonds\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) +\n  geom_point(shape = 18, show.legend = FALSE) + \n  scale_color_manual(values = asteroidcity1()) +\n  bb_theme() + \n  ylab(\"\") + ylab(\"\") +   \n  theme(axis.text.x = element_blank(), axis.text.y = element_blank())\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n3\n1\n\n\ngold\n5\n1\n1\n\n\nred\n3\n4\n0"
   },
   {
     "objectID": "slides/Estimation.html#aaaand-another",
     "href": "slides/Estimation.html#aaaand-another",
     "title": "4.1.Estimation with Uncertainty",
     "section": "Aaaand … another",
-    "text": "Aaaand … another\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) +\n  geom_point(shape = 18, show.legend = FALSE) + \n  scale_color_manual(values = asteroidcity1()) +\n  bb_theme() + \n  ylab(\"\") + xlab(\"\") +\n   theme(axis.text.x = element_blank(), axis.text.y = element_blank())\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n4\n1\n\n\ngold\n6\n2\n1\n\n\nred\n1\n3\n0"
+    "text": "Aaaand … another\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) +\n  geom_point(shape = 18, show.legend = FALSE) + \n  scale_color_manual(values = asteroidcity1()) +\n  bb_theme() + \n  ylab(\"\") + \n  xlab(\"\") +\n   theme(axis.text.x = element_blank(), axis.text.y = element_blank())\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n2\n4\n1\n\n\ngold\n6\n2\n1\n\n\nred\n1\n3\n0"
   },
   {
     "objectID": "slides/Estimation.html#one-last-sample-of-20-diamonds",
     "href": "slides/Estimation.html#one-last-sample-of-20-diamonds",
     "title": "4.1.Estimation with Uncertainty",
     "section": "One Last Sample of 20 Diamonds",
-    "text": "One Last Sample of 20 Diamonds\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) + geom_point(shape = 18,\n    show.legend = FALSE) + scale_color_manual(values = asteroidcity1()) + bb_theme() +\n    ylab(\"\") + xlab(\"\")\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n3\n2\n2\n\n\ngold\n5\n4\n1\n\n\nred\n0\n3\n0"
+    "text": "One Last Sample of 20 Diamonds\n\nCodestar.sample.size &lt;- 20\nstars.sample &lt;- sample_n(stars, size = star.sample.size, replace = FALSE)\nggplot(stars.sample, aes(x = x, y = y, color = color, size = size)) + geom_point(shape = 18,\n    show.legend = FALSE) + scale_color_manual(values = asteroidcity1()) + bb_theme() +\n    ylab(\"\") + xlab(\"\") + theme(axis.text.x = element_blank(), axis.text.y = element_blank())\n\n\n\n\n\n\n\nsmall\nmedium\nlarge\n\n\n\nblue\n3\n2\n2\n\n\ngold\n5\n4\n1\n\n\nred\n0\n3\n0"
   },
   {
     "objectID": "slides/Estimation.html#sampling-diamonds-lessons-learned",
     "href": "slides/Estimation.html#sampling-diamonds-lessons-learned",
     "title": "4.1.Estimation with Uncertainty",
     "section": "Sampling Diamonds: Lessons Learned",
-    "text": "Sampling Diamonds: Lessons Learned\n\n\n“Sampling is random”\nEstimates from sampling efforts varied and did not perfectly capture the true population values. I.e, there is sampling error involved.\n\nRandom DOES NOT mean that all outcomes are equally probable. E.g.:\n\n\nThere are no LARGE RED diamonds in the population so we never sampled a LARGE RED diamond.\nThe most common diamond color in the population is gold. Gold is often the most common color in a sample.\n\n\n\nThere are some great interactive simulators out there to help you grasp the sampling distribution, e.g.this one"
+    "text": "Sampling Diamonds: Lessons Learned\n\n\n“Sampling is random”\nEstimates from sampling efforts varied and did not perfectly capture the true population values. I.e, there is sampling error involved.\n\nRandom DOES NOT mean that all outcomes are equally probable. E.g.:\n\n\nThere are no LARGE RED diamonds in the population so we never sampled a LARGE RED diamond.\nThe most common diamond color in the population is gold. Gold is often the most common color in a sample.\n\n\n\nThere are some other great interactive simulators out there to help you grasp the sampling distribution. I share one later but there a"
   },
   {
     "objectID": "slides/Estimation.html#the-sampling-distribution",
@@ -1313,7 +1313,7 @@
     "href": "slides/Estimation.html#generating-a-sampling-distribution",
     "title": "4.1.Estimation with Uncertainty",
     "section": "Generating a sampling distribution",
-    "text": "Generating a sampling distribution\nIn three easy steps:\n\nTake a sample of size \\(n\\).\nCalculate the parameter estimates.\nRinse and repeat many times.\n\n\n\nAssumption: you can sample repeatedly from the population of interest and your sampling does not in iteself change the population of interest. When this is not possible to do, you can bootstrap! (which we did in Lab 6, more on this later)"
+    "text": "Generating a sampling distribution\nIn three easy steps:\n\nTake a sample of size \\(n\\).\nCalculate the parameter estimates.\nRinse and repeat many times.\n\n\n\nAssumption: you can sample repeatedly from the population of interest and your sampling does not in iteself change the population of interest. When this is not possible to do, you can bootstrap! (which we did in Lab 6, more on this later). In the meantime, check this out."
   },
   {
     "objectID": "slides/Estimation.html#example-the-sampling-distribution-of-diamonds",
@@ -1362,7 +1362,7 @@
     "href": "slides/Estimation.html#the-standard-error-definition",
     "title": "4.1.Estimation with Uncertainty",
     "section": "The Standard Error: Definition",
-    "text": "The Standard Error: Definition\nThe standard error reflects the difference between an estimate and the target parameter value. The standard error predicts the sampling error of the estimate."
+    "text": "The Standard Error: Definition\n\nThe standard error reflects the difference between an estimate and the target parameter value.\nThe standard error predicts the sampling error of the estimate."
   },
   {
     "objectID": "slides/Estimation.html#the-standard-error-of-the-mean-sem",
@@ -1383,7 +1383,7 @@
     "href": "slides/Estimation.html#human-gene-lengths",
     "title": "4.1.Estimation with Uncertainty",
     "section": "Human gene lengths",
-    "text": "Human gene lengths\n\nCodeggplot(human_genes, aes(x = size)) + geom_histogram(aes(y = after_stat(count/sum(count))),\n    bins = 60, color = \"lightgray\", fill = \"#006475\") + xlab(\"Gene Length (basepairs)\") +\n    ylab(\"Relative Frequency\") + annotate(\"text\", x = 10000, y = 0.04, label = \"mu==3511.5\",\n    parse = TRUE, size = 10) + annotate(\"text\", x = 10000, y = 0.03, label = \"sigma==2833.2\",\n    parse = TRUE, size = 10) + bb_theme()\n\n\nNote: parameters shown are for full dataset (n=20,290) but 26 genes with length &gt; 15,000 were omitted from this plot."
+    "text": "Human gene lengths\n\nCodeggplot(human_genes , aes(x=size)) + geom_histogram(aes(y=after_stat(count / sum(count))),bins=60, color=\"lightgray\", fill=\"#006475\") + xlab(\"Gene Length (basepairs)\") + \n  ylab(\"Relative Frequency\")+\n  annotate('text', x = 10000, y = 0.04, \n        label = \"mu==3511.5\",parse = TRUE,size=10) +\n  annotate('text', x = 10000, y = 0.03, \n        label = \"sigma==2833.2\",parse = TRUE,size=10)+\n  bb_theme()\n\n\nNote: parameters shown are for full dataset (n=20,290) but 26 genes with length &gt; 15,000 were omitted from this plot."
   },
   {
     "objectID": "slides/Estimation.html#sampling-distribution-from-textbook",

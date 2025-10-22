@@ -358,7 +358,8 @@ Bárbara D. Bitarello
 <span id="cb2-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
 <span id="cb2-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
 <span id="cb2-6"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
-<span id="cb2-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>   </span>
+<span id="cb2-8"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-2-plot-1.png" width="672" class="r-stretch"><div class="cell">
@@ -401,8 +402,9 @@ Bárbara D. Bitarello
 <span id="cb3-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
 <span id="cb3-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
 <span id="cb3-6"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
-<span id="cb3-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb3-8"><a></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb3-8"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-3-plot-1.png" width="672" class="r-stretch"><div class="cell">
@@ -443,7 +445,7 @@ Bárbara D. Bitarello
 <span id="cb4-2"><a></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb4-3"><a></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>,</span>
 <span id="cb4-4"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a></a>    <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-5"><a></a>    <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-4-plot-1.png" width="672" class="r-stretch"><div class="cell">
@@ -492,7 +494,7 @@ Bárbara D. Bitarello
 </ul>
 
 <aside><div>
-<p>There are some great interactive simulators out there to help you grasp the sampling distribution, e.g.<a href="https://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm">this one</a></p>
+<p>There are some other great interactive simulators out there to help you grasp the sampling distribution. I share one later but there a</p>
 </div></aside></section><section id="the-sampling-distribution" class="slide level2 dark-theme center"><h2>The sampling distribution!</h2>
 </section><section id="the-sampling-distribution-1" class="slide level2"><h2>The sampling distribution</h2>
 <ul>
@@ -510,7 +512,7 @@ Bárbara D. Bitarello
 </ol>
 
 <aside><div>
-<p>Assumption: you can sample repeatedly from the population of interest and your sampling does not in iteself change the population of interest. When this is not possible to do, you can bootstrap! (which we did in Lab 6, more on this later)</p>
+<p>Assumption: you can sample repeatedly from the population of interest and your sampling does not in iteself change the population of interest. When this is not possible to do, you can bootstrap! (which we did in Lab 6, more on this later). In the meantime, <a href="https://online.stat.psu.edu/stat555/node/119/">check this out.</a></p>
 </div></aside></section><section id="example-the-sampling-distribution-of-diamonds" class="slide level2"><h2>Example: The Sampling Distribution of Diamonds</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -694,13 +696,17 @@ Bárbara D. Bitarello
 <img data-src="Estimation_files/figure-revealjs/jointsampdist-1.png" width="960" class="r-stretch"></section><section id="how-does-variability-in-an-estimate-change-with-sample-size" class="slide level2 dark-theme center"><h2>How does variability in an estimate change with sample size?</h2>
 </section><section id="section" class="slide level2"><h2></h2>
 
-<img data-src="Estimation_files/figure-revealjs/variab-1.png" width="960" class="r-stretch"></section><section id="standard-error" class="slide level2 dark-theme center"><h2>Standard Error</h2>
+<img data-src="Estimation_files/figure-revealjs/variab-1.png" width="960" class="r-stretch"></section><section id="section-1" class="slide level2"><h2></h2>
+
+<img data-src="images/clipboard-3973341862.png" class="r-stretch"></section><section id="standard-error" class="slide level2 dark-theme center"><h2>Standard Error</h2>
 </section><section id="the-standard-error-definition" class="slide level2"><h2>The Standard Error: Definition</h2>
-<p>The standard error reflects the difference between an estimate and the target parameter value. The standard error predicts the sampling error of the estimate.</p>
-</section><section id="the-standard-error-of-the-mean-sem" class="slide level2"><h2>The Standard Error of the Mean (SEM)</h2>
 <ul>
-<li><p>Because we rarely know the population standard deviation,<span class="math inline">\(\sigma\)</span>, we cannot find the parameter <font color="#ad7237"> <span class="math inline">\(\sigma_{\bar{Y}}=\frac{\sigma_{Y}}{\sqrt{n}}\)</span></font> , the standard error of the <font color="#ad7237">population mean</font>.</p></li>
-<li><p>But, we can use the sample standard deviation, <span class="math inline">\(s\)</span>, to estimate <font color="#00a1b7"><span class="math inline">\(SEM_{\bar{Y}}=\frac{s}{\sqrt{n}}\)</span></font>, the standard error of the <font color="#00a1b7">sample mean</font>.</p></li>
+<li><p>The standard error reflects the difference between an estimate and the target parameter value.</p></li>
+<li><p>The standard error predicts the sampling error of the estimate.</p></li>
+</ul></section><section id="the-standard-error-of-the-mean-sem" class="slide level2"><h2>The Standard Error of the Mean (SEM)</h2>
+<ul>
+<li><p>Because we rarely know the population standard deviation,<font color="#ad7237"><span class="math inline">\(\sigma\)</span></font>, we cannot find the parameter <font color="#ad7237"> <span class="math inline">\(\sigma_{\bar{Y}}=\frac{\sigma_{Y}}{\sqrt{n}}\)</span></font> , the standard error of the <font color="#ad7237">population mean</font>.</p></li>
+<li><p>But, we can use the sample standard deviation, <font color="#00a1b7"><span class="math inline">\(s\)</span></font>, to estimate <font color="#00a1b7"><span class="math inline">\(SEM_{\bar{Y}}=\frac{s}{\sqrt{n}}\)</span></font>, the standard error of the <font color="#00a1b7">sample mean</font>.</p></li>
 </ul>
 <p>Also:</p>
 <div class="goal">
@@ -709,11 +715,13 @@ Bárbara D. Bitarello
 </section><section id="example-human-gene-lengths" class="slide level2 dark-theme center"><h2>Example: human gene lengths</h2>
 </section><section id="human-gene-lengths" class="slide level2"><h2>Human gene lengths</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(human_genes, <span class="fu">aes</span>(<span class="at">x =</span> size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count<span class="sc">/</span><span class="fu">sum</span>(count))),</span>
-<span id="cb6-2"><a></a>    <span class="at">bins =</span> <span class="dv">60</span>, <span class="at">color =</span> <span class="st">"lightgray"</span>, <span class="at">fill =</span> <span class="st">"#006475"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Gene Length (basepairs)"</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>    <span class="fu">ylab</span>(<span class="st">"Relative Frequency"</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.04</span>, <span class="at">label =</span> <span class="st">"mu==3511.5"</span>,</span>
-<span id="cb6-4"><a></a>    <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.03</span>, <span class="at">label =</span> <span class="st">"sigma==2833.2"</span>,</span>
-<span id="cb6-5"><a></a>    <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(human_genes , <span class="fu">aes</span>(<span class="at">x=</span>size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span><span class="fu">after_stat</span>(count <span class="sc">/</span> <span class="fu">sum</span>(count))),<span class="at">bins=</span><span class="dv">60</span>, <span class="at">color=</span><span class="st">"lightgray"</span>, <span class="at">fill=</span><span class="st">"#006475"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Gene Length (basepairs)"</span>) <span class="sc">+</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">ylab</span>(<span class="st">"Relative Frequency"</span>)<span class="sc">+</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.04</span>, </span>
+<span id="cb6-4"><a></a>        <span class="at">label =</span> <span class="st">"mu==3511.5"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.03</span>, </span>
+<span id="cb6-6"><a></a>        <span class="at">label =</span> <span class="st">"sigma==2833.2"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb6-7"><a></a>  <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/geneleng-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Note: parameters shown are for full dataset (n=20,290) but 26 genes with length &gt; 15,000 were omitted from this plot.</p></section><section id="sampling-distribution-from-textbook" class="slide level2"><h2>Sampling Distribution: from textbook</h2>
