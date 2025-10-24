@@ -511,62 +511,6 @@
     "text": "From: makeameme.org"
   },
   {
-    "objectID": "slides/Probability4.html#models",
-    "href": "slides/Probability4.html#models",
-    "title": "3.4.Probability",
-    "section": "Models",
-    "text": "Models\n\n“All models are wrong, but some are useful”. – George Box (1976), Journal of the American Statistical Association"
-  },
-  {
-    "objectID": "slides/Probability4.html#probabilities-as-predictions-from-a-model",
-    "href": "slides/Probability4.html#probabilities-as-predictions-from-a-model",
-    "title": "3.4.Probability",
-    "section": "Probabilities as predictions from a model",
-    "text": "Probabilities as predictions from a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nA model is a simplified description of a (usually complex) mechanism.\nLet’s try thinking of the probability of this future outcome (having a boy) as a prediction for this type of event based on a model.\nLet’s create a model!"
-  },
-  {
-    "objectID": "slides/Probability4.html#creatingdefining-the-model",
-    "href": "slides/Probability4.html#creatingdefining-the-model",
-    "title": "3.4.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\nEach ovum has an X chromosome; none have Y chromosomes: \\(p[X]=1; p[Y]=0\\)\n\nHalf the sperm have one X (no Y) and half have a Y (no X) chromosome: \\(p[X]=1/2;p[Y]=1/2\\)\n\nOnly one sperm will fertilize the ovum\nEvery sperm has an equal chance of doing so\nIf winning sperm has X chromosome (\\(p=1/2\\)), joined with another X from ovum (\\(p=1\\)) would result in biological sex as determined by XX as female.\nIf winning sperm has Y chromosome (\\(p=1/2\\)), joined with an X from ovum (\\(p=1\\)) will result in XY (male).\nMiscarriages are equally likely for XX or XY fetuses"
-  },
-  {
-    "objectID": "slides/Probability4.html#creatingdefining-the-model-1",
-    "href": "slides/Probability4.html#creatingdefining-the-model-1",
-    "title": "3.4.Probability",
-    "section": "Creating/defining the model",
-    "text": "Creating/defining the model\n\n\n\nIf you assume this model is true, it’s pretty easy to derive predictions, i.e, probability of XY baby is 50%.\n\n\n\n\n\n\n\n\ngamete\nchromosome\nprob\n\n\n\negg\nX\n1.0\n\n\negg\nY\n0.0\n\n\nsperm\nX\n0.5\n\n\nsperm\nY\n0.5"
-  },
-  {
-    "objectID": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
-    "href": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model",
-    "title": "3.4.Probability",
-    "section": "Same problem as before but based on data rather than a model",
-    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nAccording to statistics from around the world from 2011 (CIA), \\(51.7\\%\\) of babies born were boys\nWe don’t need to know why more boys were born\nWe don’t need to know why CIA keeps this kind of information (but it seems pretty “interesting”)\nThese proportions have been consistent across countries for quite a while"
-  },
-  {
-    "objectID": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
-    "href": "slides/Probability4.html#same-problem-as-before-but-based-on-data-rather-than-a-model-1",
-    "title": "3.4.Probability",
-    "section": "Same problem as before but based on data rather than a model",
-    "text": "Same problem as before but based on data rather than a model\n\nA woman wants to have a baby and wants to know the chance that her baby will be a boy.\n\n\nBased on these data, the probability of having a boy is \\(51.7\\%\\) (or \\(\\sim0.517\\))\nIn any particular set of 1,000 pregnancies, the number of XX babies might not be exactly 517, but in the long run, with enough births, it would approach this value."
-  },
-  {
-    "objectID": "slides/Probability4.html#case-study",
-    "href": "slides/Probability4.html#case-study",
-    "title": "3.4.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nGelman (1998) looked at the populations of countries and the age-adjusted, per capita incidence of kidney cancer (pretty rare cancer, about 15 cases per 100,000 US adults).\n\n\nResults: Countries with lowest per-capita incidence – these tended to be countries with small populations\nHypothesis: perhaps something to do with rural environments in those countries?"
-  },
-  {
-    "objectID": "slides/Probability4.html#case-study-1",
-    "href": "slides/Probability4.html#case-study-1",
-    "title": "3.4.Probability",
-    "section": "Case Study",
-    "text": "Case Study\n\nRandom variation can have a greater effect on “averages” within small groups than within small groups.\n\n\nLarger countries/populations: spread around the mean is lower.\nImagine an extreme example: a country with 1,000 people where:\n\n0 people have kidney cancer: lowest incidence possible\n1 person has kidney cancer: super high incidencence (100 per 100,000)\n\n\n\nLogical yet unintuitive"
-  },
-  {
     "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
     "href": "slides/DisplayingAndDescribingData2.html#last-time",
     "title": "2.2.Displaying & Describing Data",
