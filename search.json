@@ -2094,7 +2094,7 @@
     "href": "slides/Estimation3.html#standard-error-of-the-mean-sem",
     "title": "4.3.Estimation with Uncertainty",
     "section": "Standard Error of the mean (SEM)",
-    "text": "Standard Error of the mean (SEM)\nCompare:\nParameter:\n\\(\\sigma_{\\bar{X}}=\\frac{\\sigma}{n}=\\frac{2833.3}{\\sqrt{20}}\\approx 633.5\\)\nEstimates:\n\\(s_{bar{X}}=543\\)\nestimated form the sampling distribution\n\\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\nestimated from the first sample of 20 genes"
+    "text": "Standard Error of the mean (SEM)\nCompare:\nParameter:\n\\(\\sigma_{\\bar{X}}=\\frac{\\sigma}{n}=\\frac{2833.3}{\\sqrt{20}}\\approx 633.5\\)\nEstimates:\n\\(s_{\\bar{X}}=543\\)\nestimated form the sampling distribution\n\\(SEM_{\\bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\nestimated from the first sample of 20 genes"
   },
   {
     "objectID": "slides/Estimation3.html#simulators-to-help-you-grasp-this",
@@ -2115,7 +2115,7 @@
     "href": "slides/Estimation3.html#how-we-report-sem",
     "title": "4.3.Estimation with Uncertainty",
     "section": "How we report SEM",
-    "text": "How we report SEM\n\n\\(\\bar{X}\\pm SE\\)\nIn our previous example, our first sample had \\(\\bar{X}=2533.9\\) and \\(s_{X}=1517.998\\), so \\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\n\nSo we would report \\(2533.9 \\pm339.4 \\text{ (SE)}\\). Later we will also see how the \\(SEM\\) is used in plots (error bars)."
+    "text": "How we report SEM\n\n\\(\\bar{X}\\pm SE\\)\nIn our previous example, our first sample had \\(\\bar{X}=2533.9\\) and \\(s_{X}=1517.998\\), so \\(SEM_{\\bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\n\nSo we would report \\(2533.9 \\pm339.4 \\text{ (SEM)}\\). Later we will also see how the \\(SEM\\) is used in plots (error bars)."
   },
   {
     "objectID": "slides/Estimation3.html#standard-error---summary",
@@ -3552,7 +3552,7 @@
     "href": "schedule.html#sec-PS",
     "title": "Schedule",
     "section": "3 Problem sets",
-    "text": "3 Problem sets\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\nType\n\n\n\n\n1\nCh. 1-3\nFri 10/3\nEasy/Medium\nFormative\n\n\n2\nProbability\nWed 10/22\nMedium/Hard\nFormative\n\n\n3\nEstimation & Hypothesis Testing\nSun 11/9\nMedium/Hard\nFormative\n\n\n4\n\nT 11/25\nMedium/Hard\nFormative\n\n\n5\n\nW 12/10\nMedium/Hard\nFormative",
+    "text": "3 Problem sets\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\nType\n\n\n\n\n1\nCh. 1-3\nFri 10/3\nEasy/Medium\nFormative\n\n\n2\nProbability\nWed 10/22\nMedium/Hard\nFormative\n\n\n3\nEstimation & Hypothesis Testing\nThu 11/13\nMedium/Hard\nFormative\n\n\n4\n\nT 11/25\nMedium/Hard\nFormative\n\n\n5\n\nW 12/10\nMedium/Hard\nFormative",
     "crumbs": [
       "Schedule"
     ]
@@ -3562,7 +3562,7 @@
     "href": "schedule.html#sec-LA",
     "title": "Schedule",
     "section": "4 Coding Assignments",
-    "text": "4 Coding Assignments\n\n\n\nCoding Assignment\nTopics\nDue Date\nDifficulty\nType\n\n\n\n\nCoding Assignment 1\nTBD\nSun 11/2\nHard\nSummative\n\n\nCoding Assignment 2\nTBD\nFri 12/05\nHard\nSummative",
+    "text": "4 Coding Assignments\n\n\n\nCoding Assignment\nTopics\nDue Date\nDifficulty\nType\n\n\n\n\nCoding Assignment 1\nTBD\nFri 11/7\nHard\nSummative\n\n\nCoding Assignment 2\nTBD\nFri 12/05\nHard\nSummative",
     "crumbs": [
       "Schedule"
     ]
