@@ -1856,7 +1856,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nEstimation\n\n\n4.3.Estimation with Uncertainty\n\n\nWed, Oct 29\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -1924,231 +1924,231 @@
   {
     "objectID": "slides/Estimation3.html#outline",
     "href": "slides/Estimation3.html#outline",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Outline",
     "text": "Outline\n\nGo over the importance of the sampling distribution (again)\nInteractive activity to help with this\nPractice SEM calculations"
   },
   {
     "objectID": "slides/Estimation3.html#big-picture",
     "href": "slides/Estimation3.html#big-picture",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Big Picture",
     "text": "Big Picture\nTwo key goals of inferential statistics:\n\nestimate the characteristics of a population of interest based on a limited sample\nhypothesis testing"
   },
   {
     "objectID": "slides/Estimation3.html#inferential-statistics",
     "href": "slides/Estimation3.html#inferential-statistics",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Inferential Statistics",
     "text": "Inferential Statistics\n\n\nFrom: https://www.geeksforgeeks.org/data-science/what-is-inferential-statistics/"
   },
   {
     "objectID": "slides/Estimation3.html#inferential-statistics-1",
     "href": "slides/Estimation3.html#inferential-statistics-1",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Inferential Statistics",
     "text": "Inferential Statistics\nQ: Why do we need this?\nA:\n\nTo learn about the whole population.\nTest claims or hypotheses.\nMake predictions with statistical models.\nCalculate confidence intervals and p-values to measure uncertainty."
   },
   {
     "objectID": "slides/Estimation3.html#so-there-is-a-way-to-deal-with-this-uncertainty",
     "href": "slides/Estimation3.html#so-there-is-a-way-to-deal-with-this-uncertainty",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "So there IS a way to deal with this uncertainty?",
     "text": "So there IS a way to deal with this uncertainty?\nQ: How??\n\nA: yes, young padawans. We use the sampling distribution – I know, panic not"
   },
   {
     "objectID": "slides/Estimation3.html#the-sampling-distribution-is-at-the-heart-of-statistics",
     "href": "slides/Estimation3.html#the-sampling-distribution-is-at-the-heart-of-statistics",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "The sampling distribution is at the heart of statistics",
     "text": "The sampling distribution is at the heart of statistics\nQ: But why do we need the sampling distribution?\nA:\n\n\nFrom: https://medium.com/@nikhil_garg/a-compilation-of-comics-explaining-statistics-data-science-and-machine-learning-eeefbae91277"
   },
   {
     "objectID": "slides/Estimation3.html#the-sampling-distribution",
     "href": "slides/Estimation3.html#the-sampling-distribution",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "The Sampling Distribution",
     "text": "The Sampling Distribution\nLet’s start from the very beginning. Consider the roll of a six-sided die.\nThis probability distribution shows all possible outcomes of a single die roll and how likely they are. I.e., in the long term, if you roll the die MANY times, you would expect equal proportions of each result."
   },
   {
     "objectID": "slides/Estimation3.html#what-about-a-streak",
     "href": "slides/Estimation3.html#what-about-a-streak",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "What about a streak?",
     "text": "What about a streak?\n\n\nFrom: https://www.treelobsters.com/2009/08/76-dumb-luck.html\n\nThe sampling distribution can help us here."
   },
   {
     "objectID": "slides/Estimation3.html#section",
     "href": "slides/Estimation3.html#section",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "",
     "text": "The sampling distribution of a statistic is the distribution of that statistic, considered as a random variable, when derived from a random sample of size \\(n\\) .\nIt may be considered as the distribution of the statistic for all possible samples from the same population of a given sample size."
   },
   {
     "objectID": "slides/Estimation3.html#what-does-the-sampling-distribution-depend-on",
     "href": "slides/Estimation3.html#what-does-the-sampling-distribution-depend-on",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "What does the sampling distribution depend on?",
     "text": "What does the sampling distribution depend on?\n\nthe underlying distribution of the population (in the coin example, uniform)\nthe statistic being considered (say, the number of sixes expected if I toss the coin a number of times)\nthe sampling procedure employed\n\nthe sample size used. (in this example, how many heads)"
   },
   {
     "objectID": "slides/Estimation3.html#example-possible-outcomes-of-tossing-a-fair-coin-20-times",
     "href": "slides/Estimation3.html#example-possible-outcomes-of-tossing-a-fair-coin-20-times",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Example: possible outcomes of tossing a fair coin 20 times",
     "text": "Example: possible outcomes of tossing a fair coin 20 times\nOne possible outcome leads to this histogram:"
   },
   {
     "objectID": "slides/Estimation3.html#repeat-this-process-10-times",
     "href": "slides/Estimation3.html#repeat-this-process-10-times",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Repeat this process 10 times",
     "text": "Repeat this process 10 times"
   },
   {
     "objectID": "slides/Estimation3.html#times",
     "href": "slides/Estimation3.html#times",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "100 times",
     "text": "100 times"
   },
   {
     "objectID": "slides/Estimation3.html#section-1",
     "href": "slides/Estimation3.html#section-1",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "10000",
     "text": "10000"
   },
   {
     "objectID": "slides/Estimation3.html#that-was-a-sampling-distribution-of-a-proportion",
     "href": "slides/Estimation3.html#that-was-a-sampling-distribution-of-a-proportion",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "That was a sampling distribution (of a proportion)",
     "text": "That was a sampling distribution (of a proportion)"
   },
   {
     "objectID": "slides/Estimation3.html#attention",
     "href": "slides/Estimation3.html#attention",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Attention!",
     "text": "Attention!\n\nPopulation distribution\n\\[\\neq\\]\nSample distribution\n\\[\\neq\\]\nSamplING distribution"
   },
   {
     "objectID": "slides/Estimation3.html#population-distribution",
     "href": "slides/Estimation3.html#population-distribution",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Population distribution",
     "text": "Population distribution\nIn our previous example, we were interested in the lengths of human genes.\n\n\nPopulation distribution: contains all values (all human gene lengths). Here is the histogram"
   },
   {
     "objectID": "slides/Estimation3.html#sample-distribution-of-gene-lengths",
     "href": "slides/Estimation3.html#sample-distribution-of-gene-lengths",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "SamPLE distribution of gene lengths",
     "text": "SamPLE distribution of gene lengths\nSay, from one sample of 20 genes.\n\nthe samPLE distribution will be based on the individual values of the individuals from my sample (in this case, 20 genes, sampled without replacement)"
   },
   {
     "objectID": "slides/Estimation3.html#another-20-genes-sample",
     "href": "slides/Estimation3.html#another-20-genes-sample",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Another 20 genes sample",
     "text": "Another 20 genes sample"
   },
   {
     "objectID": "slides/Estimation3.html#another",
     "href": "slides/Estimation3.html#another",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Another",
     "text": "Another"
   },
   {
     "objectID": "slides/Estimation3.html#sampling-distribution",
     "href": "slides/Estimation3.html#sampling-distribution",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "SampLING distribution",
     "text": "SampLING distribution"
   },
   {
     "objectID": "slides/Estimation3.html#sampling-distribution-1",
     "href": "slides/Estimation3.html#sampling-distribution-1",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "SampLING distribution",
     "text": "SampLING distribution\nIn this case, the samplING distribution of mean gene lengths.\nWe can start building this by collecting the individual samPLE means we calculated before: \\(\\bar{X}=\\{3110.3,2412,2911.45,...\\}\\), and making a histogram of \\(\\bar{X}\\)s."
   },
   {
     "objectID": "slides/Estimation3.html#increasing-number-of-repetitions",
     "href": "slides/Estimation3.html#increasing-number-of-repetitions",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Increasing number of repetitions…",
     "text": "Increasing number of repetitions…\nIf instead of taking 3 independent samples of 20 genes we take, say, 100,000, we see a sampling distribution"
   },
   {
     "objectID": "slides/Estimation3.html#compare",
     "href": "slides/Estimation3.html#compare",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Compare",
     "text": "Compare\n\nGrand mean of \\(\\bar{X}\\) approaches population mean \\(\\mu\\)"
   },
   {
     "objectID": "slides/Estimation3.html#standard-error-of-the-mean-sem",
     "href": "slides/Estimation3.html#standard-error-of-the-mean-sem",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Standard Error of the mean (SEM)",
     "text": "Standard Error of the mean (SEM)\nCompare:\nParameter:\n\\(\\sigma_{\\bar{X}}=\\frac{\\sigma}{n}=\\frac{2833.3}{\\sqrt{20}}\\approx 633.5\\)\nEstimates:\n\\(s_{bar{X}}=543\\)\nestimated form the sampling distribution\n\\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\nestimated from the first sample of 20 genes"
   },
   {
     "objectID": "slides/Estimation3.html#simulators-to-help-you-grasp-this",
     "href": "slides/Estimation3.html#simulators-to-help-you-grasp-this",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Simulators to help you grasp this:",
     "text": "Simulators to help you grasp this:\n\nhttp://shiny.calpoly.sh/Sampling_Distribution/\nhttps://shiny.abdn.ac.uk/Stats/apps/app_sampling/\nhttps://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm"
   },
   {
     "objectID": "slides/Estimation3.html#se-decreases-with-sample-size",
     "href": "slides/Estimation3.html#se-decreases-with-sample-size",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "SE Decreases with Sample Size",
     "text": "SE Decreases with Sample Size"
   },
   {
     "objectID": "slides/Estimation3.html#how-we-report-sem",
     "href": "slides/Estimation3.html#how-we-report-sem",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "How we report SEM",
     "text": "How we report SEM\n\n\\(\\bar{X}\\pm SE\\)\nIn our previous example, our first sample had \\(\\bar{X}=2533.9\\) and \\(s_{X}=1517.998\\), so \\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\n\nSo we would report \\(2533.9 \\pm339.4 \\text{ (SE)}\\). Later we will also see how the \\(SEM\\) is used in plots (error bars)."
   },
   {
     "objectID": "slides/Estimation3.html#standard-error---summary",
     "href": "slides/Estimation3.html#standard-error---summary",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Standard error - Summary",
     "text": "Standard error - Summary\n\n\nEstimates with smaller standard errors are more precise\nThe smaller the sampling error, the less uncertainty there is about the target parameter in the population (“out there”).\nYou can calculate the standard error for any estimate, not just the mean.\nThe SE of the sample mean if sometimes referred to as SE, but this is ambiguous - use SEM instead of SE\nFor huge sample sizes, the SEM is always tiny, even if the data have considerable spread (SD).\nSmall samples underestimate the SD of the population\nBoth SD and SEM are expressed in the same unit as the data"
   },
   {
     "objectID": "slides/Estimation3.html#practice-question",
     "href": "slides/Estimation3.html#practice-question",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Practice question",
     "text": "Practice question\nEstimate the standard error of the mean for a sample of size 16 that has a standard deviation of 25:\n\n0.3125\n1.25\n1.5625\n6.25"
   },
   {
     "objectID": "slides/Estimation3.html#confidence-interval-plausible-values-of-a-parameter",
     "href": "slides/Estimation3.html#confidence-interval-plausible-values-of-a-parameter",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Confidence Interval: Plausible values of a parameter",
     "text": "Confidence Interval: Plausible values of a parameter"
   },
   {
     "objectID": "slides/Estimation3.html#recap",
     "href": "slides/Estimation3.html#recap",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "Recap",
     "text": "Recap\n\n\n\nA point estimate is any single number that is calculated from a “parameter space” and serves as your “best guess” or “best estimate” of an unknown population parameter\nYour parameter is constant (usually denoted by a greek letter)"
   },
   {
     "objectID": "slides/Estimation3.html#thats-all-for-today",
     "href": "slides/Estimation3.html#thats-all-for-today",
-    "title": "4.2.Estimation with Uncertainty",
+    "title": "4.3.Estimation with Uncertainty",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
