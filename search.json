@@ -1512,8 +1512,22 @@
     "text": "Recap question\nWhich of the following describes the sampling distribution of an estimate?\nA. The set of all values you get in a given sample from a population.\nB. The set of all values you might get when you sample a population.\nC. The set of all values in a given population.\nD. The set of all values in a given sample."
   },
   {
+    "objectID": "slides/Estimation2.html#recap-question-1",
+    "href": "slides/Estimation2.html#recap-question-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Recap Question",
+    "text": "Recap Question\nWhich of the following describes the sampling distribution of an estimate?\nA. The set of all values you get in a given sample from a population.\nB. The set of all values you might get when you sample a population.\nC. The set of all values in a given population.\nD. The set of all values in a given sample."
+  },
+  {
     "objectID": "slides/Estimation2.html#recap-question-2",
     "href": "slides/Estimation2.html#recap-question-2",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Recap Question 2",
+    "text": "Recap Question 2\nThe standard deviation of an estimate’s sampling distribution is called which of the following?\nA. Standard distribution.\nB. Standard error.\nC. Standard probability distribution.\nD. Standard variation."
+  },
+  {
+    "objectID": "slides/Estimation2.html#recap-question-2-1",
+    "href": "slides/Estimation2.html#recap-question-2-1",
     "title": "4.2.Estimation with Uncertainty",
     "section": "Recap Question 2",
     "text": "Recap Question 2\nThe standard deviation of an estimate’s sampling distribution is called which of the following?\nA. Standard distribution.\nB. Standard error.\nC. Standard probability distribution.\nD. Standard variation."
@@ -1537,14 +1551,14 @@
     "href": "slides/Estimation2.html#the-standard-error-definition",
     "title": "4.2.Estimation with Uncertainty",
     "section": "The Standard Error: Definition",
-    "text": "The Standard Error: Definition\n\nThe standard error reflects the difference between an estimate and the target parameter value.\nThe standard error predicts the sampling error of the estimate.\nThe standard error of an estimate is the standard deviation of its sampling distribution."
+    "text": "The Standard Error: Definition\n\nThe standard error reflects the difference between an estimate and the target parameter value.\nThe standard error predicts the sampling error of the estimate.\nThe standard error of an estimate is the standard deviation of its sampling distribution.\nWe could in principle calculate SE for any summary statistic but we will focus on the most common – the standard error of the mean."
   },
   {
     "objectID": "slides/Estimation2.html#the-standard-error-of-the-mean-sem",
     "href": "slides/Estimation2.html#the-standard-error-of-the-mean-sem",
     "title": "4.2.Estimation with Uncertainty",
     "section": "The Standard Error of the Mean (SEM)",
-    "text": "The Standard Error of the Mean (SEM)\nThe SEM quantifies how precisely you know the population mean.\n\nBecause we rarely know the population standard deviation,\\(\\sigma\\), we cannot find the parameter  \\(\\sigma_{\\bar{Y}}=\\frac{\\sigma_{Y}}{\\sqrt{n}}\\) , the standard error of the population mean.\nBut, we can use the sample standard deviation, \\(s\\), to estimate \\(SEM_{\\bar{Y}}=\\frac{s}{\\sqrt{n}}\\), the standard error of the sample mean.\n\n\n\nNote we use SEM instead of SE to avoid ambiguities. Standard errors can be calculated for other statistics besides the mean."
+    "text": "The Standard Error of the Mean (SEM)\nThe SEM quantifies how precisely you know the population mean.\n\nBecause we rarely know the population standard deviation,\\(\\sigma\\), we cannot find the parameter  \\(\\sigma_{\\bar{Y}}=\\frac{\\sigma}{\\sqrt{n}}\\) , the standard error of the population mean.\nBut, we can use the sample standard deviation, \\(s\\), to estimate \\(SEM_{\\bar{Y}}=\\frac{s}{\\sqrt{n}}\\), the standard error of the sample mean.\nWe can also estimate \\(SEM_{\\bar{Y}}\\) by taking the standard deviaton of the sampling distribution of sample means of a given size.\n\n\n\nNote we use SEM instead of SE to avoid ambiguities. Standard errors can be calculated for other statistics besides the mean."
   },
   {
     "objectID": "slides/Estimation2.html#example-human-gene-lengths",
@@ -1565,35 +1579,63 @@
     "href": "slides/Estimation2.html#a-random-sample-of-five-genes",
     "title": "4.2.Estimation with Uncertainty",
     "section": "A random sample of five genes",
-    "text": "A random sample of five genes\n\n\n\n\n\n\ngene\nsize\nname\ndescription\n\n\n\nENSG00000138032.20\n3877\nPPM1B\nprotein\n\n\nENSG00000141699.10\n3759\nRETREG3\nreticulophagy\n\n\nENSG00000136628.17\n5014\nEPRS\nglutamyl-prolyl-tRNA\n\n\nENSG00000142484.6\n708\nTM4SF5\ntransmembrane\n\n\nENSG00000151176.7\n4800\nPLBD2\nphospholipase\n\n\n\n\n\n\n# A tibble: 1 × 2\n   Mean    SD\n  &lt;dbl&gt; &lt;dbl&gt;\n1 3632. 1725.\n\n\nSo now we have the estimates \\(\\bar{Y}=3632\\) and \\(s = 1725\\)."
+    "text": "A random sample of five genes\n\n## # A tibble: 5 × 1\n##    size\n##   &lt;dbl&gt;\n## 1  3877\n## 2  3759\n## 3  5014\n## 4   708\n## 5  4800"
+  },
+  {
+    "objectID": "slides/Estimation2.html#a-random-sample-of-five-genes-1",
+    "href": "slides/Estimation2.html#a-random-sample-of-five-genes-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "A random sample of five genes",
+    "text": "A random sample of five genes\nSummarising my sample of \\(n=5\\):\n\n\n\n\n\n\nMean\nSD\n\n\n3631.6\n1724.824"
   },
   {
     "objectID": "slides/Estimation2.html#another-random-sample-of-five-genes",
     "href": "slides/Estimation2.html#another-random-sample-of-five-genes",
     "title": "4.2.Estimation with Uncertainty",
     "section": "Another random sample of five genes",
-    "text": "Another random sample of five genes\n\n\n# A tibble: 5 × 4\n  gene                size name   description\n  &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;      \n1 ENSG00000188706.12  4569 ZDHHC9 zinc       \n2 ENSG00000067836.12  1735 ROGDI  rogdi      \n3 ENSG00000132698.14  1110 RAB25  RAB25,     \n4 ENSG00000285443.1   2493 ZYX    zyxin      \n5 ENSG00000104774.12  3184 MAN2B1 mannosidase\n\n\n# A tibble: 1 × 2\n   Mean    SD\n  &lt;dbl&gt; &lt;dbl&gt;\n1 2618. 1341.\n\n\nSo now we have the estimates \\(\\bar{Y} = 2618\\) and \\(s = 1341\\)."
+    "text": "Another random sample of five genes\nSummarising my other sample of \\(n=5\\):\n\n\n\n\n\n\nsize\n\n\n\n4569\n\n\n1735\n\n\n1110\n\n\n2493\n\n\n3184\n\n\n\n\n\n\n\n\n\n\nMean_length\nSD_length\n\n\n2618.2\n1341.281"
   },
   {
-    "objectID": "slides/Estimation2.html#many-samples-of-five-5-genes",
-    "href": "slides/Estimation2.html#many-samples-of-five-5-genes",
+    "objectID": "slides/Estimation2.html#i-can-start-combining-those-different-estimates",
+    "href": "slides/Estimation2.html#i-can-start-combining-those-different-estimates",
     "title": "4.2.Estimation with Uncertainty",
-    "section": "Many samples of five 5 genes",
-    "text": "Many samples of five 5 genes\n\n\n\n\n\n\n\n\n\n\nMore formally, the mean of the means is “grand mean”, not the “mean mean” nor the “mean of means” (my favorite). (-:"
+    "section": "I can start combining those different estimates",
+    "text": "I can start combining those different estimates\n\n\n\n\n\n\nMean_length\nSD_length\n\n\n\n3631.6\n1724.824\n\n\n2618.2\n1341.281"
+  },
+  {
+    "objectID": "slides/Estimation2.html#ten-samples-of-five-5-genes",
+    "href": "slides/Estimation2.html#ten-samples-of-five-5-genes",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Ten samples of five 5 genes",
+    "text": "Ten samples of five 5 genes\n\n\n\n\n\n\nreplicate\nmean_length\nsd_length\n\n\n\n1\n3585.2\n2530.974\n\n\n2\n2405.4\n1223.324\n\n\n3\n2506.8\n1793.417\n\n\n4\n3943.8\n2151.380\n\n\n5\n4638.6\n1323.007\n\n\n6\n3704.6\n3210.567\n\n\n7\n3576.4\n1627.570\n\n\n8\n6495.8\n4187.037\n\n\n9\n4309.0\n3429.975\n\n\n10\n4077.6\n2471.615\n\n\n\n\n\n\n\n\n\n\n\n\nmean_of_means\nsd_of_means\nSEM\nReal_SEM\n\n\n3924.32\n2394.89\n1149.66\n2438.804\n\n\n\n\n\n\n\nI will make the code for these simulations available"
+  },
+  {
+    "objectID": "slides/Estimation2.html#many",
+    "href": "slides/Estimation2.html#many",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Many",
+    "text": "Many\nSampling Distribution\n\n\n\n\n\n\n\n\n\n\nMore formally, the “mean of the means” is the “grand mean”, not the “mean of means” (my favorite). (-:"
   },
   {
     "objectID": "slides/Estimation2.html#compare-the-pop-the-sample-dist",
     "href": "slides/Estimation2.html#compare-the-pop-the-sample-dist",
     "title": "4.2.Estimation with Uncertainty",
     "section": "Compare the pop & the sample dist",
-    "text": "Compare the pop & the sample dist\n\n\nMean parameter estimates of a sampling distribution should equal population parameters.\nThe width of a population exceeds that of its sampling distribution."
+    "text": "Compare the pop & the sample dist\n\n\n\nMean parameter estimates of a sampling distribution should equal population parameters."
+  },
+  {
+    "objectID": "slides/Estimation2.html#compare-the-pop-the-sample-dist-1",
+    "href": "slides/Estimation2.html#compare-the-pop-the-sample-dist-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Compare the pop & the sample dist",
+    "text": "Compare the pop & the sample dist\n\n\n\nThe width (standard deviation) of a population (\\(\\sigma=2833.3) exceeds that of its sampling distribution (\\)s_{}=1277.22)"
   },
   {
     "objectID": "slides/Estimation2.html#the-standard-error-the-sampling-distribution",
     "href": "slides/Estimation2.html#the-standard-error-the-sampling-distribution",
     "title": "4.2.Estimation with Uncertainty",
     "section": "The Standard Error & The Sampling Distribution",
-    "text": "The Standard Error & The Sampling Distribution\n\nThe standard error is the standard deviation of the sampling distribution.\nThe standard deviation of this distribution is \\(1277.22\\) basepairs"
+    "text": "The Standard Error & The Sampling Distribution\n\nThe standard error is the standard deviation of the sampling distribution\nThe standard deviation of this distribution is \\(1277.22\\) basepairs\nSo \\(1277.22\\) is our estimate for the standard error of the mean based on our sampling distribution"
   },
   {
     "objectID": "slides/Estimation2.html#the-standard-error-the-sampling-distribution-1",
@@ -1645,18 +1687,11 @@
     "text": "Small Samples, Large Uncertainty\n\nUncertainty increases as sample size decreases.\nTherefore, extreme values are often associated with small sample size.\n\n\nTreat simple summary statistics with skepticism.\nBe sure to consider uncertainty before being misled by exceptional values."
   },
   {
-    "objectID": "slides/Estimation2.html#confidence-interval-plausible-values-of-a-parameter",
-    "href": "slides/Estimation2.html#confidence-interval-plausible-values-of-a-parameter",
+    "objectID": "slides/Estimation2.html#simulators-to-help-you-grasp-this",
+    "href": "slides/Estimation2.html#simulators-to-help-you-grasp-this",
     "title": "4.2.Estimation with Uncertainty",
-    "section": "Confidence Interval: Plausible values of a parameter",
-    "text": "Confidence Interval: Plausible values of a parameter"
-  },
-  {
-    "objectID": "slides/Estimation2.html#recap",
-    "href": "slides/Estimation2.html#recap",
-    "title": "4.2.Estimation with Uncertainty",
-    "section": "Recap",
-    "text": "Recap\n\nA point estimate is any single number that is calculated from a “parameter space” and serves as your “best guess” or “best estimate” of an unknown population parameter\nYour parameter is constant (usually denoted by a greek letter)"
+    "section": "Simulators to help you grasp this:",
+    "text": "Simulators to help you grasp this:\n\nhttps://shiny.abdn.ac.uk/Stats/apps/app_sampling/\nhttps://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm\nhttp://shiny.calpoly.sh/Sampling_Distribution/"
   },
   {
     "objectID": "slides/Estimation2.html#thats-all-for-today",
@@ -1666,148 +1701,11 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOL B215: Biostatistics with R",
+    "objectID": "psets.html",
+    "href": "psets.html",
+    "title": "Problem Sets",
     "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#general-information",
-    "href": "index.html#general-information",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "",
-    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#getting-help",
-    "href": "index.html#getting-help",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Getting help",
-    "text": "Getting help\nThe preferred methods to get help in this course are office hours for content questions (see the Schedule) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgments",
-    "href": "index.html#acknowledgments",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, Rstudio, and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "BIOL B215: Biostatistics with R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "rlearn.html",
-    "href": "rlearn.html",
-    "title": "Learning R",
-    "section": "",
-    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-help",
-    "href": "rlearn.html#r-help",
-    "title": "Learning R",
-    "section": "1 Getting help with R",
-    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#free-online-books",
-    "href": "rlearn.html#free-online-books",
-    "title": "Learning R",
-    "section": "2 Free Online Books",
-    "text": "2 Free Online Books\n\n“R Graphic Cookbook”\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#r-vids",
-    "href": "rlearn.html#r-vids",
-    "title": "Learning R",
-    "section": "3 Videos",
-    "text": "3 Videos\n\nOverview of R Markdown: a crash course\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nR markdown Gallery: Check out the range of outputs and formats you can create using R Markdown.\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#tutorials-simulations",
-    "href": "rlearn.html#tutorials-simulations",
-    "title": "Learning R",
-    "section": "4 Tutorials & Simulations",
-    "text": "4 Tutorials & Simulations\n\nr-statistics.co, by Selva Prabhakaran - includes very good section on ggplot!\nFrom your textbook\nQuick-R\nRstudio Education\nPosit Cloud Recipes",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "rlearn.html#freely-available-biological-datasets",
-    "href": "rlearn.html#freely-available-biological-datasets",
-    "title": "Learning R",
-    "section": "5 Freely Available (Biological) Datasets",
-    "text": "5 Freely Available (Biological) Datasets\nI will keep adding stuff here, but here are some good places to search.\n\nDryad - lots of scientific papers make their datasets available here.\nZenodo - lots of scientific papers make their datasets available here.\nNational Library of Medicine Dataset Catalog - great resource from the NIH, points to datasets elsewher elike zenodo, dryad, figshare, etc.\nre3data\nFigShare - lots of scientific papers make their datasets available here.\nWold Population Review - not focused on biology but very cool nevertheless. There are subsections that have biological datasets though like the one focusing on health, for example.",
-    "crumbs": [
-      "R resources"
-    ]
-  },
-  {
-    "objectID": "handouts/Handout1.html",
-    "href": "handouts/Handout1.html",
-    "title": "Statistics and Samples",
-    "section": "",
-    "text": "Understand the major goal of statistics.\nDistinguish between a sample and a population.\nDistinguish between an estimate and a parameter.\nIdentify why estimates from samples may deviate from the parameters of populations.\nIdentify the properties of a good sample.\nDescribe the differences between observational and experimental studies.\nIdentify whether a variable is numeric or categorical (and subtypes).\nDistinguish between sampling bias and sampling error.\nDistinguish between accuracy and precision and how these terms relate to sampling bias and sampling error.\nUnderstand the distinction between the term “population” in a statistical and a biological context.\nDistinguish between correlation and causation."
-  },
-  {
-    "objectID": "handouts/Handout1.html#references",
-    "href": "handouts/Handout1.html#references",
-    "title": "Statistics and Samples",
-    "section": "References",
-    "text": "References\nBrandvain, Y. (2022). Applied Biostats. Bookdown. https://bookdown.org/ybrandvain/Applied_Biostats_2022/\nWhitlock, M., & Schluter, D. (2020). The analysis of biological data. Macmillan. https://whitlockschluter3e.zoology.ubc.ca/"
+    "text": "Topic\nDue date (at 11:59 PM)\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "list_of_datacamp_assignments.html",
@@ -1880,11 +1778,379 @@
     "text": "Sampling in R\n\nIntroduction to Sampling"
   },
   {
-    "objectID": "psets.html",
-    "href": "psets.html",
-    "title": "Problem Sets",
+    "objectID": "handouts/Handout1.html",
+    "href": "handouts/Handout1.html",
+    "title": "Statistics and Samples",
     "section": "",
-    "text": "Topic\nDue date (at 11:59 PM)\n\n\n\n\n\nNo matching items"
+    "text": "Understand the major goal of statistics.\nDistinguish between a sample and a population.\nDistinguish between an estimate and a parameter.\nIdentify why estimates from samples may deviate from the parameters of populations.\nIdentify the properties of a good sample.\nDescribe the differences between observational and experimental studies.\nIdentify whether a variable is numeric or categorical (and subtypes).\nDistinguish between sampling bias and sampling error.\nDistinguish between accuracy and precision and how these terms relate to sampling bias and sampling error.\nUnderstand the distinction between the term “population” in a statistical and a biological context.\nDistinguish between correlation and causation."
+  },
+  {
+    "objectID": "handouts/Handout1.html#references",
+    "href": "handouts/Handout1.html#references",
+    "title": "Statistics and Samples",
+    "section": "References",
+    "text": "References\nBrandvain, Y. (2022). Applied Biostats. Bookdown. https://bookdown.org/ybrandvain/Applied_Biostats_2022/\nWhitlock, M., & Schluter, D. (2020). The analysis of biological data. Macmillan. https://whitlockschluter3e.zoology.ubc.ca/"
+  },
+  {
+    "objectID": "rlearn.html",
+    "href": "rlearn.html",
+    "title": "Learning R",
+    "section": "",
+    "text": "Updated often. If you’re an enrolled students and would like to contribute content here, please open a thread on Piazza under “Misc” and say you’d like to share a useful link.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#r-help",
+    "href": "rlearn.html#r-help",
+    "title": "Learning R",
+    "section": "1 Getting help with R",
+    "text": "1 Getting help with R\nSTART HERE, with fbriatte.org, where you can learn how to find answers to your burning R questions online.\n\nGetting help with R\nStack overflow: topics are tagged, and “r” is a very popular tag on the site. To go directly to R-related topics, visit http://stackoverflow.com/questions/tagged/r.\nRstudio Community\nReddit: r/rstats, r/Rlanguage, r/rprogramming, r/RStudio\nGithub: github is a must for anyone in datascience and has many functions. For your purposes, searching for a particular package and looking into their “issues” page can be very helpful. E.g., here is the issues page for the rmarkdown package.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#free-online-books",
+    "href": "rlearn.html#free-online-books",
+    "title": "Learning R",
+    "section": "2 Free Online Books",
+    "text": "2 Free Online Books\n\n“R Graphic Cookbook”\n“R Markdown Cookbook”\n“Introduction to Data Science: Data Wrangling and Visualization with R”, by Refael Irizarry\n“Introduction to Data Science: Statistics and Prediction Algorithms Through Case Studies”, by Refael Irizarry\n“R for Data Science”, by Hadley Wickham & Garrett Grolemund\n“YaRrr! The Pirate’s Guide to R”, by Nathaniel Phillips\n“An introduction to Biostatistics using R”, by Glover & Mitchell\n“Introductory Biostatistics with R”, by Dylan Childs, Bethan Hindle & Philip Warren\n“Applied Biostats”, by Yaniv Brandvain.\n“ggplot2: Elegant Graphics for Data Analysis (3e)”",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#r-vids",
+    "href": "rlearn.html#r-vids",
+    "title": "Learning R",
+    "section": "3 Videos",
+    "text": "3 Videos\n\nOverview of R Markdown: a crash course\nCode Like a Pro\nIntro to Rstudio and Rstudio Cloud\nOverview of R markdown\nRmarkdown with Rstudio\nR markdown Gallery: Check out the range of outputs and formats you can create using R Markdown.\nThis youtube playlist - I curated this and it contains both R info and biostatistics in general.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#tutorials-simulations",
+    "href": "rlearn.html#tutorials-simulations",
+    "title": "Learning R",
+    "section": "4 Tutorials & Simulations",
+    "text": "4 Tutorials & Simulations\n\nr-statistics.co, by Selva Prabhakaran - includes very good section on ggplot!\nFrom your textbook\nQuick-R\nRstudio Education\nPosit Cloud Recipes",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "rlearn.html#freely-available-biological-datasets",
+    "href": "rlearn.html#freely-available-biological-datasets",
+    "title": "Learning R",
+    "section": "5 Freely Available (Biological) Datasets",
+    "text": "5 Freely Available (Biological) Datasets\nI will keep adding stuff here, but here are some good places to search.\n\nDryad - lots of scientific papers make their datasets available here.\nZenodo - lots of scientific papers make their datasets available here.\nNational Library of Medicine Dataset Catalog - great resource from the NIH, points to datasets elsewher elike zenodo, dryad, figshare, etc.\nre3data\nFigShare - lots of scientific papers make their datasets available here.\nWold Population Review - not focused on biology but very cool nevertheless. There are subsections that have biological datasets though like the one focusing on health, for example.",
+    "crumbs": [
+      "R resources"
+    ]
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#general-information",
+    "href": "index.html#general-information",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "",
+    "text": "Instructor: Bárbara D. Bitarello (bbitarello [at] brynmawr.edu)\nTA: Nicole Cavalieri (ncavalieri [at] brynmawr.edu)\nLecture: Monday & Wednesday 11:40 AM - 1 PM (Park 264)\nLab: Wednesday 1:10 - 4 PM (Park 11)\nRead the Syllabus, listen to Snoop Dog.\nPiazza (for Qs)\nRstudio (Posit) Cloud\nMoodle\nSchedule, Lecture Notes, Slides, etc",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNo prior experience with programming is required.\nSuggested Preparation: BIOL B110 or B111 is highly recommended.\nStudents who have taken PSYC B205/H200 or SOCL B265 are not eligible to take this course.\nCounts Toward: Biochemistry & Molecular Bio; Biochemistry Molecular Biology; Biochemistry Molecular Biology; Data Science; Health Studies; Health Studies.\nCounts towards college A.B requirements: Quantitative Methods (QM), Quantitative Readiness Required (QR), Scientific Investigation (SI).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-help",
+    "href": "index.html#getting-help",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Getting help",
+    "text": "Getting help\nThe preferred methods to get help in this course are office hours for content questions (see the Schedule) and Piazza for any content or logistical questions that other classmates may also have. For personal matters, please email the professor.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nFirst of all, I want to thank BMC’26 student Nicole Cavalieri1 for spending the summer of 2024 helping me improve the labs for this course, and Bryn Mawr College’s digital scholarship grant for funding Nicole’s work.\nThank you to the following people and orgs for sharing their website templates: Maria Tackett, datasciencelabs, Mine Çetinkaya-Rundel, Rstudio, and Rafael Irizarry. I also want to thank Yaniv Brandvain and Michael Whitlock for sharing awesome teaching materials, from which I have heavily borrowed. Thank you also to fbriatte.org for curating so many useful tips shared with students in R resources.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "BIOL B215: Biostatistics with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDigital Bryn Mawr grant project creates teaching resources on computing: Bárbara Bitarello & Nicole Cavalieri ’26 develop resources on coding for biology. https://www.brynmawr.edu/stories/digital-bryn-mawr-grant-project-creates-teaching-resources-computing↩︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "slides/Estimation3.html#outline",
+    "href": "slides/Estimation3.html#outline",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Outline",
+    "text": "Outline\n\nGo over the importance of the sampling distribution (again)\nInteractive activity to help with this\nPractice SEM calculations"
+  },
+  {
+    "objectID": "slides/Estimation3.html#big-picture",
+    "href": "slides/Estimation3.html#big-picture",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Big Picture",
+    "text": "Big Picture\nTwo key goals of inferential statistics:\n\nestimate the characteristics of a population of interest based on a limited sample\nhypothesis testing"
+  },
+  {
+    "objectID": "slides/Estimation3.html#inferential-statistics",
+    "href": "slides/Estimation3.html#inferential-statistics",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Inferential Statistics",
+    "text": "Inferential Statistics\n\n\nFrom: https://www.geeksforgeeks.org/data-science/what-is-inferential-statistics/"
+  },
+  {
+    "objectID": "slides/Estimation3.html#inferential-statistics-1",
+    "href": "slides/Estimation3.html#inferential-statistics-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Inferential Statistics",
+    "text": "Inferential Statistics\nQ: Why do we need this?\nA:\n\nTo learn about the whole population.\nTest claims or hypotheses.\nMake predictions with statistical models.\nCalculate confidence intervals and p-values to measure uncertainty."
+  },
+  {
+    "objectID": "slides/Estimation3.html#so-there-is-a-way-to-deal-with-this-uncertainty",
+    "href": "slides/Estimation3.html#so-there-is-a-way-to-deal-with-this-uncertainty",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "So there IS a way to deal with this uncertainty?",
+    "text": "So there IS a way to deal with this uncertainty?\nQ: How??\n\nA: yes, young padawans. We use the sampling distribution – I know, panic not"
+  },
+  {
+    "objectID": "slides/Estimation3.html#the-sampling-distribution-is-at-the-heart-of-statistics",
+    "href": "slides/Estimation3.html#the-sampling-distribution-is-at-the-heart-of-statistics",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "The sampling distribution is at the heart of statistics",
+    "text": "The sampling distribution is at the heart of statistics\nQ: But why do we need the sampling distribution?\nA:\n\n\nFrom: https://medium.com/@nikhil_garg/a-compilation-of-comics-explaining-statistics-data-science-and-machine-learning-eeefbae91277"
+  },
+  {
+    "objectID": "slides/Estimation3.html#the-sampling-distribution",
+    "href": "slides/Estimation3.html#the-sampling-distribution",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "The Sampling Distribution",
+    "text": "The Sampling Distribution\nLet’s start from the very beginning. Consider the roll of a six-sided die.\nThis probability distribution shows all possible outcomes of a single die roll and how likely they are. I.e., in the long term, if you roll the die MANY times, you would expect equal proportions of each result."
+  },
+  {
+    "objectID": "slides/Estimation3.html#what-about-a-streak",
+    "href": "slides/Estimation3.html#what-about-a-streak",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "What about a streak?",
+    "text": "What about a streak?\n\n\nFrom: https://www.treelobsters.com/2009/08/76-dumb-luck.html\n\nThe sampling distribution can help us here."
+  },
+  {
+    "objectID": "slides/Estimation3.html#section",
+    "href": "slides/Estimation3.html#section",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "",
+    "text": "The sampling distribution of a statistic is the distribution of that statistic, considered as a random variable, when derived from a random sample of size \\(n\\) .\nIt may be considered as the distribution of the statistic for all possible samples from the same population of a given sample size."
+  },
+  {
+    "objectID": "slides/Estimation3.html#what-does-the-sampling-distribution-depend-on",
+    "href": "slides/Estimation3.html#what-does-the-sampling-distribution-depend-on",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "What does the sampling distribution depend on?",
+    "text": "What does the sampling distribution depend on?\n\nthe underlying distribution of the population (in the coin example, uniform)\nthe statistic being considered (say, the number of sixes expected if I toss the coin a number of times)\nthe sampling procedure employed\n\nthe sample size used. (in this example, how many heads)"
+  },
+  {
+    "objectID": "slides/Estimation3.html#example-possible-outcomes-of-tossing-a-fair-coin-20-times",
+    "href": "slides/Estimation3.html#example-possible-outcomes-of-tossing-a-fair-coin-20-times",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Example: possible outcomes of tossing a fair coin 20 times",
+    "text": "Example: possible outcomes of tossing a fair coin 20 times\nOne possible outcome leads to this histogram:"
+  },
+  {
+    "objectID": "slides/Estimation3.html#repeat-this-process-10-times",
+    "href": "slides/Estimation3.html#repeat-this-process-10-times",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Repeat this process 10 times",
+    "text": "Repeat this process 10 times"
+  },
+  {
+    "objectID": "slides/Estimation3.html#times",
+    "href": "slides/Estimation3.html#times",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "100 times",
+    "text": "100 times"
+  },
+  {
+    "objectID": "slides/Estimation3.html#section-1",
+    "href": "slides/Estimation3.html#section-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "10000",
+    "text": "10000"
+  },
+  {
+    "objectID": "slides/Estimation3.html#that-was-a-sampling-distribution-of-a-proportion",
+    "href": "slides/Estimation3.html#that-was-a-sampling-distribution-of-a-proportion",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "That was a sampling distribution (of a proportion)",
+    "text": "That was a sampling distribution (of a proportion)"
+  },
+  {
+    "objectID": "slides/Estimation3.html#attention",
+    "href": "slides/Estimation3.html#attention",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Attention!",
+    "text": "Attention!\n\nPopulation distribution\n\\[\\neq\\]\nSample distribution\n\\[\\neq\\]\nSamplING distribution"
+  },
+  {
+    "objectID": "slides/Estimation3.html#population-distribution",
+    "href": "slides/Estimation3.html#population-distribution",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Population distribution",
+    "text": "Population distribution\nIn our previous example, we were interested in the lengths of human genes.\n\n\nPopulation distribution: contains all values (all human gene lengths). Here is the histogram"
+  },
+  {
+    "objectID": "slides/Estimation3.html#sample-distribution-of-gene-lengths",
+    "href": "slides/Estimation3.html#sample-distribution-of-gene-lengths",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "SamPLE distribution of gene lengths",
+    "text": "SamPLE distribution of gene lengths\nSay, from one sample of 20 genes.\n\nthe samPLE distribution will be based on the individual values of the individuals from my sample (in this case, 20 genes, sampled without replacement)"
+  },
+  {
+    "objectID": "slides/Estimation3.html#another-20-genes-sample",
+    "href": "slides/Estimation3.html#another-20-genes-sample",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Another 20 genes sample",
+    "text": "Another 20 genes sample"
+  },
+  {
+    "objectID": "slides/Estimation3.html#another",
+    "href": "slides/Estimation3.html#another",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Another",
+    "text": "Another"
+  },
+  {
+    "objectID": "slides/Estimation3.html#sampling-distribution",
+    "href": "slides/Estimation3.html#sampling-distribution",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "SampLING distribution",
+    "text": "SampLING distribution"
+  },
+  {
+    "objectID": "slides/Estimation3.html#sampling-distribution-1",
+    "href": "slides/Estimation3.html#sampling-distribution-1",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "SampLING distribution",
+    "text": "SampLING distribution\nIn this case, the samplING distribution of mean gene lengths.\nWe can start building this by collecting the individual samPLE means we calculated before: \\(\\bar{X}=\\{3110.3,2412,2911.45,...\\}\\), and making a histogram of \\(\\bar{X}\\)s."
+  },
+  {
+    "objectID": "slides/Estimation3.html#increasing-number-of-repetitions",
+    "href": "slides/Estimation3.html#increasing-number-of-repetitions",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Increasing number of repetitions…",
+    "text": "Increasing number of repetitions…\nIf instead of taking 3 independent samples of 20 genes we take, say, 100,000, we see a sampling distribution"
+  },
+  {
+    "objectID": "slides/Estimation3.html#compare",
+    "href": "slides/Estimation3.html#compare",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Compare",
+    "text": "Compare\n\nGrand mean of \\(\\bar{X}\\) approaches population mean \\(\\mu\\)"
+  },
+  {
+    "objectID": "slides/Estimation3.html#standard-error-of-the-mean-sem",
+    "href": "slides/Estimation3.html#standard-error-of-the-mean-sem",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Standard Error of the mean (SEM)",
+    "text": "Standard Error of the mean (SEM)\nCompare:\nParameter:\n\\(\\sigma_{\\bar{X}}=\\frac{\\sigma}{n}=\\frac{2833.3}{\\sqrt{20}}\\approx 633.5\\)\nEstimates:\n\\(s_{bar{X}}=543\\)\nestimated form the sampling distribution\n\\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\nestimated from the first sample of 20 genes"
+  },
+  {
+    "objectID": "slides/Estimation3.html#simulators-to-help-you-grasp-this",
+    "href": "slides/Estimation3.html#simulators-to-help-you-grasp-this",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Simulators to help you grasp this:",
+    "text": "Simulators to help you grasp this:\n\nhttp://shiny.calpoly.sh/Sampling_Distribution/\nhttps://shiny.abdn.ac.uk/Stats/apps/app_sampling/\nhttps://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm"
+  },
+  {
+    "objectID": "slides/Estimation3.html#se-decreases-with-sample-size",
+    "href": "slides/Estimation3.html#se-decreases-with-sample-size",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "SE Decreases with Sample Size",
+    "text": "SE Decreases with Sample Size"
+  },
+  {
+    "objectID": "slides/Estimation3.html#how-we-report-sem",
+    "href": "slides/Estimation3.html#how-we-report-sem",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "How we report SEM",
+    "text": "How we report SEM\n\n\\(\\bar{X}\\pm SE\\)\nIn our previous example, our first sample had \\(\\bar{X}=2533.9\\) and \\(s_{X}=1517.998\\), so \\(SEM_{bar{X}}=\\frac{1517.998}{\\sqrt{20}}\\approx339.4\\)\n\nSo we would report \\(2533.9 \\pm339.4 \\text{ (SE)}\\). Later we will also see how the \\(SEM\\) is used in plots (error bars)."
+  },
+  {
+    "objectID": "slides/Estimation3.html#standard-error---summary",
+    "href": "slides/Estimation3.html#standard-error---summary",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Standard error - Summary",
+    "text": "Standard error - Summary\n\n\nEstimates with smaller standard errors are more precise\nThe smaller the sampling error, the less uncertainty there is about the target parameter in the population (“out there”).\nYou can calculate the standard error for any estimate, not just the mean.\nThe SE of the sample mean if sometimes referred to as SE, but this is ambiguous - use SEM instead of SE\nFor huge sample sizes, the SEM is always tiny, even if the data have considerable spread (SD).\nSmall samples underestimate the SD of the population\nBoth SD and SEM are expressed in the same unit as the data"
+  },
+  {
+    "objectID": "slides/Estimation3.html#practice-question",
+    "href": "slides/Estimation3.html#practice-question",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Practice question",
+    "text": "Practice question\nEstimate the standard error of the mean for a sample of size 16 that has a standard deviation of 25:\n\n0.3125\n1.25\n1.5625\n6.25"
+  },
+  {
+    "objectID": "slides/Estimation3.html#confidence-interval-plausible-values-of-a-parameter",
+    "href": "slides/Estimation3.html#confidence-interval-plausible-values-of-a-parameter",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Confidence Interval: Plausible values of a parameter",
+    "text": "Confidence Interval: Plausible values of a parameter"
+  },
+  {
+    "objectID": "slides/Estimation3.html#recap",
+    "href": "slides/Estimation3.html#recap",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "Recap",
+    "text": "Recap\n\n\n\nA point estimate is any single number that is calculated from a “parameter space” and serves as your “best guess” or “best estimate” of an unknown population parameter\nYour parameter is constant (usually denoted by a greek letter)"
+  },
+  {
+    "objectID": "slides/Estimation3.html#thats-all-for-today",
+    "href": "slides/Estimation3.html#thats-all-for-today",
+    "title": "4.2.Estimation with Uncertainty",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
     "objectID": "slides/Statistics_and_Samples4.html#wrapping-it-up",
@@ -3286,7 +3552,7 @@
     "href": "schedule.html#sec-PS",
     "title": "Schedule",
     "section": "3 Problem sets",
-    "text": "3 Problem sets\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\nType\n\n\n\n\n1\n\nFri 10/3\nEasy/Medium\nFormative\n\n\n2\n\nWed 10/22\nMedium/Hard\nFormative\n\n\n3\n\nFri 11/7\nMedium/Hard\nFormative\n\n\n4\n\nT 11/25\nMedium/Hard\nFormative\n\n\n5\n\nW 12/10\nMedium/Hard\nFormative",
+    "text": "3 Problem sets\n\n\n\n\n\n\n\n\n\n\nProblem set\nTopic\nDue Date\nDifficulty\nType\n\n\n\n\n1\nCh. 1-3\nFri 10/3\nEasy/Medium\nFormative\n\n\n2\nProbability\nWed 10/22\nMedium/Hard\nFormative\n\n\n3\nEstimation & Hypothesis Testing\nSun 11/9\nMedium/Hard\nFormative\n\n\n4\n\nT 11/25\nMedium/Hard\nFormative\n\n\n5\n\nW 12/10\nMedium/Hard\nFormative",
     "crumbs": [
       "Schedule"
     ]
@@ -3316,7 +3582,7 @@
     "href": "schedule.html#sec-oh",
     "title": "Schedule",
     "section": "6 Office Hours",
-    "text": "6 Office Hours\nPlease attend OH at least 2x during the semester (the more the merrier).\n\n\n\n\n\n\n\n\nWho\nWhen2\nWhere\n\n\n\n\nProfessor drop-in hours\nMonday 2:-3pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2:30-3:30pm\nZoom3\n\n\nTA\nThursday 4-6pm\nPark 227\n\n\n\nIf you can’t attend any of the times above you can schedule an appointment with me using my calendly link.",
+    "text": "6 Office Hours\nPlease attend OH at least 2x during the semester (the more the merrier).\n\n\n\n\n\n\n\n\nWho\nWhen2\nWhere\n\n\n\n\nProfessor drop-in hours\nMonday 2-3pm\nPark 211\n\n\nProfessor drop-in hours\nWednesday 2-3:30pm\nPark 211\n\n\nProfessor drop-in hours\nThursday 2:30-3:30pm\nZoom3\n\n\nTA\nThursday 4-6pm\nPark 227\n\n\n\nIf you can’t attend any of the times above you can schedule an appointment with me using my calendly link.",
     "crumbs": [
       "Schedule"
     ]
