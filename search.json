@@ -11,7 +11,7 @@
     "href": "CA1.html",
     "title": "Coding Assignment 1",
     "section": "",
-    "text": "You will work on a real biological dataset from Dr. Williamson, a professor in our Bio Department!\nA detailed explanation of Dr. Williamson’s dataset and experiment are provided in a separate document (Backgrund Information).",
+    "text": "You will work on a real biological dataset from Dr. Williamson, a professor in our Bio Department!\nA detailed explanation of Dr. Williamson’s dataset and experiment are provided in a separate document on Moodle (Background Information).",
     "crumbs": [
       "Coding Assignment 1"
     ]
@@ -2216,6 +2216,13 @@
     "text": "Recap\nEstimate the standard error of the mean for a sample of size \\(n=16\\) that has \\(s=25\\):"
   },
   {
+    "objectID": "slides/Estimation4.html#recap-1",
+    "href": "slides/Estimation4.html#recap-1",
+    "title": "4.4.Estimation with Uncertainty",
+    "section": "Recap",
+    "text": "Recap\nEstimate the standard error of the mean for a sample of size \\(n=16\\) that has \\(s=25\\):\n\\(SEM=\\frac{s}{\\sqrt{n}}=\\frac{25}{\\sqrt{16}}=6.25\\)"
+  },
+  {
     "objectID": "slides/Estimation4.html#recap-2",
     "href": "slides/Estimation4.html#recap-2",
     "title": "4.4.Estimation with Uncertainty",
@@ -2437,105 +2444,7 @@
     "href": "slides/Estimation4.html#larger-sample-size-narrows-ci-2",
     "title": "4.4.Estimation with Uncertainty",
     "section": "Larger sample size narrows CI",
-    "text": "Larger sample size narrows CI\n\n\n## &lt;theme&gt; List of 12\n##  $ text            : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : NULL\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ axis.title.x    : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 16\n##   ..@ hjust        : num 1\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ axis.title.y    : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 16\n##   ..@ hjust        : num 1\n##   ..@ vjust        : NULL\n##   ..@ angle        : num 90\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ axis.text.x     : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 14\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ axis.text.y     : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 14\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ legend.text     : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : chr \"plain\"\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 12\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ legend.title    : &lt;ggplot2::element_blank&gt;\n##  $ legend.position : chr \"right\"\n##  $ panel.background: &lt;ggplot2::element_blank&gt;\n##  $ plot.title      : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : NULL\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 20\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ plot.subtitle   : &lt;ggplot2::element_text&gt;\n##   ..@ family       : chr \"Roboto Condensed\"\n##   ..@ face         : NULL\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 16\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  $ strip.text      : &lt;ggplot2::element_text&gt;\n##   ..@ family       : NULL\n##   ..@ face         : NULL\n##   ..@ italic       : chr NA\n##   ..@ fontweight   : num NA\n##   ..@ fontwidth    : num NA\n##   ..@ colour       : NULL\n##   ..@ size         : num 14\n##   ..@ hjust        : NULL\n##   ..@ vjust        : NULL\n##   ..@ angle        : NULL\n##   ..@ lineheight   : NULL\n##   ..@ margin       : NULL\n##   ..@ debug        : NULL\n##   ..@ inherit.blank: logi FALSE\n##  @ complete: logi FALSE\n##  @ validate: logi TRUE"
-  },
-  {
-    "objectID": "slides/Estimation4.html#confidence-intervals.-books-web-app.",
-    "href": "slides/Estimation4.html#confidence-intervals.-books-web-app.",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Confidence Intervals. Book’s web app.",
-    "text": "Confidence Intervals. Book’s web app.\nI highly recommend using these:\n\nWeb app from the book: http://www.zoology.ubc.ca/~whitlock/Kingfisher/CIMean.htm\n\nAnd this one: https://shiny.abdn.ac.uk/Stats/apps/app_sampling/"
-  },
-  {
-    "objectID": "slides/Estimation4.html#lets-pratice-3-methods-of-obtaining-ci",
-    "href": "slides/Estimation4.html#lets-pratice-3-methods-of-obtaining-ci",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Let’s pratice 3 methods of obtaining CI",
-    "text": "Let’s pratice 3 methods of obtaining CI\n\nFor a random sample of \\(n=100\\) genes from the human_genes dataset, \\(\\bar Y=3489\\), \\(s=2238\\).\n\n\nBased on the normal distribution (we won’t learn to calculate this yet, but just for comparison):\n\n\\(\\bar Y \\pm Z \\times \\frac{\\sigma}{\\sqrt(100)}\\)\n\\(\\left[2933.7, 4044.3\\right]\\)\n2a) Rule of thumb: if we knew the true standard deviation (\\(\\sigma=2833.293\\)):\n2b) Rule of thumb: if we did not know the true standard deviation (more likely)"
-  },
-  {
-    "objectID": "slides/Estimation4.html#from-bootstrapping",
-    "href": "slides/Estimation4.html#from-bootstrapping",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "From bootstrapping",
-    "text": "From bootstrapping\nThis is a great choice because it does not make any assumptions about underlying distributions.\n\nRecipe for non-parametric bootstrapping:\n\nTake a sample of given size (in our example, \\(n=100\\) genes)\nFrom this sample, take \\(R\\) equally-sized (\\(n=100\\)) samples (with replacement) and calculate the statistic of interest (mean gene length)\nRepeat many times (e.g. 10,000)\nThe distribution of mean gene lengths approximates the sampling distribution nicely.\n\n\n\n## [1] \"Bootstrap estimate of SEM (as the sd of sample means): 273.1\"\n## [1] \"Lower 95% CI: 3489 - 2 x 273.1\"\n## [1] 2965.4 4012.6\n\nIn the long run, ~95% of 95% CIs estimated from random samples will include the population parameter of interest!"
-  },
-  {
-    "objectID": "slides/Estimation4.html#comparison-table",
-    "href": "slides/Estimation4.html#comparison-table",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Comparison table",
-    "text": "Comparison table\n\nFor a random sample of \\(n=100\\) genes from the human_genes dataset, \\(\\bar Y=3489\\), \\(s=2238\\).\n\n\n\n\n\n\n\n\nNormal distribution\nRule of thumb (known pop sd)\nRule of thumb (estimated pop sd)\n\n\n\\(\\left[2933.7, 4044.3\\right]\\)\n\\(\\left[2922.3,  4055.6\\right]\\)\n\\(\\left[3041.3,3936.7\\right]\\)\n\n\n\n\n\n\n\n\n\nBootstrapping from one sample of \\(n=100\\)\n\n“Boostrapping”: multiple samples of \\(n=100\\) from pop\n\n\n\\(\\left[2965.4, 4012.6\\right]\\)\n\\(\\left[2926.5, 4051.5\\right]\\)"
-  },
-  {
-    "objectID": "slides/Estimation4.html#tradeoffs",
-    "href": "slides/Estimation4.html#tradeoffs",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Tradeoffs",
-    "text": "Tradeoffs\nWe want confidence coefficient to be closer to 1.\nWe want the sample size to be as small as possible (but not too small). This is a practical issue.\nWe want the CI to be as narrow as possible\nThink about the following:\n\nAs we increase the sample estimate, the CI …?\nAs we decrease st. dev, the CI …?\nAs we decrease the confidence level, (\\(1-\\alpha\\)), the CI …?\nAs we increase sample size …?"
-  },
-  {
-    "objectID": "slides/Estimation4.html#ci-qa-to-answer-your-burning-questions",
-    "href": "slides/Estimation4.html#ci-qa-to-answer-your-burning-questions",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "CI: Q&A to answer your burning questions",
-    "text": "CI: Q&A to answer your burning questions"
-  },
-  {
-    "objectID": "slides/Estimation4.html#ci-qa",
-    "href": "slides/Estimation4.html#ci-qa",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "CI: Q&A",
-    "text": "CI: Q&A\nQ: When can I use the rule of thumb that the CI equals the sample mean plus or minus 2 SDs?\nNever! In a Gaussian distribution you expect about 95% of the individual values to lie within 2 SD of the mean. But the idea of a CI is to quantify how precisely you know the population mean. For that, you need the sample size to be taken into account."
-  },
-  {
-    "objectID": "slides/Estimation4.html#ci-qa-1",
-    "href": "slides/Estimation4.html#ci-qa-1",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "CI: Q&A",
-    "text": "CI: Q&A\nQ:When can I use the rule of thumb that the CI equals the sample mean plus or minus 2 SEM?\nWhen \\(n\\) is sufficiently large and the population variable of interest is normally distributed (approximately). We will come back to this. If in doubt, don’t use it!!! [if you do, acknowledge this shortcoming]"
-  },
-  {
-    "objectID": "slides/Estimation4.html#ci-qa-2",
-    "href": "slides/Estimation4.html#ci-qa-2",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "CI: Q&A",
-    "text": "CI: Q&A\nQ: Why do I see 95% CIs everywhere?\nTradition! CIs of 90% and 99% are less common but also often seen in biology.\nA CI of, say, 50% would give a very narrow interval\nA CI of 100% would require the entire population and would be rather pointless"
-  },
-  {
-    "objectID": "slides/Estimation4.html#practice-question",
-    "href": "slides/Estimation4.html#practice-question",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Practice Question",
-    "text": "Practice Question\nWhat is wrong with this statement?\n\nMeasurements of the distance between the canine tooth and last molar for 35 wolf upper jaws were made by a researcher. They found the 95% confidence interval for the mean to be \\(10.16 &lt; \\mu &lt; 10.47\\) and the 99% confidence interval to be \\(10.21&lt;\\mu&lt;10.44\\)."
-  },
-  {
-    "objectID": "slides/Estimation4.html#pseudoreplication-when-your-confidence-is-undeserved",
-    "href": "slides/Estimation4.html#pseudoreplication-when-your-confidence-is-undeserved",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "PSEUDOREPLICATION: WHEN YOUR CONFIDENCE IS UNDESERVED",
-    "text": "PSEUDOREPLICATION: WHEN YOUR CONFIDENCE IS UNDESERVED"
-  },
-  {
-    "objectID": "slides/Estimation4.html#what-is-pseudoreplication",
-    "href": "slides/Estimation4.html#what-is-pseudoreplication",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "What is pseudoreplication?",
-    "text": "What is pseudoreplication?\nPseudoreplication is the error that occurs when samples are not independent, but they are treated as though they are.\n\nThus the sample size is smaller than claimed.\nPseudoreplication provides a false sense of high certainty.\nThis is not an uncommon issue in published papers."
-  },
-  {
-    "objectID": "slides/Estimation4.html#example-2",
-    "href": "slides/Estimation4.html#example-2",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Example",
-    "text": "Example\n\nYou are interested in estimating the average pulse rate of mountain climbers. Since they are hard to find, you decide to take 10 measurements from each climber. You study 6 climbers, so you have 60 measures. What is your sample size (n)?\n\nIt’s 6. But you can and should use the extra data. How? Take the mean for each climber, so that you have 6 pulse rates, one for each climber (\\(n=6\\))."
-  },
-  {
-    "objectID": "slides/Estimation4.html#estimation---summary",
-    "href": "slides/Estimation4.html#estimation---summary",
-    "title": "4.4.Estimation with Uncertainty",
-    "section": "Estimation - Summary",
-    "text": "Estimation - Summary\n\nParameter estimates are influenced by chance.\nThe sampling distribution considers what could have happened upon sampling.\nThe standard error is the standard deviation of the sampling distribution.\nConfidence intervals bound plausible parameter values.\nUncertainty decreases and precision increases with sample size.\nAdd error bars to graphs to illustrate standard errors or confidence intervals. Make sure to clarify which is being illustrated in the figure legend."
+    "text": "Larger sample size narrows CI"
   },
   {
     "objectID": "slides/Estimation4.html#thats-all-for-today",
