@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+<meta name="author" content="Bárbara D. Bitarello">
+<meta name="dcterms.date" content="2025-11-05">
+<meta name="keywords" content="Hypothesis Testing">
+<title>BIOL B215: Biostatistics with R – 5.1. Hypothesis Testing</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block"><h1 class="title">5.1. Hypothesis Testing</h1>
+  <p class="subtitle">Confidence Intervals | Acknowledgments: Y. Brandvain’s code snippets</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Bárbara D. Bitarello 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-11-05</p>
+</section><section><section id="key-learning-goals" class="title-slide slide level1"><h1>Key learning goals</h1>
+<ul>
+<li>Be able to describe the Null Hypothesis.</li>
+<li>Understand the practice of Null Hypothesis Significance Testing.</li>
+<li>Master the meaning of a P-value.</li>
+<li>Have the basis to be critical and skeptical of P-values.</li>
+<li>Explain the concepts of false positives and false negatives and why they happen.</li>
+<li>Understand when to use one vs two-tailed tests.</li>
+<li>Understand the relationship between p-values and CIs</li>
+</ul></section><section id="outline" class="slide level2"><h2>Outline</h2>
+<ul>
+<li>Intro to hypothesis testing</li>
+<li>Example of hypothesis testing step-by-step</li>
+<li>Type I and type II errors in hypothesis testing</li>
+<li>Cautionary tales</li>
+<li>Philosophical/historical digression/discussion about p-values (see extra optional readings on Moodle)</li>
+<li>Estimation vs.&nbsp;hypothesis testing</li>
+</ul></section><section id="hypothesis-testing" class="slide level2"><h2>Hypothesis Testing</h2>
+<p>In addition to estimation, hypothesis testing is a major goal of statistics.</p>
+<p>Example Hypotheses:</p>
+<ul>
+<li>Does a treatment have an effect?</li>
+<li>Are two groups different?</li>
+<li>Do the number of problems grow with a person’s income?</li>
+</ul>
+<p>Statistical hypothesis testing automates decision making</p>
+<p>Statistical hypothesis (null and alternative) <span class="math inline">\(neq\)</span> Scientific hypothesis (statements about the existence and possible causes of natural phenomena)</p>
+</section><section id="the-dilemma" class="slide level2"><h2>The Dilemma</h2>
+<p>We take samples to understand the world out there.</p>
+<div class="goal">
+<p>So, can our estimates be simply explained by chance, or are they special?</p>
+</div>
+</section><section id="the-solution" class="slide level2" data-transition="convex" data-transition-speed="fast"><h2>The solution</h2>
+<p>We can only take a <font size="#E54E21">sample</font> and make <font color="#E54E21">estimates.</font></p>
+<p>We can imagine taking infinite <font color="#E54E21">samples</font> from a <font color="#0072B2">population</font></p>
+<p><font color="black">Build a sampling dist. from a <font color="#CC79A7">boring</font> population we can describe. </font></p>
+<p><font color="black">Where would or estimate fall on this distribution</font></p>
+
+<img data-src="HypothesisTesting_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="critical-assumption" class="slide level2"><h2>Critical Assumption</h2>
+<p>Hypothesis testing assumes <font color="#6C8645">random sampling </font> – or that we account for non-random sampling in building the null model.</p>
+<p><font size="16"> Repeat after me:</font></p>
+<div class="fragment">
+<p>Hypothesis tests account for sampling error, NOT for sampling bias. </p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-518242254.png" alt="Inspirational figure to remind you that: Hypothesis tests from biased samples are misleading and cannot be trusted"></p>
+<figcaption>Inspirational figure to remind you that: Hypothesis tests from biased samples are misleading and cannot be trusted</figcaption></figure>
+</div>
+</div>
+</section><section id="null-hypothesis" class="slide level2 dark-theme center"><h2>Null Hypothesis</h2>
+</section><section id="hypotheses-are-about-populations" class="slide level2"><h2>Hypotheses are about POPULATIONS</h2>
+<ul>
+<li><p>We conduct hypothesis testing by checking if our estimate is surprising (unlikely) under the null model.</p></li>
+<li><p>The hypothesis is about the population - not about your sample.</p></li>
+<li><p>The null hypothesis (<span class="math inline">\(H_0\)</span>) skeptically argues that data come from a boring population described by the <strong>null model</strong>.</p></li>
+<li><p>Building a sampling distribution from the appropriate null model is key to hypothesis testing.</p></li>
+</ul></section><section id="we-ask" class="slide level2"><h2>We ask</h2>
+<blockquote>
+<p>Is the <font color="#006475">population</font> from which we sampled different from a <em>boring</em> population?</p>
+</blockquote>
+
+<img data-src="HypothesisTesting_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="the-null-hypothesis-definition" class="slide level2"><h2>The null hypothesis: Definition</h2>
+<div class="goal">
+<p><strong>Null hypothesis:</strong> a specific statement about a <del>boring</del> population made for the sake of argument (aka — the <em>skeptical view</em>).</p>
+</div>
+<p>A Good 😒 <font color="#CC79A7">Null Hypothesis: </font> 😒</p>
+<ul>
+<li><p>Reflects all aspects of the null / boring population, except those posed by <span class="math inline">\(H_0\)</span></p></li>
+<li><p>Asks <em>“Can the results be easily explained by chance?”</em></p></li>
+<li><p>Would be interesting if proven wrong.</p></li>
+<li><p>Reflects the process of sampling.</p></li>
+</ul></section><section id="h_0-is-specific-h_a-is-not." class="slide level2"><h2>😒<font color="#999999"> <span class="math inline">\(H_0\)</span> </font> 😒 is specific, 🤓 <font color="#CC79A7"> <span class="math inline">\(H_A\)</span></font> 🤓 is not.</h2>
+<p><font size="10"> What does this mean? </font></p>
+<p>It means that a null hypothesis specifies a model that can be used to build a sampling distribution</p>
+<ul>
+<li>For example: <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma^2 = 1\)</span> or <span class="math inline">\(\mu_{pop1} = \mu_{pop2}\)</span>.</li>
+</ul>
+<p>By contrast the alternative hypothesis is less specific.</p>
+<ul>
+<li>That is, “<em>The sample does not come from a population with the parameter specified by the null model</em>” or “<em>x &gt; y</em>” etc…</li>
+</ul></section><section id="caution-remember-why-we-do-stats" class="slide level2"><h2>Caution: Remember Why We Do Stats!</h2>
+<p><font size="10"></font></p>
+<p>Our goal is to learn about the <font color="#006475">World Out There (the population)</font> from our <font color="#C18748">finite view (the sample)</font></p>
+<p>Rejecting the null hypothesis is <em><em>not our goal</em></em> (although it can be satisfying / exciting).</p>
+<p></p>
+</section><section id="hypothesis-testing-example-red-vs-blue-wrestlers" class="slide level2 dark-theme center"><h2>Hypothesis testing example: red vs blue wrestlers</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>“Real world” question: Does wearing a red shirt help win a wrestling match</p></li>
+<li><p>First: Turn this into a more “statistical” question, gather some data, and get to work!</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/clipboard-2396145161.png" alt="figure shows two wrestlers, one wearing red and the other wearing blue" width="293"></p>
+<figcaption>From: https://commons.wikimedia.org/</figcaption></figure>
+</div>
+</div></div>
+</section><section id="the-questions" class="slide level2"><h2>The questions</h2>
+<ul>
+<li><p><strong>Question:</strong> Does red influence the outcome of wrestling, taekwondo, and boxing?</p></li>
+<li><p><strong>Clearer (statistical) question:</strong> are the colors of outfits won by wrestlers predictors of victory/defeat?</p></li>
+<li><p><strong>“Scientific” question:</strong> could be something about the impact of the color red on aggression levels, hormones, neurotransmitters, etc.</p></li>
+</ul></section><section id="the-experiment-and-results" class="slide level2"><h2>The experiment and results</h2>
+<p><strong>Data / experiment:</strong></p>
+<ul>
+<li>16 of 20 rounds had more red-shirted than blue-shirted winners in in the 2004 Olympics.</li>
+<li>Shirt color was randomly assigned.</li>
+<li>Interpretation: Potentially related to red as a sign of aggression in animals?</li>
+</ul></section><section id="the-steps-of-hypothesis-testing" class="slide level2" data-transition="convex" data-transition-speed="fast"><h2>The Steps of Hypothesis Testing</h2>
+<ol type="1">
+<li class="fragment"><p>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>.</p></li>
+<li class="fragment"><p>Calculate a test statistic.</p></li>
+<li class="fragment"><p>Generate the null distribution.</p></li>
+<li class="fragment"><p>Find critical value at specified <span class="math inline">\(\alpha\)</span>, and the p-value.</p></li>
+<li class="fragment"><p>Decide: <br> Reject the <span class="math inline">\(H_0\)</span> if the test stat is <span class="math inline">\(\geq\)</span> the critical value (<span class="math inline">\(p\leq\alpha\)</span>). <br> OR<br> Fail to reject <span class="math inline">\(H_0\)</span> if the test stat is <span class="math inline">\(&lt;\)</span> the critical value (<span class="math inline">\(p&gt;\alpha\)</span>).</p></li>
+</ol></section><section id="state-h_0-and-h_a" class="slide level2"><h2>1.State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span>
+</h2>
+<p>Are the colors of outfits won by wrestlers predictors of victory/defeat?</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(H_0\)</span>: Red and blue-shirted athletes are equally likely to win (proportion of red among winners <span class="math inline">\(= 0.5\)</span>). (notice how this is very specific)</p></li>
+<li class="fragment"><p><span class="math inline">\(H_a\)</span>: Red &amp; blue-shirted athletes are not equally likely to win (proportion of red among winners <span class="math inline">\(\neq 0.5\)</span>). (not specific)</p></li>
+<li class="fragment"><p>One of these must be true. One is very specific, the other is not. Which one do the data support?</p></li>
+</ul></section><section id="calculate-a-test-statistic" class="slide level2"><h2>2. Calculate a Test Statistic</h2>
+<p>16 of 20 rounds had more red-shirted than blue-shirted winners.</p>
+<p>Our test statistic here the difference between our observation (16 of 20 wins) and our expectation (10 of twenty wins).</p>
+<div class="goal">
+<p>Note: Test statistics: numbers calculated from the data and used to compare out results with those expected under the null hypothesis. They are variable and are related to the type of test we use. E.g. the statistic <span class="math inline">\(\chi^2\)</span> (chi-square) is the test statistic used in the <span class="math inline">\(\chi^2\)</span> test; the one-sample t-test uses the <span class="math inline">\(t\)</span> statistic, etc.</p>
+</div>
+</section><section id="generate-the-null-distribution" class="slide level2"><h2>3. Generate the Null Distribution</h2>
+
+<img data-src="HypothesisTesting_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="find-the-critical-value-p-value" class="slide level2"><h2>4-5: Find the critical Value &amp; P-Value</h2>
+<ul>
+<li>What is the probability of obtaining data as extreme or more extreme (in relation to the null distribution) than the one I obtained?</li>
+<li>If the probability is very low, we reject the null hypothesis</li>
+<li>If it is not, we fail to reject the null</li>
+</ul></section><section id="section" class="slide level2"><h2></h2>
+<ul>
+<li>More formally, we use a significance level (<span class="math inline">\(\alpha\)</span>): a probability used as criterion to reject the <span class="math inline">\(H_0\)</span>.</li>
+</ul>
+
+<img data-src="HypothesisTesting_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section id="decide-and-conclude" class="slide level2"><h2>Decide and Conclude</h2>
+<ul>
+<li>
+<span class="math inline">\(P = 0.0118\)</span>, so this result is unlikely under <span class="math inline">\(H_0\)</span>.</li>
+<li>We reject <span class="math inline">\(H_0\)</span> at the <span class="math inline">\(\alpha\)</span> threshold.</li>
+<li>I.e., we reject that red and blue-shirted wrestlers win at equal proportions.</li>
+<li>Because the direction of our effect (<span class="math inline">\(16 &gt; 4\)</span>), we conclude that in our sample red shirts perform better than we can reasonably expect by chance.</li>
+<li>But: we recognize that given many tries a pattern this or more extreme can occur without any dependence between victory and shorts color.</li>
+</ul>
+
+<aside><div>
+<p>Also, even significant observations might be biologically/scientifically irrelevant, as we shall see.</p>
+</div></aside></section><section id="hypothesis-testing-what-could-go-wrong" class="slide level2"><h2>Hypothesis Testing: What Could Go Wrong?</h2>
+<p>Even if you do everything right, hypothesis testing can get it wrong.</p>
+<p>Hypothesis testing can go wrong in two types of ways:</p>
+<ul>
+<li>Rejecting a true null (False positive).</li>
+<li>Not rejecting a false null (False negative).</li>
+</ul></section><section id="statistical-power" class="slide level2"><h2>Statistical power</h2>
+<ul>
+<li>The probability that a random sample will lead to rejection of a false null hypothesis.</li>
+<li>Very difficult to quantify - we usually don’t know how different the truth is from the null hypothesis.</li>
+</ul></section><section id="what-improves-statistical-power" class="slide level2"><h2>What improves statistical power?</h2>
+<ol type="1">
+<li>Larger sample size</li>
+<li>The magnitude of the true discrepancy from the null hypothesis (aka the “effect size”)</li>
+<li>Low variability in the population of interest</li>
+</ol></section><section id="effects-of-sample-size" class="slide level2"><h2>Effects of Sample Size</h2>
+<p>The power of a test is the probability that a random sample will lead to rejection of a false null hypothesis.</p>
+<p>The probability of rejecting <span class="math inline">\(H_0\)</span>:</p>
+
+<img data-src="HypothesisTesting_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><p>The exact relationship between <span class="math inline">\(n\)</span> and the prob. of rejecting a false null depends on the <strong>effect size and the variance</strong>.</p>
+
+
+</section></section>
+</div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>B215: Biostatistics with R</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/bbitarello\.github\.io\/b215f2025\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+
+
+</body></html>
