@@ -6,6 +6,10 @@
     ]
   },
   {
+    "listing": "/psets.html",
+    "items": []
+  },
+  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -30,9 +34,5 @@
       "/slides/Estimation5.html",
       "/slides/HypothesisTesting.html"
     ]
-  },
-  {
-    "listing": "/psets.html",
-    "items": []
   }
 ]
