@@ -1416,70 +1416,70 @@
   {
     "objectID": "slides/HypothesisTesting2.html#outline",
     "href": "slides/HypothesisTesting2.html#outline",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Outline",
     "text": "Outline\n\nType I and type II errors in hypothesis testing\nCautionary tales\nPhilosophical/historical digression/discussion about p-values (will post extra optional readings)\nEstimation vs. hypothesis testing"
   },
   {
     "objectID": "slides/HypothesisTesting2.html#practice-question-1",
     "href": "slides/HypothesisTesting2.html#practice-question-1",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Practice Question 1",
     "text": "Practice Question 1\nWhich of the choices below is an appropriate alternative hypothesis for a null hypothesis which reads: “the mean systolic blood pressure for men is 120”?\nA. The mean systolic blood pressure for men differs from 120.\nB. The mean systolic blood pressure for men differs from that of women.\nC. The mean systolic blood pressure for men is less than 120.\nD. The mean systolic blood pressure for men is more than 120."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#recap-question-2",
     "href": "slides/HypothesisTesting2.html#recap-question-2",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Recap Question 2",
     "text": "Recap Question 2\nThe P-value is best described as the probability that\nA. We would observe the data we do if the null hypothesis is false.\nB. We would observe the data we do if the null hypothesis is true.\nC. The null hypothesis is false.\nD. The null hypothesis is true."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#find-the-critical-value-p-value",
     "href": "slides/HypothesisTesting2.html#find-the-critical-value-p-value",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "4-5: Find the critical Value & P-Value",
     "text": "4-5: Find the critical Value & P-Value\n\nWhat is the probability of obtaining data as extreme or more extreme (in relation to the null distribution) than the one I obtained?\nIf the probability is very low, we reject the null hypothesis\nIf it is not, we fail to reject the null\nBecause finding the critical value depends on the sampling distribution, we will not go into it now but we will once we talk about specific tests. In this problem specifically we are trying to find \\(P(X\\geq 16 \\text{ OR }X \\leq 4)\\)"
   },
   {
     "objectID": "slides/HypothesisTesting2.html#section",
     "href": "slides/HypothesisTesting2.html#section",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "",
     "text": "More formally, we use a significance level (\\(\\alpha\\)): a probability used as criterion to reject the \\(H_0\\)."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#decide-and-conclude",
     "href": "slides/HypothesisTesting2.html#decide-and-conclude",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Decide and Conclude",
     "text": "Decide and Conclude\n\n\n\\(P = 0.0118\\), so this result is unlikely under \\(H_0\\).\nWe reject \\(H_0\\) at the \\(\\alpha\\) threshold.\nI.e., we reject that red and blue-shirted wrestlers win at equal proportions.\nBecause the direction of our effect (\\(16 &gt; 4\\)), we conclude that in our sample red shirts perform better than we can reasonably expect by chance.\nBut: we recognize that given many tries a pattern this or more extreme can occur without any dependence between victory and shorts color.\n\n\n\nAlso, even significant observations might be biologically/scientifically irrelevant, as we shall see."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#hypothesis-testing-what-could-go-wrong",
     "href": "slides/HypothesisTesting2.html#hypothesis-testing-what-could-go-wrong",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Hypothesis Testing: What Could Go Wrong?",
     "text": "Hypothesis Testing: What Could Go Wrong?\nEven if you do everything right, hypothesis testing can get it wrong.\nHypothesis testing can go wrong in two types of ways:\n\nRejecting a true null (False positive).\nNot rejecting a false null (False negative)."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#statistical-power",
     "href": "slides/HypothesisTesting2.html#statistical-power",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Statistical power",
     "text": "Statistical power\n\nThe probability that a random sample will lead to rejection of a false null hypothesis.\nVery difficult to quantify - we usually don’t know how different the truth is from the null hypothesis."
   },
   {
     "objectID": "slides/HypothesisTesting2.html#what-improves-statistical-power",
     "href": "slides/HypothesisTesting2.html#what-improves-statistical-power",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "What improves statistical power?",
     "text": "What improves statistical power?\n\nLarger sample size\nThe magnitude of the true discrepancy from the null hypothesis (aka the “effect size”)\nLow variability in the population of interest"
   },
   {
     "objectID": "slides/HypothesisTesting2.html#effects-of-sample-size",
     "href": "slides/HypothesisTesting2.html#effects-of-sample-size",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.2. Hypothesis Testing",
     "section": "Effects of Sample Size",
     "text": "Effects of Sample Size\nThe power of a test is the probability that a random sample will lead to rejection of a false null hypothesis.\nThe probability of rejecting \\(H_0\\):\n\nThe exact relationship between \\(n\\) and the prob. of rejecting a false null depends on the effect size and the variance."
   },
