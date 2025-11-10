@@ -142,8 +142,73 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-11-12</p>
-</section><section class="slide level2 dark-theme center"><h2>DIGRESSION ABOUT HISTORY, P-VALUES, EUGENICS AND MORE</h2>
-</section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
+</section><section class="slide level2"><h2>P-values are not very reproducible</h2>
+<p>A reasonable definition of the P value is that it measures the strength of evidence against the null hypothesis. However, unless statistical power is very high (&gt;90%), the P value does not do this reliably.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288"><img data-src="images/clipboard-1608105659.png" alt="Shows two normal distributions. The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1." width="247"></a></p>
+<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al. (2015)</figcaption></figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288#Sec1"><img data-src="images/clipboard-3026484271.png" alt="We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared."></a></p>
+<figcaption>We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared.</figcaption></figure>
+</div>
+</div></div>
+
+<aside><div>
+<p>From: Halsey, L., Curran-Everett, D., Vowler, S. et al.&nbsp;(2015) The fickle P value generates irreproducible results. Nat Methods 12, 179–185. https://doi.org/10.1038/nmeth.3288</p>
+</div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead><tr class="header">
+<th>Approach</th>
+<th>Questions Answered</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Confidence Interval</td>
+<td>What range of true eﬀect is consistent with the data?</td>
+</tr>
+<tr class="even">
+<td>P-value</td>
+<td>What is strength of the evidence that the true eﬀect is not zero?</td>
+</tr>
+<tr class="odd">
+<td>Hypothesis Test</td>
+<td>Is there enough evidence to make a decision based on a <br> conclusion that the eﬀect is not zero?</td>
+</tr>
+</tbody>
+</table></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
+<ul>
+<li>In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
+<li>With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
+<li>Stargazing: the process of over-emphasizing statistical significance.</li>
+<li>“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
+<li>When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
+</ul></section><section class="slide level2"><h2>Why P-values are confusing</h2>
+<ul>
+<li><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
+<li><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
+<li><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
+<li><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
+<li><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
+</ul>
+
+<aside><div>
+<p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
+</div></aside></section><section class="slide level2"><h2>Key Points</h2>
+<ul>
+<li>We test hypotheses about populations from sample estimates.</li>
+<li>A P-Value is the probability that a boring population would generate a sample estimate as or more extreme than we observe.</li>
+<li>We reject the null hypothesis when this probability is low &amp; fail to reject it otherwise.</li>
+<li>Hypothesis testing can go wrong: We can reject true nulls and fail to reject false ones.</li>
+<li>Hypothesis testing requires extreme care. ## DIGRESSION ABOUT HISTORY, P-VALUES, EUGENICS AND MORE {.dark-theme .center}</li>
+</ul></section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://xkcd.com/882/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
 <figcaption>“If all else fails use significance at the xkcd.com/1478/ 𝛼 = 0.05 level and hope no one notices” https://xkcd.com/882/</figcaption></figure>

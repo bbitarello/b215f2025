@@ -151,13 +151,15 @@ Bárbara D. Bitarello
 <li>Explain the concepts of false positives and false negatives and why they happen.</li>
 <li>Understand when to use one vs two-tailed tests.</li>
 <li>Understand the relationship between p-values and CIs</li>
-</ul></section><section class="slide level2"><h2>Outline</h2>
+</ul></section><section class="slide level2"><h2></h2>
+
+<img data-src="images/clipboard-2217062523.png" class="r-stretch"></section><section class="slide level2"><h2>Outline</h2>
 <ul>
 <li>Estimating p-value and interpreting it</li>
 <li>Cautionary tales</li>
 <li>Type I and type II errors in hypothesis testing</li>
 <li>Estimation vs.&nbsp;hypothesis testing</li>
-<li>Philosophical/historical digression/discussion about p-values (will post extra optional readings)</li>
+<li>Philosophical/historical digression/discussion about p-values (optional readings posted in <a href="https://bbitarello.github.io/b215f2025/schedule.html#sec-lec">course website</a>)</li>
 </ul></section><section class="slide level2"><h2>Recap Question 1</h2>
 <p>Which of the choices below is an appropriate alternative hypothesis for a null hypothesis which reads: “the mean systolic blood pressure for men is 120”?</p>
 <p>A. The mean systolic blood pressure for men differs from 120.</p>
@@ -224,27 +226,26 @@ Bárbara D. Bitarello
 </ul>
 
 <img data-src="HypothesisTesting2_files/figure-revealjs/onetail-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>One vs two-tailed tests</h2>
-<div class="columns">
-<div class="column">
-<p>One-tailed</p>
+<p><strong>One-tailed</strong></p>
 <ul>
 <li>When planning a study, choosing a one-tailed P value gives you a more focused hypothesis and so reduces the necessary sample size.</li>
 <li>A study designed to use a one-tailed P value requires about 20% fewer subjects than the same study de-signed to use a two-tailed P value (Moyé &amp; Tita, 2002). This reduces costs</li>
-<li>Once the data are collected, the appeal of a one-tailed P value is clear. Assuming you predicted the direction of the effect correctly, a one-tailed P value equals one-half of the two-tailed P value (this is not always exactly true, but it is true for most statistical tests).</li>
-<li><strong><em>You should only report a one-tailed P value when you have predicted which treatment group will have the larger mean (or proportion, survival time, etc.) before you collect any data and have recorded this prediction (so you can’t be tempted to change your “prediction” after viewing the data)</em></strong></li>
+<li>Once the data are collected, the appeal is clear: assuming you predicted the direction of the effect correctly, a one-tailed P value equals 1/2 of the two-tailed P value (not always true, but true for most statistical tests).</li>
+<li>
+<strong><em>You should only report a one-tailed P value when you have predicted which treatment group will have the larger mean (or proportion, survival time, etc.) before you collect any data</em></strong> and have recorded this prediction (so you can’t be tempted to change your “prediction” after viewing the data)</li>
 </ul>
-</div><div class="column">
-<p>Two-tailed</p>
+
+<aside><div>
+<p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
+</div></aside></section><section class="slide level2"><h2>One vs two-tailed tests</h2>
+<p><strong>Two-tailed</strong></p>
 <ul>
 <li>When in doubt, use a two-tailed P value</li>
-<li>The relationship between P values and CIs is more straightforward with two-tailed P values.</li>
+<li>The relationship between P values and CIs is more straightforward</li>
 <li>Some tests compare three or more groups, in which case the concept of one or two tails makes no sense.</li>
 <li>The practical effect of choosing a one-tailed P value is to make it appear that the evidence is stronger (because the P value is lower). But this is not due to any data collected in the experiment, but rather to a choice (or perhaps a belief) of the experimenter.</li>
-<li>Some reviewers or editors may criticize any use of a one-tailed P value, no matter how well you justify it.</li>
-</ul>
-</div></div>
-<p>From: <strong>Intuitive Biostatistics, Motulsky, 4th edition</strong></p>
-</section><section class="slide level2"><h2>A Guide To P-values From</h2>
+<li>Some reviewers or editors may criticize any use of a one-tailed P value, no matter how well you justify it. ::: aside Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition :::</li>
+</ul></section><section class="slide level2"><h2>A Guide To P-values From</h2>
 <p>The <a href="https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108#.XF_ODc9KjOS">ASA</a></p>
 <ul>
 <li><p>P-values can indicate how <em>incompatible</em> the data are with a specified statistical model (aka, the null hypothesis).</p></li>
@@ -442,6 +443,7 @@ Bárbara D. Bitarello
 </ul>
 <p><span class="math display">\[\text{Family-wise error rate}= 1-(1-\alpha)^n\]</span> <span class="math inline">\(\alpha\)</span>: The significance level for a single hypothesis test</p>
 <p><span class="math inline">\(n\)</span>: The total number of tests</p>
+</section><section class="slide level2"><h2>Family-wise error rate</h2>
 <p><strong>Astrology example:</strong></p>
 <p>For one hypothesis test: <span class="math inline">\(\text{Family-wise error rate}= 1- (1- 0.05)^1=0.05\)</span></p>
 <p>For 5 hypothesis tests: <span class="math inline">\(\text{Family-wise error rate}= 1- (1- 0.05)^5=0.23\)</span></p>
@@ -451,82 +453,17 @@ Bárbara D. Bitarello
 <li>There are many methods in the literature for dealing this</li>
 <li>The most widespread (albeit very conservative) is the Bonferroni correction</li>
 </ul>
-<p><span class="math inline">\(\alpha_{new}=\frac{\alpha_{orig}}{n}\)</span></p>
+<p><span class="math display">\[\alpha_{new}=\frac{\alpha_{orig}}{n}\]</span></p>
 <p>Using the previous example, to keep the probability of making a type I error at 5% in such a study, our new significance level would have to be:</p>
 <p>remember: there were 2,796 hypothesis tests in the study and they used a criterion of <span class="math inline">\(\alpha=0.05\)</span></p>
 <div class="fragment">
 <p><span class="math inline">\(\alpha_{new}=\frac{\alpha_{0.05}}{2796}=1.79\times 10^{-5}\)</span></p>
 </div>
-</section><section class="slide level2"><h2>P-values are not very reproducible</h2>
-<p>A reasonable definition of the P value is that it measures the strength of evidence against the null hypothesis. However, unless statistical power is very high (&gt;90%), the P value does not do this reliably.</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://www.nature.com/articles/nmeth.3288"><img data-src="images/clipboard-1608105659.png" alt="Shows two normal distributions. The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1." width="247"></a></p>
-<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al. (2015)</figcaption></figure>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://www.nature.com/articles/nmeth.3288#Sec1"><img data-src="images/clipboard-3026484271.png" alt="We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared."></a></p>
-<figcaption>We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared.</figcaption></figure>
-</div>
-</div></div>
-
-<aside><div>
-<p>From: Halsey, L., Curran-Everett, D., Vowler, S. et al.&nbsp;(2015) The fickle P value generates irreproducible results. Nat Methods 12, 179–185. https://doi.org/10.1038/nmeth.3288</p>
-</div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 67%">
-</colgroup>
-<thead><tr class="header">
-<th>Approach</th>
-<th>Questions Answered</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Confidence Interval</td>
-<td>What range of true eﬀect is consistent with the data?</td>
-</tr>
-<tr class="even">
-<td>P-value</td>
-<td>What is strength of the evidence that the true eﬀect is not zero?</td>
-</tr>
-<tr class="odd">
-<td>Hypothesis Test</td>
-<td>Is there enough evidence to make a decision based on a <br> conclusion that the eﬀect is not zero?</td>
-</tr>
-</tbody>
-</table></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
-<ul>
-<li>In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
-<li>With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
-<li>Stargazing: the process of over-emphasizing statistical significance.</li>
-<li>“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
-<li>When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
-</ul></section><section class="slide level2"><h2>Why P-values are confusing</h2>
-<ul>
-<li><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
-<li><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
-<li><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
-<li><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
-<li><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
-</ul>
-
-<aside><div>
-<p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
-</div></aside></section><section class="slide level2"><h2>Key Points</h2>
-<ul>
-<li>We test hypotheses about populations from sample estimates.</li>
-<li>A P-Value is the probability that a boring population would generate a sample estimate as or more extreme than we observe.</li>
-<li>We reject the null hypothesis when this probability is low &amp; fail to reject it otherwise.</li>
-<li>Hypothesis testing can go wrong: We can reject true nulls and fail to reject false ones.</li>
-<li>Hypothesis testing requires extreme care.</li>
-</ul>
+</section><section class="slide level2"><h2></h2>
 
 
-</section></section>
+
+<img data-src="images/clipboard-3661136366.png" class="r-stretch"></section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -644,7 +581,7 @@ Bárbara D. Bitarello
         // Number of milliseconds between automatically proceeding to the
         // next slide, disabled when set to 0, this value can be overwritten
         // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
+        autoSlide: 133000,
 
         // Stop auto-sliding after user input
         autoSlideStoppable: true,
