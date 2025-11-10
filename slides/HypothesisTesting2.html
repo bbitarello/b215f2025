@@ -130,7 +130,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block"><h1 class="title">5.2. Hypothesis Testing</h1>
+<section class="quarto-title-block"><h1 class="title">5.2. Hypothesis Testing</h1>
   <p class="subtitle">Statistical Power | Acknowledgments: Y. Brandvain’s code snippets</p>
 
 <div class="quarto-title-authors">
@@ -142,7 +142,7 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-11-05</p>
-</section><section><section id="key-learning-goals" class="title-slide slide level1"><h1>Key learning goals</h1>
+</section><section><section class="title-slide slide level1"><h1>Key learning goals</h1>
 <ul>
 <li>Be able to describe the Null Hypothesis.</li>
 <li>Understand the practice of Null Hypothesis Significance Testing.</li>
@@ -151,68 +151,379 @@ Bárbara D. Bitarello
 <li>Explain the concepts of false positives and false negatives and why they happen.</li>
 <li>Understand when to use one vs two-tailed tests.</li>
 <li>Understand the relationship between p-values and CIs</li>
-</ul></section><section id="outline" class="slide level2"><h2>Outline</h2>
+</ul></section><section class="slide level2"><h2>Outline</h2>
 <ul>
-<li>Type I and type II errors in hypothesis testing</li>
+<li>Estimating p-value and interpreting it</li>
 <li>Cautionary tales</li>
+<li>Type I and type II errors in hypothesis testing</li>
 <li>Philosophical/historical digression/discussion about p-values (will post extra optional readings)</li>
 <li>Estimation vs.&nbsp;hypothesis testing</li>
-</ul></section><section id="practice-question-1" class="slide level2"><h2>Practice Question 1</h2>
+</ul></section><section class="slide level2"><h2>Recap Question 1</h2>
 <p>Which of the choices below is an appropriate alternative hypothesis for a null hypothesis which reads: “the mean systolic blood pressure for men is 120”?</p>
 <p>A. The mean systolic blood pressure for men differs from 120.</p>
 <p>B. The mean systolic blood pressure for men differs from that of women.</p>
 <p>C. The mean systolic blood pressure for men is less than 120.</p>
 <p>D. The mean systolic blood pressure for men is more than 120.</p>
-</section><section id="recap-question-2" class="slide level2"><h2>Recap Question 2</h2>
+</section><section class="slide level2"><h2>Recap Question 2</h2>
 <p>The P-value is best described as the probability that</p>
 <p>A. We would observe the data we do if the null hypothesis is false.</p>
 <p>B. We would observe the data we do if the null hypothesis is true.</p>
 <p>C. The null hypothesis is false.</p>
 <p>D. The null hypothesis is true.</p>
-</section><section id="find-the-critical-value-p-value" class="slide level2"><h2>4-5: Find the critical Value &amp; P-Value</h2>
-<ul>
-<li>What is the probability of obtaining data as extreme or more extreme (in relation to the null distribution) than the one I obtained?</li>
-<li>If the probability is very low, we reject the null hypothesis</li>
-<li>If it is not, we fail to reject the null</li>
-<li>Because finding the critical value depends on the sampling distribution, we will not go into it now but we will once we talk about specific tests. In this problem specifically we are trying to find <span class="math inline">\(P(X\geq 16 \text{ OR }X \leq 4)\)</span>
-</li>
-</ul></section><section id="section" class="slide level2"><h2></h2>
-<ul>
-<li>More formally, we use a significance level (<span class="math inline">\(\alpha\)</span>): a probability used as criterion to reject the <span class="math inline">\(H_0\)</span>.</li>
-</ul>
+</section><section class="slide level2" data-transition="convex" data-transition-speed="fast"><h2>Recap: The Steps of Hypothesis Testing</h2>
+<ol type="1">
+<li class="fragment"><p>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>.</p></li>
+<li class="fragment"><p>Calculate a test statistic.</p></li>
+<li class="fragment"><p>Generate the null distribution.</p></li>
+<li class="fragment"><p>Find critical value at specified <span class="math inline">\(\alpha\)</span>, and the p-value.</p></li>
+</ol></section><section class="slide level2 dark-theme center"><h2>The P-value: a measure of surprise</h2>
 
-<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="decide-and-conclude" class="slide level2"><h2>Decide and Conclude</h2>
+<img data-src="images/clipboard-3002774278.png" width="268" class="r-stretch quarto-figure-center"><p class="caption">The Scream, by Edvard Munch - National Museum of Art, Architecture and Design, Public Domain</p></section><section class="slide level2"><h2>P-value</h2>
+<div class="goal">
+<p>The p-value is the probability a sample from the null model would be as or more extreme than our sample. It quantifies your surprise if you assumed that the null was true.</p>
+<p>More formal definitions:</p>
+<ol type="a">
+<li><p>The strength of evidence in the data against the null hypothesis</p></li>
+<li><p>The long-run frequency of getting the same result or one more extreme if the null hypothesis is true.</p></li>
+</ol>
+</div>
+
+<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>P-value</h2>
+<p>p-value = the probability of obtaining a test statistic at least as extreme as the one from the data at hand, assuming:</p>
 <ul>
-<li>
-<span class="math inline">\(P = 0.0118\)</span>, so this result is unlikely under <span class="math inline">\(H_0\)</span>.</li>
-<li>We reject <span class="math inline">\(H_0\)</span> at the <span class="math inline">\(\alpha\)</span> threshold.</li>
-<li>I.e., we reject that red and blue-shirted wrestlers win at equal proportions.</li>
-<li>Because the direction of our effect (<span class="math inline">\(16 &gt; 4\)</span>), we conclude that in our sample red shirts perform better than we can reasonably expect by chance.</li>
-<li>But: we recognize that given many tries a pattern this or more extreme can occur without any dependence between victory and shorts color.</li>
+<li>the model assumptions for the inference procedure used are all true, and</li>
+<li>the null hypothesis is true, and</li>
+<li>the random variable is the same (including the same population), and</li>
+<li>the sample size is the same.</li>
 </ul>
+<p>Notice that this is a <strong>conditional probability</strong> (<span class="math inline">\(P(\text{observed_effect}|\text{null hypothesis is true})\)</span>: The probability that something happens, given that various other conditions hold. One common misunderstanding is to neglect some or all of the conditions.</p>
 
 <aside><div>
-<p>Also, even significant observations might be biologically/scientifically irrelevant, as we shall see.</p>
-</div></aside></section><section id="hypothesis-testing-what-could-go-wrong" class="slide level2"><h2>Hypothesis Testing: What Could Go Wrong?</h2>
+<p>Credit: This slide uses materials from Martha Smith’s blog: https://web.ma.utexas.edu/users/mks/statmistakes/misinterppvalues.html</p>
+</div></aside></section><section class="slide level2"><h2>Finding P-values</h2>
+<ul>
+<li><p>Evaluating where the test statistic lies on a sampling distribution built from the null model.</p></li>
+<li><p>We generate this null sampling distribution by:</p></li>
+<li><p>Simulation</p></li>
+<li><p>Permutation (shuffling)</p></li>
+<li><p>Mathematical results developed by professional statisticians. These are built from the logic of probability theory.</p></li>
+</ul></section><section class="slide level2"><h2>Unremarkable P-value</h2>
+<p>We would not be surprised if the sample below came from the null model.</p>
+
+<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>A remarkable P-value</h2>
+<p>We would be very surprised if the sample below came from the null model.</p>
+
+<img data-src="HypothesisTesting2_files/figure-revealjs/remarkable-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Most Tests Are Two-Tailed</h2>
+<ul>
+<li>This means that a deviation in either tail of the distribution would be worth reporting.</li>
+</ul>
+
+<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>One-tailed P-values</h2>
+<ul>
+<li>If a tail of the distribution is nonsense, calculate a P-value without it. We’ll see that <span class="math inline">\(\chi^2\)</span> tests and F-tests are usually 1-tailed.</li>
+</ul>
+
+<img data-src="HypothesisTesting2_files/figure-revealjs/onetail-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>One vs two-tailed tests</h2>
+<div class="columns">
+<div class="column">
+<p>One-tailed</p>
+<ul>
+<li>When planning a study, choosing a one-tailed P value gives you a more focused hypothesis and so reduces the necessary sample size.</li>
+<li>A study designed to use a one-tailed P value requires about 20% fewer subjects than the same study de-signed to use a two-tailed P value (Moyé &amp; Tita, 2002). This reduces costs</li>
+<li>Once the data are collected, the appeal of a one-tailed P value is clear. Assuming you predicted the direction of the effect correctly, a one-tailed P value equals one-half of the two-tailed P value (this is not always exactly true, but it is true for most statistical tests).</li>
+<li><strong><em>You should only report a one-tailed P value when you have predicted which treatment group will have the larger mean (or proportion, survival time, etc.) before you collect any data and have recorded this prediction (so you can’t be tempted to change your “prediction” after viewing the data)</em></strong></li>
+</ul>
+</div><div class="column">
+<p>Two-tailed</p>
+<ul>
+<li>When in doubt, use a two-tailed P value</li>
+<li>The relationship between P values and CIs is more straightforward with two-tailed P values.</li>
+<li>Some tests compare three or more groups, in which case the concept of one or two tails makes no sense.</li>
+<li>The practical effect of choosing a one-tailed P value is to make it appear that the evidence is stronger (because the P value is lower). But this is not due to any data collected in the experiment, but rather to a choice (or perhaps a belief) of the experimenter.</li>
+<li>Some reviewers or editors may criticize any use of a one-tailed P value, no matter how well you justify it.</li>
+</ul>
+</div></div>
+<p>From: <strong>Intuitive Biostatistics</strong></p>
+</section><section class="slide level2"><h2>A Guide To P-values From</h2>
+<p>The <a href="https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108#.XF_ODc9KjOS">ASA</a></p>
+<ul>
+<li><p>P-values can indicate how <em>incompatible</em> the data are with a specified statistical model (aka, the null hypothesis).</p></li>
+<li><p>P-values <em>DO NOT</em> measure the probability that the studied hypothesis is true, NOR the probability that the data were produced by random chance alone.</p></li>
+<li><p>P-values <em>DO NOT</em> measure the size of an effect or the importance of a result. (you can have small effects and very significant p-values and vice-versa)</p></li>
+<li><p>Scientific conclusions &amp; business or policy decisions should not be based only on whether a P-value passes a specific threshold.</p></li>
+<li><p>A <font color="black">p-value,</font> or statistical significance, <font color="black">does not measure</font> the <font color="black">size</font> of an effect or the <font color="black">importance</font> of a result.</p></li>
+<li><p>By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.</p></li>
+<li><p>Proper inference requires full reporting and transparency.</p></li>
+</ul></section><section class="slide level2 dark-theme center"><h2>Statistical Significance and Making Binary Decisions</h2>
+</section><section class="slide level2"><h2>Statistical Significance</h2>
+<ul>
+<li><p>The significance level, <span class="math inline">\(\alpha\)</span>, is the probability used as the criterion for rejecting the null hypothesis.</p></li>
+<li><p>The significance level <span class="math inline">\(\alpha\)</span> is the probability of making the wrong decision when the null hypothesis is true.</p></li>
+<li><p>If the P-value is <span class="math inline">\(\leq \alpha\)</span>, we reject the null hypothesis, and say the result is <em>“statistically significant”</em></p></li>
+<li><p>The value of the test statistic required to achieve <span class="math inline">\(P \leq \alpha\)</span> is called the <em>“critical value”</em></p></li>
+</ul></section><section class="slide level2"><h2>Wrestlers’ shirt color example</h2>
+<p>Step: 4-5: Find the critical Value &amp; P-Value</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>What is the probability of obtaining data as extreme or more extreme (in relation to the null distribution) than the one I obtained?</li>
+<li>Because finding the critical value depends on the sampling distribution, we will not go into it now but we will once we talk about specific tests. In this problem specifically the sampling distribution is the binomial and it has known properties.</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="HypothesisTesting2_files/figure-revealjs/wrestlesim-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="slide level2"><h2>Wrestlers’ shirt color example</h2>
+<p>Step: 4-5: Find the critical Value &amp; P-Value</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>In our example, we have 20 trials (rounds), and we expect victories to be equally distributed across shirt colors worn by wrestlers (<span class="math inline">\(p_{success}=0.5\)</span>). We had 16 rounds won by red shirt-wearing wrestlers (<span class="math inline">\(\hat p=16/20 = 0.80\)</span>):</li>
+</ul>
+<p>Two tailed P-value: <span class="math inline">\(P(X \leq 4)+ P(X \geq 16)\)</span></p>
+<p><span class="math inline">\(=0.0059 + 0.0059 \approx 0.01182\)</span></p>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="HypothesisTesting2_files/figure-revealjs/wrestlesim2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="slide level2"><h2>Decide and conclude</h2>
+<p><span class="math inline">\(P =\)</span> 0.0118, so this result is unlikely under the null.</p>
+<p>We reject <span class="math inline">\(H_0\)</span> at the <span class="math inline">\(\alpha = 0.05\)</span> significance threshold.</p>
+<p>We conclude that red shirts perform better than we can reasonably expect by chance.</p>
+<p>But we recognize that given many tries a pattern this extreme (or even more extreme) can occur without any dependence between victory and shorts color.</p>
+</section><section class="slide level2"><h2>Hypothesis Testing: What Could Go Wrong?</h2>
 <p>Even if you do everything right, hypothesis testing can get it wrong.</p>
 <p>Hypothesis testing can go wrong in two types of ways:</p>
 <ul>
-<li>Rejecting a true null (False positive).</li>
-<li>Not rejecting a false null (False negative).</li>
-</ul></section><section id="statistical-power" class="slide level2"><h2>Statistical power</h2>
+<li>Rejecting a true null (False positive or type I error, aka <span class="math inline">\(\alpha\)</span>).</li>
+<li>Not rejecting a false null (False negative or type II error). Incorrectly concluding that there is no effect in the population when there truly is an effect.</li>
+</ul>
+<p>Type I and type II errors are theoretical concepts. When you are analyzing a sample you don’t know whether you are making this kind of error or not. The only exception is when you’re simulating a scenario and checking the performance of a test on simulated data.</p>
+</section><section class="slide level2"><h2>Statistical power</h2>
 <ul>
+<li>A measure of the capacity of an experiment to find an effect (a ‘statistically significant result’) when there truly is an effect.</li>
 <li>The probability that a random sample will lead to rejection of a false null hypothesis.</li>
 <li>Very difficult to quantify - we usually don’t know how different the truth is from the null hypothesis.</li>
-</ul></section><section id="what-improves-statistical-power" class="slide level2"><h2>What improves statistical power?</h2>
+</ul>
+<p><strong>What improves statistical power?</strong></p>
 <ol type="1">
 <li>Larger sample size</li>
 <li>The magnitude of the true discrepancy from the null hypothesis (aka the “effect size”)</li>
 <li>Low variability in the population of interest</li>
-</ol></section><section id="effects-of-sample-size" class="slide level2"><h2>Effects of Sample Size</h2>
-<p>The power of a test is the probability that a random sample will lead to rejection of a false null hypothesis.</p>
-<p>The probability of rejecting <span class="math inline">\(H_0\)</span>:</p>
+</ol></section><section class="slide level2"><h2>Effects of Sample Size</h2>
+<p>The exact relationship between several features of the experiment: the threshold for significance (<span class="math inline">\(\alpha\)</span>), size of the expected effect, variation present in the population (variance), alternative hypothesis (one or two sided), nature of the test (paired or unpaired), and sample size.</p>
 
-<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>The exact relationship between <span class="math inline">\(n\)</span> and the prob. of rejecting a false null depends on the <strong>effect size and the variance</strong>.</p>
+<img data-src="HypothesisTesting2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section class="slide level2 dark-theme center"><h2>Hypothesis Testing vs.&nbsp;Confidence Intervals</h2>
+<blockquote>
+<p><font color="white">“Imperfectly understood CIs are more useful and less dangerous than incorrectly understood P values.” – Hoenig and Heisey (2001) </font>The abuse of power: the pervasive fallacy of power calculations for data analysis. The American Statistician, 55(1), 19-24.</p>
+</blockquote>
+</section><section class="slide level2"><h2>Would confidence intervals and hypothesis tests on the same data give same answer?</h2>
+<div class="columns">
+<div class="column">
+<p>If the parameter value stated in the null hypothesis falls outside of the 95% confidence interval you estimated, it is almost certain your P-value will be significant at α = 0.05</p>
+<p><img data-src="images/clipboard-3951833706.png"></p>
+</div><div class="column">
+<p>If the parameter value stated in the null hypothesis falls inside of the 95% confidence interval you estimated, it is almost certain your P-value will be nonsignificant at α = 0.05</p>
+<p><img data-src="images/clipboard-317805946.png"></p>
+</div></div>
+</section><section class="slide level2 dark-theme center"><h2>Why not ditch the P-value and hypothesis testing in general and just use the CI, then?</h2>
+</section><section class="slide level2"><h2>Estimation vs.&nbsp;Hypothesis Testing</h2>
+<p>Both use sample data to make inferences about the underlying population</p>
+<div class="columns">
+<div class="column">
+<p><strong>CI</strong></p>
+<ul>
+<li><p>Estimation is <strong>quantitative:</strong> it quantifies, puts a bound on the likely values of a parameter, and gives me the size of the effect</p></li>
+<li><p>More revealing about the magnitude of the parameter or treatment effects</p></li>
+<li><p>Does everything hypothesis testing can do</p></li>
+<li><p>And yet are way less used in biological research</p></li>
+</ul>
+</div><div class="column">
+<p><strong>Hypothesis Testing</strong></p>
+<ul>
+<li><p>Hypothesis testing is more <strong>qualitative:</strong> does the estimated parameter value differ from a null model? Is there any effect at all (yes or no)</p></li>
+<li><p>Widely used in biology</p></li>
+<li><p>Decide (yes/no) whether sufficient evidence has been presented to support a scientific claim</p></li>
+</ul>
+</div></div>
+<div class="goal">
+<p>They work very well together. Providing P- values and point estimates + CI is currently the best way to go</p>
+</div>
+</section><section class="slide level2 dark-theme center"><h2>Caveats and Cautionary Tails</h2>
+</section><section class="slide level2"><h2>Reminders</h2>
+<ul>
+<li><p>Correlation <span class="math inline">\(\neq\)</span> causation</p></li>
+<li><p>Confounding variables: an unmeasured variable that may cause both X and Y</p></li>
+<li>
+<p>Observations <em>vs.</em> Experiments:</p>
+<ul>
+<li><p>Observed correlations are intriguing, and can generate plausible and important hypotheses.</p></li>
+<li><p>Correlations in treatment (x) and outcome (y) in well-controlled experimental manipulations more strongly imply causation because we can (try to) control for confounding variables.</p></li>
+</ul>
+</li>
+</ul></section><section class="slide level2"><h2>Statistical Significance <br><span class="math inline">\(\neq\)</span> Biological Importance</h2>
+<ul>
+<li>High powered Genome Wide Association Studies (GWAS) often identify loci associated with negligible increases in the chance of acquiring some disease.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.smbc-comics.com/comic/the-satan-gene"><img data-src="images/clipboard-4223926399.png" alt="From: www.smbc-comics.com/comic/the-satan-gene" width="319"></a></p>
+<figcaption>From: https://www.smbc-comics.com/comic/the-satan-gene</figcaption></figure>
+</div>
+</section><section class="slide level2"><h2>Significant? Important?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 38%">
+<col style="width: 27%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th><font size="7">Important </font></th>
+<th><font size="7">Not Important </font></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><font size="7">Significant</font></td>
+<td><font size="5">Polio vaccine reduces incidence of polio</font></td>
+<td><font size="5"> Things you don’t care about, or already well known things </font></td>
+</tr>
+<tr class="even">
+<td><font size="7">Not Significant</font></td>
+<td><font size="5"> Suggestive evidence in a small study, leading to future work. <strong>OR</strong> No support for a thing thought to matter in a large study. </font></td>
+<td><font size="5">Studies with small sample size and high P-value <strong>OR</strong> Things you don’t care about.</font></td>
+</tr>
+</tbody>
+</table></section><section class="slide level2"><h2>Multiple testing</h2>
+<ul>
+<li>If you perform several hypothesis tests within one study, there is a chance you will get at least one significant p-value.</li>
+<li>Methods exist to control for multiple testing for this reason.</li>
+<li>Most popular tool is called the Bonferroni correction</li>
+</ul></section><section class="slide level2"><h2>Example: astrology and health conditions</h2>
+<div class="goal">
+<p>In a study, authors searched through a health database of 10 million residents of Ontario, Canada, collecting their reason for admission into a hospital and their astrological sign. They then asked if people with certain astrological signs are more likely to be admitted to the hospital for certain conditions</p>
+</div>
+<p>Result: 72 diseases occurred more frequently in people with one astrological sign than in people with all other astrological signs, and this different was found to be statistically significant</p>
+<p><font color="#E54E21"> <strong>WOW!!!</strong> </font></p>
+
+<aside><div>
+<p>Credit: This example was taken from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
+</div></aside></section><section class="slide level2"><h2>…Wow, right?</h2>
+<ul>
+<li>Their significant level going in was α = 0.05</li>
+<li>I.e., the null hypothesis is rejected if a result as or more extreme than the one observed occurs with p &lt; 0.05</li>
+<li>Conclusion: there is a conniving relationship between astrological sign and health outcomes of individuals…right?</li>
+</ul></section><section class="slide level2"><h2>Not quite</h2>
+<ul>
+<li>Problem: Austin et al.&nbsp;looked at 233 conditions and 12 astrological signs, meaning they did 233 × 12 = 2,796 different hypothesis tests in this study</li>
+<li>Therefore: they would expect to find a false positive in <span class="math inline">\(0.05 \times 2796 = 139.75\)</span> times! In reality, they only found 72</li>
+<li>The result was not impressive at all!</li>
+<li>Note: this study was not an epic fail. It wasn’t looking at this relationship “for real” but rather the difficulty of interpreting statistical results.</li>
+</ul>
+
+<aside><div>
+<p>Austin et al.&nbsp;(2006). Testing multiple statistical hypotheses resulted in spurious associations: a study of astrological signs and health. Journal of clinical epidemiology, 59(9), 964-969.</p>
+</div></aside></section><section class="slide level2"><h2>Family-wise error rate</h2>
+<ul>
+<li><p>Whenever you perform a hypothesis test, there is a chance of committing a type I error (rejecting the null hypothesis when it is actually true).</p></li>
+<li><p>For ONE hypothesis test: the type 1 error rate (false positive) is simply α–the significance level!</p></li>
+<li><p>When we conduct multiple hypothesis tests at once, we have to deal with something known as a family-wise error rate, which is the probability that at least one of the tests produces a false positive:</p></li>
+</ul>
+<p><span class="math display">\[\text{Family-wise error rate}= 1-(1-\alpha)^n\]</span> <span class="math inline">\(\alpha\)</span>: The significance level for a single hypothesis test</p>
+<p><span class="math inline">\(n\)</span>: The total number of tests</p>
+<p><strong>Astrology example:</strong></p>
+<p>For one hypothesis test: <span class="math inline">\(\text{Family-wise error rate}= 1- (1- 0.05)^1=0.05\)</span></p>
+<p>For 5 hypothesis tests: <span class="math inline">\(\text{Family-wise error rate}= 1- (1- 0.05)^5=0.23\)</span></p>
+<p>For 2,676 hypothesis tests: <span class="math inline">\(\text{Family-wise error rate}= 1- (1- 0.05)^{2796}=1\)</span></p>
+</section><section class="slide level2"><h2>The Bonferroni correction for multiple testing</h2>
+<ul>
+<li>There are many methods in the literature for dealing this</li>
+<li>The most widespread (albeit very conservative) is the Bonferroni correction</li>
+</ul>
+<p><span class="math inline">\(\alpha_{new}=\frac{\alpha_{orig}}{n}\)</span></p>
+<p>Using the previous example, to keep the probability of making a type I error at 5% in such a study, our new significance level would have to be:</p>
+<p>remember: there were 2,796 hypothesis tests in the study and they used a criterion of <span class="math inline">\(\alpha=0.05\)</span></p>
+<div class="fragment">
+<p><span class="math inline">\(\alpha_{new}=\frac{\alpha_{0.05}}{2796}=1.79\times 10^{-5}\)</span></p>
+</div>
+</section><section class="slide level2"><h2>P-values are not very reproducible</h2>
+<p>A reasonable definition of the P value is that it measures the strength of evidence against the null hypothesis. However, unless statistical power is very high (&gt;90%), the P value does not do this reliably.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288"><img data-src="images/clipboard-1608105659.png" alt="Shows two normal distributions. The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1." width="247"></a></p>
+<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al. (2015)</figcaption></figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288#Sec1"><img data-src="images/clipboard-3026484271.png" alt="We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared."></a></p>
+<figcaption>We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared.</figcaption></figure>
+</div>
+</div></div>
+
+<aside><div>
+<p>From: Halsey, L., Curran-Everett, D., Vowler, S. et al.&nbsp;(2015) The fickle P value generates irreproducible results. Nat Methods 12, 179–185. https://doi.org/10.1038/nmeth.3288</p>
+</div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 67%">
+</colgroup>
+<thead><tr class="header">
+<th>Approach</th>
+<th>Questions Answered</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Confidence Interval</td>
+<td>What range of true eﬀect is consistent with the data?</td>
+</tr>
+<tr class="even">
+<td>P-value</td>
+<td>What is strength of the evidence that the true eﬀect is not zero?</td>
+</tr>
+<tr class="odd">
+<td>Hypothesis Test</td>
+<td>Is there enough evidence to make a decision based on a <br> conclusion that the eﬀect is not zero?</td>
+</tr>
+</tbody>
+</table></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
+<ul>
+<li>In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
+<li>With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
+<li>Stargazing: the process of over-emphasizing statistical significance.</li>
+<li>“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
+<li>When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
+</ul></section><section class="slide level2"><h2>Why P-values are confusing</h2>
+<ul>
+<li><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
+<li><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
+<li><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
+<li><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
+<li><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
+</ul>
+
+<aside><div>
+<p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
+</div></aside></section><section class="slide level2"><h2>Key Points</h2>
+<ul>
+<li>We test hypotheses about populations from sample estimates.</li>
+<li>A P-Value is the probability that a boring population would generate a sample estimate as or more extreme than we observe.</li>
+<li>We reject the null hypothesis when this probability is low &amp; fail to reject it otherwise.</li>
+<li>Hypothesis testing can go wrong: We can reject true nulls and fail to reject false ones.</li>
+<li>Hypothesis testing requires extreme care.</li>
+</ul>
 
 
 </section></section>
