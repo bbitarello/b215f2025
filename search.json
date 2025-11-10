@@ -1059,140 +1059,140 @@
   {
     "objectID": "slides/HypothesisTesting.html#outline",
     "href": "slides/HypothesisTesting.html#outline",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Outline",
     "text": "Outline\n\nIntro to hypothesis testing\nExample of hypothesis testing step-by-step\nType I and type II errors in hypothesis testing\nCautionary tales\nPhilosophical/historical digression/discussion about p-values (will post extra optional readings)\nEstimation vs. hypothesis testing"
   },
   {
     "objectID": "slides/HypothesisTesting.html#hypothesis-testing",
     "href": "slides/HypothesisTesting.html#hypothesis-testing",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Hypothesis Testing",
     "text": "Hypothesis Testing\nIn addition to estimation, hypothesis testing is a major goal of statistics.\nExample Hypotheses:\n\nDoes a treatment have an effect?\nAre two groups different?\nDo the number of problems grow with a person’s income?\n\nStatistical hypothesis testing automates decision making\nStatistical hypothesis (null and alternative) \\(neq\\) Scientific hypothesis (statements about the existence and possible causes of natural phenomena)"
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-dilemma",
     "href": "slides/HypothesisTesting.html#the-dilemma",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The Dilemma",
     "text": "The Dilemma\nWe take samples to understand the world out there.\n\nSo, can our estimates be simply explained by chance, or are they special?"
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-solution",
     "href": "slides/HypothesisTesting.html#the-solution",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The solution",
     "text": "The solution\nWe can only take a sample and make estimates.\nWe can imagine taking infinite samples from a population\nBuild a sampling dist. from a boring population we can describe. \nWhere would or estimate fall on this distribution"
   },
   {
     "objectID": "slides/HypothesisTesting.html#critical-assumption",
     "href": "slides/HypothesisTesting.html#critical-assumption",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Critical Assumption",
     "text": "Critical Assumption\nHypothesis testing assumes random sampling  – or that we account for non-random sampling in building the null model.\n Repeat after me:\n\nHypothesis tests account for sampling error, NOT for sampling bias. \n\n\nInspirational figure to remind you that: Hypothesis tests from biased samples are misleading and cannot be trusted"
   },
   {
     "objectID": "slides/HypothesisTesting.html#null-hypothesis",
     "href": "slides/HypothesisTesting.html#null-hypothesis",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Null Hypothesis",
     "text": "Null Hypothesis"
   },
   {
     "objectID": "slides/HypothesisTesting.html#hypotheses-are-about-populations",
     "href": "slides/HypothesisTesting.html#hypotheses-are-about-populations",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Hypotheses are about POPULATIONS",
     "text": "Hypotheses are about POPULATIONS\n\nWe conduct hypothesis testing by checking if our estimate is surprising (unlikely) under the null model.\nThe hypothesis is about the population - not about your sample.\nThe null hypothesis (\\(H_0\\)) skeptically argues that data come from a boring population described by the null model.\nBuilding a sampling distribution from the appropriate null model is key to hypothesis testing."
   },
   {
     "objectID": "slides/HypothesisTesting.html#we-ask",
     "href": "slides/HypothesisTesting.html#we-ask",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "We ask",
     "text": "We ask\n\nIs the population from which we sampled different from a boring population?"
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-null-hypothesis-definition",
     "href": "slides/HypothesisTesting.html#the-null-hypothesis-definition",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The null hypothesis: Definition",
     "text": "The null hypothesis: Definition\n\nNull hypothesis: a specific statement about a boring population made for the sake of argument (aka — the skeptical view).\n\nA Good 😒 Null Hypothesis:  😒\n\nReflects all aspects of the null / boring population, except those posed by \\(H_0\\)\nAsks “Can the results be easily explained by chance?”\nWould be interesting if proven wrong.\nReflects the process of sampling."
   },
   {
     "objectID": "slides/HypothesisTesting.html#h_0-is-specific-h_a-is-not.",
     "href": "slides/HypothesisTesting.html#h_0-is-specific-h_a-is-not.",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "😒 \\(H_0\\)  😒 is specific, 🤓  \\(H_A\\) 🤓 is not.",
     "text": "😒 \\(H_0\\)  😒 is specific, 🤓  \\(H_A\\) 🤓 is not.\n What does this mean? \nIt means that a null hypothesis specifies a model that can be used to build a sampling distribution\n\nFor example: \\(\\mu = 0\\) and \\(\\sigma^2 = 1\\) or \\(\\mu_{pop1} = \\mu_{pop2}\\).\n\nBy contrast the alternative hypothesis is less specific.\n\nThat is, “The sample does not come from a population with the parameter specified by the null model” or “x &gt; y” etc…"
   },
   {
     "objectID": "slides/HypothesisTesting.html#caution-remember-why-we-do-stats",
     "href": "slides/HypothesisTesting.html#caution-remember-why-we-do-stats",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Caution: Remember Why We Do Stats!",
     "text": "Caution: Remember Why We Do Stats!\n\nOur goal is to learn about the World Out There (the population) from our finite view (the sample)\nRejecting the null hypothesis is not our goal (although it can be satisfying / exciting)."
   },
   {
     "objectID": "slides/HypothesisTesting.html#hypothesis-testing-example-red-vs-blue-wrestlers",
     "href": "slides/HypothesisTesting.html#hypothesis-testing-example-red-vs-blue-wrestlers",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "Hypothesis testing example: red vs blue wrestlers",
     "text": "Hypothesis testing example: red vs blue wrestlers\n\n\n\n“Real world” question: Does wearing a red shirt help win a wrestling match\nFirst: Turn this into a more “statistical” question, gather some data, and get to work!\n\n\n\n\nFrom: Source: https://commons.wikimedia.org/"
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-questions",
     "href": "slides/HypothesisTesting.html#the-questions",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The questions",
     "text": "The questions\n\nQuestion: Does red influence the outcome of wrestling, taekwondo, and boxing?\nClearer (statistical) question: are the colors of outfits won by wrestlers predictors of victory/defeat?\n“Scientific” question: could be something about the impact of the color red on aggression levels, hormones, neurotransmitters, etc."
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-experiment-and-results",
     "href": "slides/HypothesisTesting.html#the-experiment-and-results",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The experiment and results",
     "text": "The experiment and results\nData / experiment:\n\n16 of 20 rounds had more red-shirted than blue-shirted winners in in the 2004 Olympics.\nShirt color was randomly assigned.\nInterpretation: Potentially related to red as a sign of aggression in animals?"
   },
   {
     "objectID": "slides/HypothesisTesting.html#the-steps-of-hypothesis-testing",
     "href": "slides/HypothesisTesting.html#the-steps-of-hypothesis-testing",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "The Steps of Hypothesis Testing",
     "text": "The Steps of Hypothesis Testing\n\nState \\(H_0\\) and \\(H_A\\).\nCalculate a test statistic.\nGenerate the null distribution.\nFind critical value at specified \\(\\alpha\\), and the p-value.\nDecide:  Reject the \\(H_0\\) if the test stat is \\(\\geq\\) the critical value (\\(p\\leq\\alpha\\)).  OR Fail to reject \\(H_0\\) if the test stat is \\(&lt;\\) the critical value (\\(p&gt;\\alpha\\)).\n\nNotice that step 5 makes this a YES/NO kind of answer in the end, rather than a quantification of the eﬀect of red on victories"
   },
   {
     "objectID": "slides/HypothesisTesting.html#state-h_0-and-h_a",
     "href": "slides/HypothesisTesting.html#state-h_0-and-h_a",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "1.State \\(H_0\\) and \\(H_a\\)\n",
     "text": "1.State \\(H_0\\) and \\(H_a\\)\n\nAre the colors of outfits won by wrestlers predictors of victory/defeat?\n\n\\(H_0\\): Red and blue-shirted athletes are equally likely to win (proportion of red among winners \\(= 0.5\\)). (notice how this is very specific)\n\\(H_a\\): Red & blue-shirted athletes are not equally likely to win (proportion of red among winners \\(\\neq 0.5\\)). (not specific)\nOne of these must be true. One is very specific, the other is not. Which one do the data support?"
   },
   {
     "objectID": "slides/HypothesisTesting.html#calculate-a-test-statistic",
     "href": "slides/HypothesisTesting.html#calculate-a-test-statistic",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "2. Calculate a Test Statistic",
     "text": "2. Calculate a Test Statistic\n16 of 20 rounds had more red-shirted than blue-shirted winners.\nOur test statistic here the difference between our observation (16 of 20 wins) and our expectation (10 of twenty wins).\n\nNote: Test statistics: numbers calculated from the data and used to compare out results with those expected under the null hypothesis. They are variable and are related to the type of test we use. E.g. the statistic \\(\\chi^2\\) (chi-square) is the test statistic used in the \\(\\chi^2\\) test; the one-sample t-test uses the \\(t\\) statistic, etc."
   },
   {
     "objectID": "slides/HypothesisTesting.html#generate-the-null-distribution",
     "href": "slides/HypothesisTesting.html#generate-the-null-distribution",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "3. Generate the Null Distribution",
     "text": "3. Generate the Null Distribution\nThis is a binomial distribution, which we will learn about next week."
   },
   {
     "objectID": "slides/HypothesisTesting.html#find-the-critical-value-p-value",
     "href": "slides/HypothesisTesting.html#find-the-critical-value-p-value",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "4-5: Find the critical Value & P-Value",
     "text": "4-5: Find the critical Value & P-Value\n\nWhat is the probability of obtaining data as extreme or more extreme (in relation to the null distribution) than the one I obtained?\nIf the probability is very low, we reject the null hypothesis\nIf it is not, we fail to reject the null\nBecause finding the critical value depends on the sampling distribution, we will not go into it now but we will once we talk about specific tests. In this problem specifically we are trying to find \\(P(X\\geq 16 \\text{ OR }X \\leq 4)\\)"
   },
   {
     "objectID": "slides/HypothesisTesting.html#section",
     "href": "slides/HypothesisTesting.html#section",
-    "title": "5.1. Hypothesis Testing",
+    "title": "5.1.Hypothesis Testing",
     "section": "",
     "text": "More formally, we use a significance level (\\(\\alpha\\)): a probability used as criterion to reject the \\(H_0\\)."
   },
@@ -1877,7 +1877,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nStandard Error\n\n\n4.3.Estimation with Uncertainty\n\n\nWed, Oct 29\n\n\n\n\n\n\nConfidence Intervals\n\n\n4.4.Estimation with Uncertainty\n\n\nMon, Nov 03\n\n\n\n\n\n\nConfidence Intervals & Pseudoreplication\n\n\n4.5.Estimation with Uncertainty\n\n\nWed, Nov 05\n\n\n\n\n\n\nHypothesis Testing\n\n\n5.1. Hypothesis Testing\n\n\nWed, Nov 05\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nStandard Error\n\n\n4.3.Estimation with Uncertainty\n\n\nWed, Oct 29\n\n\n\n\n\n\nConfidence Intervals\n\n\n4.4.Estimation with Uncertainty\n\n\nMon, Nov 03\n\n\n\n\n\n\nConfidence Intervals & Pseudoreplication\n\n\n4.5.Estimation with Uncertainty\n\n\nWed, Nov 05\n\n\n\n\n\n\nHypothesis Testing\n\n\n5.1.Hypothesis Testing\n\n\nMon, Nov 10\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -4012,7 +4012,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n2\n9/10\n1.3 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n3\n9/15\n1.4 Statistics & Samples\nInterleaf 6: Controls in medical studies\n\n\n\n\n2.1 Displaying & Describing Data\nCh.2-3\n\n\n3\n9/17\n2.2 Displaying & Describing Data (center)\nCh.2-3\n\n\n4\n9/22\n2.3 Displaying & Describing Data (spread)\nCh.2-3\n\n\n4\n9/24\n2.4 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n9/29\n2.5 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n10/1\n3.1 Probability\nCh.5\n\n\n6\n10/6\n3.2 Probability\nCh.5\n\n\n6\n10/8\n3.3 Probability\nCh.5\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n7\n10/20\n3.4. Probability\nCh.4\n\n\n7\n10/22\n4.1 Estimation\nCh.4\n\n\n8\n10/27\n4.2 Estimation\nCh.4\n\n\n8\n10/30\n4.3 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/3\n4.4 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/5\n5.1 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/10\n5.2 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/12\n\n\n\n\n11\n11/17\n\n\n\n\n11\n11/19\n\n\n\n\n12\n11/24\n\n\n\n\n12\n11/26\nNo in-person class (recorded lecture posted on Moodle)\n\n\n\n13\n12/1\n\n\n\n\n13\n12/3\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n14\n12/10\nReview, Course Evals",
+    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n2\n9/10\n1.3 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n3\n9/15\n1.4 Statistics & Samples\nInterleaf 6: Controls in medical studies\n\n\n\n\n2.1 Displaying & Describing Data\nCh.2-3\n\n\n3\n9/17\n2.2 Displaying & Describing Data (center)\nCh.2-3\n\n\n4\n9/22\n2.3 Displaying & Describing Data (spread)\nCh.2-3\n\n\n4\n9/24\n2.4 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n9/29\n2.5 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n10/1\n3.1 Probability\nCh.5\n\n\n6\n10/6\n3.2 Probability\nCh.5\n\n\n6\n10/8\n3.3 Probability\nCh.5\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n7\n10/20\n3.4. Probability\nCh.4\n\n\n7\n10/22\n4.1 Estimation\nCh.4\n\n\n8\n10/27\n4.2 Estimation\nCh.4\n\n\n8\n10/30\n4.3 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/3\n4.4 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/5\n5.1 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/10\n5.2 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/12\n5.2 Hypothesis Testing  6.1 Proportions & Probability Models\nCh. 6 & Interleaf 3  Ch. 7\n\n\n11\n11/17\n6.2 Proportions & Probability Models\nCh. 7\n\n\n11\n11/19\n7.1 Contingency Tables\nCh.8\n\n\n12\n11/24\n\n\n\n\n12\n11/26\nNo in-person class (recorded lecture posted on Moodle)\n\n\n\n13\n12/1\n\n\n\n\n13\n12/3\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n14\n12/10\nReview, Course Evals",
     "crumbs": [
       "Schedule"
     ]
@@ -4022,7 +4022,7 @@
     "href": "schedule.html#sec-lec",
     "title": "Schedule",
     "section": "",
-    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n2\n9/10\n1.3 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n3\n9/15\n1.4 Statistics & Samples\nInterleaf 6: Controls in medical studies\n\n\n\n\n2.1 Displaying & Describing Data\nCh.2-3\n\n\n3\n9/17\n2.2 Displaying & Describing Data (center)\nCh.2-3\n\n\n4\n9/22\n2.3 Displaying & Describing Data (spread)\nCh.2-3\n\n\n4\n9/24\n2.4 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n9/29\n2.5 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n10/1\n3.1 Probability\nCh.5\n\n\n6\n10/6\n3.2 Probability\nCh.5\n\n\n6\n10/8\n3.3 Probability\nCh.5\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n7\n10/20\n3.4. Probability\nCh.4\n\n\n7\n10/22\n4.1 Estimation\nCh.4\n\n\n8\n10/27\n4.2 Estimation\nCh.4\n\n\n8\n10/30\n4.3 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/3\n4.4 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/5\n5.1 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/10\n5.2 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/12\n\n\n\n\n11\n11/17\n\n\n\n\n11\n11/19\n\n\n\n\n12\n11/24\n\n\n\n\n12\n11/26\nNo in-person class (recorded lecture posted on Moodle)\n\n\n\n13\n12/1\n\n\n\n\n13\n12/3\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n14\n12/10\nReview, Course Evals",
+    "text": "Please check often. Subject to change. New material is added approximately on a weekly basis.\nChapters refer to the assigned textbook (3rd edition). Corresponding chapters exist in the 2nd edition but may have a different number.\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nRecommended Readings\n\n\n\n\n1\n9/3\n1.1 Statistics & Samples\nCh. 1\n\n\n2\n9/8\n1.2 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n2\n9/10\n1.3 Statistics & Samples\nCh.1, Interleaf 1: Correlation does not require causation\n\n\n3\n9/15\n1.4 Statistics & Samples\nInterleaf 6: Controls in medical studies\n\n\n\n\n2.1 Displaying & Describing Data\nCh.2-3\n\n\n3\n9/17\n2.2 Displaying & Describing Data (center)\nCh.2-3\n\n\n4\n9/22\n2.3 Displaying & Describing Data (spread)\nCh.2-3\n\n\n4\n9/24\n2.4 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n9/29\n2.5 Displaying & Describing Data (plots)\nCh. 2-3\n\n\n5\n10/1\n3.1 Probability\nCh.5\n\n\n6\n10/6\n3.2 Probability\nCh.5\n\n\n6\n10/8\n3.3 Probability\nCh.5\n\n\n\n10/13\nNo classes (Fall Break!)\n\n\n\n7\n10/20\n3.4. Probability\nCh.4\n\n\n7\n10/22\n4.1 Estimation\nCh.4\n\n\n8\n10/27\n4.2 Estimation\nCh.4\n\n\n8\n10/30\n4.3 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/3\n4.4 Estimation\nCh.4 & Interleaf 2\n\n\n9\n11/5\n5.1 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/10\n5.2 Hypothesis Testing\nCh. 6 & Interleaf 3\n\n\n10\n11/12\n5.2 Hypothesis Testing  6.1 Proportions & Probability Models\nCh. 6 & Interleaf 3  Ch. 7\n\n\n11\n11/17\n6.2 Proportions & Probability Models\nCh. 7\n\n\n11\n11/19\n7.1 Contingency Tables\nCh.8\n\n\n12\n11/24\n\n\n\n\n12\n11/26\nNo in-person class (recorded lecture posted on Moodle)\n\n\n\n13\n12/1\n\n\n\n\n13\n12/3\n\n\n\n\n14\n12/8\nWrap-up, Review\n\n\n\n14\n12/10\nReview, Course Evals",
     "crumbs": [
       "Schedule"
     ]
