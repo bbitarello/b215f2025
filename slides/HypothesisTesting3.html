@@ -11,7 +11,7 @@
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-12">
-<meta name="keywords" content="Historical/philosophical digressions">
+<meta name="keywords" content="Multiple testing problem">
 <title>BIOL B215: Biostatistics with R – 5.3. Hypothesis Testing</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -131,7 +197,7 @@
     <div class="slides">
 
 <section class="quarto-title-block"><h1 class="title">5.3. Hypothesis Testing</h1>
-  <p class="subtitle">Historical/philosophical considerations | Acknowledgments: Y. Brandvain’s code snippets</p>
+  <p class="subtitle">Historical/philosophical considerations | Acknowledgments: Didactical materials from the www.serjeonstats.com blog</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -142,13 +208,132 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-11-12</p>
+</section><section class="slide level2"><h2>Recap (1/3)</h2>
+<p>Data dredging (aka <em>p</em>-hacking)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://xkcd.com/882/"><img data-src="images/clipboard-3350963693.png" alt="Comic about data dredging (aka p-hacking)"></a></p>
+<figcaption>So, uh, we did the green study again and got no link. It was probably a– “RESEARCH CONFLICTED ON GREEN JELLY BEAN/ACNE LINK; MORE STUDY RECOMMENDED!”. From: https://xkcd.com/882/</figcaption></figure>
+</div>
+</section><section class="slide level2"><h2>Recap (2/3)</h2>
+
+<img data-src="images/clipboard-3496468277.png" class="r-stretch"></section><section class="slide level2"><h2>Recap (3/3)</h2>
+
+<img data-src="images/clipboard-2412834495.png" class="r-stretch"></section><section class="slide level2"><h2>The multiple testing problem</h2>
+<p>When conducting multiple hypothesis tests simultaneously, we increase the probability of false positives (Type I errors).</p>
+<p>Suppose we perform <span class="math inline">\(n\)</span> independent hypothesis tests, each with a significance level <span class="math inline">\(\alpha\)</span>.</p>
+<p>The probability of making <em>at least one</em> Type I error (false positive) is:</p>
+<p><span class="math display">\[P(\text{at least one false positive})=1−(1−\alpha)^n\]</span></p>
+<p>This probability is known as Family-wise error rate (FWER).</p>
+<p>There are two groups of approaches to deal with this:</p>
+<ol type="1">
+<li class="fragment"><p>controlling the family-wise error rate (FWER)</p></li>
+<li class="fragment"><p>controlling the false discovery rate (FDR)</p></li>
+</ol>
+<ul>
+<li class="fragment">Both quantify the risks of multiple testing but in different ways.</li>
+<li class="fragment">Both have strengths and weaknesses but first I want to show you how they are different.</li>
+</ul></section><section class="slide level2"><h2>FWER</h2>
+<blockquote>
+<p>FWER is a metric that quantifies the risk caused by multiple testing. It’s the probabilityof making <u>one or more</u> false discoveries (type I errors) when performing multiple hypotheses tests.</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"><img data-src="images/clipboard-1420914364.png" class="quarto-figure quarto-figure-center" alt="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<p>Each large circle: a set of tests corrected for family-wise error. Small squares are null effects, small circles are real effects. Filled circles and squares represent rejections of the null hypothesis (“positives”). Two studies (filled large circles) produced one or more Type I errors (filled blue squares). This results in a FWER of <span class="math inline">\(2/9 = .22\)</span>.</p>
+</div></div>
+<p><strong>Controlling FWER:</strong> ensures that no more than <span class="math inline">\(100\times \alpha\%\)</span> of your <em>studies</em> will produce <em>any</em> (<span class="math inline">\(\geq1\)</span>) Type I errors. One way ( the most common) to do that is through the Bonferroni correction, which we saw last time.</p>
+
+<aside class="notes"><p>Answer: 2/9. If you control the FWER at .05, then in at least 95% of your studies, all of the significant results will be from true effects. In the other 5% of your experiments, one or more of the effects will represent Type I errors. Putting this another way, 5% of your families of tests will produce Type I errors. (This does not mean that 5% of the null effects will produce Type I errors, or that 5% of your effects are really nulls.)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside><aside><div>
+<p>From: https://www.serjeonstats.com</p>
+</div></aside></section><section class="slide level2"><h2>FDR</h2>
+<blockquote>
+<p>Simply put, <span class="math inline">\(FDR = FP / (FP + TP)\)</span>, where <span class="math inline">\(FP\)</span>: false positive; <span class="math inline">\(TP\)</span>: true positive.</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"><img data-src="images/clipboard-2872513162.png" class="quarto-figure quarto-figure-center" alt="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<p>These are the same ‘data’ depicted in the first figure, but highlighting the information relevant to FDR. We have a total of 24 null rejections/significant effects (filled squares and circles), of which 3 are Type I errors (filled blue squares). So <span class="math inline">\(FDR=3/24=0.125\)</span></p>
+</div></div>
+<p><strong>Controlling FDR:</strong> ensures, that across your statistical tests, at most <span class="math inline">\(\alpha\%\)</span> of your significant results are really Type I errors. One way to correct for FDR (and the most common) is the Benjamini–Hochberg procedure (BH).</p>
+
+<aside><div>
+<p>From: https:://www.serjeonstats.com</p>
+</div></aside></section><section class="slide level2"><h2>In R</h2>
+<p>FDR:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="co"># Generate 20 random p-values</span></span>
+<span id="cb1-4"><a></a>p_values <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">20</span>, <span class="dv">0</span>, <span class="fl">0.1</span>)  <span class="co"># Simulating p-values from multiple tests</span></span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="co"># Apply FDR correction (Benjamini-Hochberg)</span></span>
+<span id="cb1-7"><a></a>adjusted_p <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(p_values, <span class="at">method =</span> <span class="st">"BH"</span>)</span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="co"># Compare raw and adjusted p-values</span></span>
+<span id="cb1-10"><a></a><span class="fu">data.frame</span>(<span class="at">Raw_p =</span> <span class="fu">round</span>(p_values, <span class="dv">3</span>), <span class="at">Adjusted_p =</span> <span class="fu">round</span>(adjusted_p, <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a></a>    <span class="fu">head</span>()</span>
+<span id="cb1-12"><a></a><span class="do">##   Raw_p Adjusted_p</span></span>
+<span id="cb1-13"><a></a><span class="do">## 1 0.029      0.095</span></span>
+<span id="cb1-14"><a></a><span class="do">## 2 0.079      0.096</span></span>
+<span id="cb1-15"><a></a><span class="do">## 3 0.041      0.095</span></span>
+<span id="cb1-16"><a></a><span class="do">## 4 0.088      0.096</span></span>
+<span id="cb1-17"><a></a><span class="do">## 5 0.094      0.096</span></span>
+<span id="cb1-18"><a></a><span class="do">## 6 0.005      0.046</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section><section class="slide level2"><h2>FWER and FDR takeaways</h2>
+</section><section class="slide level2"><h2>Takeaways</h2>
+<p><strong>Takeaway 1:</strong> FDR will generally produce more Type I errors, but buys you more power (produces fewer Type II errors). Choosing between the two approaches always involves a trade-off between avoiding type I errors at the cost of reduced power.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://bookdown.org/mike/data_analysis/sec-false-discovery-rate.html#sec-false-discovery-rate"><img data-src="images/clipboard-2899040513.png" class="quarto-figure quarto-figure-center" alt="Table showing FDR vs FWER and their correction methods."></a></p>
+</figure>
+</div>
+<figcaption>From: bookdown.org/mike/data_analysis/sec-false-discovery-rate.html</figcaption></figure>
+</div>
+</section><section class="slide level2"><h2>Recommendations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Use FDR correction when:<br></p>
+<ul>
+<li class="fragment"><p>You perform many hypothesis tests (e.g., genomics).</p></li>
+<li class="fragment"><p>You want to balance false positives and false negatives.</p></li>
+<li class="fragment"><p>Bonferroni is too strict, leading to low power.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>Do NOT use FDR correction if:</p>
+<ul>
+<li class="fragment"><p>Strict control of any false positives is required (e.g., drug approval studies).</p></li>
+<li class="fragment"><p>There are only a few tests, where Bonferroni is appropriate.</p></li>
+</ul>
+</div></div>
+</section><section class="slide level2"><h2>PHILOSOPHICAL DIGRESSION ABOUT HISTORY, P-VALUES, EUGENICS AND MORE</h2>
 </section><section class="slide level2"><h2>P-values are not very reproducible</h2>
 <p>A reasonable definition of the P value is that it measures the strength of evidence against the null hypothesis. However, unless statistical power is very high (&gt;90%), the P value does not do this reliably.</p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://www.nature.com/articles/nmeth.3288"><img data-src="images/clipboard-1608105659.png" alt="Shows two normal distributions. The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1." width="247"></a></p>
-<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al. (2015)</figcaption></figure>
+<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al.&nbsp;(2015)</figcaption></figure>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
@@ -162,8 +347,8 @@ Bárbara D. Bitarello
 </div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 66%">
+<col style="width: 35%">
+<col style="width: 64%">
 </colgroup>
 <thead><tr class="header">
 <th>Approach</th>
@@ -180,45 +365,39 @@ Bárbara D. Bitarello
 </tr>
 <tr class="odd">
 <td>Hypothesis Test</td>
-<td>Is there enough evidence to make a decision based on a <br> conclusion that the eﬀect is not zero?</td>
+<td>Is there enough evidence to make a decision based on a conclusion that the eﬀect is not zero?</td>
 </tr>
 </tbody>
 </table></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
 <ul>
-<li>In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
-<li>With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
-<li>Stargazing: the process of over-emphasizing statistical significance.</li>
-<li>“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
-<li>When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
+<li class="fragment">In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
+<li class="fragment">With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
+<li class="fragment">Stargazing: the process of over-emphasizing statistical significance.</li>
+<li class="fragment">“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
+<li class="fragment">When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
 </ul></section><section class="slide level2"><h2>Why P-values are confusing</h2>
 <ul>
-<li><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
-<li><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
-<li><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
-<li><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
-<li><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
+<li class="fragment"><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
+<li class="fragment"><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
+<li class="fragment"><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
+<li class="fragment"><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
+<li class="fragment"><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
 </ul>
 
 <aside><div>
 <p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
-</div></aside></section><section class="slide level2"><h2>Key Points</h2>
-<ul>
-<li>We test hypotheses about populations from sample estimates.</li>
-<li>A P-Value is the probability that a boring population would generate a sample estimate as or more extreme than we observe.</li>
-<li>We reject the null hypothesis when this probability is low &amp; fail to reject it otherwise.</li>
-<li>Hypothesis testing can go wrong: We can reject true nulls and fail to reject false ones.</li>
-<li>Hypothesis testing requires extreme care. ## DIGRESSION ABOUT HISTORY, P-VALUES, EUGENICS AND MORE {.dark-theme .center}</li>
-</ul></section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
+</div></aside></section><section class="slide level2 dark-theme center"><h2></h2>
+</section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/882/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
-<figcaption>“If all else fails use significance at the xkcd.com/1478/ 𝛼 = 0.05 level and hope no one notices” https://xkcd.com/882/</figcaption></figure>
+<figure><p><a href="https://xkcd.com/1478/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
+<figcaption>“If all else fails use significance at the𝛼 = 0.05 level and hope no one notices”. https://xkcd.com/1478/</figcaption></figure>
 </div>
 </section><section class="slide level2 dark-theme center"><h2>Yes</h2>
 </section><section class="slide level2"><h2>The P-value was created with the goal of encouraging a closer look</h2>
 <ul>
-<li>R. Fisher: UK statistician/eugenicist/geneticist who created many of the tools we use in statistics. Invented the P-value 100 years ago</li>
-<li>R. Fisher’s goal: give one a sense of how likely (or unlikely) a given set of “results” would be to be generated by pure chance. It’s a reality check in a sense.</li>
-<li>He did NOT propose them as definitive criteria.</li>
+<li class="fragment">R. Fisher: UK statistician/eugenicist/geneticist who created many of the tools we use in statistics. Invented the P-value 100 years ago</li>
+<li class="fragment">R. Fisher’s goal: give one a sense of how likely (or unlikely) a given set of “results” would be to be generated by pure chance. It’s a reality check in a sense.</li>
+<li class="fragment">He did NOT propose them as definitive criteria.</li>
 </ul>
 
 <aside><div>
@@ -234,8 +413,8 @@ Bárbara D. Bitarello
 <div class="columns">
 <div class="column">
 <ul>
-<li>While Fisher’s competitors proposed other things like CIs</li>
-<li>…people with less statistical knowledge started using this as the ultimate criterium</li>
+<li class="fragment">While Fisher’s competitors proposed other things like CIs</li>
+<li class="fragment">…people with less statistical knowledge started using this as the ultimate criterium</li>
 </ul>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -244,25 +423,25 @@ Bárbara D. Bitarello
 </div>
 </div></div>
 </section><section class="slide level2 dark-theme center"><h2>So what relevance does <span class="math inline">\(P&lt;\alpha\)</span> actually have?</h2>
-<p>Two philosophical views of P-value</p>
+</section><section class="slide level2"><h2>Two philosophical views of P-value</h2>
 <p><strong>1) Absolutists</strong> &gt; “Every time you say ‘trending towards significance’, a statistician &gt; somewhere trips and falls down.” – someone on twitter</p>
 <ul>
-<li>Consider statistics with nuance (e.g.&nbsp;“nearly statistically significant”) a sin</li>
-<li>Reject things like declaring a P-value much smaller than 0.05 “highly significant”</li>
+<li class="fragment">Consider statistics with nuance (e.g.&nbsp;“nearly statistically significant”) a sin</li>
+<li class="fragment">Reject things like declaring a P-value much smaller than 0.05 “highly significant”</li>
 </ul>
 <div class="columns">
-<div class="colum" width="50%">
+<div class="column">
 <p><strong>Strengths:</strong></p>
 <ul>
-<li>Strengths: Forces decision about the strength of evidence that one’s looking for before you see the results of your analysis</li>
-<li>Prevents change of criteria after the test</li>
+<li class="fragment">Strengths: Forces decision about the strength of evidence that one’s looking for before you see the results of your analysis</li>
+<li class="fragment">Prevents change of criteria after the test</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column">
 <p><strong>Weaknesses</strong></p>
 <ul>
-<li>Is <span class="math inline">\(P=0.052\)</span> different from <span class="math inline">\(P=0.048\)</span>?</li>
-<li>Why is <span class="math inline">\(0.05\)</span> enough to reject the null but no <span class="math inline">\(0.051\)</span>?</li>
-<li>Risk of P hacking: temptation to push the p-value to be low enough to be declared significant</li>
+<li class="fragment">Is <span class="math inline">\(P=0.052\)</span> different from <span class="math inline">\(P=0.048\)</span>?</li>
+<li class="fragment">Why is <span class="math inline">\(0.05\)</span> enough to reject the null but no <span class="math inline">\(0.051\)</span>?</li>
+<li class="fragment">Risk of P hacking: temptation to push the p-value to be low enough to be declared significant</li>
 </ul>
 </div></div>
 
@@ -271,9 +450,9 @@ Bárbara D. Bitarello
 </div></aside></section><section class="slide level2"><h2>Two philosophical views of P-value</h2>
 <p><strong>2) Continualists</strong></p>
 <ul>
-<li>Consider the job of the P-value is to express the strength of evidence against the null hypothesis</li>
-<li>Reasoning: P-values as continuous variables that are prone to sampling error. If strength of evidence is continuous (rather than binary), our inferential conclusions should be too</li>
-<li>Report p-values (usually with CIs of sample statistic) and let reader interpret based on their level of skepticism.</li>
+<li class="fragment">Consider the job of the P-value is to express the strength of evidence against the null hypothesis</li>
+<li class="fragment">Reasoning: P-values as continuous variables that are prone to sampling error. If strength of evidence is continuous (rather than binary), our inferential conclusions should be too</li>
+<li class="fragment">Report p-values (usually with CIs of sample statistic) and let reader interpret based on their level of skepticism.</li>
 </ul>
 <div class="columns">
 <div class="column">
@@ -281,10 +460,15 @@ Bárbara D. Bitarello
 </div><div class="column">
 <p><strong>Weaknesses</strong> - Harder to remain objective and skeptical when one can keep looking for “trends”</p>
 </div></div>
-</section><section class="slide level2"><h2>END OF DIGRESSION</h2>
-
-
-</section>
+</section><section class="slide level2 dark-theme center"><h2>END OF DIGRESSION</h2>
+</section><section class="slide level2"><h2>Hypothesis Testing: Key Points</h2>
+<ul>
+<li class="fragment">We test hypotheses about populations from sample estimates.</li>
+<li class="fragment">A P-Value is the probability that a boring population would generate a sample estimate as or more extreme than we observe.</li>
+<li class="fragment">We reject the null hypothesis when this probability is low &amp; fail to reject it otherwise.</li>
+<li class="fragment">Hypothesis testing can go wrong: We can reject true nulls and fail to reject false ones.</li>
+<li class="fragment">Hypothesis testing requires extreme care.</li>
+</ul></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
