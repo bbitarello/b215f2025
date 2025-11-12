@@ -266,7 +266,7 @@ Bárbara D. Bitarello
 <p><strong>Q: Can a P value equal 1.0?</strong> A P value would equal 1.0 only in the rare case in which the treatment effect in your sample precisely equals the one defined by the null hypothesis. When a computer program reports that the P value is 1.0000, it often means that the P value is greater than 0.9999.</p>
 <p><strong>Q: Should P values be reported as fractions or percentages?</strong> By tradition, P values are always presented as fractions and never as percentages.</p>
 <p><strong>Q: Is a one-tailed P value always equal to half the two-tailed P value?</strong> Not always. Some sampling distributions are asymmetrical. Even if the distribution is symmetrical (as most are), the one-tailed P value is only equal to half the two-tailed value if you correctly predicted the direction of the difference (correlation, association, etc.) in advance. If the effect actually went in the opposite direction to your prediction, the one-tailed P will be &gt;0.5 and greater than the two-tailed P value.</p>
-</section><section class="slide level2 dark-theme center"><h2>PHILOSOPHICAL DIGRESSION</h2>
+</section><section class="slide level2 dark-theme center"><h2>PHILOSOPHICAL/HISTORICAL DIGRESSION</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://thesaurus.plus/synonyms/digression"><img data-src="images/clipboard-2625600572.png" class="quarto-figure quarto-figure-center" width="222"></a></p>
@@ -274,7 +274,26 @@ Bárbara D. Bitarello
 </div>
 <figcaption>Synonyms for Digression. (2016). Retrieved 2025, November 09, from https://thesaurus.plus/synonyms/digression</figcaption></figure>
 </div>
-</section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
+</section><section class="slide level2"><h2>P-values are not very reproducible</h2>
+<p>A reasonable definition of the P value is that it measures the strength of evidence against the null hypothesis. However, unless statistical power is very high (&gt;90%), the P value does not do this reliably.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288"><img data-src="images/clipboard-1608105659.png" alt="Shows two normal distributions. The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1." width="247"></a></p>
+<figcaption>The difference between the mean values is 0.5, which is the true (population) effect size. The standard deviation (the spread of values) of each population is 1. From: Halsey et al.&nbsp;(2015)</figcaption></figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://www.nature.com/articles/nmeth.3288#Sec1"><img data-src="images/clipboard-3026484271.png" alt="We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared."></a></p>
+<figcaption>We drew samples of ten values at random from each of the populations A and B from Figure 1 to give four simulated comparisons. Horizontal lines denote the mean. We give the estimated effect size (the difference in the means) and the P value when the sample pairs are compared.</figcaption></figure>
+</div>
+</div></div>
+
+</div>
+<aside><div>
+<p>From: Halsey, L., Curran-Everett, D., Vowler, S. et al.&nbsp;(2015) The fickle P value generates irreproducible results. Nat Methods 12, 179–185. https://doi.org/10.1038/nmeth.3288</p>
+</div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 36%">
@@ -316,6 +335,20 @@ Bárbara D. Bitarello
 
 <aside><div>
 <p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
+</div></aside></section><section class="slide level2"><h2>History of statistics</h2>
+<ul>
+<li class="fragment">Modern statistics was in many ways an offshoot of evolutionary biology</li>
+<li class="fragment">A lot of the methods used in frequentist statistics stem from Francis Galton, Karl Pearlson, and Ronal Fisher</li>
+</ul></section><section class="slide level2"><h2>Francis Galton</h2>
+<ul>
+<li class="fragment">Studied correlations between parents/offspring for quantitative traits - height, weight, a measure of “intelligence” (later known as IQ test)</li>
+<li class="fragment">The earliest challenge for the application of eugenics was to encourage marriages between individuals of presumed high intellectual calibre — something unacceptable as an official policy in most modern societies</li>
+<li class="fragment">This original meaning was a very different concept (although historically intertwined) with what later became the Nazi policy</li>
+</ul></section><section class="slide level2"><h2>Ronald Fisher</h2>
+<p>Fisher became enthusiastic about the potential for eugenics based on Mendelian inheritance • He founded the Cambridge University Eugenics Society • In 1918 this became a highly influential paper in population genetics: The correlation between relatives on the supposition of Mendelian inheritance. Trans R Soc Edinb 52:399–433 • Proposed “voluntary sterilization” should be a legislation in the UK. It was not approved. • Fisher’s primary concern was the genetic future of England should elite members of society (by which he included himself) fail to reproduce at the same level as the poor. • Fisher advocated against birth control and called on the government to provide economic subsidies – what he referred to as family allowances – for those of high talent and ability commensurate with the number of children they produced.</p>
+
+<aside><div>
+<p>From: https://evolution-institute.org/ronald-fisher-is-not-being-cancelled-but-his-eugenic-advocacy-should- have-consequences/ Bodmer et al.&nbsp;(2021) https://doi.org/10.1038/s41437-020-00394-6</p>
 </div></aside></section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://xkcd.com/1478/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
