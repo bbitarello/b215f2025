@@ -11,8 +11,8 @@
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-12">
-<meta name="keywords" content="Multiple testing problem">
-<title>BIOL B215: Biostatistics with R – 5.3. Hypothesis Testing</title>
+<meta name="keywords" content="Binomial test">
+<title>BIOL B215: Biostatistics with R – 7.1. Analysing proportions</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -130,8 +196,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section class="quarto-title-block"><h1 class="title">5.3. Hypothesis Testing</h1>
-  <p class="subtitle">Multiple testing problem| Acknowledgments: Didactical materials from www.serjeonstats.com and https://bookdown.org/mike/data_analysis/</p>
+<section class="quarto-title-block"><h1 class="title">7.1. Analysing proportions</h1>
+  <p class="subtitle">The binomial test</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -142,270 +208,178 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-11-12</p>
-</section><section class="slide level2"><h2>Which Mr.&nbsp;Data are you today?</h2>
+</section><section class="slide level2"><h2>Key learning goals</h2>
+<ul>
+<li class="fragment">Explain probabilities and proportions. Which is the parameter? Which is the estimate?</li>
+<li class="fragment">Explain the binomial. When would you use it?</li>
+<li class="fragment">Understand the binomial distribution and connect it to simple probability rules.</li>
+<li class="fragment">Quantify the expected mean and variability of a binomial distribution.</li>
+<li class="fragment">Be able to appropriately conduct and interpret a binomial test.</li>
+</ul></section><section class="slide level2"><h2>Proportions</h2>
+<ul>
+<li class="fragment"><p>A proportion is the fraction of individuals having a particular attribute. i.e.&nbsp;# successes divided by # trials</p></li>
+<li class="fragment"><p>A proportion is also the probability that any an individual randomly sampled from that population will have that attribute</p></li>
+</ul></section><section class="slide level2"><h2>Example: Murphy’s Law</h2>
+<div class="goal">
+<p>Researchers found that 6101 of the 9821 slices of toast thrown in the air landed butter side down. What proportion of the slices landed butter side down? Is the deck stacked against us?</p>
+</div>
+<p>How would you test this?</p>
+</section><section class="slide level2"><h2>From proportions to the binomial</h2>
+<div class="goal">
+<p>Let’s use this estimated proportion as our <em>best estimate</em> for the true probability of landing butter side down. Assume that the true probability that toast falls butter side down is 60%.</p>
+<p>Question: If three people drop their slice of toast, what is the probability that one falls butter side down and two fall butter side up?</p>
+</div>
+<p>HINT: Draw trees… Work on this for a few minutes</p>
+</section><section class="slide level2 dark-theme center"><h2>THIS IS OLD NEWS FOR YOU, SO WHAT ELSE IS NEW?</h2>
 
-<img data-src="images/clipboard-1263958359.png" class="quarto-figure quarto-figure-center r-stretch" alt="Mr. Data from Start Trek with several faces"></section><section class="slide level2"><h2>P-hacking</h2>
-<blockquote>
-<p>the misuse of data analysis to find patterns in data that can be presented as statistically significant, thus dramatically increasing and understating the risk of false positives. This is done by performing many statistical tests on the data and only reporting those that come back with significant results. – Wikipedia (<a href="https://en.wikipedia.org/wiki/Data_dredging" class="uri">https://en.wikipedia.org/wiki/Data_dredging</a>)</p>
-</blockquote>
-<blockquote>
-<p>“P-hacking; it is also known as data-dredging, snooping, fishing, significance-chasing and double-dipping. “P-hacking,” says Simonsohn, “is trying multiple things until you get the desired result” — even unconsciously.” – Nuzzo. “Scientific method: Statistical errors. Nature</p>
-</blockquote>
-</section><section class="slide level2"><h2></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/882/"><img data-src="images/clipboard-2878735639.png" class="quarto-figure quarto-figure-center" alt="Comic about data dredging (aka p-hacking)"></a></p>
-</figure>
+<img data-src="images/clipboard-3910873552.png" class="r-stretch"></section><section class="slide level2 dark-theme center"><h2>THERE’S AN EASIER WAY: THE BINOMIAL DISTRIBUTION</h2>
+</section><section class="slide level2"><h2>The Binomial Distribution: Idea</h2>
+<ul>
+<li class="fragment"><p>The probability of a given number (X) of “successes” from a fixed number of n independent trials.</p></li>
+<li class="fragment"><p>E.g. If three people drop their slice of toast, what is the probability that one falls butter side down and two fall butter side up?</p></li>
+</ul></section><section class="slide level2"><h2>Probability of Successes</h2>
+<p>Of <span class="math inline">\(n\)</span> independent trials, each with probability of success <span class="math inline">\(p\)</span>, the probably of <span class="math inline">\(X\)</span> successes is given by:</p>
+<p><span class="math display">\[P[X]=\binom {n}{X}p^X(1-p)^{n-X}\]</span></p>
+<div class="fragment">
+<p>Let’s look at these parts separately:</p>
 </div>
-<figcaption>So, uh, we did the green study again and got no link. It was probably a– “RESEARCH CONFLICTED ON GREEN JELLY BEAN/ACNE LINK; MORE STUDY RECOMMENDED!”.</figcaption></figure>
+<div class="fragment">
+<p><span class="math inline">\(\binom{n}{X}\)</span>: Binomial coefficient: describes the number of ways to get X successes in <span class="math inline">\(n\)</span> trials.</p>
 </div>
-</section><section class="slide level2"><h2></h2>
+<div class="fragment">
+<p><span class="math inline">\(\binom {n}{X}=\frac{n!}{X!(n-X)!}\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(n!=n\times (n-1) \times (n-2) ...\times 2 \times 1\)</span></p>
+</div>
+</section><section class="slide level2"><h2>Probability of successes</h2>
+<p><span class="math inline">\(P[X]\)</span>: The probability of observing <span class="math inline">\(X\)</span> successes in <span class="math inline">\(n\)</span> trials EQUALS</p>
+<div class="fragment">
+<p><span class="math inline">\(\binom{n}{X}\)</span>: # ways to get <span class="math inline">\(X\)</span> successes from <span class="math inline">\(n\)</span> trials TIMES</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(p^X(1-p)^{n-X}\)</span>: The probability of <span class="math inline">\(X\)</span> successes and by <span class="math inline">\(n – X\)</span> failures</p>
+</div>
+</section><section class="slide level2"><h2>So back to our toast example</h2>
+<div class="goal">
+<p>Assume that the true probability that toast falls butter side down is 60%.</p>
+<p>Question: If three people drop their slice of toast, what is the probability that one falls butter side down and two fall butter side up?</p>
+</div>
+</section><section class="slide level2 dark-theme center"><h2>More problems!</h2>
+</section><section class="slide level2"><h2>Problem 2: A population of paradise flycatchers</h2>
+<div class="columns">
+<div class="column">
+<div class="goal">
+<p>The population has 80% brown males and 20% white.You capture 5 male flycatchers at random. What is the chance that 3 of those are brown and 2 are white?</p>
+</div>
+</div><div class="column">
+<p><img data-src="images/clipboard-4099991647.png"></p>
+</div></div>
+<p><span class="math inline">\(P[X]=\binom {n}{X}p^X(1-p)^{n-X}\)</span></p>
+<p><span class="math inline">\(\binom {n}{X}=\frac{n!}{X!(n-X)!}\)</span></p>
+<p>[work on this for a few minutes]</p>
+</section><section class="slide level2 dark-theme center"><h2>Properties of the binomial distribution</h2>
+</section><section class="slide level2"><h2>EXPECTED successes of n trials</h2>
+<p>Expected successes in <span class="math inline">\(n\)</span> trials</p>
+<p><span class="math display">\[\Huge{\mu = n \times p}\]</span></p>
+<p><span class="math inline">\(\mu\)</span>: That’s right. Mean number of successes, aka, expected number of successes.</p>
 
-<img data-src="images/clipboard-1008960174.png" class="quarto-figure quarto-figure-center r-stretch" alt="part 2 of same comic" width="499"></section><section class="slide level2"><h2></h2>
-
-<img data-src="images/clipboard-2412834495.png" class="quarto-figure quarto-figure-center r-stretch" width="753"></section><section class="slide level2"><h2>The multiple testing problem</h2>
-<p>When conducting multiple hypothesis tests simultaneously, we increase the probability of false positives (Type I errors).</p>
-<div class="fragment">
-<p>Suppose we perform <span class="math inline">\(n\)</span> independent hypothesis tests, each with a significance level <span class="math inline">\(\alpha\)</span>.</p>
-<p>The probability of making <em>at least one</em> Type I error (false positive) is:</p>
-<p><span class="math display">\[P(\text{at least one false positive})=1−(1−\alpha)^n\]</span></p>
-<p>This probability is known as Family-wise error rate (FWER).</p>
-<p>There are two groups of approaches to deal with this:</p>
-<ol type="1">
-<li class="fragment"><p>controlling the family-wise error rate (FWER)</p></li>
-<li class="fragment"><p>controlling the false discovery rate (FDR)</p></li>
-</ol>
-<ul>
-<li class="fragment">Both quantify the risks of multiple testing but in different ways.</li>
-<li class="fragment">Both have strengths and weaknesses but first I want to show you how they are different.</li>
-</ul>
-</div>
-</section><section class="slide level2"><h2>FWER</h2>
-<blockquote>
-<p>FWER is a metric that quantifies the risk caused by multiple testing. It’s the probabilityof making <u>one or more</u> false discoveries (type I errors) when performing multiple hypotheses tests.</p>
-</blockquote>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"><img data-src="images/clipboard-1420914364.png" class="quarto-figure quarto-figure-center" alt="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"></a></p>
-</figure>
-</div>
-<figcaption>From: https://www.serjeonstats.com</figcaption></figure>
-</div>
-</div><div class="column" style="width:45%;">
-<p>Large circles: sets of tests corrected for family-wise error. Small squares are null effects, small circles are real effects. Filled circles and squares represent rejections of the null hypothesis (“positives”). Two studies (filled large circles) produced one or more Type I errors (filled blue squares). Thus, <span class="math inline">\(FWER=2/9=0.22\)</span>.</p>
-</div></div>
-<div class="fragment">
-<p><strong>Controlling FWER:</strong> ensures that no more than <span class="math inline">\(100\times \alpha\%\)</span> of your <em>studies</em> will produce <em>any</em> (<span class="math inline">\(\geq1\)</span>) Type I errors. One way ( the most common) to do that is through the Bonferroni correction, which we saw last time.</p>
-<aside class="notes"><p>Answer: 2/9. If you control the FWER at .05, then in at least 95% of your studies, all of the significant results will be from true effects. In the other 5% of your experiments, one or more of the effects will represent Type I errors. Putting this another way, 5% of your families of tests will produce Type I errors. (This does not mean that 5% of the null effects will produce Type I errors, or that 5% of your effects are really nulls.)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section><section class="slide level2"><h2>FDR</h2>
-<blockquote>
-<p>Simply put, <span class="math inline">\(FDR = FP / (FP + TP)\)</span>, where <span class="math inline">\(FP\)</span>: false positive; <span class="math inline">\(TP\)</span>: true positive.</p>
-</blockquote>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"><img data-src="images/clipboard-2872513162.png" class="quarto-figure quarto-figure-center" alt="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"></a></p>
-</figure>
-</div>
-<figcaption>From: https://www.serjeonstats.com</figcaption></figure>
-</div>
-</div><div class="column" style="width:50%;">
-<p>These are the same ‘data’ depicted in the first figure, but highlighting the information relevant to FDR. We have a total of 24 null rejections/significant effects (filled squares and circles), of which 3 are Type I errors (filled blue squares). So <span class="math inline">\(FDR=3/24=0.125\)</span></p>
-</div></div>
-<p><strong>Controlling FDR:</strong> ensures, that across your statistical tests, at most <span class="math inline">\(\alpha\%\)</span> of your significant results are really Type I errors. One way to correct for FDR (and the most common) is the Benjamini–Hochberg procedure (BH).</p>
-</section><section class="slide level2"><h2>FWER and FDR takeaways</h2>
-<ul>
-<li class="fragment">FDR will generally produce more Type I errors, but buys you more power (produces fewer Type II errors).</li>
-<li class="fragment">Choosing between the two approaches always involves a trade-off between avoiding type I errors at the cost of reduced power.</li>
-</ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://bookdown.org/mike/data_analysis/sec-false-discovery-rate.html#sec-false-discovery-rate"><img data-src="images/clipboard-2899040513.png" class="quarto-figure quarto-figure-center" alt="Table showing FDR vs FWER and their correction methods."></a></p>
-</figure>
-</div>
-<figcaption>From: bookdown.org/mike/data_analysis/sec-false-discovery-rate.html</figcaption></figure>
-</div>
-</div>
-</section><section class="slide level2"><h2>Recommendations</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Use FDR correction when:<br></p>
-<ul>
-<li class="fragment"><p>You perform many hypothesis tests (e.g., genomics).</p></li>
-<li class="fragment"><p>You want to balance false positives and false negatives.</p></li>
-<li class="fragment"><p>Bonferroni is too strict, leading to low power.</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p>Do NOT use FDR correction if:</p>
-<ul>
-<li class="fragment"><p>Strict control of any false positives is required (e.g., drug approval studies).</p></li>
-<li class="fragment"><p>There are only a few tests, where Bonferroni is appropriate.</p></li>
-</ul>
-</div></div>
-<ul>
-<li class="fragment">In either case, always report your p-values as they are (e.g., <span class="math inline">\(p=0.0312\)</span> instead of <span class="math inline">\(p&lt;0.05\)</span>). If using corrected p-values to assess significance, make sure you say that clearly.</li>
-<li class="fragment">The <code><a href="https://rdrr.io/r/stats/p.adjust.html">p.adjust()</a></code> function from base R performs both and also other types of corrections defined by the argument <code>methods</code>.</li>
-</ul></section><section class="slide level2"><h2>P-values: Q &amp; A</h2>
-<p><strong>Q: Can P values be negative?</strong> No.&nbsp;P values are fractions, so they are always between 0.0 and 1.0.</p>
-<p><strong>Q: Can a P value equal 1.0?</strong> A P value would equal 1.0 only in the rare case in which the treatment effect in your sample precisely equals the one defined by the null hypothesis. When a computer program reports that the P value is 1.0000, it often means that the P value is greater than 0.9999.</p>
-<p><strong>Q: Should P values be reported as fractions or percentages?</strong> By tradition, P values are always presented as fractions and never as percentages.</p>
-<p><strong>Q: Is a one-tailed P value always equal to half the two-tailed P value?</strong> Not always. Some sampling distributions are asymmetrical. Even if the distribution is symmetrical (as most are), the one-tailed P value is only equal to half the two-tailed value if you correctly predicted the direction of the difference (correlation, association, etc.) in advance. If the effect actually went in the opposite direction to your prediction, the one-tailed P will be &gt;0.5 and greater than the two-tailed P value.</p>
-</section><section class="slide level2 dark-theme center"><h2>PHILOSOPHICAL DIGRESSION</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://thesaurus.plus/synonyms/digression"><img data-src="images/clipboard-2625600572.png" class="quarto-figure quarto-figure-center" width="222"></a></p>
-</figure>
-</div>
-<figcaption>Synonyms for Digression. (2016). Retrieved 2025, November 09, from https://thesaurus.plus/synonyms/digression</figcaption></figure>
-</div>
-</section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
-<table class="caption-top">
+<aside><div>
+<p>Probability Trivia: A binomial with <span class="math inline">\(n = 1\)</span> is called a Bernoulli process. This will not be a factoid you need to know in this class, but you might hear it some time.</p>
+</div></aside></section><section class="slide level2"><h2>Binomial: Variability and Uncertainty</h2>
+<p>For counts:</p>
+<p><span class="math display">\[\text{population variance: } \sigma^2 = n \times p \times(1-p)\]</span></p>
+<p><span class="math display">\[\text{sample variance: }s^2 = \frac{n}{n - 1} \times p \times(1-p)\]</span></p>
+</section><section class="slide level2"><h2>Properties of proportions: expectations</h2>
+<p>If there are <span class="math inline">\(X\)</span> successes in <span class="math inline">\(n\)</span> trials in a random sample, then the <em>estimated proportion of successes</em> is:</p>
+<p><span class="math display">\[\hat p = \frac{X}{n}\]</span></p>
+<p><span class="math inline">\(\hat p\)</span>: The hat signals that this is an estimate</p>
+</section><section class="slide level2"><h2>Properties of Proportions: Variability</h2>
+<table class="caption-top" style="width:100%;">
 <colgroup>
 <col style="width: 36%">
-<col style="width: 63%">
+<col style="width: 56%">
+<col style="width: 6%">
 </colgroup>
-<thead><tr class="header">
-<th>Approach</th>
-<th>Questions Answered</th>
-</tr></thead>
 <tbody>
 <tr class="odd">
-<td>Confidence Interval</td>
-<td>What range of true eﬀect is consistent with the data?</td>
+<td>Variance</td>
+<td><span class="math inline">\(\sigma^2=p(1-p)\)</span></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>P-value</td>
-<td>What is strength of the evidence that the true eﬀect is not zero?</td>
+<td>Standard deviation</td>
+<td><span class="math inline">\(\sigma^2=\sqrt(p(1-p))\)</span></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Hypothesis Test</td>
-<td>Is there enough evidence to make a decision based on a conclusion that the eﬀect is not zero?</td>
+<td>Sample variance</td>
+<td><span class="math inline">\(s^2=\hat p(1-\hat p)\frac{n}{n-1}\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sample standard deviation</td>
+<td><span class="math inline">\(s=\sqrt{\hat p(1-\hat p)\frac{n}{n-1}}\)</span></td>
+<td></td>
 </tr>
 </tbody>
-</table></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
-<ul>
-<li class="fragment">In many scientific situations, it is not necessary - and even counterproductive - to reach an all or nothing conclusion that a result is either statistically significant or not</li>
-<li class="fragment">With P-values and CIs you can assess the scientific evidence without ever using the phrase “statistically significant”</li>
-<li class="fragment">Stargazing: the process of over-emphasizing statistical significance.</li>
-<li class="fragment">“Significosis”: a dreadful condition that leads afflicted individuals to fail to identify that just because something is unlikely to have occurred by chance doesn’t mean it’s important/relevant</li>
-<li class="fragment">When reading the scientific literature, focus instead on the size of the association (difference, correlation etc) and its CI</li>
-</ul></section><section class="slide level2"><h2>Why P-values are confusing</h2>
-<ul>
-<li class="fragment"><p>P-values are often misunderstood because they answer a question that you never thought to ask.</p></li>
-<li class="fragment"><p>In many situations, you know before collecting any data that the null hypothesis is almost certainly false.The difference or correlation or association in the overall population might be trivial, but it almost certainly isn’t zero.</p></li>
-<li class="fragment"><p>The null hypothesis is usually that in the populations being studied there is zero difference between the means, zero correlation, etc.</p></li>
-<li class="fragment"><p>People rarely conduct experiments or studies in which it is even conceivable that the null hypothesis is true.</p></li>
-<li class="fragment"><p>Clinicians and scientists find it strange to calculate the probability of obtaining results that weren’t actually obtained. The math of theoretical probability distributions is beyond the easy comprehension of most scientists.</p></li>
-</ul>
-
-<aside><div>
-<p>Credit: This slide uses materials from the textbook Intuitive Biostatistics, Motulsky, 4th edition</p>
-</div></aside></section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/1478/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
-<figcaption>“If all else fails use significance at the𝛼 = 0.05 level and hope no one notices”. https://xkcd.com/1478/</figcaption></figure>
+</table></section><section class="slide level2"><h2>Standard error of a proportion</h2>
+<p>Recall: the standard error of an estimate is always the standard deviation of its sampling distribution. If we know the real <span class="math inline">\(p\)</span> we can calculate it as:</p>
+<p><span class="math display">\[\sigma_{\hat p}=\sqrt{\frac{p(1-p)}{n}}\]</span></p>
+<p>Because p is usually unknown, in practice we have:</p>
+<p><span class="math display">\[SE_{\hat p}=\frac{\sqrt{{\hat p(1- \hat p)}\frac{n}{n-1}}}{\sqrt{n}}\]</span></p>
+</section><section class="slide level2 dark-theme center"><h2>The binomial test</h2>
+<div class="{r-fit-text}">
+<p>Testing <span class="math inline">\(H_0\)</span> that <span class="math inline">\(\hat p\)</span> comes</p>
+<p>from a population with proportion <span class="math inline">\(p_0\)</span></p>
 </div>
-</section><section class="slide level2 dark-theme center"><h2>Yes</h2>
-</section><section class="slide level2"><h2>The P-value was created with the goal of encouraging a closer look</h2>
-<ul>
-<li class="fragment">R. Fisher: UK statistician/eugenicist/geneticist who created many of the tools we use in statistics. Invented the P-value 100 years ago</li>
-<li class="fragment">R. Fisher’s goal: give one a sense of how likely (or unlikely) a given set of “results” would be to be generated by pure chance. It’s a reality check in a sense.</li>
-<li class="fragment">He did NOT propose them as definitive criteria.</li>
-</ul>
-
-<aside><div>
-<p>Regine Nuzzo (2014). Scientific Method: Statistical Errors, Nature News</p>
-</div></aside></section><section class="slide level2"><h2>Why <span class="math inline">\(\alpha=0.05\)</span>?</h2>
-<blockquote>
-<p>The value for which P=0.05, or 1 in 20 … is convenient to take this point as a limit in judging whether a deviation ought to be considered significant or not…”</p>
-</blockquote>
-<blockquote>
-<p>“If one in twenty does not seem high enough odds, we may … draw the line at one in fifty …, or one in a hundred…. Personally, the writer prefers to set a low standard of significance at the 5 per cent point, and ignore entirely all results which fail to reach this level.”</p>
-</blockquote>
-<blockquote>
-<p>It is usual and convenient for experimenters to take 5 per cent as a standard level of significance, in the sense that they are prepared to ignore all results which fail to reach this standard, and, by this means, to eliminate from further discussion the greater part of the fluctuations which chance causes have introduced into their experimental results. — R.A Fisher (statistician/eugenicist/geneticist)</p>
-</blockquote>
-</section><section class="slide level2"><h2>But why did everyone else for the next 100 years keep using <span class="math inline">\(\alpha=0.05\)</span>
-</h2>
-<p>Ok, I am exagerating, but you get the point.</p>
-<div class="columns">
-<div class="column">
-<ul>
-<li class="fragment">While Fisher’s competitors proposed other things like CIs</li>
-<li class="fragment">…people with less statistical knowledge started using this as the ultimate criterium</li>
-</ul>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://notawfulandboring.blogspot.com/"><img data-src="images/clipboard-3639298022.png" alt="Freddie Mercury apparently feeling very accomplished by a p<0.05"></a></p>
-<figcaption>From: https://notawfulandboring.blogspot.com/</figcaption></figure>
+</section><section class="slide level2"><h2>Example: the toast is back!</h2>
+<div class="goal">
+<p>Researchers found that 6101 of the 9821 slices of toast thrown in the air landed butter side down.</p>
+<p>What is the probability that we would see a result this or more extreme if toast has a fifty-fifty chance of landing butter side down?</p>
 </div>
-</div></div>
-</section><section class="slide level2"><h2>Two philosophical views of P-value</h2>
-<p><strong>1) Absolutists</strong></p>
-<blockquote>
-<p>“Every time you say ‘trending towards significance’, a statistician somewhere trips and falls down.” – someone on twitter</p>
-</blockquote>
-<p>Consider statistics with nuance (e.g.&nbsp;“nearly statistically significant”) a sin</p>
-<p>Reject things like declaring a P-value much smaller than 0.05 “highly significant”</p>
-<div class="columns">
-<div class="column">
-<p><strong>Strengths:</strong></p>
-<ul>
-<li class="fragment">Strengths: Forces decision about the strength of evidence that one’s looking for before you see the results of your analysis</li>
-<li class="fragment">Prevents change of criteria after the test</li>
-</ul>
-</div><div class="column">
-<p><strong>Weaknesses</strong></p>
-<ul>
-<li class="fragment">Is <span class="math inline">\(P=0.052\)</span> different from <span class="math inline">\(P=0.048\)</span>?</li>
-<li class="fragment">Why is <span class="math inline">\(0.05\)</span> enough to reject the null but no <span class="math inline">\(0.051\)</span>?</li>
-<li class="fragment">Risk of P hacking</li>
-</ul>
-</div></div>
+<p><strong>State the hypotheses</strong></p>
+<p>Let’s define butter side down as a “success”</p>
+<p>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</p>
+<p>The sample proportion comes from a population with a probability of success equal to <span class="math inline">\(p_0=0.5\)</span>.</p>
+<p>Alternate hypothesis (<span class="math inline">\(H_{A}\)</span>):</p>
+<p>The sample proportion comes from a population with a probability of success <span class="math inline">\(\neq p_0\)</span>.</p>
+<p>Calculate test statistic:</p>
+<p><span class="math inline">\(p_0 = .5\)</span>, <span class="math inline">\(n = 9821\)</span>, <span class="math inline">\(X = 6101\)</span>, <span class="math inline">\(\hat p=\frac{X}{n}=\frac{6101}{9821}=0.62\)</span></p>
+</section><section class="slide level2"><h2>Generate the null distribution &amp; Find P-value</h2>
+<p>That’s easy! It’s the binomial!</p>
 
-<aside><div>
-<p>From: http://notawfulandboring.blogspot.com/</p>
-</div></aside></section><section class="slide level2"><h2>Two philosophical views of P-value</h2>
-<p><strong>2) Continualists</strong></p>
-<p>Consider the job of the P-value is to express the strength of evidence against the null hypothesis</p>
-<p>Reasoning: P-values as continuous variables that are prone to sampling error. If strength of evidence is continuous (rather than binary), our inferential conclusions should be too</p>
-<p>Report p-values (usually with CIs of sample statistic) and let reader interpret based on their level of skepticism.</p>
-<div class="columns">
-<div class="column">
-<p><strong>Strengths</strong></p>
-<ul>
-<li class="fragment"><p>Sees P-value as subject to sampling error (which it is!)</p></li>
-<li class="fragment"><p>Recognizes and distinguishes between results that provide weak evidence, moderate evidence, and strong evidence against the null.</p></li>
-</ul>
-</div><div class="column">
-<p><strong>Weaknesses</strong></p>
-<ul>
-<li class="fragment">Harder to remain objective and skeptical when one can keep looking for “trends”</li>
-</ul>
-</div></div>
-<p>As always, there is a trade-off. Just don’t change strategies after you run your tests.</p>
-</section><section class="slide level2 dark-theme center"><h2>END OF DIGRESSION</h2>
+<img data-src="AnalyzingProportions_files/figure-revealjs/binom-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>We conducted a Binomial Test!</h2>
+<p>We reject <span class="math inline">\(H_0\)</span> &amp; conclude that toast is more likely to land butter side down than not</p>
+<p>👏 Congrats 👏 You already conducted a hypothesis test! <font color="black"><br><code>R</code> can make this even easier</font></p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>butter.down <span class="ot">&lt;-</span> <span class="dv">6101</span></span>
+<span id="cb6-2"><a></a>slices <span class="ot">&lt;-</span> <span class="dv">9821</span></span>
+<span id="cb6-3"><a></a>prop.down <span class="ot">&lt;-</span> butter.down<span class="sc">/</span>slices</span>
+<span id="cb6-4"><a></a><span class="co">#</span></span>
+<span id="cb6-5"><a></a><span class="fu">binom.test</span>(<span class="at">x =</span> butter.down, <span class="at">n =</span> slices, <span class="at">p =</span> <span class="fl">0.5</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
+<span id="cb6-6"><a></a><span class="do">## </span></span>
+<span id="cb6-7"><a></a><span class="do">##  Exact binomial test</span></span>
+<span id="cb6-8"><a></a><span class="do">## </span></span>
+<span id="cb6-9"><a></a><span class="do">## data:  butter.down and slices</span></span>
+<span id="cb6-10"><a></a><span class="do">## number of successes = 6101, number of trials = 9821, p-value &lt; 2.2e-16</span></span>
+<span id="cb6-11"><a></a><span class="do">## alternative hypothesis: true probability of success is not equal to 0.5</span></span>
+<span id="cb6-12"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb6-13"><a></a><span class="do">##  0.6115404 0.6308273</span></span>
+<span id="cb6-14"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb6-15"><a></a><span class="do">## probability of success </span></span>
+<span id="cb6-16"><a></a><span class="do">##              0.6212198</span></span>
+<span id="cb6-17"><a></a><span class="co"># doing it 'manually'</span></span>
+<span id="cb6-18"><a></a><span class="fu">sum</span>(<span class="fu">dbinom</span>(<span class="dv">6101</span><span class="sc">:</span><span class="dv">9821</span>, <span class="at">size =</span> <span class="dv">9821</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">sum</span>(<span class="fu">dbinom</span>(<span class="dv">1</span><span class="sc">:</span>((<span class="dv">9821</span> <span class="sc">-</span> <span class="dv">6101</span>) <span class="sc">+</span> <span class="dv">1</span>),</span>
+<span id="cb6-19"><a></a>    <span class="at">size =</span> <span class="dv">9821</span>, <span class="at">prob =</span> <span class="fl">0.5</span>))</span>
+<span id="cb6-20"><a></a><span class="do">## [1] 1.390148e-128</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section><section class="slide level2"><h2></h2>
 
 
 
-<img data-src="images/forrestgump.png" alt="Forrest says &quot;And that's all I wanted to say about that&quot;" width="347" class="r-stretch quarto-figure-center"><p class="caption">From: makeameme.org</p></section>
+<img data-src="images/clipboard-3661136366.png" class="r-stretch"></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
