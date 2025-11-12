@@ -166,7 +166,7 @@ Bárbara D. Bitarello
 <img data-src="images/clipboard-2412834495.png" class="quarto-figure quarto-figure-center r-stretch" width="753"></section><section class="slide level2"><h2>The multiple testing problem</h2>
 <p>When conducting multiple hypothesis tests simultaneously, we increase the probability of false positives (Type I errors).</p>
 <div class="fragment">
-<p>Suppose we perform <span class="math inline">\(n\)</span> independent hypothesis tests, each with a significance level <span class="math inline">\(\alpha\)</span>.</p>
+<p>Suppose we perform <span class="math inline">\(n\)</span> independent hypothesis tests, each with a signif. level <span class="math inline">\(\alpha\)</span>.</p>
 <p>The probability of making <em>at least one</em> Type I error (false positive) is:</p>
 <p><span class="math display">\[P(\text{at least one false positive})=1−(1−\alpha)^n\]</span></p>
 <p>This probability is known as Family-wise error rate (FWER).</p>
@@ -185,7 +185,7 @@ Bárbara D. Bitarello
 <p>FWER is a metric that quantifies the risk caused by multiple testing. It’s the probabilityof making <u>one or more</u> false discoveries (type I errors) when performing multiple hypotheses tests.</p>
 </blockquote>
 <div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure><div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"><img data-src="images/clipboard-1420914364.png" class="quarto-figure quarto-figure-center" alt="https://www.serjeonstats.com/2017/05/family-wise-error-vs-false-discovery.html"></a></p>
@@ -193,11 +193,9 @@ Bárbara D. Bitarello
 </div>
 <figcaption>From: https://www.serjeonstats.com</figcaption></figure>
 </div>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:50%;">
 <p>Large circles: sets of tests corrected for family-wise error. Small squares are null effects, small circles are real effects. Filled circles and squares represent rejections of the null hypothesis (“positives”). Two studies (filled large circles) produced one or more Type I errors (filled blue squares). Thus, <span class="math inline">\(FWER=2/9=0.22\)</span>.</p>
 </div></div>
-<div class="fragment">
-<p><strong>Controlling FWER:</strong> ensures that no more than <span class="math inline">\(100\times \alpha\%\)</span> of your <em>studies</em> will produce <em>any</em> (<span class="math inline">\(\geq1\)</span>) Type I errors. One way ( the most common) to do that is through the Bonferroni correction, which we saw last time.</p>
 <aside class="notes"><p>Answer: 2/9. If you control the FWER at .05, then in at least 95% of your studies, all of the significant results will be from true effects. In the other 5% of your experiments, one or more of the effects will represent Type I errors. Putting this another way, 5% of your families of tests will produce Type I errors. (This does not mean that 5% of the null effects will produce Type I errors, or that 5% of your effects are really nulls.)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -209,9 +207,7 @@ Bárbara D. Bitarello
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside>
-</div>
-</section><section class="slide level2"><h2>FDR</h2>
+      }</style></aside></section><section class="slide level2"><h2>FDR</h2>
 <blockquote>
 <p>Simply put, <span class="math inline">\(FDR = FP / (FP + TP)\)</span>, where <span class="math inline">\(FP\)</span>: false positive; <span class="math inline">\(TP\)</span>: true positive.</p>
 </blockquote>
@@ -227,7 +223,9 @@ Bárbara D. Bitarello
 </div><div class="column" style="width:50%;">
 <p>These are the same ‘data’ depicted in the first figure, but highlighting the information relevant to FDR. We have a total of 24 null rejections/significant effects (filled squares and circles), of which 3 are Type I errors (filled blue squares). So <span class="math inline">\(FDR=3/24=0.125\)</span></p>
 </div></div>
-<p><strong>Controlling FDR:</strong> ensures, that across your statistical tests, at most <span class="math inline">\(\alpha\%\)</span> of your significant results are really Type I errors. One way to correct for FDR (and the most common) is the Benjamini–Hochberg procedure (BH).</p>
+</section><section class="slide level2"><h2>Controlling FWER and FDR</h2>
+<p><strong>Controlling FWER:</strong> ensures that no more than <span class="math inline">\(100\times \alpha\%\)</span> of your <em>studies</em> will produce <em>any</em> (<span class="math inline">\(\geq1\)</span>) Type I errors. One way ( the most common) to do that is through the Bonferroni correction, which we saw last time.</p>
+<p><strong>Controlling FDR:</strong> ensures, that across your statistical tests, at most <span class="math inline">\(\alpha\%\)</span> of your significant results are really Type I errors. One way to correct for FDR (and the most common) is the Benjamin–Hochberg procedure (BH).</p>
 </section><section class="slide level2"><h2>FWER and FDR takeaways</h2>
 <ul>
 <li class="fragment">FDR will generally produce more Type I errors, but buys you more power (produces fewer Type II errors).</li>
@@ -236,7 +234,7 @@ Bárbara D. Bitarello
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure><div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://bookdown.org/mike/data_analysis/sec-false-discovery-rate.html#sec-false-discovery-rate"><img data-src="images/clipboard-2899040513.png" class="quarto-figure quarto-figure-center" alt="Table showing FDR vs FWER and their correction methods."></a></p>
+<figure><p><a href="https://bookdown.org/mike/data_analysis/sec-false-discovery-rate.html#sec-false-discovery-rate"><img data-src="images/clipboard-2899040513.png" class="quarto-figure quarto-figure-center" alt="Table showing FDR vs FWER and their correction methods." width="410"></a></p>
 </figure>
 </div>
 <figcaption>From: bookdown.org/mike/data_analysis/sec-false-discovery-rate.html</figcaption></figure>
@@ -255,7 +253,7 @@ Bárbara D. Bitarello
 <p>Do NOT use FDR correction if:</p>
 <ul>
 <li class="fragment"><p>Strict control of any false positives is required (e.g., drug approval studies).</p></li>
-<li class="fragment"><p>There are only a few tests, where Bonferroni is appropriate.</p></li>
+<li class="fragment"><p>There are only a few tests, in which case Bonferroni is appropriate.</p></li>
 </ul>
 </div></div>
 <ul>
@@ -266,7 +264,7 @@ Bárbara D. Bitarello
 <p><strong>Q: Can a P value equal 1.0?</strong> A P value would equal 1.0 only in the rare case in which the treatment effect in your sample precisely equals the one defined by the null hypothesis. When a computer program reports that the P value is 1.0000, it often means that the P value is greater than 0.9999.</p>
 <p><strong>Q: Should P values be reported as fractions or percentages?</strong> By tradition, P values are always presented as fractions and never as percentages.</p>
 <p><strong>Q: Is a one-tailed P value always equal to half the two-tailed P value?</strong> Not always. Some sampling distributions are asymmetrical. Even if the distribution is symmetrical (as most are), the one-tailed P value is only equal to half the two-tailed value if you correctly predicted the direction of the difference (correlation, association, etc.) in advance. If the effect actually went in the opposite direction to your prediction, the one-tailed P will be &gt;0.5 and greater than the two-tailed P value.</p>
-</section><section class="slide level2 dark-theme center"><h2>PHILOSOPHICAL/HISTORICAL DIGRESSION</h2>
+</section><section class="slide level2 dark-theme"><h2>PHILOSOPHICAL/HISTORICAL DIGRESSION</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://thesaurus.plus/synonyms/digression"><img data-src="images/clipboard-2625600572.png" class="quarto-figure quarto-figure-center" width="222"></a></p>
@@ -296,8 +294,8 @@ Bárbara D. Bitarello
 </div></aside></section><section class="slide level2"><h2>Mistake: believing that statistical hypothesis is an essential part of statistical analyses</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 36%">
-<col style="width: 63%">
+<col style="width: 37%">
+<col style="width: 62%">
 </colgroup>
 <thead><tr class="header">
 <th>Approach</th>
@@ -345,19 +343,36 @@ Bárbara D. Bitarello
 <li class="fragment">The earliest challenge for the application of eugenics was to encourage marriages between individuals of presumed high intellectual calibre — something unacceptable as an official policy in most modern societies</li>
 <li class="fragment">This original meaning was a very different concept (although historically intertwined) with what later became the Nazi policy</li>
 </ul></section><section class="slide level2"><h2>Ronald Fisher</h2>
-<p>Fisher became enthusiastic about the potential for eugenics based on Mendelian inheritance • He founded the Cambridge University Eugenics Society • In 1918 this became a highly influential paper in population genetics: The correlation between relatives on the supposition of Mendelian inheritance. Trans R Soc Edinb 52:399–433 • Proposed “voluntary sterilization” should be a legislation in the UK. It was not approved. • Fisher’s primary concern was the genetic future of England should elite members of society (by which he included himself) fail to reproduce at the same level as the poor. • Fisher advocated against birth control and called on the government to provide economic subsidies – what he referred to as family allowances – for those of high talent and ability commensurate with the number of children they produced.</p>
+<ul>
+<li class="fragment">UK statistician/eugenicist/geneticist who created many of the tools we use in statistics</li>
+<li class="fragment">Fisher became enthusiastic about the potential for eugenics based on Mendelian inheritance</li>
+<li class="fragment">He founded the Cambridge University Eugenics Society</li>
+<li class="fragment">In 1918 this became a highly influential paper in population genetics: <em>“The correlation between relatives on the supposition of Mendelian inheritance”</em>.<br>
+</li>
+<li class="fragment">Proposed “voluntary sterilization” should be a legislation in the UK. It was not approved.</li>
+</ul>
+
+<aside><div>
+<p>From: https://evolution-institute.org/ronald-fisher-is-not-being-cancelled-but-his-eugenic-advocacy-should- have-consequences/ Bodmer et al.&nbsp;(2021) https://doi.org/10.1038/s41437-020-00394-6</p>
+</div></aside></section><section class="slide level2"><h2>R. Fisher (cont.)</h2>
+<ul>
+<li class="fragment">Fisher’s primary concern was the genetic future of England should elite members of society (by which he included himself) fail to reproduce at the same level as the poor.</li>
+<li class="fragment">Fisher advocated against birth control and called on the government to provide economic subsidies – what he referred to as family allowances – for those of high talent and ability commensurate with the number of children they produced.</li>
+</ul>
 
 <aside><div>
 <p>From: https://evolution-institute.org/ronald-fisher-is-not-being-cancelled-but-his-eugenic-advocacy-should- have-consequences/ Bodmer et al.&nbsp;(2021) https://doi.org/10.1038/s41437-020-00394-6</p>
 </div></aside></section><section class="slide level2"><h2>Is <span class="math inline">\(\alpha\)</span> (Somewhat) Arbitrary?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://xkcd.com/1478/"><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing." width="422"></a></p>
-<figcaption>“If all else fails use significance at the𝛼 = 0.05 level and hope no one notices”. https://xkcd.com/1478/</figcaption></figure>
-</div>
+<div class="columns">
+<div class="column" style="width:&quot;70%;">
+<p><img data-src="images/clipboard-41787503.png" alt="Funny comic about arbitrary significance thresholds in hypothesis testing."></p>
+</div><div class="column" style="width:&quot;30%;">
+<p>“If all else fails use significance at the <span class="math inline">\(\alpha=0.05\)</span> level and hope no one notices”. https://xkcd.com/1478/</p>
+</div></div>
 </section><section class="slide level2 dark-theme center"><h2>Yes</h2>
 </section><section class="slide level2"><h2>The P-value was created with the goal of encouraging a closer look</h2>
 <ul>
-<li class="fragment">R. Fisher: UK statistician/eugenicist/geneticist who created many of the tools we use in statistics. Invented the P-value 100 years ago</li>
+<li class="fragment">R. Fisher:Invented the P-value 100 years ago</li>
 <li class="fragment">R. Fisher’s goal: give one a sense of how likely (or unlikely) a given set of “results” would be to be generated by pure chance. It’s a reality check in a sense.</li>
 <li class="fragment">He did NOT propose them as definitive criteria.</li>
 </ul>
@@ -369,7 +384,7 @@ Bárbara D. Bitarello
 <p>The value for which P=0.05, or 1 in 20 … is convenient to take this point as a limit in judging whether a deviation ought to be considered significant or not…”</p>
 </blockquote>
 <blockquote>
-<p>“If one in twenty does not seem high enough odds, we may … draw the line at one in fifty …, or one in a hundred…. Personally, the writer prefers to set a low standard of significance at the 5 per cent point, and ignore entirely all results which fail to reach this level.”</p>
+<p>“If one in twenty does not seem high enough odds, we may … draw the line at one in fifty …, or one in a hundred…. <em><em>Personally, the writer prefers to set a low standard of significance at the 5 per cent point, and ignore entirely all results which fail to reach this level</em></em>.”</p>
 </blockquote>
 <blockquote>
 <p>It is usual and convenient for experimenters to take 5 per cent as a standard level of significance, in the sense that they are prepared to ignore all results which fail to reach this standard, and, by this means, to eliminate from further discussion the greater part of the fluctuations which chance causes have introduced into their experimental results. — R.A Fisher (statistician/eugenicist/geneticist)</p>
@@ -420,13 +435,13 @@ Bárbara D. Bitarello
 <p>Reasoning: P-values as continuous variables that are prone to sampling error. If strength of evidence is continuous (rather than binary), our inferential conclusions should be too</p>
 <p>Report p-values (usually with CIs of sample statistic) and let reader interpret based on their level of skepticism.</p>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:60%;">
 <p><strong>Strengths</strong></p>
 <ul>
 <li class="fragment"><p>Sees P-value as subject to sampling error (which it is!)</p></li>
 <li class="fragment"><p>Recognizes and distinguishes between results that provide weak evidence, moderate evidence, and strong evidence against the null.</p></li>
 </ul>
-</div><div class="column">
+</div><div class="column" style="width:40%;">
 <p><strong>Weaknesses</strong></p>
 <ul>
 <li class="fragment">Harder to remain objective and skeptical when one can keep looking for “trends”</li>
