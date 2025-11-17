@@ -6,6 +6,10 @@
     ]
   },
   {
+    "listing": "/psets.html",
+    "items": []
+  },
+  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -34,9 +38,5 @@
       "/slides/AnalyzingProportions.html",
       "/slides/AnalyzingProportions2.html"
     ]
-  },
-  {
-    "listing": "/psets.html",
-    "items": []
   }
 ]

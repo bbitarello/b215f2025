@@ -330,6 +330,42 @@ Bárbara D. Bitarello
 </div><div class="column" style="width:30%;">
 <p><img data-src="images/clipboard-4099991647.png" alt="decorative figure showing flycatcher birds"></p>
 </div></div>
+</section><section class="slide level2"><h2>Problem 2: Solution</h2>
+<p><span class="math inline">\(P[X]=\binom {n}{X}p^X(1-p)^{n-X}\)</span>$</p>
+<div class="fragment">
+<p><span class="math inline">\(\binom {n}{X}=\frac{n!}{X!(n-X)!}\)</span></p>
+<p><span class="math inline">\(\binom {n}{X}=\frac{5!}{3!(2)!}\)</span></p>
+<p><span class="math inline">\(P[2]=\frac{120}{12}\times 0.8^X(1-0.8)^{5-3}\)</span></p>
+<p><span class="math inline">\(=19 \times (0.8)^3\times (0.2)^2\)</span></p>
+<p><span class="math inline">\(=0.205\)</span></p>
+</div>
+</section><section class="slide level2"><h2>Problem 2: Solution in R</h2>
+<p>In R</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Manually</span></span>
+<span id="cb4-2"><a></a>binom_coef <span class="ot">&lt;-</span> (<span class="dv">5</span> <span class="sc">*</span> <span class="dv">4</span> <span class="sc">*</span> <span class="dv">3</span> <span class="sc">*</span> <span class="dv">2</span>)<span class="sc">/</span>((<span class="dv">3</span> <span class="sc">*</span> <span class="dv">2</span>) <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb4-3"><a></a>binom_coef <span class="sc">*</span> (<span class="fl">0.8</span><span class="sc">^</span><span class="dv">3</span>) <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.8</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb4-4"><a></a><span class="do">## [1] 0.2048</span></span>
+<span id="cb4-5"><a></a><span class="co"># or</span></span>
+<span id="cb4-6"><a></a>binom_coef2 <span class="ot">&lt;-</span> <span class="fu">choose</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">k =</span> <span class="dv">3</span>)</span>
+<span id="cb4-7"><a></a>binom_coef2 <span class="sc">*</span> (<span class="fl">0.8</span><span class="sc">^</span><span class="dv">3</span>) <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.8</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb4-8"><a></a><span class="do">## [1] 0.2048</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Or:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.8</span>)</span>
+<span id="cb5-2"><a></a><span class="do">## [1] 0.2048</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section class="slide level2"><h2>Problem 2: Solution in R</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># notice that success can be either outcome: five birds, 3 brown, 2 white.</span></span>
+<span id="cb6-2"><a></a><span class="co"># p(brown)=3/5, p(white)=2/5 brown as success</span></span>
+<span id="cb6-3"><a></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.8</span>)</span>
+<span id="cb6-4"><a></a><span class="do">## [1] 0.2048</span></span>
+<span id="cb6-5"><a></a><span class="co"># white as success</span></span>
+<span id="cb6-6"><a></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.2</span>)</span>
+<span id="cb6-7"><a></a><span class="do">## [1] 0.2048</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section><section class="slide level2 dark-theme center"><h2>The binomial test</h2>
 <div class="{r-fit-text}">
 <p>Testing <span class="math inline">\(H_0\)</span> that <span class="math inline">\(\hat p\)</span> comes</p>
@@ -355,7 +391,7 @@ Bárbara D. Bitarello
 <p><span class="math inline">\(\hat p=\frac{X}{n}=\frac{6101}{9821}=0.62\)</span></p>
 </section><section class="slide level2"><h2>Generate the null &amp; Find P-value</h2>
 <p>Actually calculating P-value would look like this</p>
-<p><span class="math inline">\(9821-6101=33719\)</span></p>
+<p><span class="math inline">\(9821-6101=3719\)</span></p>
 <p>Two-tailed P-value:</p>
 <p><span class="math inline">\(p = \sum_{X = 6101}^{X = 9821} {9821 \choose X} .5^X (.5)^{9821-X}\)</span></p>
 <p><span class="math inline">\(+\)</span></p>
@@ -409,66 +445,7 @@ Bárbara D. Bitarello
 <p><span class="math display">\[\hat p = \frac{X}{n}\]</span></p>
 <p><span class="math inline">\(\hat p\)</span>: The hat signals that this is an estimate</p>
 <p><span class="math inline">\(p\)</span>: The expected proportion of successes is the probability of success p</p>
-</section><section class="slide level2"><h2>Sampling distributions</h2>
-
-<img data-src="AnalyzingProportions2_files/figure-revealjs/sampdist-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Properties of Proportions: Variability</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 56%">
-<col style="width: 6%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Variance</td>
-<td><span class="math inline">\(\sigma^2=p(1-p)\)</span></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Standard deviation</td>
-<td><span class="math inline">\(\sigma=\sqrt(p(1-p))\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Sample variance</td>
-<td><span class="math inline">\(s^2=\hat p(1-\hat p)\)</span></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Sample standard deviation</td>
-<td><span class="math inline">\(s=\sqrt{\hat p(1-\hat p)}\)</span></td>
-<td></td>
-</tr>
-</tbody>
-</table></section><section class="slide level2"><h2>Standard error of a proportion</h2>
-<p>Recall: the standard error of an estimate is always the standard deviation of its sampling distribution. If we know the real <span class="math inline">\(p\)</span> we can calculate it as:</p>
-<p><span class="math display">\[\sigma_{\hat p}=\sqrt{\frac{p(1-p)}{n}}\]</span></p>
-<p>Because <span class="math inline">\(p\)</span> is usually unknown, in practice we have:</p>
-<p><span class="math display">\[s_{\hat p}=\sqrt{\frac{\hat p(1-\hat p)}{n}}\]</span></p>
-
-<aside><div>
-<p>Note: Some textbooks use <span class="math inline">\(n-1\)</span> rather than n for the denominator of the standard error. Dividing by <span class="math inline">\(n-1\)</span> decreases bias, but yields estimates results that are further from the truth, on average.</p>
-</div></aside></section><section class="slide level2"><h2>95% CIs for the Binomial</h2>
-<ul>
-<li>For many parameter values, the binomial distribution is not symmetric about its mean. This is one reason why the 2 SE rule of thumb does not work for this.</li>
-<li>The 95% confidence interval of a proportion will enclose the true value of the proportion 95% of the time that it is calculated from new data.</li>
-<li>There are many ways to approximate the 95% CI of a proportion, and no consensus[1].</li>
-</ul>
-
-<aside><div>
-<p>[1]: In <code>R</code> “<em>Confidence intervals are obtained by a procedure first given in Clopper and Pearson (1934). This guarantees that the confidence level is at least conf.level, but in general does not give the shortest-length confidence intervals.</em>” (from <code><a href="https://rdrr.io/r/stats/binom.test.html">help(binom.test)</a></code> in <code>R</code>)</p>
-</div></aside></section><section class="slide level2"><h2>95% CIs for the binomial</h2>
-<ul>
-<li class="fragment">The book suggests the Agresti-Coull CIs:</li>
-</ul>
-<div class="fragment">
-<p><span class="math display">\[\bigg(p' - 1.96 \sqrt{\frac{p'(1-p')}{n+4}}\bigg) \leq p \leq \bigg(p' + 1.96 \sqrt{\frac{p'(1-p')}{n+4}}\bigg)\]</span></p>
-<p><span class="math inline">\(p' = (X+2) / (n+4)\)</span>… where <span class="math inline">\(X  =\)</span> observed # of successes</p>
-
-</div>
-<aside><div>
-<p>[1]: In <code>R</code> “<em>Confidence intervals are obtained by a procedure first given in Clopper and Pearson (1934). This guarantees that the confidence level is at least conf.level, but in general does not give the shortest-length confidence intervals.</em>” (from <code><a href="https://rdrr.io/r/stats/binom.test.html">help(binom.test)</a></code> in <code>R</code>)</p>
-</div></aside></section><section class="slide level2"><h2></h2>
+</section><section class="slide level2"><h2></h2>
 
 
 
@@ -590,7 +567,7 @@ Bárbara D. Bitarello
         // Number of milliseconds between automatically proceeding to the
         // next slide, disabled when set to 0, this value can be overwritten
         // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
+        autoSlide: 133000,
 
         // Stop auto-sliding after user input
         autoSlideStoppable: true,
