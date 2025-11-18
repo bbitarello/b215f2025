@@ -11,8 +11,8 @@
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-18">
-<meta name="keywords" content="Binomial test">
-<title>BIOL B215: Biostatistics with R – 6.2. Analysing proportions</title>
+<meta name="keywords" content="Chi-square goodness of fit">
+<title>BIOL B215: Biostatistics with R – 7.1. Analysing Count Data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -130,7 +130,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section class="quarto-title-block"><h1 class="title">6.2. Analysing proportions</h1>
+<section class="quarto-title-block"><h1 class="title">7.1. Analysing Count Data</h1>
   <p class="subtitle">The binomial test</p>
 
 <div class="quarto-title-authors">
@@ -142,102 +142,7 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-11-18</p>
-</section><section class="slide level2 dark-theme center"><h2>Properties of the binomial distribution</h2>
-</section><section class="slide level2"><h2>Expected # successes of n trials</h2>
-<p>Expected successes in <span class="math inline">\(n\)</span> trials</p>
-<p><span class="math display">\[\Huge{\mu = n \times p}\]</span></p>
-<p><span class="math inline">\(\mu\)</span>: That’s right. Mean number of successes, aka, expected number of successes.</p>
-
-<aside><div>
-<p>Probability Trivia: A binomial with n = 1 is called a Bernoulli process. This will not be a factoid you need to know in this class, but you might hear it some time.</p>
-</div></aside></section><section class="slide level2"><h2>Binomial: Variability and Uncertainty</h2>
-<p>For counts:</p>
-<p><span class="math display">\[\text{population variance: } \sigma^2 = n \times p \times(1-p)\]</span></p>
-<p><span class="math display">\[\text{sample variance: }s^2 = n\times \hat p \times(1-\hat p)\]</span></p>
-
-<aside><div>
-<p>Note: Some textbooks use n-1 rather than n for the denominator of the standard error. Dividing by n-1 decreases bias, but yields estimates results that are further from the truth, on average.</p>
-</div></aside></section><section class="slide level2"><h2>Properties of proportions: expectations</h2>
-<p>If there are <span class="math inline">\(X\)</span> successes in <span class="math inline">\(n\)</span> trials in a random sample, then the</p>
-<p><em>estimated proportion of successes</em> is:</p>
-<p><span class="math display">\[\hat p = \frac{X}{n}\]</span></p>
-<p><span class="math inline">\(\hat p\)</span>: The hat signals that this is an estimate</p>
-<p><span class="math inline">\(p\)</span>: The expected proportion of successes is the probability of success p</p>
-</section><section class="slide level2"><h2>Sample size and standard error</h2>
-
-<img data-src="AnalyzingProportions3_files/figure-revealjs/sampdist-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Properties of Proportions: Variability</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 56%">
-<col style="width: 6%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Variance</td>
-<td><span class="math inline">\(\sigma^2=p(1-p)\)</span></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Standard deviation</td>
-<td><span class="math inline">\(\sigma=\sqrt(p(1-p))\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Sample variance</td>
-<td><span class="math inline">\(s^2=\hat p(1-\hat p)\)</span></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Sample standard deviation</td>
-<td><span class="math inline">\(s=\sqrt{\hat p(1-\hat p)}\)</span></td>
-<td></td>
-</tr>
-</tbody>
-</table></section><section class="slide level2"><h2>Standard error of a proportion</h2>
-<p>Recall: the standard error of an estimate is always the standard deviation of its sampling distribution. If we know the real <span class="math inline">\(p\)</span> we can calculate it as:</p>
-<p><span class="math display">\[\sigma_{\hat p}=\sqrt{\frac{p(1-p)}{n}}\]</span></p>
-<p>Because <span class="math inline">\(p\)</span> is usually unknown, in practice we have:</p>
-<p><span class="math display">\[s_{\hat p}=\sqrt{\frac{\hat p(1-\hat p)}{n}}\]</span></p>
-
-<aside><div>
-<p>Note: Some textbooks use <span class="math inline">\(n-1\)</span> rather than n for the denominator of the standard error. Dividing by <span class="math inline">\(n-1\)</span> decreases bias, but yields estimates results that are further from the truth, on average.</p>
-</div></aside></section><section class="slide level2"><h2>95% CIs for the Binomial</h2>
-<ul>
-<li>For many parameter values, the binomial distribution is not symmetric about its mean. This is one reason why the 2 SE rule of thumb does not work for this.</li>
-<li>The 95% confidence interval of a proportion will enclose the true value of the proportion 95% of the time that it is calculated from new data.</li>
-<li>There are many ways to <em>approximate</em> the 95% CI of a proportion, and no consensus[1].</li>
-</ul>
-
-<aside><div>
-<p>[1]: In <code>R</code> “<em>Confidence intervals are obtained by a procedure first given in Clopper and Pearson (1934). This guarantees that the confidence level is at least conf.level, but in general does not give the shortest-length confidence intervals.</em>” (from <code><a href="https://rdrr.io/r/stats/binom.test.html">help(binom.test)</a></code> in <code>R</code>)</p>
-</div></aside></section><section class="slide level2"><h2>95% CIs for the binomial</h2>
-<ul>
-<li class="fragment">The book suggests the Agresti-Coull CIs:</li>
-</ul>
-<div class="fragment">
-<p><span class="math display">\[\bigg(p' - 1.96 \sqrt{\frac{p'(1-p')}{n+4}}\bigg) \leq p \leq \bigg(p' + 1.96 \sqrt{\frac{p'(1-p')}{n+4}}\bigg)\]</span></p>
-<p><span class="math inline">\(p' = (X+2) / (n+4)\)</span>… where <span class="math inline">\(X  =\)</span> observed # of successes</p>
-
-</div>
-<aside><div>
-<p>[1]: In <code>R</code> “<em>Confidence intervals are obtained by a procedure first given in Clopper and Pearson (1934). This guarantees that the confidence level is at least conf.level, but in general does not give the shortest-length confidence intervals.</em>” (from <code><a href="https://rdrr.io/r/stats/binom.test.html">help(binom.test)</a></code> in <code>R</code>)</p>
-</div></aside></section><section class="slide level2 dark-theme center"><h2>Approximations for the Binomial Test</h2>
-</section><section class="slide level2"><h2>Why?</h2>
-<p>• Adding up all the probabilities to obtain the exact p- value is pretty time-consuming</p>
-<p>• Because of that, two approximations for the p-value of a binomial test exist: the chi-square goodness-of-fit test (next topic) and the normal approximation to the binomial test</p>
-<p>• They can be useful and are very common.</p>
-<p>• In R you can implement the exact binomial test easily, though, as we saw</p>
-
-<aside><div>
-<p>If asked to conduct a binomial test by hand, you can use the chi-squared approximation to get a p-value</p>
-</div></aside></section><section class="slide level2"><h2>Key Points</h2>
-<p>• A proportion is an estimate of a probability.</p>
-<p>• The binomial distribution provides a clear example of building up from simple probability logic to mathematical models of probability.</p>
-<p>• The binomial test tests the null hypothesis that an estimated proportion comes from a population with a specified probability.</p>
-<p>• We can quantify the uncertainty in our estimate of the probability.</p>
-<p>Interactive App: https://shiny.rit.albany.edu/stat/binomial/</p>
-
+</section><section class="slide level2">
 
 </section>
 </div>
