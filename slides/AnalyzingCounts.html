@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-11-18">
-<meta name="keywords" content="Chi-square goodness of fit">
-<title>BIOL B215: Biostatistics with R – 7.1. Analysing Count Data</title>
+<meta name="dcterms.date" content="2025-11-19">
+<meta name="keywords" content="Goodness-of-fit tests">
+<title>BIOL B215: Biostatistics with R – 7.1.Goodness-of-fit tests</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -125,12 +191,13 @@
       margin-right: 0; 
     }
   </style>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script><link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section class="quarto-title-block"><h1 class="title">7.1. Analysing Count Data</h1>
+<section class="quarto-title-block"><h1 class="title">7.1.Goodness-of-fit tests</h1>
   <p class="subtitle">The binomial test</p>
 
 <div class="quarto-title-authors">
@@ -141,10 +208,1240 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-11-18</p>
-</section><section class="slide level2">
+  <p class="date">2025-11-19</p>
+</section><section class="slide level2"><h2>Outline</h2>
+<p>•Goodness-of-fit tests</p>
+<p>•The proportional model</p>
+<p>•The <span class="math inline">\(\chi^2\)</span> distribution</p>
+<p>•Degrees of freedom</p>
+<p>•The <span class="math inline">\(\chi^2\)</span> test</p>
+<p>•Using <span class="math inline">\(\chi^2\)</span> to test if data are binomially distributed</p>
+<p>•Using <span class="math inline">\(\chi^2\)</span> to test if data are distributed according to a poisson distribution</p>
+</section><section class="slide level2"><h2>Goodness of Fit Tests</h2>
+<div class="r-fit-text">
+<p><font size="7">Does <font color="#E69F00">data</font> come from a <font color="#56B4E9">given distribution</font> with specified <font color="#56B4E9">parameters</font>?</font></p>
+</div>
+</section><section class="slide level2"><h2>NHL player birth months 🏒</h2>
+<div class="goal">
+<p><strong>Biological hypothesis</strong>: Being born earlier in the year makes players stand out when young, helping them achieve later success.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><span class="math inline">\(H_0\)</span>: Elite hockey players are born randomly across the year.</p>
+<p><span class="math inline">\(H_A\)</span>: Elite hockey players are NOT born randomly across the year.</p>
+</div><div class="column" style="width:&quot;65%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-1-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="slide level2"><h2>Testing The ‘Matthew Effect’!</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span class="math inline">\(H_0\)</span> Prop birth months of NHLers is like that of other humans.</p>
+<p><span class="math inline">\(H_A\)</span> Prop birth months of NHLers is unlike that of other humans.</p>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>Human births by month</caption>
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">births (%)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan</td>
+<td style="text-align: right;">7.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb</td>
+<td style="text-align: right;">7.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar</td>
+<td style="text-align: right;">8.72</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">April</td>
+<td style="text-align: right;">8.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May</td>
+<td style="text-align: right;">8.95</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">June</td>
+<td style="text-align: right;">8.57</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul</td>
+<td style="text-align: right;">8.76</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aug</td>
+<td style="text-align: right;">8.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sept</td>
+<td style="text-align: right;">8.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct</td>
+<td style="text-align: right;">8.19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov</td>
+<td style="text-align: right;">7.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec</td>
+<td style="text-align: right;">7.87</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div>
 
-</section>
+<aside><div>
+<p>Ventura et al.&nbsp;(2001). Births: final data for 1999. National Vital Statistics Reports Vol. 49, No.&nbsp;1.</p>
+</div></aside></section><section class="slide level2"><h2>Introducing <span class="math inline">\(\chi^2\)</span>
+</h2>
+<p><span class="math inline">\(\chi^2\)</span> summarizes the fit of <strong>categorical</strong> data to expectations.</p>
+<p><span class="math display">\[\chi^2 = \sum \frac{(\text{Observed}_i - \text{Expected}_i)^2}{\text{Expected}_i}\]</span></p>
+
+<img data-src="images/clipboard-1606444611.png" class="quarto-figure quarto-figure-center r-stretch" alt="shows chi-squared formula with annotations: O=observed, E=expected, chi-squared (greek symbol)"><p><span class="math inline">\(\chi^2 = 0\)</span>: Data perfectly match null hypothesis expectations</p>
+<p><span class="math inline">\(χ^2 &gt; 0\)</span>: Data show deviation from null hypothesis expectations</p>
+</section><section class="slide level2"><h2>Finding Expectations</h2>
+<div class="columns">
+<div class="column">
+<p>Expected number of births in month <span class="math inline">\(i\)</span> is:</p>
+<p><span class="math inline">\(E[X] = n_{total} × \text{Null proportion}\)</span></p>
+<p><span class="math inline">\(n_{total} = 1245\)</span> (just add up the births column)</p>
+<p><span class="math display">\[E[X_i] = n_{total} \times \text{expected propotion}_i\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>nhl <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.0794</span>, <span class="fl">0.0763</span>, <span class="fl">0.0872</span>, <span class="fl">0.0863</span>, <span class="fl">0.0895</span>, <span class="fl">0.0857</span>, <span class="fl">0.0876</span>,</span>
+<span id="cb1-3"><a></a>        <span class="fl">0.085</span>, <span class="fl">0.0854</span>, <span class="fl">0.0819</span>, <span class="fl">0.077</span>, <span class="fl">0.0787</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> expected.prop <span class="sc">*</span> <span class="fu">sum</span>(births), <span class="st">`</span><span class="at">expected %</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">100</span> <span class="sc">*</span> expected.prop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 18px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">births</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected %</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.n</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">7.94</td>
+<td style="text-align: right;">98.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">7.63</td>
+<td style="text-align: right;">95.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">8.72</td>
+<td style="text-align: right;">108.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">8.63</td>
+<td style="text-align: right;">107.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">8.95</td>
+<td style="text-align: right;">111.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">June</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">8.57</td>
+<td style="text-align: right;">106.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">8.76</td>
+<td style="text-align: right;">109.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aug</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">8.50</td>
+<td style="text-align: right;">105.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sep</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">8.54</td>
+<td style="text-align: right;">106.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">8.19</td>
+<td style="text-align: right;">102.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: right;">95.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">7.87</td>
+<td style="text-align: right;">98.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div>
+</section><section class="slide level2"><h2>Finding <span class="math inline">\(\chi^2\)</span> [1/2]</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 18px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">births</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected %</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.n</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">7.94</td>
+<td style="text-align: right;">98.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">7.63</td>
+<td style="text-align: right;">95.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">8.72</td>
+<td style="text-align: right;">108.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">8.63</td>
+<td style="text-align: right;">107.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">8.95</td>
+<td style="text-align: right;">111.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">June</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">8.57</td>
+<td style="text-align: right;">106.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">8.76</td>
+<td style="text-align: right;">109.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aug</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">8.50</td>
+<td style="text-align: right;">105.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sep</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">8.54</td>
+<td style="text-align: right;">106.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">8.19</td>
+<td style="text-align: right;">102.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: right;">95.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">7.87</td>
+<td style="text-align: right;">98.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column">
+<p>Example: January</p>
+<p><span class="math inline">\(E=98.9\)</span></p>
+<p><span class="math inline">\(O=133\)</span></p>
+<p><span class="math inline">\(\frac{(O_{i}-E_{i})^2}{E_{i}}=?\)</span></p>
+<p><span class="math inline">\(\frac{(133-98.9)^2}{98.9}=\frac{1162.81}{98.9}=11.76\)</span></p>
+</div></div>
+</section><section class="slide level2"><h2>Finding <span class="math inline">\(\chi^2\)</span> [2/2]</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>nhl <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>    <span class="fu">mutate</span>(<span class="at">sq_dev_over_expect =</span> (expected.n <span class="sc">-</span> births)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 18px; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">month.num</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">births</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.prop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.n</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected %</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sq_dev_over_expect</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">0.079</td>
+<td style="text-align: right;">98.9</td>
+<td style="text-align: right;">7.94</td>
+<td style="text-align: right;">11.795</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">7.63</td>
+<td style="text-align: right;">9.478</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">0.087</td>
+<td style="text-align: right;">108.6</td>
+<td style="text-align: right;">8.72</td>
+<td style="text-align: right;">0.272</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;">107.4</td>
+<td style="text-align: right;">8.63</td>
+<td style="text-align: right;">1.243</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">111.4</td>
+<td style="text-align: right;">8.95</td>
+<td style="text-align: right;">0.515</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">June</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;">106.7</td>
+<td style="text-align: right;">8.57</td>
+<td style="text-align: right;">2.491</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">0.088</td>
+<td style="text-align: right;">109.1</td>
+<td style="text-align: right;">8.76</td>
+<td style="text-align: right;">1.564</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aug</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">0.085</td>
+<td style="text-align: right;">105.8</td>
+<td style="text-align: right;">8.50</td>
+<td style="text-align: right;">2.077</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sep</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">0.085</td>
+<td style="text-align: right;">106.3</td>
+<td style="text-align: right;">8.54</td>
+<td style="text-align: right;">5.116</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">0.082</td>
+<td style="text-align: right;">102.0</td>
+<td style="text-align: right;">8.19</td>
+<td style="text-align: right;">3.165</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">0.077</td>
+<td style="text-align: right;">95.9</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: right;">5.454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">0.079</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: right;">7.87</td>
+<td style="text-align: right;">1.720</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Now find <span class="math inline">\(\chi^2\)</span> by summing over all <span class="math inline">\(\frac{(\text{O}_i - \text{E}_i)^2}{\text{E}_i}\)</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>obs.chi2 <span class="ot">&lt;-</span> nhl <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev_over_expect))</span>
+<span id="cb3-3"><a></a>obs.chi2</span>
+<span id="cb3-4"><a></a><span class="do">## # A tibble: 1 × 1</span></span>
+<span id="cb3-5"><a></a><span class="do">##    chi2</span></span>
+<span id="cb3-6"><a></a><span class="do">##   &lt;dbl&gt;</span></span>
+<span id="cb3-7"><a></a><span class="do">## 1  44.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><font size="10"> <span class="math inline">\(\chi^2 = 44.89\)</span></font></p>
+</section><section class="slide level2"><h2>From Test Stat to P-value [1/2]</h2>
+<p><strong><em>By simulation</em></strong></p>
+<p>• Randomly assign hockey players birth dates. <span class="math inline">\(\chi^2\)</span> • Calculate for these random data following the null. • Repeat this many times. <span class="math inline">\(\chi^2\)</span> <span class="math inline">\(\chi^2\)</span> • Compare observed to generated under the null.</p>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/chi2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>From Test Stat to P-value [2/2]</h2>
+<p>The <span class="math inline">\(\chi^2\)</span> distribution describes expected values of <span class="math inline">\(\chi^2\)</span> under <span class="math inline">\(H_0\)</span>.<br>
+The p-value is the area under the upper tail of the distribution.<br>
+You can see solid agreement between our simulations and the <span class="math inline">\(\chi^2\)</span> distribution. We often use the <span class="math inline">\(\chi^2\)</span> for testing comparing categorical counts to expectations.</p>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section><section class="title-slide slide level1 dark-theme"><h1>WHY DOES THIS WORK?</h1>
+<p>THE <span class="math inline">\(\chi^2\)</span> DISTRIBUTION’S</p>
+<p>PROPERTIES</p>
+</section><section class="slide level2"><h2>Introduction to <span class="math inline">\(\chi^2\)</span> distribution</h2>
+<p>• The <span class="math inline">\(\chi^2\)</span> distribution describes the sampling distribution of <span class="math inline">\(\chi^2\)</span> under a null hypothesis predicting expected categorical counts. • There are many <span class="math inline">\(\chi^2\)</span> distributions, each associated with a different number of degrees of freedom. • The <span class="math inline">\(\chi^2\)</span> distributions are continuous probability distributions, so we use the <em>area under the curve</em> (not the height of the curve) to obtain an <strong>APPROXIMATE</strong> P-value. NOTE: This is a one-tailed test!</p>
+</section><section class="slide level2"><h2>Introduction to <span class="math inline">\(\chi^2\)</span> distribution</h2>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>What Is A Degree of Freedom?</h2>
+<p><font size="7"> For <span class="math inline">\(\chi^2\)</span> tests,</font><br>
+df = # categories - 1 - # params estimated from data</p>
+<p><font size="7"> More broadly… </font><br>
+How many data points can “wobble around” following initial estimation of your model.</p>
+<p>E.g. <span class="math inline">\(s^2=\frac{\sum (x-\bar x)^2}{n-1}; n=10\)</span></p>
+<p>• First we calculate the mean and then we need to calculate each <span class="math inline">\((x−\bar x)^2\)</span> for each data point.</p>
+<p>• But note that only <span class="math inline">\(n−1\)</span> data points are truly free to have <em>any</em> value. I.e., if you know the value <span class="math inline">\(x\)</span> for 9 of your 10 data points, the last one can be inferred. So this statistic has <span class="math inline">\(n− 1\)</span> degrees of freedom.</p>
+</section><section class="slide level2"><h2>Assumptions of <span class="math inline">\(\chi^2\)</span> tests</h2>
+<ul>
+<li>No expected values <span class="math inline">\(&lt; 1\)</span><br>
+</li>
+<li>No more than <span class="math inline">\(20\%\)</span> of expected values <span class="math inline">\(&lt; 5.\)</span>
+</li>
+</ul>
+<p>Do we meet these?</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">month</td>
+<td style="text-align: left;">Jan</td>
+<td style="text-align: left;">Feb</td>
+<td style="text-align: left;">Mar</td>
+<td style="text-align: left;">Apr</td>
+<td style="text-align: left;">May</td>
+<td style="text-align: left;">June</td>
+<td style="text-align: left;">Jul</td>
+<td style="text-align: left;">Aug</td>
+<td style="text-align: left;">Sep</td>
+<td style="text-align: left;">Oct</td>
+<td style="text-align: left;">Nov</td>
+<td style="text-align: left;">Dec</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">expected.n</td>
+<td style="text-align: left;">99</td>
+<td style="text-align: left;">95</td>
+<td style="text-align: left;">109</td>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">111</td>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">109</td>
+<td style="text-align: left;">106</td>
+<td style="text-align: left;">106</td>
+<td style="text-align: left;">102</td>
+<td style="text-align: left;">96</td>
+<td style="text-align: left;">98</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>
+<span class="math inline">\(\chi^2\)</span> P-Value and Stats Tables</h2>
+<p><font color="#6C8645"><strong>Statistical Table A</strong></font> in your book [old fashioned…]<br>
+Will be provided for your exam.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">df | a</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">0.1</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">0.05</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-2</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-3</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-4</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-5</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-6</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-7</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">2.71</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">3.84</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">6.63</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">10.8</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">15.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">19.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">23.9</td>
+<td style="text-align: right;">28.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">4.61</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">5.99</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">9.21</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">13.8</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">18.4</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">23.0</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">27.6</td>
+<td style="text-align: right;">32.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">6.25</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">7.81</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">11.34</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">16.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">21.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">25.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">30.7</td>
+<td style="text-align: right;">35.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">7.78</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">9.49</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">13.28</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">18.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">23.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">28.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">33.4</td>
+<td style="text-align: right;">38.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">9.24</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">11.07</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">15.09</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">20.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">25.7</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">30.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">35.9</td>
+<td style="text-align: right;">40.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">10.64</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">12.59</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">16.81</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">22.5</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">27.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">33.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">38.3</td>
+<td style="text-align: right;">43.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">12.02</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">14.07</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">18.48</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">24.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">29.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">35.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">40.5</td>
+<td style="text-align: right;">45.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">13.36</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">15.51</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">20.09</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">26.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">31.8</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">37.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">42.7</td>
+<td style="text-align: right;">48.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">14.68</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">16.92</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">21.67</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">27.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">33.7</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">39.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">44.8</td>
+<td style="text-align: right;">50.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">15.99</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">18.31</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">23.21</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">29.6</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">35.6</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">41.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">46.9</td>
+<td style="text-align: right;">52.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">17.28</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">19.68</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">24.72</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">31.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">37.4</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">43.2</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">48.9</td>
+<td style="text-align: right;">54.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">18.55</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">21.03</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">26.22</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">32.9</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">39.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">45.1</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">50.8</td>
+<td style="text-align: right;">56.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>
+<span class="math inline">\(\chi^2\)</span> P-Value and Stats Tables</h2>
+<p>We had <span class="math inline">\(\chi^2=44.89; df=12-1-0=11\)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">df | a</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">0.1</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">0.05</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-2</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-3</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-4</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-5</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-6</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; color: lightgrey !important; background-color: black !important;">10^-7</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">17.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">19.7</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">24.7</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">31.3</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">37.4</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">43.2</td>
+<td style="text-align: right; min-width: 10; max-width: 10;">48.9</td>
+<td style="text-align: right;">54.4</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<p>Note: The critical value of a test statistic that marks the boundary of a specified area in the tail (or tails) of the sampling distribution under <span class="math inline">\(H_{0}\)</span>. For <span class="math inline">\(df=11\)</span> and <span class="math inline">\(\alpha=0.05\)</span>, the critical value here is 19.7.</p>
+<p>We can determine that <span class="math inline">\(10^{-6}&lt;P&lt;10^{-5}\)</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># find pval for chisq test without stats table</span></span>
+<span id="cb4-2"><a></a><span class="fu">pchisq</span>(<span class="at">q =</span> <span class="fl">44.89</span>, <span class="at">df =</span> <span class="dv">11</span>, <span class="at">lower.tail =</span> F)</span>
+<span id="cb4-3"><a></a><span class="do">## [1] 5.07e-06</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>P is very small.</p>
+<p>Data like these would rarely be generated under the null.</p>
+<p>We reject <span class="math inline">\(H_0\)</span> &amp; conclude that birth months of NHL players do not follow that of the rest of the population.</p>
+<p>Note: This is a one tailed test by definition– we only care if data are too far from expectations, not if they’re too close.</p>
+</section><section class="slide level2"><h2>To summarize what we just did</h2>
+<p>• This was an example of using the <span class="math inline">\(\chi^2\)</span> goodness-of-fit test to test if the data follows a proportional model</p>
+<p>• The proportional model is a probability model in which the frequency of occurrence of events is proportional to the number of opportunities.</p>
+<p>• Critical values are used in association with statistical tables to determine whether the P-value is below a pre-determined threshold</p>
+<p>• You don’t need critical values when you use something like R to calculate your P-value</p>
+<p>• Always best to report actual p-value than a range <span class="math inline">\(\chi^2\)</span> <span class="math inline">\(\chi^2\)</span></p>
+<p>• P-values are always approximate because is a continuously distributed variable</p>
+</section><section class="slide level2"><h2>The <span class="math inline">\(\chi^2\)</span> Distribution is Versatile: We Can Use It for Any Discrete Distribution</h2>
+<p>• Provided the aforementioned assumptions are met</p>
+<p>• In the next, we test the null hypothesis that meiosis in monkey flower hybrids follows the expectations from a Punnett square.</p>
+<p>• We use a <span class="math inline">\(\chi^2\)</span> goodness of fit test to see if data meet binomial expectations. Note that this is not a binomial test, know the difference.</p>
+</section><section class="slide level2"><h2>Is Meiosis in monkey flower Fair?</h2>
+<div style="float:left;position: relative; top: 0px; left: -10px;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Seep-spring_Monkeyflower_%283419913157%29.jpg/240px-Seep-spring_Monkeyflower_%283419913157%29.jpg"></p>
+</div>
+<p>When making hybrids between monkey flower species, in one cross <a href="https://www.fishmanlab.org/">Lila Fishman</a> found:</p>
+<p>• 48 GG homozygotes</p>
+<p>• 37 GN heterozygotes</p>
+<p>• 4 NN homozygotes</p>
+<p>• This surprised her.</p>
+<p>What’s the probability that Lila would see this (or something more extreme) under chance alone?</p>
+
+<aside><div>
+<p>Data from: Fishman &amp; Saunders. 2008. Science 322: 1559-1562</p>
+</div></aside></section><section class="slide level2"><h2>Are these genotype frequencies unusual?</h2>
+<p><span class="math inline">\(H_0\)</span>: Genotypes follow Mendelian expectations of 1:2:1.<br><span class="math inline">\(H_A\)</span>: Genotypes do not follow Mendelian expectations of 1:2:1.</p>
+<p><span class="math inline">\(df =\)</span> # categories - 1 - # params estimated <span class="math inline">\(= 3 - 1 - 0 = 2\)</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
+<span id="cb5-2"><a></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>))</span>
+<span id="cb5-3"><a></a>monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">geno</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.prop</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">GG</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">0.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GN</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">0.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NN</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Are these genotype frequencies unusual?</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
+<span id="cb6-2"><a></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> <span class="fu">sum</span>(observed) <span class="sc">*</span> expected.prop, <span class="at">sq_dev =</span> (expected.n <span class="sc">-</span> observed)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a></a>    <span class="fu">mutate</span>(<span class="at">sq_dev =</span> <span class="fu">round</span>(sq_dev, <span class="at">digits =</span> <span class="dv">3</span>))</span>
+<span id="cb6-5"><a></a>monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-7"><a></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">geno</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.prop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected.n</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sq_dev</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">GG</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">22.2</td>
+<td style="text-align: right;">29.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GN</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">44.5</td>
+<td style="text-align: right;">1.26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NN</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">22.2</td>
+<td style="text-align: right;">14.97</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Meiosis isn’t fair in monkey flowers</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>monkey_chi <span class="ot">&lt;-</span> monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a></a>    <span class="fu">pull</span>()</span>
+<span id="cb7-4"><a></a>monkey_p <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="at">q =</span> monkey_chi, <span class="at">df =</span> <span class="dv">2</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-5"><a></a>monkey_p</span>
+<span id="cb7-6"><a></a><span class="do">## [1] 1.01e-10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>We observe a <span class="math inline">\(\chi_{2}^2\)</span> value of 46, and a p-value of <span class="math inline">\(1.01 \times 10^{-10}\)</span>.</p>
+<p><strong>Remember:</strong> The low P-value reflects the weight of evidence against the null hypothesis, not how big the difference is between the true proportion and the null expectation.</p>
+<p>We reject the null hypothesis. Meiosis isn’t fair.</p>
+</section><section class="slide level2"><h2></h2>
+<p><font size="6"> Centromere-Associated Female Meiotic Drive Entails Male Fitness Costs in Monkeyflowers </font></p>
+<blockquote>
+<p>Female meiotic drive, in which paired chromosomes compete for access to the egg, is a potentially powerful but rarely documented evolutionary force. In interspecific monkeyflower (Mimulus) hybrids, a driving M. guttatus allele (D) exhibits a 98:2 transmission advantage via female meiosis. We show that extreme interspecific drive is most likely caused by divergence in centromere-associated repeat domains and document cytogenetic and functional polymorphism for drive within a population of M. guttatus. In conspecific crosses, D had a 58:42 transmission advantage over nondriving alternative alleles. However, individuals homozygous for the driving allele suffered reduced pollen viability. These fitness effects and molecular population genetic data suggest that balancing selection prevents the fixation or loss of D and that selfish chromosomal transmission may affect both individual fitness and population genetic load.</p>
+</blockquote>
+
+<aside><div>
+<p>Fishman &amp; Saunders. 2008. Science 322: 1559-1562</p>
+</div></aside></section></section><section><section class="title-slide slide level1 dark-theme center"><h1>The poisson distribution</h1>
+
+</section><section class="slide level2"><h2>Poisson: Random Events in Time/Space</h2>
+<p>We often want to know if events independent in time/space. eg.</p>
+<ul>
+<li>Are some people lucky? ☘️<br>
+</li>
+<li>Do baseball players go on streaks? ⚾<br>
+</li>
+<li>Do cats stick together, or avoid one another? 🐯</li>
+</ul></section><section class="slide level2"><h2>Poisson: Random Events in Time/Space</h2>
+<p>E.g. Number of births per hour in a given hospital</p>
+<ul>
+<li>The number of successes in the experiment can be counted.</li>
+<li>The mean number of successes that occurs during a specific interval of time (or space) is known.</li>
+<li>Each outcome is independent.</li>
+<li>The probability that a success will occur is proportional to the size of the interval</li>
+</ul>
+<div class="goal">
+<p>Assuming events are independent the poisson distribution, describes the expected probability of <span class="math inline">\(X\)</span> of events in a block of time or space.</p>
+</div>
+</section><section class="slide level2"><h2>Poisson: Random Events in Time/Space</h2>
+<p>Example: Number of births per hour in a given hospital</p>
+<ol type="1">
+<li>The number of successes in the experiment can be counted.</li>
+<li>The mean number of successes that occurs during a specific interval of time (or space) is known.</li>
+<li>Each outcome is independent.</li>
+<li>The probability that a success will occur is proportional to the size of the interval</li>
+</ol>
+<p>##The poisson distribution (1/)</p>
+<ul>
+<li><p>A mathematical description of the probability of <span class="math inline">\(X\)</span> successful outcomes when:</p></li>
+<li><p>the number of attempts, <span class="math inline">\(n\)</span>, is high</p></li>
+<li><p>the probability of success for each attempt, <span class="math inline">\(p\)</span>, is low and determined through a random process</p></li>
+<li><p>the probability of each attempt, <span class="math inline">\(p\)</span>, is independent of prior success or failure</p></li>
+</ul></section><section class="slide level2"><h2>The poisson distribution (2/)</h2>
+<p>The Poisson distribution arises when counting events that occur independently and randomly at a constant rate over time or space.</p>
+<p>The number of events occuring during a fixed period or in a fixed region is a Poisson(λ) random variable where λ is the expected number of events.</p>
+<p>A <strong>discrete</strong> probability distribution (can only take values in the range 0,1,2,…</p>
+<p>Events occur with a <strong>known constant mean rate</strong> and independently of the time since the last event.</p>
+</section><section class="slide level2"><h2>The poisson distribution (3/)</h2>
+<p>The poisson distribution describes the expected probability of X of independent events in time/space.</p>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>The poisson distribution (4/)</h2>
+<p>The poisson distribution describes the expected probability of X of independent events in time/space.</p>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Examples</h2>
+<ul>
+<li>The average number of people killed by lightning in the US each year</li>
+<li>On average, an accident occurs at a certain traffic intersection every six months</li>
+<li>On average, a lottery jackpot is won every four weeks.</li>
+</ul></section><section class="slide level2"><h2>The poisson distribution: equation</h2>
+<p>Assuming events are random and independent, the probability of observing <span class="math inline">\(X\)</span> events in a block of time or space equals</p>
+<p><span class="math display">\[\Huge{Pr[X] =\frac{e^{-\lambda} \lambda^{X}}{X!}}\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(\lambda\)</span> is the expected number of events in a block.<br>
+</li>
+<li>
+<span class="math inline">\(e\)</span> is the base of <span class="math inline">\(ln()\)</span>, aka Euler’s number. <code><a href="https://rdrr.io/r/base/Log.html">exp()</a></code> in <code>R</code>
+</li>
+</ul>
+
+<aside><div>
+<p>Note: Many people use <span class="math inline">\(\mu\)</span> in place of <span class="math inline">\(\lambda\)</span></p>
+</div></aside></section><section class="slide level2"><h2>Poisson Example: Lousy Fish? 🐟</h2>
+<ul>
+<li>Parasites are a major force in human health, as well as evolution, ecology, and agronomy, animal husbandry.<br>
+</li>
+<li>Shaw et al asked if the distribution of parasites or across individual Shad fish was random, or if some have an exceptional parasite burden? Here are their data:</li>
+</ul>
+<div style="float:left;position: relative; top: 0px; right: 0px;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_parasites</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_fish</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">103</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: right;">Nr_fish</th>
+<th style="text-align: right;">Nr_parasites</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: right;">238</td>
+<td style="text-align: right;">21</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="float:right;position: relative; top: 0px; left: 10px;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Alosa_sapidissima_%28line_art%29.jpg"></p>
+</div>
+
+<aside><div>
+<p>Shaw et al.&nbsp;1998. <a href="https://www.ncbi.nlm.nih.gov/pubmed/9881385">Parasitology 117: 567 - 610</a>.</p>
+</div></aside></section><section class="slide level2"><h2>A Lousy Simulation 🐟</h2>
+<p>We can put 225 on 238 fish many times to generate a null.</p>
+<ol type="1">
+<li>Take 225 parasites and:</li>
+</ol>
+<ul>
+<li>randomly place one parasite in one of 238 fish</li>
+<li>repeat for each parasite</li>
+<li>the same fish can be the target more than once</li>
+</ul>
+<ol start="2" type="1">
+<li><p>At the end, count the number of parasites in each fish</p></li>
+<li><p>Repeat this many, many times</p></li>
+</ol></section><section class="slide level2"><h2>A Lousy Simulation 🐟</h2>
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Lousy Hypothesis Testing 🐟</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_parasites</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_fish</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">103</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li><p><font color="black">State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span></font></p></li>
+<li><p>Find expectated numbers<br></p></li>
+<li><p>Remember <span class="math inline">\(Pr[X] =\frac{e^{-\mu} \mu^{X}}{X!}\)</span>…</p></li>
+<li><p><font color="black">Find degrees of freedom</font><br>
+df = # categories - 1 - # params estimated</p></li>
+</ul>
+<p><font color="black">Do we meet <span class="math inline">\(\chi^2\)</span> assumptions?</font><br></p>
+<ul>
+<li>No expected values <span class="math inline">\(&lt; 1\)</span> &amp;<br>
+</li>
+<li>No more than 20% of expected values <span class="math inline">\(&lt; 5\)</span>.</li>
+</ul>
+<p>If yes, go on. If no, brainstorm.</p>
+</div></div>
+</section><section class="slide level2"><h2>Expected numbers [1/2]</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_parasites</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_fish</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expect</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">92.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">87.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">41.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">13.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.09</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>We do not meet assumptions, now what?</h2>
+<p>Options:</p>
+<ul>
+<li><p>Go on despite this: if test is robust to violations. (I don’t support this option!)</p></li>
+<li><p>Combine categories: if biologically sensible.</p></li>
+<li><p>Find a more appropriate test.</p></li>
+<li><p>Bypass traditional tests by using simulations</p></li>
+</ul></section><section class="slide level2"><h2>We can combine 4+ to meet assumptions</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">num_parasites</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_fish</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expect</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sq_dev</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">92.47</td>
+<td style="text-align: right;">1.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">87.42</td>
+<td style="text-align: right;">2.72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">41.32</td>
+<td style="text-align: right;">0.17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">13.02</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4+</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3.77</td>
+<td style="text-align: right;">0.40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Expected Numbers [2/2]</h2>
+<p><span class="math inline">\(P[X]=\frac{e^{-\lambda}\lambda^X}{X!}\)</span></p>
+<p><span class="math inline">\(\lambda = \frac{tot.paras}{tot.fish}=0.9453782\)</span></p>
+<p>Let’s try the first row:</p>
+<p><span class="math inline">\(X=0\)</span></p>
+<p><span class="math inline">\(P[0]=\frac{e^{-0.945}\times 0.945^0}{0!}\approx 0.388\)</span></p>
+<p><span class="math inline">\(\text{\# fish expected}=0.388\times 238=92.47\)</span></p>
+</section><section class="slide level2"><h2>Derived by formula</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">num_parasites</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">num_fish</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expect</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sq_dev</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">92.47</td>
+<td style="text-align: right;">1.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">87.42</td>
+<td style="text-align: right;">2.72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">41.32</td>
+<td style="text-align: right;">0.17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">13.02</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4+</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3.77</td>
+<td style="text-align: right;">0.40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Hypothesis test</h2>
+<p>df = # categories - 1 - # params estimated = 5 - 1 - 1 = 3</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>new.expect <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev), <span class="at">p_value =</span> <span class="fu">pchisq</span>(<span class="at">q =</span> chi2, <span class="at">df =</span> <span class="dv">3</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb8-3"><a></a><span class="do">## # A tibble: 1 × 2</span></span>
+<span id="cb8-4"><a></a><span class="do">##    chi2 p_value</span></span>
+<span id="cb8-5"><a></a><span class="do">##   &lt;dbl&gt;   &lt;dbl&gt;</span></span>
+<span id="cb8-6"><a></a><span class="do">## 1  4.57   0.206</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section class="slide level2"><h2>Old fashioned moment</h2>
+
+<img data-src="images/clipboard-1193048379.png" class="r-stretch"><p>We fail to reject the NULL hypothesis. We cannot exclude the idea that parasites are distributed at random across fish.</p>
+</section></section><section><section class="title-slide slide level1 dark-theme center"><h1>Over or underdispersed</h1>
+
+</section><section class="slide level2"><h2>Over or underdispersed</h2>
+<p>The poisson has an expected variance equal to the mean</p>
+<p>If the variance greatly exceeds the mean events are clumped</p>
+<p>If the variance is much less than the mean events are dispersed.</p>
+
+
+
+<img data-src="AnalyzingCounts_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
