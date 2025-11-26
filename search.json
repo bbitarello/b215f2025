@@ -588,128 +588,394 @@
     "text": "From: makeameme.org"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
-    "href": "slides/DisplayingAndDescribingData2.html#last-time",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#last-time",
+    "href": "slides/DisplayingAndDescribingData3.html#last-time",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Last time",
-    "text": "Last time\n\nMean\nMedian\n\ntoday: location and width; next class plots"
+    "text": "Last time\n\nMean, median, mode\nRange\n\ntoday: location and width; next class plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#today",
-    "href": "slides/DisplayingAndDescribingData2.html#today",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Today",
-    "text": "Today\n\nMedian example\nMode\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
+    "objectID": "slides/DisplayingAndDescribingData3.html#this-week",
+    "href": "slides/DisplayingAndDescribingData3.html#this-week",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "This week",
+    "text": "This week\n\nEstimates of width (cont.)\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#attention",
-    "href": "slides/DisplayingAndDescribingData2.html#attention",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Attention",
-    "text": "Attention\n\n\nEstimate = \\(\\bar{Y}, \\bar{x}, \\text{etc.}\\)  (sample mean)\n\nVariable\n\n\nParameter = \\(\\mu\\)  (population mean) - Constant"
+    "objectID": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
+    "href": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Recall this histogram",
+    "text": "Recall this histogram\n\n\nFigure\nMean and Median\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 3\n  Species     mean median\n  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 setosa     0.246    0.2\n2 versicolor 1.33     1.3\n3 virginica  2.03     2"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
-    "href": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Practice: Median with even sample size",
-    "text": "Practice: Median with even sample size\n\nCalculate the median of the following 10 numbers: \\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\\)"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mean-x-median",
-    "href": "slides/DisplayingAndDescribingData2.html#mean-x-median",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mean x Median",
-    "text": "Mean x Median\n\n\n\nThe mean is more convinient mathematically.\nThe mean is the center of gravity\n\n\n\nThe median is a better descriptor for skewed population distributions.\nThe median is the middle measurement.\n\n\n\n\nBoth can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#case-study",
-    "href": "slides/DisplayingAndDescribingData2.html#case-study",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Case Study",
-    "text": "Case Study\n\n2005 U.S. Census. The plot shows the income per household distribution for the bottom 98% of the population. Median = \\(\\sim46\\)k; Mean: \\(\\sim63\\)k.\n\n\n\n\n\n\nFrom: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution\n\nFor measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mean-or-median",
-    "href": "slides/DisplayingAndDescribingData2.html#mean-or-median",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mean or Median?",
-    "text": "Mean or Median?\n\nNumber of seeds per fruit. Which one is better in this case?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mode",
-    "href": "slides/DisplayingAndDescribingData2.html#mode",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mode",
-    "text": "Mode\n\nThe most common value observed in a sample\n\n\neasy to pick out as the peak in a histogram\nUseful because it always reflects a value actually seen in the dataset, unlike mean and median"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#mode-1",
-    "href": "slides/DisplayingAndDescribingData2.html#mode-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Mode",
-    "text": "Mode\n\nThe most common value observed in a sample\n\n\nUnimodal vs bimodal (multimodal)\nMultimodal data usually reflects data has multiple (at least two) values that are equally common.\nOften results from two or more underlying groups being measured together.\nCan be used with data that isn’t numeric"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
-    "href": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "But how will you know how your data is distributed?",
-    "text": "But how will you know how your data is distributed?\n\nFirst step: plot your data"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#skewness",
-    "href": "slides/DisplayingAndDescribingData2.html#skewness",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Skewness",
-    "text": "Skewness"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#skewness-1",
-    "href": "slides/DisplayingAndDescribingData2.html#skewness-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Skewness",
-    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&gt;1/2\\) of values are less than the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
-    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\nRecall the iris  dataset"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
-    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Histograms reveal measures of center",
-    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
-    "href": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
+    "href": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value] (cont.)\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{N}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#range",
-    "href": "slides/DisplayingAndDescribingData2.html#range",
-    "title": "2.2.Displaying & Describing Data",
-    "section": "Range",
-    "text": "Range\n\nThe difference between the maximum and minimum observed values in a sample"
+    "objectID": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "href": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Width (aka variability)",
+    "text": "Width (aka variability)\n\nVariability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.\nVariation has a true value from a population that we estimate from a sample."
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#range-1",
-    "href": "slides/DisplayingAndDescribingData2.html#range-1",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#range",
+    "href": "slides/DisplayingAndDescribingData3.html#range",
+    "title": "2.3.Displaying & Describing Data",
     "section": "Range",
     "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
-    "title": "2.2.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData3.html#range-1",
+    "href": "slides/DisplayingAndDescribingData3.html#range-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Range",
+    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
+    "href": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Small samples tend to give lower estimates of the range than large samples",
+    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nSo the sample range is a biased estimator of the true range of the population\n\nSo sample range is a biased estimator of the true range of the population."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#scenario",
+    "href": "slides/DisplayingAndDescribingData3.html#scenario",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Scenario",
+    "text": "Scenario\n\nSalary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns\nWhat can you do then?\n\nYou could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
+    "href": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Interquartile Range (IQR)",
+    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots\n\n\nHow?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR",
+    "text": "IQR\nImagine sorting your data.\n\nThe individual in the middle is the median.\nThe first and last individuals mark the range\nThe other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data\nThe difference between these is the interquartile range"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR Example",
+    "text": "IQR Example\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR Example",
+    "text": "IQR Example\n\n\n\n\n\\(n=16\\)\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR in R",
+    "text": "IQR in R\n\n\nsummary() gives quartiles and max/min\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\n\nThe “long” route:\n\nCodeas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\nThe shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\nBoxplots reveal quartiles\n\nCodeboxplot(chick20, names = \"chicks day 20\")"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
+    "href": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”",
+    "text": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
+    "href": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "But there are metrics that look at all the values",
+    "text": "But there are metrics that look at all the values\n\nVariance, Standard Deviation, & Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.\n\n\n\nBecause (by definition) the differences between all observations and the mean sum to zero (\\(\\sum{Y_i-\\bar{Y}=0}\\)), these summaries work from the squared difference between observations and the mean (\\(\\sum{(Y_i-\\bar{Y})^2}\\))."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance",
+    "href": "slides/DisplayingAndDescribingData3.html#variance",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance",
+    "text": "Variance\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-1",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance",
+    "text": "Variance\n\n\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean\n\n\n\nNote: the numerator here is called “sum of squares”"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "href": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Sample variance (shortcut)",
+    "text": "Sample variance (shortcut)\n\\[s^2=\\left(\\frac{n}{n-1}\\right)\\left(\\frac{\\sum^{n}_{i=1}{Y^2_i}}{n}-\\bar{Y}^2\\right)\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-example",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance Example",
+    "text": "Variance Example\n\nLifespan of 12 forager bees (in hours).\n\n\n\nMean\nSum of squares\nSum of squares (cont)\n\n\n\n\n2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7\n\n\\[\\bar{Y} = \\frac{\\sum{Y_i}}{n} = \\frac{919}{33}= 27.848\\text{ hours}\\]\n\n\n\nCodebeesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\n\n# A tibble: 33 × 3\n   hours `Y-meanY` `(Y-meanY)^2`\n   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1   2.3     -25.5          653.\n 2   2.3     -25.5          653.\n 3   3.9     -23.9          574.\n 4   4       -23.8          569.\n 5   7.1     -20.7          430.\n 6   9.5     -18.3          337.\n 7   9.6     -18.2          333.\n 8  10.8     -17.0          291.\n 9  12.8     -15.0          226.\n10  13.6     -14.2          203.\n# ℹ 23 more rows\n\n\n\n\n\nCodebeesDF &lt;- beesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\nsum(beesDF[, 3])\n\n[1] 13520.96\n\n\nSo\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\]\nNote: the unit here is hours squared. Also, note that we don’t divide by \\(n\\) but by \\(n-1\\).\n4 differences from population mean:\ns^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\n\n\nParameter\n\\[\\sigma=\\sqrt{\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}}=\\sqrt{\\sigma^2}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s=\\sqrt{\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}}=\\sqrt{s^2}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\nUsing the previous example, with forager bees.\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\] \\[s = \\sqrt{422.53}=20.555\\] ## In R\nVariance\n\nCodevar(beesDF$hours)\n\n[1] 422.5301\n\n\nStandard deviation\n\nCodesd(beesDF$hours)\n\n[1] 20.55554\n\nCodesqrt(var(beesDF$hours))\n\n[1] 20.55554"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "href": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Coefficient of Variation (CV)",
+    "text": "Coefficient of Variation (CV)\n\nThe variance and standard deviation increase with the mean.\nThe coefficient of variation allows for fair comparisons of variability between measures on different scales.\n\n\\[CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\]"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "href": "slides/DisplayingAndDescribingData3.html#in-summary",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "In summary",
+    "text": "In summary\n\nRange: The difference between the largest and smallest values.\nInterquartile Range: The difference between the 25th and 75th percentile.\nVariance & Standard Deviation: The difference between observations & the mean.\nCoefficient of Variation: A measure of the standard deviation that’s independent of the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "href": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "Variance, Standard Deviation or Coefficient of Variation?",
+    "text": "Variance, Standard Deviation or Coefficient of Variation?\n\n\nVariance and standard deviation convey the same information and are used in many equations.\n\nThe coefficient of variation is less directly used in equations, but is ideal for comparing variation between different types of comparisons."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
+    "title": "2.3.Displaying & Describing Data",
+    "section": "That’s all for today",
+    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#overview",
+    "href": "slides/Statistics_and_Samples.html#overview",
+    "title": "1.1.Statistics and Samples",
+    "section": "Overview",
+    "text": "Overview\n\nGoals of statistics\nPopulations and Samples\nStatistics and parameters\nEstimate errors due to sampling\nTypes of experiments\nTypes of variables\n\n\n\nwe will continue on this topic next time"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#learning-goals",
+    "href": "slides/Statistics_and_Samples.html#learning-goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nUnderstand the major goal of statistics\nDistinguish between a sample and a population\nDistinguish between an estimate and a parameter\nIdentify why estimates from samples may deviate from parameters of populations\nIdentify the properties of a good sample\nBe able to detect the differences between observational and experimental studies\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nTweet from someone I don’t know, but very on point, so thank you!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "href": "slides/Statistics_and_Samples.html#what-is-statistics-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is statistics?",
+    "text": "What is statistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "href": "slides/Statistics_and_Samples.html#what-is-biostatistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "What is BIOstatistics?",
+    "text": "What is BIOstatistics?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should you care about statistics?",
+    "text": "Why should you care about statistics?\n\nBiology (ecology, genetics, immunology, microbiology, …)\nBiomedical sciences\nPublic health\nData science\nEconomy, Psychology, Social Science"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "href": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
+    "title": "1.1.Statistics and Samples",
+    "section": "Why should anyone care about statistics?",
+    "text": "Why should anyone care about statistics?\n\n\n\nGood science!\nCritical evaluation of “scientific evidence”\nStatistics and probability are not intuitive\nWe tend to jump to conclusions and we are very often wrong\nTransferable skills\n\n\n\n\nThis is my adorable dog, Cashew"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "href": "slides/Statistics_and_Samples.html#challenge-data-deluge",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: data deluge",
+    "text": "Challenge: data deluge\n\nCover from “The Economist” (Feb 27-March 10, 2010)"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "href": "slides/Statistics_and_Samples.html#challenge-understanding",
+    "title": "1.1.Statistics and Samples",
+    "section": "Challenge: understanding",
+    "text": "Challenge: understanding\n\nFrom: https://xkcd.com/1478/"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#goals",
+    "href": "slides/Statistics_and_Samples.html#goals",
+    "title": "1.1.Statistics and Samples",
+    "section": "Goals",
+    "text": "Goals\n\nGoal: learn about the world\n\n\nFrom: imgflip.com/memegenerator"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-practice-then",
+    "href": "slides/Statistics_and_Samples.html#in-practice-then",
+    "title": "1.1.Statistics and Samples",
+    "section": "In practice, then…",
+    "text": "In practice, then…\n\nChallenge: We can’t look at the whole world.\nSolution: Take a sample and generalize outward."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#great-but",
+    "href": "slides/Statistics_and_Samples.html#great-but",
+    "title": "1.1.Statistics and Samples",
+    "section": "Great but…",
+    "text": "Great but…\n\nNew Challenge: Samples deviate from the populations by\\ luck/chance (sampling error) or unrepresentative sampling (sampling bias)\n\nSolution:\n\nEstimate the values of important parameters\nHave measures of uncertainty for estimates\nTest hypotheses about those parameters"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#lets-try-again",
+    "href": "slides/Statistics_and_Samples.html#lets-try-again",
+    "title": "1.1.Statistics and Samples",
+    "section": "Let’s try again",
+    "text": "Let’s try again\n\nStatistics are a quantitative technology for empirical science.\nA logic and methodology for the measurement of uncertainty and for an examination of that uncertainty.\nThe key word here is uncertainty. Statistics becomes necessary when observations are variable."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "href": "slides/Statistics_and_Samples.html#what-about-biostats",
+    "title": "1.1.Statistics and Samples",
+    "section": "What about biostats?",
+    "text": "What about biostats?\n\nWhat is the motivating biological question?\nWhat experiments can be done and/or data can be collected to address this question?\nDo results support an interesting conclusion?\nWhat are the shortcomings/limitations of statistical models and causal frameworks in the analysis?\nHow do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "href": "slides/Statistics_and_Samples.html#the-central-obsession",
+    "title": "1.1.Statistics and Samples",
+    "section": "The Central Obsession",
+    "text": "The Central Obsession\n\n\n\nQuestion: How do we make inferences about the WORLD from our finite observations?\n\n\n\nAnswer: Make models to account for the process of sampling and the associated hazards."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#important-distinctions",
+    "href": "slides/Statistics_and_Samples.html#important-distinctions",
+    "title": "1.1.Statistics and Samples",
+    "section": "Important distinctions",
+    "text": "Important distinctions\n\nPopulations vs. samples\nParameters vs. estimates"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#populations",
+    "href": "slides/Statistics_and_Samples.html#populations",
+    "title": "1.1.Statistics and Samples",
+    "section": "Populations",
+    "text": "Populations\n\n\n\nIn Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.\n\n\n\nIn Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "href": "slides/Statistics_and_Samples.html#statistics-parameters",
+    "title": "1.1.Statistics and Samples",
+    "section": "Statistics & parameters",
+    "text": "Statistics & parameters\nA parameter is some property of the world, i.e., the “truth”\n\n\n\n\n\n\nSeriously, though, \\&lt;3 X-files!"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-population-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A population of starfish",
+    "text": "A population of starfish\n\n\n\nParameters describe populations\nE.g. proportion of pink starfish among all starfish of a given species in a certain location"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "href": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
+    "title": "1.1.Statistics and Samples",
+    "section": "A sample of starfish",
+    "text": "A sample of starfish\n\n\n\nEstimates (statistics) approximate parameters as inferred from samples\nWe estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#in-summary",
+    "href": "slides/Statistics_and_Samples.html#in-summary",
+    "title": "1.1.Statistics and Samples",
+    "section": "In summary",
+    "text": "In summary\n\n\nParameters and populations\n\nParameters describe Populations\nBecause we can’t sample an entire population, we usually don’t know parameters.\n\n\nEstimates and samples\n\nBut we can get a good sense of the parameters from estimates we make from samples.\nEstimates approximate parameters as inferred from Samples"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "href": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling: What could go wrong?",
+    "text": "Sampling: What could go wrong?\nMeet sampling error and sampling bias"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\n\n\n\nIf you collected these against a dark background without careful procedures… \n\n\n\n\nThis sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling bias",
+    "text": "Sampling bias\nSystematic difference between parameters & estimates.\n\n\nCase study: Polls in the 1936 US Election."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#the-1936-election",
+    "href": "slides/Statistics_and_Samples.html#the-1936-election",
+    "title": "1.1.Statistics and Samples",
+    "section": "The 1936 Election",
+    "text": "The 1936 Election\n\n\n\n\n\nRepublican Alf Landon\n\n\n\n\nDemocrat Franklin Roosevelt"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "href": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
+    "title": "1.1.Statistics and Samples",
+    "section": "1936 Literary Digest poll",
+    "text": "1936 Literary Digest poll\n\nFigure made in R with code borrowed from Y. Brandvain"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "href": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
+    "title": "1.1.Statistics and Samples",
+    "section": "Election: Roosevelt won in a landslide",
+    "text": "Election: Roosevelt won in a landslide\n\nThis plot was made in R"
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "href": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
+    "title": "1.1.Statistics and Samples",
+    "section": "Sampling Bias in the 1936 Polls",
+    "text": "Sampling Bias in the 1936 Polls\n\nQuestionnaire was more likely to reach rich people (who could afford phones & attend book clubs) than those with fewer means.\nVoting and party preference are correlated with wealth.\nPoorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory."
+  },
+  {
+    "objectID": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "href": "slides/Statistics_and_Samples.html#thats-all-for-today",
+    "title": "1.1.Statistics and Samples",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
@@ -1926,7 +2192,7 @@
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nStandard Error\n\n\n4.3.Estimation with Uncertainty\n\n\nWed, Oct 29\n\n\n\n\n\n\nConfidence Intervals\n\n\n4.4.Estimation with Uncertainty\n\n\nMon, Nov 03\n\n\n\n\n\n\nConfidence Intervals & Pseudoreplication\n\n\n4.5.Estimation with Uncertainty\n\n\nWed, Nov 05\n\n\n\n\n\n\nHypothesis Testing\n\n\n5.1.Hypothesis Testing\n\n\nWed, Nov 05\n\n\n\n\n\n\nStatistical Power\n\n\n5.2.Hypothesis Testing\n\n\nMon, Nov 10\n\n\n\n\n\n\nMultiple testing problem\n\n\n5.3. Hypothesis Testing\n\n\nWed, Nov 12\n\n\n\n\n\n\nBinomial test\n\n\n6.1. Analysing proportions\n\n\nWed, Nov 12\n\n\n\n\n\n\nBinomial test\n\n\n6.2. Analysing proportions\n\n\nMon, Nov 17\n\n\n\n\n\n\nBinomial test\n\n\n6.3. Analysing proportions\n\n\nTue, Nov 18\n\n\n\n\n\n\nGoodness-of-fit tests\n\n\n7.1.Goodness-of-fit tests\n\n\nWed, Nov 19\n\n\n\n\n\n\nPoisson distribution\n\n\n7.2.Goodness-of-fit tests\n\n\nTue, Nov 25\n\n\n\n\n\n\nNo matching items",
+    "text": "Topic\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nLogistics\n\n\n0.Logistics\n\n\nTue, Sep 02\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.1.Statistics and Samples\n\n\nWed, Sep 03\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.2.Statistics and Samples\n\n\nMon, Sep 08\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.3.Statistics and Samples\n\n\nWed, Sep 10\n\n\n\n\n\n\nStatistics & Samples\n\n\n1.4.Statistics and Samples\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.1.Displaying & Describing Data\n\n\nMon, Sep 15\n\n\n\n\n\n\nCentral tendency and spread\n\n\n2.2.Displaying & Describing Data\n\n\nWed, Sep 17\n\n\n\n\n\n\nSpread and Plots\n\n\n2.3.Displaying & Describing Data\n\n\nMon, Sep 22\n\n\n\n\n\n\nPlots and Tables\n\n\n2.4.Displaying & Describing Data\n\n\nWed, Sep 24\n\n\n\n\n\n\nPlots and Tables\n\n\n2.5.Displaying & Describing Data\n\n\nMon, Sep 29\n\n\n\n\n\n\nMaking good plots\n\n\n2.6.Displaying & Describing Data\n\n\nWed, Oct 01\n\n\n\n\n\n\nWhy study probability\n\n\n3.1.Probability\n\n\nWed, Oct 01\n\n\n\n\n\n\nProbability - Foundational Concepts\n\n\n3.2.Probability\n\n\nMon, Oct 06\n\n\n\n\n\n\nProbability Rules & Bayes’ Theorem\n\n\n3.3.Probability\n\n\nWed, Oct 08\n\n\n\n\n\n\nProbability Rules\n\n\n3.4.Probability\n\n\nMon, Oct 20\n\n\n\n\n\n\nEstimation\n\n\n4.1.Estimation with Uncertainty\n\n\nWed, Oct 22\n\n\n\n\n\n\nEstimation\n\n\n4.2.Estimation with Uncertainty\n\n\nMon, Oct 27\n\n\n\n\n\n\nStandard Error\n\n\n4.3.Estimation with Uncertainty\n\n\nWed, Oct 29\n\n\n\n\n\n\nConfidence Intervals\n\n\n4.4.Estimation with Uncertainty\n\n\nMon, Nov 03\n\n\n\n\n\n\nConfidence Intervals & Pseudoreplication\n\n\n4.5.Estimation with Uncertainty\n\n\nWed, Nov 05\n\n\n\n\n\n\nHypothesis Testing\n\n\n5.1.Hypothesis Testing\n\n\nWed, Nov 05\n\n\n\n\n\n\nStatistical Power\n\n\n5.2.Hypothesis Testing\n\n\nMon, Nov 10\n\n\n\n\n\n\nMultiple testing problem\n\n\n5.3. Hypothesis Testing\n\n\nWed, Nov 12\n\n\n\n\n\n\nBinomial test\n\n\n6.1. Analysing proportions\n\n\nWed, Nov 12\n\n\n\n\n\n\nBinomial test\n\n\n6.2. Analysing proportions\n\n\nMon, Nov 17\n\n\n\n\n\n\nBinomial test\n\n\n6.3. Analysing proportions\n\n\nTue, Nov 18\n\n\n\n\n\n\nGoodness-of-fit tests\n\n\n7.1.Goodness-of-fit tests\n\n\nWed, Nov 19\n\n\n\n\n\n\nPoisson distribution\n\n\n7.2.Goodness-of-fit tests\n\n\nTue, Nov 25\n\n\n\n\n\n\nContingency Analyses\n\n\n8.1. Contingency Analyses\n\n\nTue, Nov 25\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Slides"
     ]
@@ -3378,394 +3644,128 @@
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
   {
-    "objectID": "slides/Statistics_and_Samples.html#overview",
-    "href": "slides/Statistics_and_Samples.html#overview",
-    "title": "1.1.Statistics and Samples",
-    "section": "Overview",
-    "text": "Overview\n\nGoals of statistics\nPopulations and Samples\nStatistics and parameters\nEstimate errors due to sampling\nTypes of experiments\nTypes of variables\n\n\n\nwe will continue on this topic next time"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#learning-goals",
-    "href": "slides/Statistics_and_Samples.html#learning-goals",
-    "title": "1.1.Statistics and Samples",
-    "section": "Learning Goals",
-    "text": "Learning Goals\n\nUnderstand the major goal of statistics\nDistinguish between a sample and a population\nDistinguish between an estimate and a parameter\nIdentify why estimates from samples may deviate from parameters of populations\nIdentify the properties of a good sample\nBe able to detect the differences between observational and experimental studies\n\nThese learning goals are for the entire topic/unit. They will also be available in the study guide."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics",
-    "href": "slides/Statistics_and_Samples.html#what-is-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nTweet from someone I don’t know, but very on point, so thank you!"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-statistics-1",
-    "href": "slides/Statistics_and_Samples.html#what-is-statistics-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is statistics?",
-    "text": "What is statistics?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-is-biostatistics",
-    "href": "slides/Statistics_and_Samples.html#what-is-biostatistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "What is BIOstatistics?",
-    "text": "What is BIOstatistics?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
-    "href": "slides/Statistics_and_Samples.html#why-should-you-care-about-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "Why should you care about statistics?",
-    "text": "Why should you care about statistics?\n\nBiology (ecology, genetics, immunology, microbiology, …)\nBiomedical sciences\nPublic health\nData science\nEconomy, Psychology, Social Science"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
-    "href": "slides/Statistics_and_Samples.html#why-should-anyone-care-about-statistics",
-    "title": "1.1.Statistics and Samples",
-    "section": "Why should anyone care about statistics?",
-    "text": "Why should anyone care about statistics?\n\n\n\nGood science!\nCritical evaluation of “scientific evidence”\nStatistics and probability are not intuitive\nWe tend to jump to conclusions and we are very often wrong\nTransferable skills\n\n\n\n\nThis is my adorable dog, Cashew"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#challenge-data-deluge",
-    "href": "slides/Statistics_and_Samples.html#challenge-data-deluge",
-    "title": "1.1.Statistics and Samples",
-    "section": "Challenge: data deluge",
-    "text": "Challenge: data deluge\n\nCover from “The Economist” (Feb 27-March 10, 2010)"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#challenge-understanding",
-    "href": "slides/Statistics_and_Samples.html#challenge-understanding",
-    "title": "1.1.Statistics and Samples",
-    "section": "Challenge: understanding",
-    "text": "Challenge: understanding\n\nFrom: https://xkcd.com/1478/"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#goals",
-    "href": "slides/Statistics_and_Samples.html#goals",
-    "title": "1.1.Statistics and Samples",
-    "section": "Goals",
-    "text": "Goals\n\nGoal: learn about the world\n\n\nFrom: imgflip.com/memegenerator"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#in-practice-then",
-    "href": "slides/Statistics_and_Samples.html#in-practice-then",
-    "title": "1.1.Statistics and Samples",
-    "section": "In practice, then…",
-    "text": "In practice, then…\n\nChallenge: We can’t look at the whole world.\nSolution: Take a sample and generalize outward."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#great-but",
-    "href": "slides/Statistics_and_Samples.html#great-but",
-    "title": "1.1.Statistics and Samples",
-    "section": "Great but…",
-    "text": "Great but…\n\nNew Challenge: Samples deviate from the populations by\\ luck/chance (sampling error) or unrepresentative sampling (sampling bias)\n\nSolution:\n\nEstimate the values of important parameters\nHave measures of uncertainty for estimates\nTest hypotheses about those parameters"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#lets-try-again",
-    "href": "slides/Statistics_and_Samples.html#lets-try-again",
-    "title": "1.1.Statistics and Samples",
-    "section": "Let’s try again",
-    "text": "Let’s try again\n\nStatistics are a quantitative technology for empirical science.\nA logic and methodology for the measurement of uncertainty and for an examination of that uncertainty.\nThe key word here is uncertainty. Statistics becomes necessary when observations are variable."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#what-about-biostats",
-    "href": "slides/Statistics_and_Samples.html#what-about-biostats",
-    "title": "1.1.Statistics and Samples",
-    "section": "What about biostats?",
-    "text": "What about biostats?\n\nWhat is the motivating biological question?\nWhat experiments can be done and/or data can be collected to address this question?\nDo results support an interesting conclusion?\nWhat are the shortcomings/limitations of statistical models and causal frameworks in the analysis?\nHow do I best communicate my results (including estimates, visualizations, conclusions, and caveats)?"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#the-central-obsession",
-    "href": "slides/Statistics_and_Samples.html#the-central-obsession",
-    "title": "1.1.Statistics and Samples",
-    "section": "The Central Obsession",
-    "text": "The Central Obsession\n\n\n\nQuestion: How do we make inferences about the WORLD from our finite observations?\n\n\n\nAnswer: Make models to account for the process of sampling and the associated hazards."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#important-distinctions",
-    "href": "slides/Statistics_and_Samples.html#important-distinctions",
-    "title": "1.1.Statistics and Samples",
-    "section": "Important distinctions",
-    "text": "Important distinctions\n\nPopulations vs. samples\nParameters vs. estimates"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#populations",
-    "href": "slides/Statistics_and_Samples.html#populations",
-    "title": "1.1.Statistics and Samples",
-    "section": "Populations",
-    "text": "Populations\n\n\n\nIn Biology| collection of interbreeding individuals of the same species that live in sufficient proximity that most mates are draw from this collection of individuals. This mostly applies to animals and, to some extent, plants.\n\n\n\nIn Statistics| the entire collection of individual units that a researcher is interested in. E.g. all women born in the US between 1990 and 200; all polar bears currently living in zoos; users of a certain social network in a certain age group; etc"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#statistics-parameters",
-    "href": "slides/Statistics_and_Samples.html#statistics-parameters",
-    "title": "1.1.Statistics and Samples",
-    "section": "Statistics & parameters",
-    "text": "Statistics & parameters\nA parameter is some property of the world, i.e., the “truth”\n\n\n\n\n\n\nSeriously, though, \\&lt;3 X-files!"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#a-population-of-starfish",
-    "href": "slides/Statistics_and_Samples.html#a-population-of-starfish",
-    "title": "1.1.Statistics and Samples",
-    "section": "A population of starfish",
-    "text": "A population of starfish\n\n\n\nParameters describe populations\nE.g. proportion of pink starfish among all starfish of a given species in a certain location"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
-    "href": "slides/Statistics_and_Samples.html#a-sample-of-starfish",
-    "title": "1.1.Statistics and Samples",
-    "section": "A sample of starfish",
-    "text": "A sample of starfish\n\n\n\nEstimates (statistics) approximate parameters as inferred from samples\nWe estimate the proportion of pink as inferred from this sample and extrapolate to the population as an approximation."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#in-summary",
-    "href": "slides/Statistics_and_Samples.html#in-summary",
-    "title": "1.1.Statistics and Samples",
-    "section": "In summary",
-    "text": "In summary\n\n\nParameters and populations\n\nParameters describe Populations\nBecause we can’t sample an entire population, we usually don’t know parameters.\n\n\nEstimates and samples\n\nBut we can get a good sense of the parameters from estimates we make from samples.\nEstimates approximate parameters as inferred from Samples"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
-    "href": "slides/Statistics_and_Samples.html#sampling-what-could-go-wrong",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling: What could go wrong?",
-    "text": "Sampling: What could go wrong?\nMeet sampling error and sampling bias"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling bias",
-    "text": "Sampling bias\n\n\n\nIf you collected these against a dark background without careful procedures… \n\n\n\n\nThis sample is biased. There is a higher proportion of orange stars than the population from which it was taken. Therefore, it is not a representative sample of the underlying population."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-1",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling bias",
-    "text": "Sampling bias\nSystematic difference between parameters & estimates.\n\n\nCase study: Polls in the 1936 US Election."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#the-1936-election",
-    "href": "slides/Statistics_and_Samples.html#the-1936-election",
-    "title": "1.1.Statistics and Samples",
-    "section": "The 1936 Election",
-    "text": "The 1936 Election\n\n\n\n\n\nRepublican Alf Landon\n\n\n\n\nDemocrat Franklin Roosevelt"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll",
-    "href": "slides/Statistics_and_Samples.html#literary-digest-poll",
-    "title": "1.1.Statistics and Samples",
-    "section": "1936 Literary Digest poll",
-    "text": "1936 Literary Digest poll\n2.4 million responses to 10 million questionnaires , sent to people from telephone books and club lists."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
-    "href": "slides/Statistics_and_Samples.html#literary-digest-poll-1",
-    "title": "1.1.Statistics and Samples",
-    "section": "1936 Literary Digest poll",
-    "text": "1936 Literary Digest poll\n\nFigure made in R with code borrowed from Y. Brandvain"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
-    "href": "slides/Statistics_and_Samples.html#election-roosevelt-won-in-a-landslide",
-    "title": "1.1.Statistics and Samples",
-    "section": "Election: Roosevelt won in a landslide",
-    "text": "Election: Roosevelt won in a landslide\n\nThis plot was made in R"
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
-    "href": "slides/Statistics_and_Samples.html#sampling-bias-in-the-1936-polls",
-    "title": "1.1.Statistics and Samples",
-    "section": "Sampling Bias in the 1936 Polls",
-    "text": "Sampling Bias in the 1936 Polls\n\nQuestionnaire was more likely to reach rich people (who could afford phones & attend book clubs) than those with fewer means.\nVoting and party preference are correlated with wealth.\nPoorer people (underrepresented in the poll) supported Roosevelt, carrying him to victory."
-  },
-  {
-    "objectID": "slides/Statistics_and_Samples.html#thats-all-for-today",
-    "href": "slides/Statistics_and_Samples.html#thats-all-for-today",
-    "title": "1.1.Statistics and Samples",
-    "section": "That’s all for today",
-    "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#last-time",
-    "href": "slides/DisplayingAndDescribingData3.html#last-time",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#last-time",
+    "href": "slides/DisplayingAndDescribingData2.html#last-time",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Last time",
-    "text": "Last time\n\nMean, median, mode\nRange\n\ntoday: location and width; next class plots"
+    "text": "Last time\n\nMean\nMedian\n\ntoday: location and width; next class plots"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#this-week",
-    "href": "slides/DisplayingAndDescribingData3.html#this-week",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "This week",
-    "text": "This week\n\nEstimates of width (cont.)\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
+    "objectID": "slides/DisplayingAndDescribingData2.html#today",
+    "href": "slides/DisplayingAndDescribingData2.html#today",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Today",
+    "text": "Today\n\nMedian example\nMode\nEstimates of width\nExplanatory and exploratory figures\nBest practices in figure design\nHow data types drive figure design\nHow to make effective tables"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
-    "href": "slides/DisplayingAndDescribingData3.html#recall-this-histogram",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Recall this histogram",
-    "text": "Recall this histogram\n\n\nFigure\nMean and Median\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 3\n  Species     mean median\n  &lt;fct&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 setosa     0.246    0.2\n2 versicolor 1.33     1.3\n3 virginica  2.03     2"
+    "objectID": "slides/DisplayingAndDescribingData2.html#attention",
+    "href": "slides/DisplayingAndDescribingData2.html#attention",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Attention",
+    "text": "Attention\n\n\nEstimate = \\(\\bar{Y}, \\bar{x}, \\text{etc.}\\)  (sample mean)\n\nVariable\n\n\nParameter = \\(\\mu\\)  (population mean) - Constant"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
-    "href": "slides/DisplayingAndDescribingData3.html#measures-of-dispersion",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
+    "href": "slides/DisplayingAndDescribingData2.html#practice-median-with-even-sample-size",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Practice: Median with even sample size",
+    "text": "Practice: Median with even sample size\n\nCalculate the median of the following 10 numbers: \\(12, 2,  9, 18,  4,  1, 10, 19, 14, 17\\)"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mean-x-median",
+    "href": "slides/DisplayingAndDescribingData2.html#mean-x-median",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mean x Median",
+    "text": "Mean x Median\n\n\n\nThe mean is more convinient mathematically.\nThe mean is the center of gravity\n\n\n\nThe median is a better descriptor for skewed population distributions.\nThe median is the middle measurement.\n\n\n\n\nBoth can lead to values that don’t actually exist in the sample. E.g., the average number of eggs laid by chickens in a farm might be 5.5 and the median number of children millennials have might be 1.2"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#case-study",
+    "href": "slides/DisplayingAndDescribingData2.html#case-study",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Case Study",
+    "text": "Case Study\n\n2005 U.S. Census. The plot shows the income per household distribution for the bottom 98% of the population. Median = \\(\\sim46\\)k; Mean: \\(\\sim63\\)k.\n\n\n\n\n\n\nFrom: https://www.visualizingeconomics.com/blog/2006/11/05/2005-us-income-distribution\n\nFor measures like income, medians are generally preferable to means. Why? Populations are right-skewed (there are few very rich people), and we care more about the average person than the average of people."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mean-or-median",
+    "href": "slides/DisplayingAndDescribingData2.html#mean-or-median",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mean or Median?",
+    "text": "Mean or Median?\n\nNumber of seeds per fruit. Which one is better in this case?"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mode",
+    "href": "slides/DisplayingAndDescribingData2.html#mode",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mode",
+    "text": "Mode\n\nThe most common value observed in a sample\n\n\neasy to pick out as the peak in a histogram\nUseful because it always reflects a value actually seen in the dataset, unlike mean and median"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#mode-1",
+    "href": "slides/DisplayingAndDescribingData2.html#mode-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Mode",
+    "text": "Mode\n\nThe most common value observed in a sample\n\n\nUnimodal vs bimodal (multimodal)\nMultimodal data usually reflects data has multiple (at least two) values that are equally common.\nOften results from two or more underlying groups being measured together.\nCan be used with data that isn’t numeric"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
+    "href": "slides/DisplayingAndDescribingData2.html#but-how-will-you-know-how-your-data-is-distributed",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "But how will you know how your data is distributed?",
+    "text": "But how will you know how your data is distributed?\n\nFirst step: plot your data"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#skewness",
+    "href": "slides/DisplayingAndDescribingData2.html#skewness",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Skewness",
+    "text": "Skewness"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#skewness-1",
+    "href": "slides/DisplayingAndDescribingData2.html#skewness-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Skewness",
+    "text": "Skewness\nLeft: Asymmetric Few small values. \\(&gt;1/2\\) of values exceed the mean.\nMiddle: Symmetric As many large as small values. \\(\\sim1/2\\) of values exceed the mean.\nRight: Asymmetric Few large values. \\(&gt;1/2\\) of values are less than the mean."
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
+    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Histograms reveal measures of center",
+    "text": "Histograms reveal measures of center\n\nRecall the iris  dataset"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
+    "href": "slides/DisplayingAndDescribingData2.html#histograms-reveal-measures-of-center-1",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Histograms reveal measures of center",
+    "text": "Histograms reveal measures of center\n\n\nFigure\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCodelibrary(ggplot2)\nggplot(iris, aes(x = Petal.Width, fill = Species)) +\n    geom_histogram(binwidth = 0.1, show.legend = FALSE,\n        alpha = 0.9) + xlab(\"Petal Width (cm)\") + facet_wrap(~Species,\n    ncol = 1) + scale_x_continuous(breaks = seq(0.5,\n    2.5, 0.5)) + scale_fill_manual(values = wesanderson::wes_palette(\"AsteroidCity1\")) +\n    bb_theme()"
+  },
+  {
+    "objectID": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
+    "href": "slides/DisplayingAndDescribingData2.html#measures-of-dispersion",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Measures of dispersion",
-    "text": "Measures of dispersion\n\nRange [max value - min value] (cont.)\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{N}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
+    "text": "Measures of dispersion\n\nRange [max value - min value]\nQuartiles, interquartile range [75th percentile - 25th percentile]\nVariance [ estimate = \\(s^2\\) =\\(\\frac{\\Sigma(x_i - \\bar{x})^2}{n-1}\\), param = \\(\\sigma ^2\\) = \\(\\frac{\\Sigma(x_i - \\mu)^2}{n}\\) ]\nStandard deviation [ estimate = \\(s\\) =\\(\\sqrt{s^2}\\), param = \\(\\sigma\\) = \\(\\sqrt{\\sigma^2}\\) ]\nCoefficient of variation [ estimate = CV = \\(\\frac{s}{\\bar{Y}}\\), param = \\(\\frac{\\sigma}{\\mu}\\) ]"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
-    "href": "slides/DisplayingAndDescribingData3.html#width-aka-variability",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Width (aka variability)",
-    "text": "Width (aka variability)\n\nVariability of a population should not be ignored as simply noise about the mean, but is biologically important in its own right.\nVariation has a true value from a population that we estimate from a sample."
+    "objectID": "slides/DisplayingAndDescribingData2.html#range",
+    "href": "slides/DisplayingAndDescribingData2.html#range",
+    "title": "2.2.Displaying & Describing Data",
+    "section": "Range",
+    "text": "Range\n\nThe difference between the maximum and minimum observed values in a sample"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#range",
-    "href": "slides/DisplayingAndDescribingData3.html#range",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#range-1",
+    "href": "slides/DisplayingAndDescribingData2.html#range-1",
+    "title": "2.2.Displaying & Describing Data",
     "section": "Range",
     "text": "Range\n\nRange of weight of 46 chicks at 20 days since birth\n\n\nCodedata(\"ChickWeight\")\nchick20 &lt;- ChickWeight[ChickWeight$Time == 20, ]$weight\nchick20\n\n\nMax and Min in this dataset at time 20:\n\nCodesummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\nCode# or\nc(min(chick20), max(chick20))\n\n[1]  76 361\n\nCode# commonly the diff between them is shown\nmax(chick20) - min(chick20)\n\n[1] 285"
   },
   {
-    "objectID": "slides/DisplayingAndDescribingData3.html#range-1",
-    "href": "slides/DisplayingAndDescribingData3.html#range-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Range",
-    "text": "Range\n\nIf I take a sample of just 5 chicks from those 46 …\n\n\n\n\nCoderange(chick20)\n\n[1]  76 361\n\nCodehist(chick20, xlab = \"46 chicks\")\n\n\n\n\n\n\n\n\n\nCodechick5random &lt;- sample(x = chick20,\n    size = 5, replace = F)\nrange(chick5random)\n\n[1] 157 295\n\nCodehist(chick5random, xlab = \" 10 chicks\")"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
-    "href": "slides/DisplayingAndDescribingData3.html#small-samples-tend-to-give-lower-estimates-of-the-range-than-large-samples",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Small samples tend to give lower estimates of the range than large samples",
-    "text": "Small samples tend to give lower estimates of the range than large samples\n\n\nSo the sample range is a biased estimator of the true range of the population\n\nSo sample range is a biased estimator of the true range of the population."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#scenario",
-    "href": "slides/DisplayingAndDescribingData3.html#scenario",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Scenario",
-    "text": "Scenario\n\nSalary range in a company will give a very good sense of the disparities between the ones in each end, but not a good sense of what the “average” employee earns\nWhat can you do then?\n\nYou could calculate the median, sure, but what about the spread? Interquartile range would be a better measure here"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
-    "href": "slides/DisplayingAndDescribingData3.html#interquartile-range-iqr",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Interquartile Range (IQR)",
-    "text": "Interquartile Range (IQR)\n\nThe difference between the 75th and 25th percentiles of the data. A.k.a., the “middle 50%” of the data.\n\n\nless biased estimator than range\nnecessary for making boxplots\n\n\nHow?"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR",
-    "text": "IQR\nImagine sorting your data.\n\nThe individual in the middle is the median.\nThe first and last individuals mark the range\nThe other two quantiles are the individuals ¼ and ¾ the way into your sorted list of data\nThe difference between these is the interquartile range"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-example",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR Example",
-    "text": "IQR Example\n\nExample: Running speeds (cm/s) of Tidarren spiders before voluntary amputation of pedipalp\n\n\nAttention:\n\n\nQuantiles partition the data into \\(n\\) parts\n\nQuartiles partition the data into quarters"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-example-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR Example",
-    "text": "IQR Example\n\n\n\n\n\\(n=16\\)\n1st quartile: \\(j=0.25n=4\\)\n3rd quartile: \\(j=0.75n=12\\)\n\n\n\nIf \\(j\\) is integer, \\(\\frac{Y_{j}+Y_{j+1}}{2}\\)\n\\(\\frac{Y_{4}+Y_{5}}{2}=\\frac{2.31+2.37}{2}=2.34\\)\n\\(\\frac{Y_{12}+Y_{13}}{2}=\\frac{3+3.09}{2}=3.045\\)\n\n\n\n\nNote: software may use slightly different algorithms."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-in-r",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR in R",
-    "text": "IQR in R\n\n\nsummary() gives quartiles and max/min\n\nCode# summary gives quartiles and max/min\nsummary(chick20)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   76.0   161.0   204.0   209.7   259.0   361.0 \n\n\nThe “long” route:\n\nCodeas.numeric(summary(chick20)[5] - summary(chick20)[2])\n\n[1] 98\n\n\nThe shortcut\n\nCodeIQR(chick20)\n\n[1] 98\n\n\n\nBoxplots reveal quartiles\n\nCodeboxplot(chick20, names = \"chicks day 20\")"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
-    "href": "slides/DisplayingAndDescribingData3.html#iqr-can-give-us-more-information-than-the-range-but-its-still-only-looking-at-the-values-in-the-middle",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”",
-    "text": "IQR can give us more information than the range, but it’s still only looking at the values “in the middle”"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
-    "href": "slides/DisplayingAndDescribingData3.html#but-there-are-metrics-that-look-at-all-the-values",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "But there are metrics that look at all the values",
-    "text": "But there are metrics that look at all the values\n\nVariance, Standard Deviation, & Coefficient of Variation all communicate how far individual observations are expected to deviate from the mean.\n\n\n\nBecause (by definition) the differences between all observations and the mean sum to zero (\\(\\sum{Y_i-\\bar{Y}=0}\\)), these summaries work from the squared difference between observations and the mean (\\(\\sum{(Y_i-\\bar{Y})^2}\\))."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance",
-    "href": "slides/DisplayingAndDescribingData3.html#variance",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance",
-    "text": "Variance\n\nVariance is a measure of dispersion of data points in a sample (or population) around the mean of the sample (or population). It is the expected squared difference between an observations and the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-1",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance",
-    "text": "Variance\n\n\nParameter\n\\[\\sigma^2=\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s^2=\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean\n\n\n\nNote: the numerator here is called “sum of squares”"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
-    "href": "slides/DisplayingAndDescribingData3.html#sample-variance-shortcut",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Sample variance (shortcut)",
-    "text": "Sample variance (shortcut)\n\\[s^2=\\left(\\frac{n}{n-1}\\right)\\left(\\frac{\\sum^{n}_{i=1}{Y^2_i}}{n}-\\bar{Y}^2\\right)\\]"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-example",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-example",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance Example",
-    "text": "Variance Example\n\nLifespan of 12 forager bees (in hours).\n\n\n\nMean\nSum of squares\nSum of squares (cont)\n\n\n\n\n2.3 2.3 3.9 4.0 7.1 9.5 9.6 10.8 12.8 13.6 14.6 18.2 18.2 19.0 20.9 24.3 25.8 25.9 26.5 27.1 30.0 33.3 34.8 34.8 35.7 36.9 41.3 44.2 54.2 55.8 65.8 71.1 84.7\n\n\\[\\bar{Y} = \\frac{\\sum{Y_i}}{n} = \\frac{919}{33}= 27.848\\text{ hours}\\]\n\n\n\nCodebeesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\n\n# A tibble: 33 × 3\n   hours `Y-meanY` `(Y-meanY)^2`\n   &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n 1   2.3     -25.5          653.\n 2   2.3     -25.5          653.\n 3   3.9     -23.9          574.\n 4   4       -23.8          569.\n 5   7.1     -20.7          430.\n 6   9.5     -18.3          337.\n 7   9.6     -18.2          333.\n 8  10.8     -17.0          291.\n 9  12.8     -15.0          226.\n10  13.6     -14.2          203.\n# ℹ 23 more rows\n\n\n\n\n\nCodebeesDF &lt;- beesDF |&gt;\n    mutate(`Y-meanY` = hours - mean(hours)) |&gt;\n    mutate(`(Y-meanY)^2` = (hours - mean(hours))^2)\nsum(beesDF[, 3])\n\n[1] 13520.96\n\n\nSo\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\]\nNote: the unit here is hours squared. Also, note that we don’t divide by \\(n\\) but by \\(n-1\\).\n4 differences from population mean:\ns^2 instead of sigma^2; uses sample size instead of population size, taken as deviations from sample mean rather than population mean (which is not available); n-1, to account for bias caused by using Ybar (which is slightly closer to the individuals in the sample than the true mean is, because the sample mean is calculated from the sample too"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation",
-    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Standard Deviation",
-    "text": "Standard Deviation\n\n\nParameter\n\\[\\sigma=\\sqrt{\\frac{\\sum_{i=1}^{N}(Y_{i}-\\mu)^2}{N}}=\\sqrt{\\sigma^2}\\]  \\(N\\): number of individuals in population\n\\(\\mu\\): population mean\n\nEstimate\n\\[s=\\sqrt{\\frac{\\sum_{i=1}^{n}(Y_{i}-\\bar{Y})^2}{n-1}}=\\sqrt{s^2}\\]  \\(n\\): number of individuals in sample\n\\(\\bar{Y}\\): sample mean"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
-    "href": "slides/DisplayingAndDescribingData3.html#standard-deviation-1",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Standard Deviation",
-    "text": "Standard Deviation\nUsing the previous example, with forager bees.\n\\[s^2 = \\frac{13520.96}{33-1}=422.53\\text{ hours}^2\\] \\[s = \\sqrt{422.53}=20.555\\] ## In R\nVariance\n\nCodevar(beesDF$hours)\n\n[1] 422.5301\n\n\nStandard deviation\n\nCodesd(beesDF$hours)\n\n[1] 20.55554\n\nCodesqrt(var(beesDF$hours))\n\n[1] 20.55554"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
-    "href": "slides/DisplayingAndDescribingData3.html#coefficient-of-variation-cv",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Coefficient of Variation (CV)",
-    "text": "Coefficient of Variation (CV)\n\nThe variance and standard deviation increase with the mean.\nThe coefficient of variation allows for fair comparisons of variability between measures on different scales.\n\n\\[CV = 100\\% \\times \\frac{s}{\\bar{Y}}\\]"
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#in-summary",
-    "href": "slides/DisplayingAndDescribingData3.html#in-summary",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "In summary",
-    "text": "In summary\n\nRange: The difference between the largest and smallest values.\nInterquartile Range: The difference between the 25th and 75th percentile.\nVariance & Standard Deviation: The difference between observations & the mean.\nCoefficient of Variation: A measure of the standard deviation that’s independent of the mean."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
-    "href": "slides/DisplayingAndDescribingData3.html#variance-standard-deviation-or-coefficient-of-variation",
-    "title": "2.3.Displaying & Describing Data",
-    "section": "Variance, Standard Deviation or Coefficient of Variation?",
-    "text": "Variance, Standard Deviation or Coefficient of Variation?\n\n\nVariance and standard deviation convey the same information and are used in many equations.\n\nThe coefficient of variation is less directly used in equations, but is ideal for comparing variation between different types of comparisons."
-  },
-  {
-    "objectID": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
-    "href": "slides/DisplayingAndDescribingData3.html#thats-all-for-today",
-    "title": "2.3.Displaying & Describing Data",
+    "objectID": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
+    "href": "slides/DisplayingAndDescribingData2.html#thats-all-for-today",
+    "title": "2.2.Displaying & Describing Data",
     "section": "That’s all for today",
     "text": "That’s all for today\n\n\n\nFrom: makeameme.org"
   },
