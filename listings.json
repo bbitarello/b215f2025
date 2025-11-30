@@ -6,10 +6,6 @@
     ]
   },
   {
-    "listing": "/psets.html",
-    "items": []
-  },
-  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -42,5 +38,9 @@
       "/slides/GoodnessOfFit2.html",
       "/slides/ContingencyAnalyses.html"
     ]
+  },
+  {
+    "listing": "/psets.html",
+    "items": []
   }
 ]
