@@ -191,7 +191,6 @@
       margin-right: 0; 
     }
   </style>
-<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script><link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -220,292 +219,7 @@ Bárbara D. Bitarello
 <li>Using R to calculate a probability density</li>
 <li>The standard Normal distribution</li>
 <li>The Z distribution</li>
-</ul></section><section class="slide level2"><h2>Get to know the normal distribution</h2>
-<ul>
-<li>The normal distribution (aka the <strong>“bell curve”</strong>, aka the <strong>Gaussian</strong>) is incredibly common in the world!</li>
-<li>It is also mathematically convenient.</li>
-<li>Therefore, much of statistics is based off of the normal distribution.</li>
-</ul></section><section class="slide level2"><h2>Sums are normally distributed</h2>
-<p>Because most quantitative variables are sums (or averages) of a bunch of things, the normal distribution is incredibly common!</p>
-<p>For example:</p>
-<ul>
-<li>Human height is realized as the addition of lot of genetic effects and a lot of environmental factors.</li>
-<li>The distance a seed moves is the sum of a lot of wind currents.</li>
-</ul></section><section class="slide level2"><h2>But WHY???</h2>
-<p>Why that distribution? Why is it special? Why not some other distribution? Are there other statistical distributions where this happens?</p>
-<p>Teaser: yes, there are other distributions that are special in the same way as the Normal distribution. The Normal distribution is still the most special because:</p>
-<ol type="1">
-<li>it requires the least math</li>
-<li>it is the most common in real-world situations -e.g.&nbsp;biology!</li>
-<li>notable exception: the stock market</li>
-</ol>
-<ul>
-<li>The full answer has to do with the central limit theorem - SOON!</li>
-</ul></section><section class="slide level2 dark-theme center"><h2>Examples: The Normal Distribution in Nature</h2>
-</section><section class="slide level2"><h2>Human Birth weight</h2>
-<ul>
-<li>Birth weight is (roughly) normally distributed</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="Normal_files/figure-revealjs/birthw-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-
-<aside><div>
-<p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC478809/pdf/brjprevsmed00013-0013.pdf">Data:Pethybridge et al. (1974).</a> “Some features of the distribution of birthweight of human infants”</p>
-</div></aside></section><section class="slide level2"><h2>Human body temperature</h2>
-<ul>
-<li>Body temp is (roughly) normally distributed</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="Normal_files/figure-revealjs/temp-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-
-<aside><div>
-<p><a href="http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html">Data: Shoemaker (1996).</a>“What’s Normal? – Temperature, Gender, and Heart Rate”</p>
-</div></aside></section><section class="slide level2"><h2>Drosophila egg number</h2>
-<ul>
-<li>
-<em>Drosophila</em> egg number is (roughly) normally distributed</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="Normal_files/figure-revealjs/dros-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-
-<aside><div>
-<p><a href="http://onlinelibrary.wiley.com/doi/10.1111/evo.12546/abstract%22">Paaby et al (2014).</a> “A highly pleiotropic amino acid polymorphism in the <em>Drosophila</em> insulin receptor contributes to life-history adaptation”</p>
-</div></aside></section><section class="slide level2 dark-theme center"><h2>The Normal Distribution: Definitions &amp; Properties</h2>
-</section><section class="slide level2"><h2>Recap: Continuous probability distributions</h2>
-<ul>
-<li>The probability of any one outcome from a <strong>continuous distribution</strong>, like the <strong>normal distribution</strong>, is <em>infinitesimally small</em> because there are infinite numbers in any range.</li>
-<li>We therefore describe continuous distributions with <strong>probability densities</strong>.</li>
-<li>Probability densities <strong>integrate to one:</strong> <span class="math display">\[\int p_{x}=1\]</span>
-</li>
-</ul></section><section class="slide level2 dark-theme center"><h2>Warning: integrals! Don’t panic, you don’t need to integrate anything</h2>
-</section><section class="slide level2"><h2>The Normal Probability Density (1/)</h2>
-<ul>
-<li>The probability density of each value <span class="math inline">\(x\)</span> from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span> is:</li>
-</ul>
-<p><span class="math display">\[f[x]=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]</span> * Thus, across sample space, probability densities integrate to 1, meaning</p>
-<p><span class="math display">\[\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}=\int_{-\infty}^{+\infty}f(x)dx=1\]</span> , meaning the integral of the PDF (probability density function) over its entire range integrates to 1.</p>
-</section><section class="slide level2"><h2>Concept check in (1/2)</h2>
-<ul>
-<li>This normal distribution has points with a probability density &gt; 1.</li>
-<li>We know that probabilities cannot be greater than 1, so how can this be the case?</li>
-</ul>
-
-<img data-src="Normal_files/figure-revealjs/concept-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Concept check in (2/2)</h2>
-<ul>
-<li>Answer: prob. densities integrate to one, aka the area under the curve, corresponding to probabilities. (i.e., <span class="math inline">\(\int p_{x}=1\)</span>). Individual probability densities can exceed 1 though.</li>
-<li>Does this mean probability densities can be &lt;1?</li>
-<li>Answer: No!The probability density function is non-negative for all possible values of the random variable. The total area under the probability density function is equal to 1.</li>
-</ul></section><section class="slide level2"><h2>Parameters of the Normal Distribution (1/2)</h2>
-<p><span class="math inline">\(N(\mu, \sigma^2)\)</span>: These parameters - mean and variance (or standard deviation, <span class="math inline">\(\sigma\)</span>) - fully specify a normal distribution</p>
-<p><span class="math inline">\(X\sim N(\mu, \sigma)\)</span>: <span class="math inline">\(X\)</span> is normally distributed and the distribution is specified by a mean <span class="math inline">\(\mu\)</span> and a standard deviation <span class="math inline">\(\sigma\)</span></p>
-</section><section class="slide level2"><h2>Parameters of the Normal Distribution (2/2)</h2>
-<ul>
-<li>
-<span class="math inline">\(X\sim N(\mu, \sigma)\)</span>: <span class="math inline">\(X\)</span> is normally distributed; normal is specified by <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>
-</li>
-</ul>
-
-<img data-src="Normal_files/figure-revealjs/dens2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Visualizing Probability Densities</h2>
-
-<img data-src="Normal_files/figure-revealjs/dens-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>A Normal Distribution is symmetric around its mean</h2>
-
-<img data-src="Normal_files/figure-revealjs/dens3-1.png" width="768" class="r-stretch"></section><section class="slide level2"><h2>Properties of the normal</h2>
-<ul>
-<li>The normal is symmetric around its mean</li>
-<li>The normal has a single mode</li>
-<li>The probability density is highest exactly at the mean.</li>
-<li>It follows that the mean, median, and mode are all equal to each other for the normal distribution!</li>
-</ul></section><section class="slide level2"><h2>Probability that <span class="math inline">\(X\)</span> falls in a given range (1/2)</h2>
-<ul>
-<li>Probability that <span class="math inline">\(X\)</span> lies between two values, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
-</ul>
-<p><span class="math display">\[P[a&lt;X&lt;b]=\int_{a}^{b}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}dx\]</span></p>
-<p>Ouch…</p>
-</section><section class="slide level2"><h2>Probability that <span class="math inline">\(X\)</span> falls in a given range (2/2)</h2>
-<ul>
-<li>Some helpful (approximate) ranges:</li>
-</ul>
-
-<img data-src="Normal_files/figure-revealjs/probx-1.png" width="576" class="r-stretch"><ul>
-<li>These are approximations!</li>
-</ul></section><section><section class="slide level2 dark-theme center"><h2>The standard normal distribution</h2>
-<div class="r-fit-text">
-<p>A normal with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span></p>
-</div>
-</section><section class="slide level2"><h2>One Normal Distribution to Rule Them (1/2)</h2>
-<ul>
-<li>Normal distributions can have distinct values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> but must have the same shape.</li>
-<li>Of the infinite normal distributions, the <strong>standard normal distribution</strong> – a normal distribution with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span> is particularly useful.</li>
-</ul></section><section class="slide level2"><h2>One Normal Distribution to Rule Them (2/2)</h2>
-
-<img data-src="Normal_files/figure-revealjs/lot2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>The <span class="math inline">\(Z\)</span>-distribution</h2>
-<p>The <span class="math inline">\(Z\)</span>-distribution describes the probability that a random draw from the standard normal is greater than a given value.</p>
-
-<img data-src="images/clipboard-3621913688.png" class="r-stretch"><p>In R: <code>pnorm(q = 1.5, lower.tail = F)</code>: 0.0668</p>
-</section><section class="slide level2"><h2>The Standard Normal Table (1/)</h2>
-<ul>
-<li>We use the symbol <span class="math inline">\(Z\)</span> to indicate a variable that has a standard normal distribution.</li>
-<li>The standard normal table: gives the probability of getting a random draw from a standard normal distribution greater than a given value</li>
-</ul>
-
-<img data-src="images/normalZ.png" style="width:45.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure 10.3-2 from textbook</p></section><section class="slide level2"><h2>The Standard Normal Table (2/)</h2>
-<ul>
-<li>Rows contain the 1st two digits of Z</li>
-<li>Columns contain the 3rd digit</li>
-<li>The value is probability that a random draw from the standard normal is <span class="math inline">\(&gt;Z\)</span>. E.g. <span class="math inline">\(P(Z&gt;1.5)\)</span>
-</li>
-</ul>
-
-<img data-src="images/norm_table.png" class="quarto-figure quarto-figure-center r-stretch" width="620"></section><section class="slide level2"><h2>Using the Z distribution</h2>
-<ul>
-<li><p>The standard normal is symmetric about zero, so: <span class="math display">\[𝑃[𝑋 &lt; -Z]=P[Z &gt; X]\]</span>, i.e.&nbsp;the probability that a random sample, <span class="math inline">\(X\)</span>, is less than <span class="math inline">\(-Z\)</span> equals the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
-<li><p>The normal integrates to one, so: <span class="math display">\[P[X &lt; Z]=1 − P[X &gt; Z]\]</span>, i.e.&nbsp;the probability that a random sample is less than <span class="math inline">\(Z\)</span> equals one minus the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
-</ul></section><section class="slide level2"><h2>The Z transform</h2>
-<ul>
-<li>Any normal distribution can be <strong>converted</strong> to the standard normal distribution by subtracting the population mean <span class="math inline">\(\mu\)</span> from each value and dividing by the population standard deviation <span class="math inline">\(\sigma\)</span>:</li>
-</ul>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span> * E.g., by a <span class="math inline">\(Z\)</span> transform, a value of <span class="math inline">\(X=0.4\)</span> from a normal distribution with <span class="math inline">\(\mu=0.5\)</span> and <span class="math inline">\(\sigma=0.1\)</span> will be <span class="math inline">\(\frac{0.4-0.5}{0.1}=\frac{-0.1}{0.1}=-1\)</span></p>
-
-<aside><div>
-<p>Z is called a “standard normal deviate”</p>
-</div></aside></section><section class="slide level2"><h2>Why use the Z transform?</h2>
-<ul>
-<li>The <span class="math inline">\(Z\)</span> transform is useful because we can then have a simple way to talk about results on a <strong>common scale</strong>.</li>
-<li>I think of a <span class="math inline">\(Z\)</span> value as the number of standard deviations between an observation and the population mean.</li>
-</ul>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span></p>
-<ul>
-<li><p>The benefits are similar to using the CV to compare standard deviations across different scales</p></li>
-<li><p>The other advantage: the standard Normal table</p></li>
-</ul></section><section class="slide level2 dark-theme center"><h2>Example: British spies</h2>
-</section><section class="slide level2"><h2>British spies (1/)</h2>
-<ul>
-<li>MI5 (the UK’s CIA) says a man has to be shorter than 180.3 cm tall to be a spy.</li>
-<li>Height of British men is normally distributed with mean 177.0 cm, and standard deviation 7.1cm.</li>
-<li>What proportion of British men are excluded from a career as a spy by this height criteria?</li>
-</ul>
-<p>Let’s work on this!</p>
-</section><section class="slide level2"><h2>British spies (2/)</h2>
-<ul>
-<li>MI5 (the UK’s CIA) says a man has to be shorter than 180.3 cm tall to be a spy.</li>
-<li>Height of British men is normally distributed with mean 177.0 cm, and standard deviation 7.1cm.</li>
-<li>What proportion of British men are excluded from a career as a spy by this height criteria?</li>
-</ul>
-<p><span class="math inline">\(\mu=177\)</span></p>
-<p><span class="math inline">\(\sigma=7.1\)</span></p>
-<p>What are we looking for? <span class="math inline">\(P[\text{height}&gt;180.3|\mu=177,\sigma=7.1]=?\)</span></p>
-<p>Make a rough sketch:</p>
-</section><section class="slide level2"><h2>British spies (3/)</h2>
-
-<img data-src="Normal_files/figure-revealjs/spies-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>British spies (4/)</h2>
-<p><span class="math display">\[P[Z&gt;180.3|\mu=177,\sigma=7.1]=?\]</span></p>
-<ol type="1">
-<li>
-<span class="math inline">\(Z\)</span>-transform: <span class="math display">\[(180.3-177)/7.1=0.46\]</span>
-</li>
-<li>Look this up in the standard normal table:</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
-<thead><tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.01</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.02</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.03</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.04</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.05</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.06</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.07</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.08</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">0.09</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">0.3</td>
-<td style="text-align: right;">0.382</td>
-<td style="text-align: right;">0.378</td>
-<td style="text-align: right;">0.374</td>
-<td style="text-align: right;">0.371</td>
-<td style="text-align: right;">0.367</td>
-<td style="text-align: right;">0.363</td>
-<td style="text-align: right;">0.359</td>
-<td style="text-align: right;">0.356</td>
-<td style="text-align: right;">0.352</td>
-<td style="text-align: right;">0.348</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">0.4</td>
-<td style="text-align: right;">0.345</td>
-<td style="text-align: right;">0.341</td>
-<td style="text-align: right;">0.337</td>
-<td style="text-align: right;">0.334</td>
-<td style="text-align: right;">0.330</td>
-<td style="text-align: right;">0.326</td>
-<td style="text-align: right;">0.323</td>
-<td style="text-align: right;">0.319</td>
-<td style="text-align: right;">0.316</td>
-<td style="text-align: right;">0.312</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">0.5</td>
-<td style="text-align: right;">0.309</td>
-<td style="text-align: right;">0.305</td>
-<td style="text-align: right;">0.302</td>
-<td style="text-align: right;">0.298</td>
-<td style="text-align: right;">0.295</td>
-<td style="text-align: right;">0.291</td>
-<td style="text-align: right;">0.288</td>
-<td style="text-align: right;">0.284</td>
-<td style="text-align: right;">0.281</td>
-<td style="text-align: right;">0.278</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Conclude that <span class="math inline">\(\sim 32.3\%\)</span> of British men are too tall to be a spy.</p>
-</section><section class="slide level2"><h2>British spies (4/)</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Probability of a random man in the UK being &gt;= 180.3 cm tall.</span></span>
-<span id="cb2-2"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">180.3</span>, <span class="at">mean =</span> <span class="dv">177</span>, <span class="at">sd =</span> <span class="fl">7.1</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-3"><a></a><span class="do">## [1] 0.321</span></span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="co"># probability of being &lt;= 180.3 cm tall</span></span>
-<span id="cb2-6"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">180.3</span>, <span class="at">mean =</span> <span class="dv">177</span>, <span class="at">sd =</span> <span class="fl">7.1</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-7"><a></a><span class="do">## [1] 0.679</span></span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a><span class="co"># or 1- P(&gt;180.3)</span></span>
-<span id="cb2-10"><a></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">180.3</span>, <span class="at">mean =</span> <span class="dv">177</span>, <span class="at">sd =</span> <span class="fl">7.1</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-11"><a></a><span class="do">## [1] 0.679</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section><section class="slide level2 dark-theme center"><h2>The sampling distribution of means from samples taken from a normal distribution</h2>
-</section><section class="slide level2"><h2>Sample Means From a Normal</h2>
-<ul>
-<li>Means of normally distributed variables are normally distributed.</li>
-</ul>
-<p><span class="math display">\[\mu=\bar Y, \sigma_{\bar{Y}}=\frac{\sigma}{\sqrt{n}}\]</span> - The mean of the sample means equals μ. The standard deviation of the sample means is the standard error, and equals <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span></p>
-</section><section class="slide level2"><h2>Sample Means From a Normal (2/)</h2>
+</ul></section><section class="slide level2"><h2>Sample Means From a Normal</h2>
 <ul>
 <li>The sampling distribution of an estimate lists all the values that we might obtain when we sample a population and describes their probabilities of occurrence</li>
 <li>If a variable <span class="math inline">\(Y\)</span> has a normal distribution in a population, then the distribution of sample means is also normal.</li>
@@ -514,11 +228,145 @@ Bárbara D. Bitarello
 </li>
 </ul>
 <p><strong>You’ve seen this before!!</strong></p>
-</section><section class="slide level2"><h2></h2>
+</section><section class="slide level2"><h2>Probability that a mean <span class="math inline">\(\bar X\)</span> falls in a range</h2>
+<p>Example: the probability that the mean of four draws from the standard normal distribution is between -1 and 1 is:</p>
+<ol type="1">
+<li>The probability it is greater than negative one:</li>
+</ol>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">4</span>), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a></a><span class="do">## [1] 0.977</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<ol start="2" type="1">
+<li>Minus the probablity is greater than one:</li>
+</ol>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">4</span>), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<ol start="3" type="1">
+<li>Equals: <span class="math inline">\(0.977-0.022=0.955\)</span>
+</li>
+</ol></section><section class="slide level2"><h2>Let’s prove this to ourselves!</h2>
+<p>… by generating four random numbers from the standard normal distribution many times using <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code></p>
+</section><section class="slide level2"><h2>Step 1: Taking random samples from a normal distribution:</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># sample 4 random values from a normal with mean=0 and sd=1</span></span>
+<span id="cb3-2"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">4</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb3-3"><a></a><span class="do">## [1] -0.564  0.265  0.577 -0.304</span></span>
+<span id="cb3-4"><a></a><span class="co"># remember:unless you set a seed each time you do this you will get different</span></span>
+<span id="cb3-5"><a></a><span class="co"># values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section><section class="slide level2"><h2>Step 2: Write code to repeat this sampling</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># set up</span></span>
+<span id="cb4-2"><a></a>n_reps <span class="ot">&lt;-</span> <span class="dv">100</span>  <span class="co">#number of simulations</span></span>
+<span id="cb4-3"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
+<span id="cb4-4"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
+<span id="cb4-5"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section><section class="slide level2"><h2>Step 3: Write code to take the mean from each simulation</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>n_reps <span class="ot">&lt;-</span> <span class="dv">100</span>  <span class="co">#number of simulations</span></span>
+<span id="cb5-2"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
+<span id="cb5-3"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
+<span id="cb5-4"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<pre><code>## # A tibble: 3 × 2
+##   sample mean_x
+##    &lt;int&gt;  &lt;dbl&gt;
+## 1      1 -0.669
+## 2      2  0.103
+## 3      3  0.398</code></pre>
+</div>
+</section><section class="slide level2"><h2>Step 4: Ask if each mean (from each simulation) falls within the range [-1,1]</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># set up</span></span>
+<span id="cb7-2"><a></a>n_reps <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb7-3"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
+<span id="cb7-4"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
+<span id="cb7-5"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<pre><code>## # A tibble: 1 × 1
+##   prop_within_one
+##             &lt;dbl&gt;
+## 1            0.96</code></pre>
+</div>
+
+<img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>TA -DA!</h2>
+
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Conclusions</h2>
+<ul>
+<li>The mean of our distribution of means is clearly centered around the true mean (zero)</li>
+<li>In other words, <strong>the sample mean based on a random sample from a normal distribution gives an unbiased estimate of</strong> <span class="math inline">\(\mu\)</span>
+</li>
+</ul></section><section class="slide level2"><h2>The standard error of the mean</h2>
+<ul>
+<li>The standard deviation of the sampling distribution for <span class="math inline">\(Y\)</span> is known as the standard error of the mean: <span class="math inline">\(\sigma_{\bar Y}=\frac{\sigma}{\sqrt{n}}\)</span>
+</li>
+<li>This property of the standard deviation of the sampling distribution is true <strong>EVEN WHEN</strong> <span class="math inline">\(Y\)</span> does <em>NOT</em> have a normal distribution</li>
+</ul></section><section class="slide level2"><h2>Calculating probabilities of sample means (1/)</h2>
+<ul>
+<li>The standard normal distribution can be used to calculate the probability of drawing a sample with a mean in a given range</li>
+<li>The standard deviation of the sampling distribution of <span class="math inline">\(\bar{Y}=\frac{\sigma}{\sqrt{n}}\)</span> and the mean of sample means is <span class="math inline">\(\mu\)</span>, then:</li>
+<li>
+<span class="math inline">\(Z=\frac{\bar Y-\mu}{\sigma_{\bar{Y}}}\)</span> has a standard normal distribution. We can use the normal approach to get the probability (with tables)</li>
+</ul></section><section class="slide level2"><h2>Calculating probabilities of sample means (2/)</h2>
+<ul>
+<li>In our example, the standard deviation of the distribution of <span class="math inline">\(\bar Y\)</span> is <span class="math inline">\(=0.5\)</span> and <span class="math inline">\(\bar Y=0.00154\)</span>, so <span class="math inline">\(Z=(0.00154-0)/0.5=0.00308\)</span>
+</li>
+<li>Probability of getting a sample mean equal or greater than this: <span class="math inline">\(P[\bar Y &gt;= 0.00154]=0.5\)</span> (from Z table)</li>
+</ul>
+<div class="cell">
+<pre><code>## [1] 0.499</code></pre>
+</div>
+</section><section class="slide level2"><h2>Back to the british spies example</h2>
+<p>What is the probability that the mean height of a random sample of 10 British mean will be at least 180.4 cm?</p>
+<p>By hand:</p>
+<p><span class="math inline">\(P[\bar X \geq 180.4]\)</span></p>
+<p><span class="math inline">\(\sigma_{\bar X}=\frac{7.1}{\sqrt{10}}=2.245217\)</span></p>
+<p><span class="math inline">\(Z=\frac{\bar {X}-\mu}{\sigma_{\bar X}}=\frac{180.4-177}{2.245217}=1.51433\)</span></p>
+<p><span class="math inline">\(P[\bar X \geq 180.4]\)</span> is the same as <span class="math inline">\(P[Z&gt;1.51433]\)</span></p>
+</section><section class="slide level2"><h2>From the statistical table…</h2>
+<p>this gives us <span class="math inline">\(P=0.06552\)</span></p>
+<p>In R:</p>
+<div class="cell">
+<pre><code>## [1] 0.065
+## [1] 0.065</code></pre>
+</div>
+
+<img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2 dark-theme center"><h2>The Central Limit Theorem: Sampling distributions of sums or means are approx. normal as <em>n</em> gets big.</h2>
+</section><section class="slide level2"><h2>More formally</h2>
+<p>the Central Limit Theorem states that:</p>
+<p>the <strong>sum or mean</strong> of a <strong>large number of measurements</strong> randomly sampled from a non-normal population is approximately normally distributed</p>
+<p>so the <strong>sampling distribution of means</strong> of <em>any</em> statistic (even one that isn’t itself originally normally distributed) can be approximated by a normal distribution</p>
+
+<img data-src="images/amazing.png" class="quarto-figure quarto-figure-center r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (1/)</h2>
+<p>Imagine 20,000 people are asked to press a button.Time is measured in seconds.</p>
+<ul>
+<li>Half are anxious &amp; do this quickly: <span class="math inline">\(\mu=10\)</span>, <span class="math inline">\(\sigma=1\)</span>
+</li>
+<li>Half are not &amp; do this slowly: <span class="math inline">\(\mu=70\)</span>, <span class="math inline">\(\sigma=15\)</span>
+</li>
+</ul></section><section class="slide level2"><h2>Example: Button pushing (2/)</h2>
+</section><section class="slide level2"><h2>This is <strong>NOT</strong> normally distributed</h2>
+
+<img data-src="Normal2_files/figure-revealjs/somechunk-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (3/)</h2>
+<ul>
+<li>The sampling distribution becomes normal as <span class="math inline">\(n\)</span> gets <strong>BIG</strong>.</li>
+<li>20,000 replicates used in each plot.</li>
+</ul>
 
 
 
-<img data-src="images/clipboard-3661136366.png" class="r-stretch"></section></section>
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
