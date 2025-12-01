@@ -225,7 +225,7 @@ Bárbara D. Bitarello
 <li>It is also mathematically convenient.</li>
 <li>Therefore, much of statistics is based off of the normal distribution.</li>
 </ul></section><section class="slide level2"><h2>Sums are normally distributed</h2>
-<p>Because most quantitative variables are sums (or averages) of a bunch of things, the normal distribution is inc#6C8645ibly common!</p>
+<p>Because most quantitative variables are sums (or averages) of a bunch of things, the normal distribution is incredibly common!</p>
 <p>For example:</p>
 <ul>
 <li>Human height is realized as the addition of lot of genetic effects and a lot of environmental factors.</li>
@@ -300,7 +300,7 @@ Bárbara D. Bitarello
 <li>The probability density of each value <span class="math inline">\(x\)</span> from a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span> is:</li>
 </ul>
 <p><span class="math display">\[f[x]=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]</span> * Thus, across sample space, probability densities integrate to 1, meaning</p>
-<p><span class="math display">\[\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}=\int_{-\infty}^{+\infty}f(x)dx=1\]</span> , meaning the integral of the PDF (probability density function) over its entire range integrates to 1, so its possible that individual values exceed one.</p>
+<p><span class="math display">\[\int_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}=\int_{-\infty}^{+\infty}f(x)dx=1\]</span> , meaning the integral of the PDF (probability density function) over its entire range integrates to 1.</p>
 </section><section class="slide level2"><h2>Concept check in (1/2)</h2>
 <ul>
 <li>This normal distribution has points with a probability density &gt; 1.</li>
@@ -326,7 +326,13 @@ Bárbara D. Bitarello
 
 <img data-src="Normal_files/figure-revealjs/dens-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>A Normal Distribution is symmetric around its mean</h2>
 
-<img data-src="Normal_files/figure-revealjs/dens3-1.png" width="768" class="r-stretch"></section><section class="slide level2"><h2>Probability that <span class="math inline">\(X\)</span> falls in a given range (1/2)</h2>
+<img data-src="Normal_files/figure-revealjs/dens3-1.png" width="768" class="r-stretch"></section><section class="slide level2"><h2>Properties of the normal</h2>
+<ul>
+<li>The normal is symmetric around its mean</li>
+<li>The normal has a single mode</li>
+<li>The probability density is highest exactly at the mean.</li>
+<li>It follows that the mean, median, and mode are all equal to each other for the normal distribution!</li>
+</ul></section><section class="slide level2"><h2>Probability that <span class="math inline">\(X\)</span> falls in a given range (1/2)</h2>
 <ul>
 <li>Probability that <span class="math inline">\(X\)</span> lies between two values, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</li>
 </ul>
@@ -339,12 +345,6 @@ Bárbara D. Bitarello
 
 <img data-src="Normal_files/figure-revealjs/probx-1.png" width="576" class="r-stretch"><ul>
 <li>These are approximations!</li>
-</ul></section><section class="slide level2"><h2>Properties of the normal</h2>
-<ul>
-<li>The normal is symmetric around its mean</li>
-<li>The normal has a single mode</li>
-<li>The probability density is highest exactly at the mean.</li>
-<li>It follows that the mean, median, and mode are all equal to each other for the normal distribution!</li>
 </ul></section><section><section class="slide level2 dark-theme center"><h2>The standard normal distribution</h2>
 <div class="r-fit-text">
 <p>A normal with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span></p>
@@ -355,8 +355,8 @@ Bárbara D. Bitarello
 <li>Of the infinite normal distributions, the <strong>standard normal distribution</strong> – a normal distribution with <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span> is particularly useful.</li>
 </ul></section><section class="slide level2"><h2>One Normal Distribution to Rule Them (2/2)</h2>
 
-<img data-src="Normal_files/figure-revealjs/lot2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>The Z distribution</h2>
-<p>The Z-distribution describes the probability that a random draw from the standard normal is greater than a given value.</p>
+<img data-src="Normal_files/figure-revealjs/lot2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>The <span class="math inline">\(Z\)</span>-distribution</h2>
+<p>The <span class="math inline">\(Z\)</span>-distribution describes the probability that a random draw from the standard normal is greater than a given value.</p>
 
 <img data-src="images/clipboard-3621913688.png" class="r-stretch"><p>In R: <code>pnorm(q = 1.5, lower.tail = F)</code>: 0.0668</p>
 </section><section class="slide level2"><h2>The Standard Normal Table (1/)</h2>
@@ -369,30 +369,31 @@ Bárbara D. Bitarello
 <ul>
 <li>Rows contain the 1st two digits of Z</li>
 <li>Columns contain the 3rd digit</li>
-<li>The value is probability that a random draw from the standard normal is <span class="math inline">\(&gt;Z\)</span>.E.g. <span class="math inline">\(Z=1.5\)</span>
+<li>The value is probability that a random draw from the standard normal is <span class="math inline">\(&gt;Z\)</span>. E.g. <span class="math inline">\(P(Z&gt;1.5)\)</span>
 </li>
 </ul>
 
 <img data-src="images/norm_table.png" class="quarto-figure quarto-figure-center r-stretch" width="620"></section><section class="slide level2"><h2>Using the Z distribution</h2>
 <ul>
-<li><p>The standard normal is symmetric about zero, so <span class="math inline">\(𝑃[𝑋 &lt; -Z]=P[Z &gt; X]\)</span>, i.e.&nbsp;the probability that a random sample, <span class="math inline">\(X\)</span>, is less than <span class="math inline">\(-Z\)</span> equals the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
-<li><p>The normal integrates to one, so <span class="math inline">\(P[X &lt; Z]=1 − P[X &gt; Z]\)</span> i.e.&nbsp;the probability that a random sample is less than <span class="math inline">\(Z\)</span> equals one minus the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
+<li><p>The standard normal is symmetric about zero, so: <span class="math display">\[𝑃[𝑋 &lt; -Z]=P[Z &gt; X]\]</span>, i.e.&nbsp;the probability that a random sample, <span class="math inline">\(X\)</span>, is less than <span class="math inline">\(-Z\)</span> equals the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
+<li><p>The normal integrates to one, so: <span class="math display">\[P[X &lt; Z]=1 − P[X &gt; Z]\]</span>, i.e.&nbsp;the probability that a random sample is less than <span class="math inline">\(Z\)</span> equals one minus the probability that a random sample is greater than <span class="math inline">\(Z\)</span>.</p></li>
 </ul></section><section class="slide level2"><h2>The Z transform</h2>
 <ul>
 <li>Any normal distribution can be <strong>converted</strong> to the standard normal distribution by subtracting the population mean <span class="math inline">\(\mu\)</span> from each value and dividing by the population standard deviation <span class="math inline">\(\sigma\)</span>:</li>
 </ul>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span> * E.g., by a Z transform, a value of <span class="math inline">\(X=0.4\)</span> from a normal distribution with <span class="math inline">\(\mu=0.5\)</span> and <span class="math inline">\(\sigma=0.1\)</span> will be <span class="math inline">\(\frac{0.4-0.5}{0.1}=\frac{-0.1}{0.1}=-1\)</span></p>
+<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span> * E.g., by a <span class="math inline">\(Z\)</span> transform, a value of <span class="math inline">\(X=0.4\)</span> from a normal distribution with <span class="math inline">\(\mu=0.5\)</span> and <span class="math inline">\(\sigma=0.1\)</span> will be <span class="math inline">\(\frac{0.4-0.5}{0.1}=\frac{-0.1}{0.1}=-1\)</span></p>
 
 <aside><div>
 <p>Z is called a “standard normal deviate”</p>
 </div></aside></section><section class="slide level2"><h2>Why use the Z transform?</h2>
 <ul>
-<li>The Z transform is useful because we can then have a simple way to talk about results on a <strong>common scale</strong>.</li>
-<li>I think of a Z value as the number of standard deviations between an observation and the population mean.</li>
+<li>The <span class="math inline">\(Z\)</span> transform is useful because we can then have a simple way to talk about results on a <strong>common scale</strong>.</li>
+<li>I think of a <span class="math inline">\(Z\)</span> value as the number of standard deviations between an observation and the population mean.</li>
 </ul>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span> * The benefits are similar to using the CV to compare standard deviations across different scales</p>
+<p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span></p>
 <ul>
-<li>The other advantage: the standard Normal table</li>
+<li><p>The benefits are similar to using the CV to compare standard deviations across different scales</p></li>
+<li><p>The other advantage: the standard Normal table</p></li>
 </ul></section><section class="slide level2 dark-theme center"><h2>Example: British spies</h2>
 </section><section class="slide level2"><h2>British spies (1/)</h2>
 <ul>
@@ -409,9 +410,11 @@ Bárbara D. Bitarello
 </ul>
 <p><span class="math inline">\(\mu=177\)</span></p>
 <p><span class="math inline">\(\sigma=7.1\)</span></p>
-<p>What are we looking for? <span class="math inline">\(P[height&gt;180.3|\mu=177,\sigma=7.1]=?\)</span></p>
+<p>What are we looking for? <span class="math inline">\(P[\text{height}&gt;180.3|\mu=177,\sigma=7.1]=?\)</span></p>
 <p>Make a rough sketch:</p>
 </section><section class="slide level2"><h2>British spies (3/)</h2>
+
+<img data-src="Normal_files/figure-revealjs/spies-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>British spies (4/)</h2>
 <p><span class="math display">\[P[Z&gt;180.3|\mu=177,\sigma=7.1]=?\]</span></p>
 <ol type="1">
 <li>
@@ -502,7 +505,7 @@ Bárbara D. Bitarello
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># sample 4 random values from a normal with mean=0 and sd=1</span></span>
 <span id="cb5-2"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">4</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb5-3"><a></a><span class="do">## [1] -0.565 -2.399 -0.745 -0.170</span></span>
+<span id="cb5-3"><a></a><span class="do">## [1] -2.68 -0.84  1.24 -2.24</span></span>
 <span id="cb5-4"><a></a><span class="co"># remember:unless you set a seed each time you do this you will get different</span></span>
 <span id="cb5-5"><a></a><span class="co"># values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -528,9 +531,9 @@ Bárbara D. Bitarello
 <pre><code>## # A tibble: 3 × 2
 ##   sample mean_x
 ##    &lt;int&gt;  &lt;dbl&gt;
-## 1      1  0.110
-## 2      2  0.247
-## 3      3  0.535</code></pre>
+## 1      1 -0.245
+## 2      2 -0.173
+## 3      3  0.168</code></pre>
 </div>
 </section><section class="slide level2"><h2>Step 4: Ask if each mean (from each simulation) falls within the range [-1,1]</h2>
 <div class="cell">
@@ -545,7 +548,7 @@ Bárbara D. Bitarello
 <pre><code>## # A tibble: 1 × 1
 ##   prop_within_one
 ##             &lt;dbl&gt;
-## 1            0.97</code></pre>
+## 1            0.95</code></pre>
 </div>
 
 <img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>TA -DA!</h2>
