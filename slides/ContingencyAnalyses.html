@@ -11,7 +11,7 @@
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-25">
-<meta name="keywords" content="Estimation (Relative Risk and Odds Ratio)">
+<meta name="keywords" content="Estimation (RR &amp; OR)">
 <title>BIOL B215: Biostatistics with R – 8.1.Contingency Analyses</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -211,6 +211,7 @@ Bárbara D. Bitarello
 </figure>
 </div>
 </div>
+<pre><code>## NULL</code></pre>
 </div>
 </div><div class="column">
 <ul>
@@ -230,12 +231,7 @@ Bárbara D. Bitarello
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="ContingencyAnalyses_files/figure-revealjs/unnamed-chunk-2-1.png" alt="Mosaic plot plotted in R showing on the x axis the SEX variable and on the y axis the SURVIVED variable; clearly shows proportion of women who died was less than 1/2 and for men it was > 3/4." width="384"></p>
-</figure>
-</div>
-</div>
+<pre><code>## NULL</code></pre>
 </div>
 </div><div class="column">
 <p>Women’s relative risk of dying in the titanic compared to men:</p>
@@ -251,20 +247,15 @@ Bárbara D. Bitarello
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="ContingencyAnalyses_files/figure-revealjs/unnamed-chunk-3-1.png" alt="Mosaic plot plotted in R showing on the x axis the SEX variable and on the y axis the SURVIVED variable; clearly shows proportion of women who died was less than 1/2 and for men it was > 3/4." width="384"></p>
-</figure>
-</div>
-</div>
+<pre><code>## NULL</code></pre>
 </div>
 </div><div class="column">
-<p><span class="math inline">\(\hat p_{w}=\frac{109}{(109+138)}\approx0.24\)</span></p>
-<p><span class="math inline">\(\hat p_{men}=\frac{1329}{(1329+316)}\approx0.81\)</span></p>
+<p><span class="math inline">\(\hat p_{w}=\frac{109}{(109+316)}\approx0.256\)</span></p>
+<p><span class="math inline">\(\hat p_{men}=\frac{1329}{(1329+109)}\approx0.924\)</span></p>
 <p>Women’s RR of dying compared to men:</p>
-<p><span class="math inline">\(\hat {RR}=\frac{0.24}{0.81}=0.296\)</span> (women’s RR of dying was <span class="math inline">\(\sim0.3\text{x}\)</span> that of men)</p>
+<p><span class="math inline">\(\hat {RR}=\frac{0.256}{0.924}=0.277\)</span> (women’s RR of dying was less than 1/3that of men)</p>
 <p>Women’s <em>reduction</em> in relative risk of dying compared to men:</p>
-<p><span class="math inline">\(1-\hat {RR}=0.704\)</span></p>
+<p><span class="math inline">\(1-\hat {RR}=0.723\)</span></p>
 </div></div>
 </section><section class="slide level2"><h2>Relative Risk: Pros and Cons</h2>
 <p><img data-src="images/clipboard-3449922574.png" width="25" height="21">Good:</p>
@@ -396,8 +387,8 @@ Bárbara D. Bitarello
 </tr>
 <tr class="even">
 <td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
 <td style="text-align: right;">316</td>
+<td style="text-align: right;">109</td>
 </tr>
 </tbody>
 </table>
@@ -420,17 +411,17 @@ Bárbara D. Bitarello
 </tr>
 <tr class="even">
 <td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
 <td style="text-align: right;">316</td>
+<td style="text-align: right;">109</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <p><span class="math inline">\(\hat{OR}=\frac{\hat{O}_{women}}{\hat{O}_{men}}\)</span>.</p>
-<p><span class="math inline">\(\hat {O}_{women}=\frac{\hat p}{1-\hat p}=\frac{0.24}{1-0.24}\approx 0.316\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
-<p><span class="math inline">\(\hat {O}_{men}=\frac{\hat p}{1-\hat p}=\frac{0.81}{1-0.81}\approx 4.263\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
-<p><span class="math display">\[\hat{OR}=\frac{\hat{O}_{women}}{\hat{O}_{men}}=\frac{0.316}{4.263}\approx 0.08\]</span></p>
+<p><span class="math inline">\(\hat {O}_{women}=\frac{\hat p}{1-\hat p}=\frac{0.256}{1-0.256}\approx 0.344\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
+<p><span class="math inline">\(\hat {O}_{men}=\frac{\hat p}{1-\hat p}=\frac{0.924}{1-0.924}\approx 12.2\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
+<p><span class="math display">\[\hat{OR}=\frac{\hat{O}_{women}}{\hat{O}_{men}}=\frac{0.344}{12.2}\approx 0.0282\]</span></p>
 </section><section class="slide level2"><h2>Surviving the titanic: OR (3/)</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -448,15 +439,15 @@ Bárbara D. Bitarello
 </tr>
 <tr class="even">
 <td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
 <td style="text-align: right;">316</td>
+<td style="text-align: right;">109</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <p>Alternatively, even without <span class="math inline">\(\hat{p_{w}}\)</span> and <span class="math inline">\(\hat{p_{m}}\)</span>, we can use this table:</p>
-<p><span class="math inline">\(\hat{OR}=\frac{a/c}{b/d}=\frac{109/338}{1329/316}=0.0766782\approx 0.08\)</span></p>
+<p>$===0.0766782</p>
 </section><section class="slide level2"><h2>Odds Ratio: Pros and Cons</h2>
 <p><img data-src="images/clipboard-3449922574.png" width="25" height="21">Good:</p>
 <ul>

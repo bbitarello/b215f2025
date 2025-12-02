@@ -11,7 +11,7 @@
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-25">
-<meta name="keywords" content="Hypothesis Testing (contingency chi-2)">
+<meta name="keywords" content="2x2 chi-2, Fisher, G">
 <title>BIOL B215: Biostatistics with R – 8.2.Contingency Analyses</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -125,6 +191,7 @@
       margin-right: 0; 
     }
   </style>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script><link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,330 +211,883 @@ Bárbara D. Bitarello
   <p class="date">2025-11-25</p>
 </section><section class="slide level2"><h2>Outline</h2>
 <ul>
-<li><p>Quantifying associations between two categorical variables</p></li>
-<li><p>Relative risk</p></li>
-<li><p>Odds-ratio</p></li>
+<li><p><del>Quantifying associations between two categorical variables</del></p></li>
+<li><p><del>Relative risk</del></p></li>
+<li><p><del>Odds-ratio</del></p></li>
+<li><p>OR vs RR</p></li>
 <li><p>Testing associations between categorical variables</p></li>
 <li><p><span class="math inline">\(\chi^2\)</span> contingency test</p></li>
 <li><p>G-test</p></li>
 <li><p>Fisher’s test</p></li>
-</ul></section><section class="slide level2"><h2>We Often Care About Associations</h2>
-<ul>
-<li>Does eating chocolate decrease the chance you’ll have a bad day?</li>
-<li>Does the home team have an advantage?</li>
-<li>Is the use of “bath salts” associated with cannibalism?*</li>
-<li>Does fertilizing tomatoes increase the chance they set fruit?</li>
-<li>Does a given drug affect the disease outcome in patients?</li>
-</ul>
+</ul></section><section class="slide level2"><h2>When to Calculate OR (1/2)?</h2>
+<p>We often cannot obtain an unbiased estimate of <span class="math inline">\(p_1\)</span> or <span class="math inline">\(p_2\)</span>.</p>
+<p>Odds ratios risk can be calculated even when we don’t have a random sample and we can’t obtain unbiased probabilities!</p>
+<p>Thus it is extremely useful for “case-control” studies, as they have a large sample of individuals with rare conditions.</p>
+<p><span class="math display">\[\widehat{OR} = \frac{\widehat{O_1}}{\widehat{O_2}} = \frac{a/c}{b/d} = \frac{ad}{bc}\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Treatment</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Control</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Success (focal outcome)</td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">b</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Failure (alternative outcome)</td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 <aside><div>
-<ul>
-<li>Story: https://www.smithsonianmag.com/science-nature/no-bath-salts-wont-turn-you-into-cannibal-180953418/</li>
-</ul>
-</div></aside></section><section class="slide level2"><h2>Two kinds of chi-squared tests (1/2)</h2>
+<p>Case control studies: an <em>observational</em> study in which a sample of individuals with a focal condition (cases) is compared to a sample of subjects lacking the condition (controls).</p>
+</div></aside></section><section class="slide level2"><h2>Odds Ratio: Toxoplasma &amp; Car Wrecks</h2>
+<p><font size="6"> <font color="black">Toxoplasma</font> tricks 🐭mice🐭 into taking risks so it can find it’s way into 🐱cats🐱. Could <font color="black">Toxoplasma</font> be associated with risk taking in humans? <a href="https://www.ncbi.nlm.nih.gov/pubmed/16332418">Yereli et al.</a> asked this by comparing <font color="black">Toxoplasma</font> prevalence in people who caused car crashes to those who hadn’t.</font></p>
+<div style="float:left;position: relative; top: 0px;">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Toxoplasmosis_life_cycle_en.svg" width="60%"></p>
+</div>
+</section><section class="slide level2"><h2>
+<span class="math inline">\(\widehat{OR}\)</span>: Toxoplasma &amp; Car Wrecks. Try!</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Treatment</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Control</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Success (focal outcome)</td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">b</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Failure (alternative outcome)</td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[\widehat{OR} = \frac{\widehat{O_\text{infected}}}{\widehat{O_\text{uninfected}}} = \frac{a/c}{b/d} = \frac{ad}{bc}  = ??? \]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">infected</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">uninfected</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">In accident</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">124</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Not in accident</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">169</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>
+<span class="math inline">\(\widehat{OR}\)</span>: Toxoplasma &amp; Car Wrecks</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Treatment</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Control</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Success (focal outcome)</td>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">b</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Failure (alternative outcome)</td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[\widehat{OR} = \frac{\widehat{O_\text{infected}}}{\widehat{O_\text{uninfected}}}  = \frac{a/c}{b/d} = \frac{ad}{bc} =\frac{61 \times 169}{124 \times 16} = 5.2\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">infected</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">uninfected</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">In accident</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">124</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Not in accident</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">169</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. Summary</h2>
+<p>Without knowing the <span class="math inline">\(P(wreck \| toxoplasma)\)</span> and <span class="math inline">\(P(wreck \| w/out toxoplasma)\)</span> we can’t estimate RR</p>
+<p>Still, we learned that the odds of being in a car wreck is <font color="black">five times higher</font> if you have toxoplasma than if you do not!</p>
+
+<img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-6-1.png" width="432" class="r-stretch"></section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. Uncertainty</h2>
+<p>We estimate that the odds of being in a car wreck is 5.2 for those with, than those without <em>Toxoplasma</em>.</p>
+<p>We know that estimates are associated with uncertainty.</p>
+<p>We can quantify this!</p>
+</section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. 95% CI [1/2]</h2>
+<p>1st know that that standard error for the odds ratio cannot be directly computed, but the standard error of the log odds can!</p>
+<p><span class="math display">\[SE[ln(\widehat{OR})] = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}\]</span></p>
+<p>Then to find the 95% CI</p>
 <ol type="1">
-<li>Chi-square goodness-of-fit tests</li>
+<li><p>Calculate <span class="math inline">\(SE[ln(\widehat{OR})]\)</span></p></li>
+<li><p>Find the confidence limits of the log-odds as <span class="math inline">\(SE[ln(\widehat{OR})] \pm 2 \times  SE[ln(\widehat{OR})]\)</span></p></li>
+<li><p>Exponentiate this result to get back to linear scale</p></li>
+</ol></section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. 95% CI [2/2]</h2>
+<ol type="1">
+<li><p><span class="math inline">\(SE[ln(\widehat{OR})] =  \sqrt{\frac{1}{61} + \frac{1}{124} + \frac{1}{16} + \frac{1}{169}} = 0.305\)</span></p></li>
+<li><p>Find the 95% CI as <span class="math inline">\(SE[ln(\widehat{OR})] \pm 2 \times  SE[ln(\widehat{OR})]\)</span><br><span class="math inline">\(= SE[ln(5.2)] \pm 2 \times 0.305\)</span><br><span class="math inline">\(= 1.65 \pm 0.61\)</span><br>
+95% CI of <span class="math inline">\(ln(\widehat{OR})\)</span> is between 1.04 and 2.26</p></li>
+<li><p>95% CI of <span class="math inline">\(\widehat{OR}\)</span> = <code>exp(c(1.04, 2.26))</code> = 2.8, 9.6</p></li>
+</ol>
+<p>CONCLUSION<br> - <span class="math inline">\(2.8 OR&lt; 9.6\)</span>. The odds of getting in an accident are plausibly between 2.8 and 9.6 times higher for people with than without toxoplasma. <br> - Because the 95% CI does not contain 1, we reject the null hypothesis and conclude that there is an association between <em>Toxoplasma</em> infection and car accidents.</p>
+</section><section class="slide level2"><h2>In R</h2>
+<p>The easiest way to calculate OR and CIs in R:</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>toxoplasma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">61</span>, <span class="dv">16</span>, <span class="dv">124</span>, <span class="dv">169</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb1-2"><a></a><span class="fu">colnames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"inf"</span>, <span class="st">"not-inf"</span>)</span>
+<span id="cb1-3"><a></a><span class="fu">rownames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"crash"</span>, <span class="st">"no_crash"</span>)</span>
+<span id="cb1-4"><a></a><span class="fu">fisher.test</span>(toxoplasma, <span class="at">conf.int =</span> T)</span>
+<span id="cb1-5"><a></a><span class="do">## </span></span>
+<span id="cb1-6"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb1-7"><a></a><span class="do">## </span></span>
+<span id="cb1-8"><a></a><span class="do">## data:  toxoplasma</span></span>
+<span id="cb1-9"><a></a><span class="do">## p-value = 8e-09</span></span>
+<span id="cb1-10"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb1-11"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb1-12"><a></a><span class="do">##   2.79 10.09</span></span>
+<span id="cb1-13"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb1-14"><a></a><span class="do">## odds ratio </span></span>
+<span id="cb1-15"><a></a><span class="do">##       5.17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+
+<aside><div>
+<p>The CI is a little different because this function uses a different method. You can find out more in the help(fisher.test) function.</p>
+</div></aside></section><section class="slide level2"><h2>Note</h2>
+<p>The 95% CI for the RR is also not pretty. Based on the same assumptions as the one we showed for <span class="math inline">\(OR\)</span> (i.e., random samples):</p>
+<p><span class="math display">\[SE[ln(\widehat{RR})] = \sqrt{\frac{1}{a} + \frac{1}{b} - \frac{1}{a+c} - \frac{1}{b+d}}\]</span></p>
+<p>Note that for <span class="math inline">\(RR\)</span> and <span class="math inline">\(OR\)</span> there are several available methods and no consensus over which one is best.</p>
+<p>The two we showed here use a type of rule of thumb based on the normal distribution.</p>
+</section><section class="slide level2"><h2>95% CI in R with resampling (instead of this dreadful equation) <img data-src="images/clipboard-2220595448.png" width="43">
+</h2>
+<ul>
+<li><p>There is another way: we can bootstrap!</p></li>
+<li><p>By bootstrapping, we approximate the sampling distribution by resampling outcomes with replacement and summarizing variability in this resampling to describe uncertainty.</p></li>
+</ul></section><section class="slide level2 dark-theme center"><h2>Testing Associations Between Categorical Variables</h2>
+<p><span class="math inline">\(\chi^2\)</span> Contingency Tests and Fisher’s Exact Test</p>
+</section><section class="slide level2"><h2>
+<span class="math inline">\(\chi^2\)</span> Contingency Test of Independence</h2>
+<p>Remember: The multiplication rule states that if two outcomes, A &amp; B are independent, <span class="math display">\[P[A \&amp; B] = P[A] \times P[B]\]</span></p>
+<ul>
+<li><p>So, we have our expectation under the null hypothesis that A &amp; B are independent.</p></li>
+<li><p>We can test if our deviation from this expectation is unexpected under the null from the <span class="math inline">\(\chi^2\)</span> test!</p></li>
+<li><p>This is imply a special case of the <span class="math inline">\(\chi^2\)</span> goodness of fit where the model described the independence between two (or more) categorical variables</p></li>
+</ul></section><section class="slide level2"><h2>Calculating <span class="math inline">\(\chi^2\)</span> &amp; Degrees of Freedom</h2>
+<p>Remember: <span class="math inline">\(\chi^2\)</span> is the sum of deviations between expectations and observations,<span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> are rows and columns, respectively.</p>
+<p><span class="math display">\[\sum_i \sum_k{\frac{{(\text{Observed}_{i,j}-\text{Expected}_{i,j})^2}}{\text{Expected}_{i,j}}}\]</span></p>
+<ul>
+<li><p>The degrees of freedom specify the additional number of values we need to know all the outcomes in our study.</p></li>
+<li><p><span class="math inline">\(\text{Degrees of freedom for } \chi^2 \text{ contingency test}  =  (n_\text{rows} - 1) \times (n_\text{columns} - 1)\)</span></p></li>
+</ul></section><section class="slide level2"><h2>Bird Abandonment Issues [1/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<div style="float:left;position: relative; top: 0px; left: -20px;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Abandoned_Nest_%28150169677%29.jpeg/320px-Abandoned_Nest_%28150169677%29.jpeg"></p>
+</div>
+<p>What’s a bird to do when the rent is do and they can’t feed their chicks?</p>
+<p><a href="https://datadryad.org/resource/doi:10.5061/dryad.6k417tm">Kloskowski</a> tested the idea that birds in poor habitats abandon their final egg.</p>
+
+<aside><div>
+<p>Data for this example: Data for this example: https://doi.org/10.5061/dryad.6k417tm</p>
+</div></aside></section><section class="slide level2"><h2>Bird Abandonment Issues [2/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><h2>Bird Abandonment Issues [3/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Hypotheses:</p>
+<p><span class="math inline">\(H_0\)</span>: There is NO association between habitat quality &amp; the chance of abandoning the last egg</p>
+<p><span class="math inline">\(H_A\)</span>: There is AN association between habitat quality &amp; the chance of abandoning the last egg</p>
+</section><section class="slide level2"><h2>Bird Abandonment Issues [4/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Observations (contingency table)</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">table</span>(birds<span class="sc">$</span><span class="st">`</span><span class="at">Last egg</span><span class="st">`</span>, birds<span class="sc">$</span><span class="st">`</span><span class="at">Habitat quality</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">High</th>
+<th style="text-align: right;">Low</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Bird Abandonment Issues [5/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Observations (contingency table)</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">High</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">94</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Find null expectations!!!!!!</p>
+<p><span class="math inline">\(n_{abandoned}=(1+19)=20\)</span></p>
+<p><span class="math inline">\(n_{\text{hatched}}=74\)</span></p>
+</section><section class="slide level2"><h2>Bird Abandonment Issues [6/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Multiply proportions by each other and sample size to find null expectations. <span class="math display">\[E[n(A,B) | n]  = n \times P[A] \times P[B]\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 26px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Habitat quality</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Last egg</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n.habitat</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n.egg</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">74</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math inline">\(P_{habitat}=n_{habitat}/n_{total}\)</span></p>
+<p><span class="math inline">\(P_{egg}=n_{egg}/n_{total}\)</span></p>
+<p>E.g. Expected <span class="math inline">\(P(\text{high &amp; abandoned})=0.574\times 0.213\times 94\)</span></p>
+</section><section class="slide level2"><h2>Bird Abandonment Issues [7/] <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Null expectations:</p>
+<p>Multiply proportions by each other and sample size to find null expectations. <span class="math display">\[E[n(A,B) | n]  = n \times P[A] \times P[B]\]</span></p>
+</section><section class="slide level2"><h2>Abandonment: <span class="math inline">\(\chi^2\)</span> Assumptions? <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p><font size="7"> Remember assumptions</font></p>
+<ul>
+<li><p>No more than 20% of categories have Expected <span class="math inline">\(&lt; 5\)</span></p></li>
+<li><p>No category with Expected <span class="math inline">\(\leq 1\)</span></p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 22px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Habitat quality</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Last egg</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.habitat</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.egg</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.574</td>
+<td style="text-align: right;">0.213</td>
+<td style="text-align: right;">11.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">0.574</td>
+<td style="text-align: right;">0.787</td>
+<td style="text-align: right;">42.51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0.426</td>
+<td style="text-align: right;">0.213</td>
+<td style="text-align: right;">8.51</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0.426</td>
+<td style="text-align: right;">0.787</td>
+<td style="text-align: right;">31.49</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We meet the assumptions</p>
+</section><section class="slide level2"><h2>Abandonment: <span class="math inline">\(\chi^2\)</span> <img data-src="images/clipboard-1972228280.png" width="62">
+</h2>
+<p>Remember: <span class="math inline">\(\chi^2\)</span> is the sum of the squared deviations from expected counts divided by expected counts.</p>
+<p><span class="math display">\[\sum \frac{(\text{Observed}-\text{Expected})^2}{\text{Expected}}\]</span></p>
+<p><span class="math display">\[\frac{( 1-11.5)^2}{11.5} +  \frac{( 53-42.5)^2}{42.5} + \frac{( 19-8.5)^2}{8.5} +  \frac{( 21-31.5)^2}{31.5}\]</span></p>
+<p>So <span class="math inline">\(\chi^2 = 28.59\)</span>(without rounding anywhere)</p>
+<p><span class="math display">\[df =  (n_\text{columns} - 1) \times    (n_\text{rows} - 1)\]</span></p>
+<p><span class="math display">\[df =  (2 - 1) \times    (2 - 1) = 1\]</span></p>
+</section><section class="slide level2"><h2>Abandonment: Critical &amp; P-values</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<caption>Critical value at for df in rows and alpha level in columns</caption>
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">0.1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">0.01</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">0.001</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">1e-04</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">1e-05</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">1e-06</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">1e-07</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">1e-08</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">df = 1</td>
+<td style="text-align: right;">2.7</td>
+<td style="text-align: right;">6.6</td>
+<td style="text-align: right;">10.8</td>
+<td style="text-align: right;">15.1</td>
+<td style="text-align: right;">19.5</td>
+<td style="text-align: right;">23.9</td>
+<td style="text-align: right;">28.4</td>
+<td style="text-align: right;">32.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">df = 2</td>
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">9.2</td>
+<td style="text-align: right;">13.8</td>
+<td style="text-align: right;">18.4</td>
+<td style="text-align: right;">23.0</td>
+<td style="text-align: right;">27.6</td>
+<td style="text-align: right;">32.2</td>
+<td style="text-align: right;">36.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We’re significant at the <span class="math inline">\(1e-7\)</span> level</p>
+<p>We reject the <span class="math inline">\(H_0\)</span> and conclude that bird abandon eggs in bad environemnts.</p>
+<p>In R: <code>pchisq(q = birds.chi, df = 1, lower.tail = FALSE)</code><br><code>= 8.96e-08</code></p>
+</section><section class="slide level2"><h2>One tailed test?</h2>
+<p>Note that we only looked at one tail of the <span class="math inline">\(\chi^2\)</span> distribution.</p>
+<p>This <font color="black">does not mean that we only notice an association</font> in one direction.</p>
+<p>Both ways to be exceptional (an association between abandonment and poor environments OR an association between abandonment and good environments) yield a strong discrepancy between observations and expectations, and can generate a significant association.</p>
+</section><section class="slide level2"><h2>Always quantify effect size, direction, and uncertainty</h2>
+<p>Bird abandonment with OR and CI</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">High</th>
+<th style="text-align: right;">Low</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Abandoned</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hatched</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math inline">\(OR=(1*21)/(53*19)=0.0209\)</span></p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># OR in this function is calculated a bit differently, hence the difference.</span></span>
+<span id="cb3-2"><a></a><span class="fu">fisher.test</span>(tab2)</span>
+<span id="cb3-3"><a></a><span class="do">## </span></span>
+<span id="cb3-4"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb3-5"><a></a><span class="do">## </span></span>
+<span id="cb3-6"><a></a><span class="do">## data:  tab2</span></span>
+<span id="cb3-7"><a></a><span class="do">## p-value = 5e-08</span></span>
+<span id="cb3-8"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb3-9"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb3-10"><a></a><span class="do">##  0.000499 0.153059</span></span>
+<span id="cb3-11"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb3-12"><a></a><span class="do">## odds ratio </span></span>
+<span id="cb3-13"><a></a><span class="do">##     0.0217</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>OR 95% CI: <span class="math inline">\(0.0005 &lt;OR &lt; 0.153\)</span>, reject the null.</p>
+</section><section class="slide level2 dark-theme center"><h2>What if we don’t meet <span class="math inline">\(\chi^2\)</span> requirements?</h2>
+</section><section class="slide level2"><h2>Example: Nuptial Gifts</h2>
+<p>Sometimes, females of the Australian redback spider <font color="black">Latrodectus hasselti</font> eat there mates. Is there anything in it for the males?</p>
+<p>Maydianne Andrade tested the idea that eating a male might distract a female &amp; prevent her for remating with a <span class="math inline">\(2^\text{nd}\)</span> male.</p>
+<div style="float:left; position: relative; bottom: 0px;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Red_back_underside.jpg/240px-Red_back_underside.jpg"></p>
+</div>
+<p><br><br><br><br><br><br><br><br></p>
+
+<aside><div>
+<p>Example from: Andrade, M. (1996). Science 271: 70-72 <a href="http://science.sciencemag.org/content/271/5245/70">link</a></p>
+</div></aside></section><section class="slide level2"><h2>Nuptial Gift: Observed &amp; Expected</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: left;">Male_2</th>
+<th style="text-align: left;">Male_1</th>
+<th style="text-align: right;">observed</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="slide level2"><h2>Nuptial Gift: <span class="math inline">\(\chi^2\)</span> Assumptions?</h2>
+<ul>
+<li><p>No more than 20% of categories have Expected <span class="math inline">\(&lt; 5\)</span></p></li>
+<li><p>No category with Expected <span class="math inline">\(\leq 1\)</span></p></li>
+</ul>
+<p>We do not meet assumptions</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 18px; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Male_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Male_1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.Male1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.Male2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">expected</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">7.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">1.97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">17.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">5.03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="slide level2"><h2>Fisher’s Exact Test</h2>
+<ul>
+<li><p>Generates all possible permutations of your data.</p></li>
+<li><p>Asks what proportion of configurations result in associations as or more extreme than observed.</p></li>
+</ul>
+<p><span class="math inline">\(p-value =\)</span>(Sum of Probabilities of Tables at least as Extreme as Observed Table) / (Sum of Probabilities of All Possible Tables)</p>
+<p>The test statistic is calculated based on the hypergeometric distribution (which we won’t go into), which gives the <em>probability of observing the given contingency table under the assumption of independence</em>.</p>
+</section><section class="slide level2"><h2>Fisher’s test in R</h2>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">fisher.test</span>(spider.spread)</span>
+<span id="cb5-2"><a></a><span class="do">## </span></span>
+<span id="cb5-3"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb5-4"><a></a><span class="do">## </span></span>
+<span id="cb5-5"><a></a><span class="do">## data:  spider.spread</span></span>
+<span id="cb5-6"><a></a><span class="do">## p-value = 6e-04</span></span>
+<span id="cb5-7"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb5-8"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb5-9"><a></a><span class="do">##  0.000482 0.329721</span></span>
+<span id="cb5-10"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb5-11"><a></a><span class="do">## odds ratio </span></span>
+<span id="cb5-12"><a></a><span class="do">##     0.0279</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="font-size: 18px; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">method</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">lower.95</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">upper.95</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">odds_ratio</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">p.value</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: left;">odds ratio</td>
+<td style="text-align: left;">Fisher's Exact Test for Count Data</td>
+<td style="text-align: left;">5e-04</td>
+<td style="text-align: left;">0.3297</td>
+<td style="text-align: left;">0.0279</td>
+<td style="text-align: left;">6e-04</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<p>We reject the null hypothesis.</p>
+</section><section class="slide level2"><h2>Doing our own permutations</h2>
+<p><span class="math inline">\(1^{st}\)</span> tidy data by going from this on left, to this on right</p>
+<div style="float:left; position: relative; bottom: 0px;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Male_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Male_1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">observed</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Escaped</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="float:right; position: relative; bottom: 0px;">
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:350px; overflow-x: scroll; width:350px; ">
+<table class="table caption-top" style="margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Male_2</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Male_1</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Eaten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accepted</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rejected</td>
+<td style="text-align: left;">Escaped</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p><br><br><br><br><br><br><br><br><br></p>
+<p>By doing this</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>disaggregated.spider <span class="ot">&lt;-</span> spider <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a></a>    <span class="fu">uncount</span>(<span class="at">weights =</span> observed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section><section class="slide level2"><h2>Chi-squared vs Fisher’s exact test</h2>
+<ul>
+<li>Both have the same null hypothesis: the outcome is independent from the groups.</li>
+<li>Chi-square is generally best for larger samples and Fisher’s is better for smaller samples.</li>
+<li>Both can be extended to cases beyond 2x2 with 2 categorical variables, such as 3x2, 2x5, etc</li>
+<li>When to use Fisher’s exact test:</li>
+</ul>
+<ol type="a">
+<li><blockquote>
+<p>20% of categories with Expected values &lt; 5</p>
+</blockquote></li>
+<li>Any expected value &lt;1</li>
+<li>The column or row marginal values are extremely uneven.</li>
 </ol>
 <ul>
-<li>one variable (observed vs.&nbsp;expected)</li>
-<li>the chi-square distribution in tests where we compare observed frequencies for one variable in a sample to a theoretical expectation based on a distribution (e.g.&nbsp;the proportional model, the poisson model, etc</li>
-</ul></section><section class="slide level2"><h2>Two kinds of chi-squared tests (2/2)</h2>
-<p>Chi-square contingency (independence) tests (2x2)</p>
-<ul>
-<li>the chi-square statistic in tests that compare frequencies/counts for two categorical variables</li>
-<li>the <span class="math inline">\(\chi^2\)</span> contingency test is a special application of the more general goodness-of-fit test for which the probability model being tested is the independence of variables</li>
-</ul></section><section class="slide level2 dark-theme center"><h2>Quantifying Associations Between Categorical Variables</h2>
-<ul>
-<li>Relative risk</li>
-<li>Odds ratio</li>
-</ul></section><section class="slide level2"><h2>Relative Risk: Definition</h2>
-<div class="goal">
-<p>Relative risk is the probability of an undesired outcome in the treatment group divided by the probability of that outcome in the control group.</p>
-</div>
-<div class="columns">
-<div class="column">
-<p>Parameter: <font color="#006475"><span class="math inline">\(\ RR=\frac{p_1}{p_2}\)</span></font></p>
-<p>Estimate: <font color="#C0532B"><span class="math inline">\(\hat {RR}=\frac{\hat{p_1}}{\hat{p_2}}\)</span></font></p>
-<p>, where</p>
-<p><span class="math inline">\(\hat{p_i}=\frac{n_{\text{bad outcomes in group i}}}{n_{\text{individuals in group i}}}\)</span></p>
-<ul>
-<li>Probabilities (<span class="math inline">\(p1, p2\)</span>) range from 0 to 1.</li>
-<li>RR ranges from 0 to <span class="math inline">\(\infty\)</span>.</li>
+<li>Note: Fisher’s ok for all sample sizes. But the # of possible tables grows at an exponential rate and soon becomes unwieldy. So mostly used for smaller sample sizes.</li>
 </ul>
-</div><div class="column">
-<p><span class="math inline">\(\hat {RR} &lt; 0\)</span>: Relative risk is lower in group 1</p>
-<p><span class="math inline">\(\hat {RR} &gt; 0\)</span>: Relative risk is higher in group 1</p>
-<p>Reduction in relative risk is also of interest: <span class="math inline">\(1- \hat {RR}\)</span></p>
-</div></div>
-</section><section class="slide level2 dark-theme center"><h2>Relative risk vs.&nbsp;Odds-ratio: Titanic example!</h2>
-
-<img data-src="images/clipboard-705104102.png" alt="decorative figure of the titanic" class="r-stretch quarto-figure-center"><p class="caption">Wikipedia Commons</p></section><section class="slide level2"><h2>Surviving the Titanic: RR (1/)</h2>
-<div class="columns">
-<div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-1-1.png" alt="Mosaic plot plotted in R showing on the x axis the SEX variable and on the y axis the SURVIVED variable; clearly shows proportion of women who died was less than 1/2 and for men it was > 3/4." width="384"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column">
-<ul>
-<li>What is being calculated?</li>
-<li>What is the focal outcome?</li>
-<li>What’s the treatment group?</li>
-<li>What’s the control group?</li>
-<li>How to interpret RR?</li>
-<li>How to interpret OR?</li>
-</ul>
-</div></div>
-</section><section class="slide level2"><h2>Surviving the Titanic: RR (2/)</h2>
-<ul>
-<li>Comparing the risk of death for women to men.</li>
-<li>Relative Risk: female as treatment, and male as control.</li>
-</ul>
-<div class="columns">
-<div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-2-1.png" alt="Mosaic plot plotted in R showing on the x axis the SEX variable and on the y axis the SURVIVED variable; clearly shows proportion of women who died was less than 1/2 and for men it was > 3/4." width="384"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column">
-<p>Women’s relative risk of dying in the titanic compared to men:</p>
-<p><span class="math display">\[\hat {RR}=\frac{\hat{p}_{women}}{\hat{p}_{men}}\]</span> , where</p>
-<p><span class="math inline">\(\hat{p_{w}}=\frac{death}{\text{all women}}\)</span></p>
-<p><span class="math inline">\(\hat{p_{m}}=\frac{death}{\text{all men}}\)</span></p>
-</div></div>
-</section><section class="slide level2"><h2>Surviving the Titanic: RR (3/)</h2>
-<ul>
-<li>Comparing the risk of death for women to men.</li>
-<li>Relative Risk: female as treatment, and male as control.</li>
-</ul>
-<div class="columns">
-<div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="ContingencyAnalyses2_files/figure-revealjs/unnamed-chunk-3-1.png" alt="Mosaic plot plotted in R showing on the x axis the SEX variable and on the y axis the SURVIVED variable; clearly shows proportion of women who died was less than 1/2 and for men it was > 3/4." width="384"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column">
-<p><span class="math inline">\(\hat p_{w}=\frac{109}{(109+138)}\approx0.24\)</span></p>
-<p><span class="math inline">\(\hat p_{men}=\frac{1329}{(1329+316)}\approx0.81\)</span></p>
-<p>Women’s RR of dying compared to men:</p>
-<p><span class="math inline">\(\hat {RR}=\frac{0.24}{0.81}=0.296\)</span> (women’s RR of dying was <span class="math inline">\(\sim0.3\text{x}\)</span> that of men)</p>
-<p>Women’s <em>reduction</em> in relative risk of dying compared to men:</p>
-<p><span class="math inline">\(1-\hat {RR}=0.704\)</span></p>
-</div></div>
-</section><section class="slide level2"><h2>Relative Risk: Pros and Cons</h2>
-<p><img data-src="images/clipboard-3449922574.png" width="25" height="21">Good:</p>
-<ul>
-<li>Straightforward, intuitive interpretation</li>
-<li>Should be reported whenever probabilities (<span class="math inline">\(p_{1},p_{2}\)</span>) can be estimated without bias</li>
-</ul>
-<p><img data-src="images/clipboard-533154731.png" width="25" height="21">Bad:</p>
-<ul>
-<li>We often cannot study rare outcomes without some selection bias</li>
-<li>It has some non-desirable properties for statistical modeling.</li>
-<li>In those cases we might have to deal with the much less intuitive Odds Ratio (or log Odds Ratio)</li>
-</ul></section><section class="slide level2"><h2>Odds: Definition (1/)</h2>
-<ul>
-<li>Probability of success divided by probability of failure “Success” refers to the focal outcome</li>
-<li>Note: Odds range from 0 to <span class="math inline">\(\infty\)</span>, unlike probabilities that range from 0 to 1.</li>
-</ul>
-<div class="columns">
-<div class="column">
-<p>Parameter: <font color="#006475"><span class="math inline">\(O=\frac{p}{1-p}\)</span></font></p>
-<p>Estimate: <font color="#C0532B"><span class="math inline">\(\hat {O}=\frac{\hat p}{1-\hat p}\)</span></font></p>
-</div><div class="column">
-<p><span class="math inline">\(\hat{O}&gt;1\)</span> : Success more likely than failure</p>
-<p><span class="math inline">\(\hat{O}&lt;1\)</span> : Success less likely than failure</p>
-<p><span class="math inline">\(\hat{O}&gt;1\)</span> : Success and failure equally likely</p>
-</div></div>
-</section><section class="slide level2"><h2>Odds Ratio (OR) (1/)</h2>
-<p>Contingency table: Cells contain counts</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<caption>This is a two-way contingency table</caption>
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Treatment</th>
-<th style="text-align: left;">Control</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Success</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">b</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Failure</td>
-<td style="text-align: left;">c</td>
-<td style="text-align: left;">d</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Success: the focal outcome</p>
-<p>Treatment/Control: The two categories identify the two groups whose probability of success is being compared.</p>
-</section><section class="slide level2"><h2>Odds Ratio (OR) (2/)</h2>
-<p>Contingency table: Cells contain counts</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<caption>This is a two-way contingency table</caption>
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Treatment</th>
-<th style="text-align: left;">Control</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Success</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">b</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Failure</td>
-<td style="text-align: left;">c</td>
-<td style="text-align: left;">d</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><span class="math inline">\(O_{1}=\frac{P(Success|Group_1)}{1-P(Success|Group_1)}\)</span></p>
-<p><span class="math inline">\(O_{2}=\frac{P(Success|Group_2)}{1-P(Success|Group_2)}\)</span></p>
-<p><span class="math inline">\(OR=\frac{O_{1}}{O_{2}}\)</span></p>
-</section><section class="slide level2"><h2>Odds Ratio (OR) (3/)</h2>
-<p>Contingency table: Cells contain counts</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<caption>This is a two-way contingency table</caption>
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Treatment</th>
-<th style="text-align: left;">Control</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Success</td>
-<td style="text-align: left;">a</td>
-<td style="text-align: left;">b</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Failure</td>
-<td style="text-align: left;">c</td>
-<td style="text-align: left;">d</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><span class="math inline">\(OR=\frac{O_{1}}{O_{2}}\)</span></p>
-<p><span class="math inline">\(\hat{OR}=\frac{\hat{O_{1}}}{\hat{O_{2}}}\)</span> <span class="math inline">\(\hat{OR}=\frac{a/c}{b/d}=\frac{ad}{bc}\)</span></p>
-</section><section class="slide level2"><h2>Surviving the titanic: OR (1/)</h2>
-<ul>
-<li>“Success” refers to the focal outcome: dying in the titanic</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">Women</th>
-<th style="text-align: right;">Men</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Death</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">1329</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
-<td style="text-align: right;">316</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section><section class="slide level2"><h2>Surviving the titanic: OR (2/)</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">Women</th>
-<th style="text-align: right;">Men</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Death</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">1329</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
-<td style="text-align: right;">316</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><span class="math inline">\(\hat{OR}=\frac{\hat{O}_{women}}{\hat{O}_{men}}\)</span>.</p>
-<p><span class="math inline">\(\hat {O}_{women}=\frac{\hat p}{1-\hat p}=\frac{0.24}{1-0.24}\approx 0.316\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
-<p><span class="math inline">\(\hat {O}_{men}=\frac{\hat p}{1-\hat p}=\frac{0.81}{1-0.81}\approx 4.263\)</span>. We have <span class="math inline">\(\hat{p_{w}}\)</span> from before</p>
-<p><span class="math display">\[\hat{OR}=\frac{\hat{O}_{women}}{\hat{O}_{men}}=\frac{0.316}{4.263}\approx 0.08\]</span></p>
-</section><section class="slide level2"><h2>Surviving the titanic: OR (3/)</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top">
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">Women</th>
-<th style="text-align: right;">Men</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Death</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">1329</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Survival</td>
-<td style="text-align: right;">338</td>
-<td style="text-align: right;">316</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Alternatively, even without <span class="math inline">\(\hat{p_{w}}\)</span> and <span class="math inline">\(\hat{p_{m}}\)</span>, we can use this table:</p>
-<p><span class="math inline">\(\hat{OR}=\frac{a/c}{b/d}=\frac{109/338}{1329/316}=0.0766782\approx 0.08\)</span></p>
-</section><section class="slide level2"><h2>Odds Ratio: Pros and Cons</h2>
-<p><img data-src="images/clipboard-3449922574.png" width="25" height="21">Good:</p>
-<ul>
-<li>Not intuitive at all</li>
-<li>The odds ratio does not equal the relative risk.</li>
-</ul>
-<p><img data-src="images/clipboard-533154731.png" width="25" height="21">Bad:</p>
-<ul>
-<li>The denominator drops out of the top and bottom – meaning this will work even if we don’t have true absolute probabilities.</li>
-<li>This will be the case in studies of rare outcomes in which it makes sense to increase the number of these rare outcomes in our sample (as we do in case-control studies).</li>
-</ul></section><section class="slide level2"><h2></h2>
 
 
 </section>

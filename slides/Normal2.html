@@ -254,7 +254,7 @@ Bárbara D. Bitarello
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># sample 4 random values from a normal with mean=0 and sd=1</span></span>
 <span id="cb3-2"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">4</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb3-3"><a></a><span class="do">## [1] -0.564  0.265  0.577 -0.304</span></span>
+<span id="cb3-3"><a></a><span class="do">## [1]  0.881  1.211 -0.772  2.080</span></span>
 <span id="cb3-4"><a></a><span class="co"># remember:unless you set a seed each time you do this you will get different</span></span>
 <span id="cb3-5"><a></a><span class="co"># values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -280,9 +280,9 @@ Bárbara D. Bitarello
 <pre><code>## # A tibble: 3 × 2
 ##   sample mean_x
 ##    &lt;int&gt;  &lt;dbl&gt;
-## 1      1 -0.669
-## 2      2  0.103
-## 3      3  0.398</code></pre>
+## 1      1  0.402
+## 2      2 -0.208
+## 3      3 -0.281</code></pre>
 </div>
 </section><section class="slide level2"><h2>Step 4: Ask if each mean (from each simulation) falls within the range [-1,1]</h2>
 <div class="cell">
@@ -297,7 +297,7 @@ Bárbara D. Bitarello
 <pre><code>## # A tibble: 1 × 1
 ##   prop_within_one
 ##             &lt;dbl&gt;
-## 1            0.96</code></pre>
+## 1            0.98</code></pre>
 </div>
 
 <img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>TA -DA!</h2>
