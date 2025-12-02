@@ -81,7 +81,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-keywords','listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
@@ -620,7 +621,33 @@ Date
 
 </tr>
 
-<tr data-index="28" data-listing-date-sort="1764565200000" data-listing-file-modified-sort="1764616816031" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4572" data-listing-title-sort="9.1. Normal Distribution" data-listing-filename-sort="Normal.qmd">
+<tr data-index="28" data-listing-date-sort="1764133200000" data-listing-file-modified-sort="1764700509022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1530" data-listing-title-sort="8.1.Contingency Analyses" data-listing-filename-sort="ContingencyAnalyses.qmd">
+<td>
+<span class="listing-keywords">Estimation (RR &amp; OR)</span>
+</td>
+<td>
+<a href="./slides/ContingencyAnalyses.html" class="title listing-title">8.1.Contingency Analyses</a>
+</td>
+<td>
+<span class="listing-date">Wed, Nov 26</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-date-sort="1764219600000" data-listing-file-modified-sort="1764700552941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4340" data-listing-title-sort="8.2.Contingency Analyses" data-listing-filename-sort="ContingencyAnalyses2.qmd">
+<td>
+<span class="listing-keywords">2x2 chi-2, Fisher</span>
+</td>
+<td>
+<a href="./slides/ContingencyAnalyses2.html" class="title listing-title">8.2.Contingency Analyses</a>
+</td>
+<td>
+<span class="listing-date">Thu, Nov 27</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-date-sort="1764565200000" data-listing-file-modified-sort="1764616816031" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4572" data-listing-title-sort="9.1. Normal Distribution" data-listing-filename-sort="Normal.qmd">
 <td>
 <span class="listing-keywords">Normal Distribution</span>
 </td>
@@ -636,6 +663,9 @@ Date
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="slides-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 
 
