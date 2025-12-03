@@ -198,7 +198,7 @@
     <div class="slides">
 
 <section class="quarto-title-block"><h1 class="title">8.2.Contingency Analyses</h1>
-  <p class="subtitle">2x2 chi-2, Fisher</p>
+  <p class="subtitle">2x2 chi-2, Fisher| Acknowledgments to Y. Brandvain for code used in some slides</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -388,7 +388,7 @@ Bárbara D. Bitarello
 95% CI of <span class="math inline">\(ln(\widehat{OR})\)</span> is between 1.04 and 2.26</p></li>
 <li><p>95% CI of <span class="math inline">\(\widehat{OR}\)</span> = <code>exp(c(1.04, 2.26))</code> = 2.8, 9.6</p></li>
 </ol>
-<p>CONCLUSION<br> - <span class="math inline">\(2.8 &lt; OR &lt; 9.6\)</span>. The odds of getting in an accident are plausibly between 2.8 and 9.6 times higher for people with than without <em>Toxoplasma</em>. <br> - Because the 95% CI does not contain 1, we reject the null hypothesis and conclude that there is an association between <em>Toxoplasma</em> infection and car accidents.</p>
+<p>CONCLUSION: <span class="math inline">\(2.8 &lt; OR &lt; 9.6\)</span> <br>The odds of getting in an accident are plausibly between 2.8 and 9.6 times higher for people with than without <em>Toxoplasma</em>. <br> - Because the 95% CI does not contain 1, we reject the null hypothesis and conclude that there is an association between <em>Toxoplasma</em> infection and car accidents.</p>
 </section><section class="slide level2"><h2>In R</h2>
 <p>The easiest way to calculate OR and CIs in R:</p>
 <div class="cell">

@@ -208,7 +208,14 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-12-03</p>
-</section><section class="slide level2"><h2>The Sampling Distribution of Samples from a Normal Distribution</h2>
+</section><section class="slide level2"><h2>Recap</h2>
+<ul>
+<li>The normal distribution is a continuous distribution: probability is measured by the area under the curve, not by the height of the curve</li>
+<li>It is symmetrical around its mean</li>
+<li>The probability density is highest around the mean</li>
+<li>The mean and variance (or standard deviation) are sufficient to characterize any normal distribution</li>
+<li>For a normally distributed variable, ROUGHLY 2/3 of values are within 1 SD of the mean and ROUGHLY 95% are within 2 SD of the mean</li>
+</ul></section><section class="slide level2"><h2>The Sampling Distribution of Samples from a Normal Distribution</h2>
 <div class="goal">
 <p>Means of normally distributed variables are normally distributed</p>
 </div>
@@ -226,24 +233,25 @@ Bárbara D. Bitarello
 <p>The sum or mean of a large number of measurements randomly sampled from <strong>ANY</strong> population is approximately normally distributed.</p>
 </blockquote>
 </section><section class="slide level2"><h2>Web Apps</h2>
-<p>Seriously it’s the best way to grasp this: do it yourself.</p>
-<p>All of these will REALLY help you when studying this content</p>
-<p>Sampling from the Normal: https://brandvain.shinyapps.io/standardnormal/</p>
-<p>Sample means with a normal distribution: https://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm</p>
-<p>CLT: https://www.zoology.ubc.ca/~whitlock/Kingfisher/CLT.htm</p>
-<p>CLT: https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0</p>
-<p>Confidence intervals for the mean: https://www.zoology.ubc.ca/~whitlock/Kingfisher/CIMean.htm</p>
-<p>Another one from CLT: https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0)</p>
-</section><section class="slide level2"><h2>Buttons</h2>
+<p>Seriously it’s the best way to grasp this: do it yourself. All of these will REALLY help you when studying this content</p>
+<p>CLT: <a href="https://www.zoology.ubc.ca/~whitlock/Kingfisher/CLT.htm">https://www.zoology.ubc.ca/~whitlock/Kingfisher/CLT.htm</a></p>
+<p>Sampling from the Normal: <a href="https://brandvain.shinyapps.io/standardnormal/">https://brandvain.shinyapps.io/standardnormal/</a></p>
+<p>Sample means with a normal distribution: <a href="https://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm">https://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm</a></p>
+<p>CLT: <a href="https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0">https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0</a></p>
+<p>Confidence intervals for the mean: <a href="https://www.zoology.ubc.ca/~whitlock/Kingfisher/CIMean.htm">https://www.zoology.ubc.ca/~whitlock/Kingfisher/CIMean.htm</a></p>
+<p>Another one from CLT: <a href="https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0">https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0</a></p>
 </section><section class="slide level2"><h2>Example: Button pushing (1/)</h2>
-<p>Imagine 20,000 people are asked to press a button.Time is measured in seconds.</p>
+<p>Imagine 20,000 people are asked to press a button. Time is measured in seconds.</p>
 <ul>
-<li>Half are anxious &amp; do this quickly: <span class="math inline">\(\mu=10\)</span>, <span class="math inline">\(\sigma=1\)</span>
+<li>Half are anxious &amp; do this quickly <span class="math inline">\(\mathcal{N}(10,1)\)</span>
 </li>
-<li>Half are not &amp; do this slowly: <span class="math inline">\(\mu=70\)</span>, <span class="math inline">\(\sigma=15\)</span>
+<li>Half are not &amp; do this slowly <span class="math inline">\(\mathcal{N}(70,15)\)</span>
 </li>
-</ul></section><section class="slide level2"><h2>Example: Button pushing (2/)</h2>
-<h3>.center[This is <strong>NOT</strong> normally distributed]</h3>
+</ul>
+<p>Imagine that 20000 people are asked to press a button.</p>
+
+<img data-src="https://media.giphy.com/media/l2JdSlA1a1zKVAyze/giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (2/)</h2>
+<h3>This is <strong>NOT</strong> normally distributed</h3>
 
 <img data-src="Normal2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (3/)</h2>
 <ul>
@@ -251,35 +259,17 @@ Bárbara D. Bitarello
 <li>20,000 replicates used in each plot.</li>
 </ul>
 
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [1/3]</h2>
-<p>Imagine that 20000 people are asked to press a button.</p>
-
-<img data-src="https://media.giphy.com/media/l2JdSlA1a1zKVAyze/giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [2/3]</h2>
-<p>Imagine that 20,000 people are asked to press a button.</p>
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Utility of the Central Limit Theorem ✨</h2>
 <ul>
-<li>Half are anxious &amp; do this quickly <span class="math inline">\(\mathcal{N}(10,1)\)</span>
-</li>
-<li>Half are not &amp; do this slowly <span class="math inline">\(\mathcal{N}(70,15)\)</span>
-</li>
-</ul>
-<p>This is not normally distributed</p>
-
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [3/3]</h2>
-<p>The sampling distribution becomes normal as n gets large.</p>
-
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Utility of the Central Limit Theorem ✨</h2>
-<div class="r-fit-text">
-<p>The Central Limit Theorem explains why so much in the world is normally distributed!!!</p>
-<p>It also means that (with large sample sizes) many statistical tests that assume data are normal still work ok, if data are not totally normal.</p>
-<p>Finally, we can use the Central Limit Theorem to speed up tedious calculations for large samples from non-normal distributions.</p>
-</div>
-</section><section class="slide level2"><h2>Probability that mean is within a range</h2>
-</section><section class="slide level2"><h2>Example: Approximating the Binomial</h2>
+<li><p>The Central Limit Theorem explains why so much in the world is normally distributed!!!</p></li>
+<li><p>It also means that (with large sample sizes) many statistical tests that assume data are normal still work ok, if data are not totally normal. E.g. ANOVA (difference in means between groups)</p></li>
+<li><p>Finally, we can use the CLT to speed up tedious calculations for large samples from non-normal distributions.</p></li>
+</ul></section><section class="slide level2"><h2>Approximating the Binomial</h2>
 <p>When can you do this? a) When number of trials (<span class="math inline">\(n\)</span>) is large and b) probability of success (<span class="math inline">\(p\)</span>) is not too close to 0 or 1.</p>
-<p>Remember from the Proportions chapter that the expected mean number of successes under the binomial is: <span class="math inline">\(np\)</span>, so you can can approximate the binomial by a normal distribution with <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma =  \sqrt{np(1-p)}\)</span></p>
+<p>Remember: the expected mean number of successes under the binomial is <span class="math inline">\(np\)</span>, so you can can approximate the binomial by a normal distribution with <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma =  \sqrt{np(1-p)}\)</span></p>
 <p>NOTE: The sampling distribution of the binomial looks normal for large samples:</p>
 
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Takeaways</h2>
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Takeaways</h2>
 <ul>
 <li><p>The normal distribution is common in nature.</p></li>
 <li><p>A normal distribution is fully characterized by its mean and standard deviation.</p></li>
@@ -293,17 +283,19 @@ Bárbara D. Bitarello
 <p><span class="math display">\[Z=\frac{\bar{Y}-\mu}{\sigma_{\bar{Y}}}\]</span> where <span class="math inline">\(\sigma_{\bar{Y}}\)</span> is the standard error of the mean, aka, the standard deviation of the sampling distribution.</p>
 <ul>
 <li>But…in most cases, we don’t know the real population distribution, so we don’t know <span class="math inline">\(\sigma\)</span>. We only have a sample</li>
-</ul></section><section class="slide level2"><h2>Student’s t distribution (1/)</h2>
+</ul></section><section class="slide level2"><h2>Student’s t distribution (2/)</h2>
 <ul>
 <li><p>We do know <span class="math inline">\(s\)</span>, the standard deviation of our sample. We can use that as an estimate of <span class="math inline">\(\sigma\)</span></p></li>
 <li><p>A good approximation to the standard normal, Z, is, then:</p></li>
 </ul>
-<p><span class="math display">\[t=\frac{\bar Y - \mu}{SEM_{\bar Y}}=\frac{\bar Y-\mu}{s/\sqrt{n}}\]</span> - Because of this, the standard normal distribution (aka the Z distribution) is not quite right (although it is almost right), because it does not incorporate uncertainty in our estimate of the standard deviation. - <strong>We can use the <span class="math inline">\(t\)</span> distribution instead!</strong></p>
-</section><section class="slide level2"><h2>The solution: the T distribution</h2>
+<p><span class="math display">\[t=\frac{\bar Y - \mu}{SEM_{\bar Y}}=\frac{\bar Y-\mu}{s/\sqrt{n}}\]</span> - Because of this, the standard normal distribution (aka the Z distribution) is not quite right (although it is almost right), because it does not incorporate uncertainty in our estimate of the standard deviation.</p>
+<ul>
+<li><strong>We can use the <span class="math inline">\(t\)</span> distribution instead!</strong></li>
+</ul></section><section class="slide level2"><h2>The solution: the T distribution</h2>
 <ul>
 <li><p>A sampling distribution that <strong>includes uncertainty</strong> in our estimate of the standard deviation.</p></li>
 <li><p>There are <strong>many <span class="math inline">\(t\)</span>-distributions</strong> – each associated with some numbers of degrees of freedom</p></li>
-<li><p>The t-distribution assumes that</p></li>
+<li><p>The <span class="math inline">\(t\)</span>-distribution assumes that</p></li>
 <li><p>Data are collected without bias</p></li>
 <li><p>Data are independent</p></li>
 <li><p>The mean is a meaningful summary of the data</p></li>
@@ -329,7 +321,7 @@ Bárbara D. Bitarello
 <li><p><span class="math inline">\(n = 1\)</span>, and I tell you the sample mean, you know every data point, and there are zero degrees of freedom.<br></p></li>
 <li><p><span class="math inline">\(n = 2\)</span>, and I tell you the sample mean, you need one more data point to fill in the rest, and there is one degree of freedom.<br></p></li>
 <li><p><span class="math inline">\(n = 3\)</span>, and I tell you the sample mean, you need two more data points to fill in the rest, and there are two degrees of freedom.</p></li>
-<li><p>So, when we are estimating a sample mean] <span class="math inline">\(\bar{X}\)</span> , the degrees of freedom equals the sample size minus one: <span class="math inline">\(df = n-1\)</span></p></li>
+<li><p>So, when we are estimating a sample mean <span class="math inline">\(\bar{X}\)</span> , the degrees of freedom equals the sample size minus one: <span class="math inline">\(df = n-1\)</span></p></li>
 </ul></section><section class="slide level2"><h2>Comparing T and Z distributions (1/)</h2>
 <ul>
 <li>A <span class="math inline">\(t\)</span>-distribution <strong>looks a lot like the standard normal</strong> distribution</li>
@@ -341,12 +333,10 @@ Bárbara D. Bitarello
 </ul></section><section class="slide level2"><h2>Comparing T and Z distributions (2/)</h2>
 <ul>
 <li>
-<span class="math inline">\(Z=\frac{\bar Y-\mu}{\sigma_{\bar Y}}\)</span>; <span class="math inline">\(t=\frac{\bar Y-\mu}{SEM_{\bar Y}}\)</span>
-</li>
-<li>Using <span class="math inline">\(SEM_{\bar Y}\)</span> instead of <span class="math inline">\({\sigma_{\bar Y}}\)</span> introduces sampling error.</li>
+<span class="math inline">\(Z=\frac{\bar Y-\mu}{\sigma_{\bar Y}}\)</span>; <span class="math inline">\(t=\frac{\bar Y-\mu}{SEM_{\bar Y}}\)</span>; using <span class="math inline">\(SEM_{\bar Y}\)</span> instead of <span class="math inline">\({\sigma_{\bar Y}}\)</span> introduces sampling error.</li>
 <li>As a result, the sampling distribution for <span class="math inline">\(t\)</span> is wider (“fatter”) on the tails than the one for <span class="math inline">\(Z\)</span> (the standard normal)</li>
 <li>I.e., the tails of the t-distribution have more probability than those of the Z-distribution.</li>
-<li>Why? Because <span class="math inline">\(t\)</span> models the possibility that our estimate <span class="math inline">\(s\)</span> is an underestimation of <span class="math inline">\(\sigma\)</span>.</li>
+<li>Why? <span class="math inline">\(t\)</span> models the possibility that our estimate <span class="math inline">\(s\)</span> is an underestimation of <span class="math inline">\(\sigma\)</span>.</li>
 <li>As our sample (and therefore our degrees of freedom) gets larger, the <span class="math inline">\(t\)</span> distribution gets <strong>closer and closer to the standard normal</strong> distribution because our confidence in the estimate of the standard deviation increases.</li>
 </ul>
 <p>This difference in the tails is <em><em>CRUCIAL</em></em>! The tails matter most when calculating confidence intervals and testing hypotheses.</p>
@@ -394,14 +384,13 @@ Bárbara D. Bitarello
 <span id="cb1-4"><a></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">4</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-5"><a></a><span class="co"># [1] 2.776445 or qt(p=0.025, df=4, lower.tail=F)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section><section class="slide level2"><h2>CI example: Elephant gestational period (5/)</h2>
-<p>With a t table</p>
-<ul>
-<li>Lower 95% CI with 4 df:</li>
-</ul>
-<p><span class="math display">\[95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\]</span> Notation: <span class="math inline">\(t_{0.05(2),4\)</span> indicates the 5% critical t-value for <span class="math inline">\(df=4\)</span>. <span class="math inline">\(\alpha\)</span> stands for the fraction of the area under the curve lying in the tails of the distribution. The “(2)” indicates that the 5% area is divided between the two tails of the —that is, 2.5% of the area under the curve lies above and 2.5% lies below</p>
+</section><section class="slide level2"><h2>Elephant gestational period (5/)</h2>
+<p>Lower 95% CI with 4 df</p>
+<p><span class="math display">\[95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\]</span></p>
+<p><span class="math inline">\(t_{0.05(2),4}\)</span> indicates the 5% critical t-value for <span class="math inline">\(df=4\)</span>. <br><span class="math inline">\(\alpha\)</span>: the fraction of the area under the curve lying in the tails of the distribution. <br> “(2)”: indicates that the 5% area is divided between the two tails of the —that is, 2.5% of the area under the curve lies above and 2.5% lies below</p>
+</section><section class="slide level2"><h2>Elephant gestational period (6/)</h2>
 
-<img data-src="images/tdistrib.png" width="1027" class="r-stretch"></section><section class="slide level2"><h2>CI example: Elephant gestational period (6/)</h2>
+<img data-src="images/tdistrib.png" width="1027" class="r-stretch"></section><section class="slide level2"><h2>Elephant gestational period (7/)</h2>
 <p><span class="math inline">\(95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\)</span></p>
 <p><span class="math display">\[ = 563.2 + (2.776445 \times 6.2)=580.41\]</span> <span class="math display">\[ = 563.2 - (2.776445 \times 2.236068)=545.986\]</span> <span class="math display">\[545.99&lt;\mu&lt;580.41\]</span></p>
 </section><section class="slide level2"><h2>One sample t-test</h2>
@@ -409,22 +398,24 @@ Bárbara D. Bitarello
 <p>Test statistic for one-sample t-test:</p>
 <p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
 <p><span class="math inline">\(\mu_{0}\)</span> os the hypothesized population parameter (aka the mean value stated in the <span class="math inline">\(H_{0}\)</span>).</p>
-</section><section class="slide level2"><h2>Back to the elephants:</h2>
+</section><section class="slide level2"><h2>Back to the elephants (1/)</h2>
 <p>Assume we know that elephant gestational period is normally distributed with <span class="math inline">\(\mu=525\)</span> days. We already know that our 95% CI does not include that value, suggesting we will reject the null here through formal testing, but let’s do it anyway.</p>
 <p><span class="math inline">\(H_{0}\)</span>: This sample of elephants came from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
 <p><span class="math inline">\(H_{A}\)</span>: This sample of elephants did NOT from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
+</section><section class="slide level2"><h2>Back to the elephants (2/)</h2>
 <p>Recall: <span class="math inline">\(n=5, \mu_{0}=525, \bar{Y}=562.2, s=13.86\)</span></p>
 <p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
 <p><span class="math display">\[t=\frac{563.2-525}{13.86/\sqrt{5}}=6.16\]</span></p>
 <p>find critical value for <span class="math inline">\(t_{0.05(2),4}\)</span>: it’s 2.78</p>
 <p>Conclusion: we reject that null hypothesis that the population mean is <span class="math inline">\(525\)</span> days.</p>
+</section><section class="slide level2"><h2></h2>
 
 
 </section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>B215: Biostatistics with R</p>
+
 </div>
 </div></div>
 
