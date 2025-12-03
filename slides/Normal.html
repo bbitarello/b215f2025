@@ -486,7 +486,7 @@ Bárbara D. Bitarello
 <p>Conclude that <span class="math inline">\(\sim 32.3\%\)</span> of British men are too tall to be a spy.</p>
 </section><section class="slide level2"><h2>British spies (4/)</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Probability of a random man in the UK being &gt;= 180.3 cm tall.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Probability of a random man in the UK being &gt;= 180.3 cm tall.</span></span>
 <span id="cb2-2"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">180.3</span>, <span class="at">mean =</span> <span class="dv">177</span>, <span class="at">sd =</span> <span class="fl">7.1</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-3"><a></a><span class="do">## [1] 0.321</span></span>
 <span id="cb2-4"><a></a></span>
@@ -497,7 +497,6 @@ Bárbara D. Bitarello
 <span id="cb2-9"><a></a><span class="co"># or 1- P(&gt;180.3)</span></span>
 <span id="cb2-10"><a></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">180.3</span>, <span class="at">mean =</span> <span class="dv">177</span>, <span class="at">sd =</span> <span class="fl">7.1</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-11"><a></a><span class="do">## [1] 0.679</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 </div>
 </section><section class="slide level2 dark-theme center"><h2>The sampling distribution of means from samples taken from a normal distribution</h2>
 </section><section class="slide level2"><h2>Sample Means From a Normal</h2>

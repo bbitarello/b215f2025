@@ -198,7 +198,7 @@
     <div class="slides">
 
 <section class="quarto-title-block"><h1 class="title">8.2.Contingency Analyses</h1>
-  <p class="subtitle">Contingency Analyses</p>
+  <p class="subtitle">2x2 chi-2, Fisher</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -219,6 +219,19 @@ Bárbara D. Bitarello
 <li><p><span class="math inline">\(\chi^2\)</span> contingency test</p></li>
 <li><p>G-test</p></li>
 <li><p>Fisher’s test</p></li>
+</ul></section><section class="slide level2"><h2>Recap</h2>
+<blockquote>
+<p>Contingency analysis estimates and tests for an association between two or more categorical variables.</p>
+</blockquote>
+<ul>
+<li>At the heart of these approaches we are really investigating the <em>independence of variables</em>
+</li>
+</ul></section><section class="slide level2"><h2>RR vs OR</h2>
+<ul>
+<li><p>Both <span class="math inline">\(RR\)</span> and <span class="math inline">\(OR\)</span> measure the association between two categorical variables when both have only 2 categories.</p></li>
+<li><p>RR is the probability of an undesired outcome in the treatment group divided by the probability of the same outcome in a control group. Especially appropriate when comparing the probability (risk) of a <em>focal outcome</em> in a response variable between two treatments or groups of subjects</p></li>
+<li><p>The OR is the odds of “success” (focal outcome) in one group divided by the odds of success in a second group. The explanatory variable defines the groups being compared.</p></li>
+<li><p>E.g. death in the titanic for women x men. Focal outcome is death. “Treatment” group for RR is women</p></li>
 </ul></section><section class="slide level2"><h2>When to Calculate OR (1/2)?</h2>
 <p>We often cannot obtain an unbiased estimate of <span class="math inline">\(p_1\)</span> or <span class="math inline">\(p_2\)</span>.</p>
 <p>Odds ratios risk can be calculated even when we don’t have a random sample and we can’t obtain unbiased probabilities!</p>
@@ -251,9 +264,9 @@ Bárbara D. Bitarello
 <aside><div>
 <p>Case control studies: an <em>observational</em> study in which a sample of individuals with a focal condition (cases) is compared to a sample of subjects lacking the condition (controls).</p>
 </div></aside></section><section class="slide level2"><h2>Odds Ratio: Toxoplasma &amp; Car Wrecks</h2>
-<p><font size="6"> <font color="black">Toxoplasma</font> tricks 🐭mice🐭 into taking risks so it can find it’s way into 🐱cats🐱. Could <font color="black">Toxoplasma</font> be associated with risk taking in humans? <a href="https://www.ncbi.nlm.nih.gov/pubmed/16332418">Yereli et al.</a> asked this by comparing <font color="black">Toxoplasma</font> prevalence in people who caused car crashes to those who hadn’t.</font></p>
+<p><font size="6"> <font color="black">Toxoplasma</font> tricks mice into taking risks so it can find it’s way into cats. Could <em>Toxoplasma</em> be associated with risk taking in humans? <a href="https://www.ncbi.nlm.nih.gov/pubmed/16332418">Yereli et al.</a> asked this by comparing <em>Toxoplasma</em> prevalence in people who caused car crashes to those who hadn’t.</font></p>
 <div style="float:left;position: relative; top: 0px;">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Toxoplasmosis_life_cycle_en.svg" width="60%"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Toxoplasmosis_life_cycle_en.svg" width="45%"></p>
 </div>
 </section><section class="slide level2"><h2>
 <span class="math inline">\(\widehat{OR}\)</span>: Toxoplasma &amp; Car Wrecks. Try!</h2>
@@ -361,7 +374,7 @@ Bárbara D. Bitarello
 <p>We estimate that the odds of being in a car wreck is 5.2 for those with, than those without <em>Toxoplasma</em>.</p>
 <p>We know that estimates are associated with uncertainty.</p>
 <p>We can quantify this!</p>
-</section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. 95% CI [1/2]</h2>
+</section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks: OR 95% CI [1/2]</h2>
 <p>1st know that that standard error for the odds ratio cannot be directly computed, but the standard error of the log odds can!</p>
 <p><span class="math display">\[SE[ln(\widehat{OR})] = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}\]</span></p>
 <p>Then to find the 95% CI</p>
@@ -369,42 +382,47 @@ Bárbara D. Bitarello
 <li><p>Calculate <span class="math inline">\(SE[ln(\widehat{OR})]\)</span></p></li>
 <li><p>Find the confidence limits of the log-odds as <span class="math inline">\(SE[ln(\widehat{OR})] \pm 2 \times  SE[ln(\widehat{OR})]\)</span></p></li>
 <li><p>Exponentiate this result to get back to linear scale</p></li>
-</ol></section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks. 95% CI [2/2]</h2>
+</ol></section><section class="slide level2"><h2>Toxoplasma &amp; Car Wrecks: OR 95% CI [2/2]</h2>
 <ol type="1">
 <li><p><span class="math inline">\(SE[ln(\widehat{OR})] =  \sqrt{\frac{1}{61} + \frac{1}{124} + \frac{1}{16} + \frac{1}{169}} = 0.305\)</span></p></li>
 <li><p>Find the 95% CI as <span class="math inline">\(SE[ln(\widehat{OR})] \pm 2 \times  SE[ln(\widehat{OR})]\)</span><br><span class="math inline">\(= SE[ln(5.2)] \pm 2 \times 0.305\)</span><br><span class="math inline">\(= 1.65 \pm 0.61\)</span><br>
 95% CI of <span class="math inline">\(ln(\widehat{OR})\)</span> is between 1.04 and 2.26</p></li>
 <li><p>95% CI of <span class="math inline">\(\widehat{OR}\)</span> = <code>exp(c(1.04, 2.26))</code> = 2.8, 9.6</p></li>
 </ol>
-<p>CONCLUSION<br> - <span class="math inline">\(2.8 OR&lt; 9.6\)</span>. The odds of getting in an accident are plausibly between 2.8 and 9.6 times higher for people with than without toxoplasma. <br> - Because the 95% CI does not contain 1, we reject the null hypothesis and conclude that there is an association between <em>Toxoplasma</em> infection and car accidents.</p>
+<p>CONCLUSION<br> - <span class="math inline">\(2.8 &lt; OR &lt; 9.6\)</span>. The odds of getting in an accident are plausibly between 2.8 and 9.6 times higher for people with than without <em>Toxoplasma</em>. <br> - Because the 95% CI does not contain 1, we reject the null hypothesis and conclude that there is an association between <em>Toxoplasma</em> infection and car accidents.</p>
 </section><section class="slide level2"><h2>In R</h2>
 <p>The easiest way to calculate OR and CIs in R:</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>toxoplasma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">61</span>, <span class="dv">16</span>, <span class="dv">124</span>, <span class="dv">169</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
 <span id="cb1-2"><a></a><span class="fu">colnames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"inf"</span>, <span class="st">"not-inf"</span>)</span>
 <span id="cb1-3"><a></a><span class="fu">rownames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"crash"</span>, <span class="st">"no_crash"</span>)</span>
-<span id="cb1-4"><a></a><span class="fu">fisher.test</span>(toxoplasma, <span class="at">conf.int =</span> T)</span>
-<span id="cb1-5"><a></a><span class="do">## </span></span>
-<span id="cb1-6"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
-<span id="cb1-7"><a></a><span class="do">## </span></span>
-<span id="cb1-8"><a></a><span class="do">## data:  toxoplasma</span></span>
-<span id="cb1-9"><a></a><span class="do">## p-value = 8e-09</span></span>
-<span id="cb1-10"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
-<span id="cb1-11"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb1-12"><a></a><span class="do">##   2.79 10.09</span></span>
-<span id="cb1-13"><a></a><span class="do">## sample estimates:</span></span>
-<span id="cb1-14"><a></a><span class="do">## odds ratio </span></span>
-<span id="cb1-15"><a></a><span class="do">##       5.17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a></a>toxoplasma</span>
+<span id="cb1-5"><a></a><span class="do">##          inf not-inf</span></span>
+<span id="cb1-6"><a></a><span class="do">## crash     61     124</span></span>
+<span id="cb1-7"><a></a><span class="do">## no_crash  16     169</span></span>
+<span id="cb1-8"><a></a><span class="fu">fisher.test</span>(toxoplasma, <span class="at">conf.int =</span> T)</span>
+<span id="cb1-9"><a></a><span class="do">## </span></span>
+<span id="cb1-10"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb1-11"><a></a><span class="do">## </span></span>
+<span id="cb1-12"><a></a><span class="do">## data:  toxoplasma</span></span>
+<span id="cb1-13"><a></a><span class="do">## p-value = 8e-09</span></span>
+<span id="cb1-14"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb1-15"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb1-16"><a></a><span class="do">##   2.79 10.09</span></span>
+<span id="cb1-17"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb1-18"><a></a><span class="do">## odds ratio </span></span>
+<span id="cb1-19"><a></a><span class="do">##       5.17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 
 <aside><div>
-<p>The CI is a little different because this function uses a different method. You can find out more in the help(fisher.test) function.</p>
-</div></aside></section><section class="slide level2"><h2>Note</h2>
+<p>The CI above is a little different from the one before (Wald method) because this function uses a different method. You can find out more in the help(fisher.test) function. Lab10 also goes over this.</p>
+</div></aside></section><section class="slide level2"><h2>RR 95% CI</h2>
 <p>The 95% CI for the RR is also not pretty. Based on the same assumptions as the one we showed for <span class="math inline">\(OR\)</span> (i.e., random samples):</p>
 <p><span class="math display">\[SE[ln(\widehat{RR})] = \sqrt{\frac{1}{a} + \frac{1}{b} - \frac{1}{a+c} - \frac{1}{b+d}}\]</span></p>
+<p><span class="math display">\[ln(\widehat{RR})-2\times SE[ln(\widehat{RR})]&lt;ln(RR) &lt; ln(RR)+2\times SE[ln(\widehat{RR})]\]</span></p>
 <p>Note that for <span class="math inline">\(RR\)</span> and <span class="math inline">\(OR\)</span> there are several available methods and no consensus over which one is best.</p>
-<p>The two we showed here use a type of rule of thumb based on the normal distribution.</p>
+<p>The two we showed here use a type of rule of thumb based on the normal distribution. I.e., these are approximations based on the Z distribution.</p>
 </section><section class="slide level2"><h2>95% CI in R with resampling (instead of this dreadful equation) <img data-src="images/clipboard-2220595448.png" width="43">
 </h2>
 <ul>
@@ -1094,7 +1112,7 @@ Bárbara D. Bitarello
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>B215: Biostatistics with R</p>
+
 </div>
 </div></div>
 

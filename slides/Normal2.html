@@ -10,9 +10,9 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="Bárbara D. Bitarello">
-<meta name="dcterms.date" content="2025-12-01">
-<meta name="keywords" content="Normal Distribution">
-<title>BIOL B215: Biostatistics with R – 9.1. Normal Distribution</title>
+<meta name="dcterms.date" content="2025-12-03">
+<meta name="keywords" content="Sampling Distribution, CLT, t-test">
+<title>BIOL B215: Biostatistics with R – 9.2. Normal Distribution</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,7 +196,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section class="quarto-title-block"><h1 class="title">9.1. Normal Distribution</h1>
+<section class="quarto-title-block"><h1 class="title">9.2. Normal Distribution</h1>
   <p class="subtitle">Normal Distribution</p>
 
 <div class="quarto-title-authors">
@@ -207,148 +207,35 @@ Bárbara D. Bitarello
 </div>
 </div>
 
-  <p class="date">2025-12-01</p>
-</section><section class="slide level2"><h2>Outline</h2>
+  <p class="date">2025-12-03</p>
+</section><section class="slide level2"><h2>The Sampling Distribution of Samples from a Normal Distribution</h2>
+<div class="goal">
+<p>Means of normally distributed variables are normally distributed</p>
+</div>
 <ul>
-<li>Getting to know the normal distribution</li>
-<li>Sums are normally distributed</li>
-<li>The Normal distribution in nature</li>
-<li>Discrete vs continous probability distributions</li>
-<li>Probability mass vs probability density</li>
-<li>Normal distribution: definitions &amp; properties</li>
-<li>Using R to calculate a probability density</li>
-<li>The standard Normal distribution</li>
-<li>The Z distribution</li>
-</ul></section><section class="slide level2"><h2>Sample Means From a Normal</h2>
-<ul>
-<li>The sampling distribution of an estimate lists all the values that we might obtain when we sample a population and describes their probabilities of occurrence</li>
-<li>If a variable <span class="math inline">\(Y\)</span> has a normal distribution in a population, then the distribution of sample means is also normal.</li>
-<li>Remember that the standard deviation of the sampling distribution is called the <strong>standard error</strong>.</li>
-<li>So the <strong>standard deviation</strong> of a sample of size <span class="math inline">\(n\)</span> from the normal distribution equals <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>
-</li>
+<li><p>The mean of the sample means is <span class="math inline">\(\mu\)</span></p></li>
+<li><p>The standard deviation of the sample means is the <font color="black">standard error,</font> and equals <span class="math inline">\(\sigma_{\overline{Y}}=\frac{\sigma }{\sqrt{n}}\)</span></p></li>
 </ul>
-<p><strong>You’ve seen this before!!</strong></p>
-</section><section class="slide level2"><h2>Probability that a mean <span class="math inline">\(\bar X\)</span> falls in a range</h2>
-<p>Example: the probability that the mean of four draws from the standard normal distribution is between -1 and 1 is:</p>
-<ol type="1">
-<li>The probability it is greater than negative one:</li>
-</ol>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">4</span>), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-2"><a></a><span class="do">## [1] 0.977</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<ol start="2" type="1">
-<li>Minus the probablity is greater than one:</li>
-</ol>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">4</span>), <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<ol start="3" type="1">
-<li>Equals: <span class="math inline">\(0.977-0.022=0.955\)</span>
-</li>
-</ol></section><section class="slide level2"><h2>Let’s prove this to ourselves!</h2>
-<p>… by generating four random numbers from the standard normal distribution many times using <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code></p>
-</section><section class="slide level2"><h2>Step 1: Taking random samples from a normal distribution:</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># sample 4 random values from a normal with mean=0 and sd=1</span></span>
-<span id="cb3-2"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">4</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb3-3"><a></a><span class="do">## [1]  1.3651  0.0645  0.9865 -1.5122</span></span>
-<span id="cb3-4"><a></a><span class="co"># remember:unless you set a seed each time you do this you will get different</span></span>
-<span id="cb3-5"><a></a><span class="co"># values</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section><section class="slide level2"><h2>Step 2: Write code to repeat this sampling</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># set up</span></span>
-<span id="cb4-2"><a></a>n_reps <span class="ot">&lt;-</span> <span class="dv">100</span>  <span class="co">#number of simulations</span></span>
-<span id="cb4-3"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
-<span id="cb4-4"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
-<span id="cb4-5"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section><section class="slide level2"><h2>Step 3: Write code to take the mean from each simulation</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>n_reps <span class="ot">&lt;-</span> <span class="dv">100</span>  <span class="co">#number of simulations</span></span>
-<span id="cb5-2"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
-<span id="cb5-3"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
-<span id="cb5-4"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div class="cell">
-<pre><code>## # A tibble: 3 × 2
-##   sample mean_x
-##    &lt;int&gt;  &lt;dbl&gt;
-## 1      1 -0.185
-## 2      2  0.382
-## 3      3 -0.219</code></pre>
-</div>
-</section><section class="slide level2"><h2>Step 4: Ask if each mean (from each simulation) falls within the range [-1,1]</h2>
-<div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># set up</span></span>
-<span id="cb7-2"><a></a>n_reps <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb7-3"><a></a>sample_size <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co">#sample size of each draw</span></span>
-<span id="cb7-4"><a></a>this_mean <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co">#mean of the distrib.</span></span>
-<span id="cb7-5"><a></a>this_sd <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co">#sd of the distrib.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div class="cell">
-<pre><code>## # A tibble: 1 × 1
-##   prop_within_one
-##             &lt;dbl&gt;
-## 1            0.97</code></pre>
-</div>
+<p><span class="math display">\[\mathcal{N}(\mu = \overline{Y}, \sigma_{\overline{Y}}=\frac{\sigma }{\sqrt{n}})\]</span></p>
+</section><section class="slide level2"><h2>Law of Large Numbers</h2>
+<p>Larger samples make for tighter distributions &amp; smaller standard errors</p>
 
-<img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>TA -DA!</h2>
-
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Conclusions</h2>
-<ul>
-<li>The mean of our distribution of means is clearly centered around the true mean (zero)</li>
-<li>In other words, <strong>the sample mean based on a random sample from a normal distribution gives an unbiased estimate of</strong> <span class="math inline">\(\mu\)</span>
-</li>
-</ul></section><section class="slide level2"><h2>The standard error of the mean</h2>
-<ul>
-<li>The standard deviation of the sampling distribution for <span class="math inline">\(Y\)</span> is known as the standard error of the mean: <span class="math inline">\(\sigma_{\bar Y}=\frac{\sigma}{\sqrt{n}}\)</span>
-</li>
-<li>This property of the standard deviation of the sampling distribution is true <strong>EVEN WHEN</strong> <span class="math inline">\(Y\)</span> does <em>NOT</em> have a normal distribution</li>
-</ul></section><section class="slide level2"><h2>Calculating probabilities of sample means (1/)</h2>
-<ul>
-<li>The standard normal distribution can be used to calculate the probability of drawing a sample with a mean in a given range</li>
-<li>The standard deviation of the sampling distribution of <span class="math inline">\(\bar{Y}=\frac{\sigma}{\sqrt{n}}\)</span> and the mean of sample means is <span class="math inline">\(\mu\)</span>, then:</li>
-<li>
-<span class="math inline">\(Z=\frac{\bar Y-\mu}{\sigma_{\bar{Y}}}\)</span> has a standard normal distribution. We can use the normal approach to get the probability (with tables)</li>
-</ul></section><section class="slide level2"><h2>Calculating probabilities of sample means (2/)</h2>
-<ul>
-<li>In our example, the standard deviation of the distribution of <span class="math inline">\(\bar Y\)</span> is <span class="math inline">\(=0.5\)</span> and <span class="math inline">\(\bar Y=0.00154\)</span>, so <span class="math inline">\(Z=(0.00154-0)/0.5=0.00308\)</span>
-</li>
-<li>Probability of getting a sample mean equal or greater than this: <span class="math inline">\(P[\bar Y &gt;= 0.00154]=0.5\)</span> (from Z table)</li>
-</ul>
-<div class="cell">
-<pre><code>## [1] 0.499</code></pre>
-</div>
-</section><section class="slide level2"><h2>Back to the british spies example</h2>
-<p>What is the probability that the mean height of a random sample of 10 British mean will be at least 180.4 cm?</p>
-<p>By hand:</p>
-<p><span class="math inline">\(P[\bar X \geq 180.4]\)</span></p>
-<p><span class="math inline">\(\sigma_{\bar X}=\frac{7.1}{\sqrt{10}}=2.245217\)</span></p>
-<p><span class="math inline">\(Z=\frac{\bar {X}-\mu}{\sigma_{\bar X}}=\frac{180.4-177}{2.245217}=1.51433\)</span></p>
-<p><span class="math inline">\(P[\bar X \geq 180.4]\)</span> is the same as <span class="math inline">\(P[Z&gt;1.51433]\)</span></p>
-</section><section class="slide level2"><h2>From the statistical table…</h2>
-<p>this gives us <span class="math inline">\(P=0.06552\)</span></p>
-<p>In R:</p>
-<div class="cell">
-<pre><code>## [1] 0.065
-## [1] 0.065</code></pre>
-</div>
-
-<img data-src="https://media1.giphy.com/media/l3V0dy1zzyjbYTQQM/giphy.gif?cid=ecf05e47xkolxx08jnj40ho8p5ef9rshrlpjhuienq6cq3y3&amp;rid=giphy.gif" class="r-stretch"></section><section class="slide level2 dark-theme center"><h2>The Central Limit Theorem: Sampling distributions of sums or means are approx. normal as <em>n</em> gets big.</h2>
-</section><section class="slide level2"><h2>More formally</h2>
-<p>the Central Limit Theorem states that:</p>
-<p>the <strong>sum or mean</strong> of a <strong>large number of measurements</strong> randomly sampled from a non-normal population is approximately normally distributed</p>
-<p>so the <strong>sampling distribution of means</strong> of <em>any</em> statistic (even one that isn’t itself originally normally distributed) can be approximated by a normal distribution</p>
-
-<img data-src="images/amazing.png" class="quarto-figure quarto-figure-center r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (1/)</h2>
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section class="slide level2 dark-theme center"><h2>Central limit theorem</h2>
+</section><section class="slide level2"><h2>Central limit theorem</h2>
+<blockquote>
+<p>The sum or mean of a large number of measurements randomly sampled from <strong>ANY</strong> population is approximately normally distributed.</p>
+</blockquote>
+</section><section class="slide level2"><h2>Web Apps</h2>
+<p>Seriously it’s the best way to grasp this: do it yourself.</p>
+<p>All of these will REALLY help you when studying this content</p>
+<p>Sampling from the Normal: https://brandvain.shinyapps.io/standardnormal/</p>
+<p>Sample means with a normal distribution: https://www.zoology.ubc.ca/~whitlock/Kingfisher/SamplingNormal.htm</p>
+<p>CLT: https://www.zoology.ubc.ca/~whitlock/Kingfisher/CLT.htm</p>
+<p>CLT: https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0</p>
+<p>Confidence intervals for the mean: https://www.zoology.ubc.ca/~whitlock/Kingfisher/CIMean.htm</p>
+<p>Another one from CLT: https://shiny.maths.nottingham.ac.uk/pmzdjc/YujingCLTApp/?showcase=0)</p>
+</section><section class="slide level2"><h2>Buttons</h2>
+</section><section class="slide level2"><h2>Example: Button pushing (1/)</h2>
 <p>Imagine 20,000 people are asked to press a button.Time is measured in seconds.</p>
 <ul>
 <li>Half are anxious &amp; do this quickly: <span class="math inline">\(\mu=10\)</span>, <span class="math inline">\(\sigma=1\)</span>
@@ -356,17 +243,184 @@ Bárbara D. Bitarello
 <li>Half are not &amp; do this slowly: <span class="math inline">\(\mu=70\)</span>, <span class="math inline">\(\sigma=15\)</span>
 </li>
 </ul></section><section class="slide level2"><h2>Example: Button pushing (2/)</h2>
-</section><section class="slide level2"><h2>This is <strong>NOT</strong> normally distributed</h2>
+<h3>.center[This is <strong>NOT</strong> normally distributed]</h3>
 
-<img data-src="Normal2_files/figure-revealjs/somechunk-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (3/)</h2>
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Example: Button pushing (3/)</h2>
 <ul>
 <li>The sampling distribution becomes normal as <span class="math inline">\(n\)</span> gets <strong>BIG</strong>.</li>
 <li>20,000 replicates used in each plot.</li>
 </ul>
 
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [1/3]</h2>
+<p>Imagine that 20000 people are asked to press a button.</p>
+
+<img data-src="https://media.giphy.com/media/l2JdSlA1a1zKVAyze/giphy.gif" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [2/3]</h2>
+<p>Imagine that 20,000 people are asked to press a button.</p>
+<ul>
+<li>Half are anxious &amp; do this quickly <span class="math inline">\(\mathcal{N}(10,1)\)</span>
+</li>
+<li>Half are not &amp; do this slowly <span class="math inline">\(\mathcal{N}(70,15)\)</span>
+</li>
+</ul>
+<p>This is not normally distributed</p>
+
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Button Pushing Example [3/3]</h2>
+<p>The sampling distribution becomes normal as n gets large.</p>
+
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Utility of the Central Limit Theorem ✨</h2>
+<div class="r-fit-text">
+<p>The Central Limit Theorem explains why so much in the world is normally distributed!!!</p>
+<p>It also means that (with large sample sizes) many statistical tests that assume data are normal still work ok, if data are not totally normal.</p>
+<p>Finally, we can use the Central Limit Theorem to speed up tedious calculations for large samples from non-normal distributions.</p>
+</div>
+</section><section class="slide level2"><h2>Probability that mean is within a range</h2>
+</section><section class="slide level2"><h2>Example: Approximating the Binomial</h2>
+<p>When can you do this? a) When number of trials (<span class="math inline">\(n\)</span>) is large and b) probability of success (<span class="math inline">\(p\)</span>) is not too close to 0 or 1.</p>
+<p>Remember from the Proportions chapter that the expected mean number of successes under the binomial is: <span class="math inline">\(np\)</span>, so you can can approximate the binomial by a normal distribution with <span class="math inline">\(\mu = np\)</span> and <span class="math inline">\(\sigma =  \sqrt{np(1-p)}\)</span></p>
+<p>NOTE: The sampling distribution of the binomial looks normal for large samples:</p>
+
+<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Takeaways</h2>
+<ul>
+<li><p>The normal distribution is common in nature.</p></li>
+<li><p>A normal distribution is fully characterized by its mean and standard deviation.</p></li>
+<li><p>The distribution of sample means from a normal is normal distributed with mean = <span class="math inline">\(\mu\)</span> and standard deviation = <span class="math inline">\(\sigma/\sqrt{n}\)</span>.</p></li>
+<li><p>Any normal distribution can be transformed into the standard normal.</p></li>
+<li><p>The CLT implies that with sufficiently large sample sizes, the sampling distribution of non-normally distributed populations is normal.</p></li>
+</ul></section><section class="slide level2"><h2>Student’s t distribution (1/)</h2>
+<ul>
+<li>The sampling distribution for the sample mean is a normal distribution if the variable is itself normally distributed. As a result, we could use the to calculate probabilities for under the normal curve:</li>
+</ul>
+<p><span class="math display">\[Z=\frac{\bar{Y}-\mu}{\sigma_{\bar{Y}}}\]</span> where <span class="math inline">\(\sigma_{\bar{Y}}\)</span> is the standard error of the mean, aka, the standard deviation of the sampling distribution.</p>
+<ul>
+<li>But…in most cases, we don’t know the real population distribution, so we don’t know <span class="math inline">\(\sigma\)</span>. We only have a sample</li>
+</ul></section><section class="slide level2"><h2>Student’s t distribution (1/)</h2>
+<ul>
+<li><p>We do know <span class="math inline">\(s\)</span>, the standard deviation of our sample. We can use that as an estimate of <span class="math inline">\(\sigma\)</span></p></li>
+<li><p>A good approximation to the standard normal, Z, is, then:</p></li>
+</ul>
+<p><span class="math display">\[t=\frac{\bar Y - \mu}{SEM_{\bar Y}}=\frac{\bar Y-\mu}{s/\sqrt{n}}\]</span> - Because of this, the standard normal distribution (aka the Z distribution) is not quite right (although it is almost right), because it does not incorporate uncertainty in our estimate of the standard deviation. - <strong>We can use the <span class="math inline">\(t\)</span> distribution instead!</strong></p>
+</section><section class="slide level2"><h2>The solution: the T distribution</h2>
+<ul>
+<li><p>A sampling distribution that <strong>includes uncertainty</strong> in our estimate of the standard deviation.</p></li>
+<li><p>There are <strong>many <span class="math inline">\(t\)</span>-distributions</strong> – each associated with some numbers of degrees of freedom</p></li>
+<li><p>The t-distribution assumes that</p></li>
+<li><p>Data are collected without bias</p></li>
+<li><p>Data are independent</p></li>
+<li><p>The mean is a meaningful summary of the data</p></li>
+<li><p>The variable of interest is normally distributed in the population</p></li>
+</ul></section><section class="slide level2"><h2>T is a common statistic (1/2)</h2>
+<ul>
+<li>Most sampling distributions are normal</li>
+<li>We almost never know the true population standard deviation</li>
+<li>So we deal with t-values a lot in statistics</li>
+<li>Every time we see a t-value, t is the <strong>number of standard errors away our estimate is from its hypothesized parameter value under the null hypothesis.</strong>
+</li>
+</ul></section><section class="slide level2"><h2>T is a common statistic (2/2)</h2>
+<ul>
+<li>Like the <span class="math inline">\(Z\)</span> distribution for a sample mean, the <span class="math inline">\(t\)</span>-value describes the number of standard errors between our sample mean and the population parameter.</li>
+</ul>
+<p><span class="math display">\[t=\frac{\bar X-\mu_{0}}{SEM_{\bar X}}=\frac{\bar X- \mu_{0}}{s/\sqrt{n}}\]</span></p>
+<p><span class="math inline">\(\mu_{0}\)</span> is the hypothesized population parameter.</p>
+<p><span class="math inline">\(df=n-1\)</span>, where <span class="math inline">\(n\)</span> is the sample size.</p>
+</section><section class="slide level2"><h2>Calculating the degrees of freedom</h2>
+<p>The number of degrees of freedom describes how many individual values we need to know after building our model of interest, before we know every data point.</p>
+<p>For example, if you have a sample of size:</p>
+<ul>
+<li><p><span class="math inline">\(n = 1\)</span>, and I tell you the sample mean, you know every data point, and there are zero degrees of freedom.<br></p></li>
+<li><p><span class="math inline">\(n = 2\)</span>, and I tell you the sample mean, you need one more data point to fill in the rest, and there is one degree of freedom.<br></p></li>
+<li><p><span class="math inline">\(n = 3\)</span>, and I tell you the sample mean, you need two more data points to fill in the rest, and there are two degrees of freedom.</p></li>
+<li><p>So, when we are estimating a sample mean] <span class="math inline">\(\bar{X}\)</span> , the degrees of freedom equals the sample size minus one: <span class="math inline">\(df = n-1\)</span></p></li>
+</ul></section><section class="slide level2"><h2>Comparing T and Z distributions (1/)</h2>
+<ul>
+<li>A <span class="math inline">\(t\)</span>-distribution <strong>looks a lot like the standard normal</strong> distribution</li>
+</ul>
+
+<img data-src="https://bookdown.org/ybrandvain/Applied-Biostats/images/tvz.gif" class="r-stretch"><ul>
+<li>Link: <a href="https://bookdown.org/ybrandvain/Applied-Biostats/images/tvz.gif">https://bookdown.org/ybrandvain/Applied-Biostats/images/tvz.gif</a>
+</li>
+</ul></section><section class="slide level2"><h2>Comparing T and Z distributions (2/)</h2>
+<ul>
+<li>
+<span class="math inline">\(Z=\frac{\bar Y-\mu}{\sigma_{\bar Y}}\)</span>; <span class="math inline">\(t=\frac{\bar Y-\mu}{SEM_{\bar Y}}\)</span>
+</li>
+<li>Using <span class="math inline">\(SEM_{\bar Y}\)</span> instead of <span class="math inline">\({\sigma_{\bar Y}}\)</span> introduces sampling error.</li>
+<li>As a result, the sampling distribution for <span class="math inline">\(t\)</span> is wider (“fatter”) on the tails than the one for <span class="math inline">\(Z\)</span> (the standard normal)</li>
+<li>I.e., the tails of the t-distribution have more probability than those of the Z-distribution.</li>
+<li>Why? Because <span class="math inline">\(t\)</span> models the possibility that our estimate <span class="math inline">\(s\)</span> is an underestimation of <span class="math inline">\(\sigma\)</span>.</li>
+<li>As our sample (and therefore our degrees of freedom) gets larger, the <span class="math inline">\(t\)</span> distribution gets <strong>closer and closer to the standard normal</strong> distribution because our confidence in the estimate of the standard deviation increases.</li>
+</ul>
+<p>This difference in the tails is <em><em>CRUCIAL</em></em>! The tails matter most when calculating confidence intervals and testing hypotheses.</p>
+</section><section class="slide level2"><h2>What do we use the t-distribution for?</h2>
+<ol type="1">
+<li>Confidence intervals</li>
+<li>Hypothesis testing</li>
+</ol></section><section class="slide level2"><h2>Exact CI</h2>
+<ul>
+<li>We find the <span class="math inline">\(1-\alpha\)</span> confidence interval for the estimated mean of a sample from a normal distribution.<br>
+</li>
+<li>To estimate the upper (or lower) <span class="math inline">\(1-\alpha\)</span> confidence intervals:</li>
+</ul>
+<p><span class="math display">\[(1-\alpha)\%\text{ CI } = \bar{X} \pm t_{\alpha(2)} \times SEM_{\bar X}\]</span></p>
+<p><span class="math display">\[ =  \bar{X} \pm t_{\alpha(2)} \times s / \sqrt{n}\]</span></p>
+<p>, where <span class="math inline">\(t_{\alpha(2)}\)</span> is the critical two-tailed t value for a specified <span class="math inline">\(\alpha\)</span> value.</p>
+<p>This makes sense because this should contain 95% of sample means estimated from a population.</p>
+</section><section class="slide level2"><h2>CI example: Elephant gestational period (1/)</h2>
+<ul>
+<li>A sample of 5 pregnant elephants</li>
+<li>Five elephants that gave birth after 547, 551, 571, 567, 580 days pregnant.</li>
+<li>How confident are we about our mean estimate here? Let’s find the 95% CI.</li>
+</ul>
+<p><span class="math inline">\(df=5-1=4\)</span></p>
+<p><span class="math inline">\(t_{0.05(2),4}\)</span></p>
+<p><span class="math inline">\(\bar{Y}=563.2\)</span></p>
+<p><span class="math inline">\(s=13.86362\)</span></p>
+<p><span class="math inline">\(SEM_{\bar{Y}}=\frac{s}{\sqrt{n}}=\frac{13.86362}{2.236068}\approx6.2\)</span></p>
+</section><section class="slide level2"><h2>CI example: Elephant gestational period (2/)</h2>
+<p><span class="math display">\[(1-\alpha)\%\text{ CI } = \bar{Y} \pm t_{\alpha(2), df} \times SEM_{\bar Y}\]</span></p>
+<p><span class="math display">\[95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\]</span></p>
+<ul>
+<li>What is <span class="math inline">\(t_{.05/2,df = 4}\)</span>? Let’s find out!</li>
+</ul></section><section class="slide level2"><h2>CI example: Elephant gestational period (3/)</h2>
+
+<img data-src="Normal2_files/figure-revealjs/t9-1.png" width="576" class="r-stretch"></section><section class="slide level2"><h2>CI example: Elephant gestational period (4/)</h2>
+<p>In R:</p>
+<ul>
+<li>We find <span class="math inline">\(t_{\alpha/2}\)</span> in R with the <code><a href="https://rdrr.io/r/stats/TDist.html">qt()</a></code> function: <span class="math inline">\(t_{\alpha/2}\)</span> = <code>qt(p = alpha/2, df = 4)</code>. <strong>Remember</strong> that we divide <span class="math inline">\(\alpha\)</span> by two in this calculation to include both sides of the sampling distribution.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># lower bound</span></span>
+<span id="cb1-2"><a></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.025</span>, <span class="at">df =</span> <span class="dv">4</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-3"><a></a><span class="co"># [1] -2.776445 and the upper bound</span></span>
+<span id="cb1-4"><a></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">4</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-5"><a></a><span class="co"># [1] 2.776445 or qt(p=0.025, df=4, lower.tail=F)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section class="slide level2"><h2>CI example: Elephant gestational period (5/)</h2>
+<p>With a t table</p>
+<ul>
+<li>Lower 95% CI with 4 df:</li>
+</ul>
+<p><span class="math display">\[95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\]</span> Notation: <span class="math inline">\(t_{0.05(2),4\)</span> indicates the 5% critical t-value for <span class="math inline">\(df=4\)</span>. <span class="math inline">\(\alpha\)</span> stands for the fraction of the area under the curve lying in the tails of the distribution. The “(2)” indicates that the 5% area is divided between the two tails of the —that is, 2.5% of the area under the curve lies above and 2.5% lies below</p>
+
+<img data-src="images/tdistrib.png" width="1027" class="r-stretch"></section><section class="slide level2"><h2>CI example: Elephant gestational period (6/)</h2>
+<p><span class="math inline">\(95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\)</span></p>
+<p><span class="math display">\[ = 563.2 + (2.776445 \times 6.2)=580.41\]</span> <span class="math display">\[ = 563.2 - (2.776445 \times 2.236068)=545.986\]</span> <span class="math display">\[545.99&lt;\mu&lt;580.41\]</span></p>
+</section><section class="slide level2"><h2>One sample t-test</h2>
+<p>The one-sample t-test compares the mean of a random sample from a normal population with the population mean proposed in a null hypothesis.</p>
+<p>Test statistic for one-sample t-test:</p>
+<p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
+<p><span class="math inline">\(\mu_{0}\)</span> os the hypothesized population parameter (aka the mean value stated in the <span class="math inline">\(H_{0}\)</span>).</p>
+</section><section class="slide level2"><h2>Back to the elephants:</h2>
+<p>Assume we know that elephant gestational period is normally distributed with <span class="math inline">\(\mu=525\)</span> days. We already know that our 95% CI does not include that value, suggesting we will reject the null here through formal testing, but let’s do it anyway.</p>
+<p><span class="math inline">\(H_{0}\)</span>: This sample of elephants came from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
+<p><span class="math inline">\(H_{A}\)</span>: This sample of elephants did NOT from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
+<p>Recall: <span class="math inline">\(n=5, \mu_{0}=525, \bar{Y}=562.2, s=13.86\)</span></p>
+<p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
+<p><span class="math display">\[t=\frac{563.2-525}{13.86/\sqrt{5}}=6.16\]</span></p>
+<p>find critical value for <span class="math inline">\(t_{0.05(2),4}\)</span>: it’s 2.78</p>
+<p>Conclusion: we reject that null hypothesis that the population mean is <span class="math inline">\(525\)</span> days.</p>
 
 
-<img data-src="Normal2_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
