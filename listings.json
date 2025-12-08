@@ -6,6 +6,10 @@
     ]
   },
   {
+    "listing": "/psets.html",
+    "items": []
+  },
+  {
     "listing": "/slides.html",
     "items": [
       "/slides/Logistics.html",
@@ -41,9 +45,5 @@
       "/slides/Normal.html",
       "/slides/Normal2.html"
     ]
-  },
-  {
-    "listing": "/psets.html",
-    "items": []
   }
 ]
