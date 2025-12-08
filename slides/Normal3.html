@@ -208,7 +208,14 @@ Bárbara D. Bitarello
 </div>
 
   <p class="date">2025-12-08</p>
-</section><section class="slide level2"><h2>Recap</h2>
+</section><section class="slide level2"><h2>Key Learning Goals</h2>
+<ul>
+<li>Explain the relationship between the t-distribution &amp; the Z-distribution.</li>
+<li>Estimate uncertainty in the population mean from a normally distributed sample of size n.</li>
+<li>Know when/how to conduct a 1-sample t-test.</li>
+<li>Come up with mean values under the null.</li>
+<li>Estimate uncertainty in variability.</li>
+</ul></section><section class="slide level2"><h2>Recap</h2>
 <ul>
 <li>
 <span class="math inline">\(Z\)</span> and <span class="math inline">\(t\)</span> distributions are not the same</li>
@@ -260,18 +267,76 @@ Bárbara D. Bitarello
 <span id="cb1-14"><a></a><span class="do">## mean of x </span></span>
 <span id="cb1-15"><a></a><span class="do">##     563.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section><section class="slide level2"><h2>Assumptions of the One-sample t-test</h2>
+<ul>
+<li>Random samples</li>
+<li>Independent Samples</li>
+<li>Normally distributed values</li>
+<li>Or, more precisely, normally distributed sampling distributions.</li>
+</ul></section><section class="slide level2"><h2>Some practice problems for later</h2>
+<ul>
+<li><a href="https://bookdown.org/blazej_kochanski/statistics2/readnorm.html">https://bookdown.org/blazej_kochanski/statistics2/readnorm.html</a></li>
+</ul></section><section class="slide level2"><h2>Alternatives to the one-sample t-test</h2>
+<ul>
+<li>Permutations (for hypothesis testing)</li>
+<li>Bootstrap (for estimating uncertainty)</li>
+<li>Non-parametric tests. E.g. sign test – i.e.&nbsp;a binomial test asking if the proportion of observations &gt; μ0 differs from ½.</li>
+</ul></section><section class="slide level2"><h2>Parametric vs Nonparametric tests (1/)</h2>
+<ul>
+<li>Parametric tests are statistical tests that make specific assumptions about the data.</li>
+<li>They assume the data follows a particular distribution, usually the normal distribution.</li>
+<li>These tests need the measurement scale to be interval or ratio.</li>
+<li>Parametric tests use population parameters like the mean and standard deviation in their calculations.</li>
+<li>E.g. t-test (one and 2 sample), ANOVA.</li>
+</ul>
+
+<aside><div>
+<p>From: https://www.statology.org/understanding-the-difference-between-parametric-and-nonparametric-tests/</p>
+</div></aside></section><section class="slide level2"><h2>Parametric vs Nonparametric (2/)</h2>
+<ul>
+<li>Nonparametric tests are statistical tests that do not assume a specific distribution for the data.</li>
+<li>They are used when data do not meet the assumptions of parametric tests, like normality.</li>
+<li>These tests are often used with ordinal data or when sample sizes are small.</li>
+<li>They may, for example, compare medians instead of means.</li>
+<li>E.g. Chi-square test, Mann–Whitney U test, Wilcoxon signed-rank test, Spearman’s rank correlation</li>
+</ul>
+
+<aside><div>
+<p>From: https://www.statology.org/understanding-the-difference-between-parametric-and-nonparametric-tests/</p>
+</div></aside></section><section class="slide level2"><h2>Parametric vs Nonparametric tests (3/)</h2>
+<div class="columns">
+<div class="column">
+<p>Parametric Pros:</p>
+<ul>
+<li>When assumptions are met, can detect differences more easily.</li>
+<li>Give estimates of population parameters.</li>
+<li>Handle more complex models, like regression or ANOVA.</li>
+</ul>
+<p>Parametric Cons:</p>
+<ul>
+<li>Need assumptions such as normality and interval data.</li>
+<li>Extreme values can distort results; When the sample size is small, the normality assumption may be violated.</li>
+</ul>
+</div><div class="column">
+<p>Nonparametric Pros:</p>
+<ul>
+<li>Do not need normal distribution or homogeneity of variance.</li>
+<li>Less affected by extreme values; can be used with smaller sample sizes.</li>
+</ul>
+<p>Nonparametric Cons:</p>
+<ul>
+<li>Generally have less statistical power compared to parametric tests.</li>
+<li>Only test for differences in medians or ranks, not means.</li>
+<li>Fewer tests available for complex designs.</li>
+</ul>
+</div></div>
 </section><section class="slide level2 dark-theme center"><h2>Is it normal?</h2>
 </section><section class="slide level2"><h2>Is it normal? (1/)</h2>
-<ul>
-<li>You can always do the simulation procedure to get a sampling distribution for any variable and obtain measures of confidence</li>
-<li>But, if your variable is normally distributed in the population (or approximately normally distributed), you can use the properties of the standard normal instead of doing all of this!</li>
-<li>But how large is sufficiently large? The answer depends on how far from normal the initial data are. The less normal the initial data, the larger the sample size before the sampling distribution becomes normal.</li>
-</ul></section><section class="slide level2"><h2>Is it normal? (2/)</h2>
 <ul>
 <li>A lot of the statistics we’ve been learning relies on the “normality” of the data</li>
 <li>While there are statistical procedures to test the null hypothesis that data come from a normal distribution, we almost never use these because a deviation from a normal distribution can be most important when we have the least power to detect it.</li>
 <li>For that reason,we usually use <strong>our eyes</strong> (believe it or not), rather than null hypothesis significance testing to see if data are approximately normal.</li>
-</ul></section><section class="slide level2"><h2>Is it normal? (3/)</h2>
+</ul></section><section class="slide level2"><h2>Is it normal? (2/)</h2>
 <ul>
 <li>Few variables in biology show a perfect match to a normal distribution</li>
 <li>There are methods (e.g., QQplots) to assess whether you believe the assumption holds</li>
@@ -432,7 +497,7 @@ Bárbara D. Bitarello
 <li>Test the hypothesis that relative swim speed in syrup has a mean of 1.</li>
 <li>How uncertain are we about true relative swimming speed in syrup? Use the 99% confidence interval to find out.</li>
 <li>Quantify the effect size using Cohen’s d.&nbsp;</li>
-</ol></section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (1/)</h2>
+</ol></section><section class="slide level2"><h2>Problem 10: Has Climate Change Moved Species Uphill? (1/)</h2>
 <p>Chen et al.&nbsp;(2011) wanted to test the idea that organisms move to higher elevation as the climate warms. To test this, they collected data from 31 species:</p>
 
 <img data-src="Normal3_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (2/)</h2>
@@ -510,6 +575,8 @@ Bárbara D. Bitarello
 </ul></section><section class="slide level2"><h2>For future refence</h2>
 <ul>
 <li><p>Statistics for Biologists - <em>Nature</em> collection of articles highlighting important statistical issues that biologists should be aware of and provides practical advice to help them improve the rigor of their work.<a href="https://www.nature.com/collections/qghhqm">nature.com/collections/qghhqm</a></p></li>
+<li><p>G*power: a tool to compute statistical power analyses for many different t tests, F tests, χ2 tests, z tests and some exact tests. G*Power can also be used to compute effect sizes and to display graphically the results of power analyses. <a href="https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower">www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower</a></p></li>
+<li><p>The <code>pwr</code> package in R is a powerful tool for conducting power analysis. Power analysis is essential in determining the sample size needed to detect an effect of a given size with a certain level of confidence. It is widely used in experimental design and statistical hypothesis testing. <a href="https://data-wise.github.io/doe/appendix/r-packages/pwr.html">data-wise.github.io/doe/appendix/r-packages/pwr.html</a></p></li>
 <li><p>Our course website! <a href="https://bbitarello.github.io/b215f2025/">https://bbitarello.github.io/b215f2025/</a></p></li>
 </ul>
 
