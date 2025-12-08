@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #b3b1ad; background-color: #0a0e14; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #b3b1ad; } /* Normal */
+    code span.al { color: #ff3333; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #e6b673; } /* Annotation */
+    code span.at { color: #59c2ff; } /* Attribute */
+    code span.bn { color: #e6b450; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ff8f40; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #ffee99; } /* Constant */
+    code span.co { color: #626a73; font-style: italic; } /* Comment */
+    code span.cv { color: #ffee99; } /* CommentVar */
+    code span.do { color: #626a73; } /* Documentation */
+    code span.dt { color: #ff8f40; } /* DataType */
+    code span.dv { color: #e6b450; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #59c2ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #e6b450; } /* Float */
+    code span.fu { color: #ffb454; } /* Function */
+    code span.im { color: #c2d94c; } /* Import */
+    code span.in { color: #e6b450; } /* Information */
+    code span.kw { color: #ff8f40; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29668; } /* Operator */
+    code span.ot { color: #39bae6; } /* Other */
+    code span.pp { color: #f07178; } /* Preprocessor */
+    code span.re { color: #59c2ff; background-color: #173649; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #c2d94c; } /* String */
+    code span.va { color: #39bae6; } /* Variable */
+    code span.vs { color: #c2d94c; } /* VerbatimString */
+    code span.wa { color: #f07178; } /* Warning */
   </style>
 <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7e6df2251256a7d1d1118d9102acc5fb.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -152,7 +218,14 @@ Bárbara D. Bitarello
 <ol type="1">
 <li>Confidence intervals</li>
 <li>Hypothesis testing</li>
-</ol></section><section class="slide level2"><h2>One sample t-test</h2>
+</ol></section><section class="slide level2"><h2>Recap elephant CI example</h2>
+<ul>
+<li>Five elephants that gave birth after 547, 551, 571, 567, 580 days pregnant.</li>
+<li>How confident are we about our mean estimate here? Let’s find the 95% CI.</li>
+</ul>
+<p><span class="math inline">\(95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\)</span></p>
+<p><span class="math display">\[ = 563.2 + (2.776445 \times 6.2)=580.41\]</span> <span class="math display">\[ = 563.2 - (2.776445 \times 6.2)=545.986\]</span> <span class="math display">\[545.99&lt;\mu&lt;580.41\]</span></p>
+</section><section class="slide level2"><h2>One sample t-test</h2>
 <p>The one-sample t-test compares the mean of a random sample from a normal population with the population mean proposed in a null hypothesis.</p>
 <p>Test statistic for one-sample t-test:</p>
 <p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
@@ -165,11 +238,280 @@ Bárbara D. Bitarello
 <p><span class="math inline">\(H_{A}\)</span>: This sample of elephants did NOT come from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
 </section><section class="slide level2"><h2>Back to the elephants (2/)</h2>
 <p>Recall: <span class="math inline">\(n=5, \mu_{0}=525, \bar{Y}=562.2, s=13.86\)</span></p>
-<p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
-<p><span class="math display">\[t=\frac{563.2-525}{13.86/\sqrt{5}}=6.16\]</span></p>
-<p>find critical value for <span class="math inline">\(t_{0.05(2),4}\)</span>: it’s 2.78</p>
+<p><span class="math inline">\(t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}=\frac{563.2-525}{13.86/\sqrt{5}}=6.16\)</span></p>
+
+<img data-src="images/tdistrib.png" width="1027" class="r-stretch"><p><span class="math inline">\(t_{0.05(2),4}=2.78\)</span>: <span class="math inline">\(0.01&lt;p&lt;0.001\)</span></p>
 <p>Conclusion: we reject that null hypothesis that the population mean is <span class="math inline">\(525\)</span> days.</p>
-</section><section class="slide level2"><h2></h2>
+</section><section class="slide level2"><h2>In R</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>elephants <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">547</span>, <span class="dv">551</span>, <span class="dv">571</span>, <span class="dv">567</span>, <span class="dv">580</span>)</span>
+<span id="cb1-2"><a></a><span class="fu">c</span>(<span class="fu">mean</span>(elephants), <span class="fu">sd</span>(elephants))</span>
+<span id="cb1-3"><a></a><span class="do">## [1] 563.200  13.864</span></span>
+<span id="cb1-4"><a></a><span class="fu">t.test</span>(elephants, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">mu =</span> <span class="dv">525</span>)</span>
+<span id="cb1-5"><a></a><span class="do">## </span></span>
+<span id="cb1-6"><a></a><span class="do">##  One Sample t-test</span></span>
+<span id="cb1-7"><a></a><span class="do">## </span></span>
+<span id="cb1-8"><a></a><span class="do">## data:  elephants</span></span>
+<span id="cb1-9"><a></a><span class="do">## t = 6.16, df = 4, p-value = 0.0035</span></span>
+<span id="cb1-10"><a></a><span class="do">## alternative hypothesis: true mean is not equal to 525</span></span>
+<span id="cb1-11"><a></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb1-12"><a></a><span class="do">##  545.99 580.41</span></span>
+<span id="cb1-13"><a></a><span class="do">## sample estimates:</span></span>
+<span id="cb1-14"><a></a><span class="do">## mean of x </span></span>
+<span id="cb1-15"><a></a><span class="do">##     563.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section class="slide level2 dark-theme center"><h2>Is it normal?</h2>
+</section><section class="slide level2"><h2>Is it normal? (1/)</h2>
+<ul>
+<li>You can always do the simulation procedure to get a sampling distribution for any variable and obtain measures of confidence</li>
+<li>But, if your variable is normally distributed in the population (or approximately normally distributed), you can use the properties of the standard normal instead of doing all of this!</li>
+<li>But how large is sufficiently large? The answer depends on how far from normal the initial data are. The less normal the initial data, the larger the sample size before the sampling distribution becomes normal.</li>
+</ul></section><section class="slide level2"><h2>Is it normal? (2/)</h2>
+<ul>
+<li>A lot of the statistics we’ve been learning relies on the “normality” of the data</li>
+<li>While there are statistical procedures to test the null hypothesis that data come from a normal distribution, we almost never use these because a deviation from a normal distribution can be most important when we have the least power to detect it.</li>
+<li>For that reason,we usually use <strong>our eyes</strong> (believe it or not), rather than null hypothesis significance testing to see if data are approximately normal.</li>
+</ul></section><section class="slide level2"><h2>Is it normal? (3/)</h2>
+<ul>
+<li>Few variables in biology show a perfect match to a normal distribution</li>
+<li>There are methods (e.g., QQplots) to assess whether you believe the assumption holds</li>
+<li>A method is <strong>robust</strong> if the answer it gives is not senstitive to modest departures from the assumption</li>
+<li>How do you know if a method is robust? This is a more advanced discussion we won’t go into, but, basically, we can assess this through computer simulations</li>
+</ul></section><section class="slide level2"><h2>“Quantile-Quantile” plots and the eye test (1/)</h2>
+<ul>
+<li>The qqplot is a visual way of assessing whether our data are normally distributed by comparing the quantiles of our z-transformed data to those expected under a “perfect” Normal distribution</li>
+<li>In a “quantile-quantile” (or QQ) plot <span class="math inline">\(x\)</span> is <span class="math inline">\(y\)</span>’s <span class="math inline">\(z\)</span>-transformed expectation, i.e.: <code>mutate(data, qval = rank(y)/(n+.5), x = qnorm(qval))</code>, and <span class="math inline">\(y\)</span> is the data.</li>
+</ul></section><section class="slide level2"><h2>“Quantile-Quantile” plots and the eye test (2/)</h2>
+<p>Recall the button pressing time example: a non-normal distribution</p>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>QQ-plots and the eye test (3/)</h2>
+<p>In R We can make a qq-plot with the <code>geom_qq()</code> function and add a line with <code>geom_qq_line()</code>, here we map our quantity of interest onto the attribute, sample.</p>
+<p>For this non-normal distribution, values fall far away from the QQ line.</p>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><ul>
+<li>The red line shows where values should fall if <span class="math inline">\(y\)</span> is normally distributed.</li>
+</ul></section><section class="slide level2"><h2>QQ-plots and the eye test (4/)</h2>
+<p>For this normally distributed data, values fall nicely on the QQ line</p>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><ul>
+<li>The red line shows where values should fall if <span class="math inline">\(y\)</span> is normally distributed.</li>
+</ul></section><section class="slide level2"><h2>QQ-plots and the eye test (5/)</h2>
+<ul>
+<li>Points seem to be pretty close to the predicted line, but both the small and large values are a bit smaller than we expect.</li>
+<li>Is this a big deal? Is this deviation surprising? To find out we need to get a sense of the variability we expect from a normal distribution.</li>
+</ul>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section><section class="slide level2"><h2>What normal distributions look like</h2>
+<ul>
+<li>I am always surprised about how easily I can convince myself that a sample does not come from a normal distribution.</li>
+<li>To give you a sense: run this about ten times for five quite different sample sizes to get a sense for the variability in how normal a sample from the normal distribution looks.</li>
+<li>This basically takes your sample size, <code>n</code>, and simulates random data from the standard normal by running this R code <code>tibble(x = rnorm(n = n, mean = 0, sd = 1))</code>, and then plotting the output:</li>
+</ul>
+<p><a href="https://brandvain.shinyapps.io/standardnormal/">https://brandvain.shinyapps.io/standardnormal/</a></p>
+</section><section class="slide level2"><h2>Violation of normality assumption (1/)</h2>
+<ul>
+<li>The Normal distribution is <em>very common</em> and the CLT is very useful</li>
+<li>There are a bunch of statistical approaches made for data with some form of normality assumption.<br>
+</li>
+<li>But sometimes data are <em>too far</em> from normal to be modeled as if they are normal</li>
+</ul></section><section class="slide level2"><h2>Violation of normality assumption (2/)</h2>
+<ul>
+<li>Or, details of a statistical distribution lead to breaking other assumptions of statistical tests. When this happens, we have a few options:</li>
+</ul>
+<ol type="1">
+<li>We can transform the data to meet our assumptions<br>
+</li>
+<li>Use non-parametric tests (don’t make assumptions about underlying distributions)</li>
+<li>We can permute and bootstrap! (sampling/simulation approaches)</li>
+<li>We can use/develop tools to model the data as they are actually distributed</li>
+</ol>
+
+<aside><div>
+<p>Of all of these, number 1 is the one I least recommend and yet the one that you will most likely find, so here we go</p>
+</div></aside></section><section class="slide level2"><h2>Rules for legit transformations (1/)</h2>
+<ol type="1">
+<li>There is nothing “natural” about linear scale, so there is nothing wrong about transforming data to a different scale.</li>
+<li>We should estimate &amp; test hypotheses on a <strong>meaningful scale</strong>.</li>
+<li>An <strong>appropriate transformation</strong> will often result in normal-ish distributed data.<br>
+</li>
+<li>
+<strong>Let biology guide you</strong>. Often you can think through what transformation is appropriate by thinking about a mathematical model describing your data. E.g., if values naturally grow exponentially, you should probably log-transform your data.</li>
+</ol></section><section class="slide level2"><h2>Rules for legit transformations (2/)</h2>
+<ol start="5" type="1">
+<li><p>Apply the same transformation to each individual.</p></li>
+<li><p>Transformed values must have one-to-one correspondence to original values - don’t square if some values are &gt;0 and some are &lt;0.</p></li>
+<li><p>Transformed values must have a monotonic relationship with the original values - e.g., larger values stay larger, so be careful with trigonometric transformations.</p></li>
+<li><p>Conduct your statistical tests AFTER you settle on the appropriate transformation.</p></li>
+<li><p><strong><em>Do not bias your results by losing data points when transforming the data.</em></strong></p></li>
+</ol></section><section class="slide level2"><h2>Common transformations</h2>
+<ul>
+<li>There are numerous common transformations that will make data normal, depending on their initial shape.</li>
+</ul>
+<table class="caption-top">
+<thead><tr class="header">
+<th>Name</th>
+<th>Formula</th>
+<th>What type of data?</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Log</td>
+<td><span class="math inline">\(Y'=\log_x(Y + \epsilon)\)</span></td>
+<td>Right skewed</td>
+</tr>
+<tr class="even">
+<td>Square-root</td>
+<td><span class="math inline">\(Y'=\sqrt{Y+1/2}\)</span></td>
+<td>Right skewed</td>
+</tr>
+<tr class="odd">
+<td>Reciprocal</td>
+<td><span class="math inline">\(Y'=1/Y\)</span></td>
+<td>Right skewed</td>
+</tr>
+<tr class="even">
+<td>Square</td>
+<td><span class="math inline">\(Y'=Y^2\)</span></td>
+<td>Left skewed</td>
+</tr>
+<tr class="odd">
+<td>Exponential</td>
+<td><span class="math inline">\(\displaystyle Y'=e^Y\)</span></td>
+<td>Left skewed</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>We saw an example in lab 10</li>
+</ul></section><section class="slide level2"><h2>Example: The log transformation (1/)</h2>
+<ul>
+<li>We have seen that the normal distribution arises when we add up a bunch of things.<br>
+</li>
+<li>If we multiply a bunch of things, we get an exponential distribution.</li>
+<li>Because adding logs is like multiplying untransformed data, a log transform makes exponential data look normal!</li>
+<li>Be careful when log-transforming!! All data with a value of zero or less will disappear. For this reason, we often use a <code>log1p</code> transform, which adds one to each number before logging them.</li>
+</ul></section><section class="slide level2"><h2>Example: The log transformation (2/)</h2>
+<ul>
+<li>Body weight in mammals</li>
+</ul>
+
+<img data-src="Normal3_files/figure-revealjs/logmam-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section><section class="slide level2 dark-theme center"><h2>Practice Problems</h2>
+</section><section class="slide level2"><h2>Problem 1: Notation</h2>
+<p>What is the correct representation for the 3% critical t-value for a sample with 14 degrees of freedom?</p>
+</section><section class="slide level2"><h2>Problem 2: Coconut attack</h2>
+<p>A four-year review at the Provincial Hospital in Alotau, Papua New Guinea (Barss 1984), found that about 1/2 of their hospital admissions were injuries due to falling coconuts. If coconuts weigh on average 3.2kg and the upper bound of the 95% confidence interval is 3.5kg what is the lower bound of this confidence interval? Assume a normal distribution of coconut weights.</p>
+</section><section class="slide level2"><h2>Problem 3: Using the Student’s t table</h2>
+<p>Using your table of critical t-values, what value of t corresponds to the location with 95% of the area under the curve to the left and 5% to the right when there are 18 degrees of freedom?</p>
+<p>1.330</p>
+<p>1.734</p>
+<p>2.101</p>
+<p>2.214</p>
+</section><section class="slide level2"><h2>Problem 4: Using the Student’s t table</h2>
+<p>Using your table of critical t-values, what values of t correspond to the ones that bound a central region containing 95% of the distribution when there are 18 degrees of freedom?</p>
+<ol type="1">
+<li><p>−2.101 to 2.101</p></li>
+<li><p>−1.734 to 1.734</p></li>
+<li><p>−1.051 to 1.051</p></li>
+<li><p>−0.867 to 0.867</p></li>
+</ol></section><section class="slide level2"><h2>Problem 5:</h2>
+<p>If the sample mean matches the hypothesized population mean, then the t-statistic and P-value of the test would be which of the following?</p>
+<ol type="1">
+<li><p>0, 1</p></li>
+<li><p>1, 0</p></li>
+<li><p>1, 1</p></li>
+<li><p>Cannot be determined, depends on the sample size.</p></li>
+</ol></section><section class="slide level2"><h2>Problem 6:</h2>
+<p>How many standard errors wide is a 95% confidence interval for a population mean, based on a sample of size 10?</p>
+</section><section class="slide level2"><h2>Problem 7:</h2>
+<p>If we have a 95% confidence interval of 20.68 &lt; μ &lt; 21.32 based on a sample of 18 values, what is the standard deviation of the sample?</p>
+</section><section class="slide level2"><h2>Problem 8:</h2>
+<p>Consider a situation in which Michael collects 12 frogs from a population that he thinks (based on published reports) has an average of 21 spots. His sample has a mean of 23 with a standard deviation of 3.1, however. Conduct a one-sample t-test. State the hypotheses, calculate df, t, and find a range for the P-value. What can you conclude?</p>
+</section><section class="slide level2"><h2>Problem 9: Swimming in syrup</h2>
+<p>It is unknown whether the increase in the friction of the body moving through the syrup (slowing the swimmer down) is compensated by the increased power of each stroke. Experiment: researchers filled one pool with water mixed with syrup and another pool with normal water. They had 18 swimmers swim laps in both pools in random order. Data: the relative speed of each swimmer in syrup (speed in the syrup pool divided by his or her speed in the water pool). If the syrup has no effect on swimming speed, then relative swim speed should have a mean of 1. I calculated the mean and sd for you: <span class="math inline">\(\bar{X}=1.011667\)</span>, <span class="math inline">\(s=0.04232229\)</span></p>
+<ol type="1">
+<li>Test the hypothesis that relative swim speed in syrup has a mean of 1.</li>
+<li>How uncertain are we about true relative swimming speed in syrup? Use the 99% confidence interval to find out.</li>
+<li>Quantify the effect size using Cohen’s d.&nbsp;</li>
+</ol></section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (1/)</h2>
+<p>Chen et al.&nbsp;(2011) wanted to test the idea that organisms move to higher elevation as the climate warms. To test this, they collected data from 31 species:</p>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (2/)</h2>
+
+<img data-src="Normal3_files/figure-revealjs/eleva1-1.png" width="384" class="r-stretch quarto-figure-center"><p class="caption">Change in the elevation of 31 species. Data from <span class="citation" data-cites="Chen2011">@Chen2011</span>.</p></section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (3/)</h2>
+<p><strong>Estimation</strong></p>
+<p>The first step is to summarize the data</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>elevationRangeShift <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">58.9</span>, <span class="fl">7.8</span>, <span class="fl">108.6</span>, <span class="fl">44.8</span>, <span class="fl">11.1</span>, <span class="fl">19.2</span>, <span class="fl">61.9</span>, <span class="fl">30.5</span>, <span class="fl">12.7</span>, <span class="fl">35.8</span>,</span>
+<span id="cb2-2"><a></a>    <span class="fl">7.4</span>, <span class="fl">39.3</span>, <span class="dv">24</span>, <span class="fl">62.1</span>, <span class="fl">24.3</span>, <span class="fl">55.3</span>, <span class="fl">32.7</span>, <span class="fl">65.3</span>, <span class="sc">-</span><span class="fl">19.3</span>, <span class="fl">7.6</span>, <span class="sc">-</span><span class="fl">5.2</span>, <span class="sc">-</span><span class="fl">2.1</span>, <span class="dv">31</span>, <span class="dv">69</span>,</span>
+<span id="cb2-3"><a></a>    <span class="fl">88.6</span>, <span class="fl">39.5</span>, <span class="fl">20.7</span>, <span class="dv">89</span>, <span class="dv">69</span>, <span class="fl">64.9</span>, <span class="fl">64.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">this_mean</th>
+<th style="text-align: right;">this_sd</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">39.329</td>
+<td style="text-align: right;">30.663</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<p>Ranges have shifted about 39.3 meters upwards - &gt; 1 SD change in elevation across species.</p>
+</div>
+</section><section class="slide level2"><h2>Has Climate Change Moved Species Uphill? (4/)</h2>
+<p><em>Evaluating assumptions</em></p>
+<ul>
+<li>Are data biased? I hope not, but it would depend on aspects of study design etc. For example, we might want to know if species had as much area to increase in elevation as to decrease etc…. How were species picked….</li>
+<li>Are data independent? Check out the data above. My sense is that they aren’t all independent. So much data is from the UK. What if there is something specific about low elevation regions in the UK? Anyways, I wouldn’t call this a reason to stop the analysis, but it is a good thing to consider.</li>
+<li>Is the mean a meaningful summary of the data? My sense is yes, but look for yourself!</li>
+<li>Are samples (or more particularly, the sampling distribution) normal? My sense is yes, but look for yourself! My sense is yes, but look for yourself!</li>
+<li>How? QQ-plot, histogram, density plot…</li>
+</ul></section><section class="slide level2"><h2>QQplot</h2>
+
+<img data-src="Normal3_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Hypothesis Testing</h2>
+<p>Let’s lay out the null and alternative hypotheses:</p>
+<p><span class="math inline">\(H_{0}:\)</span> On average organisms have not increased or decreased their elevation.</p>
+<p><span class="math inline">\(H_{A}:\)</span> On average organisms have increased or decreased their elevation.</p>
+<p>First let’s calculate <span class="math inline">\(t\)</span> and then use <code><a href="https://rdrr.io/r/stats/TDist.html">pt()</a></code> to find the probability and multiply by two.</p>
+</section><section class="slide level2"><h2>Hypothesis Testing</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>mu_0 <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># null hypothesis, zero change</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>range_shift_summary <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>    <span class="fu">mutate</span>(<span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>, <span class="at">se =</span> this_sd<span class="sc">/</span><span class="fu">sqrt</span>(n), <span class="at">t =</span> (this_mean <span class="sc">-</span> mu_0)<span class="sc">/</span>se, <span class="at">p_val =</span> <span class="dv">2</span> <span class="sc">*</span></span>
+<span id="cb3-5"><a></a>        <span class="fu">pt</span>(<span class="at">q =</span> <span class="fu">abs</span>(t), <span class="at">df =</span> df, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(df, t, p_val) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top">
+<thead><tr class="header">
+<th style="text-align: right;">df</th>
+<th style="text-align: right;">t</th>
+<th style="text-align: right;">p_val</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">7.1413</td>
+<td style="text-align: right;">0</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>A really small p-value, meaning that the null hypothesis would rarely generate such extreme data.</li>
+<li>Since p &lt; traditional <span class="math inline">\(\alpha\)</span> threshold we reject the <span class="math inline">\(H_{0}\)</span> and conclude that ranges have shifted upward.</li>
+<li>Note this doesn’t mean the null is wrong, it just means that we’re proceeding as if it is.</li>
+</ul></section><section class="slide level2"><h2>For future refence</h2>
+<ul>
+<li><p>Statistics for Biologists - <em>Nature</em> collection of articles highlighting important statistical issues that biologists should be aware of and provides practical advice to help them improve the rigor of their work.<a href="https://www.nature.com/collections/qghhqm">nature.com/collections/qghhqm</a></p></li>
+<li><p>Our course website! <a href="https://bbitarello.github.io/b215f2025/">https://bbitarello.github.io/b215f2025/</a></p></li>
+</ul>
 
 
 </section>

@@ -354,7 +354,9 @@ Bárbara D. Bitarello
 <p><span class="math display">\[ =  \bar{X} \pm t_{\alpha(2)} \times s / \sqrt{n}\]</span></p>
 <p>, where <span class="math inline">\(t_{\alpha(2)}\)</span> is the critical two-tailed t value for a specified <span class="math inline">\(\alpha\)</span> value.</p>
 <p>This makes sense because this should contain 95% of sample means estimated from a population.</p>
-</section><section class="slide level2"><h2>CI example: Elephant gestational period (1/)</h2>
+</section><section class="slide level2"><h2></h2>
+
+<img data-src="images/clipboard-3661136366.png" class="r-stretch"></section><section class="slide level2"><h2>CI example: Elephant gestational period (1/)</h2>
 <ul>
 <li>A sample of 5 pregnant elephants</li>
 <li>Five elephants that gave birth after 547, 551, 571, 567, 580 days pregnant.</li>
@@ -400,21 +402,6 @@ Bárbara D. Bitarello
 <img data-src="images/tdistrib.png" width="1027" class="r-stretch"></section><section class="slide level2"><h2>Elephant gestational period (7/)</h2>
 <p><span class="math inline">\(95\%\text{ CI } = 563.2 \pm (t_{\alpha(2),4} \times 6.2)\)</span></p>
 <p><span class="math display">\[ = 563.2 + (2.776445 \times 6.2)=580.41\]</span> <span class="math display">\[ = 563.2 - (2.776445 \times 6.2)=545.986\]</span> <span class="math display">\[545.99&lt;\mu&lt;580.41\]</span></p>
-</section><section class="slide level2"><h2>One sample t-test</h2>
-<p>The one-sample t-test compares the mean of a random sample from a normal population with the population mean proposed in a null hypothesis.</p>
-<p>Test statistic for one-sample t-test:</p>
-<p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
-<p><span class="math inline">\(\mu_{0}\)</span> os the hypothesized population parameter (aka the mean value stated in the <span class="math inline">\(H_{0}\)</span>).</p>
-</section><section class="slide level2"><h2>Back to the elephants (1/)</h2>
-<p>Assume we know that elephant gestational period is normally distributed with <span class="math inline">\(\mu=525\)</span> days. We already know that our 95% CI does not include that value, suggesting we will reject the null here through formal testing, but let’s do it anyway.</p>
-<p><span class="math inline">\(H_{0}\)</span>: This sample of elephants came from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
-<p><span class="math inline">\(H_{A}\)</span>: This sample of elephants did NOT from a population with <span class="math inline">\(\mu=525\)</span> days of gestation.</p>
-</section><section class="slide level2"><h2>Back to the elephants (2/)</h2>
-<p>Recall: <span class="math inline">\(n=5, \mu_{0}=525, \bar{Y}=562.2, s=13.86\)</span></p>
-<p><span class="math display">\[t=\frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}\]</span></p>
-<p><span class="math display">\[t=\frac{563.2-525}{13.86/\sqrt{5}}=6.16\]</span></p>
-<p>find critical value for <span class="math inline">\(t_{0.05(2),4}\)</span>: it’s 2.78</p>
-<p>Conclusion: we reject that null hypothesis that the population mean is <span class="math inline">\(525\)</span> days.</p>
 </section><section class="slide level2"><h2></h2>
 
 
