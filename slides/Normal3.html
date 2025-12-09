@@ -253,16 +253,16 @@ Bárbara D. Bitarello
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>elephants <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">547</span>, <span class="dv">551</span>, <span class="dv">571</span>, <span class="dv">567</span>, <span class="dv">580</span>)</span>
 <span id="cb1-2"><a></a><span class="fu">c</span>(<span class="fu">mean</span>(elephants), <span class="fu">sd</span>(elephants))</span>
-<span id="cb1-3"><a></a><span class="do">## [1] 563.200  13.864</span></span>
+<span id="cb1-3"><a></a><span class="do">## [1] 563.20000000  13.86362146</span></span>
 <span id="cb1-4"><a></a><span class="fu">t.test</span>(elephants, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">mu =</span> <span class="dv">525</span>)</span>
 <span id="cb1-5"><a></a><span class="do">## </span></span>
 <span id="cb1-6"><a></a><span class="do">##  One Sample t-test</span></span>
 <span id="cb1-7"><a></a><span class="do">## </span></span>
 <span id="cb1-8"><a></a><span class="do">## data:  elephants</span></span>
-<span id="cb1-9"><a></a><span class="do">## t = 6.16, df = 4, p-value = 0.0035</span></span>
+<span id="cb1-9"><a></a><span class="do">## t = 6.1612903, df = 4, p-value = 0.003522085</span></span>
 <span id="cb1-10"><a></a><span class="do">## alternative hypothesis: true mean is not equal to 525</span></span>
 <span id="cb1-11"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb1-12"><a></a><span class="do">##  545.99 580.41</span></span>
+<span id="cb1-12"><a></a><span class="do">##  545.9860403 580.4139597</span></span>
 <span id="cb1-13"><a></a><span class="do">## sample estimates:</span></span>
 <span id="cb1-14"><a></a><span class="do">## mean of x </span></span>
 <span id="cb1-15"><a></a><span class="do">##     563.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -312,17 +312,24 @@ Bárbara D. Bitarello
 <li>Give estimates of population parameters.</li>
 <li>Handle more complex models, like regression or ANOVA.</li>
 </ul>
+</div><div class="column">
 <p>Parametric Cons:</p>
 <ul>
 <li>Need assumptions such as normality and interval data.</li>
-<li>Extreme values can distort results; When the sample size is small, the normality assumption may be violated.</li>
+<li>Extreme values can distort results;</li>
+<li>When the sample size is small, the normality assumption may be violated.</li>
 </ul>
-</div><div class="column">
+</div></div>
+</section><section class="slide level2"><h2>Parametric vs Nonparametric tests (4/)</h2>
+<div class="columns">
+<div class="column">
 <p>Nonparametric Pros:</p>
 <ul>
 <li>Do not need normal distribution or homogeneity of variance.</li>
-<li>Less affected by extreme values; can be used with smaller sample sizes.</li>
+<li>Less affected by extreme values.</li>
+<li>Can be used with smaller sample sizes.</li>
 </ul>
+</div><div class="column">
 <p>Nonparametric Cons:</p>
 <ul>
 <li>Generally have less statistical power compared to parametric tests.</li>
@@ -448,14 +455,14 @@ Bárbara D. Bitarello
 </table>
 <ul>
 <li>We saw an example in lab 10</li>
-</ul></section><section class="slide level2"><h2>Example: The log transformation (1/)</h2>
+</ul></section><section class="slide level2"><h2>The log transformation (1/)</h2>
 <ul>
 <li>We have seen that the normal distribution arises when we add up a bunch of things.<br>
 </li>
 <li>If we multiply a bunch of things, we get an exponential distribution.</li>
 <li>Because adding logs is like multiplying untransformed data, a log transform makes exponential data look normal!</li>
 <li>Be careful when log-transforming!! All data with a value of zero or less will disappear. For this reason, we often use a <code>log1p</code> transform, which adds one to each number before logging them.</li>
-</ul></section><section class="slide level2"><h2>Example: The log transformation (2/)</h2>
+</ul></section><section class="slide level2"><h2>The log transformation (2/)</h2>
 <ul>
 <li>Body weight in mammals</li>
 </ul>
@@ -518,11 +525,13 @@ Bárbara D. Bitarello
 <th style="text-align: right;">n</th>
 <th style="text-align: right;">this_mean</th>
 <th style="text-align: right;">this_sd</th>
+<th style="text-align: right;">this_sem</th>
 </tr></thead>
 <tbody><tr class="odd">
 <td style="text-align: right;">31</td>
-<td style="text-align: right;">39.329</td>
-<td style="text-align: right;">30.663</td>
+<td style="text-align: right;">39.32903226</td>
+<td style="text-align: right;">30.66311784</td>
+<td style="text-align: right;">5.507258541</td>
 </tr></tbody>
 </table>
 </div>
@@ -562,8 +571,8 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody><tr class="odd">
 <td style="text-align: right;">30</td>
-<td style="text-align: right;">7.1413</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">7.141308505</td>
+<td style="text-align: right;">6.06e-08</td>
 </tr></tbody>
 </table>
 </div>

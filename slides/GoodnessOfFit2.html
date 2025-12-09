@@ -237,14 +237,14 @@ Bárbara D. Bitarello
 <p>Assuming events are independent the Poisson distribution, the Poisson describes the expected probability of <span class="math inline">\(X\)</span> of events (successes) in a block of time or space.</p>
 </div>
 </section><section class="slide level2"><h2>Poisson experiments (1/3)</h2>
-<p><font color="#C0532B"> Random Events in Time or Space</font></p>
+<p>Random Events in Time or Space</p>
 <ul>
 <li class="fragment"><p>The number of successes in the experiment can be <em>counted</em> (discrete).</p></li>
 <li class="fragment"><p>The <em>mean number of events</em> (successes) that occurs during a specific interval of time (or space) is known.</p></li>
 <li class="fragment"><p>Each outcome is <strong>independent</strong>.</p></li>
 <li class="fragment"><p>The probability that a success will occur is <em>proportional to the size of the interval</em>.</p></li>
 </ul></section><section class="slide level2"><h2>Poisson experiments (2/3)</h2>
-<p><font color="#C0532B"> Random Events in Time or Space</font></p>
+<p>Random Events in Time or Space</p>
 <div class="goal">
 <p>Example: Number of births per hour in a given hospital</p>
 </div>
@@ -288,7 +288,6 @@ Bárbara D. Bitarello
 <p>Parasites are a major force in human health, as well as evolution, ecology, and agronomy, animal husbandry.<br></p>
 </div><div class="column" style="width:60%;">
 <p>Shaw et al.&nbsp;asked if the distribution of parasites or across individual Shad fish was random, or if some have an exceptional parasite burden? Here are their data:</p>
-<p>. . .</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="font-size: 16px; margin-left: auto; margin-right: auto;">
@@ -449,13 +448,15 @@ Bárbara D. Bitarello
 <img data-src="GoodnessOfFit2_files/figure-revealjs/option1-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Note: the observed data does not include X &gt; 6 but they are possible and are thus shown here.</p></section><section class="slide level2"><h2>Option 2: Derived by formula 🐟</h2>
 <p><span class="math inline">\(P[X]=\frac{e^{-\lambda}\lambda^X}{X!}\)</span></p>
 <p><span class="math inline">\(e=2.718282\)</span></p>
-<p><span class="math inline">\(\lambda = \frac{tot.paras}{tot.fish}=21/238\)</span></p>
+<p><span class="math inline">\(\lambda = \frac{tot.paras}{tot.fish}=225/238\)</span></p>
 <p>Let’s try the first row:</p>
 <p><span class="math inline">\(X=0\)</span></p>
 <p><span class="math inline">\(P[0]=\frac{e^{-0.945}\times 0.945^0}{0!}\approx 0.388\)</span></p>
 <p><span class="math inline">\(\text{\# fish expected}=0.388\times 238=92.5\)</span></p>
 <p>Repeat for each row…</p>
 </section><section class="slide level2"><h2>Option 2: Derived by formula 🐟</h2>
+<div class="columns">
+<div class="column">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" style="margin-left: auto; margin-right: auto;">
@@ -518,6 +519,9 @@ Bárbara D. Bitarello
 </tbody>
 </table>
 </div>
+</div>
+</div><div class="column">
+<div class="cell">
 <div class="cell-output-display">
 <table class="caption-top">
 <thead><tr class="header">
@@ -531,6 +535,7 @@ Bárbara D. Bitarello
 </table>
 </div>
 </div>
+</div></div>
 </section><section class="slide level2"><h2>Proceed with testing?</h2>
 <div class="columns">
 <div class="column">
@@ -770,7 +775,7 @@ df = # categories - 1 - # params estimated</li>
 <p>If the variance greatly exceeds the mean events are clumped</p>
 <p>If the variance is much less than the mean events are dispersed.</p>
 
-<img data-src="GoodnessOfFit2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Goodness of fit: Key points (1/)</h2>
+<img data-src="GoodnessOfFit2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section class="slide level2"><h2>Goodness of fit: Key points (1/)</h2>
 <ul>
 <li class="fragment">A test of <span class="math inline">\(\chi^2\)</span> goodness of fit compares the frequency distribution of a discrete or categorical variable with the frequencies expected from a probability model.</li>
 <li class="fragment">The test can be applied to many distributions</li>
