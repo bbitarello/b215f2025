@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-19">
 <meta name="keywords" content="Goodness-of-fit tests">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -323,10 +329,10 @@ Bárbara D. Bitarello
 <p><span class="math inline">\(n_{total} = 1245\)</span> (just add up the births column)</p>
 <p><span class="math display">\[E[X_i] = n_{total} \times \text{expected propotion}_i\]</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>nhl <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.0794</span>, <span class="fl">0.0763</span>, <span class="fl">0.0872</span>, <span class="fl">0.0863</span>, <span class="fl">0.0895</span>, <span class="fl">0.0857</span>, <span class="fl">0.0876</span>,</span>
-<span id="cb1-3"><a></a>        <span class="fl">0.085</span>, <span class="fl">0.0854</span>, <span class="fl">0.0819</span>, <span class="fl">0.077</span>, <span class="fl">0.0787</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> expected.prop <span class="sc">*</span> <span class="fu">sum</span>(births), <span class="st">`</span><span class="at">expected %</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">100</span> <span class="sc">*</span> expected.prop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>nhl <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a aria-label="2"></a>    <span class="fu">mutate</span>(<span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.0794</span>, <span class="fl">0.0763</span>, <span class="fl">0.0872</span>, <span class="fl">0.0863</span>, <span class="fl">0.0895</span>, <span class="fl">0.0857</span>, <span class="fl">0.0876</span>,</span>
+<span id="cb1-3"><a aria-label="3"></a>        <span class="fl">0.085</span>, <span class="fl">0.0854</span>, <span class="fl">0.0819</span>, <span class="fl">0.077</span>, <span class="fl">0.0787</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a aria-label="4"></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> expected.prop <span class="sc">*</span> <span class="fu">sum</span>(births), <span class="st">`</span><span class="at">expected %</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">100</span> <span class="sc">*</span> expected.prop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div><div class="column">
@@ -515,8 +521,8 @@ Bárbara D. Bitarello
 </div></div>
 </section><section class="slide level2"><h2>Finding <span class="math inline">\(\chi^2\)</span> [2/2]</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>nhl <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>    <span class="fu">mutate</span>(<span class="at">sq_dev_over_expect =</span> (expected.n <span class="sc">-</span> births)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>nhl <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a aria-label="2"></a>    <span class="fu">mutate</span>(<span class="at">sq_dev_over_expect =</span> (expected.n <span class="sc">-</span> births)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
@@ -646,13 +652,13 @@ Bárbara D. Bitarello
 </div>
 <p>Now find <span class="math inline">\(\chi^2\)</span> by summing over all <span class="math inline">\(\frac{(\text{O}_i - \text{E}_i)^2}{\text{E}_i}\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>obs.chi2 <span class="ot">&lt;-</span> nhl <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev_over_expect))</span>
-<span id="cb3-3"><a></a>obs.chi2</span>
-<span id="cb3-4"><a></a><span class="do">## # A tibble: 1 × 1</span></span>
-<span id="cb3-5"><a></a><span class="do">##    chi2</span></span>
-<span id="cb3-6"><a></a><span class="do">##   &lt;dbl&gt;</span></span>
-<span id="cb3-7"><a></a><span class="do">## 1  44.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>obs.chi2 <span class="ot">&lt;-</span> nhl <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a aria-label="2"></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev_over_expect))</span>
+<span id="cb3-3"><a aria-label="3"></a>obs.chi2</span>
+<span id="cb3-4"><a aria-label="4"></a><span class="do">## # A tibble: 1 × 1</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="do">##    chi2</span></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="do">##   &lt;dbl&gt;</span></span>
+<span id="cb3-7"><a aria-label="7"></a><span class="do">## 1  44.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p><font size="10"> <span class="math inline">\(\chi^2 = 44.89\)</span></font></p>
@@ -942,9 +948,9 @@ How many data points can “wobble around” following initial estimation of you
 <p>Note: The critical value of a test statistic that marks the boundary of a specified area in the tail (or tails) of the sampling distribution under <span class="math inline">\(H_{0}\)</span>. For <span class="math inline">\(df=11\)</span> and <span class="math inline">\(\alpha=0.05\)</span>, the critical value here is 19.7.</p>
 <p>We can determine that <span class="math inline">\(10^{-6}&lt;P&lt;10^{-5}\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># find pval for chisq test without stats table</span></span>
-<span id="cb4-2"><a></a><span class="fu">pchisq</span>(<span class="at">q =</span> <span class="fl">44.89</span>, <span class="at">df =</span> <span class="dv">11</span>, <span class="at">lower.tail =</span> F)</span>
-<span id="cb4-3"><a></a><span class="do">## [1] 5.07e-06</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co"># find pval for chisq test without stats table</span></span>
+<span id="cb4-2"><a aria-label="2"></a><span class="fu">pchisq</span>(<span class="at">q =</span> <span class="fl">44.89</span>, <span class="at">df =</span> <span class="dv">11</span>, <span class="at">lower.tail =</span> F)</span>
+<span id="cb4-3"><a aria-label="3"></a><span class="do">## [1] 5.07e-06</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>P is very small. Data like these would rarely be generated under the null.</p>
@@ -978,11 +984,11 @@ How many data points can “wobble around” following initial estimation of you
 <p><span class="math inline">\(H_0\)</span>: Genotypes follow Mendelian expectations of 1:2:1.<br><span class="math inline">\(H_A\)</span>: Genotypes do not follow Mendelian expectations of 1:2:1.</p>
 <p><span class="math inline">\(df =\)</span> # categories - 1 - # params estimated <span class="math inline">\(= 3 - 1 - 0 = 2\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
-<span id="cb5-2"><a></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>))</span>
-<span id="cb5-3"><a></a>monkeyflowers <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
+<span id="cb5-2"><a aria-label="2"></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>))</span>
+<span id="cb5-3"><a aria-label="3"></a>monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a aria-label="4"></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a aria-label="5"></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead><tr class="header">
@@ -1012,13 +1018,13 @@ How many data points can “wobble around” following initial estimation of you
 </div>
 </section><section class="slide level2"><h2>Are these genotype frequencies unusual?</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
-<span id="cb6-2"><a></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> <span class="fu">sum</span>(observed) <span class="sc">*</span> expected.prop, <span class="at">sq_dev =</span> (expected.n <span class="sc">-</span> observed)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n) <span class="sc">|&gt;</span></span>
-<span id="cb6-4"><a></a>    <span class="fu">mutate</span>(<span class="at">sq_dev =</span> <span class="fu">round</span>(sq_dev, <span class="at">digits =</span> <span class="dv">3</span>))</span>
-<span id="cb6-5"><a></a>monkeyflowers <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
-<span id="cb6-7"><a></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>monkeyflowers <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">geno =</span> <span class="fu">c</span>(<span class="st">"GG"</span>, <span class="st">"GN"</span>, <span class="st">"NN"</span>), <span class="at">observed =</span> <span class="fu">c</span>(<span class="dv">48</span>, <span class="dv">37</span>, <span class="dv">4</span>), <span class="at">expected.prop =</span> <span class="fu">c</span>(<span class="fl">0.25</span>,</span>
+<span id="cb6-2"><a aria-label="2"></a>    <span class="fl">0.5</span>, <span class="fl">0.25</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="fu">mutate</span>(<span class="at">expected.n =</span> <span class="fu">sum</span>(observed) <span class="sc">*</span> expected.prop, <span class="at">sq_dev =</span> (expected.n <span class="sc">-</span> observed)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>expected.n) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a aria-label="4"></a>    <span class="fu">mutate</span>(<span class="at">sq_dev =</span> <span class="fu">round</span>(sq_dev, <span class="at">digits =</span> <span class="dv">3</span>))</span>
+<span id="cb6-5"><a aria-label="5"></a>monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a aria-label="6"></a>    <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-7"><a aria-label="7"></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <table class="table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead><tr class="header">
@@ -1056,12 +1062,12 @@ How many data points can “wobble around” following initial estimation of you
 </div>
 </section><section class="slide level2"><h2>Meiosis isn’t fair in monkey flowers</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>monkey_chi <span class="ot">&lt;-</span> monkeyflowers <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev)) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>    <span class="fu">pull</span>()</span>
-<span id="cb7-4"><a></a>monkey_p <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="at">q =</span> monkey_chi, <span class="at">df =</span> <span class="dv">2</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb7-5"><a></a>monkey_p</span>
-<span id="cb7-6"><a></a><span class="do">## [1] 1.01e-10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>monkey_chi <span class="ot">&lt;-</span> monkeyflowers <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a aria-label="2"></a>    <span class="fu">summarise</span>(<span class="at">chi2 =</span> <span class="fu">sum</span>(sq_dev)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a aria-label="3"></a>    <span class="fu">pull</span>()</span>
+<span id="cb7-4"><a aria-label="4"></a>monkey_p <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="at">q =</span> monkey_chi, <span class="at">df =</span> <span class="dv">2</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-5"><a aria-label="5"></a>monkey_p</span>
+<span id="cb7-6"><a aria-label="6"></a><span class="do">## [1] 1.01e-10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>We observe a <span class="math inline">\(\chi_{2}^2\)</span> value of 46, and a p-value of <span class="math inline">\(1.01 \times 10^{-10}\)</span>.</p>

@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-10-06">
 <meta name="keywords" content="Probability - Foundational Concepts">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -201,7 +207,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -395,15 +401,15 @@ Bárbara D. Bitarello
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>even_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb1-2"><a></a>odd_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb1-3"><a></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">even =</span> even_numbers, <span class="at">odd =</span> odd_numbers, <span class="at">all =</span> <span class="fu">sort</span>(<span class="fu">c</span>(even_numbers, odd_numbers)))</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(ggvenn)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggvenn</span>(l[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)], <span class="at">fill_color =</span> <span class="fu">asteroidcity1</span>(), <span class="at">show_elements =</span> <span class="cn">TRUE</span>, <span class="at">text_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Cannot be even AND odd"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Roboto Condensed"</span>,</span>
-<span id="cb1-8"><a></a>    <span class="at">size =</span> <span class="dv">20</span>))</span>
-<span id="cb1-9"><a></a>p1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>even_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a>odd_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">even =</span> even_numbers, <span class="at">odd =</span> odd_numbers, <span class="at">all =</span> <span class="fu">sort</span>(<span class="fu">c</span>(even_numbers, odd_numbers)))</span>
+<span id="cb1-4"><a aria-label="4"></a><span class="fu">library</span>(ggvenn)</span>
+<span id="cb1-5"><a aria-label="5"></a></span>
+<span id="cb1-6"><a aria-label="6"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggvenn</span>(l[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)], <span class="at">fill_color =</span> <span class="fu">asteroidcity1</span>(), <span class="at">show_elements =</span> <span class="cn">TRUE</span>, <span class="at">text_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb1-7"><a aria-label="7"></a>    <span class="fu">ggtitle</span>(<span class="st">"Cannot be even AND odd"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Roboto Condensed"</span>,</span>
+<span id="cb1-8"><a aria-label="8"></a>    <span class="at">size =</span> <span class="dv">20</span>))</span>
+<span id="cb1-9"><a aria-label="9"></a>p1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure><p><img data-src="Probability2_files/figure-revealjs/even_odd-1.png" width="960"></p>
@@ -429,11 +435,11 @@ Bárbara D. Bitarello
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>l2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">even =</span> even_numbers, <span class="at">prime =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>))</span>
-<span id="cb2-2"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggvenn</span>(l2, <span class="at">fill_color =</span> <span class="fu">asteroidcity1</span>(), <span class="at">show_elements =</span> <span class="cn">TRUE</span>, <span class="at">text_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb2-3"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Can be even AND prime"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Roboto Condensed"</span>,</span>
-<span id="cb2-4"><a></a>    <span class="at">size =</span> <span class="dv">19</span>))</span>
-<span id="cb2-5"><a></a>p2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>l2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">even =</span> even_numbers, <span class="at">prime =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>))</span>
+<span id="cb2-2"><a aria-label="2"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggvenn</span>(l2, <span class="at">fill_color =</span> <span class="fu">asteroidcity1</span>(), <span class="at">show_elements =</span> <span class="cn">TRUE</span>, <span class="at">text_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb2-3"><a aria-label="3"></a>    <span class="fu">ggtitle</span>(<span class="st">"Can be even AND prime"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Roboto Condensed"</span>,</span>
+<span id="cb2-4"><a aria-label="4"></a>    <span class="at">size =</span> <span class="dv">19</span>))</span>
+<span id="cb2-5"><a aria-label="5"></a>p2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure><p><img data-src="Probability2_files/figure-revealjs/even_prime-1.png" width="960"></p>
@@ -464,17 +470,17 @@ Bárbara D. Bitarello
 <p><span class="math inline">\(\sum{p[x]}=1\)</span></p>
 </div><div class="column" style="width:75%;">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>ns <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="fl">1e+06</span>)</span>
-<span id="cb3-2"><a></a><span class="fu">ggplot</span>(<span class="fu">tibble</span>(<span class="at">x =</span> ns), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="fu">banff</span>()[<span class="dv">7</span>], <span class="at">fill =</span> <span class="st">"#00a1b7"</span>,</span>
-<span id="cb3-3"><a></a>    <span class="at">bins =</span> <span class="dv">30</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
-<span id="cb3-4"><a></a>    <span class="at">x =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fl">1e+05</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"sum(P(x))==1"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>ns <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="fl">1e+06</span>)</span>
+<span id="cb3-2"><a aria-label="2"></a><span class="fu">ggplot</span>(<span class="fu">tibble</span>(<span class="at">x =</span> ns), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="fu">banff</span>()[<span class="dv">7</span>], <span class="at">fill =</span> <span class="st">"#00a1b7"</span>,</span>
+<span id="cb3-3"><a aria-label="3"></a>    <span class="at">bins =</span> <span class="dv">30</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
+<span id="cb3-4"><a aria-label="4"></a>    <span class="at">x =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fl">1e+05</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"sum(P(x))==1"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure><p><img data-src="Probability2_files/figure-revealjs/probdist-1.png" width="960"></p>
 </figure>
 </div>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># bb_theme()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co"># bb_theme()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div></div>
@@ -506,9 +512,9 @@ Bárbara D. Bitarello
 </div><div class="column" style="width:75%;">
 <p><img data-src="images/clipboard-419390973.png" width="374"></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="fu">tibble</span>(<span class="at">x =</span> ns), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">fill =</span> <span class="fu">banff</span>()[<span class="dv">5</span>], <span class="at">color =</span> <span class="fu">banff</span>()[<span class="dv">7</span>],</span>
-<span id="cb5-2"><a></a>    <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Density"</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fl">0.3</span>,</span>
-<span id="cb5-3"><a></a>    <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"integral(f(x)*dx, a, b)"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">ggplot</span>(<span class="fu">tibble</span>(<span class="at">x =</span> ns), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">fill =</span> <span class="fu">banff</span>()[<span class="dv">5</span>], <span class="at">color =</span> <span class="fu">banff</span>()[<span class="dv">7</span>],</span>
+<span id="cb5-2"><a aria-label="2"></a>    <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Density"</span>) <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">y =</span> <span class="fl">0.3</span>,</span>
+<span id="cb5-3"><a aria-label="3"></a>    <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"integral(f(x)*dx, a, b)"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div></div>
@@ -521,20 +527,20 @@ Bárbara D. Bitarello
 <li><p>We can think of a proportion as a realized sample from our probability distribution.</p></li>
 </ul></section><section id="proportion-outcome-of-a-die" class="slide level2"><h2>Proportion: Outcome of a Die 🎲</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>plot.one.dice.prob <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">outcome =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>), <span class="at">probability =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> probability, <span class="at">fill =</span> <span class="fu">factor</span>(outcome))) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,</span>
-<span id="cb6-3"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of a fair die"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
-<span id="cb6-5"><a></a>    <span class="fl">0.32</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">banff</span>()) <span class="sc">+</span></span>
-<span id="cb6-6"><a></a><span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb6-7"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">6</span>), <span class="at">NrRolls =</span> <span class="dv">6</span>)</span>
-<span id="cb6-8"><a></a></span>
-<span id="cb6-9"><a></a>one.roll <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Outcome, <span class="at">fill =</span> <span class="fu">factor</span>(Outcome))) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count)<span class="sc">/</span><span class="fu">sum</span>(count)),</span>
-<span id="cb6-10"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Proportions Observed"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of a fair die</span><span class="sc">\n</span><span class="st">(n = 6 trials)"</span>) <span class="sc">+</span></span>
-<span id="cb6-11"><a></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">banff</span>()) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="at">label =</span> <span class="st">"Observed proportion"</span>) <span class="sc">+</span></span>
-<span id="cb6-12"><a></a>    <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb6-13"><a></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb6-14"><a></a>plot.one.dice.prob <span class="sc">+</span> one.roll</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>plot.one.dice.prob <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">outcome =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>), <span class="at">probability =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a aria-label="2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> probability, <span class="at">fill =</span> <span class="fu">factor</span>(outcome))) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,</span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of a fair die"</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a aria-label="4"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
+<span id="cb6-5"><a aria-label="5"></a>    <span class="fl">0.32</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">banff</span>()) <span class="sc">+</span></span>
+<span id="cb6-6"><a aria-label="6"></a><span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb6-7"><a aria-label="7"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">DieRoll</span>(<span class="at">times =</span> <span class="dv">6</span>), <span class="at">NrRolls =</span> <span class="dv">6</span>)</span>
+<span id="cb6-8"><a aria-label="8"></a></span>
+<span id="cb6-9"><a aria-label="9"></a>one.roll <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Outcome, <span class="at">fill =</span> <span class="fu">factor</span>(Outcome))) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count)<span class="sc">/</span><span class="fu">sum</span>(count)),</span>
+<span id="cb6-10"><a aria-label="10"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Proportions Observed"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of a fair die</span><span class="sc">\n</span><span class="st">(n = 6 trials)"</span>) <span class="sc">+</span></span>
+<span id="cb6-11"><a aria-label="11"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">banff</span>()) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="at">label =</span> <span class="st">"Observed proportion"</span>) <span class="sc">+</span></span>
+<span id="cb6-12"><a aria-label="12"></a>    <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb6-13"><a aria-label="13"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb6-14"><a aria-label="14"></a>plot.one.dice.prob <span class="sc">+</span> one.roll</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Probability2_files/figure-revealjs/dice1-1.png" width="960" class="r-stretch"></section><section id="the-sampling-distribution" class="slide level2"><h2>The Sampling Distribution</h2>
@@ -579,30 +585,30 @@ Bárbara D. Bitarello
 <p>What is the probability the sum of two dice is between six and eight?</p>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>plot.two.dice.prob <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="cf">function</span>(X) {</span>
-<span id="cb7-2"><a></a>    X <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb7-3"><a></a>})))) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Outcome)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count)<span class="sc">/</span><span class="fu">sum</span>(count)), <span class="at">group =</span> <span class="dv">1</span>,</span>
-<span id="cb7-5"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span></span>
-<span id="cb7-6"><a></a>    <span class="fu">scale_x_discrete</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
-<span id="cb7-7"><a></a>    <span class="fl">0.2</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb7-8"><a></a>plot.two.dice.prob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>plot.two.dice.prob <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Outcome =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="cf">function</span>(X) {</span>
+<span id="cb7-2"><a aria-label="2"></a>    X <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb7-3"><a aria-label="3"></a>})))) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a aria-label="4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Outcome)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count)<span class="sc">/</span><span class="fu">sum</span>(count)), <span class="at">group =</span> <span class="dv">1</span>,</span>
+<span id="cb7-5"><a aria-label="5"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Probability Distribution"</span>, <span class="at">subtitle =</span> <span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span></span>
+<span id="cb7-6"><a aria-label="6"></a>    <span class="fu">scale_x_discrete</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
+<span id="cb7-7"><a aria-label="7"></a>    <span class="fl">0.2</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb7-8"><a aria-label="8"></a>plot.two.dice.prob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Probability2_files/figure-revealjs/dice4-1.png" width="960" class="r-stretch"></section><section id="example-1-cont." class="slide level2"><h2>Example 1 (cont.)</h2>
 <p><span class="math inline">\(P[6]+P[7]+P[8] - P[6 \text{ AND } 7 \text{ AND } 8]\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">data.frame</span>(<span class="at">outcome =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="st">"6:8"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>,</span>
-<span id="cb8-2"><a></a>    <span class="dv">4</span>, <span class="dv">5</span>, <span class="st">"6:8"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>)), <span class="at">prob =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span> <span class="sc">+</span> <span class="dv">6</span> <span class="sc">+</span> <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>)<span class="sc">/</span><span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-3"><a></a>    <span class="fu">mutate</span>(<span class="at">my.col =</span> (outcome <span class="sc">==</span> <span class="st">"6:8"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb8-4"><a></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> prob, <span class="at">fill =</span> my.col)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,</span>
-<span id="cb8-5"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
-<span id="cb8-6"><a></a>    <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,</span>
-<span id="cb8-7"><a></a>    <span class="st">"#006475"</span>)) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{</span>
-<span id="cb8-8"><a></a>    st</span>
-<span id="cb8-9"><a></a>} <span class="sc">~</span> <span class="sc">+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{</span>
-<span id="cb8-10"><a></a>    nd</span>
-<span id="cb8-11"><a></a>} <span class="sc">~</span> roll)) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a><span class="fu">data.frame</span>(<span class="at">outcome =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="st">"6:8"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>,</span>
+<span id="cb8-2"><a aria-label="2"></a>    <span class="dv">4</span>, <span class="dv">5</span>, <span class="st">"6:8"</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>)), <span class="at">prob =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span> <span class="sc">+</span> <span class="dv">6</span> <span class="sc">+</span> <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>)<span class="sc">/</span><span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a aria-label="3"></a>    <span class="fu">mutate</span>(<span class="at">my.col =</span> (outcome <span class="sc">==</span> <span class="st">"6:8"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a aria-label="4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> prob, <span class="at">fill =</span> my.col)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,</span>
+<span id="cb8-5"><a aria-label="5"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,</span>
+<span id="cb8-6"><a aria-label="6"></a>    <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,</span>
+<span id="cb8-7"><a aria-label="7"></a>    <span class="st">"#006475"</span>)) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{</span>
+<span id="cb8-8"><a aria-label="8"></a>    st</span>
+<span id="cb8-9"><a aria-label="9"></a>} <span class="sc">~</span> <span class="sc">+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{</span>
+<span id="cb8-10"><a aria-label="10"></a>    nd</span>
+<span id="cb8-11"><a aria-label="11"></a>} <span class="sc">~</span> roll)) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Probability2_files/figure-revealjs/dice6-1.png" width="960" class="r-stretch"></section><section id="example-2-probability-of-not" class="slide level2"><h2>Example 2: probability of NOT</h2>
@@ -612,19 +618,19 @@ Bárbara D. Bitarello
 <div class="fragment">
 <p>We know that <span class="math inline">\(\sum{P[X]}=1\)</span>, so <span class="math inline">\(P[\text{ not }X]=1-P[X]\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>dice7<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">outcome =</span>  <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"Not between 6 &amp; 8"</span>, <span class="st">"Between  6 &amp; 8"</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Not between 6 &amp; 8"</span>, <span class="st">"Between  6 &amp; 8"</span>)),<span class="at">prob    =</span>  <span class="fu">c</span>((<span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span><span class="sc">+</span><span class="dv">4</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">1</span>) , (<span class="dv">5</span> <span class="sc">+</span><span class="dv">6</span><span class="sc">+</span><span class="dv">5</span>) ) <span class="sc">/</span> <span class="dv">36</span>)</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>dice7 <span class="sc">|&gt;</span></span>
-<span id="cb9-4"><a></a>  <span class="fu">mutate</span>(<span class="at">my.col =</span> (outcome <span class="sc">==</span> <span class="st">"6:8"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> prob, <span class="at">fill =</span> outcome)) <span class="sc">+</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-7"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a></a>  <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span></span>
-<span id="cb9-9"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>)) <span class="sc">+</span></span>
-<span id="cb9-10"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits  =</span> <span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">7</span>))<span class="sc">+</span> </span>
-<span id="cb9-11"><a></a>  <span class="fu">bb_theme</span>()<span class="sc">+</span></span>
-<span id="cb9-12"><a></a>  <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{st}<span class="sc">~+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{nd}<span class="sc">~</span>roll))<span class="sc">+</span></span>
-<span id="cb9-13"><a></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>dice7<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">outcome =</span>  <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"Not between 6 &amp; 8"</span>, <span class="st">"Between  6 &amp; 8"</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Not between 6 &amp; 8"</span>, <span class="st">"Between  6 &amp; 8"</span>)),<span class="at">prob    =</span>  <span class="fu">c</span>((<span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span><span class="sc">+</span><span class="dv">4</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">1</span>) , (<span class="dv">5</span> <span class="sc">+</span><span class="dv">6</span><span class="sc">+</span><span class="dv">5</span>) ) <span class="sc">/</span> <span class="dv">36</span>)</span>
+<span id="cb9-2"><a aria-label="2"></a></span>
+<span id="cb9-3"><a aria-label="3"></a>dice7 <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a aria-label="4"></a>  <span class="fu">mutate</span>(<span class="at">my.col =</span> (outcome <span class="sc">==</span> <span class="st">"6:8"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a aria-label="5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> outcome, <span class="at">y =</span> prob, <span class="at">fill =</span> outcome)) <span class="sc">+</span></span>
+<span id="cb9-6"><a aria-label="6"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a aria-label="7"></a>  <span class="fu">ggtitle</span>(<span class="st">"Outcome of the sum of two fair dice"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a aria-label="8"></a>  <span class="fu">ylab</span>(<span class="st">"Expected probability"</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a aria-label="9"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>)) <span class="sc">+</span></span>
+<span id="cb9-10"><a aria-label="10"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits  =</span> <span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">7</span>))<span class="sc">+</span> </span>
+<span id="cb9-11"><a aria-label="11"></a>  <span class="fu">bb_theme</span>()<span class="sc">+</span></span>
+<span id="cb9-12"><a aria-label="12"></a>  <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{st}<span class="sc">~+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{nd}<span class="sc">~</span>roll))<span class="sc">+</span></span>
+<span id="cb9-13"><a aria-label="13"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
 <figure><p><img data-src="Probability2_files/figure-revealjs/dice7-1.png" width="960"></p>
@@ -640,43 +646,43 @@ Bárbara D. Bitarello
 <p>Subtract P[A &amp; B] to avoid double counting nonexclusive events</p>
 <p><span class="math inline">\(P[A \text{ or } B] = P[A] + P[B] - P[A \text{ and } B]\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>two.die.revisited <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb10-2"><a></a>  <span class="at">Outcome =</span>  <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>),</span>
-<span id="cb10-3"><a></a>  <span class="at">prob    =</span>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">mutate</span>(<span class="at">sixeight =</span> Outcome <span class="sc">&gt;</span><span class="dv">5</span> <span class="sc">&amp;</span> Outcome <span class="sc">&lt;</span><span class="dv">9</span>,</span>
-<span id="cb10-5"><a></a>         <span class="at">odd      =</span> Outcome <span class="sc">%%</span><span class="dv">2</span> <span class="sc">==</span><span class="dv">1</span>,</span>
-<span id="cb10-6"><a></a>         <span class="at">oddandsixeight =</span> sixeight <span class="sc">&amp;</span>  odd, </span>
-<span id="cb10-7"><a></a>         <span class="at">oddorsixeight =</span>  sixeight<span class="sc">|</span>odd)</span>
-<span id="cb10-8"><a></a></span>
-<span id="cb10-9"><a></a>dice.theme <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(two.die.revisited, <span class="fu">aes</span>(<span class="at">x =</span> Outcome, <span class="at">y =</span> prob)) <span class="sc">+</span></span>
-<span id="cb10-10"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>)<span class="sc">+</span></span>
-<span id="cb10-11"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits  =</span> <span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">2</span>))<span class="sc">+</span> </span>
-<span id="cb10-12"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb10-13"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span></span>
-<span id="cb10-14"><a></a> <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{st}<span class="sc">~+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{nd}<span class="sc">~</span>roll))</span>
-<span id="cb10-15"><a></a></span>
-<span id="cb10-16"><a></a></span>
-<span id="cb10-17"><a></a></span>
-<span id="cb10-18"><a></a>sixthrougheight <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
-<span id="cb10-19"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> sixeight),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb10-20"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>)) </span>
-<span id="cb10-21"><a></a></span>
-<span id="cb10-22"><a></a>odd <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
-<span id="cb10-23"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> odd),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb10-24"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>))<span class="sc">+</span> </span>
-<span id="cb10-25"><a></a>  <span class="fu">ylab</span>(<span class="st">"PLUS"</span>)</span>
-<span id="cb10-26"><a></a></span>
-<span id="cb10-27"><a></a>seven <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
-<span id="cb10-28"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> oddandsixeight),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb10-29"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#C0532B"</span>))<span class="sc">+</span> </span>
-<span id="cb10-30"><a></a>  <span class="fu">ylab</span>(<span class="st">"MINUS"</span>)</span>
-<span id="cb10-31"><a></a>tots <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
-<span id="cb10-32"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> oddorsixeight),</span>
-<span id="cb10-33"><a></a>           <span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>))<span class="sc">+</span> </span>
-<span id="cb10-34"><a></a>  <span class="fu">ylab</span>(<span class="st">"EQUALS"</span>)  </span>
-<span id="cb10-35"><a></a></span>
-<span id="cb10-36"><a></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb10-37"><a></a>sixthrougheight<span class="sc">+</span> odd<span class="sc">+</span> seven<span class="sc">+</span> tots</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a>two.die.revisited <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb10-2"><a aria-label="2"></a>  <span class="at">Outcome =</span>  <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>),</span>
+<span id="cb10-3"><a aria-label="3"></a>  <span class="at">prob    =</span>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a aria-label="4"></a>  <span class="fu">mutate</span>(<span class="at">sixeight =</span> Outcome <span class="sc">&gt;</span><span class="dv">5</span> <span class="sc">&amp;</span> Outcome <span class="sc">&lt;</span><span class="dv">9</span>,</span>
+<span id="cb10-5"><a aria-label="5"></a>         <span class="at">odd      =</span> Outcome <span class="sc">%%</span><span class="dv">2</span> <span class="sc">==</span><span class="dv">1</span>,</span>
+<span id="cb10-6"><a aria-label="6"></a>         <span class="at">oddandsixeight =</span> sixeight <span class="sc">&amp;</span>  odd, </span>
+<span id="cb10-7"><a aria-label="7"></a>         <span class="at">oddorsixeight =</span>  sixeight<span class="sc">|</span>odd)</span>
+<span id="cb10-8"><a aria-label="8"></a></span>
+<span id="cb10-9"><a aria-label="9"></a>dice.theme <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(two.die.revisited, <span class="fu">aes</span>(<span class="at">x =</span> Outcome, <span class="at">y =</span> prob)) <span class="sc">+</span></span>
+<span id="cb10-10"><a aria-label="10"></a>  <span class="fu">ylab</span>(<span class="st">""</span>)<span class="sc">+</span></span>
+<span id="cb10-11"><a aria-label="11"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits  =</span> <span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">2</span>))<span class="sc">+</span> </span>
+<span id="cb10-12"><a aria-label="12"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb10-13"><a aria-label="13"></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span></span>
+<span id="cb10-14"><a aria-label="14"></a> <span class="fu">xlab</span>(<span class="fu">bquote</span>(<span class="dv">1</span><span class="sc">^</span>{st}<span class="sc">~+</span><span class="er">~</span><span class="dv">2</span><span class="sc">^</span>{nd}<span class="sc">~</span>roll))</span>
+<span id="cb10-15"><a aria-label="15"></a></span>
+<span id="cb10-16"><a aria-label="16"></a></span>
+<span id="cb10-17"><a aria-label="17"></a></span>
+<span id="cb10-18"><a aria-label="18"></a>sixthrougheight <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
+<span id="cb10-19"><a aria-label="19"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> sixeight),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb10-20"><a aria-label="20"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>)) </span>
+<span id="cb10-21"><a aria-label="21"></a></span>
+<span id="cb10-22"><a aria-label="22"></a>odd <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
+<span id="cb10-23"><a aria-label="23"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> odd),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb10-24"><a aria-label="24"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>))<span class="sc">+</span> </span>
+<span id="cb10-25"><a aria-label="25"></a>  <span class="fu">ylab</span>(<span class="st">"PLUS"</span>)</span>
+<span id="cb10-26"><a aria-label="26"></a></span>
+<span id="cb10-27"><a aria-label="27"></a>seven <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
+<span id="cb10-28"><a aria-label="28"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> oddandsixeight),<span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb10-29"><a aria-label="29"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#C0532B"</span>))<span class="sc">+</span> </span>
+<span id="cb10-30"><a aria-label="30"></a>  <span class="fu">ylab</span>(<span class="st">"MINUS"</span>)</span>
+<span id="cb10-31"><a aria-label="31"></a>tots <span class="ot">&lt;-</span> dice.theme <span class="sc">+</span>  </span>
+<span id="cb10-32"><a aria-label="32"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> oddorsixeight),</span>
+<span id="cb10-33"><a aria-label="33"></a>           <span class="at">stat =</span> <span class="st">"identity"</span>,<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>,<span class="st">"#006475"</span>))<span class="sc">+</span> </span>
+<span id="cb10-34"><a aria-label="34"></a>  <span class="fu">ylab</span>(<span class="st">"EQUALS"</span>)  </span>
+<span id="cb10-35"><a aria-label="35"></a></span>
+<span id="cb10-36"><a aria-label="36"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb10-37"><a aria-label="37"></a>sixthrougheight<span class="sc">+</span> odd<span class="sc">+</span> seven<span class="sc">+</span> tots</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Probability2_files/figure-revealjs/dice-again-1.png" width="960" class="r-stretch"></section><section id="thats-all-for-today" class="slide level2"><h2>That’s all for today</h2>

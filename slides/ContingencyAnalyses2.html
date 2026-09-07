@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-26">
 <meta name="keywords" content="2x2 chi-2, Fisher">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -392,25 +398,25 @@ Bárbara D. Bitarello
 </section><section class="slide level2"><h2>In R</h2>
 <p>The easiest way to calculate OR and CIs in R:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>toxoplasma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">61</span>, <span class="dv">16</span>, <span class="dv">124</span>, <span class="dv">169</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb1-2"><a></a><span class="fu">colnames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"inf"</span>, <span class="st">"not-inf"</span>)</span>
-<span id="cb1-3"><a></a><span class="fu">rownames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"crash"</span>, <span class="st">"no_crash"</span>)</span>
-<span id="cb1-4"><a></a>toxoplasma</span>
-<span id="cb1-5"><a></a><span class="do">##          inf not-inf</span></span>
-<span id="cb1-6"><a></a><span class="do">## crash     61     124</span></span>
-<span id="cb1-7"><a></a><span class="do">## no_crash  16     169</span></span>
-<span id="cb1-8"><a></a><span class="fu">fisher.test</span>(toxoplasma, <span class="at">conf.int =</span> T)</span>
-<span id="cb1-9"><a></a><span class="do">## </span></span>
-<span id="cb1-10"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
-<span id="cb1-11"><a></a><span class="do">## </span></span>
-<span id="cb1-12"><a></a><span class="do">## data:  toxoplasma</span></span>
-<span id="cb1-13"><a></a><span class="do">## p-value = 8e-09</span></span>
-<span id="cb1-14"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
-<span id="cb1-15"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb1-16"><a></a><span class="do">##   2.79 10.09</span></span>
-<span id="cb1-17"><a></a><span class="do">## sample estimates:</span></span>
-<span id="cb1-18"><a></a><span class="do">## odds ratio </span></span>
-<span id="cb1-19"><a></a><span class="do">##       5.17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>toxoplasma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">61</span>, <span class="dv">16</span>, <span class="dv">124</span>, <span class="dv">169</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a><span class="fu">colnames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"inf"</span>, <span class="st">"not-inf"</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a><span class="fu">rownames</span>(toxoplasma) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"crash"</span>, <span class="st">"no_crash"</span>)</span>
+<span id="cb1-4"><a aria-label="4"></a>toxoplasma</span>
+<span id="cb1-5"><a aria-label="5"></a><span class="do">##          inf not-inf</span></span>
+<span id="cb1-6"><a aria-label="6"></a><span class="do">## crash     61     124</span></span>
+<span id="cb1-7"><a aria-label="7"></a><span class="do">## no_crash  16     169</span></span>
+<span id="cb1-8"><a aria-label="8"></a><span class="fu">fisher.test</span>(toxoplasma, <span class="at">conf.int =</span> T)</span>
+<span id="cb1-9"><a aria-label="9"></a><span class="do">## </span></span>
+<span id="cb1-10"><a aria-label="10"></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb1-11"><a aria-label="11"></a><span class="do">## </span></span>
+<span id="cb1-12"><a aria-label="12"></a><span class="do">## data:  toxoplasma</span></span>
+<span id="cb1-13"><a aria-label="13"></a><span class="do">## p-value = 8e-09</span></span>
+<span id="cb1-14"><a aria-label="14"></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb1-15"><a aria-label="15"></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb1-16"><a aria-label="16"></a><span class="do">##   2.79 10.09</span></span>
+<span id="cb1-17"><a aria-label="17"></a><span class="do">## sample estimates:</span></span>
+<span id="cb1-18"><a aria-label="18"></a><span class="do">## odds ratio </span></span>
+<span id="cb1-19"><a aria-label="19"></a><span class="do">##       5.17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 
@@ -471,8 +477,8 @@ Bárbara D. Bitarello
 </h2>
 <p>Observations (contingency table)</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">table</span>(birds<span class="sc">$</span><span class="st">`</span><span class="at">Last egg</span><span class="st">`</span>, birds<span class="sc">$</span><span class="st">`</span><span class="at">Habitat quality</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="fu">table</span>(birds<span class="sc">$</span><span class="st">`</span><span class="at">Last egg</span><span class="st">`</span>, birds<span class="sc">$</span><span class="st">`</span><span class="at">Habitat quality</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a aria-label="2"></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <table class="caption-top">
 <thead><tr class="header">
@@ -727,19 +733,19 @@ Bárbara D. Bitarello
 </div>
 <p><span class="math inline">\(OR=(1*21)/(53*19)=0.0209\)</span></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># OR in this function is calculated a bit differently, hence the difference.</span></span>
-<span id="cb3-2"><a></a><span class="fu">fisher.test</span>(tab2)</span>
-<span id="cb3-3"><a></a><span class="do">## </span></span>
-<span id="cb3-4"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
-<span id="cb3-5"><a></a><span class="do">## </span></span>
-<span id="cb3-6"><a></a><span class="do">## data:  tab2</span></span>
-<span id="cb3-7"><a></a><span class="do">## p-value = 5e-08</span></span>
-<span id="cb3-8"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
-<span id="cb3-9"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb3-10"><a></a><span class="do">##  0.000499 0.153059</span></span>
-<span id="cb3-11"><a></a><span class="do">## sample estimates:</span></span>
-<span id="cb3-12"><a></a><span class="do">## odds ratio </span></span>
-<span id="cb3-13"><a></a><span class="do">##     0.0217</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="co"># OR in this function is calculated a bit differently, hence the difference.</span></span>
+<span id="cb3-2"><a aria-label="2"></a><span class="fu">fisher.test</span>(tab2)</span>
+<span id="cb3-3"><a aria-label="3"></a><span class="do">## </span></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="do">## </span></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="do">## data:  tab2</span></span>
+<span id="cb3-7"><a aria-label="7"></a><span class="do">## p-value = 5e-08</span></span>
+<span id="cb3-8"><a aria-label="8"></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb3-9"><a aria-label="9"></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb3-10"><a aria-label="10"></a><span class="do">##  0.000499 0.153059</span></span>
+<span id="cb3-11"><a aria-label="11"></a><span class="do">## sample estimates:</span></span>
+<span id="cb3-12"><a aria-label="12"></a><span class="do">## odds ratio </span></span>
+<span id="cb3-13"><a aria-label="13"></a><span class="do">##     0.0217</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>OR 95% CI: <span class="math inline">\(0.0005 &lt;OR &lt; 0.153\)</span>, reject the null.</p>
@@ -863,18 +869,18 @@ Bárbara D. Bitarello
 <p>The test statistic is calculated based on the hypergeometric distribution (which we won’t go into), which gives the <em>probability of observing the given contingency table under the assumption of independence</em>.</p>
 </section><section class="slide level2"><h2>Fisher’s test in R</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">fisher.test</span>(spider.spread)</span>
-<span id="cb5-2"><a></a><span class="do">## </span></span>
-<span id="cb5-3"><a></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
-<span id="cb5-4"><a></a><span class="do">## </span></span>
-<span id="cb5-5"><a></a><span class="do">## data:  spider.spread</span></span>
-<span id="cb5-6"><a></a><span class="do">## p-value = 6e-04</span></span>
-<span id="cb5-7"><a></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
-<span id="cb5-8"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb5-9"><a></a><span class="do">##  0.000482 0.329721</span></span>
-<span id="cb5-10"><a></a><span class="do">## sample estimates:</span></span>
-<span id="cb5-11"><a></a><span class="do">## odds ratio </span></span>
-<span id="cb5-12"><a></a><span class="do">##     0.0279</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">fisher.test</span>(spider.spread)</span>
+<span id="cb5-2"><a aria-label="2"></a><span class="do">## </span></span>
+<span id="cb5-3"><a aria-label="3"></a><span class="do">##  Fisher's Exact Test for Count Data</span></span>
+<span id="cb5-4"><a aria-label="4"></a><span class="do">## </span></span>
+<span id="cb5-5"><a aria-label="5"></a><span class="do">## data:  spider.spread</span></span>
+<span id="cb5-6"><a aria-label="6"></a><span class="do">## p-value = 6e-04</span></span>
+<span id="cb5-7"><a aria-label="7"></a><span class="do">## alternative hypothesis: true odds ratio is not equal to 1</span></span>
+<span id="cb5-8"><a aria-label="8"></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb5-9"><a aria-label="9"></a><span class="do">##  0.000482 0.329721</span></span>
+<span id="cb5-10"><a aria-label="10"></a><span class="do">## sample estimates:</span></span>
+<span id="cb5-11"><a aria-label="11"></a><span class="do">## odds ratio </span></span>
+<span id="cb5-12"><a aria-label="12"></a><span class="do">##     0.0279</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
@@ -1084,8 +1090,8 @@ Bárbara D. Bitarello
 <p><br><br><br><br><br><br><br><br><br></p>
 <p>By doing this</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>disaggregated.spider <span class="ot">&lt;-</span> spider <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a></a>    <span class="fu">uncount</span>(<span class="at">weights =</span> observed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>disaggregated.spider <span class="ot">&lt;-</span> spider <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a aria-label="2"></a>    <span class="fu">uncount</span>(<span class="at">weights =</span> observed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section><section class="slide level2"><h2>Chi-squared vs Fisher’s exact test</h2>

@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-17">
 <meta name="keywords" content="Central tendency and spread">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -349,13 +355,13 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
-<span id="cb1-3"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-4"><a></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
-<span id="cb1-5"><a></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
-<span id="cb1-6"><a></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a aria-label="2"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
+<span id="cb1-3"><a aria-label="3"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-4"><a aria-label="4"></a>        <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species,</span>
+<span id="cb1-5"><a aria-label="5"></a>    <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.5</span>,</span>
+<span id="cb1-6"><a aria-label="6"></a>    <span class="fl">2.5</span>, <span class="fl">0.5</span>)) <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> wesanderson<span class="sc">::</span><span class="fu">wes_palette</span>(<span class="st">"AsteroidCity1"</span>)) <span class="sc">+</span></span>
+<span id="cb1-7"><a aria-label="7"></a>    <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>
@@ -377,25 +383,25 @@ Bárbara D. Bitarello
 <p>Range of weight of 46 chicks at 20 days since birth</p>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
-<span id="cb2-2"><a></a>chick20 <span class="ot">&lt;-</span> ChickWeight[ChickWeight<span class="sc">$</span>Time <span class="sc">==</span> <span class="dv">20</span>, ]<span class="sc">$</span>weight</span>
-<span id="cb2-3"><a></a>chick20</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="fu">data</span>(<span class="st">"ChickWeight"</span>)</span>
+<span id="cb2-2"><a aria-label="2"></a>chick20 <span class="ot">&lt;-</span> ChickWeight[ChickWeight<span class="sc">$</span>Time <span class="sc">==</span> <span class="dv">20</span>, ]<span class="sc">$</span>weight</span>
+<span id="cb2-3"><a aria-label="3"></a>chick20</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Max and Min in this dataset at time 20:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">summary</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    76.0   161.0   204.0   209.7   259.0   361.0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># or</span></span>
-<span id="cb5-2"><a></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="co"># or</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="fu">c</span>(<span class="fu">min</span>(chick20), <span class="fu">max</span>(chick20))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1]  76 361</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># commonly the diff between them is shown</span></span>
-<span id="cb7-2"><a></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a><span class="co"># commonly the diff between them is shown</span></span>
+<span id="cb7-2"><a aria-label="2"></a><span class="fu">max</span>(chick20) <span class="sc">-</span> <span class="fu">min</span>(chick20)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 285</code></pre>
 </div>

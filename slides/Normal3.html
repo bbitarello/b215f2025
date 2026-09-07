@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-12-08">
 <meta name="keywords" content="t-test, qq-plots, wrap-up">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -202,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -251,21 +257,21 @@ Bárbara D. Bitarello
 <p>Conclusion: we reject that null hypothesis that the population mean is <span class="math inline">\(525\)</span> days.</p>
 </section><section class="slide level2"><h2>In R</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>elephants <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">547</span>, <span class="dv">551</span>, <span class="dv">571</span>, <span class="dv">567</span>, <span class="dv">580</span>)</span>
-<span id="cb1-2"><a></a><span class="fu">c</span>(<span class="fu">mean</span>(elephants), <span class="fu">sd</span>(elephants))</span>
-<span id="cb1-3"><a></a><span class="do">## [1] 563.20000000  13.86362146</span></span>
-<span id="cb1-4"><a></a><span class="fu">t.test</span>(elephants, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">mu =</span> <span class="dv">525</span>)</span>
-<span id="cb1-5"><a></a><span class="do">## </span></span>
-<span id="cb1-6"><a></a><span class="do">##  One Sample t-test</span></span>
-<span id="cb1-7"><a></a><span class="do">## </span></span>
-<span id="cb1-8"><a></a><span class="do">## data:  elephants</span></span>
-<span id="cb1-9"><a></a><span class="do">## t = 6.1612903, df = 4, p-value = 0.003522085</span></span>
-<span id="cb1-10"><a></a><span class="do">## alternative hypothesis: true mean is not equal to 525</span></span>
-<span id="cb1-11"><a></a><span class="do">## 95 percent confidence interval:</span></span>
-<span id="cb1-12"><a></a><span class="do">##  545.9860403 580.4139597</span></span>
-<span id="cb1-13"><a></a><span class="do">## sample estimates:</span></span>
-<span id="cb1-14"><a></a><span class="do">## mean of x </span></span>
-<span id="cb1-15"><a></a><span class="do">##     563.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>elephants <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">547</span>, <span class="dv">551</span>, <span class="dv">571</span>, <span class="dv">567</span>, <span class="dv">580</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a><span class="fu">c</span>(<span class="fu">mean</span>(elephants), <span class="fu">sd</span>(elephants))</span>
+<span id="cb1-3"><a aria-label="3"></a><span class="do">## [1] 563.20000000  13.86362146</span></span>
+<span id="cb1-4"><a aria-label="4"></a><span class="fu">t.test</span>(elephants, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">mu =</span> <span class="dv">525</span>)</span>
+<span id="cb1-5"><a aria-label="5"></a><span class="do">## </span></span>
+<span id="cb1-6"><a aria-label="6"></a><span class="do">##  One Sample t-test</span></span>
+<span id="cb1-7"><a aria-label="7"></a><span class="do">## </span></span>
+<span id="cb1-8"><a aria-label="8"></a><span class="do">## data:  elephants</span></span>
+<span id="cb1-9"><a aria-label="9"></a><span class="do">## t = 6.1612903, df = 4, p-value = 0.003522085</span></span>
+<span id="cb1-10"><a aria-label="10"></a><span class="do">## alternative hypothesis: true mean is not equal to 525</span></span>
+<span id="cb1-11"><a aria-label="11"></a><span class="do">## 95 percent confidence interval:</span></span>
+<span id="cb1-12"><a aria-label="12"></a><span class="do">##  545.9860403 580.4139597</span></span>
+<span id="cb1-13"><a aria-label="13"></a><span class="do">## sample estimates:</span></span>
+<span id="cb1-14"><a aria-label="14"></a><span class="do">## mean of x </span></span>
+<span id="cb1-15"><a aria-label="15"></a><span class="do">##     563.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section class="slide level2"><h2>Assumptions of the One-sample t-test</h2>
 <ul>
@@ -512,9 +518,9 @@ Bárbara D. Bitarello
 <p><strong>Estimation</strong></p>
 <p>The first step is to summarize the data</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>elevationRangeShift <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">58.9</span>, <span class="fl">7.8</span>, <span class="fl">108.6</span>, <span class="fl">44.8</span>, <span class="fl">11.1</span>, <span class="fl">19.2</span>, <span class="fl">61.9</span>, <span class="fl">30.5</span>, <span class="fl">12.7</span>, <span class="fl">35.8</span>,</span>
-<span id="cb2-2"><a></a>    <span class="fl">7.4</span>, <span class="fl">39.3</span>, <span class="dv">24</span>, <span class="fl">62.1</span>, <span class="fl">24.3</span>, <span class="fl">55.3</span>, <span class="fl">32.7</span>, <span class="fl">65.3</span>, <span class="sc">-</span><span class="fl">19.3</span>, <span class="fl">7.6</span>, <span class="sc">-</span><span class="fl">5.2</span>, <span class="sc">-</span><span class="fl">2.1</span>, <span class="dv">31</span>, <span class="dv">69</span>,</span>
-<span id="cb2-3"><a></a>    <span class="fl">88.6</span>, <span class="fl">39.5</span>, <span class="fl">20.7</span>, <span class="dv">89</span>, <span class="dv">69</span>, <span class="fl">64.9</span>, <span class="fl">64.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>elevationRangeShift <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">58.9</span>, <span class="fl">7.8</span>, <span class="fl">108.6</span>, <span class="fl">44.8</span>, <span class="fl">11.1</span>, <span class="fl">19.2</span>, <span class="fl">61.9</span>, <span class="fl">30.5</span>, <span class="fl">12.7</span>, <span class="fl">35.8</span>,</span>
+<span id="cb2-2"><a aria-label="2"></a>    <span class="fl">7.4</span>, <span class="fl">39.3</span>, <span class="dv">24</span>, <span class="fl">62.1</span>, <span class="fl">24.3</span>, <span class="fl">55.3</span>, <span class="fl">32.7</span>, <span class="fl">65.3</span>, <span class="sc">-</span><span class="fl">19.3</span>, <span class="fl">7.6</span>, <span class="sc">-</span><span class="fl">5.2</span>, <span class="sc">-</span><span class="fl">2.1</span>, <span class="dv">31</span>, <span class="dv">69</span>,</span>
+<span id="cb2-3"><a aria-label="3"></a>    <span class="fl">88.6</span>, <span class="fl">39.5</span>, <span class="fl">20.7</span>, <span class="dv">89</span>, <span class="dv">69</span>, <span class="fl">64.9</span>, <span class="fl">64.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -554,13 +560,13 @@ Bárbara D. Bitarello
 <p>First let’s calculate <span class="math inline">\(t\)</span> and then use <code><a href="https://rdrr.io/r/stats/TDist.html">pt()</a></code> to find the probability and multiply by two.</p>
 </section><section class="slide level2"><h2>Hypothesis Testing</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>mu_0 <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># null hypothesis, zero change</span></span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>range_shift_summary <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a></a>    <span class="fu">mutate</span>(<span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>, <span class="at">se =</span> this_sd<span class="sc">/</span><span class="fu">sqrt</span>(n), <span class="at">t =</span> (this_mean <span class="sc">-</span> mu_0)<span class="sc">/</span>se, <span class="at">p_val =</span> <span class="dv">2</span> <span class="sc">*</span></span>
-<span id="cb3-5"><a></a>        <span class="fu">pt</span>(<span class="at">q =</span> <span class="fu">abs</span>(t), <span class="at">df =</span> df, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(df, t, p_val) <span class="sc">|&gt;</span></span>
-<span id="cb3-7"><a></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>mu_0 <span class="ot">&lt;-</span> <span class="dv">0</span>  <span class="co"># null hypothesis, zero change</span></span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>range_shift_summary <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a aria-label="4"></a>    <span class="fu">mutate</span>(<span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>, <span class="at">se =</span> this_sd<span class="sc">/</span><span class="fu">sqrt</span>(n), <span class="at">t =</span> (this_mean <span class="sc">-</span> mu_0)<span class="sc">/</span>se, <span class="at">p_val =</span> <span class="dv">2</span> <span class="sc">*</span></span>
+<span id="cb3-5"><a aria-label="5"></a>        <span class="fu">pt</span>(<span class="at">q =</span> <span class="fu">abs</span>(t), <span class="at">df =</span> df, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a aria-label="6"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(df, t, p_val) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a aria-label="7"></a>    <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <thead><tr class="header">

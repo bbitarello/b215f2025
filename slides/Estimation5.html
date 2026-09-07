@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-11-05">
 <meta name="keywords" content="Confidence Intervals &amp; Pseudoreplication">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -202,7 +208,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -269,16 +275,17 @@ Bárbara D. Bitarello
 </blockquote>
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>James Scott, <em>Data Science in R: a gentle introduction</em></p></li></ol></aside></section><section id="but-not-all-is-lost" class="slide level2"><h2>But not all is lost!</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
 <p>Even if you can’t repeatedly go to the population and sample over and over again</p>
-</div><div class="column" style="width:80%;">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="https://bookdown.org/jgscott/DSGI/the-bootstrap.html"><img data-src="images/clipboard-538087364.png" alt="Figure 9.2: A stylized depiction of a bootstrap sampling distribution of an estimator." width="550"></a></p>
 <figcaption>From: Data Science in R, a gentle introduction, Fig. 9.2</figcaption></figure>
 </div>
-</div></div>
+</section><section id="but-not-all-is-lost-1" class="slide level2"><h2>But not all is lost!</h2>
 <p><strong>How?</strong> By pretending that the sample itself represents the population, which allows one to approximate the effect of sampling variability by resampling (with replacementt) from the original sample. This is “bootstrap resampling” or, simply, <em>“bootstrapping”</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://bookdown.org/jgscott/DSGI/the-bootstrap.html"><img data-src="images/clipboard-538087364.png" alt="Figure 9.2: A stylized depiction of a bootstrap sampling distribution of an estimator." width="304"></a></p>
+<figcaption>From: Data Science in R, a gentle introduction, Fig. 9.2</figcaption></figure>
+</div>
 </section><section id="ci-qa-to-answer-your-burning-questions" class="slide level2 dark-theme center"><h2>CI: Q&amp;A to answer your burning questions</h2>
 </section><section id="ci-qa" class="slide level2"><h2>CI: Q&amp;A</h2>
 <p><strong>Q: When can I use the rule of thumb that the CI equals the sample mean plus or minus 2 SDs?</strong></p>
@@ -311,7 +318,7 @@ Bárbara D. Bitarello
 
 <aside><div>
 
-</div><ol class="aside-footnotes"><li id="fn2"><p>Lazic et al.&nbsp;(2018) <em>What exactly is ’N’in cell culture and animal experiments?.</em> PLoS Biology. https://doi.org/10.1371/journal.pbio.2005282</p></li></ol></aside></section><section id="estimation---summary" class="slide level2"><h2>Estimation - Summary</h2>
+</div><ol class="aside-footnotes"><li id="fn2"><p>Lazic et al.&nbsp;(2018) <em>What exactly is ‘N’in cell culture and animal experiments?.</em> PLoS Biology. https://doi.org/10.1371/journal.pbio.2005282</p></li></ol></aside></section><section id="estimation---summary" class="slide level2"><h2>Estimation - Summary</h2>
 <ul>
 <li><p>Parameter estimates are influenced by chance.</p></li>
 <li><p>The sampling distribution considers what could have happened upon sampling.</p></li>

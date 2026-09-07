@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-10-22">
 <meta name="keywords" content="Estimation">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -201,7 +207,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -282,22 +288,22 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">18</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">24</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">9</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">18</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">24</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">9</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">42</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">24</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">18</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">42</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">24</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">18</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">21</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">24</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">21</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">24</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
 </tr>
 </tbody>
 </table>
@@ -307,15 +313,15 @@ Bárbara D. Bitarello
 </div></div>
 </section><section id="a-sample-of-20-diamonds" class="slide level2"><h2>A sample of 20 diamonds</h2>
 <div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb1-2"><a></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-3"><a></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
-<span id="cb1-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb1-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
-<span id="cb1-6"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
-<span id="cb1-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb1-8"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb1-9"><a></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb1-2"><a aria-label="2"></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
+<span id="cb1-4"><a aria-label="4"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb1-5"><a aria-label="5"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
+<span id="cb1-6"><a aria-label="6"></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
+<span id="cb1-7"><a aria-label="7"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb1-8"><a aria-label="8"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb1-9"><a aria-label="9"></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
@@ -329,22 +335,22 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">5</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">3</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">5</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">3</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
 </tr>
 </tbody>
 </table>
@@ -352,14 +358,14 @@ Bárbara D. Bitarello
 </div>
 </section><section id="another-sample-of-20-diamonds" class="slide level2"><h2>Another sample of 20 diamonds</h2>
 <div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb2-2"><a></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-3"><a></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb2-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
-<span id="cb2-6"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
-<span id="cb2-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>   </span>
-<span id="cb2-8"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb2-2"><a aria-label="2"></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a aria-label="3"></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
+<span id="cb2-4"><a aria-label="4"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb2-5"><a aria-label="5"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
+<span id="cb2-6"><a aria-label="6"></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
+<span id="cb2-7"><a aria-label="7"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>   </span>
+<span id="cb2-8"><a aria-label="8"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-2-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
@@ -373,22 +379,22 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">5</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">5</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
 </tr>
 </tbody>
 </table>
@@ -396,15 +402,15 @@ Bárbara D. Bitarello
 </div>
 </section><section id="aaaand-another" class="slide level2"><h2>Aaaand … another</h2>
 <div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb3-2"><a></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb3-3"><a></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb3-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
-<span id="cb3-7"><a></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb3-8"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb3-9"><a></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb3-2"><a aria-label="2"></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-3"><a aria-label="3"></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span></span>
+<span id="cb3-4"><a aria-label="4"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb3-5"><a aria-label="5"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span></span>
+<span id="cb3-6"><a aria-label="6"></a>  <span class="fu">bb_theme</span>() <span class="sc">+</span> </span>
+<span id="cb3-7"><a aria-label="7"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb3-8"><a aria-label="8"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a aria-label="9"></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-3-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
@@ -418,22 +424,22 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">6</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">6</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
 </tr>
 </tbody>
 </table>
@@ -441,11 +447,11 @@ Bárbara D. Bitarello
 </div>
 </section><section id="one-last-sample-of-20-diamonds" class="slide level2"><h2>One Last Sample of 20 Diamonds</h2>
 <div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb4-2"><a></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb4-3"><a></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>,</span>
-<span id="cb4-4"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a></a>    <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>star.sample.size <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb4-2"><a aria-label="2"></a>stars.sample <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(stars, <span class="at">size =</span> star.sample.size, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-3"><a aria-label="3"></a><span class="fu">ggplot</span>(stars.sample, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> color, <span class="at">size =</span> size)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">18</span>,</span>
+<span id="cb4-4"><a aria-label="4"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">asteroidcity1</span>()) <span class="sc">+</span> <span class="fu">bb_theme</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a aria-label="5"></a>    <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sample20-4-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
@@ -459,22 +465,22 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">5</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">5</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0</td>
 </tr>
 </tbody>
 </table>
@@ -527,88 +533,88 @@ Bárbara D. Bitarello
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.25</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.10</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.05</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.25</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.10</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.05</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.25</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.10</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.05</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.25</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.10</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.05</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">1</td>
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.20</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">1</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.20</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.05</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.05</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.05</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.05</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">2</td>
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.30</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.30</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.05</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">2</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.30</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.30</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.05</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">2</td>
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.05</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.20</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">2</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.05</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.20</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">999</td>
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.15</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.15</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.05</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">999</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.15</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.15</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.05</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">999</td>
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.25</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.10</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.15</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">999</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.25</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.10</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.15</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">999</td>
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.15</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">999</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.15</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1000</td>
-<td style="text-align: left; color: rgba(10, 159, 157, 255) !important;">blue</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.10</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.15</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1000</td>
+<td style="text-align: left; color: rgba(10, 159, 157, 1) !important;">blue</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.10</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.15</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">0.00</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1000</td>
-<td style="text-align: left; color: rgba(206, 177, 117, 255) !important;">gold</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.25</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.05</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0.10</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1000</td>
+<td style="text-align: left; color: rgba(206, 177, 117, 1) !important;">gold</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.25</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.05</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0.10</td>
 </tr>
 <tr class="even">
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">1000</td>
-<td style="text-align: left; color: rgba(229, 78, 33, 255) !important;">red</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.15</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.20</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">0.00</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">1000</td>
+<td style="text-align: left; color: rgba(229, 78, 33, 1) !important;">red</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.15</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.20</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -633,47 +639,47 @@ Bárbara D. Bitarello
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">7</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">5</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">0</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">7</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">5</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">999</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">7</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">7</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">1000</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">6</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">3</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">4</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">2</td>
-<td style="text-align: right; color: rgba(229, 78, 33, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(10, 159, 157, 255) !important;">1</td>
-<td style="text-align: right; color: rgba(206, 177, 117, 255) !important;">1</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">6</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">3</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">4</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">2</td>
+<td style="text-align: right; color: rgba(229, 78, 33, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(10, 159, 157, 1) !important;">1</td>
+<td style="text-align: right; color: rgba(206, 177, 117, 1) !important;">1</td>
 </tr>
 </tbody>
 </table>
@@ -681,14 +687,14 @@ Bárbara D. Bitarello
 </div>
 </section><section id="sampling-distribution-of-diamond-size-1" class="slide level2"><h2>Sampling distribution of diamond size</h2>
 <div class="cell" data-fig.caption="the bin size was set to 1/sample_size in all cases.">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(sampling.dist.large, <span class="fu">aes</span>(<span class="at">x =</span> prop)) <span class="sc">+</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span><span class="sc">/</span> star.sample.size, <span class="at">color =</span> <span class="st">"lightgray"</span>, <span class="at">fill =</span> <span class="st">"#006475"</span>)<span class="sc">+</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> true.prop.large, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb5-4"><a></a>  <span class="fu">ggtitle</span>(<span class="fu">sprintf</span>(<span class="st">"Sampling distribution: Proportion large diamonds (n = %s)"</span>, star.sample.size),</span>
-<span id="cb5-5"><a></a>          <span class="at">subtitle =</span> <span class="st">"Dotted white line is the population parameter"</span>) <span class="sc">+</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">xlab</span>(<span class="st">"proportion"</span>)<span class="sc">+</span></span>
-<span id="cb5-7"><a></a>  <span class="fu">ylab</span>(<span class="st">"# of replicates</span><span class="sc">\n</span><span class="st">(of 1000 simulations)"</span>)<span class="sc">+</span></span>
-<span id="cb5-8"><a></a>  <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">ggplot</span>(sampling.dist.large, <span class="fu">aes</span>(<span class="at">x =</span> prop)) <span class="sc">+</span> </span>
+<span id="cb5-2"><a aria-label="2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span><span class="sc">/</span> star.sample.size, <span class="at">color =</span> <span class="st">"lightgray"</span>, <span class="at">fill =</span> <span class="st">"#006475"</span>)<span class="sc">+</span></span>
+<span id="cb5-3"><a aria-label="3"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> true.prop.large, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a aria-label="4"></a>  <span class="fu">ggtitle</span>(<span class="fu">sprintf</span>(<span class="st">"Sampling distribution: Proportion large diamonds (n = %s)"</span>, star.sample.size),</span>
+<span id="cb5-5"><a aria-label="5"></a>          <span class="at">subtitle =</span> <span class="st">"Dotted white line is the population parameter"</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a aria-label="6"></a>  <span class="fu">xlab</span>(<span class="st">"proportion"</span>)<span class="sc">+</span></span>
+<span id="cb5-7"><a aria-label="7"></a>  <span class="fu">ylab</span>(<span class="st">"# of replicates</span><span class="sc">\n</span><span class="st">(of 1000 simulations)"</span>)<span class="sc">+</span></span>
+<span id="cb5-8"><a aria-label="8"></a>  <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/sampdist-plot-1.png" width="960" class="r-stretch"></section><section id="the-joint-sampling-distribution" class="slide level2"><h2>The joint sampling distribution</h2>
@@ -717,13 +723,13 @@ Bárbara D. Bitarello
 </section><section id="example-human-gene-lengths" class="slide level2 dark-theme center"><h2>Example: human gene lengths</h2>
 </section><section id="human-gene-lengths" class="slide level2"><h2>Human gene lengths</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(human_genes , <span class="fu">aes</span>(<span class="at">x=</span>size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span><span class="fu">after_stat</span>(count <span class="sc">/</span> <span class="fu">sum</span>(count))),<span class="at">bins=</span><span class="dv">60</span>, <span class="at">color=</span><span class="st">"lightgray"</span>, <span class="at">fill=</span><span class="st">"#006475"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Gene Length (basepairs)"</span>) <span class="sc">+</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">ylab</span>(<span class="st">"Relative Frequency"</span>)<span class="sc">+</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.04</span>, </span>
-<span id="cb6-4"><a></a>        <span class="at">label =</span> <span class="st">"mu==3511.5"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.03</span>, </span>
-<span id="cb6-6"><a></a>        <span class="at">label =</span> <span class="st">"sigma==2833.2"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>)<span class="sc">+</span></span>
-<span id="cb6-7"><a></a>  <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a><span class="fu">ggplot</span>(human_genes , <span class="fu">aes</span>(<span class="at">x=</span>size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span><span class="fu">after_stat</span>(count <span class="sc">/</span> <span class="fu">sum</span>(count))),<span class="at">bins=</span><span class="dv">60</span>, <span class="at">color=</span><span class="st">"lightgray"</span>, <span class="at">fill=</span><span class="st">"#006475"</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Gene Length (basepairs)"</span>) <span class="sc">+</span> </span>
+<span id="cb6-2"><a aria-label="2"></a>  <span class="fu">ylab</span>(<span class="st">"Relative Frequency"</span>)<span class="sc">+</span></span>
+<span id="cb6-3"><a aria-label="3"></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.04</span>, </span>
+<span id="cb6-4"><a aria-label="4"></a>        <span class="at">label =</span> <span class="st">"mu==3511.5"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a aria-label="5"></a>  <span class="fu">annotate</span>(<span class="st">'text'</span>, <span class="at">x =</span> <span class="dv">10000</span>, <span class="at">y =</span> <span class="fl">0.03</span>, </span>
+<span id="cb6-6"><a aria-label="6"></a>        <span class="at">label =</span> <span class="st">"sigma==2833.2"</span>,<span class="at">parse =</span> <span class="cn">TRUE</span>,<span class="at">size=</span><span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb6-7"><a aria-label="7"></a>  <span class="fu">bb_theme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="Estimation_files/figure-revealjs/geneleng-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Note: parameters shown are for full dataset (n=20,290) but 26 genes with length &gt; 15,000 were omitted from this plot.</p></section><section id="sampling-distribution-from-textbook" class="slide level2"><h2>Sampling Distribution: from textbook</h2>

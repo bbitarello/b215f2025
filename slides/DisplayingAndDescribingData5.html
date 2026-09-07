@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-29">
 <meta name="keywords" content="Plots and Tables">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -714,12 +720,12 @@ Bárbara D. Bitarello
 <li>Calculate the fraction of values <span class="math inline">\(\leq\)</span> each value – the cumulative relative frequency</li>
 </ol>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-2"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a></a>    <span class="fu">mutate</span>(<span class="at">Cumul_Freq =</span> <span class="fu">cumsum</span>(Frequency_of_Students))</span>
-<span id="cb1-4"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb1-5"><a></a>    <span class="fu">mutate</span>(<span class="at">Rel_CFreq =</span> Cumul_Freq<span class="sc">/</span><span class="fu">sum</span>(Frequency_of_Students))</span>
-<span id="cb1-6"><a></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a aria-label="2"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a aria-label="3"></a>    <span class="fu">mutate</span>(<span class="at">Cumul_Freq =</span> <span class="fu">cumsum</span>(Frequency_of_Students))</span>
+<span id="cb1-4"><a aria-label="4"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a aria-label="5"></a>    <span class="fu">mutate</span>(<span class="at">Rel_CFreq =</span> Cumul_Freq<span class="sc">/</span><span class="fu">sum</span>(Frequency_of_Students))</span>
+<span id="cb1-6"><a aria-label="6"></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>  school_grade Frequency_of_Students Cumul_Freq Rel_CFreq
 1            1                    23         23 0.2613636
@@ -754,9 +760,9 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> school_grade))<span class="sc">+</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> school_grade))<span class="sc">+</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a aria-label="3"></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>
@@ -767,10 +773,10 @@ Bárbara D. Bitarello
 <p>example 2: Temperatures near LaGuardia (1973)</p>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> Temp)) <span class="sc">+</span> </span>
-<span id="cb4-3"><a></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>datasets<span class="sc">::</span>airquality <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span> Temp)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a aria-label="3"></a>  <span class="fu">stat_ecdf</span>(<span class="at">geom =</span> <span class="st">"step"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a aria-label="4"></a>  <span class="fu">theme_bw</span>() <span class="co">#this is just to make the background clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <img data-src="DisplayingAndDescribingData5_files/figure-revealjs/cumdist5-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">ECDF: empirical cumulative distribution function</p></section><section id="cumulative-frequency-distributions-4" class="slide level2"><h2>Cumulative Frequency Distributions</h2>
@@ -845,11 +851,11 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-2-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a></a><span class="fu">ggplot</span>(iris,<span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb5-4"><a></a>  <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> </span>
-<span id="cb5-5"><a></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a aria-label="2"></a><span class="fu">ggplot</span>(iris,<span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span> </span>
+<span id="cb5-3"><a aria-label="3"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb5-4"><a aria-label="4"></a>  <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> </span>
+<span id="cb5-5"><a aria-label="5"></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>
@@ -875,10 +881,10 @@ Bárbara D. Bitarello
 </div>
 <div id="tabset-3-2">
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb6-2"><a></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a aria-label="2"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Petal.Width, <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Petal Width (cm)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Petal Length (cm)"</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a aria-label="4"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>

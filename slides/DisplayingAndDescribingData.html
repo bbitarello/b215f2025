@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1df33b310b25e824b5acc70bcebddb02.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d55ad538553833994e65ea0dc4f9e74e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 <meta name="author" content="Bárbara D. Bitarello">
 <meta name="dcterms.date" content="2025-09-15">
 <meta name="keywords" content="Central tendency and spread">
@@ -19,10 +19,16 @@
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
 <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
 <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #c2d94c; } /* VerbatimString */
     code span.wa { color: #f07178; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f584ff78a3af22586ffe44530b07a055.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-47745f910523981bbd5e4097148d4191.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bárbara D. Bitarello 
+Bárbara D. Bitarello
 </div>
 </div>
 </div>
@@ -279,9 +285,9 @@ Bárbara D. Bitarello
 </section><section id="measures-of-location" class="slide level2 center"><h2>Measures of location</h2>
 <div class="r-fit-text">
 <ul>
-<li class="fragment"><p><strong>Mean:</strong> The weight of your data. The average value.</p></li>
-<li class="fragment"><p><strong>Median:</strong> A “typical individual”. If I take an individual at random, this is the value we expect them to be closest to.</p></li>
-<li class="fragment"><p><strong>Mode:</strong> The typical individual <strong>most common</strong> value for an individual. The most likely answer for an individual selected at random.</p></li>
+<li class="fragment"><p><strong>Mean:</strong> The weight of your data. Sum all observations and divide by number of observations.</p></li>
+<li class="fragment"><p><strong>Median:</strong> A “typical individual”. The middle measurement. If I take an individual at random, this is the value we expect them to be closest to.</p></li>
+<li class="fragment"><p><strong>Mode:</strong> The <strong>most common</strong> individual. The most common value for an individual.</p></li>
 </ul>
 </div>
 </section><section id="the-average-problem" class="slide level2"><h2>The <del>average</del> problem</h2>
@@ -319,7 +325,7 @@ Bárbara D. Bitarello
 </div></div>
 <div class="fragment">
 <p><strong>Example</strong>: The mean of the set of 11 numbers: <span class="math inline">\(1, 15,9, 16,6, 17, 10,  5, 12, 14, 13\)</span> is</p>
-<p><span class="math inline">\(\bar{Y} = 1+15+9+16+6+17+10+5+12+14+13/11 = 106.1818\)</span></p>
+<p><span class="math inline">\(\bar{Y} = 1+15+9+16+6+17+10+5+12+14+13/11 = 118/11 = 10.727\)</span></p>
 
 </div>
 <aside><div>
@@ -334,23 +340,23 @@ Bárbara D. Bitarello
 </div><div class="column">
 <div class="cell">
 <div class="cell-output-display">
-<div id="zpaaznlrqj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zpaaznlrqj table {
+<div id="kdxxfnozqx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kdxxfnozqx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zpaaznlrqj thead, #zpaaznlrqj tbody, #zpaaznlrqj tfoot, #zpaaznlrqj tr, #zpaaznlrqj td, #zpaaznlrqj th {
+#kdxxfnozqx thead, #kdxxfnozqx tbody, #kdxxfnozqx tfoot, #kdxxfnozqx tr, #kdxxfnozqx td, #kdxxfnozqx th {
   border-style: none;
 }
 
-#zpaaznlrqj p {
+#kdxxfnozqx p {
   margin: 0;
   padding: 0;
 }
 
-#zpaaznlrqj .gt_table {
+#kdxxfnozqx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -376,12 +382,12 @@ Bárbara D. Bitarello
   border-left-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_caption {
+#kdxxfnozqx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zpaaznlrqj .gt_title {
+#kdxxfnozqx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -393,7 +399,7 @@ Bárbara D. Bitarello
   border-bottom-width: 0;
 }
 
-#zpaaznlrqj .gt_subtitle {
+#kdxxfnozqx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -405,7 +411,7 @@ Bárbara D. Bitarello
   border-top-width: 0;
 }
 
-#zpaaznlrqj .gt_heading {
+#kdxxfnozqx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -417,13 +423,13 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_bottom_border {
+#kdxxfnozqx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_col_headings {
+#kdxxfnozqx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -438,7 +444,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_col_heading {
+#kdxxfnozqx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -458,7 +464,7 @@ Bárbara D. Bitarello
   overflow-x: hidden;
 }
 
-#zpaaznlrqj .gt_column_spanner_outer {
+#kdxxfnozqx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -470,15 +476,15 @@ Bárbara D. Bitarello
   padding-right: 4px;
 }
 
-#zpaaznlrqj .gt_column_spanner_outer:first-child {
+#kdxxfnozqx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zpaaznlrqj .gt_column_spanner_outer:last-child {
+#kdxxfnozqx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zpaaznlrqj .gt_column_spanner {
+#kdxxfnozqx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -490,11 +496,11 @@ Bárbara D. Bitarello
   width: 100%;
 }
 
-#zpaaznlrqj .gt_spanner_row {
+#kdxxfnozqx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zpaaznlrqj .gt_group_heading {
+#kdxxfnozqx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -520,7 +526,7 @@ Bárbara D. Bitarello
   text-align: left;
 }
 
-#zpaaznlrqj .gt_empty_group_heading {
+#kdxxfnozqx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -535,15 +541,15 @@ Bárbara D. Bitarello
   vertical-align: middle;
 }
 
-#zpaaznlrqj .gt_from_md > :first-child {
+#kdxxfnozqx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zpaaznlrqj .gt_from_md > :last-child {
+#kdxxfnozqx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zpaaznlrqj .gt_row {
+#kdxxfnozqx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -562,7 +568,7 @@ Bárbara D. Bitarello
   overflow-x: hidden;
 }
 
-#zpaaznlrqj .gt_stub {
+#kdxxfnozqx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -575,7 +581,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#zpaaznlrqj .gt_stub_row_group {
+#kdxxfnozqx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -589,15 +595,15 @@ Bárbara D. Bitarello
   vertical-align: top;
 }
 
-#zpaaznlrqj .gt_row_group_first td {
+#kdxxfnozqx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zpaaznlrqj .gt_row_group_first th {
+#kdxxfnozqx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zpaaznlrqj .gt_summary_row {
+#kdxxfnozqx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -607,16 +613,16 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#zpaaznlrqj .gt_first_summary_row {
+#kdxxfnozqx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_first_summary_row.thick {
+#kdxxfnozqx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zpaaznlrqj .gt_last_summary_row {
+#kdxxfnozqx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -626,7 +632,7 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_grand_summary_row {
+#kdxxfnozqx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -636,7 +642,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#zpaaznlrqj .gt_first_grand_summary_row {
+#kdxxfnozqx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -646,7 +652,7 @@ Bárbara D. Bitarello
   border-top-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_last_grand_summary_row_top {
+#kdxxfnozqx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -656,11 +662,11 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_striped {
+#kdxxfnozqx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zpaaznlrqj .gt_table_body {
+#kdxxfnozqx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -669,7 +675,7 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_footnotes {
+#kdxxfnozqx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -683,7 +689,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_footnote {
+#kdxxfnozqx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -692,7 +698,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#zpaaznlrqj .gt_sourcenotes {
+#kdxxfnozqx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -706,7 +712,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#zpaaznlrqj .gt_sourcenote {
+#kdxxfnozqx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -714,72 +720,72 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#zpaaznlrqj .gt_left {
+#kdxxfnozqx .gt_left {
   text-align: left;
 }
 
-#zpaaznlrqj .gt_center {
+#kdxxfnozqx .gt_center {
   text-align: center;
 }
 
-#zpaaznlrqj .gt_right {
+#kdxxfnozqx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zpaaznlrqj .gt_font_normal {
+#kdxxfnozqx .gt_font_normal {
   font-weight: normal;
 }
 
-#zpaaznlrqj .gt_font_bold {
+#kdxxfnozqx .gt_font_bold {
   font-weight: bold;
 }
 
-#zpaaznlrqj .gt_font_italic {
+#kdxxfnozqx .gt_font_italic {
   font-style: italic;
 }
 
-#zpaaznlrqj .gt_super {
+#kdxxfnozqx .gt_super {
   font-size: 65%;
 }
 
-#zpaaznlrqj .gt_footnote_marks {
+#kdxxfnozqx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zpaaznlrqj .gt_asterisk {
+#kdxxfnozqx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zpaaznlrqj .gt_indent_1 {
+#kdxxfnozqx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zpaaznlrqj .gt_indent_2 {
+#kdxxfnozqx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zpaaznlrqj .gt_indent_3 {
+#kdxxfnozqx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zpaaznlrqj .gt_indent_4 {
+#kdxxfnozqx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zpaaznlrqj .gt_indent_5 {
+#kdxxfnozqx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zpaaznlrqj .katex-display {
+#kdxxfnozqx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zpaaznlrqj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kdxxfnozqx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -864,25 +870,25 @@ Bárbara D. Bitarello
 </li>
 </ul>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>convictions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>,</span>
-<span id="cb1-2"><a></a>    <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>,</span>
-<span id="cb1-3"><a></a>    <span class="dv">13</span>, <span class="dv">14</span>)</span>
-<span id="cb1-4"><a></a>freqs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">265</span>, <span class="dv">49</span>, <span class="dv">21</span>, <span class="dv">19</span>, <span class="dv">10</span>,</span>
-<span id="cb1-5"><a></a>    <span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>,</span>
-<span id="cb1-6"><a></a>    <span class="dv">2</span>)</span>
-<span id="cb1-7"><a></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(freqs)  <span class="co"># 395</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>convictions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>,</span>
+<span id="cb1-2"><a aria-label="2"></a>    <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>,</span>
+<span id="cb1-3"><a aria-label="3"></a>    <span class="dv">13</span>, <span class="dv">14</span>)</span>
+<span id="cb1-4"><a aria-label="4"></a>freqs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">265</span>, <span class="dv">49</span>, <span class="dv">21</span>, <span class="dv">19</span>, <span class="dv">10</span>,</span>
+<span id="cb1-5"><a aria-label="5"></a>    <span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>,</span>
+<span id="cb1-6"><a aria-label="6"></a>    <span class="dv">2</span>)</span>
+<span id="cb1-7"><a aria-label="7"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(freqs)  <span class="co"># 395</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <ul>
 <li>We calculate the mean from a frequency table by summing the product of <span class="math inline">\(n_{i}\)</span> and <span class="math inline">\(Y_{i}\)</span> across all values and diving by <span class="math inline">\(n_{total}\)</span>.</li>
 </ul>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># multiply two vectors of</span></span>
-<span id="cb2-2"><a></a><span class="co"># same length</span></span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a>FinalMean <span class="ot">&lt;-</span> <span class="fu">sum</span>(convictions <span class="sc">*</span></span>
-<span id="cb2-5"><a></a>    freqs)<span class="sc">/</span>n_total</span>
-<span id="cb2-6"><a></a>FinalMean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="co"># multiply two vectors of</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="co"># same length</span></span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a>FinalMean <span class="ot">&lt;-</span> <span class="fu">sum</span>(convictions <span class="sc">*</span></span>
+<span id="cb2-5"><a aria-label="5"></a>    freqs)<span class="sc">/</span>n_total</span>
+<span id="cb2-6"><a aria-label="6"></a>FinalMean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.126582</code></pre>
 </div>
@@ -890,23 +896,23 @@ Bárbara D. Bitarello
 </div><div class="column" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
-<div id="phfyhdxxkv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#phfyhdxxkv table {
+<div id="irnasnrhku" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#irnasnrhku table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#phfyhdxxkv thead, #phfyhdxxkv tbody, #phfyhdxxkv tfoot, #phfyhdxxkv tr, #phfyhdxxkv td, #phfyhdxxkv th {
+#irnasnrhku thead, #irnasnrhku tbody, #irnasnrhku tfoot, #irnasnrhku tr, #irnasnrhku td, #irnasnrhku th {
   border-style: none;
 }
 
-#phfyhdxxkv p {
+#irnasnrhku p {
   margin: 0;
   padding: 0;
 }
 
-#phfyhdxxkv .gt_table {
+#irnasnrhku .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -932,12 +938,12 @@ Bárbara D. Bitarello
   border-left-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_caption {
+#irnasnrhku .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#phfyhdxxkv .gt_title {
+#irnasnrhku .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -949,7 +955,7 @@ Bárbara D. Bitarello
   border-bottom-width: 0;
 }
 
-#phfyhdxxkv .gt_subtitle {
+#irnasnrhku .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -961,7 +967,7 @@ Bárbara D. Bitarello
   border-top-width: 0;
 }
 
-#phfyhdxxkv .gt_heading {
+#irnasnrhku .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -973,13 +979,13 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_bottom_border {
+#irnasnrhku .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_col_headings {
+#irnasnrhku .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -994,7 +1000,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_col_heading {
+#irnasnrhku .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1014,7 +1020,7 @@ Bárbara D. Bitarello
   overflow-x: hidden;
 }
 
-#phfyhdxxkv .gt_column_spanner_outer {
+#irnasnrhku .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1026,15 +1032,15 @@ Bárbara D. Bitarello
   padding-right: 4px;
 }
 
-#phfyhdxxkv .gt_column_spanner_outer:first-child {
+#irnasnrhku .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#phfyhdxxkv .gt_column_spanner_outer:last-child {
+#irnasnrhku .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#phfyhdxxkv .gt_column_spanner {
+#irnasnrhku .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1046,11 +1052,11 @@ Bárbara D. Bitarello
   width: 100%;
 }
 
-#phfyhdxxkv .gt_spanner_row {
+#irnasnrhku .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#phfyhdxxkv .gt_group_heading {
+#irnasnrhku .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1076,7 +1082,7 @@ Bárbara D. Bitarello
   text-align: left;
 }
 
-#phfyhdxxkv .gt_empty_group_heading {
+#irnasnrhku .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1091,15 +1097,15 @@ Bárbara D. Bitarello
   vertical-align: middle;
 }
 
-#phfyhdxxkv .gt_from_md > :first-child {
+#irnasnrhku .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#phfyhdxxkv .gt_from_md > :last-child {
+#irnasnrhku .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#phfyhdxxkv .gt_row {
+#irnasnrhku .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1118,7 +1124,7 @@ Bárbara D. Bitarello
   overflow-x: hidden;
 }
 
-#phfyhdxxkv .gt_stub {
+#irnasnrhku .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1131,7 +1137,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#phfyhdxxkv .gt_stub_row_group {
+#irnasnrhku .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1145,15 +1151,15 @@ Bárbara D. Bitarello
   vertical-align: top;
 }
 
-#phfyhdxxkv .gt_row_group_first td {
+#irnasnrhku .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#phfyhdxxkv .gt_row_group_first th {
+#irnasnrhku .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#phfyhdxxkv .gt_summary_row {
+#irnasnrhku .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1163,16 +1169,16 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#phfyhdxxkv .gt_first_summary_row {
+#irnasnrhku .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_first_summary_row.thick {
+#irnasnrhku .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#phfyhdxxkv .gt_last_summary_row {
+#irnasnrhku .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1182,7 +1188,7 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_grand_summary_row {
+#irnasnrhku .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1192,7 +1198,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#phfyhdxxkv .gt_first_grand_summary_row {
+#irnasnrhku .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1202,7 +1208,7 @@ Bárbara D. Bitarello
   border-top-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_last_grand_summary_row_top {
+#irnasnrhku .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1212,11 +1218,11 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_striped {
+#irnasnrhku .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#phfyhdxxkv .gt_table_body {
+#irnasnrhku .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1225,7 +1231,7 @@ Bárbara D. Bitarello
   border-bottom-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_footnotes {
+#irnasnrhku .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1239,7 +1245,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_footnote {
+#irnasnrhku .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1248,7 +1254,7 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#phfyhdxxkv .gt_sourcenotes {
+#irnasnrhku .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1262,7 +1268,7 @@ Bárbara D. Bitarello
   border-right-color: #D3D3D3;
 }
 
-#phfyhdxxkv .gt_sourcenote {
+#irnasnrhku .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1270,72 +1276,72 @@ Bárbara D. Bitarello
   padding-right: 5px;
 }
 
-#phfyhdxxkv .gt_left {
+#irnasnrhku .gt_left {
   text-align: left;
 }
 
-#phfyhdxxkv .gt_center {
+#irnasnrhku .gt_center {
   text-align: center;
 }
 
-#phfyhdxxkv .gt_right {
+#irnasnrhku .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#phfyhdxxkv .gt_font_normal {
+#irnasnrhku .gt_font_normal {
   font-weight: normal;
 }
 
-#phfyhdxxkv .gt_font_bold {
+#irnasnrhku .gt_font_bold {
   font-weight: bold;
 }
 
-#phfyhdxxkv .gt_font_italic {
+#irnasnrhku .gt_font_italic {
   font-style: italic;
 }
 
-#phfyhdxxkv .gt_super {
+#irnasnrhku .gt_super {
   font-size: 65%;
 }
 
-#phfyhdxxkv .gt_footnote_marks {
+#irnasnrhku .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#phfyhdxxkv .gt_asterisk {
+#irnasnrhku .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#phfyhdxxkv .gt_indent_1 {
+#irnasnrhku .gt_indent_1 {
   text-indent: 5px;
 }
 
-#phfyhdxxkv .gt_indent_2 {
+#irnasnrhku .gt_indent_2 {
   text-indent: 10px;
 }
 
-#phfyhdxxkv .gt_indent_3 {
+#irnasnrhku .gt_indent_3 {
   text-indent: 15px;
 }
 
-#phfyhdxxkv .gt_indent_4 {
+#irnasnrhku .gt_indent_4 {
   text-indent: 20px;
 }
 
-#phfyhdxxkv .gt_indent_5 {
+#irnasnrhku .gt_indent_5 {
   text-indent: 25px;
 }
 
-#phfyhdxxkv .katex-display {
+#irnasnrhku .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#phfyhdxxkv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#irnasnrhku div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1447,36 +1453,36 @@ Bárbara D. Bitarello
 </div>
 </section><section id="mean-and-median-in-r" class="slide level2"><h2>Mean and Median in R</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># a vector with the numbers</span></span>
-<span id="cb4-2"><a></a>mynumbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">15</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">6</span>, <span class="dv">17</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">13</span>)</span>
-<span id="cb4-3"><a></a><span class="co"># mean 'manually'</span></span>
-<span id="cb4-4"><a></a>mysum <span class="ot">&lt;-</span> <span class="fu">sum</span>(mynumbers)  <span class="co">#sum all numbers</span></span>
-<span id="cb4-5"><a></a>l <span class="ot">&lt;-</span> <span class="fu">length</span>(mynumbers)  <span class="co">#number of elements in vector</span></span>
-<span id="cb4-6"><a></a>mymean <span class="ot">&lt;-</span> mysum<span class="sc">/</span>l</span>
-<span id="cb4-7"><a></a>mymean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co"># a vector with the numbers</span></span>
+<span id="cb4-2"><a aria-label="2"></a>mynumbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">15</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">6</span>, <span class="dv">17</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">13</span>)</span>
+<span id="cb4-3"><a aria-label="3"></a><span class="co"># mean 'manually'</span></span>
+<span id="cb4-4"><a aria-label="4"></a>mysum <span class="ot">&lt;-</span> <span class="fu">sum</span>(mynumbers)  <span class="co">#sum all numbers</span></span>
+<span id="cb4-5"><a aria-label="5"></a>l <span class="ot">&lt;-</span> <span class="fu">length</span>(mynumbers)  <span class="co">#number of elements in vector</span></span>
+<span id="cb4-6"><a aria-label="6"></a>mymean <span class="ot">&lt;-</span> mysum<span class="sc">/</span>l</span>
+<span id="cb4-7"><a aria-label="7"></a>mymean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 10.72727</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># note that you can use a built-in function for this:</span></span>
-<span id="cb6-2"><a></a>mymean2 <span class="ot">&lt;-</span> <span class="fu">mean</span>(mynumbers)</span>
-<span id="cb6-3"><a></a>mymean2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a><span class="co"># note that you can use a built-in function for this:</span></span>
+<span id="cb6-2"><a aria-label="2"></a>mymean2 <span class="ot">&lt;-</span> <span class="fu">mean</span>(mynumbers)</span>
+<span id="cb6-3"><a aria-label="3"></a>mymean2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 10.72727</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># median with built-in function</span></span>
-<span id="cb8-2"><a></a>mymedian <span class="ot">&lt;-</span> <span class="fu">median</span>(mynumbers)</span>
-<span id="cb8-3"><a></a>mymedian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a><span class="co"># median with built-in function</span></span>
+<span id="cb8-2"><a aria-label="2"></a>mymedian <span class="ot">&lt;-</span> <span class="fu">median</span>(mynumbers)</span>
+<span id="cb8-3"><a aria-label="3"></a>mymedian</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 12</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># median 'manually'</span></span>
-<span id="cb10-2"><a></a>mynumbers2 <span class="ot">&lt;-</span> <span class="fu">sort</span>(mynumbers)</span>
-<span id="cb10-3"><a></a>mynumbers2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a><span class="co"># median 'manually'</span></span>
+<span id="cb10-2"><a aria-label="2"></a>mynumbers2 <span class="ot">&lt;-</span> <span class="fu">sort</span>(mynumbers)</span>
+<span id="cb10-3"><a aria-label="3"></a>mynumbers2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code> [1]  1  5  6  9 10 12 13 14 15 16 17</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6</span></span>
-<span id="cb12-2"><a></a>mynumbers2[<span class="dv">6</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-label="1"></a><span class="co"># since l = 11 (odd) we select the l+1-th element, i.e, (11+1)/2=6</span></span>
+<span id="cb12-2"><a aria-label="2"></a>mynumbers2[<span class="dv">6</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 12</code></pre>
 </div>
